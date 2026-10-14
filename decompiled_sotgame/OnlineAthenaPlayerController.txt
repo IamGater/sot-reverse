@@ -1,0 +1,50 @@
+// Class: OnlineAthenaPlayerController (2 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+OnlineAthenaPlayerController::IsClientAndInActiveGameplay @ RVA 0xC0C010 EA 0x7FF6F462C010
+======================================================================
+__int64 __fastcall sub_7FF6F462C010(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F4026990();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+OnlineAthenaPlayerController::ModifyActiveState @ RVA 0xC0C6B0 EA 0x7FF6F462C6B0
+======================================================================
+__int64 __fastcall sub_7FF6F462C6B0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rsi
+  __int64 v5; // rax
+  bool v6; // bp
+  _BOOL8 v7; // rdx
+  int v9; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v5 = a2[4];
+  v6 = v9 != 0;
+  v7 = v9 != 0;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64, _BOOL8))(*(_QWORD *)a1 + 3456LL))(a1, v7) )
+    return (*(__int64 (__fastcall **)(__int64, bool))(*(_QWORD *)a1 + 3464LL))(a1, v6);
+  else
+    return sub_7FF6F4F0F6D0(L"ModifyActiveState_Validate");
+}
+

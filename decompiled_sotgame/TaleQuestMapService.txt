@@ -1,0 +1,96 @@
+// Class: TaleQuestMapService (2 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+TaleQuestMapService::AdvanceRiddleMap @ RVA 0x36FCEF0 EA 0x7FF6F711CEF0
+======================================================================
+__int64 __fastcall sub_7FF6F711CEF0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 *v5; // rdx
+  __int64 v6; // rax
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = &v8;
+  if ( a2[7] )
+    v5 = (__int64 *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  return sub_7FF6F710A4A0(a1, v5);
+}
+
+
+======================================================================
+TaleQuestMapService::UpdateMerchantMap @ RVA 0x36FCF80 EA 0x7FF6F711CF80
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F711CF80(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 *v5; // rsi
+  __int64 v6; // rax
+  _BYTE v8[56]; // [rsp+30h] [rbp-98h] BYREF
+  __int64 v9; // [rsp+68h] [rbp-60h]
+  _BYTE v10[56]; // [rsp+70h] [rbp-58h] BYREF
+  __int64 v11; // [rsp+A8h] [rbp-20h]
+  unsigned int v12; // [rsp+D8h] [rbp+10h] BYREF
+  __int64 v13; // [rsp+E8h] [rbp+20h] BYREF
+
+  v4 = 0;
+  v13 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v5 = &v13;
+  if ( a2[7] )
+    v5 = (__int64 *)a2[7];
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  sub_7FF6F4DCDFA0(v8);
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v6 = a2[4];
+  LOBYTE(v4) = v6 != 0;
+  a2[4] = v6 + v4;
+  sub_7FF6F4DCDF10(v10, v8);
+  v11 = v9;
+  sub_7FF6F710B5B0(a1, v5, v12, v10, -2);
+  return sub_7FF6F3C37050(v8);
+}
+

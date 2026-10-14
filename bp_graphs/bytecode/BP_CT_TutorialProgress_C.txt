@@ -1,0 +1,689 @@
+// /Game/Blueprints/Prompts/PromptConditionals/CompanyOnboardingProgress/bp_ct_tutorialprogress -> BP_CT_TutorialProgress_C
+
+=== BP_CT_TutorialProgress_C::fn_idx_217737 (468 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_Conv_NameToString_ReturnValue@0x19f494c97d0
+  Expression:
+  $18: Context
+    ObjectExpression:
+    $19: ObjectConst Default__KismetStringLibrary@0x19e4d95ecd0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Conv_NameToString_ReturnValue@0x19f494c97d0
+    ContextExpression:
+    $40: FinalFunction target=Conv_NameToString@0x19e4d3a1f80 (
+      $49: LocalVariable named CompanyName@0x19f494c9760
+      $58: EndFunctionParms
+    )
+$59: LetBool (Variable = Expression)
+  Variable:
+  $60: LocalVariable named K2Node_SwitchString_CmpSuccess@0x19f4940bb80
+  Expression:
+  $69: Context
+    ObjectExpression:
+    $70: ObjectConst Default__KismetStringLibrary@0x19e4d95ecd0
+    SkipBytes: 0x21
+    RValueProperty: K2Node_SwitchString_CmpSuccess@0x19f4940bb80
+    ContextExpression:
+    $91: FinalFunction target=NotEqual_StriStri@0x19e4d3a5340 (
+      $100: LocalVariable named CallFunc_Conv_NameToString_ReturnValue@0x19f494c97d0
+      $109: literal ansi string "Goldhoarders"
+      $123: EndFunctionParms
+    )
+$124: JumpIfNot -> 0x131, cond:
+  $129: LocalVariable named K2Node_SwitchString_CmpSuccess@0x19f4940bb80
+$138: LetBool (Variable = Expression)
+  Variable:
+  $139: LocalVariable named K2Node_SwitchString_CmpSuccess@0x19f4940bb80
+  Expression:
+  $148: Context
+    ObjectExpression:
+    $149: ObjectConst Default__KismetStringLibrary@0x19e4d95ecd0
+    SkipBytes: 0x21
+    RValueProperty: K2Node_SwitchString_CmpSuccess@0x19f4940bb80
+    ContextExpression:
+    $170: FinalFunction target=NotEqual_StriStri@0x19e4d3a5340 (
+      $179: LocalVariable named CallFunc_Conv_NameToString_ReturnValue@0x19f494c97d0
+      $188: literal ansi string "OrderOfSouls"
+      $202: EndFunctionParms
+    )
+$203: JumpIfNot -> 0x168, cond:
+  $208: LocalVariable named K2Node_SwitchString_CmpSuccess@0x19f4940bb80
+$217: LetBool (Variable = Expression)
+  Variable:
+  $218: LocalVariable named K2Node_SwitchString_CmpSuccess@0x19f4940bb80
+  Expression:
+  $227: Context
+    ObjectExpression:
+    $228: ObjectConst Default__KismetStringLibrary@0x19e4d95ecd0
+    SkipBytes: 0x25
+    RValueProperty: K2Node_SwitchString_CmpSuccess@0x19f4940bb80
+    ContextExpression:
+    $249: FinalFunction target=NotEqual_StriStri@0x19e4d3a5340 (
+      $258: LocalVariable named CallFunc_Conv_NameToString_ReturnValue@0x19f494c97d0
+      $267: literal ansi string "MerchantAlliance"
+      $285: EndFunctionParms
+    )
+$286: JumpIfNot -> 0x19f, cond:
+  $291: LocalVariable named K2Node_SwitchString_CmpSuccess@0x19f4940bb80
+$300: Jump to offset 0x1d1
+$305: VirtualFunction call "GetGoldhoarderTutorials" (
+  $318: LocalVariable named CallFunc_GetGoldhoarderTutorials_Result@0x19f4940bc80
+  $327: EndFunctionParms
+)
+$328: Let (Variable = Expression)
+  Variable:
+  $337: LocalOutVariable named CompanyTutorials@0x19f4940bf80
+  Expression:
+  $346: LocalVariable named CallFunc_GetGoldhoarderTutorials_Result@0x19f4940bc80
+$355: Jump to offset 0x1d1
+$360: VirtualFunction call "GetOrderOfSoulsTutorials" (
+  $373: LocalVariable named CallFunc_GetOrderOfSoulsTutorials_Result@0x19f4940bd80
+  $382: EndFunctionParms
+)
+$383: Let (Variable = Expression)
+  Variable:
+  $392: LocalOutVariable named CompanyTutorials@0x19f4940bf80
+  Expression:
+  $401: LocalVariable named CallFunc_GetOrderOfSoulsTutorials_Result@0x19f4940bd80
+$410: Jump to offset 0x1d1
+$415: VirtualFunction call "GetMerchantAllianceTutorials" (
+  $428: LocalVariable named CallFunc_GetMerchantAllianceTutorials_Result@0x19f4940be80
+  $437: EndFunctionParms
+)
+$438: Let (Variable = Expression)
+  Variable:
+  $447: LocalOutVariable named CompanyTutorials@0x19f4940bf80
+  Expression:
+  $456: LocalVariable named CallFunc_GetMerchantAllianceTutorials_Result@0x19f4940be80
+$465: Return expression:
+  $466: Nothing
+$467: EndOfScript
+
+=== BP_CT_TutorialProgress_C::fn_idx_217740 (50 bytes) ===
+$0: SetArray
+  $1: LocalVariable named K2Node_MakeArray_Array@0x19f4940c100
+  $10: InstanceVariable named BootyTutorialProgress@0x19f4940d780
+  $19: EndArray
+$20: Let (Variable = Expression)
+  Variable:
+  $29: LocalOutVariable named Result@0x19f4940c200
+  Expression:
+  $38: LocalVariable named K2Node_MakeArray_Array@0x19f4940c100
+$47: Return expression:
+  $48: Nothing
+$49: EndOfScript
+
+=== BP_CT_TutorialProgress_C::fn_idx_217739 (59 bytes) ===
+$0: SetArray
+  $1: LocalVariable named K2Node_MakeArray_Array@0x19f4940c300
+  $10: InstanceVariable named FaunaTutorialProgress@0x19f4940d680
+  $19: InstanceVariable named CargoTutorialProgress@0x19f4940d700
+  $28: EndArray
+$29: Let (Variable = Expression)
+  Variable:
+  $38: LocalOutVariable named Result@0x19f4940c400
+  Expression:
+  $47: LocalVariable named K2Node_MakeArray_Array@0x19f4940c300
+$56: Return expression:
+  $57: Nothing
+$58: EndOfScript
+
+=== BP_CT_TutorialProgress_C::fn_idx_217738 (59 bytes) ===
+$0: SetArray
+  $1: LocalVariable named K2Node_MakeArray_Array@0x19f4940c500
+  $10: InstanceVariable named XMarksTutorialProgress@0x19f4940d580
+  $19: InstanceVariable named RiddleTutorialProgress@0x19f4940d600
+  $28: EndArray
+$29: Let (Variable = Expression)
+  Variable:
+  $38: LocalOutVariable named Result@0x19f4940c600
+  Expression:
+  $47: LocalVariable named K2Node_MakeArray_Array@0x19f4940c500
+$56: Return expression:
+  $57: Nothing
+$58: EndOfScript
+
+=== BP_CT_TutorialProgress_C::fn_idx_217713 (432 bytes) ===
+$0: FlowStack.Push(0x1ad)
+$5: Let (Variable = Expression)
+  Variable:
+  $14: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f494c98b0
+  Expression:
+  $23: literal int32 0
+$28: Let (Variable = Expression)
+  Variable:
+  $37: LocalVariable named Temp_int_Array_Index_Variable@0x19f494c9840
+  Expression:
+  $46: literal int32 0
+$51: Let (Variable = Expression)
+  Variable:
+  $60: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f494c9920
+  Expression:
+  $69: Context
+    ObjectExpression:
+    $70: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19f494c9920
+    ContextExpression:
+    $91: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $100: InstanceVariable named TutorialVoyageProgressTrackers@0x19f4940d880
+      $109: EndFunctionParms
+    )
+$110: LetBool (Variable = Expression)
+  Variable:
+  $111: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19f4940c800
+  Expression:
+  $120: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $129: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f494c98b0
+    $138: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f494c9920
+    $147: EndFunctionParms
+  )
+$148: JumpIfNot -> 0x148, cond:
+  $153: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19f4940c800
+$162: Let (Variable = Expression)
+  Variable:
+  $171: LocalVariable named Temp_int_Array_Index_Variable@0x19f494c9840
+  Expression:
+  $180: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f494c98b0
+$189: FlowStack.Push(0x158)
+$194: Context
+  ObjectExpression:
+  $195: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $216: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $225: InstanceVariable named TutorialVoyageProgressTrackers@0x19f4940d880
+    $234: LocalVariable named Temp_int_Array_Index_Variable@0x19f494c9840
+    $243: LocalVariable named CallFunc_Array_Get_Item@0x19f4940c780
+    $252: EndFunctionParms
+  )
+$253: LetBool (Variable = Expression)
+  Variable:
+  $254: LocalVariable named CallFunc_EqualEqual_ByteByte_ReturnValue@0x19f4940c880
+  Expression:
+  $263: CallMath target=EqualEqual_ByteByte@0x19e4d37a620 (
+    $272: Context
+      ObjectExpression:
+      $273: LocalVariable named CallFunc_Array_Get_Item@0x19f4940c780
+      SkipBytes: 0x9
+      RValueProperty: VoyageState@0x19f4940e380
+      ContextExpression:
+      $294: InstanceVariable named VoyageState@0x19f4940e380
+    $303: LocalVariable named QueryVoyageState@0x19f4940c680
+    $312: EndFunctionParms
+  )
+$313: JumpIfNot -> 0x1a2, cond:
+  $318: LocalVariable named CallFunc_EqualEqual_ByteByte_ReturnValue@0x19f4940c880
+$327: PopExecutionFlow (jump to popped addr)
+$328: LetBool (Variable = Expression)
+  Variable:
+  $329: LocalOutVariable named Result@0x19f4940c700
+  Expression:
+  $338: True
+$339: Jump to offset 0x1ad
+$344: Let (Variable = Expression)
+  Variable:
+  $353: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f494c9990
+  Expression:
+  $362: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $371: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f494c98b0
+    $380: literal int32 1
+    $385: EndFunctionParms
+  )
+$386: Let (Variable = Expression)
+  Variable:
+  $395: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f494c98b0
+  Expression:
+  $404: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f494c9990
+$413: Jump to offset 0x33
+$418: LetBool (Variable = Expression)
+  Variable:
+  $419: LocalOutVariable named Result@0x19f4940c700
+  Expression:
+  $428: False
+$429: Return expression:
+  $430: Nothing
+$431: EndOfScript
+
+=== BP_CT_TutorialProgress_C::fn_idx_217741 (432 bytes) ===
+$0: FlowStack.Push(0x1ad)
+$5: Let (Variable = Expression)
+  Variable:
+  $14: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f494c9a70
+  Expression:
+  $23: literal int32 0
+$28: Let (Variable = Expression)
+  Variable:
+  $37: LocalVariable named Temp_int_Array_Index_Variable@0x19f494c9a00
+  Expression:
+  $46: literal int32 0
+$51: Let (Variable = Expression)
+  Variable:
+  $60: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f494c9ae0
+  Expression:
+  $69: Context
+    ObjectExpression:
+    $70: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19f494c9ae0
+    ContextExpression:
+    $91: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $100: InstanceVariable named TutorialVoyageProgressTrackers@0x19f4940d880
+      $109: EndFunctionParms
+    )
+$110: LetBool (Variable = Expression)
+  Variable:
+  $111: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19f4940ca80
+  Expression:
+  $120: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $129: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f494c9a70
+    $138: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f494c9ae0
+    $147: EndFunctionParms
+  )
+$148: JumpIfNot -> 0x153, cond:
+  $153: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19f4940ca80
+$162: Let (Variable = Expression)
+  Variable:
+  $171: LocalVariable named Temp_int_Array_Index_Variable@0x19f494c9a00
+  Expression:
+  $180: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f494c9a70
+$189: FlowStack.Push(0x163)
+$194: Context
+  ObjectExpression:
+  $195: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $216: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $225: InstanceVariable named TutorialVoyageProgressTrackers@0x19f4940d880
+    $234: LocalVariable named Temp_int_Array_Index_Variable@0x19f494c9a00
+    $243: LocalVariable named CallFunc_Array_Get_Item@0x19f4940ca00
+    $252: EndFunctionParms
+  )
+$253: LetBool (Variable = Expression)
+  Variable:
+  $254: LocalVariable named CallFunc_EqualEqual_ByteByte_ReturnValue@0x19f4940cb00
+  Expression:
+  $263: CallMath target=EqualEqual_ByteByte@0x19e4d37a620 (
+    $272: Context
+      ObjectExpression:
+      $273: LocalVariable named CallFunc_Array_Get_Item@0x19f4940ca00
+      SkipBytes: 0x9
+      RValueProperty: VoyageState@0x19f4940e380
+      ContextExpression:
+      $294: InstanceVariable named VoyageState@0x19f4940e380
+    $303: LocalVariable named QueryVoyageState@0x19f4940c900
+    $312: EndFunctionParms
+  )
+$313: PopExecutionFlowIfNot, cond:
+$314: LocalVariable named CallFunc_EqualEqual_ByteByte_ReturnValue@0x19f4940cb00
+$323: LetBool (Variable = Expression)
+  Variable:
+  $324: LocalOutVariable named Result@0x19f4940c980
+  Expression:
+  $333: True
+$334: Jump to offset 0x1ad
+$339: LetBool (Variable = Expression)
+  Variable:
+  $340: LocalOutVariable named Result@0x19f4940c980
+  Expression:
+  $349: False
+$350: Jump to offset 0x1ad
+$355: Let (Variable = Expression)
+  Variable:
+  $364: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f494c9b50
+  Expression:
+  $373: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $382: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f494c9a70
+    $391: literal int32 1
+    $396: EndFunctionParms
+  )
+$397: Let (Variable = Expression)
+  Variable:
+  $406: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f494c9a70
+  Expression:
+  $415: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f494c9b50
+$424: Jump to offset 0x33
+$429: Return expression:
+  $430: Nothing
+$431: EndOfScript
+
+=== BP_CT_TutorialProgress_C::fn_idx_217736 (490 bytes) ===
+$0: FlowStack.Push(0x1e7)
+$5: Let (Variable = Expression)
+  Variable:
+  $14: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f494c9ca0
+  Expression:
+  $23: literal int32 0
+$28: Let (Variable = Expression)
+  Variable:
+  $37: LocalVariable named Temp_int_Array_Index_Variable@0x19f494c9c30
+  Expression:
+  $46: literal int32 0
+$51: Let (Variable = Expression)
+  Variable:
+  $60: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f494c9d10
+  Expression:
+  $69: Context
+    ObjectExpression:
+    $70: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19f494c9d10
+    ContextExpression:
+    $91: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $100: InstanceVariable named TutorialVoyageProgressTrackers@0x19f4940d880
+      $109: EndFunctionParms
+    )
+$110: LetBool (Variable = Expression)
+  Variable:
+  $111: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19f4940cc80
+  Expression:
+  $120: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $129: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f494c9ca0
+    $138: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f494c9d10
+    $147: EndFunctionParms
+  )
+$148: JumpIfNot -> 0x18d, cond:
+  $153: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19f4940cc80
+$162: Let (Variable = Expression)
+  Variable:
+  $171: LocalVariable named Temp_int_Array_Index_Variable@0x19f494c9c30
+  Expression:
+  $180: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f494c9ca0
+$189: FlowStack.Push(0x19d)
+$194: Context
+  ObjectExpression:
+  $195: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $216: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $225: InstanceVariable named TutorialVoyageProgressTrackers@0x19f4940d880
+    $234: LocalVariable named Temp_int_Array_Index_Variable@0x19f494c9c30
+    $243: LocalVariable named CallFunc_Array_Get_Item@0x19f4940cc00
+    $252: EndFunctionParms
+  )
+$253: LetBool (Variable = Expression)
+  Variable:
+  $254: LocalVariable named CallFunc_IsSameVoyage_ReturnValue@0x19f4940cd00
+  Expression:
+  $263: Context
+    ObjectExpression:
+    $264: LocalVariable named CallFunc_Array_Get_Item@0x19f4940cc00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsSameVoyage_ReturnValue@0x19f4940cd00
+    ContextExpression:
+    $285: FinalFunction target=IsSameVoyage@0x19e4d513700 (
+      $294: LocalVariable named VoyageName@0x19f494c9bc0
+      $303: EndFunctionParms
+    )
+$304: PopExecutionFlowIfNot, cond:
+$305: LocalVariable named CallFunc_IsSameVoyage_ReturnValue@0x19f4940cd00
+$314: Context
+  ObjectExpression:
+  $315: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $336: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $345: InstanceVariable named TutorialVoyageProgressTrackers@0x19f4940d880
+    $354: LocalVariable named Temp_int_Array_Index_Variable@0x19f494c9c30
+    $363: LocalVariable named CallFunc_Array_Get_Item@0x19f4940cc00
+    $372: EndFunctionParms
+  )
+$373: LetObj (Variable = Expression)
+  Variable:
+  $374: LocalOutVariable named Voyage@0x19f4940cb80
+  Expression:
+  $383: LocalVariable named CallFunc_Array_Get_Item@0x19f4940cc00
+$392: Jump to offset 0x1e7
+$397: LetObj (Variable = Expression)
+  Variable:
+  $398: LocalOutVariable named Voyage@0x19f4940cb80
+  Expression:
+  $407: NoObject
+$408: Jump to offset 0x1e7
+$413: Let (Variable = Expression)
+  Variable:
+  $422: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f494c9d80
+  Expression:
+  $431: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $440: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f494c9ca0
+    $449: literal int32 1
+    $454: EndFunctionParms
+  )
+$455: Let (Variable = Expression)
+  Variable:
+  $464: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f494c9ca0
+  Expression:
+  $473: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f494c9d80
+$482: Jump to offset 0x33
+$487: Return expression:
+  $488: Nothing
+$489: EndOfScript
+
+=== BP_CT_TutorialProgress_C::fn_idx_217730 (363 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_SpawnObject_ReturnValue@0x19f4940d000
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__GameplayStatics@0x19e4d95eb20
+    SkipBytes: 0x14
+    RValueProperty: CallFunc_SpawnObject_ReturnValue@0x19f4940d000
+    ContextExpression:
+    $32: FinalFunction target=SpawnObject@0x19e4d364ba0 (
+      $41: ObjectConst BP_CT_VoyageProgress_C@0x19f2b26bf40
+      $50: Self
+      $51: EndFunctionParms
+    )
+$52: Context
+  ObjectExpression:
+  $53: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x29
+  RValueProperty: (null)
+  ContextExpression:
+  $74: FinalFunction target=SetObjectPropertyByName@0x19e4cd994a0 (
+    $83: LocalVariable named CallFunc_SpawnObject_ReturnValue@0x19f4940d000
+    $92: literal name "AthenaPlayerController"
+    $105: InstanceVariable named AthenaPlayerController@0x19f4940d500
+    $114: EndFunctionParms
+  )
+$115: Context
+  ObjectExpression:
+  $116: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x29
+  RValueProperty: (null)
+  ContextExpression:
+  $137: FinalFunction target=SetClassPropertyByName@0x19e4cd986a0 (
+    $146: LocalVariable named CallFunc_SpawnObject_ReturnValue@0x19f4940d000
+    $155: literal name "MaximumRank"
+    $168: LocalVariable named ExclusionRank@0x19f4940ce80
+    $177: EndFunctionParms
+  )
+$178: Context
+  ObjectExpression:
+  $179: LocalVariable named CallFunc_SpawnObject_ReturnValue@0x19f4940d000
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $200: FinalFunction target=AssignVoyage@0x19e4d513540 (
+    $209: LocalVariable named VoyageProposalDesc@0x19f4940cd80
+    $218: LocalVariable named TaleRankDesc@0x19f4940ce00
+    $227: EndFunctionParms
+  )
+$228: Let (Variable = Expression)
+  Variable:
+  $237: LocalVariable named CallFunc_Array_Add_ReturnValue@0x19f494c9df0
+  Expression:
+  $246: Context
+    ObjectExpression:
+    $247: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Add_ReturnValue@0x19f494c9df0
+    ContextExpression:
+    $268: FinalFunction target=Array_Add@0x19e4d366810 (
+      $277: InstanceVariable named TutorialVoyageProgressTrackers@0x19f4940d880
+      $286: LocalVariable named CallFunc_SpawnObject_ReturnValue@0x19f4940d000
+      $295: EndFunctionParms
+    )
+$296: Context
+  ObjectExpression:
+  $297: LocalVariable named CallFunc_SpawnObject_ReturnValue@0x19f4940d000
+  SkipBytes: 0x17
+  RValueProperty: (null)
+  ContextExpression:
+  $318: VirtualFunction call "Initialise" (
+    $331: LocalVariable named Disable@0x19f4940cf00
+    $340: EndFunctionParms
+  )
+$341: LetObj (Variable = Expression)
+  Variable:
+  $342: LocalOutVariable named Result@0x19f4940cf80
+  Expression:
+  $351: LocalVariable named CallFunc_SpawnObject_ReturnValue@0x19f4940d000
+$360: Return expression:
+  $361: Nothing
+$362: EndOfScript
+
+=== BP_CT_TutorialProgress_C::fn_idx_2002 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_CT_TutorialProgress" (
+  $13: literal int32 225
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_CT_TutorialProgress_C::fn_idx_217728 (58 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_VoyageName@0x19f494c9f40
+  Expression:
+  $9: LocalVariable named VoyageName@0x19f494c9e60
+$18: LetValueOnPersistentFrame dest=K2Node_CustomEvent_New_Progress_State@0x19f4940d180
+  Expression:
+  $27: LocalVariable named New Progress State@0x19f4940d080
+$36: VirtualFunction call "ExecuteUbergraph_BP_CT_TutorialProgress" (
+  $49: literal int32 86
+  $54: EndFunctionParms
+)
+$55: Return expression:
+  $56: Nothing
+$57: EndOfScript
+
+=== BP_CT_TutorialProgress_C::fn_idx_217734 (441 bytes) ===
+$0: FlowStack.Push(0x1b6)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x19f494c9ed0
+$15: VirtualFunction call "CreateTutorialProgressTracker" (
+  $28: ObjectConst Proposal_CompanyTales_GH_Rank0_C@0x19f400196c0
+  $37: ObjectConst BP_CT_Rank_0_XMarks_C@0x19f48439240
+  $46: ObjectConst BP_GH_Rank01_RankDesc_C@0x19f4052f540
+  $55: False
+  $56: LocalVariable named CallFunc_CreateTutorialProgressTracker_Result@0x19f4940d100
+  $65: EndFunctionParms
+)
+$66: LetObj (Variable = Expression)
+  Variable:
+  $67: InstanceVariable named XMarksTutorialProgress@0x19f4940d580
+  Expression:
+  $76: LocalVariable named CallFunc_CreateTutorialProgressTracker_Result@0x19f4940d100
+$85: PopExecutionFlow (jump to popped addr)
+$86: VirtualFunction call "FindTutorialProgressObject" (
+  $99: LocalVariable named K2Node_CustomEvent_VoyageName@0x19f494c9f40
+  $108: LocalVariable named CallFunc_FindTutorialProgressObject_Voyage@0x19f4940d200
+  $117: EndFunctionParms
+)
+$118: LetBool (Variable = Expression)
+  Variable:
+  $119: LocalVariable named CallFunc_IsValid_ReturnValue@0x19f4940d280
+  Expression:
+  $128: Context
+    ObjectExpression:
+    $129: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19f4940d280
+    ContextExpression:
+    $150: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $159: LocalVariable named CallFunc_FindTutorialProgressObject_Voyage@0x19f4940d200
+      $168: EndFunctionParms
+    )
+$169: PopExecutionFlowIfNot, cond:
+$170: LocalVariable named CallFunc_IsValid_ReturnValue@0x19f4940d280
+$179: Context
+  ObjectExpression:
+  $180: LocalVariable named CallFunc_FindTutorialProgressObject_Voyage@0x19f4940d200
+  SkipBytes: 0x17
+  RValueProperty: (null)
+  ContextExpression:
+  $201: VirtualFunction call "SetProgress" (
+    $214: LocalVariable named K2Node_CustomEvent_New_Progress_State@0x19f4940d180
+    $223: EndFunctionParms
+  )
+$224: PopExecutionFlow (jump to popped addr)
+$225: FlowStack.Push(0x187)
+$230: FlowStack.Push(0x158)
+$235: FlowStack.Push(0x129)
+$240: FlowStack.Push(0xfa)
+$245: Jump to offset 0xf
+$250: VirtualFunction call "CreateTutorialProgressTracker" (
+  $263: NoObject
+  $264: NoObject
+  $265: NoObject
+  $266: True
+  $267: LocalVariable named CallFunc_CreateTutorialProgressTracker_Result5@0x19f4940d480
+  $276: EndFunctionParms
+)
+$277: LetObj (Variable = Expression)
+  Variable:
+  $278: InstanceVariable named RiddleTutorialProgress@0x19f4940d600
+  Expression:
+  $287: LocalVariable named CallFunc_CreateTutorialProgressTracker_Result5@0x19f4940d480
+$296: PopExecutionFlow (jump to popped addr)
+$297: VirtualFunction call "CreateTutorialProgressTracker" (
+  $310: NoObject
+  $311: NoObject
+  $312: NoObject
+  $313: True
+  $314: LocalVariable named CallFunc_CreateTutorialProgressTracker_Result4@0x19f4940d400
+  $323: EndFunctionParms
+)
+$324: LetObj (Variable = Expression)
+  Variable:
+  $325: InstanceVariable named FaunaTutorialProgress@0x19f4940d680
+  Expression:
+  $334: LocalVariable named CallFunc_CreateTutorialProgressTracker_Result4@0x19f4940d400
+$343: PopExecutionFlow (jump to popped addr)
+$344: VirtualFunction call "CreateTutorialProgressTracker" (
+  $357: NoObject
+  $358: NoObject
+  $359: NoObject
+  $360: True
+  $361: LocalVariable named CallFunc_CreateTutorialProgressTracker_Result3@0x19f4940d380
+  $370: EndFunctionParms
+)
+$371: LetObj (Variable = Expression)
+  Variable:
+  $372: InstanceVariable named CargoTutorialProgress@0x19f4940d700
+  Expression:
+  $381: LocalVariable named CallFunc_CreateTutorialProgressTracker_Result3@0x19f4940d380
+$390: PopExecutionFlow (jump to popped addr)
+$391: VirtualFunction call "CreateTutorialProgressTracker" (
+  $404: NoObject
+  $405: NoObject
+  $406: NoObject
+  $407: True
+  $408: LocalVariable named CallFunc_CreateTutorialProgressTracker_Result2@0x19f4940d300
+  $417: EndFunctionParms
+)
+$418: LetObj (Variable = Expression)
+  Variable:
+  $419: InstanceVariable named BootyTutorialProgress@0x19f4940d780
+  Expression:
+  $428: LocalVariable named CallFunc_CreateTutorialProgressTracker_Result2@0x19f4940d300
+$437: PopExecutionFlow (jump to popped addr)
+$438: Return expression:
+  $439: Nothing
+$440: EndOfScript

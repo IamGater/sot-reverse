@@ -1,0 +1,101 @@
+// Class: AmbientLightSourceComponent (4 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+AmbientLightSourceComponent::SetAmbientIntensity @ RVA 0x2B1C400 EA 0x7FF6F653C400
+======================================================================
+__int64 __fastcall sub_7FF6F653C400(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5CC9E30(a1);
+}
+
+
+======================================================================
+AmbientLightSourceComponent::SetGroupingPolicy @ RVA 0x2B1F690 EA 0x7FF6F653F690
+======================================================================
+__int64 __fastcall sub_7FF6F653F690(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5CCA930(a1, v5);
+}
+
+
+======================================================================
+AmbientLightSourceComponent::SetRadius @ RVA 0x2B20E90 EA 0x7FF6F6540E90
+======================================================================
+__int64 __fastcall sub_7FF6F6540E90(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5CCB8E0(a1);
+}
+
+
+======================================================================
+AmbientLightSourceComponent::SetTint @ RVA 0x2B22700 EA 0x7FF6F6542700
+======================================================================
+__int64 __fastcall sub_7FF6F6542700(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rax
+  __int128 v6; // [rsp+20h] [rbp-28h] BYREF
+  __int128 v7; // [rsp+30h] [rbp-18h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  v4 = a2[4];
+  v7 = v6;
+  a2[4] = v4 + (v4 != 0);
+  return sub_7FF6F5CCBBE0(a1, &v7);
+}
+

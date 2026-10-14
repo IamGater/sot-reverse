@@ -1,0 +1,78 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_5_WildRose/bp_pickuprightpendant -> BP_PickUpRightPendant_C
+
+=== BP_PickUpRightPendant_C::fn_idx_284201 (22 bytes) ===
+$0: VirtualFunction call "idx:284205" (
+  $13: literal int32 231
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_PickUpRightPendant_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fcc5aea80
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fcc5ae500
+$18: VirtualFunction call "idx:284205" (
+  $31: literal int32 236
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_PickUpRightPendant_C::fn_idx_284205 (244 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19e586bcb00
+$10: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $19: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc5ae580
+  $28: EndFunctionParms
+)
+$29: FinalFunction target=ChangeCompassTargetByActor@0x19e4cda4ba0 (
+  $38: StructMemberContext prop=idx:284183@0x19f81ca0780
+    Expression to struct:
+    $47: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc5ae580
+  $56: literal byte 0
+  $58: EndFunctionParms
+)
+$59: Let (Variable = Expression)
+  Variable:
+  $68: LocalVariable named K2Node_DynamicCast_AsItem_Info@0x19fcc5ae780
+  Expression:
+  $77: DynamicCast to ItemInfo@0x19e4c38a640 of expr:
+  $86: StructMemberContext prop=idx:284183@0x19f81ca0780
+    Expression to struct:
+    $95: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc5ae580
+$104: Let (Variable = Expression)
+  Variable:
+  $113: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcc5ae980
+  Expression:
+  $122: PrimitiveCast type=71
+    Argument:
+    $124: LocalVariable named K2Node_DynamicCast_AsItem_Info@0x19fcc5ae780
+$133: JumpIfNot -> 0xf1, cond:
+  $138: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcc5ae980
+$147: BindDelegate 'idx:284201'
+  Delegate:
+  $160: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fcc5ae600
+  Object:
+  $169: Self
+$170: AddMulticastDelegate
+$171: Context
+  ObjectExpression:
+  $172: LocalVariable named K2Node_DynamicCast_AsItem_Info@0x19fcc5ae780
+  SkipBytes: 0x9
+  RValueProperty: OnItemPickedUpDelegate@0x19e4d10b7b0
+  ContextExpression:
+  $193: InstanceVariable named OnItemPickedUpDelegate@0x19e4d10b7b0
+$202: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fcc5ae600
+$211: Jump to offset 0xf1
+$216: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $225: EndFunctionParms
+)
+$226: Jump to offset 0xf1
+$231: Jump to offset 0xd8
+$236: Jump to offset 0xa
+$241: Return expression:
+  $242: Nothing
+$243: EndOfScript

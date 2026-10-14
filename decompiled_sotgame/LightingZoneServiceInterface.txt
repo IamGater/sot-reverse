@@ -1,0 +1,153 @@
+// Class: LightingZoneServiceInterface (5 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+LightingZoneServiceInterface::GetAllLightingZones @ RVA 0x3337F80 EA 0x7FF6F6D57F80
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6D57F80(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 result; // rax
+  __int64 v5; // rdi
+  __int64 v6[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64, __int64 *))(*(_QWORD *)a1 + 48LL))(a1, v6);
+  v5 = result;
+  if ( a3 != result )
+  {
+    if ( *(_QWORD *)a3 )
+    {
+      sub_7FF6F4DED1F0(*(_QWORD *)a3);
+      if ( *(_QWORD *)a3 )
+        *(_QWORD *)a3 = 0;
+    }
+    *(_QWORD *)a3 = *(_QWORD *)v5;
+    *(_QWORD *)v5 = 0;
+    *(_DWORD *)(a3 + 8) = *(_DWORD *)(v5 + 8);
+    result = *(unsigned int *)(v5 + 12);
+    *(_DWORD *)(a3 + 12) = result;
+    *(_QWORD *)(v5 + 8) = 0;
+  }
+  if ( v6[0] )
+    return sub_7FF6F4DED1F0(v6[0]);
+  return result;
+}
+
+
+======================================================================
+LightingZoneServiceInterface::GetLightingZone @ RVA 0x3338020 EA 0x7FF6F6D58020
+======================================================================
+__int64 __fastcall sub_7FF6F6D58020(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rax
+  __int64 result; // rax
+  _BYTE v11[40]; // [rsp+20h] [rbp-28h] BYREF
+  unsigned int v12; // [rsp+50h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v7 = a2[4];
+  v8 = v12;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  v9 = (*(__int64 (__fastcall **)(__int64, _BYTE *, __int64))(*(_QWORD *)a1 + 40LL))(a1, v11, v8);
+  *(_OWORD *)a3 = *(_OWORD *)v9;
+  *(_QWORD *)(a3 + 16) = *(_QWORD *)(v9 + 16);
+  result = *(unsigned int *)(v9 + 24);
+  *(_DWORD *)(a3 + 24) = result;
+  return result;
+}
+
+
+======================================================================
+LightingZoneServiceInterface::GetNumberOfLightingZones @ RVA 0x3338120 EA 0x7FF6F6D58120
+======================================================================
+__int64 __fastcall sub_7FF6F6D58120(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 32LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+LightingZoneServiceInterface::RegisterLightingZoneWithService @ RVA 0x3338150 EA 0x7FF6F6D58150
+======================================================================
+__int64 __fastcall sub_7FF6F6D58150(__int64 *a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  __int128 v8; // [rsp+20h] [rbp-28h] BYREF
+  _QWORD v9[3]; // [rsp+30h] [rbp-18h] BYREF
+
+  v2 = a2[4] == 0;
+  v8 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  v5 = 0;
+  a2[4] += a2[4] != 0;
+  v9[0] = v8;
+  v6 = *a1;
+  if ( (_QWORD)v8 )
+    v5 = *((_QWORD *)&v8 + 1);
+  v9[1] = v5;
+  return (*(__int64 (__fastcall **)(__int64 *, _QWORD *))(v6 + 16))(a1, v9);
+}
+
+
+======================================================================
+LightingZoneServiceInterface::UnregisterLightingZoneFromService @ RVA 0x33381F0 EA 0x7FF6F6D581F0
+======================================================================
+__int64 __fastcall sub_7FF6F6D581F0(__int64 *a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  __int128 v8; // [rsp+20h] [rbp-28h] BYREF
+  _QWORD v9[3]; // [rsp+30h] [rbp-18h] BYREF
+
+  v2 = a2[4] == 0;
+  v8 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  v5 = 0;
+  a2[4] += a2[4] != 0;
+  v9[0] = v8;
+  v6 = *a1;
+  if ( (_QWORD)v8 )
+    v5 = *((_QWORD *)&v8 + 1);
+  v9[1] = v5;
+  return (*(__int64 (__fastcall **)(__int64 *, _QWORD *))(v6 + 24))(a1, v9);
+}
+

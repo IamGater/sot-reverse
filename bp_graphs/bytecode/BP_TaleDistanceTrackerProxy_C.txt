@@ -1,0 +1,210 @@
+// /Game/Blueprints/TallTales/Actors/General/bp_taledistancetrackerproxy -> BP_TaleDistanceTrackerProxy_C
+
+=== BP_TaleDistanceTrackerProxy_C::fn_idx_18807 (76 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: InstanceVariable named idx:278989@0x19fce560780
+  Expression:
+  $10: LocalVariable named idx:278989@0x19fce560300
+$19: Let (Variable = Expression)
+  Variable:
+  $28: InstanceVariable named idx:278988@0x19fce560800
+  Expression:
+  $37: LocalVariable named idx:278988@0x19fce560380
+$46: Let (Variable = Expression)
+  Variable:
+  $55: InstanceVariable named idx:278990@0x19fc17c11f0
+  Expression:
+  $64: LocalVariable named idx:278990@0x19fcde4a020
+$73: Return expression:
+  $74: Nothing
+$75: EndOfScript
+
+=== BP_TaleDistanceTrackerProxy_C::fn_idx_278987 (163 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x19fce560500
+  Expression:
+  $18: Context
+    ObjectExpression:
+    $19: LocalVariable named idx:278978@0x19fce560400
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetActorLocation_ReturnValue@0x19fce560500
+    ContextExpression:
+    $40: FinalFunction target=K2_GetActorLocation@0x19e4cd66b10 (
+      $49: EndFunctionParms
+    )
+$50: Let (Variable = Expression)
+  Variable:
+  $59: LocalVariable named CallFunc_Subtract_VectorVector_ReturnValue@0x19fce560600
+  Expression:
+  $68: CallMath target=Subtract_VectorVector@0x19e4d39a7f0 (
+    $77: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x19fce560500
+    $86: LocalVariable named idx:278979@0x19fce560480
+    $95: EndFunctionParms
+  )
+$96: Let (Variable = Expression)
+  Variable:
+  $105: LocalVariable named CallFunc_VSize_ReturnValue@0x19fcde4a100
+  Expression:
+  $114: CallMath target=VSize@0x19e4d39d810 (
+    $123: LocalVariable named CallFunc_Subtract_VectorVector_ReturnValue@0x19fce560600
+    $132: EndFunctionParms
+  )
+$133: Let (Variable = Expression)
+  Variable:
+  $142: LocalOutVariable named idx:278985@0x19fcde4a090
+  Expression:
+  $151: LocalVariable named CallFunc_VSize_ReturnValue@0x19fcde4a100
+$160: Return expression:
+  $161: Nothing
+$162: EndOfScript
+
+=== BP_TaleDistanceTrackerProxy_C::fn_idx_9202 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_TaleDistanceTrackerProxy_C::fn_idx_8396 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_DeltaSeconds@0x19fcde4a250
+  Expression:
+  $9: LocalVariable named DeltaSeconds@0x19fcde4a170
+$18: VirtualFunction call "idx:278986" (
+  $31: literal int32 43
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_TaleDistanceTrackerProxy_C::fn_idx_278986 (625 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fcde4a1e0
+$10: VirtualFunction call "Broadcast" (
+  $23: EndFunctionParms
+)
+$24: VirtualFunction call "K2_DestroyActor" (
+  $37: EndFunctionParms
+)
+$38: Jump to offset 0x26e
+$43: LetBool (Variable = Expression)
+  Variable:
+  $44: LocalVariable named CallFunc_NotEqual_ObjectObject_ReturnValue@0x19fce560680
+  Expression:
+  $53: CallMath target=NotEqual_ObjectObject@0x19e4d391430 (
+    $62: InstanceVariable named idx:278989@0x19fce560780
+    $71: NoObject
+    $72: EndFunctionParms
+  )
+$73: JumpIfNot -> 0x20d, cond:
+  $78: LocalVariable named CallFunc_NotEqual_ObjectObject_ReturnValue@0x19fce560680
+$87: VirtualFunction call "idx:278987" (
+  $100: InstanceVariable named idx:278989@0x19fce560780
+  $109: InstanceVariable named idx:278988@0x19fce560800
+  $118: LocalVariable named idx:278982@0x19fcde4a6b0
+  $127: EndFunctionParms
+)
+$128: Let (Variable = Expression)
+  Variable:
+  $137: LocalVariable named CallFunc_Conv_FloatToString_ReturnValue@0x19fcde4b280
+  Expression:
+  $146: Context
+    ObjectExpression:
+    $147: ObjectConst Default__KismetStringLibrary@0x19e4d95ecd0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Conv_FloatToString_ReturnValue@0x19fcde4b280
+    ContextExpression:
+    $168: FinalFunction target=Conv_FloatToString@0x19e4d3a1c40 (
+      $177: LocalVariable named idx:278982@0x19fcde4a6b0
+      $186: EndFunctionParms
+    )
+$187: Let (Variable = Expression)
+  Variable:
+  $196: LocalVariable named CallFunc_Concat_StrStr_ReturnValue@0x19fcde4a790
+  Expression:
+  $205: Context
+    ObjectExpression:
+    $206: ObjectConst Default__KismetStringLibrary@0x19e4d95ecd0
+    SkipBytes: 0x39
+    RValueProperty: CallFunc_Concat_StrStr_ReturnValue@0x19fcde4a790
+    ContextExpression:
+    $227: FinalFunction target=Concat_StrStr@0x19e4d3a1520 (
+      $236: literal ansi string "Distance between target and origin: "
+      $274: LocalVariable named CallFunc_Conv_FloatToString_ReturnValue@0x19fcde4b280
+      $283: EndFunctionParms
+    )
+$284: Context
+  ObjectExpression:
+  $285: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x3d
+  RValueProperty: (null)
+  ContextExpression:
+  $306: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $315: Self
+    $316: LocalVariable named CallFunc_Concat_StrStr_ReturnValue@0x19fcde4a790
+    $325: False
+    $326: True
+    $327: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $340: literal float 1
+      $345: literal float 0.6643940210342407
+      $350: literal float 0
+      $355: literal float 1
+      $360: EndStructConst
+    $361: literal float 5
+    $366: EndFunctionParms
+  )
+$367: LetBool (Variable = Expression)
+  Variable:
+  $368: LocalVariable named CallFunc_Less_FloatFloat_ReturnValue@0x19fce560700
+  Expression:
+  $377: CallMath target=Less_FloatFloat@0x19e4d385cb0 (
+    $386: InstanceVariable named idx:278990@0x19fc17c11f0
+    $395: LocalVariable named idx:278982@0x19fcde4a6b0
+    $404: EndFunctionParms
+  )
+$405: JumpIfNot -> 0x26e, cond:
+  $410: LocalVariable named CallFunc_Less_FloatFloat_ReturnValue@0x19fce560700
+$419: Context
+  ObjectExpression:
+  $420: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x4f
+  RValueProperty: (null)
+  ContextExpression:
+  $441: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $450: Self
+    $451: literal ansi string "Trigger Event Dispatcher!"
+    $478: False
+    $479: True
+    $480: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $493: literal float 0
+      $498: literal float 0.6600000262260437
+      $503: literal float 1
+      $508: literal float 1
+      $513: EndStructConst
+    $514: literal float 2
+    $519: EndFunctionParms
+  )
+$520: Jump to offset 0xa
+$525: Context
+  ObjectExpression:
+  $526: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x4b
+  RValueProperty: (null)
+  ContextExpression:
+  $547: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $556: Self
+    $557: literal ansi string "Tracked Target Nulled"
+    $580: False
+    $581: True
+    $582: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $595: literal float 1
+      $600: literal float 0
+      $605: literal float 0.07839400321245193
+      $610: literal float 1
+      $615: EndStructConst
+    $616: literal float 2
+    $621: EndFunctionParms
+  )
+$622: Return expression:
+  $623: Nothing
+$624: EndOfScript

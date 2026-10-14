@@ -1,0 +1,101 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_6_TheArtOfTheTrickster/bp_spawnitemoncaptainstable_gunpowder -> BP_SpawnItemOnCaptainsTable_Gunpowder_C
+
+=== BP_SpawnItemOnCaptainsTable_Gunpowder_C::fn_idx_1698 (492 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19fcc5a0f00
+  Expression:
+  $18: FinalFunction target=GetCrewShips@0x19e4cda5420 (
+    $27: EndFunctionParms
+  )
+$28: Context
+  ObjectExpression:
+  $29: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $50: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $59: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19fcc5a0f00
+    $68: literal int32 0
+    $73: LocalVariable named CallFunc_Array_Get_Item@0x19fcc5a0c00
+    $82: EndFunctionParms
+  )
+$83: Let (Variable = Expression)
+  Variable:
+  $92: LocalVariable named CallFunc_GetShipLocatorPositionChecked_ReturnValue@0x19fcc5a0980
+  Expression:
+  $101: Context
+    ObjectExpression:
+    $102: LocalVariable named CallFunc_Array_Get_Item@0x19fcc5a0c00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetShipLocatorPositionChecked_ReturnValue@0x19fcc5a0980
+    ContextExpression:
+    $123: FinalFunction target=GetShipLocatorPositionChecked@0x19e4d11bdd0 (
+      $132: LocalVariable named Ship Location@0x19fcc5a0a80
+      $141: EndFunctionParms
+    )
+$142: Let (Variable = Expression)
+  Variable:
+  $151: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x19fcc5a0a00
+  Expression:
+  $160: CallMath target=Add_VectorVector@0x19e4d370750 (
+    $169: LocalVariable named CallFunc_GetShipLocatorPositionChecked_ReturnValue@0x19fcc5a0980
+    $178: LocalVariable named Offset@0x19fcc5a0b00
+    $187: EndFunctionParms
+  )
+$188: Let (Variable = Expression)
+  Variable:
+  $197: LocalVariable named CallFunc_Conv_VectorToTransform_ReturnValue@0x19fcc5a0e00
+  Expression:
+  $206: CallMath target=Conv_VectorToTransform@0x19e4d376610 (
+    $215: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x19fcc5a0a00
+    $224: EndFunctionParms
+  )
+$225: LetObj (Variable = Expression)
+  Variable:
+  $226: LocalVariable named CallFunc_SpawnPhasedItem_ReturnValue@0x19fce701780
+  Expression:
+  $235: FinalFunction target=SpawnPhasedItem@0x19e4cda9200 (
+    $244: LocalVariable named idx:284421@0x19fcc5a0c80
+    $253: LocalVariable named CallFunc_Conv_VectorToTransform_ReturnValue@0x19fcc5a0e00
+    $262: True
+    $263: True
+    $264: literal text (not decoded)
+    $265: literal ansi string "The Trapmaker's Gunpowder Key was lost"
+    $305: literal ansi string "812EBBC54DB0775576AC45A3ECBB0649_FailureMessage7"
+    $355: literal ansi string ""
+    $357: EndFunctionParms
+  )
+$358: Context
+  ObjectExpression:
+  $359: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $380: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $389: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19fcc5a0f00
+    $398: literal int32 0
+    $403: LocalVariable named CallFunc_Array_Get_Item@0x19fcc5a0c00
+    $412: EndFunctionParms
+  )
+$413: Context
+  ObjectExpression:
+  $414: LocalVariable named CallFunc_SpawnPhasedItem_ReturnValue@0x19fce701780
+  SkipBytes: 0x23
+  RValueProperty: (null)
+  ContextExpression:
+  $435: FinalFunction target=K2_AttachRootComponentToActor@0x19e4cd66660 (
+    $444: LocalVariable named CallFunc_Array_Get_Item@0x19fcc5a0c00
+    $453: literal name "None"
+    $466: literal byte 0
+    $468: False
+    $469: EndFunctionParms
+  )
+$470: LetObj (Variable = Expression)
+  Variable:
+  $471: LocalOutVariable named SpawnedItem@0x19fcc5a0b80
+  Expression:
+  $480: LocalVariable named CallFunc_SpawnPhasedItem_ReturnValue@0x19fce701780
+$489: Return expression:
+  $490: Nothing
+$491: EndOfScript

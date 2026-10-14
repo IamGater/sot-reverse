@@ -1,0 +1,385 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_4_StarsOfAThief/bp_setupstarsofathiefvariables -> BP_SetupStarsOfAThiefVariables_C
+
+=== BP_SetupStarsOfAThiefVariables_C::fn_idx_284057 (232 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19e586bd430
+  Expression:
+  $18: Context
+    ObjectExpression:
+    $19: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19e586bd430
+    ContextExpression:
+    $40: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $49: LocalOutVariable named idx:284056@0x19f81ca9580
+      $58: EndFunctionParms
+    )
+$59: Let (Variable = Expression)
+  Variable:
+  $68: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x19e586bd4a0
+  Expression:
+  $77: CallMath target=Subtract_IntInt@0x19e4d399ad0 (
+    $86: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19e586bd430
+    $95: literal int32 1
+    $100: EndFunctionParms
+  )
+$101: Let (Variable = Expression)
+  Variable:
+  $110: LocalVariable named CallFunc_RandomIntegerInRange_ReturnValue@0x19e586bd580
+  Expression:
+  $119: CallMath target=RandomIntegerInRange@0x19e4d394190 (
+    $128: literal int32 0
+    $133: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x19e586bd4a0
+    $142: EndFunctionParms
+  )
+$143: Context
+  ObjectExpression:
+  $144: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $165: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $174: LocalOutVariable named idx:284056@0x19f81ca9580
+    $183: LocalVariable named CallFunc_RandomIntegerInRange_ReturnValue@0x19e586bd580
+    $192: LocalVariable named CallFunc_Array_Get_Item@0x19f81ca9480
+    $201: EndFunctionParms
+  )
+$202: Let (Variable = Expression)
+  Variable:
+  $211: LocalOutVariable named idx:284055@0x19f81ca9400
+  Expression:
+  $220: LocalVariable named CallFunc_Array_Get_Item@0x19f81ca9480
+$229: Return expression:
+  $230: Nothing
+$231: EndOfScript
+
+=== BP_SetupStarsOfAThiefVariables_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19f81ca9680
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19f81ca9600
+$18: VirtualFunction call "idx:284053" (
+  $31: literal int32 25
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_SetupStarsOfAThiefVariables_C::fn_idx_284053 (1281 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19e586bd660
+$10: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $19: EndFunctionParms
+)
+$20: Jump to offset 0x4fe
+$25: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $34: LocalVariable named CallFunc_GetVariables_OutStruct@0x19f81ca9700
+  $43: EndFunctionParms
+)
+$44: VirtualFunction call "idx:284057" (
+  $57: StructMemberContext prop=idx:283989@0x19f81cae380
+    Expression to struct:
+    $66: LocalVariable named CallFunc_GetVariables_OutStruct@0x19f81ca9700
+  $75: LocalVariable named idx:284051@0x19f81ca9780
+  $84: EndFunctionParms
+)
+$85: LetObj (Variable = Expression)
+  Variable:
+  $86: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue@0x19f81ca9800
+  Expression:
+  $95: Context
+    ObjectExpression:
+    $96: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Conv_AssetToObject_ReturnValue@0x19f81ca9800
+    ContextExpression:
+    $117: FinalFunction target=Conv_AssetToObject@0x19e4cd86800 (
+      $126: StructMemberContext prop=idx:283998@0x19f81cada80
+        Expression to struct:
+        $135: LocalVariable named CallFunc_GetVariables_OutStruct@0x19f81ca9700
+      $144: EndFunctionParms
+    )
+$145: LetObj (Variable = Expression)
+  Variable:
+  $146: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue2@0x19f81ca9900
+  Expression:
+  $155: Context
+    ObjectExpression:
+    $156: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Conv_AssetToObject_ReturnValue2@0x19f81ca9900
+    ContextExpression:
+    $177: FinalFunction target=Conv_AssetToObject@0x19e4cd86800 (
+      $186: StructMemberContext prop=idx:283988@0x19f81cada00
+        Expression to struct:
+        $195: LocalVariable named CallFunc_GetVariables_OutStruct@0x19f81ca9700
+      $204: EndFunctionParms
+    )
+$205: Let (Variable = Expression)
+  Variable:
+  $214: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19f81ca9980
+  Expression:
+  $223: DynamicCast to Actor@0x19e261ddc80 of expr:
+  $232: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue@0x19f81ca9800
+$241: Let (Variable = Expression)
+  Variable:
+  $250: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x19f81ca9a00
+  Expression:
+  $259: PrimitiveCast type=71
+    Argument:
+    $261: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19f81ca9980
+$270: Let (Variable = Expression)
+  Variable:
+  $279: LocalVariable named UniqueObjectNameForCooking_AsActor2@0x19f81ca9a80
+  Expression:
+  $288: DynamicCast to Actor@0x19e261ddc80 of expr:
+  $297: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue2@0x19f81ca9900
+$306: Let (Variable = Expression)
+  Variable:
+  $315: LocalVariable named UniqueObjectNameForCooking_bSuccess2@0x19f81ca9b00
+  Expression:
+  $324: PrimitiveCast type=71
+    Argument:
+    $326: LocalVariable named UniqueObjectNameForCooking_AsActor2@0x19f81ca9a80
+$335: LetObj (Variable = Expression)
+  Variable:
+  $336: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue3@0x19f81ca9b80
+  Expression:
+  $345: Context
+    ObjectExpression:
+    $346: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Conv_AssetToObject_ReturnValue3@0x19f81ca9b80
+    ContextExpression:
+    $367: FinalFunction target=Conv_AssetToObject@0x19e4cd86800 (
+      $376: StructMemberContext prop=idx:284000@0x19f81cad980
+        Expression to struct:
+        $385: LocalVariable named CallFunc_GetVariables_OutStruct@0x19f81ca9700
+      $394: EndFunctionParms
+    )
+$395: LetObj (Variable = Expression)
+  Variable:
+  $396: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue4@0x19f81ca9c00
+  Expression:
+  $405: Context
+    ObjectExpression:
+    $406: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Conv_AssetToObject_ReturnValue4@0x19f81ca9c00
+    ContextExpression:
+    $427: FinalFunction target=Conv_AssetToObject@0x19e4cd86800 (
+      $436: StructMemberContext prop=idx:283984@0x19f81cad880
+        Expression to struct:
+        $445: LocalVariable named CallFunc_GetVariables_OutStruct@0x19f81ca9700
+      $454: EndFunctionParms
+    )
+$455: Let (Variable = Expression)
+  Variable:
+  $464: LocalVariable named UniqueObjectNameForCooking_AsActor3@0x19f81ca9c80
+  Expression:
+  $473: DynamicCast to Actor@0x19e261ddc80 of expr:
+  $482: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue3@0x19f81ca9b80
+$491: Let (Variable = Expression)
+  Variable:
+  $500: LocalVariable named UniqueObjectNameForCooking_bSuccess3@0x19f81ca9d00
+  Expression:
+  $509: PrimitiveCast type=71
+    Argument:
+    $511: LocalVariable named UniqueObjectNameForCooking_AsActor3@0x19f81ca9c80
+$520: Let (Variable = Expression)
+  Variable:
+  $529: LocalVariable named UniqueObjectNameForCooking_AsActor4@0x19f81ca9d80
+  Expression:
+  $538: DynamicCast to Actor@0x19e261ddc80 of expr:
+  $547: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue4@0x19f81ca9c00
+$556: Let (Variable = Expression)
+  Variable:
+  $565: LocalVariable named UniqueObjectNameForCooking_bSuccess4@0x19f81ca9e00
+  Expression:
+  $574: PrimitiveCast type=71
+    Argument:
+    $576: LocalVariable named UniqueObjectNameForCooking_AsActor4@0x19f81ca9d80
+$585: LetObj (Variable = Expression)
+  Variable:
+  $586: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue5@0x19f81ca9e80
+  Expression:
+  $595: Context
+    ObjectExpression:
+    $596: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Conv_AssetToObject_ReturnValue5@0x19f81ca9e80
+    ContextExpression:
+    $617: FinalFunction target=Conv_AssetToObject@0x19e4cd86800 (
+      $626: StructMemberContext prop=idx:283986@0x19f81cad800
+        Expression to struct:
+        $635: LocalVariable named CallFunc_GetVariables_OutStruct@0x19f81ca9700
+      $644: EndFunctionParms
+    )
+$645: LetObj (Variable = Expression)
+  Variable:
+  $646: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue6@0x19f81ca9f00
+  Expression:
+  $655: Context
+    ObjectExpression:
+    $656: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Conv_AssetToObject_ReturnValue6@0x19f81ca9f00
+    ContextExpression:
+    $677: FinalFunction target=Conv_AssetToObject@0x19e4cd86800 (
+      $686: StructMemberContext prop=idx:283985@0x19f81cad780
+        Expression to struct:
+        $695: LocalVariable named CallFunc_GetVariables_OutStruct@0x19f81ca9700
+      $704: EndFunctionParms
+    )
+$705: Let (Variable = Expression)
+  Variable:
+  $714: LocalVariable named UniqueObjectNameForCooking_AsActor5@0x19f81ca9f80
+  Expression:
+  $723: DynamicCast to Actor@0x19e261ddc80 of expr:
+  $732: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue5@0x19f81ca9e80
+$741: Let (Variable = Expression)
+  Variable:
+  $750: LocalVariable named UniqueObjectNameForCooking_bSuccess5@0x19f81caa000
+  Expression:
+  $759: PrimitiveCast type=71
+    Argument:
+    $761: LocalVariable named UniqueObjectNameForCooking_AsActor5@0x19f81ca9f80
+$770: Let (Variable = Expression)
+  Variable:
+  $779: LocalVariable named UniqueObjectNameForCooking_AsActor6@0x19f81caa080
+  Expression:
+  $788: DynamicCast to Actor@0x19e261ddc80 of expr:
+  $797: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue6@0x19f81ca9f00
+$806: Let (Variable = Expression)
+  Variable:
+  $815: LocalVariable named UniqueObjectNameForCooking_bSuccess6@0x19f81caa180
+  Expression:
+  $824: PrimitiveCast type=71
+    Argument:
+    $826: LocalVariable named UniqueObjectNameForCooking_AsActor6@0x19f81caa080
+$835: LetObj (Variable = Expression)
+  Variable:
+  $836: StructMemberContext prop=idx:284016@0x19f81cacc80
+    Expression to struct:
+    $845: LocalVariable named idx:284054@0x19f81caab00
+  Expression:
+  $854: LocalVariable named UniqueObjectNameForCooking_AsActor4@0x19f81ca9d80
+$863: LetObj (Variable = Expression)
+  Variable:
+  $864: StructMemberContext prop=idx:284010@0x19f81cacd00
+    Expression to struct:
+    $873: LocalVariable named idx:284054@0x19f81caab00
+  Expression:
+  $882: LocalVariable named UniqueObjectNameForCooking_AsActor6@0x19f81caa080
+$891: LetObj (Variable = Expression)
+  Variable:
+  $892: StructMemberContext prop=idx:284023@0x19f81cace00
+    Expression to struct:
+    $901: LocalVariable named idx:284054@0x19f81caab00
+  Expression:
+  $910: LocalVariable named UniqueObjectNameForCooking_AsActor3@0x19f81ca9c80
+$919: LetObj (Variable = Expression)
+  Variable:
+  $920: StructMemberContext prop=idx:284020@0x19f81cace80
+    Expression to struct:
+    $929: LocalVariable named idx:284054@0x19f81caab00
+  Expression:
+  $938: NoObject
+$939: LetObj (Variable = Expression)
+  Variable:
+  $940: StructMemberContext prop=idx:284013@0x19f81cad000
+    Expression to struct:
+    $949: LocalVariable named idx:284054@0x19f81caab00
+  Expression:
+  $958: LocalVariable named UniqueObjectNameForCooking_AsActor2@0x19f81ca9a80
+$967: Let (Variable = Expression)
+  Variable:
+  $976: StructMemberContext prop=idx:284014@0x19f81cad080
+    Expression to struct:
+    $985: LocalVariable named idx:284054@0x19f81caab00
+  Expression:
+  $994: LocalVariable named idx:284051@0x19f81ca9780
+$1003: LetObj (Variable = Expression)
+  Variable:
+  $1004: StructMemberContext prop=idx:284026@0x19f81cad100
+    Expression to struct:
+    $1013: LocalVariable named idx:284054@0x19f81caab00
+  Expression:
+  $1022: NoObject
+$1023: LetObj (Variable = Expression)
+  Variable:
+  $1024: StructMemberContext prop=idx:284015@0x19f81cad180
+    Expression to struct:
+    $1033: LocalVariable named idx:284054@0x19f81caab00
+  Expression:
+  $1042: NoObject
+$1043: LetObj (Variable = Expression)
+  Variable:
+  $1044: StructMemberContext prop=idx:284019@0x19f81cad200
+    Expression to struct:
+    $1053: LocalVariable named idx:284054@0x19f81caab00
+  Expression:
+  $1062: NoObject
+$1063: LetObj (Variable = Expression)
+  Variable:
+  $1064: StructMemberContext prop=idx:284025@0x19f81cad280
+    Expression to struct:
+    $1073: LocalVariable named idx:284054@0x19f81caab00
+  Expression:
+  $1082: NoObject
+$1083: Let (Variable = Expression)
+  Variable:
+  $1092: StructMemberContext prop=idx:284024@0x19f81cad300
+    Expression to struct:
+    $1101: LocalVariable named idx:284054@0x19f81caab00
+  Expression:
+  $1110: AssetConst
+  $1111: literal ansi string ""
+$1113: Let (Variable = Expression)
+  Variable:
+  $1122: StructMemberContext prop=idx:284007@0x19f81cad380
+    Expression to struct:
+    $1131: LocalVariable named idx:284054@0x19f81caab00
+  Expression:
+  $1140: literal struct idx:283981@0x19fce274bc0 (size 40)
+    $1153: AssetConst
+    $1154: literal ansi string ""
+    $1156: NoObject
+    $1157: EndStructConst
+$1158: LetObj (Variable = Expression)
+  Variable:
+  $1159: StructMemberContext prop=idx:284017@0x19f81cad400
+    Expression to struct:
+    $1168: LocalVariable named idx:284054@0x19f81caab00
+  Expression:
+  $1177: NoObject
+$1178: LetObj (Variable = Expression)
+  Variable:
+  $1179: StructMemberContext prop=idx:284021@0x19f81cad480
+    Expression to struct:
+    $1188: LocalVariable named idx:284054@0x19f81caab00
+  Expression:
+  $1197: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19f81ca9980
+$1206: LetObj (Variable = Expression)
+  Variable:
+  $1207: StructMemberContext prop=idx:284008@0x19f81cad500
+    Expression to struct:
+    $1216: LocalVariable named idx:284054@0x19f81caab00
+  Expression:
+  $1225: NoObject
+$1226: LetObj (Variable = Expression)
+  Variable:
+  $1227: StructMemberContext prop=idx:284011@0x19f81cad580
+    Expression to struct:
+    $1236: LocalVariable named idx:284054@0x19f81caab00
+  Expression:
+  $1245: LocalVariable named UniqueObjectNameForCooking_AsActor5@0x19f81ca9f80
+$1254: FinalFunction target=SetVariables@0x19e4cda7cc0 (
+  $1263: LocalVariable named idx:284054@0x19f81caab00
+  $1272: EndFunctionParms
+)
+$1273: Jump to offset 0xa
+$1278: Return expression:
+  $1279: Nothing
+$1280: EndOfScript

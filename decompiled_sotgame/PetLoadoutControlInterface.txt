@@ -1,0 +1,54 @@
+// Class: PetLoadoutControlInterface (1 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+PetLoadoutControlInterface::SetPetLoadout @ RVA 0xECB380 EA 0x7FF6F48EB380
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F48EB380(__int64 a1, _QWORD *a2)
+{
+  __int64 *v4; // rdx
+  __int64 result; // rax
+  int v6; // edi
+  __int64 *v7; // rbx
+  __int64 v8; // [rsp+28h] [rbp-20h] BYREF
+  int v9; // [rsp+30h] [rbp-18h]
+
+  sub_7FF6F739D730(&v8);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v4 = &v8;
+  if ( a2[7] )
+    v4 = (__int64 *)a2[7];
+  a2[4] += a2[4] != 0;
+  result = (*(__int64 (__fastcall **)(__int64, __int64 *))(*(_QWORD *)a1 + 16LL))(a1, v4);
+  v6 = v9;
+  if ( v9 )
+  {
+    v7 = (__int64 *)(v8 + 16);
+    do
+    {
+      if ( *v7 )
+      {
+        result = sub_7FF6F4DED1F0(*v7);
+        if ( *v7 )
+          *v7 = 0;
+      }
+      v7 += 4;
+      --v6;
+    }
+    while ( v6 );
+  }
+  if ( v8 )
+    return sub_7FF6F4DED1F0(v8);
+  return result;
+}
+

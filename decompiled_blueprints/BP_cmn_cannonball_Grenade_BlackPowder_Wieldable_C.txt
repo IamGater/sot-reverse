@@ -1,0 +1,261 @@
+// /Game/Blueprints/GameObjects/Props/Common/CursedCannonBalls/Grenades/Cocoball/bp_cmn_cannonball_grenade_blackpowder_wieldable -> BP_cmn_cannonball_Grenade_BlackPowder_Wieldable_C
+
+=== BP_cmn_cannonball_Grenade_BlackPowder_Wieldable_C::UserConstructionScript (13 bytes) ===
+$0: FinalFunction target=UserConstructionScript@0x19f675cc300 (
+  $9: EndFunctionParms
+)
+$10: Return expression:
+  $11: Nothing
+$12: EndOfScript
+
+=== BP_cmn_cannonball_Grenade_BlackPowder_Wieldable_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "idx:258970" (
+  $13: literal int32 973
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_cmn_cannonball_Grenade_BlackPowder_Wieldable_C::ReceiveTick (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_DeltaSeconds@0x19f7275ea10
+  Expression:
+  $9: LocalVariable named DeltaSeconds@0x19f7275e930
+$18: VirtualFunction call "idx:258970" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_cmn_cannonball_Grenade_BlackPowder_Wieldable_C::fn_idx_258970 (981 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19f7275e9a0
+$10: LetBool (Variable = Expression)
+  Variable:
+  $11: LocalVariable named CallFunc_IsDedicatedServer_ReturnValue@0x19f98ab8780
+  Expression:
+  $20: Context
+    ObjectExpression:
+    $21: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_IsDedicatedServer_ReturnValue@0x19f98ab8780
+    ContextExpression:
+    $42: FinalFunction target=IsDedicatedServer@0x19e4cd8dd00 (
+      $51: Self
+      $52: EndFunctionParms
+    )
+$53: JumpIfNot -> 0x48, cond:
+  $58: LocalVariable named CallFunc_IsDedicatedServer_ReturnValue@0x19f98ab8780
+$67: Jump to offset 0x3d2
+$72: LetObj (Variable = Expression)
+  Variable:
+  $73: LocalVariable named CallFunc_GetPlayerController_ReturnValue@0x19f98ab8900
+  Expression:
+  $82: Context
+    ObjectExpression:
+    $83: ObjectConst Default__GameplayStatics@0x19e4d95eb20
+    SkipBytes: 0x10
+    RValueProperty: CallFunc_GetPlayerController_ReturnValue@0x19f98ab8900
+    ContextExpression:
+    $104: FinalFunction target=GetPlayerController@0x19e4d35e470 (
+      $113: Self
+      $114: literal int32 0
+      $119: EndFunctionParms
+    )
+$120: LetObj (Variable = Expression)
+  Variable:
+  $121: LocalVariable named CallFunc_GetPlayerCharacter_ReturnValue@0x19f98ab8980
+  Expression:
+  $130: Context
+    ObjectExpression:
+    $131: ObjectConst Default__GameplayStatics@0x19e4d95eb20
+    SkipBytes: 0x18
+    RValueProperty: CallFunc_GetPlayerCharacter_ReturnValue@0x19f98ab8980
+    ContextExpression:
+    $152: FinalFunction target=GetPlayerCharacter@0x19e4d35e240 (
+      $161: LocalVariable named CallFunc_GetPlayerController_ReturnValue@0x19f98ab8900
+      $170: literal int32 0
+      $175: EndFunctionParms
+    )
+$176: Let (Variable = Expression)
+  Variable:
+  $185: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19f98ab8b00
+  Expression:
+  $194: DynamicCast to AthenaPlayerCharacter@0x19e4be85b00 of expr:
+  $203: LocalVariable named CallFunc_GetPlayerCharacter_ReturnValue@0x19f98ab8980
+$212: Let (Variable = Expression)
+  Variable:
+  $221: LocalVariable named K2Node_DynamicCast_bSuccess@0x19f98ab8b80
+  Expression:
+  $230: PrimitiveCast type=71
+    Argument:
+    $232: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19f98ab8b00
+$241: JumpIfNot -> 0x3d2, cond:
+  $246: LocalVariable named K2Node_DynamicCast_bSuccess@0x19f98ab8b80
+$255: Let (Variable = Expression)
+  Variable:
+  $264: LocalVariable named CallFunc_GetVelocity_ReturnValue@0x19f98ab9180
+  Expression:
+  $273: Context
+    ObjectExpression:
+    $274: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19f98ab8b00
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetVelocity_ReturnValue@0x19f98ab9180
+    ContextExpression:
+    $295: VirtualFunction call "GetVelocity" (
+      $308: EndFunctionParms
+    )
+$309: Let (Variable = Expression)
+  Variable:
+  $318: LocalVariable named CallFunc_VSize_ReturnValue@0x19f7275ea80
+  Expression:
+  $327: CallMath target=VSize@0x19e4d39d810 (
+    $336: LocalVariable named CallFunc_GetVelocity_ReturnValue@0x19f98ab9180
+    $345: EndFunctionParms
+  )
+$346: LetBool (Variable = Expression)
+  Variable:
+  $347: LocalVariable named CallFunc_Greater_FloatFloat_ReturnValue@0x19f98ab8c00
+  Expression:
+  $356: CallMath target=Greater_FloatFloat@0x19e4d382550 (
+    $365: LocalVariable named CallFunc_VSize_ReturnValue@0x19f7275ea80
+    $374: InstanceVariable named JiggleVelocityThreshold@0x19f9f832530
+    $383: EndFunctionParms
+  )
+$384: JumpIfNot -> 0x2ca, cond:
+  $389: LocalVariable named CallFunc_Greater_FloatFloat_ReturnValue@0x19f98ab8c00
+$398: Let (Variable = Expression)
+  Variable:
+  $407: LocalVariable named CallFunc_GetVelocity_ReturnValue@0x19f98ab9180
+  Expression:
+  $416: Context
+    ObjectExpression:
+    $417: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19f98ab8b00
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetVelocity_ReturnValue@0x19f98ab9180
+    ContextExpression:
+    $438: VirtualFunction call "GetVelocity" (
+      $451: EndFunctionParms
+    )
+$452: Let (Variable = Expression)
+  Variable:
+  $461: LocalVariable named CallFunc_VSize_ReturnValue@0x19f7275ea80
+  Expression:
+  $470: CallMath target=VSize@0x19e4d39d810 (
+    $479: LocalVariable named CallFunc_GetVelocity_ReturnValue@0x19f98ab9180
+    $488: EndFunctionParms
+  )
+$489: Let (Variable = Expression)
+  Variable:
+  $498: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue2@0x19f7275fe30
+  Expression:
+  $507: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $516: LocalVariable named CallFunc_VSize_ReturnValue@0x19f7275ea80
+    $525: InstanceVariable named JiggleVelocityScale@0x19f9f830620
+    $534: EndFunctionParms
+  )
+$535: Let (Variable = Expression)
+  Variable:
+  $544: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x19f9f830ee0
+  Expression:
+  $553: CallMath target=Add_FloatFloat@0x19e4d36f820 (
+    $562: InstanceVariable named JiggleAmount@0x19f9f830770
+    $571: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue2@0x19f7275fe30
+    $580: EndFunctionParms
+  )
+$581: Let (Variable = Expression)
+  Variable:
+  $590: LocalVariable named CallFunc_FClamp_ReturnValue2@0x19f9f831810
+  Expression:
+  $599: CallMath target=FClamp@0x19e4d37c2a0 (
+    $608: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x19f9f830ee0
+    $617: literal float 0
+    $622: literal float 1
+    $627: EndFunctionParms
+  )
+$628: Let (Variable = Expression)
+  Variable:
+  $637: InstanceVariable named JiggleAmount@0x19f9f830770
+  Expression:
+  $646: LocalVariable named CallFunc_FClamp_ReturnValue2@0x19f9f831810
+$655: Context
+  ObjectExpression:
+  $656: InstanceVariable named DynamicMaterial@0x19f98abbf80
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $677: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $686: literal name "JiggleScale"
+    $699: InstanceVariable named JiggleAmount@0x19f9f830770
+    $708: EndFunctionParms
+  )
+$709: Jump to offset 0x3d2
+$714: Let (Variable = Expression)
+  Variable:
+  $723: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x19f7275ff80
+  Expression:
+  $732: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $741: InstanceVariable named JiggleAmount@0x19f9f830770
+    $750: literal float 0.949999988079071
+    $755: EndFunctionParms
+  )
+$756: Let (Variable = Expression)
+  Variable:
+  $765: LocalVariable named CallFunc_FClamp_ReturnValue@0x19f7275fea0
+  Expression:
+  $774: CallMath target=FClamp@0x19e4d37c2a0 (
+    $783: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x19f7275ff80
+    $792: literal float 0
+    $797: literal float 1
+    $802: EndFunctionParms
+  )
+$803: Let (Variable = Expression)
+  Variable:
+  $812: InstanceVariable named JiggleAmount@0x19f9f830770
+  Expression:
+  $821: LocalVariable named CallFunc_FClamp_ReturnValue@0x19f7275fea0
+$830: Jump to offset 0x28f
+$835: LetBool (Variable = Expression)
+  Variable:
+  $836: LocalVariable named CallFunc_IsDedicatedServer_ReturnValue2@0x19f98ab8800
+  Expression:
+  $845: Context
+    ObjectExpression:
+    $846: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_IsDedicatedServer_ReturnValue2@0x19f98ab8800
+    ContextExpression:
+    $867: FinalFunction target=IsDedicatedServer@0x19e4cd8dd00 (
+      $876: Self
+      $877: EndFunctionParms
+    )
+$878: JumpIfNot -> 0x381, cond:
+  $883: LocalVariable named CallFunc_IsDedicatedServer_ReturnValue2@0x19f98ab8800
+$892: Jump to offset 0x3d2
+$897: LetObj (Variable = Expression)
+  Variable:
+  $898: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f98ab8880
+  Expression:
+  $907: Context
+    ObjectExpression:
+    $908: InstanceVariable named FirstPersonMesh@0x19e4d10ee80
+    SkipBytes: 0x14
+    RValueProperty: CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f98ab8880
+    ContextExpression:
+    $929: VirtualFunction call "CreateDynamicMaterialInstance" (
+      $942: literal int32 0
+      $947: NoObject
+      $948: EndFunctionParms
+    )
+$949: LetObj (Variable = Expression)
+  Variable:
+  $950: InstanceVariable named DynamicMaterial@0x19f98abbf80
+  Expression:
+  $959: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f98ab8880
+$968: Jump to offset 0x3d2
+$973: Jump to offset 0x343
+$978: Return expression:
+  $979: Nothing
+$980: EndOfScript

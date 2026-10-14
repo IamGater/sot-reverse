@@ -1,0 +1,100 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/AshenAge/Tale_1_TheAshenDragon/bp_theashendragon_waitfortriggerbroadcast3_b -> BP_TheAshenDragon_WaitForTriggerBroadcast3_B_C
+
+=== BP_TheAshenDragon_WaitForTriggerBroadcast3_B_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fcda48080
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fcda47e80
+$18: VirtualFunction call "idx:281985" (
+  $31: literal int32 232
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_TheAshenDragon_WaitForTriggerBroadcast3_B_C::fn_idx_281964 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=idx:281950@0x19fcda47f80
+  Expression:
+  $9: LocalVariable named PlayerCharacter@0x19fcda47f00
+$18: VirtualFunction call "idx:281985" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_TheAshenDragon_WaitForTriggerBroadcast3_B_C::fn_idx_281985 (327 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fcdbbfa40
+$10: SetArray
+  $11: LocalVariable named idx:281947@0x19fcda48280
+  $20: EndArray
+$21: FinalFunction target=GetParticipants@0x19e4cda59a0 (
+  $30: LocalVariable named idx:281947@0x19fcda48280
+  $39: EndFunctionParms
+)
+$40: LetBool (Variable = Expression)
+  Variable:
+  $41: LocalVariable named CallFunc_Array_Contains_ReturnValue@0x19fcda48180
+  Expression:
+  $50: Context
+    ObjectExpression:
+    $51: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Contains_ReturnValue@0x19fcda48180
+    ContextExpression:
+    $72: FinalFunction target=Array_Contains@0x19e4d367180 (
+      $81: LocalVariable named idx:281947@0x19fcda48280
+      $90: LocalVariable named idx:281950@0x19fcda47f80
+      $99: EndFunctionParms
+    )
+$100: JumpIfNot -> 0x144, cond:
+  $105: LocalVariable named CallFunc_Array_Contains_ReturnValue@0x19fcda48180
+$114: Context
+  ObjectExpression:
+  $115: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x51
+  RValueProperty: (null)
+  ContextExpression:
+  $136: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $145: NoObject
+    $146: literal ansi string "Player entered the trigger!"
+    $175: True
+    $176: True
+    $177: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $190: literal float 0
+      $195: literal float 0.6600000262260437
+      $200: literal float 1
+      $205: literal float 1
+      $210: EndStructConst
+    $211: literal float 1000000000
+    $216: EndFunctionParms
+  )
+$217: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $226: EndFunctionParms
+)
+$227: Jump to offset 0x144
+$232: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $241: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcda48100
+  $250: EndFunctionParms
+)
+$251: BindDelegate 'idx:281964'
+  Delegate:
+  $264: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fcda48000
+  Object:
+  $273: Self
+$274: AddMulticastDelegate
+$275: Context
+  ObjectExpression:
+  $276: StructMemberContext prop=3rdTriggerVolumeRef_B_48_2D264240437CA3769809CBA92B804963@0x19fcd2f6a80
+    Expression to struct:
+    $285: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcda48100
+  SkipBytes: 0x9
+  RValueProperty: OnPlayerEnteredTrigger@0x19fce56c080
+  ContextExpression:
+  $306: InstanceVariable named OnPlayerEnteredTrigger@0x19fce56c080
+$315: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fcda48000
+$324: Return expression:
+  $325: Nothing
+$326: EndOfScript

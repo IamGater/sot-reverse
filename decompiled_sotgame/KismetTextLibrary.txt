@@ -1,0 +1,1432 @@
+// Class: KismetTextLibrary (27 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+KismetTextLibrary::AsCurrency_Float @ RVA 0x2C1F720 EA 0x7FF6F663F720
+======================================================================
+// Hidden C++ exception states: #wind=3
+__int64 __fastcall sub_7FF6F663F720(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  bool v6; // si
+  int v7; // edx
+  __int64 v8; // rax
+  __int64 v9; // rax
+  __int64 result; // rax
+  int v11; // [rsp+58h] [rbp-29h] BYREF
+  int v12; // [rsp+5Ch] [rbp-25h] BYREF
+  int v13; // [rsp+60h] [rbp-21h] BYREF
+  int v14; // [rsp+64h] [rbp-1Dh] BYREF
+  int v15; // [rsp+68h] [rbp-19h] BYREF
+  int v16; // [rsp+6Ch] [rbp-15h] BYREF
+  __int64 v17[3]; // [rsp+70h] [rbp-11h] BYREF
+  _BYTE v18[64]; // [rsp+88h] [rbp+7h] BYREF
+  char v19; // [rsp+F0h] [rbp+6Fh] BYREF
+  char v20; // [rsp+100h] [rbp+7Fh] BYREF
+
+  v17[2] = -2;
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v19 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  v5 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = v11 != 0;
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v17[0] = 0;
+  v17[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v17);
+  }
+  v8 = a2[4];
+  LOBYTE(v5) = v8 != 0;
+  a2[4] = v8 + v5;
+  v20 = v19;
+  v9 = sub_7FF6F5E57F00((unsigned int)v18, v7, (unsigned int)&v20, v6, v15, v14, v13, v12, (__int64)v17);
+  sub_7FF6F4DD3BC0(a3, v9);
+  result = sub_7FF6F3C37050(v18);
+  if ( v17[0] )
+    return sub_7FF6F4DED1F0(v17[0]);
+  return result;
+}
+
+
+======================================================================
+KismetTextLibrary::AsCurrency_Integer @ RVA 0x2C1F9B0 EA 0x7FF6F663F9B0
+======================================================================
+// Hidden C++ exception states: #wind=3
+__int64 __fastcall sub_7FF6F663F9B0(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  bool v6; // si
+  __int64 v7; // rax
+  __int64 v8; // rax
+  __int64 result; // rax
+  int v10; // [rsp+58h] [rbp-29h] BYREF
+  int v11; // [rsp+5Ch] [rbp-25h] BYREF
+  int v12; // [rsp+60h] [rbp-21h] BYREF
+  int v13; // [rsp+64h] [rbp-1Dh] BYREF
+  int v14; // [rsp+68h] [rbp-19h] BYREF
+  int v15; // [rsp+6Ch] [rbp-15h] BYREF
+  __int64 v16[3]; // [rsp+70h] [rbp-11h] BYREF
+  _BYTE v17[64]; // [rsp+88h] [rbp+7h] BYREF
+  char v18; // [rsp+F0h] [rbp+6Fh] BYREF
+  char v19; // [rsp+100h] [rbp+7Fh] BYREF
+
+  v16[2] = -2;
+  v5 = 0;
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v18 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = v10 != 0;
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v16[0] = 0;
+  v16[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v16);
+  }
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  v19 = v18;
+  v8 = sub_7FF6F5E58040((unsigned int)v17, v15, (unsigned int)&v19, v6, v14, v13, v12, v11, (__int64)v16);
+  sub_7FF6F4DD3BC0(a3, v8);
+  result = sub_7FF6F3C37050(v17);
+  if ( v16[0] )
+    return sub_7FF6F4DED1F0(v16[0]);
+  return result;
+}
+
+
+======================================================================
+KismetTextLibrary::AsDate_DateTime @ RVA 0x2C1FCE0 EA 0x7FF6F663FCE0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F663FCE0(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  char *v6; // rdx
+  __int64 v7; // rax
+  __int64 v8; // rax
+  _BYTE v10[64]; // [rsp+28h] [rbp-40h] BYREF
+  char v11; // [rsp+78h] [rbp+10h] BYREF
+
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = &v11;
+  if ( a2[7] )
+    v6 = (char *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  v8 = sub_7FF6F5E58290(v10, v6);
+  sub_7FF6F4DD3BC0(a3, v8);
+  return sub_7FF6F3C37050(v10);
+}
+
+
+======================================================================
+KismetTextLibrary::AsDateTime_DateTime @ RVA 0x2C1FC30 EA 0x7FF6F663FC30
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F663FC30(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  char *v6; // rdx
+  __int64 v7; // rax
+  __int64 v8; // rax
+  _BYTE v10[64]; // [rsp+28h] [rbp-40h] BYREF
+  char v11; // [rsp+78h] [rbp+10h] BYREF
+
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = &v11;
+  if ( a2[7] )
+    v6 = (char *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  v8 = sub_7FF6F5E58180(v10, v6);
+  sub_7FF6F4DD3BC0(a3, v8);
+  return sub_7FF6F3C37050(v10);
+}
+
+
+======================================================================
+KismetTextLibrary::AsPercent_Float @ RVA 0x2C1FD90 EA 0x7FF6F663FD90
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F663FD90(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  bool v6; // si
+  int v7; // edx
+  __int64 v8; // rax
+  __int64 v9; // rax
+  int v11; // [rsp+48h] [rbp-19h] BYREF
+  int v12; // [rsp+4Ch] [rbp-15h] BYREF
+  int v13; // [rsp+50h] [rbp-11h] BYREF
+  int v14; // [rsp+54h] [rbp-Dh] BYREF
+  int v15; // [rsp+58h] [rbp-9h] BYREF
+  int v16; // [rsp+5Ch] [rbp-5h] BYREF
+  __int64 v17; // [rsp+60h] [rbp-1h]
+  _BYTE v18[64]; // [rsp+68h] [rbp+7h] BYREF
+  char v19; // [rsp+D0h] [rbp+6Fh] BYREF
+  char v20; // [rsp+E0h] [rbp+7Fh] BYREF
+
+  v17 = -2;
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v19 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  v5 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = v11 != 0;
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v8 = a2[4];
+  LOBYTE(v5) = v8 != 0;
+  a2[4] = v8 + v5;
+  v20 = v19;
+  v9 = sub_7FF6F5E58390((unsigned int)v18, v7, (unsigned int)&v20, v6, v15, v14, v13, v12);
+  sub_7FF6F4DD3BC0(a3, v9);
+  return sub_7FF6F3C37050(v18);
+}
+
+
+======================================================================
+KismetTextLibrary::AsTime_DateTime @ RVA 0x2C1FFC0 EA 0x7FF6F663FFC0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F663FFC0(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  char *v6; // rdx
+  __int64 v7; // rax
+  __int64 v8; // rax
+  _BYTE v10[64]; // [rsp+28h] [rbp-40h] BYREF
+  char v11; // [rsp+78h] [rbp+10h] BYREF
+
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = &v11;
+  if ( a2[7] )
+    v6 = (char *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  v8 = sub_7FF6F5E584C0(v10, v6);
+  sub_7FF6F4DD3BC0(a3, v8);
+  return sub_7FF6F3C37050(v10);
+}
+
+
+======================================================================
+KismetTextLibrary::AsTimespan_Timespan @ RVA 0x2C20070 EA 0x7FF6F6640070
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6640070(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  __int64 *v6; // rdx
+  __int64 v7; // rax
+  __int64 v8; // rax
+  _BYTE v10[64]; // [rsp+28h] [rbp-40h] BYREF
+  __int64 v11; // [rsp+78h] [rbp+10h] BYREF
+
+  v5 = 0;
+  v11 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = &v11;
+  if ( a2[7] )
+    v6 = (__int64 *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  v8 = sub_7FF6F5E585C0(v10, v6);
+  sub_7FF6F4DD3BC0(a3, v8);
+  return sub_7FF6F3C37050(v10);
+}
+
+
+======================================================================
+KismetTextLibrary::Conv_BoolToText @ RVA 0x2C28C00 EA 0x7FF6F6648C00
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6648C00(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  __int64 v6; // rdx
+  __int64 v7; // rax
+  __int64 v8; // rax
+  _BYTE v10[64]; // [rsp+28h] [rbp-40h] BYREF
+  int v11; // [rsp+78h] [rbp+10h] BYREF
+
+  v5 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  LOBYTE(v6) = v11 != 0;
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  v8 = sub_7FF6F5E60100(v10, v6);
+  sub_7FF6F4DD3BC0(a3, v8);
+  return sub_7FF6F3C37050(v10);
+}
+
+
+======================================================================
+KismetTextLibrary::Conv_ByteToText @ RVA 0x2C28E90 EA 0x7FF6F6648E90
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6648E90(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rax
+  _BYTE v7[64]; // [rsp+28h] [rbp-40h] BYREF
+  unsigned __int8 v8; // [rsp+78h] [rbp+10h] BYREF
+
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  a2[4] += a2[4] != 0;
+  v5 = sub_7FF6F5E60360(v7, v8);
+  sub_7FF6F4DD3BC0(a3, v5);
+  return sub_7FF6F3C37050(v7);
+}
+
+
+======================================================================
+KismetTextLibrary::Conv_FloatToText @ RVA 0x2C29200 EA 0x7FF6F6649200
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6649200(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  bool v6; // si
+  int v7; // edx
+  __int64 v8; // rax
+  __int64 v9; // rax
+  int v11; // [rsp+48h] [rbp-19h] BYREF
+  int v12; // [rsp+4Ch] [rbp-15h] BYREF
+  int v13; // [rsp+50h] [rbp-11h] BYREF
+  int v14; // [rsp+54h] [rbp-Dh] BYREF
+  int v15; // [rsp+58h] [rbp-9h] BYREF
+  int v16; // [rsp+5Ch] [rbp-5h] BYREF
+  __int64 v17; // [rsp+60h] [rbp-1h]
+  _BYTE v18[64]; // [rsp+68h] [rbp+7h] BYREF
+  char v19; // [rsp+D0h] [rbp+6Fh] BYREF
+  char v20; // [rsp+E0h] [rbp+7Fh] BYREF
+
+  v17 = -2;
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v19 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  v5 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = v11 != 0;
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v8 = a2[4];
+  LOBYTE(v5) = v8 != 0;
+  a2[4] = v8 + v5;
+  v20 = v19;
+  v9 = sub_7FF6F5E60500((unsigned int)v18, v7, (unsigned int)&v20, v6, v15, v14, v13, v12);
+  sub_7FF6F4DD3BC0(a3, v9);
+  return sub_7FF6F3C37050(v18);
+}
+
+
+======================================================================
+KismetTextLibrary::Conv_IntToText @ RVA 0x2C29810 EA 0x7FF6F6649810
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6649810(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  bool v6; // si
+  __int64 v7; // rax
+  __int64 v8; // rax
+  int v10; // [rsp+30h] [rbp-68h] BYREF
+  int v11; // [rsp+34h] [rbp-64h] BYREF
+  __int64 v12; // [rsp+38h] [rbp-60h]
+  _BYTE v13[88]; // [rsp+40h] [rbp-58h] BYREF
+  int v14; // [rsp+A8h] [rbp+10h] BYREF
+  int v15; // [rsp+B8h] [rbp+20h] BYREF
+
+  v12 = -2;
+  v5 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v6 = v14 != 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  v8 = sub_7FF6F5E606E0((unsigned int)v13, v11, v6, v10, v15);
+  sub_7FF6F4DD3BC0(a3, v8);
+  return sub_7FF6F3C37050(v13);
+}
+
+
+======================================================================
+KismetTextLibrary::Conv_NameToText @ RVA 0x2C29C30 EA 0x7FF6F6649C30
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6649C30(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rax
+  _BYTE v9[64]; // [rsp+28h] [rbp-40h] BYREF
+  __int64 v10; // [rsp+78h] [rbp+10h] BYREF
+
+  v5 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  LOBYTE(v5) = v6 != 0;
+  a2[4] = v6 + v5;
+  v7 = sub_7FF6F5E60880(v9, v10);
+  sub_7FF6F4DD3BC0(a3, v7);
+  return sub_7FF6F3C37050(v9);
+}
+
+
+======================================================================
+KismetTextLibrary::Conv_StringToText @ RVA 0x2C2A140 EA 0x7FF6F664A140
+======================================================================
+// Hidden C++ exception states: #wind=3
+__int64 __fastcall sub_7FF6F664A140(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rax
+  __int64 result; // rax
+  __int64 v9[2]; // [rsp+28h] [rbp-50h] BYREF
+  _BYTE v10[56]; // [rsp+38h] [rbp-40h] BYREF
+
+  v5 = 0;
+  v9[0] = 0;
+  v9[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v5) = v6 != 0;
+  a2[4] = v6 + v5;
+  v7 = sub_7FF6F5E60AD0(v10, v9);
+  sub_7FF6F4DD3BC0(a3, v7);
+  result = sub_7FF6F3C37050(v10);
+  if ( v9[0] )
+    return sub_7FF6F4DED1F0(v9[0]);
+  return result;
+}
+
+
+======================================================================
+KismetTextLibrary::Conv_TextToString @ RVA 0x2C2A200 EA 0x7FF6F664A200
+======================================================================
+// Hidden C++ exception states: #wind=3
+__int64 __fastcall sub_7FF6F664A200(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  _BYTE *v5; // rdx
+  __int64 v6; // rdi
+  __int64 v8; // [rsp+28h] [rbp-50h] BYREF
+  _BYTE v9[56]; // [rsp+38h] [rbp-40h] BYREF
+
+  sub_7FF6F4DCDFA0(v9);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v5 = v9;
+  if ( a2[7] )
+    v5 = (_BYTE *)a2[7];
+  a2[4] += a2[4] != 0;
+  v6 = sub_7FF6F5E60B00(&v8, v5);
+  if ( a3 != v6 )
+  {
+    if ( *(_QWORD *)a3 )
+    {
+      sub_7FF6F4DED1F0(*(_QWORD *)a3);
+      if ( *(_QWORD *)a3 )
+        *(_QWORD *)a3 = 0;
+    }
+    *(_QWORD *)a3 = *(_QWORD *)v6;
+    *(_QWORD *)v6 = 0;
+    *(_DWORD *)(a3 + 8) = *(_DWORD *)(v6 + 8);
+    *(_DWORD *)(a3 + 12) = *(_DWORD *)(v6 + 12);
+    *(_QWORD *)(v6 + 8) = 0;
+  }
+  if ( v8 )
+    sub_7FF6F4DED1F0(v8);
+  return sub_7FF6F3C37050(v9);
+}
+
+
+======================================================================
+KismetTextLibrary::EqualEqual_IgnoreCase_TextText @ RVA 0x2C2F100 EA 0x7FF6F664F100
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F664F100(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  _BYTE *v6; // rsi
+  _BYTE *v7; // rdx
+  __int64 v8; // rax
+  _BYTE v10[56]; // [rsp+28h] [rbp-80h] BYREF
+  _BYTE v11[64]; // [rsp+60h] [rbp-48h] BYREF
+
+  sub_7FF6F4DCDFA0(v11);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v6 = v11;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  sub_7FF6F4DCDFA0(v10);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v7 = v10;
+  if ( a2[7] )
+    v7 = (_BYTE *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v5) = v8 != 0;
+  a2[4] = v8 + v5;
+  *a3 = sub_7FF6F5E66290(v6, v7);
+  sub_7FF6F3C37050(v10);
+  return sub_7FF6F3C37050(v11);
+}
+
+
+======================================================================
+KismetTextLibrary::EqualEqual_TextText @ RVA 0x2C2F910 EA 0x7FF6F664F910
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F664F910(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  _BYTE *v6; // rsi
+  _BYTE *v7; // rdx
+  __int64 v8; // rax
+  _BYTE v10[56]; // [rsp+28h] [rbp-80h] BYREF
+  _BYTE v11[64]; // [rsp+60h] [rbp-48h] BYREF
+
+  sub_7FF6F4DCDFA0(v11);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v6 = v11;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  sub_7FF6F4DCDFA0(v10);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v7 = v10;
+  if ( a2[7] )
+    v7 = (_BYTE *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v5) = v8 != 0;
+  a2[4] = v8 + v5;
+  *a3 = sub_7FF6F5E66450(v6, v7);
+  sub_7FF6F3C37050(v10);
+  return sub_7FF6F3C37050(v11);
+}
+
+
+======================================================================
+KismetTextLibrary::FindTextInLocalizationTable @ RVA 0x2C30C40 EA 0x7FF6F6650C40
+======================================================================
+// Hidden C++ exception states: #wind=5
+__int64 __fastcall sub_7FF6F6650C40(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  _BYTE *v5; // r8
+  __int64 result; // rax
+  __int64 v7[2]; // [rsp+28h] [rbp-60h] BYREF
+  __int64 v8[2]; // [rsp+38h] [rbp-50h] BYREF
+  _BYTE v9[56]; // [rsp+48h] [rbp-40h] BYREF
+
+  v8[0] = 0;
+  v8[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v7[0] = 0;
+  v7[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  sub_7FF6F4DCDFA0(v9);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v5 = v9;
+  if ( a2[7] )
+    v5 = (_BYTE *)a2[7];
+  a2[4] += a2[4] != 0;
+  *a3 = sub_7FF6F5E670C0(v8, v7, v5);
+  result = sub_7FF6F3C37050(v9);
+  if ( v7[0] )
+  {
+    result = sub_7FF6F4DED1F0(v7[0]);
+    v7[0] = 0;
+  }
+  if ( v8[0] )
+    return sub_7FF6F4DED1F0(v8[0]);
+  return result;
+}
+
+
+======================================================================
+KismetTextLibrary::Format @ RVA 0x2C31010 EA 0x7FF6F6651010
+======================================================================
+// Hidden C++ exception states: #wind=7
+__int64 __fastcall sub_7FF6F6651010(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rbx
+  __int64 v6; // rdi
+  int v7; // r14d
+  int i; // esi
+  __int64 v9; // rax
+  __int64 v10; // rdx
+  int v11; // edi
+  __int64 v12; // rbx
+  __int64 v14; // [rsp+28h] [rbp-99h] BYREF
+  __int64 v15; // [rsp+30h] [rbp-91h]
+  __int64 v16; // [rsp+38h] [rbp-89h] BYREF
+  __int64 v17; // [rsp+40h] [rbp-81h]
+  __int64 v18; // [rsp+48h] [rbp-79h]
+  _BYTE v19[56]; // [rsp+50h] [rbp-71h] BYREF
+  char v20[56]; // [rsp+88h] [rbp-39h] BYREF
+  _BYTE v21[56]; // [rsp+C0h] [rbp-1h] BYREF
+
+  v18 = -2;
+  sub_7FF6F4DCDFA0(v19);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v19);
+  }
+  v14 = 0;
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  a2[4] += a2[4] != 0;
+  v5 = 0;
+  v16 = 0;
+  v17 = 0;
+  v6 = v14;
+  v7 = v15;
+  if ( (_DWORD)v15 )
+  {
+    v5 = sub_7FF6F4DFAA90(0, 112LL * (int)v15, 0);
+    v16 = v5;
+  }
+  for ( i = v7; i; --i )
+  {
+    sub_7FF6F4DCDF10(v5, v6);
+    sub_7FF6F4DCDF10(v5 + 56, v6 + 56);
+    v5 += 112;
+    v6 += 112;
+  }
+  LODWORD(v17) = v7;
+  HIDWORD(v17) = v7;
+  v9 = sub_7FF6F4DCDF10(v20, v19);
+  v10 = sub_7FF6F5E67200(v21, v9, &v16);
+  sub_7FF6F4DD3BC0(a3, v10);
+  sub_7FF6F3C37050(v21);
+  v11 = v15;
+  v12 = v14;
+  if ( (_DWORD)v15 )
+  {
+    do
+    {
+      sub_7FF6F3C37050(v12 + 56);
+      sub_7FF6F3C37050(v12);
+      v12 += 112;
+      --v11;
+    }
+    while ( v11 );
+    v12 = v14;
+  }
+  if ( v12 )
+  {
+    sub_7FF6F4DED1F0(v12);
+    v14 = 0;
+  }
+  return sub_7FF6F3C37050(v19);
+}
+
+
+======================================================================
+KismetTextLibrary::GetEmptyText @ RVA 0x2C32360 EA 0x7FF6F6652360
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6652360(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rdx
+  _BYTE v6[64]; // [rsp+28h] [rbp-40h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = sub_7FF6F5E691F0(v6);
+  sub_7FF6F4DD3BC0(a3, v4);
+  return sub_7FF6F3C37050(v6);
+}
+
+
+======================================================================
+KismetTextLibrary::NotEqual_IgnoreCase_TextText @ RVA 0x2C42200 EA 0x7FF6F6662200
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6662200(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  _BYTE *v6; // rsi
+  _BYTE *v7; // rdx
+  __int64 v8; // rax
+  _BYTE v10[56]; // [rsp+28h] [rbp-80h] BYREF
+  _BYTE v11[64]; // [rsp+60h] [rbp-48h] BYREF
+
+  sub_7FF6F4DCDFA0(v11);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v6 = v11;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  sub_7FF6F4DCDFA0(v10);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v7 = v10;
+  if ( a2[7] )
+    v7 = (_BYTE *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v5) = v8 != 0;
+  a2[4] = v8 + v5;
+  *a3 = sub_7FF6F5E74800(v6, v7);
+  sub_7FF6F3C37050(v10);
+  return sub_7FF6F3C37050(v11);
+}
+
+
+======================================================================
+KismetTextLibrary::NotEqual_TextText @ RVA 0x2C42880 EA 0x7FF6F6662880
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6662880(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  _BYTE *v6; // rsi
+  _BYTE *v7; // rdx
+  __int64 v8; // rax
+  _BYTE v10[56]; // [rsp+28h] [rbp-80h] BYREF
+  _BYTE v11[64]; // [rsp+60h] [rbp-48h] BYREF
+
+  sub_7FF6F4DCDFA0(v11);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v6 = v11;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  sub_7FF6F4DCDFA0(v10);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v7 = v10;
+  if ( a2[7] )
+    v7 = (_BYTE *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v5) = v8 != 0;
+  a2[4] = v8 + v5;
+  *a3 = sub_7FF6F5E74990(v6, v7);
+  sub_7FF6F3C37050(v10);
+  return sub_7FF6F3C37050(v11);
+}
+
+
+======================================================================
+KismetTextLibrary::TextIsCultureInvariant @ RVA 0x2C4DE50 EA 0x7FF6F666DE50
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F666DE50(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  _BYTE *v6; // rcx
+  __int64 v7; // rax
+  _BYTE v9[64]; // [rsp+28h] [rbp-40h] BYREF
+
+  sub_7FF6F4DCDFA0(v9);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  *a3 = sub_7FF6F5E7E8C0(v6);
+  return sub_7FF6F3C37050(v9);
+}
+
+
+======================================================================
+KismetTextLibrary::TextIsEmpty @ RVA 0x2C4DF00 EA 0x7FF6F666DF00
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F666DF00(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  _BYTE *v6; // rcx
+  __int64 v7; // rax
+  _BYTE v9[64]; // [rsp+28h] [rbp-40h] BYREF
+
+  sub_7FF6F4DCDFA0(v9);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  *a3 = sub_7FF6F5E7E8D0(v6);
+  return sub_7FF6F3C37050(v9);
+}
+
+
+======================================================================
+KismetTextLibrary::TextIsTransient @ RVA 0x2C4DFB0 EA 0x7FF6F666DFB0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F666DFB0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  _BYTE *v6; // rcx
+  __int64 v7; // rax
+  _BYTE v9[64]; // [rsp+28h] [rbp-40h] BYREF
+
+  sub_7FF6F4DCDFA0(v9);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  *a3 = sub_7FF6F5E7E8E0(v6);
+  return sub_7FF6F3C37050(v9);
+}
+
+
+======================================================================
+KismetTextLibrary::TextTrimPreceding @ RVA 0x2C4E060 EA 0x7FF6F666E060
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F666E060(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  _BYTE *v6; // rdx
+  __int64 v7; // rax
+  __int64 v8; // rax
+  _BYTE v10[56]; // [rsp+28h] [rbp-80h] BYREF
+  _BYTE v11[64]; // [rsp+60h] [rbp-48h] BYREF
+
+  sub_7FF6F4DCDFA0(v10);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v6 = v10;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  v8 = sub_7FF6F5E7E8F0(v11, v6);
+  sub_7FF6F4DD3BC0(a3, v8);
+  sub_7FF6F3C37050(v11);
+  return sub_7FF6F3C37050(v10);
+}
+
+
+======================================================================
+KismetTextLibrary::TextTrimPrecedingAndTrailing @ RVA 0x2C4E130 EA 0x7FF6F666E130
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F666E130(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  _BYTE *v6; // rdx
+  __int64 v7; // rax
+  __int64 v8; // rax
+  _BYTE v10[56]; // [rsp+28h] [rbp-80h] BYREF
+  _BYTE v11[64]; // [rsp+60h] [rbp-48h] BYREF
+
+  sub_7FF6F4DCDFA0(v10);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v6 = v10;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  v8 = sub_7FF6F5E7E910(v11, v6);
+  sub_7FF6F4DD3BC0(a3, v8);
+  sub_7FF6F3C37050(v11);
+  return sub_7FF6F3C37050(v10);
+}
+
+
+======================================================================
+KismetTextLibrary::TextTrimTrailing @ RVA 0x2C4E200 EA 0x7FF6F666E200
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F666E200(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  _BYTE *v6; // rdx
+  __int64 v7; // rax
+  __int64 v8; // rax
+  _BYTE v10[56]; // [rsp+28h] [rbp-80h] BYREF
+  _BYTE v11[64]; // [rsp+60h] [rbp-48h] BYREF
+
+  sub_7FF6F4DCDFA0(v10);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v6 = v10;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  v8 = sub_7FF6F5E7E930(v11, v6);
+  sub_7FF6F4DD3BC0(a3, v8);
+  sub_7FF6F3C37050(v11);
+  return sub_7FF6F3C37050(v10);
+}
+

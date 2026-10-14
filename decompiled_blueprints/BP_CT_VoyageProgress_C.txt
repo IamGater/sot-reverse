@@ -1,0 +1,191 @@
+// /Game/Blueprints/Prompts/PromptConditionals/CompanyOnboardingProgress/bp_ct_voyageprogress -> BP_CT_VoyageProgress_C
+
+=== BP_CT_VoyageProgress_C::UninitializeImplementable (120 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_Not_PreBool_ReturnValue@0x19f4940db80
+  Expression:
+  $10: CallMath target=Not_PreBool@0x19e4d390310 (
+    $19: InstanceVariable named NoLongerPurchaseable@0x19f4940e480
+    $28: EndFunctionParms
+  )
+$29: LetBool (Variable = Expression)
+  Variable:
+  $30: LocalVariable named CallFunc_EqualEqual_ByteByte_ReturnValue@0x19f4940dc00
+  Expression:
+  $39: CallMath target=EqualEqual_ByteByte@0x19e4d37a620 (
+    $48: InstanceVariable named VoyageState@0x19f4940e380
+    $57: literal byte 0
+    $59: EndFunctionParms
+  )
+$60: LetBool (Variable = Expression)
+  Variable:
+  $61: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x19f4940dc80
+  Expression:
+  $70: CallMath target=BooleanAND@0x19e4d3710f0 (
+    $79: LocalVariable named CallFunc_EqualEqual_ByteByte_ReturnValue@0x19f4940dc00
+    $88: LocalVariable named CallFunc_Not_PreBool_ReturnValue@0x19f4940db80
+    $97: EndFunctionParms
+  )
+$98: LetBool (Variable = Expression)
+  Variable:
+  $99: LocalOutVariable named Result@0x19f4940db00
+  Expression:
+  $108: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x19f4940dc80
+$117: Return expression:
+  $118: Nothing
+$119: EndOfScript
+
+=== BP_CT_VoyageProgress_C::TutorialVoyageInternalState::NewEnumerator3 (30 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: InstanceVariable named VoyageState@0x19f4940e380
+  Expression:
+  $18: LocalVariable named NewProgress@0x19f4940dd00
+$27: Return expression:
+  $28: Nothing
+$29: EndOfScript
+
+=== BP_CT_VoyageProgress_C::Player Dispatcher (60 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_EqualEqual_ByteByte_ReturnValue@0x19f4940de80
+  Expression:
+  $10: CallMath target=EqualEqual_ByteByte@0x19e4d37a620 (
+    $19: LocalVariable named ProgressState@0x19f4940dd80
+    $28: InstanceVariable named VoyageState@0x19f4940e380
+    $37: EndFunctionParms
+  )
+$38: LetBool (Variable = Expression)
+  Variable:
+  $39: LocalOutVariable named Result@0x19f4940de00
+  Expression:
+  $48: LocalVariable named CallFunc_EqualEqual_ByteByte_ReturnValue@0x19f4940de80
+$57: Return expression:
+  $58: Nothing
+$59: EndOfScript
+
+=== BP_CT_VoyageProgress_C::PostInitialize (60 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_GreaterEqual_ByteByte_ReturnValue@0x19f4940e000
+  Expression:
+  $10: CallMath target=GreaterEqual_ByteByte@0x19e4d382bd0 (
+    $19: InstanceVariable named VoyageState@0x19f4940e380
+    $28: LocalVariable named ProgressState@0x19f4940df00
+    $37: EndFunctionParms
+  )
+$38: LetBool (Variable = Expression)
+  Variable:
+  $39: LocalOutVariable named Result@0x19f4940df80
+  Expression:
+  $48: LocalVariable named CallFunc_GreaterEqual_ByteByte_ReturnValue@0x19f4940e000
+$57: Return expression:
+  $58: Nothing
+$59: EndOfScript
+
+=== BP_CT_VoyageProgress_C::TutorialVoyageInternalState::NewEnumerator1 (281 bytes) ===
+$0: FlowStack.Push(0x116)
+$5: FlowStack.Push(0x5c)
+$10: LetBool (Variable = Expression)
+  Variable:
+  $11: LocalVariable named CallFunc_HasCompanyRank_ReturnValue@0x19f4940e180
+  Expression:
+  $20: Context
+    ObjectExpression:
+    $21: ObjectConst Default__PlayerEntitlementBlueprintFunctionLibrary@0x19e4d7a5aa0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_HasCompanyRank_ReturnValue@0x19f4940e180
+    ContextExpression:
+    $42: FinalFunction target=HasCompanyRank@0x19e4d203d00 (
+      $51: InstanceVariable named AthenaPlayerController@0x19f4940e300
+      $60: InstanceVariable named MaximumRank@0x19f4940e400
+      $69: EndFunctionParms
+    )
+$70: PopExecutionFlowIfNot, cond:
+$71: LocalVariable named CallFunc_HasCompanyRank_ReturnValue@0x19f4940e180
+$80: LetBool (Variable = Expression)
+  Variable:
+  $81: InstanceVariable named NoLongerPurchaseable@0x19f4940e480
+  Expression:
+  $90: True
+$91: PopExecutionFlow (jump to popped addr)
+$92: LetBool (Variable = Expression)
+  Variable:
+  $93: LocalVariable named CallFunc_HasBoughtVoyage_ReturnValue@0x19f4940e080
+  Expression:
+  $102: Context
+    ObjectExpression:
+    $103: ObjectConst Default__PlayerEntitlementBlueprintFunctionLibrary@0x19e4d7a5aa0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_HasBoughtVoyage_ReturnValue@0x19f4940e080
+    ContextExpression:
+    $124: FinalFunction target=HasBoughtVoyage@0x19e4d203ac0 (
+      $133: InstanceVariable named AthenaPlayerController@0x19f4940e300
+      $142: InstanceVariable named AssignedVoyageProposalDescClass@0x19e4d513930
+      $151: EndFunctionParms
+    )
+$152: JumpIfNot -> 0xbb, cond:
+  $157: LocalVariable named CallFunc_HasBoughtVoyage_ReturnValue@0x19f4940e080
+$166: Let (Variable = Expression)
+  Variable:
+  $175: InstanceVariable named VoyageState@0x19f4940e380
+  Expression:
+  $184: literal byte 1
+$186: PopExecutionFlow (jump to popped addr)
+$187: LetBool (Variable = Expression)
+  Variable:
+  $188: LocalVariable named CallFunc_HasCompletedTale_ReturnValue@0x19f4940e100
+  Expression:
+  $197: Context
+    ObjectExpression:
+    $198: ObjectConst Default__PlayerEntitlementBlueprintFunctionLibrary@0x19e4d7a5aa0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_HasCompletedTale_ReturnValue@0x19f4940e100
+    ContextExpression:
+    $219: FinalFunction target=HasCompletedTale@0x19e4d203f40 (
+      $228: InstanceVariable named AthenaPlayerController@0x19f4940e300
+      $237: InstanceVariable named AssignedTaleRankDescClass@0x19e4d5138b0
+      $246: EndFunctionParms
+    )
+$247: PopExecutionFlowIfNot, cond:
+$248: LocalVariable named CallFunc_HasCompletedTale_ReturnValue@0x19f4940e100
+$257: Let (Variable = Expression)
+  Variable:
+  $266: InstanceVariable named VoyageState@0x19f4940e380
+  Expression:
+  $275: literal byte 4
+$277: PopExecutionFlow (jump to popped addr)
+$278: Return expression:
+  $279: Nothing
+$280: EndOfScript
+
+=== BP_CT_VoyageProgress_C::Initialise (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Disabled@0x19f4940e280
+  Expression:
+  $9: LocalVariable named Disabled@0x19f4940e200
+$18: VirtualFunction call "ExecuteUbergraph_BP_CT_VoyageProgress" (
+  $31: literal int32 29
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_CT_VoyageProgress_C::OnComplete__DelegateSignature (66 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19f494ca020
+$10: VirtualFunction call "PopulateExistingState" (
+  $23: EndFunctionParms
+)
+$24: Jump to offset 0x3f
+$29: JumpIfNot -> 0xa, cond:
+  $34: LocalVariable named K2Node_CustomEvent_Disabled@0x19f4940e280
+$43: Let (Variable = Expression)
+  Variable:
+  $52: InstanceVariable named VoyageState@0x19f4940e380
+  Expression:
+  $61: literal byte 4
+$63: Return expression:
+  $64: Nothing
+$65: EndOfScript

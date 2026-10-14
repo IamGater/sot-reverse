@@ -1,0 +1,277 @@
+// E:\unreal-projects\Athena\Content\Blueprints\GameObjects\Items\Lantern\bp_enchantedlantern.uasset -> BP_EnchantedLantern_C
+
+=== BP_EnchantedLantern_C::UserConstructionScript (13 bytes) ===
+$0: FinalFunction target=UserConstructionScript@0x213aeda9d80 (
+  $9: EndFunctionParms
+)
+$10: Return expression:
+  $11: Nothing
+$12: EndOfScript
+
+=== BP_EnchantedLantern_C::ReceiveLightNowOn (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_EnchantedLantern" (
+  $13: literal int32 735
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_EnchantedLantern_C::ReceiveLightNowOff (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_EnchantedLantern" (
+  $13: literal int32 681
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_EnchantedLantern_C::StartUsing (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InputId2@0x213ae60f380
+  Expression:
+  $9: LocalVariable named InputID@0x213ae60f200
+$18: VirtualFunction call "ExecuteUbergraph_BP_EnchantedLantern" (
+  $31: literal int32 657
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_EnchantedLantern_C::StopUsing (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InputId@0x213ae60f400
+  Expression:
+  $9: LocalVariable named InputID@0x213ae60f280
+$18: VirtualFunction call "ExecuteUbergraph_BP_EnchantedLantern" (
+  $31: literal int32 696
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_EnchantedLantern_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_EnchantedLantern" (
+  $13: literal int32 740
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_EnchantedLantern_C::ExecuteUbergraph_BP_EnchantedLantern (824 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x213b3240ee0
+$10: LetBool (Variable = Expression)
+  Variable:
+  $11: LocalVariable named CallFunc_GetIsFirstPerson_ReturnValue@0x213ae60f300
+  Expression:
+  $20: FinalFunction target=GetIsFirstPerson@0x212d672cfe0 (
+    $29: EndFunctionParms
+  )
+$30: JumpIfNot -> 0x335, cond:
+  $35: LocalVariable named CallFunc_GetIsFirstPerson_ReturnValue@0x213ae60f300
+$44: FinalFunction target=PostItemWwiseEvent@0x212d672d8e0 (
+  $53: ObjectConst Stop_mus_tt_v01_t07_LanternReveals@0x213aea0ba90
+  $62: EndFunctionParms
+)
+$63: Jump to offset 0x335
+$68: Context
+  ObjectExpression:
+  $69: InstanceVariable named Revealer@0x213ae60f500
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $90: FinalFunction target=StopRevealing@0x212d6848fc0 (
+    $99: EndFunctionParms
+  )
+$100: Context
+  ObjectExpression:
+  $101: InstanceVariable named EnchantedLanternGlowSphere@0x213ae60f580
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $122: VirtualFunction call "SetVisibility" (
+    $135: False
+    $136: False
+    $137: EndFunctionParms
+  )
+$138: Jump to offset 0xa
+$143: Context
+  ObjectExpression:
+  $144: InstanceVariable named Revealer@0x213ae60f500
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $165: FinalFunction target=StartRevealing@0x212d6848f00 (
+    $174: EndFunctionParms
+  )
+$175: Context
+  ObjectExpression:
+  $176: InstanceVariable named EnchantedLanternGlowSphere@0x213ae60f580
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $197: VirtualFunction call "SetVisibility" (
+    $210: True
+    $211: False
+    $212: EndFunctionParms
+  )
+$213: Let (Variable = Expression)
+  Variable:
+  $222: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue2@0x213b3249df0
+  Expression:
+  $231: Context
+    ObjectExpression:
+    $232: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue2@0x213b3249df0
+    ContextExpression:
+    $253: FinalFunction target=GetGameTimeInSeconds@0x212d63ac800 (
+      $262: Self
+      $263: EndFunctionParms
+    )
+$264: Context
+  ObjectExpression:
+  $265: InstanceVariable named EnchantedGlowDynamicMaterial@0x213ae60f600
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $286: FinalFunction target=SetScalarParameterValue@0x212d69f4620 (
+    $295: literal name "PulseStartTime"
+    $308: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue2@0x213b3249df0
+    $317: EndFunctionParms
+  )
+$318: LetBool (Variable = Expression)
+  Variable:
+  $319: LocalVariable named CallFunc_GetIsFirstPerson_ReturnValue@0x213ae60f300
+  Expression:
+  $328: FinalFunction target=GetIsFirstPerson@0x212d672cfe0 (
+    $337: EndFunctionParms
+  )
+$338: JumpIfNot -> 0x335, cond:
+  $343: LocalVariable named CallFunc_GetIsFirstPerson_ReturnValue@0x213ae60f300
+$352: FinalFunction target=PostItemWwiseEvent@0x212d672d8e0 (
+  $361: ObjectConst Play_mus_tt_v01_t07_LanternReveals@0x213aea0bdb0
+  $370: EndFunctionParms
+)
+$371: Jump to offset 0x335
+$376: LetBool (Variable = Expression)
+  Variable:
+  $377: Context
+    ObjectExpression:
+    $378: InstanceVariable named Revealer@0x213ae60f500
+    SkipBytes: 0x9
+    RValueProperty: IsMultiplierActive@0x212d68492c0
+    ContextExpression:
+    $399: InstanceVariable named IsMultiplierActive@0x212d68492c0
+  Expression:
+  $408: False
+$409: Jump to offset 0x335
+$414: LetBool (Variable = Expression)
+  Variable:
+  $415: Context
+    ObjectExpression:
+    $416: InstanceVariable named Revealer@0x213ae60f500
+    SkipBytes: 0x9
+    RValueProperty: IsMultiplierActive@0x212d68492c0
+    ContextExpression:
+    $437: InstanceVariable named IsMultiplierActive@0x212d68492c0
+  Expression:
+  $446: True
+$447: Let (Variable = Expression)
+  Variable:
+  $456: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x213b3247540
+  Expression:
+  $465: Context
+    ObjectExpression:
+    $466: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue@0x213b3247540
+    ContextExpression:
+    $487: FinalFunction target=GetGameTimeInSeconds@0x212d63ac800 (
+      $496: Self
+      $497: EndFunctionParms
+    )
+$498: Let (Variable = Expression)
+  Variable:
+  $507: Context
+    ObjectExpression:
+    $508: InstanceVariable named Revealer@0x213ae60f500
+    SkipBytes: 0x9
+    RValueProperty: RevealStartTime@0x212d6849100
+    ContextExpression:
+    $529: InstanceVariable named RevealStartTime@0x212d6849100
+  Expression:
+  $538: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x213b3247540
+$547: Let (Variable = Expression)
+  Variable:
+  $556: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue3@0x213b3247460
+  Expression:
+  $565: Context
+    ObjectExpression:
+    $566: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue3@0x213b3247460
+    ContextExpression:
+    $587: FinalFunction target=GetGameTimeInSeconds@0x212d63ac800 (
+      $596: Self
+      $597: EndFunctionParms
+    )
+$598: Context
+  ObjectExpression:
+  $599: InstanceVariable named EnchantedGlowDynamicMaterial@0x213ae60f600
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $620: FinalFunction target=SetScalarParameterValue@0x212d69f4620 (
+    $629: literal name "PulseStartTime"
+    $642: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue3@0x213b3247460
+    $651: EndFunctionParms
+  )
+$652: Jump to offset 0x335
+$657: FinalFunction target=StartUsing@0x212d6a746f0 (
+  $666: LocalVariable named K2Node_Event_InputId2@0x213ae60f380
+  $675: EndFunctionParms
+)
+$676: Jump to offset 0x19e
+$681: FinalFunction target=ReceiveLightNowOff@0x212d67da1b0 (
+  $690: EndFunctionParms
+)
+$691: Jump to offset 0x44
+$696: FinalFunction target=StopUsing@0x212d6a74830 (
+  $705: LocalVariable named K2Node_Event_InputId@0x213ae60f400
+  $714: EndFunctionParms
+)
+$715: Jump to offset 0x178
+$720: FinalFunction target=ReceiveLightNowOn@0x212d67da270 (
+  $729: EndFunctionParms
+)
+$730: Jump to offset 0x8f
+$735: Jump to offset 0x2d0
+$740: FinalFunction target=ReceiveBeginPlay@0x213aeda9fc0 (
+  $749: EndFunctionParms
+)
+$750: LetObj (Variable = Expression)
+  Variable:
+  $751: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x213ae60f480
+  Expression:
+  $760: Context
+    ObjectExpression:
+    $761: InstanceVariable named EnchantedLanternGlowSphere@0x213ae60f580
+    SkipBytes: 0x14
+    RValueProperty: CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x213ae60f480
+    ContextExpression:
+    $782: VirtualFunction call "CreateDynamicMaterialInstance" (
+      $795: literal int32 0
+      $800: NoObject
+      $801: EndFunctionParms
+    )
+$802: LetObj (Variable = Expression)
+  Variable:
+  $803: InstanceVariable named EnchantedGlowDynamicMaterial@0x213ae60f600
+  Expression:
+  $812: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x213ae60f480
+$821: Return expression:
+  $822: Nothing
+$823: EndOfScript

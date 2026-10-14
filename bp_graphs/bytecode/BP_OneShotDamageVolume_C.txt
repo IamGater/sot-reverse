@@ -1,0 +1,156 @@
+// /Game/Blueprints/GameObjects/Mechanisms/Assorted/bp_oneshotdamagevolume -> BP_OneShotDamageVolume_C
+
+=== BP_OneShotDamageVolume_C::fn_idx_9202 (45 bytes) ===
+$0: Context
+  ObjectExpression:
+  $1: InstanceVariable named Box@0x19f831a9800
+  SkipBytes: 0x14
+  RValueProperty: (null)
+  ContextExpression:
+  $22: FinalFunction target=SetBoxExtent@0x19e4d34a2d0 (
+    $31: InstanceVariable named BoxExtent@0x19f831a9880
+    $40: True
+    $41: EndFunctionParms
+  )
+$42: Return expression:
+  $43: Nothing
+$44: EndOfScript
+
+=== BP_OneShotDamageVolume_C::fn_idx_9142 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_OtherActor@0x19f831a9580
+  Expression:
+  $9: LocalVariable named OtherActor@0x19f831a9500
+$18: VirtualFunction call "idx:242189" (
+  $31: literal int32 553
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_OneShotDamageVolume_C::fn_idx_242189 (561 bytes) ===
+$0: FlowStack.Push(0x22e)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x19f7182cbe0
+$15: FlowStack.Push(0xeb)
+$20: Let (Variable = Expression)
+  Variable:
+  $29: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19f831a9780
+  Expression:
+  $38: Context
+    ObjectExpression:
+    $39: LocalVariable named K2Node_Event_OtherActor@0x19f831a9580
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetComponentsByClass_ReturnValue@0x19f831a9780
+    ContextExpression:
+    $60: FinalFunction target=GetComponentsByClass@0x19e4cd626c0 (
+      $69: ObjectConst HealthComponent@0x19e4c3cc080
+      $78: EndFunctionParms
+    )
+$79: Let (Variable = Expression)
+  Variable:
+  $88: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x19f7182e230
+  Expression:
+  $97: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $106: InstanceVariable named Damage@0x19f7182ce10
+    $115: literal float -1
+    $120: EndFunctionParms
+  )
+$121: Context
+  ObjectExpression:
+  $122: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $143: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $152: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19f831a9780
+    $161: LocalVariable named Temp_int_Array_Index_Variable@0x19f7182e2a0
+    $170: LocalVariable named CallFunc_Array_Get_Item@0x19f831a9600
+    $179: EndFunctionParms
+  )
+$180: Context
+  ObjectExpression:
+  $181: LocalVariable named CallFunc_Array_Get_Item@0x19f831a9600
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $202: VirtualFunction call "AdjustHealth" (
+    $215: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x19f7182e230
+    $224: InstanceVariable named DamageReason@0x19f831a9900
+    $233: EndFunctionParms
+  )
+$234: PopExecutionFlow (jump to popped addr)
+$235: Let (Variable = Expression)
+  Variable:
+  $244: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f7182ccc0
+  Expression:
+  $253: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $262: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f7182cc50
+    $271: literal int32 1
+    $276: EndFunctionParms
+  )
+$277: Let (Variable = Expression)
+  Variable:
+  $286: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f7182cc50
+  Expression:
+  $295: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f7182ccc0
+$304: Let (Variable = Expression)
+  Variable:
+  $313: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19f831a9780
+  Expression:
+  $322: Context
+    ObjectExpression:
+    $323: LocalVariable named K2Node_Event_OtherActor@0x19f831a9580
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetComponentsByClass_ReturnValue@0x19f831a9780
+    ContextExpression:
+    $344: FinalFunction target=GetComponentsByClass@0x19e4cd626c0 (
+      $353: ObjectConst HealthComponent@0x19e4c3cc080
+      $362: EndFunctionParms
+    )
+$363: Let (Variable = Expression)
+  Variable:
+  $372: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f7182cd30
+  Expression:
+  $381: Context
+    ObjectExpression:
+    $382: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19f7182cd30
+    ContextExpression:
+    $403: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $412: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19f831a9780
+      $421: EndFunctionParms
+    )
+$422: LetBool (Variable = Expression)
+  Variable:
+  $423: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19f831a9680
+  Expression:
+  $432: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $441: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f7182cc50
+    $450: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f7182cd30
+    $459: EndFunctionParms
+  )
+$460: PopExecutionFlowIfNot, cond:
+$461: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19f831a9680
+$470: Let (Variable = Expression)
+  Variable:
+  $479: LocalVariable named Temp_int_Array_Index_Variable@0x19f7182e2a0
+  Expression:
+  $488: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f7182cc50
+$497: Jump to offset 0xf
+$502: Let (Variable = Expression)
+  Variable:
+  $511: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f7182cc50
+  Expression:
+  $520: literal int32 0
+$525: Let (Variable = Expression)
+  Variable:
+  $534: LocalVariable named Temp_int_Array_Index_Variable@0x19f7182e2a0
+  Expression:
+  $543: literal int32 0
+$548: Jump to offset 0x130
+$553: Jump to offset 0x1f6
+$558: Return expression:
+  $559: Nothing
+$560: EndOfScript

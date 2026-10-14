@@ -1,0 +1,152 @@
+// /Game/Blueprints/Environment/Common/WaterFalls/bp_waterfall_devils_cave_dynamicflow_01 -> BP_Waterfall_Devils_Cave_DynamicFlow_01_C
+
+=== BP_Waterfall_Devils_Cave_DynamicFlow_01_C::Proposal_OOS_Chapters_Rank05Reward_001 (512 bytes) ===
+$0: FlowStack.Push(0x1fd)
+$5: Let (Variable = Expression)
+  Variable:
+  $14: LocalVariable named Temp_int_Variable@0x19f71f09840
+  Expression:
+  $23: literal int32 0
+$28: Let (Variable = Expression)
+  Variable:
+  $37: LocalVariable named CallFunc_GetNumMaterials_ReturnValue@0x19f71f098b0
+  Expression:
+  $46: Context
+    ObjectExpression:
+    $47: InstanceVariable named DynamicFlow@0x19f72201d00
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetNumMaterials_ReturnValue@0x19f71f098b0
+    ContextExpression:
+    $68: VirtualFunction call "GetNumMaterials" (
+      $81: EndFunctionParms
+    )
+$82: Let (Variable = Expression)
+  Variable:
+  $91: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x19f71f09920
+  Expression:
+  $100: CallMath target=Subtract_IntInt@0x19e4d399ad0 (
+    $109: LocalVariable named CallFunc_GetNumMaterials_ReturnValue@0x19f71f098b0
+    $118: literal int32 1
+    $123: EndFunctionParms
+  )
+$124: LetBool (Variable = Expression)
+  Variable:
+  $125: LocalVariable named CallFunc_LessEqual_IntInt_ReturnValue@0x19f72201a80
+  Expression:
+  $134: CallMath target=LessEqual_IntInt@0x19e4d3869d0 (
+    $143: LocalVariable named Temp_int_Variable@0x19f71f09840
+    $152: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x19f71f09920
+    $161: EndFunctionParms
+  )
+$162: PopExecutionFlowIfNot, cond:
+$163: LocalVariable named CallFunc_LessEqual_IntInt_ReturnValue@0x19f72201a80
+$172: FlowStack.Push(0x1b3)
+$177: LetObj (Variable = Expression)
+  Variable:
+  $178: LocalVariable named CallFunc_GetMaterial_ReturnValue@0x19f72201980
+  Expression:
+  $187: Context
+    ObjectExpression:
+    $188: InstanceVariable named DynamicFlow@0x19f72201d00
+    SkipBytes: 0x17
+    RValueProperty: CallFunc_GetMaterial_ReturnValue@0x19f72201980
+    ContextExpression:
+    $209: VirtualFunction call "GetMaterial" (
+      $222: LocalVariable named Temp_int_Variable@0x19f71f09840
+      $231: EndFunctionParms
+    )
+$232: LetObj (Variable = Expression)
+  Variable:
+  $233: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f72201a00
+  Expression:
+  $242: Context
+    ObjectExpression:
+    $243: ObjectConst Default__KismetMaterialLibrary@0x19e4d95ec40
+    SkipBytes: 0x14
+    RValueProperty: CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f72201a00
+    ContextExpression:
+    $264: FinalFunction target=CreateDynamicMaterialInstance@0x19e4d36e1e0 (
+      $273: Self
+      $274: LocalVariable named CallFunc_GetMaterial_ReturnValue@0x19f72201980
+      $283: EndFunctionParms
+    )
+$284: LetObj (Variable = Expression)
+  Variable:
+  $285: LocalVariable named CallFunc_GetTexture_ReturnValue@0x19f72201b00
+  Expression:
+  $294: Context
+    ObjectExpression:
+    $295: InstanceVariable named DynamicFlow@0x19f72201d00
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetTexture_ReturnValue@0x19f72201b00
+    ContextExpression:
+    $316: FinalFunction target=GetTexture@0x19e4d17b0e0 (
+      $325: EndFunctionParms
+    )
+$326: Context
+  ObjectExpression:
+  $327: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f72201a00
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $348: FinalFunction target=SetTextureParameterValue@0x19e4d3d47c0 (
+    $357: literal name "idx:226372"
+    $370: LocalVariable named CallFunc_GetTexture_ReturnValue@0x19f72201b00
+    $379: EndFunctionParms
+  )
+$380: Context
+  ObjectExpression:
+  $381: InstanceVariable named DynamicFlow@0x19f72201d00
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $402: VirtualFunction call "SetMaterial" (
+    $415: LocalVariable named Temp_int_Variable@0x19f71f09840
+    $424: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f72201a00
+    $433: EndFunctionParms
+  )
+$434: PopExecutionFlow (jump to popped addr)
+$435: Let (Variable = Expression)
+  Variable:
+  $444: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f71f09990
+  Expression:
+  $453: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $462: LocalVariable named Temp_int_Variable@0x19f71f09840
+    $471: literal int32 1
+    $476: EndFunctionParms
+  )
+$477: Let (Variable = Expression)
+  Variable:
+  $486: LocalVariable named Temp_int_Variable@0x19f71f09840
+  Expression:
+  $495: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f71f09990
+$504: Jump to offset 0x1c
+$509: Return expression:
+  $510: Nothing
+$511: EndOfScript
+
+=== BP_Waterfall_Devils_Cave_DynamicFlow_01_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_Waterfall_Devils_Cave_DynamicFlow_01_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "idx:226407" (
+  $13: literal int32 29
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Waterfall_Devils_Cave_DynamicFlow_01_C::Recipe_OOS_Rank07_AllAtOnce_BountyRewards_0000 (37 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19f71f09a00
+$10: VirtualFunction call "idx:226373" (
+  $23: EndFunctionParms
+)
+$24: Jump to offset 0x22
+$29: Jump to offset 0xa
+$34: Return expression:
+  $35: Nothing
+$36: EndOfScript

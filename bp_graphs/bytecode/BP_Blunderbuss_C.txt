@@ -1,0 +1,587 @@
+// /Game/Blueprints/GameObjects/Props/Weapons/Blunderbuss/bp_wpn_blunderbuss_yr1_leg_01_a_wieldable -> BP_Blunderbuss_C
+
+=== BP_Blunderbuss_C::fn_idx_216256 (126 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_Conv_BoolToFloat_ReturnValue@0x19f83f7b7c0
+  Expression:
+  $18: CallMath target=Conv_BoolToFloat@0x19e4d374a40 (
+    $27: LocalVariable named IsOn@0x19f852fc900
+    $36: EndFunctionParms
+  )
+$37: Let (Variable = Expression)
+  Variable:
+  $46: LocalVariable named CallFunc_AddOrUpdateBlendable_InBlendableObject_CastInput@0x19f852fc980
+  Expression:
+  $55: ObjToInterfaceCast to BlendableInterface@0x19e4c526200
+  $64: InstanceVariable named DynamicMaterial@0x19f852fde80
+$73: Context
+  ObjectExpression:
+  $74: InstanceVariable named PostProcess@0x19f852fdd00
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $95: FinalFunction target=AddOrUpdateBlendable@0x19e4d1123a0 (
+    $104: LocalVariable named CallFunc_AddOrUpdateBlendable_InBlendableObject_CastInput@0x19f852fc980
+    $113: LocalVariable named CallFunc_Conv_BoolToFloat_ReturnValue@0x19f83f7b7c0
+    $122: EndFunctionParms
+  )
+$123: Return expression:
+  $124: Nothing
+$125: EndOfScript
+
+=== BP_Blunderbuss_C::fn_idx_216198 (264 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_GetOwner_ReturnValue@0x19f852fca80
+  Expression:
+  $10: FinalFunction target=GetOwner@0x19e4cd64200 (
+    $19: EndFunctionParms
+  )
+$20: Let (Variable = Expression)
+  Variable:
+  $29: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19f852fcb00
+  Expression:
+  $38: DynamicCast to AthenaPlayerCharacter@0x19e4be85b00 of expr:
+  $47: LocalVariable named CallFunc_GetOwner_ReturnValue@0x19f852fca80
+$56: Let (Variable = Expression)
+  Variable:
+  $65: LocalVariable named K2Node_DynamicCast_bSuccess@0x19f852fcb80
+  Expression:
+  $74: PrimitiveCast type=71
+    Argument:
+    $76: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19f852fcb00
+$85: JumpIfNot -> 0xd3, cond:
+  $90: LocalVariable named K2Node_DynamicCast_bSuccess@0x19f852fcb80
+$99: LetBool (Variable = Expression)
+  Variable:
+  $100: LocalVariable named CallFunc_IsLocallyControlled_ReturnValue@0x19f852fcc00
+  Expression:
+  $109: Context
+    ObjectExpression:
+    $110: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19f852fcb00
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_IsLocallyControlled_ReturnValue@0x19f852fcc00
+    ContextExpression:
+    $131: VirtualFunction call "IsLocallyControlled" (
+      $144: EndFunctionParms
+    )
+$145: JumpIfNot -> 0xec, cond:
+  $150: LocalVariable named CallFunc_IsLocallyControlled_ReturnValue@0x19f852fcc00
+$159: Let (Variable = Expression)
+  Variable:
+  $168: InstanceVariable named sfx relationship@0x19f852fdd80
+  Expression:
+  $177: literal byte 1
+$179: Let (Variable = Expression)
+  Variable:
+  $188: LocalOutVariable named Relationship@0x19f852fca00
+  Expression:
+  $197: InstanceVariable named sfx relationship@0x19f852fdd80
+$206: Jump to offset 0x105
+$211: Let (Variable = Expression)
+  Variable:
+  $220: InstanceVariable named sfx relationship@0x19f852fdd80
+  Expression:
+  $229: literal byte 2
+$231: Jump to offset 0xb3
+$236: Let (Variable = Expression)
+  Variable:
+  $245: InstanceVariable named sfx relationship@0x19f852fdd80
+  Expression:
+  $254: literal byte 0
+$256: Jump to offset 0xb3
+$261: Return expression:
+  $262: Nothing
+$263: EndOfScript
+
+=== BP_Blunderbuss_C::fn_idx_216199 (1799 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_GetWielder_ReturnValue@0x19f852fcc80
+  Expression:
+  $10: VirtualFunction call "GetWielder" (
+    $23: EndFunctionParms
+  )
+$24: Let (Variable = Expression)
+  Variable:
+  $33: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19f852fcd00
+  Expression:
+  $42: DynamicCast to AthenaPlayerCharacter@0x19e4be85b00 of expr:
+  $51: LocalVariable named CallFunc_GetWielder_ReturnValue@0x19f852fcc80
+$60: Let (Variable = Expression)
+  Variable:
+  $69: LocalVariable named K2Node_DynamicCast_bSuccess@0x19f852fcd80
+  Expression:
+  $78: PrimitiveCast type=71
+    Argument:
+    $80: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19f852fcd00
+$89: JumpIfNot -> 0x1dd, cond:
+  $94: LocalVariable named K2Node_DynamicCast_bSuccess@0x19f852fcd80
+$103: LetBool (Variable = Expression)
+  Variable:
+  $104: LocalVariable named CallFunc_GetIsUnderwater_ReturnValue@0x19f852fcf00
+  Expression:
+  $113: Context
+    ObjectExpression:
+    $114: Context
+      ObjectExpression:
+      $115: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19f852fcd00
+      SkipBytes: 0x9
+      RValueProperty: FirstPersonCamera@0x19e4d087eb0
+      ContextExpression:
+      $136: InstanceVariable named FirstPersonCamera@0x19e4d087eb0
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetIsUnderwater_ReturnValue@0x19f852fcf00
+    ContextExpression:
+    $157: FinalFunction target=GetIsUnderwater@0x19e4d0a9cf0 (
+      $166: EndFunctionParms
+    )
+$167: LetObj (Variable = Expression)
+  Variable:
+  $168: LocalVariable named CallFunc_AthenaSpawnEmitterAttachedWithOwner_ReturnValue@0x19f852fd100
+  Expression:
+  $177: Context
+    ObjectExpression:
+    $178: ObjectConst Default__VfxFunctionLibrary@0x19e4d8493d0
+    SkipBytes: 0x5c
+    RValueProperty: CallFunc_AthenaSpawnEmitterAttachedWithOwner_ReturnValue@0x19f852fd100
+    ContextExpression:
+    $199: FinalFunction target=AthenaSpawnEmitterAttachedWithOwner@0x19e4d26e900 (
+      $208: ObjectConst vfx_picker_blunderbuss_1st_attached_local@0x19f8532a230
+      $217: InstanceVariable named FirstPersonMesh@0x19e4d10ee80
+      $226: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19f852fcd00
+      $235: literal name "VFX_Socket"
+      $248: literal vector (0,0,0)
+      $261: literal rotation (90,90,0)
+      $274: literal byte 2
+      $276: True
+      $277: True
+      $278: False
+      $279: LocalVariable named CallFunc_GetIsUnderwater_ReturnValue@0x19f852fcf00
+      $288: literal byte 0
+      $290: EndFunctionParms
+    )
+$291: LetBool (Variable = Expression)
+  Variable:
+  $292: LocalVariable named CallFunc_GetIsUnderwater_ReturnValue@0x19f852fcf00
+  Expression:
+  $301: Context
+    ObjectExpression:
+    $302: Context
+      ObjectExpression:
+      $303: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19f852fcd00
+      SkipBytes: 0x9
+      RValueProperty: FirstPersonCamera@0x19e4d087eb0
+      ContextExpression:
+      $324: InstanceVariable named FirstPersonCamera@0x19e4d087eb0
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetIsUnderwater_ReturnValue@0x19f852fcf00
+    ContextExpression:
+    $345: FinalFunction target=GetIsUnderwater@0x19e4d0a9cf0 (
+      $354: EndFunctionParms
+    )
+$355: LetObj (Variable = Expression)
+  Variable:
+  $356: LocalVariable named CallFunc_AthenaSpawnShipRelativeEmitterAtSocketLocation_ReturnValue@0x19f852fcf80
+  Expression:
+  $365: Context
+    ObjectExpression:
+    $366: ObjectConst Default__VfxFunctionLibrary@0x19e4d8493d0
+    SkipBytes: 0x5a
+    RValueProperty: CallFunc_AthenaSpawnShipRelativeEmitterAtSocketLocation_ReturnValue@0x19f852fcf80
+    ContextExpression:
+    $387: FinalFunction target=AthenaSpawnShipRelativeEmitterAtSocketLocation@0x19e4d26f760 (
+      $396: ObjectConst vfx_picker_blunderbuss_1st_notattached@0x19f85327f80
+      $405: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19f852fcd00
+      $414: InstanceVariable named FirstPersonMesh@0x19e4d10ee80
+      $423: literal name "VFX_Socket"
+      $436: literal vector (0,0,0)
+      $449: literal rotation (0,0,0)
+      $462: True
+      $463: True
+      $464: False
+      $465: LocalVariable named CallFunc_GetIsUnderwater_ReturnValue@0x19f852fcf00
+      $474: literal byte 0
+      $476: EndFunctionParms
+    )
+$477: LetObj (Variable = Expression)
+  Variable:
+  $478: LocalVariable named CallFunc_GetWielder_ReturnValue3@0x19f852fda00
+  Expression:
+  $487: VirtualFunction call "GetWielder" (
+    $500: EndFunctionParms
+  )
+$501: Let (Variable = Expression)
+  Variable:
+  $510: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character3@0x19f852fda80
+  Expression:
+  $519: DynamicCast to AthenaPlayerCharacter@0x19e4be85b00 of expr:
+  $528: LocalVariable named CallFunc_GetWielder_ReturnValue3@0x19f852fda00
+$537: Let (Variable = Expression)
+  Variable:
+  $546: LocalVariable named K2Node_DynamicCast_bSuccess3@0x19f852fdb00
+  Expression:
+  $555: PrimitiveCast type=71
+    Argument:
+    $557: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character3@0x19f852fda80
+$566: JumpIfNot -> 0x4cf, cond:
+  $571: LocalVariable named K2Node_DynamicCast_bSuccess3@0x19f852fdb00
+$580: LetBool (Variable = Expression)
+  Variable:
+  $581: LocalVariable named CallFunc_IsUnderwater_ReturnValue@0x19f852fd900
+  Expression:
+  $590: VirtualFunction call "IsUnderwater" (
+    $603: EndFunctionParms
+  )
+$604: LetObj (Variable = Expression)
+  Variable:
+  $605: LocalVariable named CallFunc_AthenaSpawnShipRelativeEmitterAtSocketLocation_ReturnValue2@0x19f852fdb80
+  Expression:
+  $614: Context
+    ObjectExpression:
+    $615: ObjectConst Default__VfxFunctionLibrary@0x19e4d8493d0
+    SkipBytes: 0x5a
+    RValueProperty: CallFunc_AthenaSpawnShipRelativeEmitterAtSocketLocation_ReturnValue2@0x19f852fdb80
+    ContextExpression:
+    $636: FinalFunction target=AthenaSpawnShipRelativeEmitterAtSocketLocation@0x19e4d26f760 (
+      $645: ObjectConst vfx_picker_blunderbuss_3rd@0x19f85323b60
+      $654: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character3@0x19f852fda80
+      $663: InstanceVariable named ThirdPersonMesh@0x19e4d10ee00
+      $672: literal name "VFX_Socket"
+      $685: literal vector (0,0,0)
+      $698: literal rotation (0,0,0)
+      $711: True
+      $712: False
+      $713: True
+      $714: LocalVariable named CallFunc_IsUnderwater_ReturnValue@0x19f852fd900
+      $723: literal byte 0
+      $725: EndFunctionParms
+    )
+$726: LetObj (Variable = Expression)
+  Variable:
+  $727: LocalVariable named CallFunc_GetWielder_ReturnValue2@0x19f852fd680
+  Expression:
+  $736: VirtualFunction call "GetWielder" (
+    $749: EndFunctionParms
+  )
+$750: Let (Variable = Expression)
+  Variable:
+  $759: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character2@0x19f852fd780
+  Expression:
+  $768: DynamicCast to AthenaPlayerCharacter@0x19e4be85b00 of expr:
+  $777: LocalVariable named CallFunc_GetWielder_ReturnValue2@0x19f852fd680
+$786: Let (Variable = Expression)
+  Variable:
+  $795: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19f852fd800
+  Expression:
+  $804: PrimitiveCast type=71
+    Argument:
+    $806: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character2@0x19f852fd780
+$815: JumpIfNot -> 0x5b3, cond:
+  $820: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19f852fd800
+$829: LetBool (Variable = Expression)
+  Variable:
+  $830: LocalVariable named CallFunc_IsLocallyControlled_ReturnValue@0x19f852fd880
+  Expression:
+  $839: Context
+    ObjectExpression:
+    $840: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character2@0x19f852fd780
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_IsLocallyControlled_ReturnValue@0x19f852fd880
+    ContextExpression:
+    $861: VirtualFunction call "IsLocallyControlled" (
+      $874: EndFunctionParms
+    )
+$875: JumpIfNot -> 0x5b3, cond:
+  $880: LocalVariable named CallFunc_IsLocallyControlled_ReturnValue@0x19f852fd880
+$889: VirtualFunction call "determine sfx relationship" (
+  $902: LocalVariable named CallFunc_determine_sfx_relationship_relationship2@0x19f852fd600
+  $911: EndFunctionParms
+)
+$912: LetObj (Variable = Expression)
+  Variable:
+  $913: LocalVariable named CallFunc_GetAudioEmitterPool_ReturnValue2@0x19f852fd400
+  Expression:
+  $922: VirtualFunction call "GetAudioEmitterPool" (
+    $935: EndFunctionParms
+  )
+$936: Let (Variable = Expression)
+  Variable:
+  $945: LocalVariable named CallFunc_GetSocketTransform_ReturnValue2@0x19f852fd480
+  Expression:
+  $954: Context
+    ObjectExpression:
+    $955: InstanceVariable named FirstPersonMesh@0x19e4d10ee80
+    SkipBytes: 0x1d
+    RValueProperty: CallFunc_GetSocketTransform_ReturnValue2@0x19f852fd480
+    ContextExpression:
+    $976: VirtualFunction call "GetSocketTransform" (
+      $989: literal name "VFX_Socket"
+      $1002: literal byte 0
+      $1004: EndFunctionParms
+    )
+$1005: Let (Variable = Expression)
+  Variable:
+  $1014: LocalVariable named CallFunc_GetSocketLocation_ReturnValue3@0x19f852fd500
+  Expression:
+  $1023: Context
+    ObjectExpression:
+    $1024: InstanceVariable named FirstPersonMesh@0x19e4d10ee80
+    SkipBytes: 0x1b
+    RValueProperty: CallFunc_GetSocketLocation_ReturnValue3@0x19f852fd500
+    ContextExpression:
+    $1045: VirtualFunction call "GetSocketLocation" (
+      $1058: literal name "VFX_Socket"
+      $1071: EndFunctionParms
+    )
+$1072: Let (Variable = Expression)
+  Variable:
+  $1081: LocalVariable named CallFunc_TransformDirection_ReturnValue2@0x19f852fd580
+  Expression:
+  $1090: CallMath target=TransformDirection@0x19e4d39bf10 (
+    $1099: LocalVariable named CallFunc_GetSocketTransform_ReturnValue2@0x19f852fd480
+    $1108: literal vector (1,0,0)
+    $1121: EndFunctionParms
+  )
+$1122: Let (Variable = Expression)
+  Variable:
+  $1131: LocalVariable named CallFunc_WwisePostEventAtLocation_ReturnValue2@0x19f83f7b8a0
+  Expression:
+  $1140: Context
+    ObjectExpression:
+    $1141: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x19e4d9e1550
+    SkipBytes: 0x40
+    RValueProperty: CallFunc_WwisePostEventAtLocation_ReturnValue2@0x19f83f7b8a0
+    ContextExpression:
+    $1162: FinalFunction target=WwisePostEventAtLocation@0x19e4d4017e0 (
+      $1171: LocalVariable named CallFunc_WwisePostEventAtLocation_Emitter2@0x19f852fd700
+      $1180: ObjectConst Play_sfx_weapon_blunderbuss_fire@0x19f85323890
+      $1189: LocalVariable named CallFunc_GetSocketLocation_ReturnValue3@0x19f852fd500
+      $1198: LocalVariable named CallFunc_TransformDirection_ReturnValue2@0x19f852fd580
+      $1207: LocalVariable named CallFunc_GetAudioEmitterPool_ReturnValue2@0x19f852fd400
+      $1216: LocalVariable named CallFunc_determine_sfx_relationship_relationship2@0x19f852fd600
+      $1225: EndFunctionParms
+    )
+$1226: Jump to offset 0x704
+$1231: Let (Variable = Expression)
+  Variable:
+  $1240: LocalVariable named CallFunc_K2_GetComponentRotation_ReturnValue@0x19f852fd280
+  Expression:
+  $1249: Context
+    ObjectExpression:
+    $1250: InstanceVariable named ThirdPersonMesh@0x19e4d10ee00
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetComponentRotation_ReturnValue@0x19f852fd280
+    ContextExpression:
+    $1271: FinalFunction target=K2_GetComponentRotation@0x19e4d071430 (
+      $1280: EndFunctionParms
+    )
+$1281: Let (Variable = Expression)
+  Variable:
+  $1290: LocalVariable named CallFunc_GetSocketLocation_ReturnValue2@0x19f852fd380
+  Expression:
+  $1299: Context
+    ObjectExpression:
+    $1300: InstanceVariable named ThirdPersonMesh@0x19e4d10ee00
+    SkipBytes: 0x1b
+    RValueProperty: CallFunc_GetSocketLocation_ReturnValue2@0x19f852fd380
+    ContextExpression:
+    $1321: VirtualFunction call "GetSocketLocation" (
+      $1334: literal name "VFX_Socket"
+      $1347: EndFunctionParms
+    )
+$1348: LetBool (Variable = Expression)
+  Variable:
+  $1349: LocalVariable named CallFunc_IsUnderwater_ReturnValue@0x19f852fd900
+  Expression:
+  $1358: VirtualFunction call "IsUnderwater" (
+    $1371: EndFunctionParms
+  )
+$1372: LetObj (Variable = Expression)
+  Variable:
+  $1373: LocalVariable named CallFunc_AthenaSpawnEmitterAtLocation_ReturnValue@0x19f852fd980
+  Expression:
+  $1382: Context
+    ObjectExpression:
+    $1383: ObjectConst Default__VfxFunctionLibrary@0x19e4d8493d0
+    SkipBytes: 0x32
+    RValueProperty: CallFunc_AthenaSpawnEmitterAtLocation_ReturnValue@0x19f852fd980
+    ContextExpression:
+    $1404: FinalFunction target=AthenaSpawnEmitterAtLocation@0x19e4d26c7a0 (
+      $1413: Self
+      $1414: ObjectConst vfx_picker_blunderbuss_3rd@0x19f85323b60
+      $1423: LocalVariable named CallFunc_GetSocketLocation_ReturnValue2@0x19f852fd380
+      $1432: LocalVariable named CallFunc_K2_GetComponentRotation_ReturnValue@0x19f852fd280
+      $1441: True
+      $1442: LocalVariable named CallFunc_IsUnderwater_ReturnValue@0x19f852fd900
+      $1451: literal byte 0
+      $1453: EndFunctionParms
+    )
+$1454: Jump to offset 0x2d6
+$1459: VirtualFunction call "determine sfx relationship" (
+  $1472: LocalVariable named CallFunc_determine_sfx_relationship_relationship@0x19f852fce80
+  $1481: EndFunctionParms
+)
+$1482: LetObj (Variable = Expression)
+  Variable:
+  $1483: LocalVariable named CallFunc_GetAudioEmitterPool_ReturnValue@0x19f852fce00
+  Expression:
+  $1492: VirtualFunction call "GetAudioEmitterPool" (
+    $1505: EndFunctionParms
+  )
+$1506: Let (Variable = Expression)
+  Variable:
+  $1515: LocalVariable named CallFunc_GetSocketLocation_ReturnValue@0x19f852fd000
+  Expression:
+  $1524: Context
+    ObjectExpression:
+    $1525: InstanceVariable named ThirdPersonMesh@0x19e4d10ee00
+    SkipBytes: 0x1b
+    RValueProperty: CallFunc_GetSocketLocation_ReturnValue@0x19f852fd000
+    ContextExpression:
+    $1546: VirtualFunction call "GetSocketLocation" (
+      $1559: literal name "VFX_Socket"
+      $1572: EndFunctionParms
+    )
+$1573: Let (Variable = Expression)
+  Variable:
+  $1582: LocalVariable named CallFunc_GetSocketTransform_ReturnValue@0x19f852fd080
+  Expression:
+  $1591: Context
+    ObjectExpression:
+    $1592: InstanceVariable named ThirdPersonMesh@0x19e4d10ee00
+    SkipBytes: 0x1d
+    RValueProperty: CallFunc_GetSocketTransform_ReturnValue@0x19f852fd080
+    ContextExpression:
+    $1613: VirtualFunction call "GetSocketTransform" (
+      $1626: literal name "VFX_Socket"
+      $1639: literal byte 0
+      $1641: EndFunctionParms
+    )
+$1642: Let (Variable = Expression)
+  Variable:
+  $1651: LocalVariable named CallFunc_TransformDirection_ReturnValue@0x19f852fd180
+  Expression:
+  $1660: CallMath target=TransformDirection@0x19e4d39bf10 (
+    $1669: LocalVariable named CallFunc_GetSocketTransform_ReturnValue@0x19f852fd080
+    $1678: literal vector (1,0,0)
+    $1691: EndFunctionParms
+  )
+$1692: Let (Variable = Expression)
+  Variable:
+  $1701: LocalVariable named CallFunc_WwisePostEventAtLocation_ReturnValue@0x19f83f7b830
+  Expression:
+  $1710: Context
+    ObjectExpression:
+    $1711: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x19e4d9e1550
+    SkipBytes: 0x40
+    RValueProperty: CallFunc_WwisePostEventAtLocation_ReturnValue@0x19f83f7b830
+    ContextExpression:
+    $1732: FinalFunction target=WwisePostEventAtLocation@0x19e4d4017e0 (
+      $1741: LocalVariable named CallFunc_WwisePostEventAtLocation_Emitter@0x19f852fd200
+      $1750: ObjectConst Play_sfx_weapon_blunderbuss_fire@0x19f85323890
+      $1759: LocalVariable named CallFunc_GetSocketLocation_ReturnValue@0x19f852fd000
+      $1768: LocalVariable named CallFunc_TransformDirection_ReturnValue@0x19f852fd180
+      $1777: LocalVariable named CallFunc_GetAudioEmitterPool_ReturnValue@0x19f852fce00
+      $1786: LocalVariable named CallFunc_determine_sfx_relationship_relationship@0x19f852fce80
+      $1795: EndFunctionParms
+    )
+$1796: Return expression:
+  $1797: Nothing
+$1798: EndOfScript
+
+=== BP_Blunderbuss_C::fn_idx_9202 (74 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f852fdc00
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetMaterialLibrary@0x19e4d95ec40
+    SkipBytes: 0x14
+    RValueProperty: CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f852fdc00
+    ContextExpression:
+    $32: FinalFunction target=CreateDynamicMaterialInstance@0x19e4d36e1e0 (
+      $41: Self
+      $42: ObjectConst M_post_radialblur@0x19f31043480
+      $51: EndFunctionParms
+    )
+$52: LetObj (Variable = Expression)
+  Variable:
+  $53: InstanceVariable named DynamicMaterial@0x19f852fde80
+  Expression:
+  $62: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f852fdc00
+$71: Return expression:
+  $72: Nothing
+$73: EndOfScript
+
+=== BP_Blunderbuss_C::fn_idx_1911 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Blunderbuss" (
+  $13: literal int32 111
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Blunderbuss_C::fn_idx_1921 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Blunderbuss" (
+  $13: literal int32 146
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Blunderbuss_C::fn_idx_1920 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Blunderbuss" (
+  $13: literal int32 10
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Blunderbuss_C::fn_idx_240434 (154 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19f83f7b910
+$10: VirtualFunction call "SetScopeEffectOn" (
+  $23: False
+  $24: EndFunctionParms
+)
+$25: Jump to offset 0x97
+$30: LetBool (Variable = Expression)
+  Variable:
+  $31: LocalVariable named CallFunc_IsDedicatedServer_ReturnValue@0x19f852fdc80
+  Expression:
+  $40: Context
+    ObjectExpression:
+    $41: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_IsDedicatedServer_ReturnValue@0x19f852fdc80
+    ContextExpression:
+    $62: FinalFunction target=IsDedicatedServer@0x19e4cd8dd00 (
+      $71: Self
+      $72: EndFunctionParms
+    )
+$73: JumpIfNot -> 0x5c, cond:
+  $78: LocalVariable named CallFunc_IsDedicatedServer_ReturnValue@0x19f852fdc80
+$87: Jump to offset 0x97
+$92: VirtualFunction call "DoFireEffect" (
+  $105: EndFunctionParms
+)
+$106: Jump to offset 0x97
+$111: FinalFunction target=OnWeaponFired@0x19e4d213ec0 (
+  $120: EndFunctionParms
+)
+$121: Jump to offset 0x1e
+$126: VirtualFunction call "SetScopeEffectOn" (
+  $139: True
+  $140: EndFunctionParms
+)
+$141: Jump to offset 0x97
+$146: Jump to offset 0x7e
+$151: Return expression:
+  $152: Nothing
+$153: EndOfScript

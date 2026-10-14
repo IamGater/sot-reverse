@@ -1,0 +1,210 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Onboarding/bp_waitforswordpull -> BP_WaitForSwordPull_C
+
+=== BP_WaitForSwordPull_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fce6e5300
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fce6e5200
+$18: VirtualFunction call "idx:283356" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_WaitForSwordPull_C::fn_idx_283357 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event@0x19fce6e5380
+  Expression:
+  $9: LocalVariable named Event@0x19fce6e5280
+$18: VirtualFunction call "idx:283356" (
+  $31: literal int32 353
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_WaitForSwordPull_C::OnEnd (22 bytes) ===
+$0: VirtualFunction call "idx:283356" (
+  $13: literal int32 456
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_WaitForSwordPull_C::fn_idx_283356 (774 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fcdbb3410
+$10: SetArray
+  $11: LocalVariable named CallFunc_GetParticipants_Participants@0x19fce6e5c80
+  $20: EndArray
+$21: FinalFunction target=GetParticipants@0x19e4cda59a0 (
+  $30: LocalVariable named CallFunc_GetParticipants_Participants@0x19fce6e5c80
+  $39: EndFunctionParms
+)
+$40: Context
+  ObjectExpression:
+  $41: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $62: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $71: LocalVariable named CallFunc_GetParticipants_Participants@0x19fce6e5c80
+    $80: literal int32 0
+    $85: LocalVariable named CallFunc_Array_Get_Item@0x19fce6e5400
+    $94: EndFunctionParms
+  )
+$95: Let (Variable = Expression)
+  Variable:
+  $104: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fce6e5480
+  Expression:
+  $113: DynamicCast to AthenaPlayerCharacter@0x19e4be85b00 of expr:
+  $122: LocalVariable named CallFunc_Array_Get_Item@0x19fce6e5400
+$131: Let (Variable = Expression)
+  Variable:
+  $140: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fce6e5500
+  Expression:
+  $149: PrimitiveCast type=71
+    Argument:
+    $151: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fce6e5480
+$160: JumpIfNot -> 0x303, cond:
+  $165: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fce6e5500
+$174: LetObj (Variable = Expression)
+  Variable:
+  $175: LocalVariable named CallFunc_GetController_ReturnValue@0x19fce6e5680
+  Expression:
+  $184: Context
+    ObjectExpression:
+    $185: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fce6e5480
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetController_ReturnValue@0x19fce6e5680
+    ContextExpression:
+    $206: FinalFunction target=GetController@0x19e4d077d70 (
+      $215: EndFunctionParms
+    )
+$216: Let (Variable = Expression)
+  Variable:
+  $225: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fce6e5800
+  Expression:
+  $234: Context
+    ObjectExpression:
+    $235: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fce6e5800
+    ContextExpression:
+    $256: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x19e4d410390 (
+      $265: LocalVariable named CallFunc_GetController_ReturnValue@0x19fce6e5680
+      $274: EndFunctionParms
+    )
+$275: Context
+  ObjectExpression:
+  $276: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x33
+  RValueProperty: (null)
+  ContextExpression:
+  $297: FinalFunction target=RegisterEventFromHandle@0x19e4d410c00 (
+    $306: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fce6e5800
+    $315: InstanceVariable named idx:283358@0x19fce6e5b00
+    $324: Self
+    $325: literal ansi string "OnSwordPull"
+    $338: ObjectConst EventPlayerTakenControlOfControllable@0x19e4cfc9d90
+    $347: EndFunctionParms
+  )
+$348: Jump to offset 0x303
+$353: Let (Variable = Expression)
+  Variable:
+  $362: LocalVariable named idx:283350@0x19fce6e5580
+  Expression:
+  $371: DynamicCast to BP_MaidenVoyage_SkeletonTree_C@0x19fcf4b18c0 of expr:
+  $380: StructMemberContext prop=ControllableObject@0x19e4cfc9e30
+    Expression to struct:
+    $389: LocalVariable named K2Node_CustomEvent_Event@0x19fce6e5380
+$398: Let (Variable = Expression)
+  Variable:
+  $407: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fce6e5600
+  Expression:
+  $416: PrimitiveCast type=71
+    Argument:
+    $418: LocalVariable named idx:283350@0x19fce6e5580
+$427: JumpIfNot -> 0x303, cond:
+  $432: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fce6e5600
+$441: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $450: EndFunctionParms
+)
+$451: Jump to offset 0x303
+$456: SetArray
+  $457: LocalVariable named idx:282682@0x19fce6e5b80
+  $466: EndArray
+$467: FinalFunction target=GetParticipants@0x19e4cda59a0 (
+  $476: LocalVariable named idx:282682@0x19fce6e5b80
+  $485: EndFunctionParms
+)
+$486: Context
+  ObjectExpression:
+  $487: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $508: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $517: LocalVariable named idx:282682@0x19fce6e5b80
+    $526: literal int32 0
+    $531: LocalVariable named CallFunc_Array_Get_Item2@0x19fce6e5880
+    $540: EndFunctionParms
+  )
+$541: Let (Variable = Expression)
+  Variable:
+  $550: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character2@0x19fce6e5a00
+  Expression:
+  $559: DynamicCast to AthenaPlayerCharacter@0x19e4be85b00 of expr:
+  $568: LocalVariable named CallFunc_Array_Get_Item2@0x19fce6e5880
+$577: Let (Variable = Expression)
+  Variable:
+  $586: LocalVariable named K2Node_DynamicCast_bSuccess3@0x19fce6e5900
+  Expression:
+  $595: PrimitiveCast type=71
+    Argument:
+    $597: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character2@0x19fce6e5a00
+$606: JumpIfNot -> 0x303, cond:
+  $611: LocalVariable named K2Node_DynamicCast_bSuccess3@0x19fce6e5900
+$620: LetObj (Variable = Expression)
+  Variable:
+  $621: LocalVariable named idx:283287@0x19fce6e5980
+  Expression:
+  $630: Context
+    ObjectExpression:
+    $631: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character2@0x19fce6e5a00
+    SkipBytes: 0xa
+    RValueProperty: idx:283287@0x19fce6e5980
+    ContextExpression:
+    $652: FinalFunction target=GetController@0x19e4d077d70 (
+      $661: EndFunctionParms
+    )
+$662: Let (Variable = Expression)
+  Variable:
+  $671: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x19fce6e5700
+  Expression:
+  $680: Context
+    ObjectExpression:
+    $681: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x19fce6e5700
+    ContextExpression:
+    $702: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x19e4d410390 (
+      $711: LocalVariable named idx:283287@0x19fce6e5980
+      $720: EndFunctionParms
+    )
+$721: Context
+  ObjectExpression:
+  $722: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $743: FinalFunction target=UnregisterEventFromHandle@0x19e4d411420 (
+    $752: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x19fce6e5700
+    $761: InstanceVariable named idx:283358@0x19fce6e5b00
+    $770: EndFunctionParms
+  )
+$771: Return expression:
+  $772: Nothing
+$773: EndOfScript

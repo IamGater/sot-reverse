@@ -1,0 +1,131 @@
+// E:\unreal-projects\Athena\Content\Blueprints\Prompts\PromptActors\bp_promptactor_usemermaid.uasset -> BP_PromptActor_UseMermaid_C
+
+=== BP_PromptActor_UseMermaid_C::UserConstructionScript (13 bytes) ===
+$0: FinalFunction target=UserConstructionScript@0x213930c2280 (
+  $9: EndFunctionParms
+)
+$10: Return expression:
+  $11: Nothing
+$12: EndOfScript
+
+=== BP_PromptActor_UseMermaid_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_PromptActor_UseMermaid" (
+  $13: literal int32 47
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_PromptActor_UseMermaid_C::ReceiveEndPlay (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_EndPlayReason@0x2139322ad80
+  Expression:
+  $9: LocalVariable named EndPlayReason@0x2139322aa00
+$18: VirtualFunction call "ExecuteUbergraph_BP_PromptActor_UseMermaid" (
+  $31: literal int32 401
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_PromptActor_UseMermaid_C::ExecuteUbergraph_BP_PromptActor_UseMermaid (409 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x2138e440690
+$10: Context
+  ObjectExpression:
+  $11: InstanceVariable named PromptCoordinator@0x2139322ae80
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $32: FinalFunction target=Uninitialize@0x212d6ad5c00 (
+    $41: EndFunctionParms
+  )
+$42: Jump to offset 0x196
+$47: LetBool (Variable = Expression)
+  Variable:
+  $48: LocalVariable named CallFunc_IsServer_ReturnValue@0x2139322ac00
+  Expression:
+  $57: Context
+    ObjectExpression:
+    $58: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_IsServer_ReturnValue@0x2139322ac00
+    ContextExpression:
+    $79: FinalFunction target=IsServer@0x212d63ae1c0 (
+      $88: Self
+      $89: EndFunctionParms
+    )
+$90: JumpIfNot -> 0x6d, cond:
+  $95: LocalVariable named CallFunc_IsServer_ReturnValue@0x2139322ac00
+$104: Jump to offset 0x196
+$109: LetObj (Variable = Expression)
+  Variable:
+  $110: LocalVariable named CallFunc_CreateObject_ReturnValue@0x2139322ab80
+  Expression:
+  $119: Context
+    ObjectExpression:
+    $120: ObjectConst Default__ObjectUtilities@0x212d6dbdb60
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_CreateObject_ReturnValue@0x2139322ab80
+    ContextExpression:
+    $141: FinalFunction target=CreateObject@0x212d6817c10 (
+      $150: ObjectConst BP_Prompt_UseAMermaid_C@0x212a256d380
+      $159: EndFunctionParms
+    )
+$160: Let (Variable = Expression)
+  Variable:
+  $169: LocalVariable named K2Node_DynamicCast_AsBP_Prompt_Use_AMermaid@0x2139322ac80
+  Expression:
+  $178: DynamicCast to BP_Prompt_UseAMermaid_C@0x212a256d380 of expr:
+  $187: LocalVariable named CallFunc_CreateObject_ReturnValue@0x2139322ab80
+$196: Let (Variable = Expression)
+  Variable:
+  $205: LocalVariable named K2Node_DynamicCast_bSuccess@0x2139322ad00
+  Expression:
+  $214: PrimitiveCast type=71
+    Argument:
+    $216: LocalVariable named K2Node_DynamicCast_AsBP_Prompt_Use_AMermaid@0x2139322ac80
+$225: JumpIfNot -> 0x196, cond:
+  $230: LocalVariable named K2Node_DynamicCast_bSuccess@0x2139322ad00
+$239: VirtualFunction call "GetAthenaPlayerController" (
+  $252: LocalVariable named CallFunc_GetAthenaPlayerController_AthenaPlayerController@0x2139322aa80
+  $261: EndFunctionParms
+)
+$262: Context
+  ObjectExpression:
+  $263: LocalVariable named K2Node_DynamicCast_AsBP_Prompt_Use_AMermaid@0x2139322ac80
+  SkipBytes: 0x17
+  RValueProperty: (null)
+  ContextExpression:
+  $284: VirtualFunction call "InitializeAndStart" (
+    $297: LocalVariable named CallFunc_GetAthenaPlayerController_AthenaPlayerController@0x2139322aa80
+    $306: EndFunctionParms
+  )
+$307: LetObj (Variable = Expression)
+  Variable:
+  $308: InstanceVariable named PromptCoordinator@0x2139322ae80
+  Expression:
+  $317: LocalVariable named K2Node_DynamicCast_AsBP_Prompt_Use_AMermaid@0x2139322ac80
+$326: Jump to offset 0x196
+$331: LetBool (Variable = Expression)
+  Variable:
+  $332: LocalVariable named CallFunc_IsValid_ReturnValue@0x2139322ab00
+  Expression:
+  $341: Context
+    ObjectExpression:
+    $342: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x2139322ab00
+    ContextExpression:
+    $363: FinalFunction target=IsValid@0x212d63ae380 (
+      $372: InstanceVariable named PromptCoordinator@0x2139322ae80
+      $381: EndFunctionParms
+    )
+$382: JumpIfNot -> 0x196, cond:
+  $387: LocalVariable named CallFunc_IsValid_ReturnValue@0x2139322ab00
+$396: Jump to offset 0xa
+$401: Jump to offset 0x14b
+$406: Return expression:
+  $407: Nothing
+$408: EndOfScript

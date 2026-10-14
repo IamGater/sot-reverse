@@ -1,0 +1,44 @@
+// Class: KnockbackAIAbilityTriggerComponent (1 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+KnockbackAIAbilityTriggerComponent::Multicast_Explode @ RVA 0xDE0450 EA 0x7FF6F4800450
+======================================================================
+__int64 __fastcall sub_7FF6F4800450(__int64 *a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rax
+  __int128 v6; // xmm1
+  __int64 v7; // xmm0_8
+  __int64 v8; // rax
+  __m256i v10; // [rsp+20h] [rbp-68h] BYREF
+  __int64 v11; // [rsp+40h] [rbp-48h]
+  _OWORD v12[2]; // [rsp+50h] [rbp-38h] BYREF
+  __int64 v13; // [rsp+70h] [rbp-18h]
+
+  v4 = 0;
+  v10.m256i_i64[0] = sub_7FF6F4550B20(L"/Script/Athena");
+  v10.m256i_i64[3] = 1065353216;
+  v11 = 0x3F80000000000000LL;
+  *(_OWORD *)&v10.m256i_u64[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v5 = a2[4];
+  v6 = *(_OWORD *)&v10.m256i_u64[2];
+  LOBYTE(v4) = v5 != 0;
+  v12[0] = *(_OWORD *)v10.m256i_i8;
+  v7 = v11;
+  a2[4] = v5 + v4;
+  v8 = *a1;
+  v12[1] = v6;
+  v13 = v7;
+  return (*(__int64 (__fastcall **)(__int64 *, _OWORD *))(v8 + 960))(a1, v12);
+}
+

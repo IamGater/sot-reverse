@@ -1,0 +1,452 @@
+// Class: PlayerNonVerbalComponent (9 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+PlayerNonVerbalComponent::Client_ReceiveNPCText @ RVA 0xFBE9E0 EA 0x7FF6F49DE9E0
+======================================================================
+// Hidden C++ exception states: #wind=4
+__int64 __fastcall sub_7FF6F49DE9E0(__int64 a1, _QWORD *a2)
+{
+  __int64 result; // rax
+  __int64 v5[2]; // [rsp+38h] [rbp-30h] BYREF
+  __int64 v6[3]; // [rsp+48h] [rbp-20h] BYREF
+  unsigned __int8 v7; // [rsp+70h] [rbp+8h] BYREF
+  int v8; // [rsp+78h] [rbp+10h] BYREF
+
+  v6[0] = 0;
+  v6[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v6);
+  }
+  v5[0] = 0;
+  v5[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v5);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v5);
+  }
+  v7 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  a2[4] += a2[4] != 0;
+  result = (*(__int64 (__fastcall **)(__int64, __int64 *, __int64 *, _QWORD, int))(*(_QWORD *)a1 + 1088LL))(
+             a1,
+             v6,
+             v5,
+             v7,
+             v8);
+  if ( v5[0] )
+  {
+    result = sub_7FF6F4DED1F0(v5[0]);
+    v5[0] = 0;
+  }
+  if ( v6[0] )
+    return sub_7FF6F4DED1F0(v6[0]);
+  return result;
+}
+
+
+======================================================================
+PlayerNonVerbalComponent::Client_ReceivePhrase @ RVA 0xFBEB70 EA 0x7FF6F49DEB70
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F49DEB70(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rax
+  __int64 result; // rax
+  __int64 v7[4]; // [rsp+28h] [rbp-20h] BYREF
+  __int64 v8; // [rsp+50h] [rbp+8h] BYREF
+
+  v4 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v7[0] = 0;
+  v7[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  v5 = a2[4];
+  LOBYTE(v4) = v5 != 0;
+  a2[4] = v5 + v4;
+  result = (*(__int64 (__fastcall **)(__int64, __int64, __int64 *))(*(_QWORD *)a1 + 1056LL))(a1, v8, v7);
+  if ( v7[0] )
+    return sub_7FF6F4DED1F0(v7[0]);
+  return result;
+}
+
+
+======================================================================
+PlayerNonVerbalComponent::Client_ReceivePhraseWithArgument @ RVA 0xFBEC60 EA 0x7FF6F49DEC60
+======================================================================
+// Hidden C++ exception states: #wind=4
+__int64 __fastcall sub_7FF6F49DEC60(__int64 a1, _QWORD *a2)
+{
+  __int64 result; // rax
+  __int64 v5[2]; // [rsp+28h] [rbp-30h] BYREF
+  __int64 v6[4]; // [rsp+38h] [rbp-20h] BYREF
+  __int64 v7; // [rsp+60h] [rbp+8h] BYREF
+
+  v7 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v6[0] = 0;
+  v6[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v6);
+  }
+  v5[0] = 0;
+  v5[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v5);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v5);
+  }
+  a2[4] += a2[4] != 0;
+  result = (*(__int64 (__fastcall **)(__int64, __int64, __int64 *, __int64 *, __int64))(*(_QWORD *)a1 + 1064LL))(
+             a1,
+             v7,
+             v6,
+             v5,
+             -2);
+  if ( v5[0] )
+  {
+    result = sub_7FF6F4DED1F0(v5[0]);
+    v5[0] = 0;
+  }
+  if ( v6[0] )
+    return sub_7FF6F4DED1F0(v6[0]);
+  return result;
+}
+
+
+======================================================================
+PlayerNonVerbalComponent::Client_ReceivePhraseWithNonLocalisedArgument @ RVA 0xFBEDA0 EA 0x7FF6F49DEDA0
+======================================================================
+// Hidden C++ exception states: #wind=4
+__int64 __fastcall sub_7FF6F49DEDA0(__int64 a1, _QWORD *a2)
+{
+  __int64 result; // rax
+  __int64 v5[2]; // [rsp+28h] [rbp-30h] BYREF
+  __int64 v6[4]; // [rsp+38h] [rbp-20h] BYREF
+  __int64 v7; // [rsp+60h] [rbp+8h] BYREF
+
+  v7 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v6[0] = 0;
+  v6[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v6);
+  }
+  v5[0] = 0;
+  v5[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v5);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v5);
+  }
+  a2[4] += a2[4] != 0;
+  result = (*(__int64 (__fastcall **)(__int64, __int64, __int64 *, __int64 *, __int64))(*(_QWORD *)a1 + 1072LL))(
+             a1,
+             v7,
+             v6,
+             v5,
+             -2);
+  if ( v5[0] )
+  {
+    result = sub_7FF6F4DED1F0(v5[0]);
+    v5[0] = 0;
+  }
+  if ( v6[0] )
+    return sub_7FF6F4DED1F0(v6[0]);
+  return result;
+}
+
+
+======================================================================
+PlayerNonVerbalComponent::Client_ReceiveText @ RVA 0xFBEEE0 EA 0x7FF6F49DEEE0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F49DEEE0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // r9
+  __int64 v6; // rax
+  _BYTE v8[56]; // [rsp+28h] [rbp-40h] BYREF
+  int v9; // [rsp+70h] [rbp+8h] BYREF
+  __int64 v10; // [rsp+78h] [rbp+10h] BYREF
+
+  v4 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  sub_7FF6F4DCDFA0(v8);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  LOBYTE(v5) = v9 != 0;
+  v6 = a2[4];
+  LOBYTE(v4) = v6 != 0;
+  a2[4] = v6 + v4;
+  (*(void (__fastcall **)(__int64, __int64, _BYTE *, __int64, __int64))(*(_QWORD *)a1 + 1080LL))(a1, v10, v8, v5, -2);
+  return sub_7FF6F3C37050(v8);
+}
+
+
+======================================================================
+PlayerNonVerbalComponent::Server_SendPhrase @ RVA 0xFC3E80 EA 0x7FF6F49E3E80
+======================================================================
+// Hidden C++ exception states: #wind=3
+__int64 __fastcall sub_7FF6F49E3E80(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rax
+  __int64 result; // rax
+  __int64 v7[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  v4 = 0;
+  v7[0] = 0;
+  v7[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  v5 = a2[4];
+  LOBYTE(v4) = v5 != 0;
+  a2[4] = v5 + v4;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64, __int64 *))(*(_QWORD *)a1 + 1000LL))(a1, v7) )
+    result = (*(__int64 (__fastcall **)(__int64, __int64 *))(*(_QWORD *)a1 + 992LL))(a1, v7);
+  else
+    result = sub_7FF6F4F0F6D0(L"Server_SendPhrase_Validate");
+  if ( v7[0] )
+    return sub_7FF6F4DED1F0(v7[0]);
+  return result;
+}
+
+
+======================================================================
+PlayerNonVerbalComponent::Server_SendPhraseWithArgument @ RVA 0xFC3F50 EA 0x7FF6F49E3F50
+======================================================================
+// Hidden C++ exception states: #wind=6
+__int64 __fastcall sub_7FF6F49E3F50(__int64 a1, _QWORD *a2)
+{
+  __int64 result; // rax
+  __int64 v5[2]; // [rsp+28h] [rbp-30h] BYREF
+  __int64 v6[4]; // [rsp+38h] [rbp-20h] BYREF
+
+  v6[0] = 0;
+  v6[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v6);
+  }
+  v5[0] = 0;
+  v5[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v5);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v5);
+  }
+  a2[4] += a2[4] != 0;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64, __int64 *, __int64 *))(*(_QWORD *)a1 + 1016LL))(a1, v6, v5) )
+    result = (*(__int64 (__fastcall **)(__int64, __int64 *, __int64 *))(*(_QWORD *)a1 + 1008LL))(a1, v6, v5);
+  else
+    result = sub_7FF6F4F0F6D0(L"Server_SendPhraseWithArgument_Validate");
+  if ( v5[0] )
+  {
+    result = sub_7FF6F4DED1F0(v5[0]);
+    v5[0] = 0;
+  }
+  if ( v6[0] )
+    return sub_7FF6F4DED1F0(v6[0]);
+  return result;
+}
+
+
+======================================================================
+PlayerNonVerbalComponent::Server_SendPhraseWithNonLocalisedArgument @ RVA 0xFC4080 EA 0x7FF6F49E4080
+======================================================================
+// Hidden C++ exception states: #wind=6
+__int64 __fastcall sub_7FF6F49E4080(__int64 a1, _QWORD *a2)
+{
+  __int64 result; // rax
+  __int64 v5[2]; // [rsp+28h] [rbp-30h] BYREF
+  __int64 v6[4]; // [rsp+38h] [rbp-20h] BYREF
+
+  v6[0] = 0;
+  v6[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v6);
+  }
+  v5[0] = 0;
+  v5[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v5);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v5);
+  }
+  a2[4] += a2[4] != 0;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64, __int64 *, __int64 *))(*(_QWORD *)a1 + 1032LL))(a1, v6, v5) )
+    result = (*(__int64 (__fastcall **)(__int64, __int64 *, __int64 *))(*(_QWORD *)a1 + 1024LL))(a1, v6, v5);
+  else
+    result = sub_7FF6F4F0F6D0(L"Server_SendPhraseWithNonLocalisedArgument_Validate");
+  if ( v5[0] )
+  {
+    result = sub_7FF6F4DED1F0(v5[0]);
+    v5[0] = 0;
+  }
+  if ( v6[0] )
+    return sub_7FF6F4DED1F0(v6[0]);
+  return result;
+}
+
+
+======================================================================
+PlayerNonVerbalComponent::Server_SendText @ RVA 0xFC41B0 EA 0x7FF6F49E41B0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F49E41B0(__int64 a1, _QWORD *a2)
+{
+  _BYTE v5[64]; // [rsp+28h] [rbp-40h] BYREF
+
+  sub_7FF6F4DCDFA0(v5);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v5);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v5);
+  }
+  a2[4] += a2[4] != 0;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64, _BYTE *))(*(_QWORD *)a1 + 1048LL))(a1, v5) )
+    (*(void (__fastcall **)(__int64, _BYTE *))(*(_QWORD *)a1 + 1040LL))(a1, v5);
+  else
+    sub_7FF6F4F0F6D0(L"Server_SendText_Validate");
+  return sub_7FF6F3C37050(v5);
+}
+

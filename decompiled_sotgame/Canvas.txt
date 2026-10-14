@@ -1,0 +1,1155 @@
+// Class: Canvas (14 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+Canvas::DrawTextures @ RVA 0x2C2E7F0 EA 0x7FF6F664E7F0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F664E7F0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 *v5; // rdx
+  __int64 v6; // rax
+  __int64 result; // rax
+  __int64 v8[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  v4 = 0;
+  v8[0] = 0;
+  v8[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v5 = v8;
+  if ( a2[7] )
+    v5 = (__int64 *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v4) = v6 != 0;
+  a2[4] = v6 + v4;
+  result = (*(__int64 (__fastcall **)(__int64, __int64 *))(*(_QWORD *)a1 + 552LL))(a1, v5);
+  if ( v8[0] )
+    return sub_7FF6F4DED1F0(v8[0]);
+  return result;
+}
+
+
+======================================================================
+Canvas::K2_Deproject @ RVA 0x2C370E0 EA 0x7FF6F66570E0
+======================================================================
+__int64 __fastcall sub_7FF6F66570E0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  _BYTE *v5; // rax
+  _BYTE *v6; // rsi
+  _BYTE *v7; // r9
+  __int64 v8; // rdx
+  __int64 v9; // rax
+  _BYTE v11[16]; // [rsp+20h] [rbp-28h] BYREF
+  _BYTE v12[24]; // [rsp+30h] [rbp-18h] BYREF
+  __int64 v13; // [rsp+58h] [rbp+10h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v4 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v5 = (_BYTE *)a2[7];
+  v6 = v11;
+  a2[7] = 0;
+  if ( v5 )
+    v6 = v5;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v7 = v12;
+  v8 = v13;
+  if ( a2[7] )
+    v7 = (_BYTE *)a2[7];
+  v9 = a2[4];
+  LOBYTE(v4) = v9 != 0;
+  a2[4] = v9 + v4;
+  return sub_7FF6F62027B0(a1, v8, v6, v7);
+}
+
+
+======================================================================
+Canvas::K2_DrawBorder @ RVA 0x2C37200 EA 0x7FF6F6657200
+======================================================================
+__int64 __fastcall sub_7FF6F6657200(int a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  int v6; // r9d
+  int v7; // r8d
+  int v8; // edx
+  __int64 v10; // [rsp+20h] [rbp-F0h]
+  __int64 v11; // [rsp+28h] [rbp-E8h]
+  __int64 v12; // [rsp+30h] [rbp-E0h]
+  __int64 v13; // [rsp+38h] [rbp-D8h]
+  __int64 v14; // [rsp+40h] [rbp-D0h]
+  __int64 v15; // [rsp+48h] [rbp-C8h]
+  __int64 v16; // [rsp+50h] [rbp-C0h]
+  __int64 v17; // [rsp+60h] [rbp-B0h]
+  __int64 v18; // [rsp+68h] [rbp-A8h]
+  int v19; // [rsp+70h] [rbp-A0h]
+  __int64 v20; // [rsp+78h] [rbp-98h]
+  __int64 v21; // [rsp+80h] [rbp-90h]
+  __int64 v22; // [rsp+90h] [rbp-80h] BYREF
+  __int64 v23; // [rsp+98h] [rbp-78h] BYREF
+  __int64 v24; // [rsp+A0h] [rbp-70h] BYREF
+  __int64 v25; // [rsp+A8h] [rbp-68h] BYREF
+  __int64 v26; // [rsp+B0h] [rbp-60h] BYREF
+  __int64 v27; // [rsp+B8h] [rbp-58h] BYREF
+  __int64 v28; // [rsp+C0h] [rbp-50h] BYREF
+  __int64 v29; // [rsp+C8h] [rbp-48h] BYREF
+  __int64 v30; // [rsp+D0h] [rbp-40h] BYREF
+  __int64 v31; // [rsp+D8h] [rbp-38h] BYREF
+  __int64 v32; // [rsp+E0h] [rbp-30h] BYREF
+  __int64 v33; // [rsp+E8h] [rbp-28h] BYREF
+  __int64 v34; // [rsp+F0h] [rbp-20h] BYREF
+  __int128 v35; // [rsp+F8h] [rbp-18h] BYREF
+  __int128 v36; // [rsp+110h] [rbp+0h] BYREF
+  int v37; // [rsp+148h] [rbp+38h] BYREF
+  __int64 v38; // [rsp+158h] [rbp+48h] BYREF
+
+  v2 = 0;
+  v26 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v26);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v26);
+  }
+  v25 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v25);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v25);
+  }
+  v24 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v24);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v24);
+  }
+  v23 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v23);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v23);
+  }
+  v22 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v22);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v22);
+  }
+  v38 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v38);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v38);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v34);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v34);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v33);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v33);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v32);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v32);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v31);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v31);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v35);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v35);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v30);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v30);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v29);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v29);
+  }
+  v37 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v37);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v37);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v28);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v28);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v27);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v27);
+  }
+  v5 = a2[4];
+  v6 = v24;
+  v7 = v25;
+  LOBYTE(v2) = v5 != 0;
+  v8 = v26;
+  v21 = v27;
+  v36 = v35;
+  v20 = v28;
+  v19 = v37;
+  v18 = v29;
+  v17 = v30;
+  v16 = v31;
+  v15 = v32;
+  v14 = v33;
+  v13 = v34;
+  v12 = v38;
+  v11 = v22;
+  v10 = v23;
+  a2[4] = v5 + v2;
+  return sub_7FF6F62027E0(a1, v8, v7, v6, v10, v11, v12, v13, v14, v15, v16, (__int64)&v36, v17, v18, v19, v20, v21);
+}
+
+
+======================================================================
+Canvas::K2_DrawBox @ RVA 0x2C37640 EA 0x7FF6F6657640
+======================================================================
+__int64 __fastcall sub_7FF6F6657640(__int64 a1, _QWORD *a2)
+{
+  bool v4; // zf
+  __int64 v5; // r8
+  __int64 v6; // rdx
+  _QWORD v8[3]; // [rsp+20h] [rbp-18h] BYREF
+  int v9; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v10; // [rsp+58h] [rbp+20h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v4 = a2[4] == 0;
+  v9 = 0;
+  if ( v4 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  v5 = v10;
+  v6 = v8[0];
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F6202990(a1, v6, v5);
+}
+
+
+======================================================================
+Canvas::K2_DrawLine @ RVA 0x2C37740 EA 0x7FF6F6657740
+======================================================================
+__int64 __fastcall sub_7FF6F6657740(int a1, _QWORD *a2)
+{
+  bool v4; // zf
+  int v5; // r9d
+  __int64 v6; // rax
+  int v7; // r8d
+  int v8; // edx
+  __int64 v10; // [rsp+30h] [rbp-38h] BYREF
+  __int128 v11; // [rsp+38h] [rbp-30h] BYREF
+  __int128 v12; // [rsp+50h] [rbp-18h] BYREF
+  int v13; // [rsp+78h] [rbp+10h] BYREF
+  __int64 v14; // [rsp+88h] [rbp+20h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v4 = a2[4] == 0;
+  v13 = 0;
+  if ( v4 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = a2[4];
+  v7 = v14;
+  v8 = v10;
+  v12 = v11;
+  a2[4] = v6 + (v6 != 0);
+  return sub_7FF6F6202A30(a1, v8, v7, v5, (__int64)&v12);
+}
+
+
+======================================================================
+Canvas::K2_DrawMaterial @ RVA 0x2C37890 EA 0x7FF6F6657890
+======================================================================
+__int64 __fastcall sub_7FF6F6657890(int a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  int v6; // r9d
+  int v7; // r8d
+  int v8; // edx
+  __int64 v9; // xmm1_8
+  __int64 v11; // [rsp+28h] [rbp-50h]
+  int v12; // [rsp+30h] [rbp-48h]
+  __int64 v13; // [rsp+38h] [rbp-40h]
+  __int64 v14; // [rsp+40h] [rbp-38h] BYREF
+  __int64 v15; // [rsp+48h] [rbp-30h] BYREF
+  __int64 v16; // [rsp+50h] [rbp-28h] BYREF
+  __int64 v17; // [rsp+58h] [rbp-20h] BYREF
+  _DWORD v18[4]; // [rsp+60h] [rbp-18h] BYREF
+  int v19; // [rsp+88h] [rbp+10h] BYREF
+  __int64 v20; // [rsp+98h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v20 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v20);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v20);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v18);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v19 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v5 = a2[4];
+  v6 = v17;
+  LOBYTE(v2) = v5 != 0;
+  v7 = v18[0];
+  v8 = v20;
+  v13 = v14;
+  v12 = v19;
+  v9 = v16;
+  v11 = v15;
+  a2[4] = v5 + v2;
+  return sub_7FF6F6202B10(a1, v8, v7, v6, v9, v11, v12, v13);
+}
+
+
+======================================================================
+Canvas::K2_DrawMaterialTriangle @ RVA 0x2C37AB0 EA 0x7FF6F6657AB0
+======================================================================
+// Hidden C++ exception states: #wind=3
+__int64 __fastcall sub_7FF6F6657AB0(__int64 a1, _QWORD *a2)
+{
+  void *v4; // rdi
+  void *v5; // rsi
+  __int64 v6; // rbx
+  __int64 result; // rax
+  void *v8; // [rsp+28h] [rbp-40h] BYREF
+  __int64 v9; // [rsp+30h] [rbp-38h]
+  void *Src; // [rsp+38h] [rbp-30h] BYREF
+  __int64 v11; // [rsp+40h] [rbp-28h]
+  __int64 v12; // [rsp+78h] [rbp+10h] BYREF
+  void **v13; // [rsp+88h] [rbp+20h]
+
+  v4 = nullptr;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  Src = nullptr;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &Src);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &Src);
+  }
+  a2[4] += a2[4] != 0;
+  v13 = &v8;
+  v8 = nullptr;
+  v9 = 0;
+  v5 = Src;
+  v6 = (int)v11;
+  if ( (_DWORD)v11 )
+  {
+    v4 = (void *)sub_7FF6F4DFAA90(0, 96LL * (int)v11, 0);
+    v8 = v4;
+  }
+  memcpy(v4, v5, 96 * v6);
+  LODWORD(v9) = v6;
+  HIDWORD(v9) = v6;
+  result = sub_7FF6F6202C90(a1, v12, &v8);
+  if ( Src )
+    return sub_7FF6F4DED1F0((__int64)Src);
+  return result;
+}
+
+
+======================================================================
+Canvas::K2_DrawPolygon @ RVA 0x2C37BF0 EA 0x7FF6F6657BF0
+======================================================================
+__int64 __fastcall sub_7FF6F6657BF0(int a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  int v6; // r9d
+  int v7; // r8d
+  int v8; // edx
+  __int64 v10; // [rsp+30h] [rbp-38h] BYREF
+  __int64 v11; // [rsp+38h] [rbp-30h] BYREF
+  __int128 v12; // [rsp+40h] [rbp-28h] BYREF
+  __int128 v13; // [rsp+50h] [rbp-18h] BYREF
+  int v14; // [rsp+78h] [rbp+10h] BYREF
+  __int64 v15; // [rsp+88h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v5 = a2[4];
+  v6 = v10;
+  v7 = v11;
+  v8 = v15;
+  LOBYTE(v2) = v5 != 0;
+  v13 = v12;
+  a2[4] = v5 + v2;
+  return sub_7FF6F6202DE0(a1, v8, v7, v6, v14, (__int64)&v13);
+}
+
+
+======================================================================
+Canvas::K2_DrawText @ RVA 0x2C37D80 EA 0x7FF6F6657D80
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6657D80(int a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  char v5; // r15
+  char v6; // r14
+  char v7; // si
+  __int64 v8; // rax
+  __int64 result; // rax
+  int v10; // [rsp+68h] [rbp-69h] BYREF
+  int v11; // [rsp+6Ch] [rbp-65h] BYREF
+  __int64 v12; // [rsp+70h] [rbp-61h] BYREF
+  __int64 v13[2]; // [rsp+78h] [rbp-59h] BYREF
+  __int64 v14; // [rsp+88h] [rbp-49h] BYREF
+  __int64 v15; // [rsp+90h] [rbp-41h] BYREF
+  __int128 v16; // [rsp+98h] [rbp-39h] BYREF
+  __int128 v17; // [rsp+A8h] [rbp-29h] BYREF
+  __int128 v18; // [rsp+B8h] [rbp-19h] BYREF
+  __int64 v19; // [rsp+C8h] [rbp-9h]
+  __int128 v20; // [rsp+D8h] [rbp+7h] BYREF
+  __int128 v21; // [rsp+E8h] [rbp+17h] BYREF
+  __int128 v22; // [rsp+F8h] [rbp+27h] BYREF
+  int v23; // [rsp+140h] [rbp+6Fh] BYREF
+  int v24; // [rsp+150h] [rbp+7Fh] BYREF
+
+  v19 = -2;
+  v4 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v13[0] = 0;
+  v13[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v13);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v23 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v23);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v23);
+  }
+  v5 = v23 != 0;
+  v24 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v24);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v24);
+  }
+  v6 = v24 != 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = v10 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v8 = a2[4];
+  LOBYTE(v4) = v8 != 0;
+  a2[4] = v8 + v4;
+  v20 = v16;
+  v21 = v17;
+  v22 = v18;
+  result = sub_7FF6F6202EF0(
+             a1,
+             v12,
+             (unsigned int)v13,
+             v15,
+             (__int64)&v22,
+             v11,
+             (__int64)&v21,
+             v14,
+             v5,
+             v6,
+             v7,
+             (__int64)&v20);
+  if ( v13[0] )
+    return sub_7FF6F4DED1F0(v13[0]);
+  return result;
+}
+
+
+======================================================================
+Canvas::K2_DrawTexture @ RVA 0x2C380D0 EA 0x7FF6F66580D0
+======================================================================
+__int64 __fastcall sub_7FF6F66580D0(int a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  int v6; // r9d
+  int v7; // r8d
+  int v8; // edx
+  __int64 v10; // [rsp+20h] [rbp-39h]
+  __int64 v11; // [rsp+28h] [rbp-31h]
+  int v12; // [rsp+38h] [rbp-21h]
+  int v13; // [rsp+40h] [rbp-19h]
+  __int64 v14; // [rsp+48h] [rbp-11h]
+  __int64 v15; // [rsp+50h] [rbp-9h] BYREF
+  __int64 v16; // [rsp+58h] [rbp-1h] BYREF
+  __int64 v17; // [rsp+60h] [rbp+7h] BYREF
+  __int64 v18; // [rsp+68h] [rbp+Fh] BYREF
+  __int64 v19; // [rsp+70h] [rbp+17h] BYREF
+  __int64 v20; // [rsp+78h] [rbp+1Fh] BYREF
+  __int128 v21; // [rsp+80h] [rbp+27h] BYREF
+  __int128 v22; // [rsp+90h] [rbp+37h] BYREF
+  unsigned __int8 v23; // [rsp+C8h] [rbp+6Fh] BYREF
+  int v24; // [rsp+D8h] [rbp+7Fh] BYREF
+
+  v2 = 0;
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v20);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v20);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v21);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v21);
+  }
+  v23 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v23);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v23);
+  }
+  v24 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v24);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v24);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v5 = a2[4];
+  v6 = v19;
+  v7 = v20;
+  LOBYTE(v2) = v5 != 0;
+  v8 = v15;
+  v14 = v16;
+  v22 = v21;
+  v13 = v24;
+  v12 = v23;
+  v11 = v17;
+  v10 = v18;
+  a2[4] = v5 + v2;
+  return sub_7FF6F6203040(a1, v8, v7, v6, v10, v11, (__int64)&v22, v12, v13, v14);
+}
+
+
+======================================================================
+Canvas::K2_DrawTriangle @ RVA 0x2C38350 EA 0x7FF6F6658350
+======================================================================
+// Hidden C++ exception states: #wind=3
+__int64 __fastcall sub_7FF6F6658350(__int64 a1, _QWORD *a2)
+{
+  void *v4; // rdi
+  void *v5; // rsi
+  __int64 v6; // rbx
+  __int64 result; // rax
+  void *v8; // [rsp+28h] [rbp-40h] BYREF
+  __int64 v9; // [rsp+30h] [rbp-38h]
+  void *Src; // [rsp+38h] [rbp-30h] BYREF
+  __int64 v11; // [rsp+40h] [rbp-28h]
+  __int64 v12; // [rsp+78h] [rbp+10h] BYREF
+  void **v13; // [rsp+88h] [rbp+20h]
+
+  v4 = nullptr;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  Src = nullptr;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &Src);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &Src);
+  }
+  a2[4] += a2[4] != 0;
+  v13 = &v8;
+  v8 = nullptr;
+  v9 = 0;
+  v5 = Src;
+  v6 = (int)v11;
+  if ( (_DWORD)v11 )
+  {
+    v4 = (void *)sub_7FF6F4DFAA90(0, 96LL * (int)v11, 0);
+    v8 = v4;
+  }
+  memcpy(v4, v5, 96 * v6);
+  LODWORD(v9) = v6;
+  HIDWORD(v9) = v6;
+  result = sub_7FF6F62031B0(a1, v12, &v8);
+  if ( Src )
+    return sub_7FF6F4DED1F0((__int64)Src);
+  return result;
+}
+
+
+======================================================================
+Canvas::K2_Project @ RVA 0x2C39190 EA 0x7FF6F6659190
+======================================================================
+__int64 __fastcall sub_7FF6F6659190(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  __int64 v8; // rax
+  __int64 result; // rax
+  __int64 v10; // [rsp+20h] [rbp-38h] BYREF
+  int v11; // [rsp+28h] [rbp-30h]
+  __int64 v12; // [rsp+30h] [rbp-28h] BYREF
+  int v13; // [rsp+38h] [rbp-20h]
+  _BYTE v14[24]; // [rsp+40h] [rbp-18h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v12 = v10;
+  v7 = v6 + (v6 != 0);
+  LODWORD(v6) = v11;
+  a2[4] = v7;
+  v13 = v6;
+  v8 = sub_7FF6F62032F0(a1, v14, &v12);
+  *(_QWORD *)a3 = *(_QWORD *)v8;
+  result = *(unsigned int *)(v8 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+Canvas::K2_StrLen @ RVA 0x2C39510 EA 0x7FF6F6659510
+======================================================================
+// Hidden C++ exception states: #wind=2
+_QWORD *__fastcall sub_7FF6F6659510(__int64 a1, _QWORD *a2, _QWORD *a3)
+{
+  __int64 v6; // rdi
+  __int64 v7; // rax
+  _QWORD *result; // rax
+  __int64 v9[6]; // [rsp+28h] [rbp-30h] BYREF
+  __int64 v10; // [rsp+68h] [rbp+10h] BYREF
+  char v11; // [rsp+70h] [rbp+18h] BYREF
+
+  v6 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v9[0] = 0;
+  v9[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v7 = a2[4];
+  LOBYTE(v6) = v7 != 0;
+  a2[4] = v7 + v6;
+  result = (_QWORD *)sub_7FF6F62033C0(a1, &v11, v10, v9, -2);
+  *a3 = *result;
+  if ( v9[0] )
+    return (_QWORD *)sub_7FF6F4DED1F0(v9[0]);
+  return result;
+}
+
+
+======================================================================
+Canvas::K2_TextSize @ RVA 0x2C39600 EA 0x7FF6F6659600
+======================================================================
+// Hidden C++ exception states: #wind=2
+_QWORD *__fastcall sub_7FF6F6659600(int a1, _QWORD *a2, _QWORD *a3)
+{
+  __int64 v6; // rdi
+  __int64 v7; // rax
+  _QWORD *result; // rax
+  __int64 v9[6]; // [rsp+38h] [rbp-30h] BYREF
+  __int64 v10; // [rsp+78h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+80h] [rbp+18h] BYREF
+  char v12; // [rsp+88h] [rbp+20h] BYREF
+
+  v6 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v9[0] = 0;
+  v9[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v7 = a2[4];
+  LOBYTE(v6) = v7 != 0;
+  a2[4] = v7 + v6;
+  result = (_QWORD *)sub_7FF6F6203420(a1, (unsigned int)&v12, v10, (unsigned int)v9, v11);
+  *a3 = *result;
+  if ( v9[0] )
+    return (_QWORD *)sub_7FF6F4DED1F0(v9[0]);
+  return result;
+}
+

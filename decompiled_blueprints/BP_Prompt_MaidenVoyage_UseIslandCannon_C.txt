@@ -1,0 +1,568 @@
+// E:\unreal-projects\Athena\Content\Blueprints\Prompts\PromptConditionals\bp_prompt_maidenvoyage_useislandcannon.uasset -> BP_Prompt_MaidenVoyage_UseIslandCannon_C
+
+=== BP_Prompt_MaidenVoyage_UseIslandCannon_C::OnCannonFiredFunc (116 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named K2Node_DynamicCast_AsBP_Island_Cannon_Fate_Of_the_Morning_Star@0x2137e6a1580
+  Expression:
+  $18: DynamicCast to BP_IslandCannon_FateOfTheMorningStar_C@0x21392585340 of expr:
+  $27: StructMemberContext prop=FiredCannon@0x212d6431530
+    Expression to struct:
+    $36: LocalOutVariable named EventCannonFired@0x2137e6a1480
+$45: Let (Variable = Expression)
+  Variable:
+  $54: LocalVariable named K2Node_DynamicCast_bSuccess@0x2137e6a1280
+  Expression:
+  $63: PrimitiveCast type=71
+    Argument:
+    $65: LocalVariable named K2Node_DynamicCast_AsBP_Island_Cannon_Fate_Of_the_Morning_Star@0x2137e6a1580
+$74: JumpIfNot -> 0x71, cond:
+  $79: LocalVariable named K2Node_DynamicCast_bSuccess@0x2137e6a1280
+$88: LetBool (Variable = Expression)
+  Variable:
+  $89: InstanceVariable named State_CannonFired@0x2139c4a4300
+  Expression:
+  $98: True
+$99: VirtualFunction call "Evaluate" (
+  $112: EndFunctionParms
+)
+$113: Return expression:
+  $114: Nothing
+$115: EndOfScript
+
+=== BP_Prompt_MaidenVoyage_UseIslandCannon_C::OnLoadCannonFunc (28 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: InstanceVariable named State_LoadCannon@0x2139c4a3b00
+  Expression:
+  $10: True
+$11: VirtualFunction call "Evaluate" (
+  $24: EndFunctionParms
+)
+$25: Return expression:
+  $26: Nothing
+$27: EndOfScript
+
+=== BP_Prompt_MaidenVoyage_UseIslandCannon_C::OnLeaveCannonFunc (116 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named K2Node_DynamicCast_AsBP_Cannon@0x2137e741e80
+  Expression:
+  $18: DynamicCast to BP_Cannon_C@0x2139025a440 of expr:
+  $27: StructMemberContext prop=ControllableObject@0x212d65e9d10
+    Expression to struct:
+    $36: LocalOutVariable named EventPlayerReliquishedControlOfControllable@0x2137e6a1500
+$45: Let (Variable = Expression)
+  Variable:
+  $54: LocalVariable named K2Node_DynamicCast_bSuccess@0x2137e741f00
+  Expression:
+  $63: PrimitiveCast type=71
+    Argument:
+    $65: LocalVariable named K2Node_DynamicCast_AsBP_Cannon@0x2137e741e80
+$74: JumpIfNot -> 0x71, cond:
+  $79: LocalVariable named K2Node_DynamicCast_bSuccess@0x2137e741f00
+$88: LetBool (Variable = Expression)
+  Variable:
+  $89: InstanceVariable named State_UseCannon@0x2139c4a4200
+  Expression:
+  $98: False
+$99: VirtualFunction call "Evaluate" (
+  $112: EndFunctionParms
+)
+$113: Return expression:
+  $114: Nothing
+$115: EndOfScript
+
+=== BP_Prompt_MaidenVoyage_UseIslandCannon_C::OnDockWithCannonFunc (130 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named K2Node_DynamicCast_AsBP_Island_Cannon_Fate_Of_the_Morning_Star@0x2137e740f00
+  Expression:
+  $18: DynamicCast to BP_IslandCannon_FateOfTheMorningStar_C@0x21392585340 of expr:
+  $27: StructMemberContext prop=ControllableObject@0x212d65e9e30
+    Expression to struct:
+    $36: LocalOutVariable named EventPlayerTakenControlOfControllable@0x2137e740e80
+$45: Let (Variable = Expression)
+  Variable:
+  $54: LocalVariable named K2Node_DynamicCast_bSuccess@0x2137e741180
+  Expression:
+  $63: PrimitiveCast type=71
+    Argument:
+    $65: LocalVariable named K2Node_DynamicCast_AsBP_Island_Cannon_Fate_Of_the_Morning_Star@0x2137e740f00
+$74: JumpIfNot -> 0x7f, cond:
+  $79: LocalVariable named K2Node_DynamicCast_bSuccess@0x2137e741180
+$88: LetBool (Variable = Expression)
+  Variable:
+  $89: InstanceVariable named State_UseCannon@0x2139c4a4200
+  Expression:
+  $98: True
+$99: JumpIfNot -> 0x7f, cond:
+  $104: InstanceVariable named State_UseCannon@0x2139c4a4200
+$113: VirtualFunction call "Evaluate" (
+  $126: EndFunctionParms
+)
+$127: Return expression:
+  $128: Nothing
+$129: EndOfScript
+
+=== BP_Prompt_MaidenVoyage_UseIslandCannon_C::OnWieldFunc (191 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_Conv_InterfaceToObject_ReturnValue@0x2137e740480
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Conv_InterfaceToObject_ReturnValue@0x2137e740480
+    ContextExpression:
+    $32: FinalFunction target=Conv_InterfaceToObject@0x212d63a69c0 (
+      $41: StructMemberContext prop=Object@0x212d65e2500
+        Expression to struct:
+        $50: LocalOutVariable named EventObjectWielded@0x2137e740d80
+      $59: EndFunctionParms
+    )
+$60: LetObj (Variable = Expression)
+  Variable:
+  $61: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x2137e740500
+  Expression:
+  $70: Context
+    ObjectExpression:
+    $71: ObjectConst Default__GameplayStatics@0x212d6f7eb20
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectClass_ReturnValue@0x2137e740500
+    ContextExpression:
+    $92: FinalFunction target=GetObjectClass@0x212d697dd20 (
+      $101: LocalVariable named CallFunc_Conv_InterfaceToObject_ReturnValue@0x2137e740480
+      $110: EndFunctionParms
+    )
+$111: LetBool (Variable = Expression)
+  Variable:
+  $112: LocalVariable named CallFunc_ClassIsChildOf_ReturnValue@0x2137e740780
+  Expression:
+  $121: CallMath target=ClassIsChildOf@0x212d69941c0 (
+    $130: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x2137e740500
+    $139: InstanceVariable named WieldedItemType@0x21391c79e80
+    $148: EndFunctionParms
+  )
+$149: JumpIfNot -> 0xbc, cond:
+  $154: LocalVariable named CallFunc_ClassIsChildOf_ReturnValue@0x2137e740780
+$163: LetBool (Variable = Expression)
+  Variable:
+  $164: InstanceVariable named State_BallsInInventory@0x2139c4a3b80
+  Expression:
+  $173: True
+$174: VirtualFunction call "Evaluate" (
+  $187: EndFunctionParms
+)
+$188: Return expression:
+  $189: Nothing
+$190: EndOfScript
+
+=== BP_Prompt_MaidenVoyage_UseIslandCannon_C::PostInitialize (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Prompt_MaidenVoyage_UseIslandCannon" (
+  $13: literal int32 82
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_MaidenVoyage_UseIslandCannon_C::Evaluate (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Prompt_MaidenVoyage_UseIslandCannon" (
+  $13: literal int32 477
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_MaidenVoyage_UseIslandCannon_C::UnregisterHandles (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Prompt_MaidenVoyage_UseIslandCannon" (
+  $13: literal int32 736
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_MaidenVoyage_UseIslandCannon_C::RegisterCharacterEvents_Implementable (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_CharacterDispatcher2@0x2137e742380
+  Expression:
+  $9: LocalOutVariable named CharacterDispatcher@0x2137e740380
+$18: VirtualFunction call "ExecuteUbergraph_BP_Prompt_MaidenVoyage_UseIslandCannon" (
+  $31: literal int32 1102
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_MaidenVoyage_UseIslandCannon_C::UnregisterCharacterEvents_Implementable (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_CharacterDispatcher@0x2137e743700
+  Expression:
+  $9: LocalOutVariable named CharacterDispatcher@0x2137e743a00
+$18: VirtualFunction call "ExecuteUbergraph_BP_Prompt_MaidenVoyage_UseIslandCannon" (
+  $31: literal int32 1195
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_MaidenVoyage_UseIslandCannon_C::OnWield (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event5@0x2137e743980
+  Expression:
+  $9: LocalVariable named Event@0x2137e744900
+$18: VirtualFunction call "ExecuteUbergraph_BP_Prompt_MaidenVoyage_UseIslandCannon" (
+  $31: literal int32 1269
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_MaidenVoyage_UseIslandCannon_C::OnCannonFired (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event4@0x2137e742600
+  Expression:
+  $9: LocalVariable named Event@0x2137e744180
+$18: VirtualFunction call "ExecuteUbergraph_BP_Prompt_MaidenVoyage_UseIslandCannon" (
+  $31: literal int32 1293
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_MaidenVoyage_UseIslandCannon_C::OnLoadCannon (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event3@0x2139c4a3d80
+  Expression:
+  $9: LocalVariable named Event@0x2137e744200
+$18: VirtualFunction call "ExecuteUbergraph_BP_Prompt_MaidenVoyage_UseIslandCannon" (
+  $31: literal int32 1332
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_MaidenVoyage_UseIslandCannon_C::OnDockWithCannon (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event2@0x2139c4a3d00
+  Expression:
+  $9: LocalVariable named Event@0x2137e743400
+$18: VirtualFunction call "ExecuteUbergraph_BP_Prompt_MaidenVoyage_UseIslandCannon" (
+  $31: literal int32 1337
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_MaidenVoyage_UseIslandCannon_C::OnLeaveCannon (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event@0x2139c4a3c80
+  Expression:
+  $9: LocalVariable named Event@0x2137e742980
+$18: VirtualFunction call "ExecuteUbergraph_BP_Prompt_MaidenVoyage_UseIslandCannon" (
+  $31: literal int32 1361
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_MaidenVoyage_UseIslandCannon_C::ExecuteUbergraph_BP_Prompt_MaidenVoyage_UseIslandCannon (1388 bytes) ===
+$0: FlowStack.Push(0x569)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x213794cad40
+$15: LetBool (Variable = Expression)
+  Variable:
+  $16: InstanceVariable named DisplayedAimPrompt@0x213892ee180
+  Expression:
+  $25: True
+$26: LetBool (Variable = Expression)
+  Variable:
+  $27: InstanceVariable named BlockEvaluation@0x213892ee380
+  Expression:
+  $36: False
+$37: JumpIfNot -> 0x3e, cond:
+  $42: InstanceVariable named State_CannonFired@0x2139c4a4300
+$51: FinalFunction target=DismissAllPrompts@0x212d6ad4cc0 (
+  $60: EndFunctionParms
+)
+$61: PopExecutionFlow (jump to popped addr)
+$62: FinalFunction target=SetPromptAs@0x212d6ad5a00 (
+  $71: InstanceVariable named Prompt_FireCannon@0x2139c4a4080
+  $80: EndFunctionParms
+)
+$81: PopExecutionFlow (jump to popped addr)
+$82: VirtualFunction call "GetControllerObjectMessageDispatcher" (
+  $95: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher3@0x2137e742580
+  $104: EndFunctionParms
+)
+$105: Context
+  ObjectExpression:
+  $106: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x38
+  RValueProperty: (null)
+  ContextExpression:
+  $127: FinalFunction target=RegisterEventFromHandle@0x212d6a30c00 (
+    $136: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher3@0x2137e742580
+    $145: InstanceVariable named Handle_UndockWithCannon@0x213892ee200
+    $154: Self
+    $155: literal ansi string "OnDockWithCannon"
+    $173: ObjectConst EventPlayerTakenControlOfControllable@0x212d65e9d90
+    $182: EndFunctionParms
+  )
+$183: VirtualFunction call "GetControllerObjectMessageDispatcher" (
+  $196: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher4@0x2137e746500
+  $205: EndFunctionParms
+)
+$206: Context
+  ObjectExpression:
+  $207: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x35
+  RValueProperty: (null)
+  ContextExpression:
+  $228: FinalFunction target=RegisterEventFromHandle@0x212d6a30c00 (
+    $237: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher4@0x2137e746500
+    $246: InstanceVariable named Handle_DockWithCannon@0x212a7f0fe80
+    $255: Self
+    $256: literal ansi string "OnLeaveCannon"
+    $271: ObjectConst EventPlayerReliquishedControlOfControllable@0x212d65e9c70
+    $280: EndFunctionParms
+  )
+$281: VirtualFunction call "GetControllerObjectMessageDispatcher" (
+  $294: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher2@0x2137e742300
+  $303: EndFunctionParms
+)
+$304: Context
+  ObjectExpression:
+  $305: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x34
+  RValueProperty: (null)
+  ContextExpression:
+  $326: FinalFunction target=RegisterEventFromHandle@0x212d6a30c00 (
+    $335: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher2@0x2137e742300
+    $344: InstanceVariable named Handle_LoadCannon@0x212a7f08f80
+    $353: Self
+    $354: literal ansi string "OnLoadCannon"
+    $368: ObjectConst EventLoadableObjectLoaded@0x212d65d5ed0
+    $377: EndFunctionParms
+  )
+$378: VirtualFunction call "GetControllerObjectMessageDispatcher" (
+  $391: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher5@0x2137e742800
+  $400: EndFunctionParms
+)
+$401: Context
+  ObjectExpression:
+  $402: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x35
+  RValueProperty: (null)
+  ContextExpression:
+  $423: FinalFunction target=RegisterEventFromHandle@0x212d6a30c00 (
+    $432: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher5@0x2137e742800
+    $441: InstanceVariable named Handle_FireCannon@0x2139c4a4880
+    $450: Self
+    $451: literal ansi string "OnCannonFired"
+    $466: ObjectConst EventCannonFired@0x212d6431490
+    $475: EndFunctionParms
+  )
+$476: PopExecutionFlow (jump to popped addr)
+$477: JumpIfNot -> 0x1fa, cond:
+  $482: InstanceVariable named State_UseCannon@0x2139c4a4200
+$491: JumpIfNot -> 0x205, cond:
+  $496: InstanceVariable named BlockEvaluation@0x213892ee380
+$505: PopExecutionFlow (jump to popped addr)
+$506: FinalFunction target=DismissAllPrompts@0x212d6ad4cc0 (
+  $515: EndFunctionParms
+)
+$516: PopExecutionFlow (jump to popped addr)
+$517: JumpIfNot -> 0x21e, cond:
+  $522: InstanceVariable named State_CannonFired@0x2139c4a4300
+$531: FinalFunction target=DismissAllPrompts@0x212d6ad4cc0 (
+  $540: EndFunctionParms
+)
+$541: PopExecutionFlow (jump to popped addr)
+$542: JumpIfNot -> 0x2aa, cond:
+  $547: InstanceVariable named State_LoadCannon@0x2139c4a3b00
+$556: JumpIfNot -> 0x23f, cond:
+  $561: InstanceVariable named DisplayedAimPrompt@0x213892ee180
+$570: Jump to offset 0x3e
+$575: LetBool (Variable = Expression)
+  Variable:
+  $576: InstanceVariable named BlockEvaluation@0x213892ee380
+  Expression:
+  $585: True
+$586: FinalFunction target=SetPromptAs@0x212d6ad5a00 (
+  $595: InstanceVariable named Prompt_AimCannon@0x2139c4a3e80
+  $604: EndFunctionParms
+)
+$605: Context
+  ObjectExpression:
+  $606: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $627: FinalFunction target=Delay@0x212d63a6d40 (
+    $636: Self
+    $637: literal float 4
+    $642: literal struct LatentActionInfo@0x212d63a6e80 (size 32)
+      $655: literal CodeSkipSizeType 0xf
+      $660: literal int32 1
+      $665: literal name "ExecuteUbergraph_BP_Prompt_MaidenVoyage_UseIslandCannon"
+      $678: Self
+      $679: EndStructConst
+    $680: EndFunctionParms
+  )
+$681: PopExecutionFlow (jump to popped addr)
+$682: JumpIfNot -> 0x2cc, cond:
+  $687: InstanceVariable named State_BallsInInventory@0x2139c4a3b80
+$696: FinalFunction target=SetPromptAs@0x212d6ad5a00 (
+  $705: InstanceVariable named Prompt_LoadCannon@0x2139c4a3f00
+  $714: EndFunctionParms
+)
+$715: PopExecutionFlow (jump to popped addr)
+$716: FinalFunction target=SetPromptAs@0x212d6ad5a00 (
+  $725: InstanceVariable named Prompt_GetBalls@0x2139c4a4980
+  $734: EndFunctionParms
+)
+$735: PopExecutionFlow (jump to popped addr)
+$736: VirtualFunction call "GetControllerObjectMessageDispatcher" (
+  $749: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher9@0x2137e743380
+  $758: EndFunctionParms
+)
+$759: Context
+  ObjectExpression:
+  $760: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $781: FinalFunction target=UnregisterEventFromHandle@0x212d6a31420 (
+    $790: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher9@0x2137e743380
+    $799: InstanceVariable named Handle_FireCannon@0x2139c4a4880
+    $808: EndFunctionParms
+  )
+$809: VirtualFunction call "GetControllerObjectMessageDispatcher" (
+  $822: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher@0x2137e74fe80
+  $831: EndFunctionParms
+)
+$832: Context
+  ObjectExpression:
+  $833: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $854: FinalFunction target=UnregisterEventFromHandle@0x212d6a31420 (
+    $863: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher@0x2137e74fe80
+    $872: InstanceVariable named Handle_UseItem@0x212a7f07100
+    $881: EndFunctionParms
+  )
+$882: VirtualFunction call "GetControllerObjectMessageDispatcher" (
+  $895: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher7@0x2137e742780
+  $904: EndFunctionParms
+)
+$905: Context
+  ObjectExpression:
+  $906: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $927: FinalFunction target=UnregisterEventFromHandle@0x212d6a31420 (
+    $936: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher7@0x2137e742780
+    $945: InstanceVariable named Handle_UndockWithCannon@0x213892ee200
+    $954: EndFunctionParms
+  )
+$955: VirtualFunction call "GetControllerObjectMessageDispatcher" (
+  $968: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher8@0x2137e742a80
+  $977: EndFunctionParms
+)
+$978: Context
+  ObjectExpression:
+  $979: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $1000: FinalFunction target=UnregisterEventFromHandle@0x212d6a31420 (
+    $1009: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher8@0x2137e742a80
+    $1018: InstanceVariable named Handle_DockWithCannon@0x212a7f0fe80
+    $1027: EndFunctionParms
+  )
+$1028: VirtualFunction call "GetControllerObjectMessageDispatcher" (
+  $1041: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher6@0x2137e742700
+  $1050: EndFunctionParms
+)
+$1051: Context
+  ObjectExpression:
+  $1052: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $1073: FinalFunction target=UnregisterEventFromHandle@0x212d6a31420 (
+    $1082: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher6@0x2137e742700
+    $1091: InstanceVariable named Handle_LoadCannon@0x212a7f08f80
+    $1100: EndFunctionParms
+  )
+$1101: PopExecutionFlow (jump to popped addr)
+$1102: VirtualFunction call "GetCharacterObjectMessageDispatcher" (
+  $1115: LocalVariable named CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher2@0x2139c4a3e00
+  $1124: EndFunctionParms
+)
+$1125: Context
+  ObjectExpression:
+  $1126: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x2f
+  RValueProperty: (null)
+  ContextExpression:
+  $1147: FinalFunction target=RegisterEventFromHandle@0x212d6a30c00 (
+    $1156: LocalVariable named CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher2@0x2139c4a3e00
+    $1165: InstanceVariable named Handle_GetBalls@0x2139c4a4900
+    $1174: Self
+    $1175: literal ansi string "OnWield"
+    $1184: ObjectConst EventObjectWielded@0x212d65e2460
+    $1193: EndFunctionParms
+  )
+$1194: PopExecutionFlow (jump to popped addr)
+$1195: VirtualFunction call "GetCharacterObjectMessageDispatcher" (
+  $1208: LocalVariable named CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher@0x2137e742280
+  $1217: EndFunctionParms
+)
+$1218: Context
+  ObjectExpression:
+  $1219: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $1240: FinalFunction target=UnregisterEventFromHandle@0x212d6a31420 (
+    $1249: LocalVariable named CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher@0x2137e742280
+    $1258: InstanceVariable named Handle_GetBalls@0x2139c4a4900
+    $1267: EndFunctionParms
+  )
+$1268: PopExecutionFlow (jump to popped addr)
+$1269: VirtualFunction call "OnWieldFunc" (
+  $1282: LocalVariable named K2Node_CustomEvent_Event5@0x2137e743980
+  $1291: EndFunctionParms
+)
+$1292: PopExecutionFlow (jump to popped addr)
+$1293: VirtualFunction call "OnCannonFiredFunc" (
+  $1306: LocalVariable named K2Node_CustomEvent_Event4@0x2137e742600
+  $1315: EndFunctionParms
+)
+$1316: PopExecutionFlow (jump to popped addr)
+$1317: VirtualFunction call "OnLoadCannonFunc" (
+  $1330: EndFunctionParms
+)
+$1331: PopExecutionFlow (jump to popped addr)
+$1332: Jump to offset 0x525
+$1337: VirtualFunction call "OnDockWithCannonFunc" (
+  $1350: LocalVariable named K2Node_CustomEvent_Event2@0x2139c4a3d00
+  $1359: EndFunctionParms
+)
+$1360: PopExecutionFlow (jump to popped addr)
+$1361: VirtualFunction call "OnLeaveCannonFunc" (
+  $1374: LocalVariable named K2Node_CustomEvent_Event@0x2139c4a3c80
+  $1383: EndFunctionParms
+)
+$1384: PopExecutionFlow (jump to popped addr)
+$1385: Return expression:
+  $1386: Nothing
+$1387: EndOfScript

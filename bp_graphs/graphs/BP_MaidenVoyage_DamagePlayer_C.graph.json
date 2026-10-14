@@ -1,0 +1,229 @@
+{
+  "class": "BP_MaidenVoyage_DamagePlayer_C",
+  "source": "decompiled_blueprints/BP_MaidenVoyage_DamagePlayer_C.txt",
+  "functions": [
+    {
+      "name": "EnableHealthAdjustmentsAndApplyDamage",
+      "bytecode_bytes": 110,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 42,
+          "opcode": "VirtualFunction call \"ApplyDamage\" (",
+          "edges": []
+        },
+        {
+          "offset": 65,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 107,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 109,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 42,
+          "expression": "ApplyDamage(InputPin)"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "ApplyDamage",
+      "bytecode_bytes": 105,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 32,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 61,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 102,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 104,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [],
+      "types": {}
+    },
+    {
+      "name": "OnBegin",
+      "bytecode_bytes": 40,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fcdd60480",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "VirtualFunction call \"idx:283051\" (",
+          "edges": []
+        },
+        {
+          "offset": 37,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 39,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 18,
+          "expression": "idx:283051()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "ExecuteUbergraph_BP_MaidenVoyage_DamagePlayer",
+      "bytecode_bytes": 369,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "Computed Jump, offset by expr:",
+          "edges": []
+        },
+        {
+          "offset": 10,
+          "opcode": "SetArray",
+          "edges": []
+        },
+        {
+          "offset": 21,
+          "opcode": "FinalFunction target=GetParticipants@0x19e4cda59a0 (",
+          "edges": []
+        },
+        {
+          "offset": 40,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 95,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 131,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 160,
+          "opcode": "JumpIfNot -> 0x16e, cond:",
+          "edges": [
+            {
+              "to_label": "L_16E",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 174,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 242,
+          "opcode": "JumpIfNot -> 0x13c, cond:",
+          "edges": [
+            {
+              "to_label": "L_13C",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 256,
+          "opcode": "VirtualFunction call \"ApplyDamage\" (",
+          "edges": []
+        },
+        {
+          "offset": 301,
+          "opcode": "FinalFunction target=SignalComplete@0x19e4cda7e00 (",
+          "edges": []
+        },
+        {
+          "offset": 311,
+          "opcode": "Jump to offset 0x16e",
+          "edges": []
+        },
+        {
+          "offset": 316,
+          "opcode": "VirtualFunction call \"idx:283050\" (",
+          "edges": []
+        },
+        {
+          "offset": 361,
+          "opcode": "Jump to offset 0x12d",
+          "edges": []
+        },
+        {
+          "offset": 366,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 368,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 21,
+          "expression": "UBlueprintStepBase::GetParticipants(CallFunc_GetParticipants_Participants)"
+        },
+        {
+          "offset": 256,
+          "expression": "ApplyDamage(K2Node_DynamicCast_AsAthena_Player_Character)"
+        },
+        {
+          "offset": 301,
+          "expression": "this->SignalComplete()"
+        },
+        {
+          "offset": 316,
+          "expression": "idx:283050(K2Node_DynamicCast_AsAthena_Player_Character)"
+        }
+      ],
+      "types": {
+        "K2Node_DynamicCast_AsAthena_Player_Character": "AthenaPlayerCharacter*",
+        "K2Node_DynamicCast_bSuccess": "bool",
+        "idx_283048": "bool"
+      }
+    }
+  ]
+}

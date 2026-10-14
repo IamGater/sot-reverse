@@ -1,0 +1,57 @@
+// Class: BTService_DetermineRecoveryMethod (1 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+BTService_DetermineRecoveryMethod::OnDamageTaken @ RVA 0xC0D050 EA 0x7FF6F462D050
+======================================================================
+__int64 __fastcall sub_7FF6F462D050(__int64 a1, _QWORD *a2)
+{
+  __int64 v3; // rdi
+  __int64 v5; // rax
+  _QWORD *v6; // rdx
+  __int64 v7; // rax
+  _QWORD v9[6]; // [rsp+20h] [rbp-68h] BYREF
+  int v10; // [rsp+50h] [rbp-38h]
+  __int64 v11; // [rsp+54h] [rbp-34h]
+  int v12; // [rsp+5Ch] [rbp-2Ch]
+  __int64 v13; // [rsp+60h] [rbp-28h]
+  int v14; // [rsp+68h] [rbp-20h]
+  int v15; // [rsp+6Ch] [rbp-1Ch]
+  int v16; // [rsp+70h] [rbp-18h]
+  __int16 v17; // [rsp+74h] [rbp-14h]
+
+  v3 = 0;
+  v9[0] = 0;
+  v9[1] = 0;
+  v5 = sub_7FF6F6A9BDB0(L"/Script/Athena");
+  v9[5] = *((_QWORD *)&xmmword_7FF6FA4F60F8 + 1);
+  v11 = *((_QWORD *)&xmmword_7FF6FA4F60F8 + 1);
+  v13 = *((_QWORD *)&xmmword_7FF6FA4F60F8 + 1);
+  v9[2] = v5;
+  v15 = 0;
+  v9[3] = 0;
+  v9[4] = 0;
+  v10 = qword_7FF6FA4F6108;
+  v12 = qword_7FF6FA4F6108;
+  v14 = qword_7FF6FA4F6108;
+  v16 = 1;
+  v17 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  return sub_7FF6F3C96FA0(a1, v6);
+}
+

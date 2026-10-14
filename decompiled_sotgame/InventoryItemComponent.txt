@@ -1,0 +1,197 @@
+// Class: InventoryItemComponent (9 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+InventoryItemComponent::GetBackgroundImageURL @ RVA 0x3249870 EA 0x7FF6F6C69870
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6C69870(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 result; // rax
+  __int64 v5; // rdi
+  __int64 v6[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64, __int64 *))(*(_QWORD *)(a1 + 200) + 40LL))(a1 + 200, v6);
+  v5 = result;
+  if ( a3 != result )
+  {
+    if ( *(_QWORD *)a3 )
+    {
+      sub_7FF6F4DED1F0(*(_QWORD *)a3);
+      if ( *(_QWORD *)a3 )
+        *(_QWORD *)a3 = 0;
+    }
+    *(_QWORD *)a3 = *(_QWORD *)v5;
+    *(_QWORD *)v5 = 0;
+    *(_DWORD *)(a3 + 8) = *(_DWORD *)(v5 + 8);
+    result = *(unsigned int *)(v5 + 12);
+    *(_DWORD *)(a3 + 12) = result;
+    *(_QWORD *)(v5 + 8) = 0;
+  }
+  if ( v6[0] )
+    return sub_7FF6F4DED1F0(v6[0]);
+  return result;
+}
+
+
+======================================================================
+InventoryItemComponent::GetIconRotation @ RVA 0x32499B0 EA 0x7FF6F6C699B0
+======================================================================
+void __fastcall sub_7FF6F6C699B0(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)(a1 + 200) + 48LL))(a1 + 200);
+}
+
+
+======================================================================
+InventoryItemComponent::GetIconScale @ RVA 0x3249A20 EA 0x7FF6F6C69A20
+======================================================================
+void __fastcall sub_7FF6F6C69A20(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)(a1 + 200) + 56LL))(a1 + 200);
+}
+
+
+======================================================================
+InventoryItemComponent::GetIconURL @ RVA 0x3249B00 EA 0x7FF6F6C69B00
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6C69B00(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 result; // rax
+  __int64 v5; // rdi
+  __int64 v6[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64, __int64 *))(*(_QWORD *)(a1 + 200) + 32LL))(a1 + 200, v6);
+  v5 = result;
+  if ( a3 != result )
+  {
+    if ( *(_QWORD *)a3 )
+    {
+      sub_7FF6F4DED1F0(*(_QWORD *)a3);
+      if ( *(_QWORD *)a3 )
+        *(_QWORD *)a3 = 0;
+    }
+    *(_QWORD *)a3 = *(_QWORD *)v5;
+    *(_QWORD *)v5 = 0;
+    *(_DWORD *)(a3 + 8) = *(_DWORD *)(v5 + 8);
+    result = *(unsigned int *)(v5 + 12);
+    *(_DWORD *)(a3 + 12) = result;
+    *(_QWORD *)(v5 + 8) = 0;
+  }
+  if ( v6[0] )
+    return sub_7FF6F4DED1F0(v6[0]);
+  return result;
+}
+
+
+======================================================================
+InventoryItemComponent::GetItemType @ RVA 0x3249FD0 EA 0x7FF6F6C69FD0
+======================================================================
+__int64 __fastcall sub_7FF6F6C69FD0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)(a1 + 200) + 24LL))(a1 + 200);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+InventoryItemComponent::OnAddedToInventory @ RVA 0x324AD10 EA 0x7FF6F6C6AD10
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+InventoryItemComponent::SetIconRotation @ RVA 0x324B9D0 EA 0x7FF6F6C6B9D0
+======================================================================
+__int64 __fastcall sub_7FF6F6C6B9D0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F6C14090(a1);
+}
+
+
+======================================================================
+InventoryItemComponent::SetIconURL @ RVA 0x324BA50 EA 0x7FF6F6C6BA50
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6C6BA50(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 *v5; // rdx
+  __int64 v6; // rax
+  __int64 result; // rax
+  __int64 v8[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  v4 = 0;
+  v8[0] = 0;
+  v8[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v5 = v8;
+  if ( a2[7] )
+    v5 = (__int64 *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v4) = v6 != 0;
+  a2[4] = v6 + v4;
+  result = sub_7FF6F6C140A0(a1, v5);
+  if ( v8[0] )
+    return sub_7FF6F4DED1F0(v8[0]);
+  return result;
+}
+
+
+======================================================================
+InventoryItemComponent::SetItemType @ RVA 0x324BB80 EA 0x7FF6F6C6BB80
+======================================================================
+__int64 __fastcall sub_7FF6F6C6BB80(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)(a1 + 200) + 16LL))(a1 + 200, v5);
+}
+

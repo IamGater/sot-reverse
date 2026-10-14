@@ -1,0 +1,267 @@
+// E:\unreal-projects\Athena\Content\Blueprints\LandmarkReactions\bp_objectlghost.uasset -> BP_ObjectlGhost_C
+
+=== BP_ObjectlGhost_C::StartGlowEffect (568 bytes) ===
+$0: FlowStack.Push(0x235)
+$5: Let (Variable = Expression)
+  Variable:
+  $14: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b0ac2290
+  Expression:
+  $23: literal int32 0
+$28: Let (Variable = Expression)
+  Variable:
+  $37: LocalVariable named Temp_int_Array_Index_Variable@0x213b0ac1ff0
+  Expression:
+  $46: literal int32 0
+$51: Let (Variable = Expression)
+  Variable:
+  $60: LocalVariable named CallFunc_Array_Length_ReturnValue@0x213b0ac21b0
+  Expression:
+  $69: Context
+    ObjectExpression:
+    $70: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x213b0ac21b0
+    ContextExpression:
+    $91: FinalFunction target=Array_Length@0x212d6987df0 (
+      $100: InstanceVariable named DecalMaterials@0x213b32b8880
+      $109: EndFunctionParms
+    )
+$110: LetBool (Variable = Expression)
+  Variable:
+  $111: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x213b32b8300
+  Expression:
+  $120: CallMath target=Less_IntInt@0x212d69a5ed0 (
+    $129: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b0ac2290
+    $138: LocalVariable named CallFunc_Array_Length_ReturnValue@0x213b0ac21b0
+    $147: EndFunctionParms
+  )
+$148: PopExecutionFlowIfNot, cond:
+$149: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x213b32b8300
+$158: Let (Variable = Expression)
+  Variable:
+  $167: LocalVariable named Temp_int_Array_Index_Variable@0x213b0ac1ff0
+  Expression:
+  $176: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b0ac2290
+$185: FlowStack.Push(0x1eb)
+$190: Let (Variable = Expression)
+  Variable:
+  $199: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x213b0ac2060
+  Expression:
+  $208: Context
+    ObjectExpression:
+    $209: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue@0x213b0ac2060
+    ContextExpression:
+    $230: FinalFunction target=GetGameTimeInSeconds@0x212d63ac800 (
+      $239: Self
+      $240: EndFunctionParms
+    )
+$241: Let (Variable = Expression)
+  Variable:
+  $250: StructMemberContext prop=idx:6476@0x212d63789b0
+    Expression to struct:
+    $259: LocalVariable named K2Node_MakeStruct_LinearColor@0x213b32b8200
+  Expression:
+  $268: literal float 0
+$273: Let (Variable = Expression)
+  Variable:
+  $282: StructMemberContext prop=idx:6465@0x212d6378940
+    Expression to struct:
+    $291: LocalVariable named K2Node_MakeStruct_LinearColor@0x213b32b8200
+  Expression:
+  $300: literal float 1
+$305: Let (Variable = Expression)
+  Variable:
+  $314: StructMemberContext prop=idx:6460@0x212d63788d0
+    Expression to struct:
+    $323: LocalVariable named K2Node_MakeStruct_LinearColor@0x213b32b8200
+  Expression:
+  $332: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x213b0ac2060
+$341: Let (Variable = Expression)
+  Variable:
+  $350: StructMemberContext prop=idx:6459@0x212d6378860
+    Expression to struct:
+    $359: LocalVariable named K2Node_MakeStruct_LinearColor@0x213b32b8200
+  Expression:
+  $368: InstanceVariable named Reveal Duration@0x213b0ac24c0
+$377: Context
+  ObjectExpression:
+  $378: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $399: FinalFunction target=Array_Get@0x212d69876b0 (
+    $408: InstanceVariable named DecalMaterials@0x213b32b8880
+    $417: LocalVariable named Temp_int_Array_Index_Variable@0x213b0ac1ff0
+    $426: LocalVariable named CallFunc_Array_Get_Item@0x213b32b8280
+    $435: EndFunctionParms
+  )
+$436: Context
+  ObjectExpression:
+  $437: LocalVariable named CallFunc_Array_Get_Item@0x213b32b8280
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $458: FinalFunction target=SetVectorParameterValue@0x212d69f4970 (
+    $467: literal name "Timed Blend Values"
+    $480: LocalVariable named K2Node_MakeStruct_LinearColor@0x213b32b8200
+    $489: EndFunctionParms
+  )
+$490: PopExecutionFlow (jump to popped addr)
+$491: Let (Variable = Expression)
+  Variable:
+  $500: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x213b0ac2140
+  Expression:
+  $509: CallMath target=Add_IntInt@0x212d698fa30 (
+    $518: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b0ac2290
+    $527: literal int32 1
+    $532: EndFunctionParms
+  )
+$533: Let (Variable = Expression)
+  Variable:
+  $542: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b0ac2290
+  Expression:
+  $551: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x213b0ac2140
+$560: Jump to offset 0x33
+$565: Return expression:
+  $566: Nothing
+$567: EndOfScript
+
+=== BP_ObjectlGhost_C::StartReaction (36 bytes) ===
+$0: VirtualFunction call "StartGlowEffect" (
+  $13: EndFunctionParms
+)
+$14: LetBool (Variable = Expression)
+  Variable:
+  $15: LocalOutVariable named ReturnValue@0x213b32b8380
+  Expression:
+  $24: True
+$25: Return expression:
+  $26: LocalOutVariable named ReturnValue@0x213b32b8380
+$35: EndOfScript
+
+=== BP_ObjectlGhost_C::StopReaction (50 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_StopReaction_ReturnValue@0x213b32b8480
+  Expression:
+  $10: FinalFunction target=StopReaction@0x212d67d8880 (
+    $19: EndFunctionParms
+  )
+$20: LetBool (Variable = Expression)
+  Variable:
+  $21: LocalOutVariable named ReturnValue@0x213b32b8400
+  Expression:
+  $30: LocalVariable named CallFunc_StopReaction_ReturnValue@0x213b32b8480
+$39: Return expression:
+  $40: LocalOutVariable named ReturnValue@0x213b32b8400
+$49: EndOfScript
+
+=== BP_ObjectlGhost_C::CollectDecalMaterials (333 bytes) ===
+$0: Context
+  ObjectExpression:
+  $1: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $22: FinalFunction target=Array_Clear@0x212d6986fd0 (
+    $31: InstanceVariable named DecalMaterials@0x213b32b8880
+    $40: EndFunctionParms
+  )
+$41: Let (Variable = Expression)
+  Variable:
+  $50: LocalVariable named CallFunc_GetMaterials_ReturnValue@0x213b32b8680
+  Expression:
+  $59: Context
+    ObjectExpression:
+    $60: Context
+      ObjectExpression:
+      $61: InstanceVariable named Static mesh actor@0x213b32b8780
+      SkipBytes: 0x9
+      RValueProperty: StaticMeshComponent@0x212d6723360
+      ContextExpression:
+      $82: InstanceVariable named StaticMeshComponent@0x212d6723360
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetMaterials_ReturnValue@0x213b32b8680
+    ContextExpression:
+    $103: VirtualFunction call "GetMaterials" (
+      $116: EndFunctionParms
+    )
+$117: Context
+  ObjectExpression:
+  $118: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $139: FinalFunction target=Array_Get@0x212d69876b0 (
+    $148: LocalVariable named CallFunc_GetMaterials_ReturnValue@0x213b32b8680
+    $157: InstanceVariable named ElementIndex@0x213b0ac2450
+    $166: LocalVariable named CallFunc_Array_Get_Item@0x213b32b8500
+    $175: EndFunctionParms
+  )
+$176: LetObj (Variable = Expression)
+  Variable:
+  $177: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x213b32b8580
+  Expression:
+  $186: Context
+    ObjectExpression:
+    $187: Context
+      ObjectExpression:
+      $188: InstanceVariable named Static mesh actor@0x213b32b8780
+      SkipBytes: 0x9
+      RValueProperty: StaticMeshComponent@0x212d6723360
+      ContextExpression:
+      $209: InstanceVariable named StaticMeshComponent@0x212d6723360
+    SkipBytes: 0x20
+    RValueProperty: CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x213b32b8580
+    ContextExpression:
+    $230: VirtualFunction call "CreateDynamicMaterialInstance" (
+      $243: InstanceVariable named ElementIndex@0x213b0ac2450
+      $252: LocalVariable named CallFunc_Array_Get_Item@0x213b32b8500
+      $261: EndFunctionParms
+    )
+$262: Let (Variable = Expression)
+  Variable:
+  $271: LocalVariable named CallFunc_Array_Add_ReturnValue@0x213b0ac25a0
+  Expression:
+  $280: Context
+    ObjectExpression:
+    $281: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Add_ReturnValue@0x213b0ac25a0
+    ContextExpression:
+    $302: FinalFunction target=Array_Add@0x212d6986810 (
+      $311: InstanceVariable named DecalMaterials@0x213b32b8880
+      $320: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x213b32b8580
+      $329: EndFunctionParms
+    )
+$330: Return expression:
+  $331: Nothing
+$332: EndOfScript
+
+=== BP_ObjectlGhost_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_ObjectlGhost_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_ObjectlGhost" (
+  $13: literal int32 29
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_ObjectlGhost_C::ExecuteUbergraph_BP_ObjectlGhost (37 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x213b0ac2530
+$10: VirtualFunction call "CollectDecalMaterials" (
+  $23: EndFunctionParms
+)
+$24: Jump to offset 0x22
+$29: Jump to offset 0xa
+$34: Return expression:
+  $35: Nothing
+$36: EndOfScript

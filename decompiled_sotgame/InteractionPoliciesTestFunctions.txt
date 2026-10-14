@@ -1,0 +1,347 @@
+// Class: InteractionPoliciesTestFunctions (6 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+InteractionPoliciesTestFunctions::AirbornePolicy_ExecuteCanInteract @ RVA 0xDDBCE0 EA 0x7FF6F47FBCE0
+======================================================================
+__int64 __fastcall sub_7FF6F47FBCE0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  v8 = v11;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F4307990(v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+InteractionPoliciesTestFunctions::CenterOfScreenDistanceSortingPolicy_ExecuteTakesHighestPrecedent @ RVA 0xDDC030 EA 0x7FF6F47FC030
+======================================================================
+__int64 __fastcall sub_7FF6F47FC030(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  int v6; // r9d
+  __int64 v7; // rax
+  int v8; // xmm0_4
+  int v9; // r8d
+  int v10; // edx
+  int v11; // ecx
+  __int64 result; // rax
+  __int64 v13; // [rsp+30h] [rbp-28h] BYREF
+  _QWORD v14[4]; // [rsp+38h] [rbp-20h] BYREF
+  int v15; // [rsp+68h] [rbp+10h] BYREF
+  int v16; // [rsp+70h] [rbp+18h] BYREF
+  __int64 v17; // [rsp+78h] [rbp+20h] BYREF
+
+  v3 = 0;
+  v14[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v14);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v17 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v7 = a2[4];
+  v8 = v15;
+  v9 = v17;
+  LOBYTE(v3) = v7 != 0;
+  v10 = v13;
+  v11 = v14[0];
+  a2[4] = v7 + v3;
+  result = sub_7FF6F4309EA0(v11, v10, v9, v6, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+InteractionPoliciesTestFunctions::ClosestToPlayerSortingPolicy_WithTwoInteractablesClosestAndFurthest_ClosestTakesHighestPrecedent @ RVA 0xDDC1B0 EA 0x7FF6F47FC1B0
+======================================================================
+__int64 __fastcall sub_7FF6F47FC1B0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // r8
+  __int64 v8; // rdx
+  __int64 v9; // rcx
+  __int64 result; // rax
+  __int64 v11; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v12; // [rsp+50h] [rbp+18h] BYREF
+  __int64 v13; // [rsp+58h] [rbp+20h] BYREF
+
+  v3 = 0;
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = a2[4];
+  v7 = v11;
+  v8 = v12;
+  v9 = v13;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F430AF40(v9, v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+InteractionPoliciesTestFunctions::WithinInteractionAngleValidationPolicy_OutsideInteractionAngleInteractor_IsValidReturnsFalse @ RVA 0xDE4DC0 EA 0x7FF6F4804DC0
+======================================================================
+__int64 __fastcall sub_7FF6F4804DC0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rdx
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rcx
+  __int64 result; // rax
+  int v11; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v12; // [rsp+50h] [rbp+18h] BYREF
+  __int64 v13; // [rsp+58h] [rbp+20h] BYREF
+
+  v3 = 0;
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v7 = a2[4];
+  v8 = v12;
+  v9 = v13;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = sub_7FF6F431CEE0(v9, v6, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+InteractionPoliciesTestFunctions::WithinInteractionAngleValidationPolicy_WithinInteractionAngleInteractor_IsValidReturnsTrue @ RVA 0xDE4F80 EA 0x7FF6F4804F80
+======================================================================
+__int64 __fastcall sub_7FF6F4804F80(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rdx
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rcx
+  __int64 result; // rax
+  int v11; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v12; // [rsp+50h] [rbp+18h] BYREF
+  __int64 v13; // [rsp+58h] [rbp+20h] BYREF
+
+  v3 = 0;
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v7 = a2[4];
+  v8 = v12;
+  v9 = v13;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = sub_7FF6F431D080(v9, v6, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+InteractionPoliciesTestFunctions::WithinInteractionAngleValidationPolicy_WithInteractorBehindTheObject_IsInvalidReturnsFalse @ RVA 0xDE4EC0 EA 0x7FF6F4804EC0
+======================================================================
+__int64 __fastcall sub_7FF6F4804EC0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  v8 = v11;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F431CFB0(v8, v7);
+  *a3 = result;
+  return result;
+}
+

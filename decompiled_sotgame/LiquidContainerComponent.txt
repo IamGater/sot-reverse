@@ -1,0 +1,91 @@
+// Class: LiquidContainerComponent (4 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+LiquidContainerComponent::CollectLiquidMaterials @ RVA 0x3C2C2F0 EA 0x7FF6F764C2F0
+======================================================================
+__int64 __fastcall sub_7FF6F764C2F0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F7647F40(a1, v6);
+}
+
+
+======================================================================
+LiquidContainerComponent::GetLiquidLevel @ RVA 0x3C2C3A0 EA 0x7FF6F764C3A0
+======================================================================
+void __fastcall sub_7FF6F764C3A0(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F7648080();
+}
+
+
+======================================================================
+LiquidContainerComponent::SetLiquidLevel @ RVA 0x3C2C4B0 EA 0x7FF6F764C4B0
+======================================================================
+__int64 __fastcall sub_7FF6F764C4B0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F7648230(a1);
+}
+
+
+======================================================================
+LiquidContainerComponent::SetLiquidType @ RVA 0x3C2C530 EA 0x7FF6F764C530
+======================================================================
+__int64 __fastcall sub_7FF6F764C530(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F7648310(a1, v5);
+}
+

@@ -1,0 +1,90 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Generic/bp_spawnphaseditem -> BP_SpawnPhasedItem_C
+
+=== BP_SpawnPhasedItem_C::OnBeginCustom (408 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19fcbb46700
+  Expression:
+  $18: Context
+    ObjectExpression:
+    $19: LocalVariable named idx:282646@0x19fcbb46400
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetTransform_ReturnValue@0x19fcbb46700
+    ContextExpression:
+    $40: FinalFunction target=GetTransform@0x19e4cd64700 (
+      $49: EndFunctionParms
+    )
+$50: LetObj (Variable = Expression)
+  Variable:
+  $51: LocalVariable named CallFunc_SpawnPhasedItem_ReturnValue@0x19fcbb46780
+  Expression:
+  $60: FinalFunction target=SpawnPhasedItem@0x19e4cda9200 (
+    $69: LocalVariable named Desc@0x19fcbb46480
+    $78: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19fcbb46700
+    $87: LocalVariable named Tracked@0x19fcbb46500
+    $96: LocalVariable named Critical@0x19fcbb46580
+    $105: LocalVariable named idx:282652@0x19fcdbb8b90
+    $114: EndFunctionParms
+  )
+$115: Let (Variable = Expression)
+  Variable:
+  $124: LocalVariable named K2Node_DynamicCast_AsItem_Proxy@0x19fcbb46800
+  Expression:
+  $133: DynamicCast to ItemProxy@0x19e4c38b980 of expr:
+  $142: LocalVariable named CallFunc_SpawnPhasedItem_ReturnValue@0x19fcbb46780
+$151: Let (Variable = Expression)
+  Variable:
+  $160: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcbb46880
+  Expression:
+  $169: PrimitiveCast type=71
+    Argument:
+    $171: LocalVariable named K2Node_DynamicCast_AsItem_Proxy@0x19fcbb46800
+$180: JumpIfNot -> 0x117, cond:
+  $185: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcbb46880
+$194: LetObj (Variable = Expression)
+  Variable:
+  $195: LocalVariable named CallFunc_GetItemInfo_ReturnValue@0x19fcbb46900
+  Expression:
+  $204: Context
+    ObjectExpression:
+    $205: LocalVariable named K2Node_DynamicCast_AsItem_Proxy@0x19fcbb46800
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetItemInfo_ReturnValue@0x19fcbb46900
+    ContextExpression:
+    $226: FinalFunction target=GetItemInfo@0x19e4d108840 (
+      $235: EndFunctionParms
+    )
+$236: LetObj (Variable = Expression)
+  Variable:
+  $237: LocalOutVariable named idx:282649@0x19fcbb46600
+  Expression:
+  $246: LocalVariable named K2Node_DynamicCast_AsItem_Proxy@0x19fcbb46800
+$255: LetObj (Variable = Expression)
+  Variable:
+  $256: LocalOutVariable named idx:282648@0x19fcbb46680
+  Expression:
+  $265: LocalVariable named CallFunc_GetItemInfo_ReturnValue@0x19fcbb46900
+$274: Jump to offset 0x195
+$279: Context
+  ObjectExpression:
+  $280: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x68
+  RValueProperty: (null)
+  ContextExpression:
+  $301: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $310: NoObject
+    $311: literal ansi string "Failed to cast to item proxy in BP_SpawnPhasedItem"
+    $363: True
+    $364: True
+    $365: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $378: literal float 0
+      $383: literal float 0.6600000262260437
+      $388: literal float 1
+      $393: literal float 1
+      $398: EndStructConst
+    $399: literal float 2
+    $404: EndFunctionParms
+  )
+$405: Return expression:
+  $406: Nothing
+$407: EndOfScript

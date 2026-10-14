@@ -1,0 +1,79 @@
+// Class: CoherentUIGTLiveView (1 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+CoherentUIGTLiveView::OnLiveViewSizeRequest @ RVA 0x456C2F0 EA 0x7FF6F7F8C2F0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F7F8C2F0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  int *v5; // rsi
+  int *v6; // rcx
+  __int64 v7; // rax
+  __int64 result; // rax
+  _QWORD v9[2]; // [rsp+30h] [rbp-38h] BYREF
+  __int64 v10[5]; // [rsp+40h] [rbp-28h] BYREF
+  int v11; // [rsp+78h] [rbp+10h] BYREF
+  int v12; // [rsp+88h] [rbp+20h] BYREF
+
+  v9[1] = -2;
+  v4 = 0;
+  v9[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v10[0] = 0;
+  v10[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v11 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v5 = &v11;
+  if ( a2[7] )
+    v5 = (int *)a2[7];
+  v12 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v6 = &v12;
+  if ( a2[7] )
+    v6 = (int *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v4) = v7 != 0;
+  a2[4] = v7 + v4;
+  result = sub_7FF6F7F5D360(a1, v9[0], v10, v5, v6);
+  if ( v10[0] )
+    return sub_7FF6F4DED1F0(v10[0]);
+  return result;
+}
+

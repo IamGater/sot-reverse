@@ -1,0 +1,754 @@
+// Class: ThirdPersonAnimationInstance (28 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+ThirdPersonAnimationInstance::AllocateNewRandomContinuousEmote @ RVA 0xB094A0 EA 0x7FF6F45294A0
+======================================================================
+__int64 __fastcall sub_7FF6F45294A0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F3E20380(a1, v5);
+}
+
+
+======================================================================
+ThirdPersonAnimationInstance::AllocateNewShipCaptainIdleVariant @ RVA 0xB09530 EA 0x7FF6F4529530
+======================================================================
+__int64 __fastcall sub_7FF6F4529530(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F3E203B0(a1, v5);
+}
+
+
+======================================================================
+ThirdPersonAnimationInstance::AllocateNewTauntCheerVariant @ RVA 0xB095C0 EA 0x7FF6F45295C0
+======================================================================
+__int64 __fastcall sub_7FF6F45295C0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  bool v5; // si
+  __int64 v6; // rax
+  __int64 v7; // r8
+  unsigned __int8 v9; // [rsp+48h] [rbp+10h] BYREF
+  int v10; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v9 = 0;
+  v5 = v10 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  v7 = v9;
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  return sub_7FF6F3E20450(a1, v5, v7);
+}
+
+
+======================================================================
+ThirdPersonAnimationInstance::GetAIKnockbackAnimation @ RVA 0xB0A770 EA 0x7FF6F452A770
+======================================================================
+__int64 __fastcall sub_7FF6F452A770(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E2B7B0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ThirdPersonAnimationInstance::GetCharacterPitch @ RVA 0xB0ADB0 EA 0x7FF6F452ADB0
+======================================================================
+void __fastcall sub_7FF6F452ADB0(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F3E2C570();
+}
+
+
+======================================================================
+ThirdPersonAnimationInstance::GetCurrentLocomotionType @ RVA 0xB0B390 EA 0x7FF6F452B390
+======================================================================
+__int64 __fastcall sub_7FF6F452B390(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E2C730();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ThirdPersonAnimationInstance::GetItemContinuousStructurePitchOverride @ RVA 0xB0C5C0 EA 0x7FF6F452C5C0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F452C5C0(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v6; // rdi
+  bool v7; // si
+  __int64 v8; // r9
+  __int64 v9; // rax
+  __int64 v10; // rax
+  __int64 result; // rax
+  _BYTE v12[24]; // [rsp+28h] [rbp-A0h] BYREF
+  __int64 v13; // [rsp+40h] [rbp-88h]
+  int v14; // [rsp+D8h] [rbp+10h] BYREF
+  int v15; // [rsp+E8h] [rbp+20h] BYREF
+
+  v6 = 0;
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v7 = v14 != 0;
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  LOBYTE(v8) = v15 != 0;
+  v9 = a2[4];
+  LOBYTE(v6) = v9 != 0;
+  a2[4] = v9 + v6;
+  v10 = sub_7FF6F3E2CEE0(a1, v12, v7, v8, -2);
+  result = sub_7FF6F3E1C5B0(a3, v10);
+  if ( v13 )
+    return sub_7FF6F4DED1F0(v13);
+  return result;
+}
+
+
+======================================================================
+ThirdPersonAnimationInstance::GetItemOneShotStructurePitchOverride @ RVA 0xB0C880 EA 0x7FF6F452C880
+======================================================================
+_OWORD *__fastcall sub_7FF6F452C880(__int64 a1, _QWORD *a2, _OWORD *a3)
+{
+  __int64 v3; // rdi
+  bool v7; // bp
+  __int64 v8; // r9
+  __int64 v9; // rax
+  _OWORD *result; // rax
+  _BYTE v11[72]; // [rsp+20h] [rbp-48h] BYREF
+  int v12; // [rsp+78h] [rbp+10h] BYREF
+  int v13; // [rsp+80h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v13 = 0;
+  v7 = v12 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v9 = a2[4];
+  LOBYTE(v8) = v13 != 0;
+  LOBYTE(v3) = v9 != 0;
+  a2[4] = v9 + v3;
+  result = (_OWORD *)sub_7FF6F3E2CF30(a1, v11, v7, v8);
+  *a3 = *result;
+  a3[1] = result[1];
+  a3[2] = result[2];
+  return result;
+}
+
+
+======================================================================
+ThirdPersonAnimationInstance::GetLoadedItemMeleeAnimations_CombatLocomotion @ RVA 0xB0CDB0 EA 0x7FF6F452CDB0
+======================================================================
+__int64 __fastcall sub_7FF6F452CDB0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E2D8C0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ThirdPersonAnimationInstance::GetLoadedItemMeleeAnimations_CombatLocomotionTurningLeft @ RVA 0xB0CE10 EA 0x7FF6F452CE10
+======================================================================
+__int64 __fastcall sub_7FF6F452CE10(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E2D8E0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ThirdPersonAnimationInstance::GetLoadedItemMeleeAnimations_CombatLocomotionTurningRight @ RVA 0xB0CE40 EA 0x7FF6F452CE40
+======================================================================
+__int64 __fastcall sub_7FF6F452CE40(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E2D8F0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ThirdPersonAnimationInstance::GetLoadedItemMeleeAnimations_CombatLocomotionTurnOut @ RVA 0xB0CDE0 EA 0x7FF6F452CDE0
+======================================================================
+__int64 __fastcall sub_7FF6F452CDE0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E2D8D0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ThirdPersonAnimationInstance::GetLoadedItemMeleeAnimations_LungeWarmupLocomotion @ RVA 0xB0CE70 EA 0x7FF6F452CE70
+======================================================================
+__int64 __fastcall sub_7FF6F452CE70(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E2D900();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ThirdPersonAnimationInstance::GetTargetingPitch @ RVA 0xB0DB00 EA 0x7FF6F452DB00
+======================================================================
+void __fastcall sub_7FF6F452DB00(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F3E2E450();
+}
+
+
+======================================================================
+ThirdPersonAnimationInstance::LoadSpecificItemAnimations @ RVA 0xB0F2E0 EA 0x7FF6F452F2E0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F452F2E0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rax
+  __int64 result; // rax
+  int v8; // edi
+  __int64 v9; // rbx
+  __int64 v10; // [rsp+28h] [rbp-30h] BYREF
+  __int64 v11; // [rsp+30h] [rbp-28h]
+  _BYTE v12[32]; // [rsp+38h] [rbp-20h] BYREF
+  __int64 v13; // [rsp+60h] [rbp+8h] BYREF
+
+  v4 = 0;
+  v10 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v5 = a2[4];
+  LOBYTE(v4) = v5 != 0;
+  a2[4] = v5 + v4;
+  v6 = sub_7FF6F3DE46D0(v12, &v10);
+  result = (*(__int64 (__fastcall **)(__int64, __int64, __int64))(*(_QWORD *)a1 + 720LL))(a1, v6, v13);
+  v8 = v11;
+  v9 = v10;
+  if ( (_DWORD)v11 )
+  {
+    do
+    {
+      result = sub_7FF6F3DE9960(v9);
+      v9 += 2928;
+      --v8;
+    }
+    while ( v8 );
+    v9 = v10;
+  }
+  if ( v9 )
+    return sub_7FF6F4DED1F0(v9);
+  return result;
+}
+
+
+======================================================================
+ThirdPersonAnimationInstance::OnEventAllocateShopInteractionAnimations @ RVA 0xB0F700 EA 0x7FF6F452F700
+======================================================================
+__int64 __fastcall sub_7FF6F452F700(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  bool v5; // si
+  __int64 v6; // rax
+  __int64 v7; // r9
+  __int64 v8; // rdx
+  _QWORD v10[5]; // [rsp+20h] [rbp-28h] BYREF
+  unsigned __int8 v11; // [rsp+58h] [rbp+10h] BYREF
+  int v12; // [rsp+68h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v10[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11 = 0;
+  v5 = v12 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = a2[4];
+  v7 = v11;
+  v8 = v10[0];
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  return sub_7FF6F3E2FE90(a1, v8, v5, v7);
+}
+
+
+======================================================================
+ThirdPersonAnimationInstance::RemoveActiveEmote @ RVA 0xB10840 EA 0x7FF6F4530840
+======================================================================
+__int64 __fastcall sub_7FF6F4530840(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F6D064F0(a1 + 13432);
+}
+
+
+======================================================================
+ThirdPersonAnimationInstance::SelectSkeletonFleeingVariationAnimation @ RVA 0xB10AC0 EA 0x7FF6F4530AC0
+======================================================================
+__int64 __fastcall sub_7FF6F4530AC0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E367C0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ThirdPersonAnimationInstance::SetFullBodyOverlayPoseDisabled @ RVA 0xB11560 EA 0x7FF6F4531560
+======================================================================
+__int64 __fastcall sub_7FF6F4531560(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F3E370D0(a1, v5);
+}
+
+
+======================================================================
+ThirdPersonAnimationInstance::SetLocomotionTypeActive @ RVA 0xB11970 EA 0x7FF6F4531970
+======================================================================
+__int64 __fastcall sub_7FF6F4531970(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  __int64 v6; // r8
+  __int64 v7; // rax
+  __int64 v8; // rdi
+  _DWORD v10[6]; // [rsp+20h] [rbp-18h] BYREF
+  char v11; // [rsp+48h] [rbp+10h] BYREF
+  char v12; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v11 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  v5 = 0;
+  v10[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  v8 = v7 + v5;
+  LOBYTE(v7) = v11;
+  v2 = v10[0] == 0;
+  a2[4] = v8;
+  LOBYTE(v6) = !v2;
+  v12 = v7;
+  return sub_7FF6F3E37550(a1, &v12, v6);
+}
+
+
+======================================================================
+ThirdPersonAnimationInstance::StartMeleeStanceChange @ RVA 0xB129D0 EA 0x7FF6F45329D0
+======================================================================
+__int64 __fastcall sub_7FF6F45329D0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F3E37FE0();
+}
+
+
+======================================================================
+ThirdPersonAnimationInstance::StopMeleeStanceChange @ RVA 0xB12BB0 EA 0x7FF6F4532BB0
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+ThirdPersonAnimationInstance::TriggerEmoteActionAnimation @ RVA 0xB133A0 EA 0x7FF6F45333A0
+======================================================================
+__int64 __fastcall sub_7FF6F45333A0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F3E38BF0(a1, v5);
+}
+
+
+======================================================================
+ThirdPersonAnimationInstance::TriggerSensingAnimation @ RVA 0xB13420 EA 0x7FF6F4533420
+======================================================================
+__int64 __fastcall sub_7FF6F4533420(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F3E38C30(a1, v5);
+}
+
+
+======================================================================
+ThirdPersonAnimationInstance::UpdateAISpawnAnimation @ RVA 0xB13610 EA 0x7FF6F4533610
+======================================================================
+void __fastcall sub_7FF6F4533610(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r9
+  __int64 v9; // r8
+  __int64 v10; // rdx
+  bool v11; // [rsp+20h] [rbp-38h]
+  unsigned __int8 v12; // [rsp+60h] [rbp+8h] BYREF
+  int v13; // [rsp+68h] [rbp+10h] BYREF
+  __int64 v14; // [rsp+70h] [rbp+18h] BYREF
+  __int64 v15; // [rsp+78h] [rbp+20h] BYREF
+
+  v3 = 0;
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v7 = a2[4];
+  v8 = v12;
+  v9 = v14;
+  v10 = v15;
+  LOBYTE(v3) = v7 != 0;
+  v11 = v13 != 0;
+  a2[4] = v7 + v3;
+  *a3 = (*(float (__fastcall **)(__int64, __int64, __int64, __int64, bool))(*(_QWORD *)a1 + 728LL))(
+          a1,
+          v10,
+          v9,
+          v8,
+          v11);
+}
+
+
+======================================================================
+ThirdPersonAnimationInstance::UpdateLoadedAnimations @ RVA 0xB13C70 EA 0x7FF6F4533C70
+======================================================================
+__int64 __fastcall sub_7FF6F4533C70(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 664LL))(a1);
+}
+
+
+======================================================================
+ThirdPersonAnimationInstance::UpdatePitchOverrideAnimation @ RVA 0xB13C90 EA 0x7FF6F4533C90
+======================================================================
+__int64 __fastcall sub_7FF6F4533C90(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F3E3D700(a1, v5);
+}
+
+
+======================================================================
+ThirdPersonAnimationInstance::UpdateSkeletonFleeingAnimations @ RVA 0xB13D20 EA 0x7FF6F4533D20
+======================================================================
+__int64 __fastcall sub_7FF6F4533D20(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F3E3D8F0(a1, v6);
+}
+

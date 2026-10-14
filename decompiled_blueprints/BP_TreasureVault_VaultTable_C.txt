@@ -1,0 +1,632 @@
+// E:\unreal-projects\Athena\Content\Blueprints\GameObjects\PuzzleVault\bp_treasurevault_vaulttable.uasset -> BP_TreasureVault_VaultTable_C
+
+=== BP_TreasureVault_VaultTable_C::PopulateCurrentMaterial (172 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_IsValid_ReturnValue@0x213b5477580
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x213b5477580
+    ContextExpression:
+    $32: FinalFunction target=IsValid@0x212d63ae380 (
+      $41: InstanceVariable named PuzzleVault@0x213b547cb80
+      $50: EndFunctionParms
+    )
+$51: JumpIfNot -> 0xa9, cond:
+  $56: LocalVariable named CallFunc_IsValid_ReturnValue@0x213b5477580
+$65: Context
+  ObjectExpression:
+  $66: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $87: FinalFunction target=Array_Get@0x212d69876b0 (
+    $96: InstanceVariable named Materials@0x213b5479880
+    $105: InstanceVariable named MaterialElementIndex@0x213af446270
+    $114: LocalVariable named CallFunc_Array_Get_Item@0x213b5477680
+    $123: EndFunctionParms
+  )
+$124: Context
+  ObjectExpression:
+  $125: InstanceVariable named PuzzleVault@0x213b547cb80
+  SkipBytes: 0x17
+  RValueProperty: (null)
+  ContextExpression:
+  $146: VirtualFunction call "SetTableMaterialInstance" (
+    $159: LocalVariable named CallFunc_Array_Get_Item@0x213b5477680
+    $168: EndFunctionParms
+  )
+$169: Return expression:
+  $170: Nothing
+$171: EndOfScript
+
+=== BP_TreasureVault_VaultTable_C::PopulateTextureVisibility (113 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_IsValid_ReturnValue@0x213b547a000
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x213b547a000
+    ContextExpression:
+    $32: FinalFunction target=IsValid@0x212d63ae380 (
+      $41: InstanceVariable named PuzzleVault@0x213b547cb80
+      $50: EndFunctionParms
+    )
+$51: JumpIfNot -> 0x6e, cond:
+  $56: LocalVariable named CallFunc_IsValid_ReturnValue@0x213b547a000
+$65: Context
+  ObjectExpression:
+  $66: InstanceVariable named PuzzleVault@0x213b547cb80
+  SkipBytes: 0x17
+  RValueProperty: (null)
+  ContextExpression:
+  $87: VirtualFunction call "SetVaultTableTextureVisibility" (
+    $100: InstanceVariable named TextureVisibility@0x213b547ce00
+    $109: EndFunctionParms
+  )
+$110: Return expression:
+  $111: Nothing
+$112: EndOfScript
+
+=== BP_TreasureVault_VaultTable_C::OnRep_PuzzleVault (70 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x213b5479f80
+  Expression:
+  $10: FinalFunction target=HasAuthority@0x212d6384b30 (
+    $19: EndFunctionParms
+  )
+$20: JumpIfNot -> 0x27, cond:
+  $25: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x213b5479f80
+$34: Jump to offset 0x43
+$39: VirtualFunction call "PopulateTextureVisibility" (
+  $52: EndFunctionParms
+)
+$53: VirtualFunction call "PopulateCurrentMaterial" (
+  $66: EndFunctionParms
+)
+$67: Return expression:
+  $68: Nothing
+$69: EndOfScript
+
+=== BP_TreasureVault_VaultTable_C::OnRep_TextureVisibility (56 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x213b5479f00
+  Expression:
+  $10: FinalFunction target=HasAuthority@0x212d6384b30 (
+    $19: EndFunctionParms
+  )
+$20: JumpIfNot -> 0x27, cond:
+  $25: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x213b5479f00
+$34: Jump to offset 0x35
+$39: VirtualFunction call "PopulateTextureVisibility" (
+  $52: EndFunctionParms
+)
+$53: Return expression:
+  $54: Nothing
+$55: EndOfScript
+
+=== BP_TreasureVault_VaultTable_C::OnRep_MaterialElementIndex (56 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x213b5479e80
+  Expression:
+  $10: FinalFunction target=HasAuthority@0x212d6384b30 (
+    $19: EndFunctionParms
+  )
+$20: JumpIfNot -> 0x27, cond:
+  $25: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x213b5479e80
+$34: Jump to offset 0x35
+$39: VirtualFunction call "PopulateCurrentMaterial" (
+  $52: EndFunctionParms
+)
+$53: Return expression:
+  $54: Nothing
+$55: EndOfScript
+
+=== BP_TreasureVault_VaultTable_C::InitialiseVariables (117 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue2@0x213b5479d00
+  Expression:
+  $10: FinalFunction target=FlushNetDormancy@0x212d6381090 (
+    $19: EndFunctionParms
+  )
+$20: LetObj (Variable = Expression)
+  Variable:
+  $21: InstanceVariable named PuzzleVault@0x213b547cb80
+  Expression:
+  $30: LocalVariable named Puzzle Vault@0x213b5479e00
+$39: VirtualFunction call "OnRep_PuzzleVault" (
+  $52: EndFunctionParms
+)
+$53: LetBool (Variable = Expression)
+  Variable:
+  $54: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue@0x213b5479d80
+  Expression:
+  $63: FinalFunction target=FlushNetDormancy@0x212d6381090 (
+    $72: EndFunctionParms
+  )
+$73: Let (Variable = Expression)
+  Variable:
+  $82: InstanceVariable named Materials@0x213b5479880
+  Expression:
+  $91: LocalOutVariable named Materials@0x213b5479c00
+$100: VirtualFunction call "Initialise on Server" (
+  $113: EndFunctionParms
+)
+$114: Return expression:
+  $115: Nothing
+$116: EndOfScript
+
+=== BP_TreasureVault_VaultTable_C::IncrementVaultTableMaterial (225 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_Array_Length_ReturnValue@0x213af446dd0
+  Expression:
+  $18: Context
+    ObjectExpression:
+    $19: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x213af446dd0
+    ContextExpression:
+    $40: FinalFunction target=Array_Length@0x212d6987df0 (
+      $49: InstanceVariable named Materials@0x213b5479880
+      $58: EndFunctionParms
+    )
+$59: Let (Variable = Expression)
+  Variable:
+  $68: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x213af446d60
+  Expression:
+  $77: CallMath target=Add_IntInt@0x212d698fa30 (
+    $86: literal int32 1
+    $91: InstanceVariable named MaterialElementIndex@0x213af446270
+    $100: EndFunctionParms
+  )
+$101: LetBool (Variable = Expression)
+  Variable:
+  $102: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x213b5479b80
+  Expression:
+  $111: CallMath target=Greater_IntInt@0x212d69a2770 (
+    $120: LocalVariable named CallFunc_Array_Length_ReturnValue@0x213af446dd0
+    $129: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x213af446d60
+    $138: EndFunctionParms
+  )
+$139: JumpIfNot -> 0xde, cond:
+  $144: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x213b5479b80
+$153: Let (Variable = Expression)
+  Variable:
+  $162: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x213af446e40
+  Expression:
+  $171: CallMath target=Add_IntInt@0x212d698fa30 (
+    $180: InstanceVariable named MaterialElementIndex@0x213af446270
+    $189: literal int32 1
+    $194: EndFunctionParms
+  )
+$195: Let (Variable = Expression)
+  Variable:
+  $204: InstanceVariable named MaterialElementIndex@0x213af446270
+  Expression:
+  $213: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x213af446e40
+$222: Return expression:
+  $223: Nothing
+$224: EndOfScript
+
+=== BP_TreasureVault_VaultTable_C::GetObjectDisplayName (92 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalOutVariable named ReturnValue@0x213af446cf0
+  Expression:
+  $18: literal text (not decoded)
+$19: literal ansi string "Evil Statue"
+$32: literal ansi string "78D1408D4DE35719C33A16AECC3E4EF4_ReturnValue1"
+$79: literal ansi string ""
+$81: Return expression:
+  $82: LocalOutVariable named ReturnValue@0x213af446cf0
+$91: EndOfScript
+
+=== BP_TreasureVault_VaultTable_C::GetClosestInteractionPoint (111 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_GetBoxWorldOrigin_ReturnValue@0x213b5479600
+  Expression:
+  $18: Context
+    ObjectExpression:
+    $19: InstanceVariable named Interactable@0x213b547db80
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetBoxWorldOrigin_ReturnValue@0x213b5479600
+    ContextExpression:
+    $40: FinalFunction target=GetBoxWorldOrigin@0x212d674e300 (
+      $49: EndFunctionParms
+    )
+$50: Let (Variable = Expression)
+  Variable:
+  $59: LocalOutVariable named OutInteractionPointRadius@0x213af446c80
+  Expression:
+  $68: literal float 0
+$73: Let (Variable = Expression)
+  Variable:
+  $82: LocalOutVariable named ReturnValue@0x213b5479a80
+  Expression:
+  $91: LocalVariable named CallFunc_GetBoxWorldOrigin_ReturnValue@0x213b5479600
+$100: Return expression:
+  $101: LocalOutVariable named ReturnValue@0x213b5479a80
+$110: EndOfScript
+
+=== BP_TreasureVault_VaultTable_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_TreasureVault_VaultTable_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_TreasureVault_VaultTable" (
+  $13: literal int32 561
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_TreasureVault_VaultTable_C::ReceiveDestroyed (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_TreasureVault_VaultTable" (
+  $13: literal int32 705
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_TreasureVault_VaultTable_C::Multicast Play VFX (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_TreasureVault_VaultTable" (
+  $13: literal int32 816
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_TreasureVault_VaultTable_C::Multicast Play All VFX (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_TreasureVault_VaultTable" (
+  $13: literal int32 982
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_TreasureVault_VaultTable_C::BndEvt__Lock_K2Node_ComponentBoundEvent_19_OnIndividualLockOpenedDelegate__DelegateSignature (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_TreasureVault_VaultTable" (
+  $13: literal int32 987
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_TreasureVault_VaultTable_C::BndEvt__Lock_K2Node_ComponentBoundEvent_57_OnLockOpenedDelegate__DelegateSignature (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_TreasureVault_VaultTable" (
+  $13: literal int32 1045
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_TreasureVault_VaultTable_C::Initialise on Server (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_TreasureVault_VaultTable" (
+  $13: literal int32 1070
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_TreasureVault_VaultTable_C::InitBPVariables (58 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_PuzzleVault@0x213b547b580
+  Expression:
+  $9: LocalVariable named PuzzleVault@0x213b5479680
+$18: LetValueOnPersistentFrame dest=K2Node_Event_TableMaterials@0x213b547ed00
+  Expression:
+  $27: LocalOutVariable named TableMaterials@0x213b5479500
+$36: VirtualFunction call "ExecuteUbergraph_BP_TreasureVault_VaultTable" (
+  $49: literal int32 1075
+  $54: EndFunctionParms
+)
+$55: Return expression:
+  $56: Nothing
+$57: EndOfScript
+
+=== BP_TreasureVault_VaultTable_C::ExecuteUbergraph_BP_TreasureVault_VaultTable (1186 bytes) ===
+$0: FlowStack.Push(0x49f)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x213af446c10
+$15: VirtualFunction call "OnRep_TextureVisibility" (
+  $28: EndFunctionParms
+)
+$29: LetBool (Variable = Expression)
+  Variable:
+  $30: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue3@0x213b547c380
+  Expression:
+  $39: FinalFunction target=FlushNetDormancy@0x212d6381090 (
+    $48: EndFunctionParms
+  )
+$49: Let (Variable = Expression)
+  Variable:
+  $58: InstanceVariable named MaterialElementIndex@0x213af446270
+  Expression:
+  $67: literal int32 -1
+$72: VirtualFunction call "OnRep_MaterialElementIndex" (
+  $85: EndFunctionParms
+)
+$86: LetBool (Variable = Expression)
+  Variable:
+  $87: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue4@0x213b547c200
+  Expression:
+  $96: FinalFunction target=FlushNetDormancy@0x212d6381090 (
+    $105: EndFunctionParms
+  )
+$106: LetBool (Variable = Expression)
+  Variable:
+  $107: InstanceVariable named IsInitialised@0x213b547cc80
+  Expression:
+  $116: True
+$117: PopExecutionFlow (jump to popped addr)
+$118: Let (Variable = Expression)
+  Variable:
+  $127: LocalVariable named Temp_int_Loop_Counter_Variable@0x213af446ba0
+  Expression:
+  $136: literal int32 0
+$141: Let (Variable = Expression)
+  Variable:
+  $150: LocalVariable named Temp_int_Array_Index_Variable@0x213af446ac0
+  Expression:
+  $159: literal int32 0
+$164: Let (Variable = Expression)
+  Variable:
+  $173: LocalVariable named CallFunc_Array_Length_ReturnValue@0x213af4454e0
+  Expression:
+  $182: Context
+    ObjectExpression:
+    $183: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x213af4454e0
+    ContextExpression:
+    $204: FinalFunction target=Array_Length@0x212d6987df0 (
+      $213: InstanceVariable named ParticleSystems@0x213b547c400
+      $222: EndFunctionParms
+    )
+$223: LetBool (Variable = Expression)
+  Variable:
+  $224: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x213b547b400
+  Expression:
+  $233: CallMath target=Less_IntInt@0x212d69a5ed0 (
+    $242: LocalVariable named Temp_int_Loop_Counter_Variable@0x213af446ba0
+    $251: LocalVariable named CallFunc_Array_Length_ReturnValue@0x213af4454e0
+    $260: EndFunctionParms
+  )
+$261: PopExecutionFlowIfNot, cond:
+$262: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x213b547b400
+$271: Let (Variable = Expression)
+  Variable:
+  $280: LocalVariable named Temp_int_Array_Index_Variable@0x213af446ac0
+  Expression:
+  $289: LocalVariable named Temp_int_Loop_Counter_Variable@0x213af446ba0
+$298: FlowStack.Push(0x190)
+$303: Context
+  ObjectExpression:
+  $304: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $325: FinalFunction target=Array_Get@0x212d69876b0 (
+    $334: InstanceVariable named ParticleSystems@0x213b547c400
+    $343: LocalVariable named Temp_int_Array_Index_Variable@0x213af446ac0
+    $352: LocalVariable named CallFunc_Array_Get_Item2@0x213b547b480
+    $361: EndFunctionParms
+  )
+$362: Context
+  ObjectExpression:
+  $363: LocalVariable named CallFunc_Array_Get_Item2@0x213b547b480
+  SkipBytes: 0xf
+  RValueProperty: (null)
+  ContextExpression:
+  $384: VirtualFunction call "Activate" (
+    $397: True
+    $398: EndFunctionParms
+  )
+$399: PopExecutionFlow (jump to popped addr)
+$400: Let (Variable = Expression)
+  Variable:
+  $409: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x213af446b30
+  Expression:
+  $418: CallMath target=Add_IntInt@0x212d698fa30 (
+    $427: LocalVariable named Temp_int_Loop_Counter_Variable@0x213af446ba0
+    $436: literal int32 1
+    $441: EndFunctionParms
+  )
+$442: Let (Variable = Expression)
+  Variable:
+  $451: LocalVariable named Temp_int_Loop_Counter_Variable@0x213af446ba0
+  Expression:
+  $460: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x213af446b30
+$469: Jump to offset 0xa4
+$474: LetBool (Variable = Expression)
+  Variable:
+  $475: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue@0x213b5479400
+  Expression:
+  $484: FinalFunction target=FlushNetDormancy@0x212d6381090 (
+    $493: EndFunctionParms
+  )
+$494: LetBool (Variable = Expression)
+  Variable:
+  $495: InstanceVariable named TextureVisibility@0x213b547ce00
+  Expression:
+  $504: True
+$505: Jump to offset 0xf
+$510: VirtualFunction call "OnRep_TextureVisibility" (
+  $523: EndFunctionParms
+)
+$524: PopExecutionFlow (jump to popped addr)
+$525: LetBool (Variable = Expression)
+  Variable:
+  $526: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue2@0x213b5479580
+  Expression:
+  $535: FinalFunction target=FlushNetDormancy@0x212d6381090 (
+    $544: EndFunctionParms
+  )
+$545: LetBool (Variable = Expression)
+  Variable:
+  $546: InstanceVariable named TextureVisibility@0x213b547ce00
+  Expression:
+  $555: False
+$556: Jump to offset 0x1fe
+$561: Let (Variable = Expression)
+  Variable:
+  $570: LocalVariable named CallFunc_Initialise_InInteractableInterface_CastInput@0x213b547c180
+  Expression:
+  $579: ObjToInterfaceCast to InteractableInterface@0x212d5c2dac0
+  $588: Self
+$589: Context
+  ObjectExpression:
+  $590: InstanceVariable named Lock@0x213b547dc00
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $611: FinalFunction target=Initialise@0x212d67e9ba0 (
+    $620: InstanceVariable named ActionRulesComponent@0x212d668a6a0
+    $629: LocalVariable named CallFunc_Initialise_InInteractableInterface_CastInput@0x213b547c180
+    $638: EndFunctionParms
+  )
+$639: SetArray
+  $640: LocalVariable named K2Node_MakeArray_Array@0x213b547dd00
+  $649: InstanceVariable named LeftParticleSystem@0x213b547cd80
+  $658: InstanceVariable named MiddleParticleSystem@0x213b547dc80
+  $667: InstanceVariable named RightParticleSystem@0x213b547db00
+  $676: EndArray
+$677: Let (Variable = Expression)
+  Variable:
+  $686: InstanceVariable named ParticleSystems@0x213b547c400
+  Expression:
+  $695: LocalVariable named K2Node_MakeArray_Array@0x213b547dd00
+$704: PopExecutionFlow (jump to popped addr)
+$705: LetBool (Variable = Expression)
+  Variable:
+  $706: LocalVariable named CallFunc_IsValid_ReturnValue@0x213b547c280
+  Expression:
+  $715: Context
+    ObjectExpression:
+    $716: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x213b547c280
+    ContextExpression:
+    $737: FinalFunction target=IsValid@0x212d63ae380 (
+      $746: InstanceVariable named PuzzleVault@0x213b547cb80
+      $755: EndFunctionParms
+    )
+$756: PopExecutionFlowIfNot, cond:
+$757: LocalVariable named CallFunc_IsValid_ReturnValue@0x213b547c280
+$766: Context
+  ObjectExpression:
+  $767: InstanceVariable named PuzzleVault@0x213b547cb80
+  SkipBytes: 0x17
+  RValueProperty: (null)
+  ContextExpression:
+  $788: VirtualFunction call "SetTableMaterialInstance" (
+    $801: ObjectConst VTM_Default@0x2128ca85780
+    $810: EndFunctionParms
+  )
+$811: Jump to offset 0x20d
+$816: Context
+  ObjectExpression:
+  $817: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $838: FinalFunction target=Array_Get@0x212d69876b0 (
+    $847: InstanceVariable named ParticleSystems@0x213b547c400
+    $856: InstanceVariable named VFXIndex@0x213af444d70
+    $865: LocalVariable named CallFunc_Array_Get_Item@0x213b547b500
+    $874: EndFunctionParms
+  )
+$875: Context
+  ObjectExpression:
+  $876: LocalVariable named CallFunc_Array_Get_Item@0x213b547b500
+  SkipBytes: 0xf
+  RValueProperty: (null)
+  ContextExpression:
+  $897: VirtualFunction call "Activate" (
+    $910: True
+    $911: EndFunctionParms
+  )
+$912: Let (Variable = Expression)
+  Variable:
+  $921: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x213af446a50
+  Expression:
+  $930: CallMath target=Add_IntInt@0x212d698fa30 (
+    $939: InstanceVariable named VFXIndex@0x213af444d70
+    $948: literal int32 1
+    $953: EndFunctionParms
+  )
+$954: Let (Variable = Expression)
+  Variable:
+  $963: InstanceVariable named VFXIndex@0x213af444d70
+  Expression:
+  $972: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x213af446a50
+$981: PopExecutionFlow (jump to popped addr)
+$982: Jump to offset 0x76
+$987: PopExecutionFlowIfNot, cond:
+$988: InstanceVariable named IsInitialised@0x213b547cc80
+$997: VirtualFunction call "Multicast Play VFX" (
+  $1010: EndFunctionParms
+)
+$1011: VirtualFunction call "IncrementVaultTableMaterial" (
+  $1024: EndFunctionParms
+)
+$1025: CallMulticastDelegate target=KeyReceived__DelegateSignature@0x213cff3b580 delegate:
+  $1034: InstanceVariable named KeyReceived@0x213b547de80
+  Params:
+  $1043: EndFunctionParms
+$1044: PopExecutionFlow (jump to popped addr)
+$1045: PopExecutionFlowIfNot, cond:
+$1046: InstanceVariable named IsInitialised@0x213b547cc80
+$1055: VirtualFunction call "Multicast Play All VFX" (
+  $1068: EndFunctionParms
+)
+$1069: PopExecutionFlow (jump to popped addr)
+$1070: Jump to offset 0x1da
+$1075: Let (Variable = Expression)
+  Variable:
+  $1084: LocalVariable named K2Node_DynamicCast_AsBP_Puzzle_Vault@0x213b547ee80
+  Expression:
+  $1093: DynamicCast to BP_PuzzleVault_C@0x212a719e100 of expr:
+  $1102: LocalVariable named K2Node_Event_PuzzleVault@0x213b547b580
+$1111: Let (Variable = Expression)
+  Variable:
+  $1120: LocalVariable named K2Node_DynamicCast_bSuccess@0x213b547ef00
+  Expression:
+  $1129: PrimitiveCast type=71
+    Argument:
+    $1131: LocalVariable named K2Node_DynamicCast_AsBP_Puzzle_Vault@0x213b547ee80
+$1140: PopExecutionFlowIfNot, cond:
+$1141: LocalVariable named K2Node_DynamicCast_bSuccess@0x213b547ef00
+$1150: VirtualFunction call "InitialiseVariables" (
+  $1163: LocalVariable named K2Node_DynamicCast_AsBP_Puzzle_Vault@0x213b547ee80
+  $1172: LocalVariable named K2Node_Event_TableMaterials@0x213b547ed00
+  $1181: EndFunctionParms
+)
+$1182: PopExecutionFlow (jump to popped addr)
+$1183: Return expression:
+  $1184: Nothing
+$1185: EndOfScript
+
+=== BP_TreasureVault_VaultTable_C::KeyReceived__DelegateSignature (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript

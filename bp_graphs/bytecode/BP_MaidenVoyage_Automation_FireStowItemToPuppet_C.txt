@@ -1,0 +1,142 @@
+// /Game/Tests/Blueprints/MaidenVoyage/TaleAutomationSteps/bp_maidenvoyage_automation_firestowitemtopuppet -> BP_MaidenVoyage_Automation_FireStowItemToPuppet_C
+
+=== BP_MaidenVoyage_Automation_FireStowItemToPuppet_C::fn_idx_1828 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fd11e8d80
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fd11e8c80
+$18: VirtualFunction call "idx:286093" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_MaidenVoyage_Automation_FireStowItemToPuppet_C::fn_idx_286093 (524 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fceae0620
+$10: LetObj (Variable = Expression)
+  Variable:
+  $11: LocalVariable named CallFunc_GetService_ReturnValue@0x19fd11e8e00
+  Expression:
+  $20: FinalFunction target=GetService@0x19e4cda5b60 (
+    $29: ObjectConst (null)
+    $38: EndFunctionParms
+  )
+$39: Let (Variable = Expression)
+  Variable:
+  $48: LocalVariable named idx:286073@0x19fd11e8e80
+  Expression:
+  $57: DynamicCast to (null) of expr:
+  $66: LocalVariable named CallFunc_GetService_ReturnValue@0x19fd11e8e00
+$75: Let (Variable = Expression)
+  Variable:
+  $84: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fd11e8f00
+  Expression:
+  $93: PrimitiveCast type=71
+    Argument:
+    $95: LocalVariable named idx:286073@0x19fd11e8e80
+$104: JumpIfNot -> 0x1a0, cond:
+  $109: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fd11e8f00
+$118: LetObj (Variable = Expression)
+  Variable:
+  $119: LocalVariable named idx:286069@0x19fd11e8f80
+  Expression:
+  $128: Context
+    ObjectExpression:
+    $129: LocalVariable named idx:286073@0x19fd11e8e80
+    SkipBytes: 0xa
+    RValueProperty: idx:286069@0x19fd11e8f80
+    ContextExpression:
+    $150: FinalFunction target=(null) (
+      $159: EndFunctionParms
+    )
+$160: LetObj (Variable = Expression)
+  Variable:
+  $161: LocalVariable named CallFunc_GetController_ReturnValue@0x19fd11e9000
+  Expression:
+  $170: Context
+    ObjectExpression:
+    $171: LocalVariable named idx:286069@0x19fd11e8f80
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetController_ReturnValue@0x19fd11e9000
+    ContextExpression:
+    $192: FinalFunction target=GetController@0x19e4d077d70 (
+      $201: EndFunctionParms
+    )
+$202: Let (Variable = Expression)
+  Variable:
+  $211: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fd11e9080
+  Expression:
+  $220: Context
+    ObjectExpression:
+    $221: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fd11e9080
+    ContextExpression:
+    $242: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x19e4d410390 (
+      $251: LocalVariable named CallFunc_GetController_ReturnValue@0x19fd11e9000
+      $260: EndFunctionParms
+    )
+$261: Let (Variable = Expression)
+  Variable:
+  $270: StructMemberContext prop=Object@0x19e4cfc2220
+    Expression to struct:
+    $279: LocalVariable named idx:286094@0x19fd11e8d00
+  Expression:
+  $288: NoInterface
+$289: LetBool (Variable = Expression)
+  Variable:
+  $290: StructMemberContext prop=FastStow@0x19e4cfc21a0
+    Expression to struct:
+    $299: LocalVariable named idx:286094@0x19fd11e8d00
+  Expression:
+  $308: False
+$309: Let (Variable = Expression)
+  Variable:
+  $318: StructMemberContext prop=StowMethod@0x19e4cfc2120
+    Expression to struct:
+    $327: LocalVariable named idx:286094@0x19fd11e8d00
+  Expression:
+  $336: literal byte 1
+$338: Context
+  ObjectExpression:
+  $339: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x29
+  RValueProperty: (null)
+  ContextExpression:
+  $360: FinalFunction target=FireEventWithDataFromHandle@0x19e4d40feb0 (
+    $369: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fd11e9080
+    $378: ObjectConst EventStartStow@0x19e4cfc2080
+    $387: literal ansi string ""
+    $389: literal ansi string ""
+    $391: LocalVariable named idx:286094@0x19fd11e8d00
+    $400: EndFunctionParms
+  )
+$401: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $410: EndFunctionParms
+)
+$411: Jump to offset 0x209
+$416: Context
+  ObjectExpression:
+  $417: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x53
+  RValueProperty: (null)
+  ContextExpression:
+  $438: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $447: NoObject
+    $448: literal ansi string "CastToAutomationServiceFailed"
+    $479: True
+    $480: True
+    $481: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $494: literal float 0
+      $499: literal float 0.6600000262260437
+      $504: literal float 1
+      $509: literal float 1
+      $514: EndStructConst
+    $515: literal float 2
+    $520: EndFunctionParms
+  )
+$521: Return expression:
+  $522: Nothing
+$523: EndOfScript

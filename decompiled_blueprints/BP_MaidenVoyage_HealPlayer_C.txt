@@ -1,0 +1,72 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Onboarding/bp_maidenvoyage_healplayer -> BP_MaidenVoyage_HealPlayer_C
+
+=== BP_MaidenVoyage_HealPlayer_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fce70ff00
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fce70fe00
+$18: VirtualFunction call "idx:283056" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_MaidenVoyage_HealPlayer_C::fn_idx_283056 (241 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fcdbb6820
+$10: SetArray
+  $11: LocalVariable named CallFunc_GetParticipants_Participants@0x19fcdd60700
+  $20: EndArray
+$21: FinalFunction target=GetParticipants@0x19e4cda59a0 (
+  $30: LocalVariable named CallFunc_GetParticipants_Participants@0x19fcdd60700
+  $39: EndFunctionParms
+)
+$40: Context
+  ObjectExpression:
+  $41: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $62: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $71: LocalVariable named CallFunc_GetParticipants_Participants@0x19fcdd60700
+    $80: literal int32 0
+    $85: LocalVariable named CallFunc_Array_Get_Item@0x19fce70fe80
+    $94: EndFunctionParms
+  )
+$95: Let (Variable = Expression)
+  Variable:
+  $104: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fce70ff80
+  Expression:
+  $113: DynamicCast to AthenaPlayerCharacter@0x19e4be85b00 of expr:
+  $122: LocalVariable named CallFunc_Array_Get_Item@0x19fce70fe80
+$131: Let (Variable = Expression)
+  Variable:
+  $140: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcdd60000
+  Expression:
+  $149: PrimitiveCast type=71
+    Argument:
+    $151: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fce70ff80
+$160: JumpIfNot -> 0xee, cond:
+  $165: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcdd60000
+$174: Context
+  ObjectExpression:
+  $175: Context
+    ObjectExpression:
+    $176: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fce70ff80
+    SkipBytes: 0x9
+    RValueProperty: HealthComponent@0x19e4d0811d0
+    ContextExpression:
+    $197: InstanceVariable named HealthComponent@0x19e4d0811d0
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $218: FinalFunction target=ResetToMaxHealth@0x19e4d18f960 (
+    $227: EndFunctionParms
+  )
+$228: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $237: EndFunctionParms
+)
+$238: Return expression:
+  $239: Nothing
+$240: EndOfScript

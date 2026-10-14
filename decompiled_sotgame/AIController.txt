@@ -1,0 +1,740 @@
+// Class: AIController (19 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+AIController::GetAIPerceptionComponent @ RVA 0x20A2910 EA 0x7FF6F5AC2910
+======================================================================
+__int64 __fastcall sub_7FF6F5AC2910(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F59DE7D0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AIController::GetFocalPoint @ RVA 0x20A37D0 EA 0x7FF6F5AC37D0
+======================================================================
+__int64 __fastcall sub_7FF6F5AC37D0(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rax
+  __int64 result; // rax
+  _BYTE v6[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = sub_7FF6F59DF570(a1, v6);
+  *(_QWORD *)a3 = *(_QWORD *)v4;
+  result = *(unsigned int *)(v4 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+AIController::GetFocalPointOnActor @ RVA 0x20A3810 EA 0x7FF6F5AC3810
+======================================================================
+__int64 __fastcall sub_7FF6F5AC3810(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rax
+  __int64 result; // rax
+  _BYTE v11[24]; // [rsp+20h] [rbp-18h] BYREF
+  __int64 v12; // [rsp+40h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v7 = a2[4];
+  v8 = v12;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  v9 = (*(__int64 (__fastcall **)(__int64, _BYTE *, __int64))(*(_QWORD *)a1 + 1896LL))(a1, v11, v8);
+  *(_QWORD *)a3 = *(_QWORD *)v9;
+  result = *(unsigned int *)(v9 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+AIController::GetFocusActor @ RVA 0x20A38C0 EA 0x7FF6F5AC38C0
+======================================================================
+__int64 __fastcall sub_7FF6F5AC38C0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F59DF890();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AIController::GetImmediateMoveDestination @ RVA 0x20A38F0 EA 0x7FF6F5AC38F0
+======================================================================
+__int64 __fastcall sub_7FF6F5AC38F0(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rax
+  __int64 result; // rax
+  _BYTE v6[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = sub_7FF6F59DFB50(a1, v6);
+  *(_QWORD *)a3 = *(_QWORD *)v4;
+  result = *(unsigned int *)(v4 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+AIController::GetMoveStatus @ RVA 0x20A3AB0 EA 0x7FF6F5AC3AB0
+======================================================================
+__int64 __fastcall sub_7FF6F5AC3AB0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F59E0320();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AIController::GetPathFollowingComponent @ RVA 0x20A3C50 EA 0x7FF6F5AC3C50
+======================================================================
+__int64 __fastcall sub_7FF6F5AC3C50(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F59E0960();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AIController::HasPartialPath @ RVA 0x20A4940 EA 0x7FF6F5AC4940
+======================================================================
+__int64 __fastcall sub_7FF6F5AC4940(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F59E25B0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AIController::K2_ClearFocus @ RVA 0x20A4DD0 EA 0x7FF6F5AC4DD0
+======================================================================
+__int64 __fastcall sub_7FF6F5AC4DD0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  LOBYTE(a2) = 2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1936LL))(a1, a2);
+}
+
+
+======================================================================
+AIController::K2_SetFocalPoint @ RVA 0x20A5080 EA 0x7FF6F5AC5080
+======================================================================
+__int64 __fastcall sub_7FF6F5AC5080(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  __int64 v7; // [rsp+20h] [rbp-28h] BYREF
+  int v8; // [rsp+28h] [rbp-20h]
+  __int64 v9; // [rsp+30h] [rbp-18h] BYREF
+  int v10; // [rsp+38h] [rbp-10h]
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v9 = v7;
+  v5 = v4 + (v4 != 0);
+  LODWORD(v4) = v8;
+  a2[4] = v5;
+  v10 = v4;
+  return sub_7FF6F59E4F50(a1, &v9);
+}
+
+
+======================================================================
+AIController::K2_SetFocus @ RVA 0x20A5110 EA 0x7FF6F5AC5110
+======================================================================
+__int64 __fastcall sub_7FF6F5AC5110(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F59E4F80(a1, v6);
+}
+
+
+======================================================================
+AIController::MoveToActor @ RVA 0x20A52A0 EA 0x7FF6F5AC52A0
+======================================================================
+__int64 __fastcall sub_7FF6F5AC52A0(int a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  bool v7; // r15
+  char v8; // r14
+  char v9; // si
+  int v10; // r8d
+  __int64 v11; // rax
+  int v12; // edx
+  __int64 result; // rax
+  int v14; // [rsp+30h] [rbp-30h]
+  char v15; // [rsp+38h] [rbp-28h]
+  int v16; // [rsp+40h] [rbp-20h] BYREF
+  int v17; // [rsp+44h] [rbp-1Ch] BYREF
+  __int64 v18; // [rsp+48h] [rbp-18h] BYREF
+  _QWORD v19[2]; // [rsp+50h] [rbp-10h] BYREF
+  int v20; // [rsp+A8h] [rbp+48h] BYREF
+  int v21; // [rsp+B0h] [rbp+50h] BYREF
+  int v22; // [rsp+B8h] [rbp+58h] BYREF
+
+  v3 = 0;
+  v19[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v19);
+  }
+  v17 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v20 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v20);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v20);
+  }
+  v21 = 0;
+  v7 = v20 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v21);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v21);
+  }
+  v22 = 0;
+  v8 = v21 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v22);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v22);
+  }
+  v18 = 0;
+  v9 = v22 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v11 = a2[4];
+  v12 = v19[0];
+  v15 = v16 != 0;
+  LOBYTE(v3) = v11 != 0;
+  v14 = v18;
+  a2[4] = v11 + v3;
+  result = sub_7FF6F59E5DB0(a1, v12, v10, v7, v8, v9, v14, v15);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AIController::MoveToLocation @ RVA 0x20A54C0 EA 0x7FF6F5AC54C0
+======================================================================
+__int64 __fastcall sub_7FF6F5AC54C0(int a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v5; // rax
+  _BYTE *v6; // rsi
+  bool v7; // r13
+  char v8; // r12
+  char v9; // r15
+  char v10; // r14
+  int v11; // r8d
+  __int64 v12; // rax
+  __int64 result; // rax
+  int v14; // [rsp+38h] [rbp-31h]
+  char v15; // [rsp+40h] [rbp-29h]
+  int v16; // [rsp+50h] [rbp-19h] BYREF
+  int v17; // [rsp+54h] [rbp-15h] BYREF
+  int v18; // [rsp+58h] [rbp-11h] BYREF
+  int v19; // [rsp+5Ch] [rbp-Dh] BYREF
+  __int64 v20; // [rsp+60h] [rbp-9h] BYREF
+  _BYTE v21[88]; // [rsp+68h] [rbp-1h] BYREF
+  int v23; // [rsp+D8h] [rbp+6Fh] BYREF
+  _BYTE *v24; // [rsp+E0h] [rbp+77h]
+  int v25; // [rsp+E8h] [rbp+7Fh] BYREF
+
+  v24 = a3;
+  v3 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v21);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v21);
+  }
+  v5 = a2[7];
+  v6 = v21;
+  v19 = 0;
+  if ( v5 )
+    LODWORD(v6) = v5;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  v23 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v23);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v23);
+  }
+  v25 = 0;
+  v7 = v23 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v25);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v25);
+  }
+  v16 = 0;
+  v8 = v25 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v17 = 0;
+  v9 = v16 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v20 = 0;
+  v10 = v17 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v20);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v20);
+  }
+  v18 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  v12 = a2[4];
+  v15 = v18 != 0;
+  LOBYTE(v3) = v12 != 0;
+  v14 = v20;
+  a2[4] = v12 + v3;
+  result = sub_7FF6F59E5E60(a1, (_DWORD)v6, v11, v7, v8, v9, v10, v14, v15);
+  *v24 = result;
+  return result;
+}
+
+
+======================================================================
+AIController::OnGameplayTaskResourcesClaimed @ RVA 0x20A58D0 EA 0x7FF6F5AC58D0
+======================================================================
+__int64 __fastcall sub_7FF6F5AC58D0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // r8
+  __int64 v7; // rdx
+  unsigned __int16 v9; // [rsp+30h] [rbp+8h] BYREF
+  unsigned __int16 v10; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v5 = a2[4];
+  v6 = v9;
+  v7 = v10;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64, __int64))(*(_QWORD *)a1 + 1944LL))(a1, v7, v6);
+}
+
+
+======================================================================
+AIController::OnPossess @ RVA 0x152AB10 EA 0x7FF6F4F4AB10
+======================================================================
+unsigned __int8 *__fastcall sub_7FF6F4F4AB10(_QWORD *a1, _QWORD *a2, void *a3)
+{
+  unsigned __int8 *result; // rax
+  char v7; // bp
+  _BYTE *i; // rax
+  unsigned __int8 *v9; // rax
+  int v10; // ecx
+  unsigned __int8 *v11; // rcx
+  __int64 v12; // rax
+  unsigned __int8 *v13; // rbx
+  char v14[64]; // [rsp+30h] [rbp-68h] BYREF
+
+  result = (unsigned __int8 *)a1[2];
+  if ( *((int *)result + 49) >= 0 )
+  {
+    v7 = (*(__int64 (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD))(*a1 + 480LL))(a1, a2[2], a2[5], 0);
+    if ( (v7 & 1) != 0 )
+      (*(void (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD, _QWORD))(*a1 + 488LL))(a1, a2[2], a2[5], a2[15], 0);
+    if ( (v7 & 2) != 0 )
+    {
+      for ( i = (_BYTE *)a2[4]; *i != 4; i = (_BYTE *)a2[4] )
+      {
+        v9 = (unsigned __int8 *)a2[4];
+        v10 = *v9;
+        a2[4] = v9 + 1;
+        ((void (__fastcall *)(_QWORD, _QWORD *, char *))funcs_7FF6F4F44D4F[v10])(a2[3], a2, v14);
+      }
+      result = i + 1;
+      a2[4] = result;
+      v11 = result + 1;
+      if ( *result == 11 )
+      {
+        a2[4] = v11;
+      }
+      else
+      {
+        v12 = *result;
+        a2[4] = v11;
+        return (unsigned __int8 *)((__int64 (__fastcall *)(_QWORD, _QWORD *, void *))funcs_7FF6F4F44D4F[v12])(
+                                    a2[3],
+                                    a2,
+                                    a3);
+      }
+    }
+    else
+    {
+      result = (unsigned __int8 *)sub_7FF6F4F072B0(a2[2]);
+      v13 = result;
+      if ( result )
+      {
+        if ( (*((_QWORD *)result + 7) & 0x1000000000LL) == 0 )
+          (*(void (__fastcall **)(unsigned __int8 *, void *))(*(_QWORD *)result + 688LL))(result, a3);
+        return (unsigned __int8 *)memset(a3, 0, *((_DWORD *)v13 + 12) * *((_DWORD *)v13 + 13));
+      }
+    }
+  }
+  else if ( !byte_7FF6FA4F64EF )
+  {
+    ++dword_7FF6FA525F48;
+  }
+  return result;
+}
+
+
+======================================================================
+AIController::OnUsingBlackBoard @ RVA 0x152AB10 EA 0x7FF6F4F4AB10
+======================================================================
+  (RVA 0x152AB10 shared with another function already decompiled above/elsewhere - likely a generic Blueprint/K2 bytecode executor, not unique native code)
+unsigned __int8 *__fastcall sub_7FF6F4F4AB10(_QWORD *a1, _QWORD *a2, void *a3)
+{
+  unsigned __int8 *result; // rax
+  char v7; // bp
+  _BYTE *i; // rax
+  unsigned __int8 *v9; // rax
+  int v10; // ecx
+  unsigned __int8 *v11; // rcx
+  __int64 v12; // rax
+  unsigned __int8 *v13; // rbx
+  char v14[64]; // [rsp+30h] [rbp-68h] BYREF
+
+  result = (unsigned __int8 *)a1[2];
+  if ( *((int *)result + 49) >= 0 )
+  {
+    v7 = (*(__int64 (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD))(*a1 + 480LL))(a1, a2[2], a2[5], 0);
+    if ( (v7 & 1) != 0 )
+      (*(void (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD, _QWORD))(*a1 + 488LL))(a1, a2[2], a2[5], a2[15], 0);
+    if ( (v7 & 2) != 0 )
+    {
+      for ( i = (_BYTE *)a2[4]; *i != 4; i = (_BYTE *)a2[4] )
+      {
+        v9 = (unsigned __int8 *)a2[4];
+        v10 = *v9;
+        a2[4] = v9 + 1;
+        ((void (__fastcall *)(_QWORD, _QWORD *, char *))funcs_7FF6F4F44D4F[v10])(a2[3], a2, v14);
+      }
+      result = i + 1;
+      a2[4] = result;
+      v11 = result + 1;
+      if ( *result == 11 )
+      {
+        a2[4] = v11;
+      }
+      else
+      {
+        v12 = *result;
+        a2[4] = v11;
+        return (unsigned __int8 *)((__int64 (__fastcall *)(_QWORD, _QWORD *, void *))funcs_7FF6F4F44D4F[v12])(
+                                    a2[3],
+                                    a2,
+                                    a3);
+      }
+    }
+    else
+    {
+      result = (unsigned __int8 *)sub_7FF6F4F072B0(a2[2]);
+      v13 = result;
+      if ( result )
+      {
+        if ( (*((_QWORD *)result + 7) & 0x1000000000LL) == 0 )
+          (*(void (__fastcall **)(unsigned __int8 *, void *))(*(_QWORD *)result + 688LL))(result, a3);
+        return (unsigned __int8 *)memset(a3, 0, *((_DWORD *)v13 + 12) * *((_DWORD *)v13 + 13));
+      }
+    }
+  }
+  else if ( !byte_7FF6FA4F64EF )
+  {
+    ++dword_7FF6FA525F48;
+  }
+  return result;
+}
+
+
+======================================================================
+AIController::RunBehaviorTree @ RVA 0x20A63F0 EA 0x7FF6F5AC63F0
+======================================================================
+__int64 __fastcall sub_7FF6F5AC63F0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 result; // rax
+  __int64 v10; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1872LL))(a1, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AIController::SetMoveBlockDetection @ RVA 0x20A7640 EA 0x7FF6F5AC7640
+======================================================================
+__int64 __fastcall sub_7FF6F5AC7640(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F59EF210(a1, v5);
+}
+
+
+======================================================================
+AIController::UseBlackboard @ RVA 0x20A86D0 EA 0x7FF6F5AC86D0
+======================================================================
+__int64 __fastcall sub_7FF6F5AC86D0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 *v7; // r8
+  __int64 v8; // rdx
+  __int64 v9; // rax
+  __int64 result; // rax
+  __int64 v11; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v12; // [rsp+50h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v7 = &v11;
+  v8 = v12;
+  if ( a2[7] )
+    v7 = (__int64 *)a2[7];
+  v9 = a2[4];
+  LOBYTE(v3) = v9 != 0;
+  a2[4] = v9 + v3;
+  result = sub_7FF6F59F30D0(a1, v8, v7);
+  *a3 = result;
+  return result;
+}
+

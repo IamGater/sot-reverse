@@ -1,0 +1,69 @@
+// Class: AbilityTask_WaitConfirmCancel (5 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+AbilityTask_WaitConfirmCancel::OnCancelCallback @ RVA 0x3C162C0 EA 0x7FF6F76362C0
+======================================================================
+__int64 __fastcall sub_7FF6F76362C0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F75A1EF0();
+}
+
+
+======================================================================
+AbilityTask_WaitConfirmCancel::OnConfirmCallback @ RVA 0x3C16360 EA 0x7FF6F7636360
+======================================================================
+__int64 __fastcall sub_7FF6F7636360(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F75A22E0();
+}
+
+
+======================================================================
+AbilityTask_WaitConfirmCancel::OnLocalCancelCallback @ RVA 0x3C167E0 EA 0x7FF6F76367E0
+======================================================================
+__int64 __fastcall sub_7FF6F76367E0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F75A3810();
+}
+
+
+======================================================================
+AbilityTask_WaitConfirmCancel::OnLocalConfirmCallback @ RVA 0x3C16800 EA 0x7FF6F7636800
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+AbilityTask_WaitConfirmCancel::WaitConfirmCancel @ RVA 0x3C19CA0 EA 0x7FF6F7639CA0
+======================================================================
+__int64 __fastcall sub_7FF6F7639CA0(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  __int64 result; // rax
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  v7 = v9;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F75B2FF0(v7);
+  *a3 = result;
+  return result;
+}
+

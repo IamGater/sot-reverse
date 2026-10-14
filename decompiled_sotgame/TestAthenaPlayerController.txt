@@ -1,0 +1,155 @@
+// Class: TestAthenaPlayerController (4 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+TestAthenaPlayerController::FakeAxisInput @ RVA 0xC09D50 EA 0x7FF6F4629D50
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F4629D50(__int64 a1, _QWORD *a2)
+{
+  int v4; // edi
+  __int64 v6; // [rsp+30h] [rbp-40h] BYREF
+  __int128 v7; // [rsp+38h] [rbp-38h]
+  int v8; // [rsp+48h] [rbp-28h]
+  __int64 v9; // [rsp+50h] [rbp-20h] BYREF
+  __int128 v10; // [rsp+58h] [rbp-18h] BYREF
+  int v11; // [rsp+68h] [rbp-8h]
+  int v12; // [rsp+98h] [rbp+28h] BYREF
+  int v13; // [rsp+A8h] [rbp+38h] BYREF
+
+  v4 = 0;
+  v6 = 0;
+  v7 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  a2[4] += a2[4] != 0;
+  v9 = v6;
+  v10 = v7;
+  if ( *((_QWORD *)&v7 + 1) )
+  {
+    if ( _InterlockedIncrement((volatile signed __int32 *)(*((_QWORD *)&v7 + 1) + 8LL)) == 1 )
+      MEMORY[0] = (char *)&v10 + 8;
+    if ( *((_QWORD *)&v10 + 1) )
+      v4 = *(_DWORD *)(*((_QWORD *)&v10 + 1) + 24LL);
+  }
+  v11 = v4;
+  sub_7FF6F42F9A50(a1, &v9);
+  return sub_7FF6F3C36760(&v6);
+}
+
+
+======================================================================
+TestAthenaPlayerController::FakeInput @ RVA 0xC09EC0 EA 0x7FF6F4629EC0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F4629EC0(__int64 a1, _QWORD *a2)
+{
+  int v4; // ebx
+  __int64 v6; // [rsp+28h] [rbp-50h] BYREF
+  __int128 v7; // [rsp+30h] [rbp-48h]
+  int v8; // [rsp+40h] [rbp-38h]
+  __int64 v9; // [rsp+48h] [rbp-30h] BYREF
+  __int128 v10; // [rsp+50h] [rbp-28h] BYREF
+  int v11; // [rsp+60h] [rbp-18h]
+
+  v4 = 0;
+  v6 = 0;
+  v7 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  a2[4] += a2[4] != 0;
+  v9 = v6;
+  v10 = v7;
+  if ( *((_QWORD *)&v7 + 1) )
+  {
+    if ( _InterlockedIncrement((volatile signed __int32 *)(*((_QWORD *)&v7 + 1) + 8LL)) == 1 )
+      MEMORY[0] = (char *)&v10 + 8;
+    if ( *((_QWORD *)&v10 + 1) )
+      v4 = *(_DWORD *)(*((_QWORD *)&v10 + 1) + 24LL);
+  }
+  v11 = v4;
+  sub_7FF6F42F9AE0(a1, &v9);
+  return sub_7FF6F3C36760(&v6);
+}
+
+
+======================================================================
+TestAthenaPlayerController::GrantDebugMenuPermissions @ RVA 0xC0BE80 EA 0x7FF6F462BE80
+======================================================================
+__int64 __fastcall sub_7FF6F462BE80(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F42FA950(a1, v5);
+}
+
+
+======================================================================
+TestAthenaPlayerController::TestConsoleExecutableFunction @ RVA 0xC11670 EA 0x7FF6F4631670
+======================================================================
+__int64 __fastcall sub_7FF6F4631670(__int64 a1, __int64 a2)
+{
+  __int64 result; // rax
+
+  result = *(_QWORD *)(a2 + 32);
+  *(_QWORD *)(a2 + 32) = result + (result != 0);
+  *(_BYTE *)(a1 + 5371) = 1;
+  return result;
+}
+

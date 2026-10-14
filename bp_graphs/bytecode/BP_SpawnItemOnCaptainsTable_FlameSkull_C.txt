@@ -1,0 +1,101 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/AshenAge/Tale_1_TheAshenDragon/bp_spawnitemoncaptainstable_flameskull -> BP_SpawnItemOnCaptainsTable_FlameSkull_C
+
+=== BP_SpawnItemOnCaptainsTable_FlameSkull_C::fn_idx_1698 (472 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named idx:281448@0x19fcd2f7c00
+  Expression:
+  $18: FinalFunction target=GetCrewShips@0x19e4cda5420 (
+    $27: EndFunctionParms
+  )
+$28: Context
+  ObjectExpression:
+  $29: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $50: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $59: LocalVariable named idx:281448@0x19fcd2f7c00
+    $68: literal int32 0
+    $73: LocalVariable named CallFunc_Array_Get_Item@0x19fcd2f7900
+    $82: EndFunctionParms
+  )
+$83: Let (Variable = Expression)
+  Variable:
+  $92: LocalVariable named idx:281449@0x19fcd2f7980
+  Expression:
+  $101: Context
+    ObjectExpression:
+    $102: LocalVariable named CallFunc_Array_Get_Item@0x19fcd2f7900
+    SkipBytes: 0x13
+    RValueProperty: idx:281449@0x19fcd2f7980
+    ContextExpression:
+    $123: FinalFunction target=GetShipLocatorPositionChecked@0x19e4d11bdd0 (
+      $132: LocalVariable named idx:281452@0x19fcd2f7680
+      $141: EndFunctionParms
+    )
+$142: Let (Variable = Expression)
+  Variable:
+  $151: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x19fcd2f7700
+  Expression:
+  $160: CallMath target=Add_VectorVector@0x19e4d370750 (
+    $169: LocalVariable named idx:281449@0x19fcd2f7980
+    $178: LocalVariable named Offset@0x19fcd2f7880
+    $187: EndFunctionParms
+  )
+$188: Let (Variable = Expression)
+  Variable:
+  $197: LocalVariable named CallFunc_Conv_VectorToTransform_ReturnValue@0x19fcd2f7780
+  Expression:
+  $206: CallMath target=Conv_VectorToTransform@0x19e4d376610 (
+    $215: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x19fcd2f7700
+    $224: EndFunctionParms
+  )
+$225: LetObj (Variable = Expression)
+  Variable:
+  $226: LocalVariable named idx:281450@0x19fcd2f7b80
+  Expression:
+  $235: FinalFunction target=SpawnPhasedItem@0x19e4cda9200 (
+    $244: InstanceVariable named skull@0x19fcd2f7b00
+    $253: LocalVariable named CallFunc_Conv_VectorToTransform_ReturnValue@0x19fcd2f7780
+    $262: True
+    $263: True
+    $264: literal text (not decoded)
+    $265: literal ansi string "Ancient Skull Lost"
+    $285: literal ansi string "08CD63224CCA07B611AC99BBA1D73139_FailureMessage7"
+    $335: literal ansi string ""
+    $337: EndFunctionParms
+  )
+$338: Context
+  ObjectExpression:
+  $339: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $360: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $369: LocalVariable named idx:281448@0x19fcd2f7c00
+    $378: literal int32 0
+    $383: LocalVariable named CallFunc_Array_Get_Item@0x19fcd2f7900
+    $392: EndFunctionParms
+  )
+$393: Context
+  ObjectExpression:
+  $394: LocalVariable named idx:281450@0x19fcd2f7b80
+  SkipBytes: 0x23
+  RValueProperty: (null)
+  ContextExpression:
+  $415: FinalFunction target=K2_AttachRootComponentToActor@0x19e4cd66660 (
+    $424: LocalVariable named CallFunc_Array_Get_Item@0x19fcd2f7900
+    $433: literal name "None"
+    $446: literal byte 0
+    $448: False
+    $449: EndFunctionParms
+  )
+$450: LetObj (Variable = Expression)
+  Variable:
+  $451: LocalOutVariable named SpawnedItem@0x19fcd2f7a00
+  Expression:
+  $460: LocalVariable named idx:281450@0x19fcd2f7b80
+$469: Return expression:
+  $470: Nothing
+$471: EndOfScript

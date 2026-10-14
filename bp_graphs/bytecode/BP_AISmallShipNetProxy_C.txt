@@ -1,0 +1,369 @@
+// /Game/Blueprints/Ships/Templates/NetProxies/bp_aismallshipnetproxy -> BP_AISmallShipNetProxy_C
+
+=== BP_AISmallShipNetProxy_C::fn_idx_221644 (377 bytes) ===
+$0: FlowStack.Push(0x176)
+$5: Let (Variable = Expression)
+  Variable:
+  $14: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fba783560
+  Expression:
+  $23: literal int32 0
+$28: Let (Variable = Expression)
+  Variable:
+  $37: LocalVariable named Temp_int_Array_Index_Variable@0x19fba7834f0
+  Expression:
+  $46: literal int32 0
+$51: Let (Variable = Expression)
+  Variable:
+  $60: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fba7871c0
+  Expression:
+  $69: Context
+    ObjectExpression:
+    $70: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19fba7871c0
+    ContextExpression:
+    $91: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $100: InstanceVariable named Dynamic Materials@0x19fbf1e3d00
+      $109: EndFunctionParms
+    )
+$110: LetBool (Variable = Expression)
+  Variable:
+  $111: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19fc170ff00
+  Expression:
+  $120: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $129: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fba783560
+    $138: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fba7871c0
+    $147: EndFunctionParms
+  )
+$148: PopExecutionFlowIfNot, cond:
+$149: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19fc170ff00
+$158: Let (Variable = Expression)
+  Variable:
+  $167: LocalVariable named Temp_int_Array_Index_Variable@0x19fba7834f0
+  Expression:
+  $176: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fba783560
+$185: FlowStack.Push(0x12c)
+$190: Context
+  ObjectExpression:
+  $191: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $212: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $221: InstanceVariable named Dynamic Materials@0x19fbf1e3d00
+    $230: LocalVariable named Temp_int_Array_Index_Variable@0x19fba7834f0
+    $239: LocalVariable named CallFunc_Array_Get_Item@0x19fc170fe80
+    $248: EndFunctionParms
+  )
+$249: Context
+  ObjectExpression:
+  $250: LocalVariable named CallFunc_Array_Get_Item@0x19fc170fe80
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $271: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $280: LocalVariable named Variable Name@0x19fba783410
+    $289: LocalVariable named Value@0x19fba783480
+    $298: EndFunctionParms
+  )
+$299: PopExecutionFlow (jump to popped addr)
+$300: Let (Variable = Expression)
+  Variable:
+  $309: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19fba7835d0
+  Expression:
+  $318: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $327: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fba783560
+    $336: literal int32 1
+    $341: EndFunctionParms
+  )
+$342: Let (Variable = Expression)
+  Variable:
+  $351: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fba783560
+  Expression:
+  $360: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19fba7835d0
+$369: Jump to offset 0x33
+$374: Return expression:
+  $375: Nothing
+$376: EndOfScript
+
+=== BP_AISmallShipNetProxy_C::fn_idx_221592 (450 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_And_IntInt_ReturnValue3@0x19fba7841a0
+  Expression:
+  $18: CallMath target=And_IntInt@0x19e4d370990 (
+    $27: LocalVariable named byte@0x19fba785080
+    $36: literal int32 1
+    $41: EndFunctionParms
+  )
+$42: LetBool (Variable = Expression)
+  Variable:
+  $43: LocalVariable named CallFunc_NotEqual_IntInt_ReturnValue3@0x19fbf1e0080
+  Expression:
+  $52: CallMath target=NotEqual_IntInt@0x19e4d390ff0 (
+    $61: LocalVariable named CallFunc_And_IntInt_ReturnValue3@0x19fba7841a0
+    $70: literal int32 0
+    $75: EndFunctionParms
+  )
+$76: Let (Variable = Expression)
+  Variable:
+  $85: LocalVariable named CallFunc_Conv_BoolToFloat_ReturnValue3@0x19fba783f00
+  Expression:
+  $94: CallMath target=Conv_BoolToFloat@0x19e4d374a40 (
+    $103: LocalVariable named CallFunc_NotEqual_IntInt_ReturnValue3@0x19fbf1e0080
+    $112: EndFunctionParms
+  )
+$113: VirtualFunction call "Set Value on All Materials" (
+  $126: literal name "EnableLantern00"
+  $139: LocalVariable named CallFunc_Conv_BoolToFloat_ReturnValue3@0x19fba783f00
+  $148: EndFunctionParms
+)
+$149: Let (Variable = Expression)
+  Variable:
+  $158: LocalVariable named CallFunc_And_IntInt_ReturnValue2@0x19fba784210
+  Expression:
+  $167: CallMath target=And_IntInt@0x19e4d370990 (
+    $176: LocalVariable named byte@0x19fba785080
+    $185: literal int32 2
+    $190: EndFunctionParms
+  )
+$191: LetBool (Variable = Expression)
+  Variable:
+  $192: LocalVariable named CallFunc_NotEqual_IntInt_ReturnValue2@0x19fbf1e0000
+  Expression:
+  $201: CallMath target=NotEqual_IntInt@0x19e4d390ff0 (
+    $210: LocalVariable named CallFunc_And_IntInt_ReturnValue2@0x19fba784210
+    $219: literal int32 0
+    $224: EndFunctionParms
+  )
+$225: Let (Variable = Expression)
+  Variable:
+  $234: LocalVariable named CallFunc_Conv_BoolToFloat_ReturnValue2@0x19fba784130
+  Expression:
+  $243: CallMath target=Conv_BoolToFloat@0x19e4d374a40 (
+    $252: LocalVariable named CallFunc_NotEqual_IntInt_ReturnValue2@0x19fbf1e0000
+    $261: EndFunctionParms
+  )
+$262: VirtualFunction call "Set Value on All Materials" (
+  $275: literal name "EnableLantern01"
+  $288: LocalVariable named CallFunc_Conv_BoolToFloat_ReturnValue2@0x19fba784130
+  $297: EndFunctionParms
+)
+$298: Let (Variable = Expression)
+  Variable:
+  $307: LocalVariable named CallFunc_And_IntInt_ReturnValue@0x19fba784de0
+  Expression:
+  $316: CallMath target=And_IntInt@0x19e4d370990 (
+    $325: LocalVariable named byte@0x19fba785080
+    $334: literal int32 4
+    $339: EndFunctionParms
+  )
+$340: LetBool (Variable = Expression)
+  Variable:
+  $341: LocalVariable named CallFunc_NotEqual_IntInt_ReturnValue@0x19fc170ff80
+  Expression:
+  $350: CallMath target=NotEqual_IntInt@0x19e4d390ff0 (
+    $359: LocalVariable named CallFunc_And_IntInt_ReturnValue@0x19fba784de0
+    $368: literal int32 0
+    $373: EndFunctionParms
+  )
+$374: Let (Variable = Expression)
+  Variable:
+  $383: LocalVariable named CallFunc_Conv_BoolToFloat_ReturnValue@0x19fba784280
+  Expression:
+  $392: CallMath target=Conv_BoolToFloat@0x19e4d374a40 (
+    $401: LocalVariable named CallFunc_NotEqual_IntInt_ReturnValue@0x19fc170ff80
+    $410: EndFunctionParms
+  )
+$411: VirtualFunction call "Set Value on All Materials" (
+  $424: literal name "EnableLantern02"
+  $437: LocalVariable named CallFunc_Conv_BoolToFloat_ReturnValue@0x19fba784280
+  $446: EndFunctionParms
+)
+$447: Return expression:
+  $448: Nothing
+$449: EndOfScript
+
+=== BP_AISmallShipNetProxy_C::fn_idx_221634 (558 bytes) ===
+$0: FlowStack.Push(0x22b)
+$5: Context
+  ObjectExpression:
+  $6: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $27: FinalFunction target=Array_Clear@0x19e4d366fd0 (
+    $36: InstanceVariable named Dynamic Materials@0x19fbf1e3d00
+    $45: EndFunctionParms
+  )
+$46: Let (Variable = Expression)
+  Variable:
+  $55: LocalVariable named Temp_int_Variable@0x19fba783f70
+  Expression:
+  $64: literal int32 0
+$69: Let (Variable = Expression)
+  Variable:
+  $78: LocalVariable named CallFunc_GetMaterials_ReturnValue@0x19fbf1e0200
+  Expression:
+  $87: Context
+    ObjectExpression:
+    $88: InstanceVariable named Mesh@0x19e4d237bd0
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetMaterials_ReturnValue@0x19fbf1e0200
+    ContextExpression:
+    $109: VirtualFunction call "GetMaterials" (
+      $122: EndFunctionParms
+    )
+$123: Let (Variable = Expression)
+  Variable:
+  $132: LocalVariable named CallFunc_Array_LastIndex_ReturnValue@0x19fba7840c0
+  Expression:
+  $141: Context
+    ObjectExpression:
+    $142: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_LastIndex_ReturnValue@0x19fba7840c0
+    ContextExpression:
+    $163: FinalFunction target=Array_LastIndex@0x19e4d367bd0 (
+      $172: LocalVariable named CallFunc_GetMaterials_ReturnValue@0x19fbf1e0200
+      $181: EndFunctionParms
+    )
+$182: LetBool (Variable = Expression)
+  Variable:
+  $183: LocalVariable named CallFunc_LessEqual_IntInt_ReturnValue@0x19fbf1e0180
+  Expression:
+  $192: CallMath target=LessEqual_IntInt@0x19e4d3869d0 (
+    $201: LocalVariable named Temp_int_Variable@0x19fba783f70
+    $210: LocalVariable named CallFunc_Array_LastIndex_ReturnValue@0x19fba7840c0
+    $219: EndFunctionParms
+  )
+$220: PopExecutionFlowIfNot, cond:
+$221: LocalVariable named CallFunc_LessEqual_IntInt_ReturnValue@0x19fbf1e0180
+$230: FlowStack.Push(0x1e1)
+$235: Let (Variable = Expression)
+  Variable:
+  $244: LocalVariable named CallFunc_GetMaterials_ReturnValue@0x19fbf1e0200
+  Expression:
+  $253: Context
+    ObjectExpression:
+    $254: InstanceVariable named Mesh@0x19e4d237bd0
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetMaterials_ReturnValue@0x19fbf1e0200
+    ContextExpression:
+    $275: VirtualFunction call "GetMaterials" (
+      $288: EndFunctionParms
+    )
+$289: Context
+  ObjectExpression:
+  $290: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $311: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $320: LocalVariable named CallFunc_GetMaterials_ReturnValue@0x19fbf1e0200
+    $329: LocalVariable named Temp_int_Variable@0x19fba783f70
+    $338: LocalVariable named CallFunc_Array_Get_Item@0x19fbf1e0100
+    $347: EndFunctionParms
+  )
+$348: LetObj (Variable = Expression)
+  Variable:
+  $349: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19fbf1e0280
+  Expression:
+  $358: Context
+    ObjectExpression:
+    $359: InstanceVariable named Mesh@0x19e4d237bd0
+    SkipBytes: 0x20
+    RValueProperty: CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19fbf1e0280
+    ContextExpression:
+    $380: VirtualFunction call "CreateDynamicMaterialInstance" (
+      $393: LocalVariable named Temp_int_Variable@0x19fba783f70
+      $402: LocalVariable named CallFunc_Array_Get_Item@0x19fbf1e0100
+      $411: EndFunctionParms
+    )
+$412: Let (Variable = Expression)
+  Variable:
+  $421: LocalVariable named CallFunc_Array_Add_ReturnValue@0x19fbd8b0d20
+  Expression:
+  $430: Context
+    ObjectExpression:
+    $431: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Add_ReturnValue@0x19fbd8b0d20
+    ContextExpression:
+    $452: FinalFunction target=Array_Add@0x19e4d366810 (
+      $461: InstanceVariable named Dynamic Materials@0x19fbf1e3d00
+      $470: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19fbf1e0280
+      $479: EndFunctionParms
+    )
+$480: PopExecutionFlow (jump to popped addr)
+$481: Let (Variable = Expression)
+  Variable:
+  $490: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19fba783950
+  Expression:
+  $499: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $508: LocalVariable named Temp_int_Variable@0x19fba783f70
+    $517: literal int32 1
+    $522: EndFunctionParms
+  )
+$523: Let (Variable = Expression)
+  Variable:
+  $532: LocalVariable named Temp_int_Variable@0x19fba783f70
+  Expression:
+  $541: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19fba783950
+$550: Jump to offset 0x45
+$555: Return expression:
+  $556: Nothing
+$557: EndOfScript
+
+=== BP_AISmallShipNetProxy_C::fn_idx_9202 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_AISmallShipNetProxy_C::fn_idx_9152 (22 bytes) ===
+$0: VirtualFunction call "idx:277365" (
+  $13: literal int32 80
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_AISmallShipNetProxy_C::fn_idx_1858 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_LanternStateBits@0x19fba783e20
+  Expression:
+  $9: LocalVariable named LanternStateBits@0x19fba784050
+$18: VirtualFunction call "idx:277365" (
+  $31: literal int32 85
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_AISmallShipNetProxy_C::fn_idx_277365 (111 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fba783fe0
+$10: VirtualFunction call "Create Dynamic Materials" (
+  $23: EndFunctionParms
+)
+$24: Let (Variable = Expression)
+  Variable:
+  $33: LocalVariable named CallFunc_GetLanternBits_ReturnValue@0x19fba783870
+  Expression:
+  $42: FinalFunction target=GetLanternBits@0x19e4d237e90 (
+    $51: EndFunctionParms
+  )
+$52: VirtualFunction call "Apply Bits to Lanterns" (
+  $65: LocalVariable named CallFunc_GetLanternBits_ReturnValue@0x19fba783870
+  $74: EndFunctionParms
+)
+$75: Jump to offset 0x6c
+$80: Jump to offset 0xa
+$85: VirtualFunction call "Apply Bits to Lanterns" (
+  $98: LocalVariable named K2Node_Event_LanternStateBits@0x19fba783e20
+  $107: EndFunctionParms
+)
+$108: Return expression:
+  $109: Nothing
+$110: EndOfScript

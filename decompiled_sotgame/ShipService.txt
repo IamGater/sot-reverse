@@ -1,0 +1,84 @@
+// Class: ShipService (3 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+ShipService::GetNumShips @ RVA 0xCF7310 EA 0x7FF6F4717310
+======================================================================
+__int64 __fastcall sub_7FF6F4717310(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F41B76D0(a1 + 1112);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ShipService::IsWorldPosInsideCabin @ RVA 0xCF82F0 EA 0x7FF6F47182F0
+======================================================================
+__int64 __fastcall sub_7FF6F47182F0(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  _BYTE *v7; // rdx
+  __int64 v8; // rax
+  __int64 result; // rax
+  _BYTE v10[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  v3 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v7 = v10;
+  if ( a2[7] )
+    v7 = (_BYTE *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = sub_7FF6F41BBA80(a1 + 1112, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ShipService::IsWorldPosInsideHull @ RVA 0xCF8390 EA 0x7FF6F4718390
+======================================================================
+__int64 __fastcall sub_7FF6F4718390(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  _BYTE *v7; // rdx
+  __int64 v8; // rax
+  __int64 result; // rax
+  _BYTE v10[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  v3 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v7 = v10;
+  if ( a2[7] )
+    v7 = (_BYTE *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = sub_7FF6F41BBBF0(a1 + 1112, v7);
+  *a3 = result;
+  return result;
+}
+

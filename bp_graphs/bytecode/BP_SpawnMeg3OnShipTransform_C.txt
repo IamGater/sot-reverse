@@ -1,0 +1,151 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Onboarding/bp_spawnmeg3onshiptransform -> BP_SpawnMeg3OnShipTransform_C
+
+=== BP_SpawnMeg3OnShipTransform_C::fn_idx_1698 (598 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named idx:283236@0x19fce700100
+  Expression:
+  $10: NoObject
+$11: Let (Variable = Expression)
+  Variable:
+  $20: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19fce700200
+  Expression:
+  $29: FinalFunction target=GetCrewShips@0x19e4cda5420 (
+    $38: EndFunctionParms
+  )
+$39: Let (Variable = Expression)
+  Variable:
+  $48: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fcdbb4600
+  Expression:
+  $57: Context
+    ObjectExpression:
+    $58: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19fcdbb4600
+    ContextExpression:
+    $79: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $88: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19fce700200
+      $97: EndFunctionParms
+    )
+$98: LetBool (Variable = Expression)
+  Variable:
+  $99: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fce6efc80
+  Expression:
+  $108: CallMath target=Greater_IntInt@0x19e4d382770 (
+    $117: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fcdbb4600
+    $126: literal int32 0
+    $131: EndFunctionParms
+  )
+$132: JumpIfNot -> 0x253, cond:
+  $137: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fce6efc80
+$146: Context
+  ObjectExpression:
+  $147: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $168: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $177: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19fce700200
+    $186: literal int32 0
+    $191: LocalVariable named CallFunc_Array_Get_Item@0x19fce6efb00
+    $200: EndFunctionParms
+  )
+$201: Let (Variable = Expression)
+  Variable:
+  $210: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19fce6efc00
+  Expression:
+  $219: Context
+    ObjectExpression:
+    $220: LocalVariable named CallFunc_Array_Get_Item@0x19fce6efb00
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetTransform_ReturnValue@0x19fce6efc00
+    ContextExpression:
+    $241: FinalFunction target=GetTransform@0x19e4cd64700 (
+      $250: EndFunctionParms
+    )
+$251: CallMath target=BreakTransform@0x19e4d372df0 (
+  $260: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19fce6efc00
+  $269: LocalVariable named CallFunc_BreakTransform_Location@0x19fce6efd00
+  $278: LocalVariable named CallFunc_BreakTransform_Rotation@0x19fce6efd80
+  $287: LocalVariable named CallFunc_BreakTransform_Scale@0x19fce6efe00
+  $296: EndFunctionParms
+)
+$297: CallMath target=BreakRotator@0x19e4d372530 (
+  $306: LocalVariable named CallFunc_BreakTransform_Rotation@0x19fce6efd80
+  $315: LocalVariable named CallFunc_BreakRotator_Roll@0x19fcdbb4670
+  $324: LocalVariable named CallFunc_BreakRotator_Pitch@0x19fcdbb46e0
+  $333: LocalVariable named CallFunc_BreakRotator_Yaw@0x19fcdbb4750
+  $342: EndFunctionParms
+)
+$343: CallMath target=BreakVector@0x19e4d3730b0 (
+  $352: LocalVariable named CallFunc_BreakTransform_Location@0x19fce6efd00
+  $361: LocalVariable named CallFunc_BreakVector_X@0x19fcdbb47c0
+  $370: LocalVariable named CallFunc_BreakVector_Y@0x19fcdbb5400
+  $379: LocalVariable named CallFunc_BreakVector_Z@0x19fcdbb5a20
+  $388: EndFunctionParms
+)
+$389: Let (Variable = Expression)
+  Variable:
+  $398: LocalVariable named CallFunc_MakeRotator_ReturnValue@0x19fce6efe80
+  Expression:
+  $407: CallMath target=MakeRotator@0x19e4d388d90 (
+    $416: LocalVariable named CallFunc_BreakRotator_Roll@0x19fcdbb4670
+    $425: literal float 0
+    $430: LocalVariable named CallFunc_BreakRotator_Yaw@0x19fcdbb4750
+    $439: EndFunctionParms
+  )
+$440: Let (Variable = Expression)
+  Variable:
+  $449: LocalVariable named CallFunc_MakeVector_ReturnValue@0x19fce6eff00
+  Expression:
+  $458: CallMath target=MakeVector@0x19e4d38a910 (
+    $467: LocalVariable named CallFunc_BreakVector_X@0x19fcdbb47c0
+    $476: LocalVariable named CallFunc_BreakVector_Y@0x19fcdbb5400
+    $485: literal float 0
+    $490: EndFunctionParms
+  )
+$491: Let (Variable = Expression)
+  Variable:
+  $500: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x19fce6eff80
+  Expression:
+  $509: CallMath target=MakeTransform@0x19e4d38a650 (
+    $518: LocalVariable named CallFunc_MakeVector_ReturnValue@0x19fce6eff00
+    $527: LocalVariable named CallFunc_MakeRotator_ReturnValue@0x19fce6efe80
+    $536: LocalVariable named CallFunc_BreakTransform_Scale@0x19fce6efe00
+    $545: EndFunctionParms
+  )
+$546: LetObj (Variable = Expression)
+  Variable:
+  $547: LocalVariable named idx:282892@0x19fce700080
+  Expression:
+  $556: FinalFunction target=SpawnActor@0x19e4cda7ec0 (
+    $565: InstanceVariable named idx:283247@0x19fce700400
+    $574: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x19fce6eff80
+    $583: True
+    $584: EndFunctionParms
+  )
+$585: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $594: EndFunctionParms
+)
+$595: Return expression:
+  $596: Nothing
+$597: EndOfScript
+
+=== BP_SpawnMeg3OnShipTransform_C::fn_idx_1828 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fce700300
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fce700280
+$18: VirtualFunction call "idx:283246" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_SpawnMeg3OnShipTransform_C::fn_idx_283246 (13 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fcdbb5010
+$10: Return expression:
+  $11: Nothing
+$12: EndOfScript

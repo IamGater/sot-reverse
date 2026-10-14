@@ -1,0 +1,20 @@
+// Auto-reconstructed from serialized Kismet bytecode and SDK reflection.
+// C++-style logic; original editor graph layout is unavailable in the input.
+
+// Recovered Kismet: BP_DestroyEliChestVO_C::OnBegin (40 bytes)
+void BP_DestroyEliChestVO_C::OnBegin()
+{
+    ExecuteUbergraph_BP_DestroyEliChestVO();
+    return;
+}
+
+// Recovered Kismet: BP_DestroyEliChestVO_C::ExecuteUbergraph_BP_DestroyEliChestVO (206 bytes)
+void BP_DestroyEliChestVO_C::ExecuteUbergraph_BP_DestroyEliChestVO()
+{
+    this->GetVariables(CallFunc_GetVariables_OutStruct);
+    auto CallFunc_IsValid_ReturnValue = KismetSystemLibrary->this->IsValid(CallFunc_GetVariables_OutStruct);
+    if (!CallFunc_IsValid_ReturnValue) goto L_C1;
+L_C1:
+    this->SignalComplete();
+    return;
+}

@@ -1,0 +1,2103 @@
+// Class: KismetInputLibrary (39 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+KismetInputLibrary::CalibrateTilt @ RVA 0x2C246F0 EA 0x7FF6F66446F0
+======================================================================
+__int64 __fastcall sub_7FF6F66446F0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F5E5C680();
+}
+
+
+======================================================================
+KismetInputLibrary::ControllerEvent_GetAnalogValue @ RVA 0x2C28400 EA 0x7FF6F6648400
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6648400(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v5; // rdi
+  int v6; // eax
+  _QWORD *v7; // rcx
+  __int64 v8; // rax
+  _QWORD v10[2]; // [rsp+30h] [rbp-50h] BYREF
+  char v11; // [rsp+40h] [rbp-40h]
+  int v12; // [rsp+44h] [rbp-3Ch]
+  char v13; // [rsp+48h] [rbp-38h]
+  __int64 v14; // [rsp+50h] [rbp-30h]
+  __int64 v15; // [rsp+58h] [rbp-28h] BYREF
+  __int128 v16; // [rsp+60h] [rbp-20h] BYREF
+  int v17; // [rsp+70h] [rbp-10h]
+  int v18; // [rsp+78h] [rbp-8h]
+
+  v10[1] = 0;
+  v11 = 0;
+  v5 = 0;
+  v12 = 0;
+  v13 = 0;
+  v14 = 0;
+  v10[0] = off_7FF6F8C1B178;
+  v15 = qword_7FF6FA527CD8;
+  v16 = xmmword_7FF6FA527CE0;
+  if ( !*((_QWORD *)&xmmword_7FF6FA527CE0 + 1) )
+    goto LABEL_6;
+  if ( _InterlockedIncrement((volatile signed __int32 *)(*((_QWORD *)&xmmword_7FF6FA527CE0 + 1) + 8LL)) == 1 )
+    MEMORY[0] = (char *)&v16 + 8;
+  if ( *((_QWORD *)&v16 + 1) )
+    v6 = *(_DWORD *)(*((_QWORD *)&v16 + 1) + 24LL);
+  else
+LABEL_6:
+    v6 = 0;
+  v17 = v6;
+  v18 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v7 = v10;
+  if ( a2[7] )
+    v7 = (_QWORD *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v5) = v8 != 0;
+  a2[4] = v8 + v5;
+  *a3 = sub_7FF6F5E5FE80(v7);
+  return sub_7FF6F3C36760(&v15);
+}
+
+
+======================================================================
+KismetInputLibrary::ControllerEvent_GetEffectingButton @ RVA 0x2C28530 EA 0x7FF6F6648530
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6648530(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  int v5; // ebx
+  int v6; // eax
+  _QWORD *v7; // rdx
+  __int64 v8; // rax
+  __int64 v9; // rcx
+  __int64 v10; // rcx
+  _BYTE v12[40]; // [rsp+30h] [rbp-21h] BYREF
+  _QWORD v13[2]; // [rsp+58h] [rbp+7h] BYREF
+  char v14; // [rsp+68h] [rbp+17h]
+  int v15; // [rsp+6Ch] [rbp+1Bh]
+  char v16; // [rsp+70h] [rbp+1Fh]
+  __int64 v17; // [rsp+78h] [rbp+27h]
+  __int64 v18; // [rsp+80h] [rbp+2Fh] BYREF
+  __int128 v19; // [rsp+88h] [rbp+37h] BYREF
+  int v20; // [rsp+98h] [rbp+47h]
+  int v21; // [rsp+A0h] [rbp+4Fh]
+
+  v13[1] = 0;
+  v14 = 0;
+  v5 = 0;
+  v15 = 0;
+  v16 = 0;
+  v17 = 0;
+  v13[0] = off_7FF6F8C1B178;
+  v18 = qword_7FF6FA527CD8;
+  v19 = xmmword_7FF6FA527CE0;
+  if ( !*((_QWORD *)&xmmword_7FF6FA527CE0 + 1) )
+    goto LABEL_6;
+  if ( _InterlockedIncrement((volatile signed __int32 *)(*((_QWORD *)&xmmword_7FF6FA527CE0 + 1) + 8LL)) == 1 )
+    MEMORY[0] = (char *)&v19 + 8;
+  if ( *((_QWORD *)&v19 + 1) )
+    v6 = *(_DWORD *)(*((_QWORD *)&v19 + 1) + 24LL);
+  else
+LABEL_6:
+    v6 = 0;
+  v20 = v6;
+  v21 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v13);
+  }
+  v7 = v13;
+  if ( a2[7] )
+    v7 = (_QWORD *)a2[7];
+  a2[4] += a2[4] != 0;
+  v8 = sub_7FF6F5E5FE90(v12, v7);
+  *(_QWORD *)a3 = *(_QWORD *)v8;
+  v9 = *(_QWORD *)(v8 + 8);
+  if ( *(_QWORD *)(a3 + 8) != v9 )
+  {
+    *(_QWORD *)(a3 + 8) = v9;
+    *(_QWORD *)(v8 + 8) = 0;
+    v10 = *(_QWORD *)(v8 + 16);
+    if ( v10 )
+      v5 = *(_DWORD *)(v10 + 24);
+    *(_DWORD *)(a3 + 24) = v5;
+    *(_DWORD *)(v8 + 24) = -2040109466;
+    sub_7FF6F3C379A0(a3 + 16, v8 + 16);
+  }
+  sub_7FF6F3C36760(v12);
+  return sub_7FF6F3C36760(&v18);
+}
+
+
+======================================================================
+KismetInputLibrary::ControllerEvent_GetUserIndex @ RVA 0x2C286B0 EA 0x7FF6F66486B0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F66486B0(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v5; // rdi
+  int v6; // eax
+  _QWORD *v7; // rcx
+  __int64 v8; // rax
+  _QWORD v10[2]; // [rsp+30h] [rbp-50h] BYREF
+  char v11; // [rsp+40h] [rbp-40h]
+  int v12; // [rsp+44h] [rbp-3Ch]
+  char v13; // [rsp+48h] [rbp-38h]
+  __int64 v14; // [rsp+50h] [rbp-30h]
+  __int64 v15; // [rsp+58h] [rbp-28h] BYREF
+  __int128 v16; // [rsp+60h] [rbp-20h] BYREF
+  int v17; // [rsp+70h] [rbp-10h]
+  int v18; // [rsp+78h] [rbp-8h]
+
+  v10[1] = 0;
+  v11 = 0;
+  v5 = 0;
+  v12 = 0;
+  v13 = 0;
+  v14 = 0;
+  v10[0] = off_7FF6F8C1B178;
+  v15 = qword_7FF6FA527CD8;
+  v16 = xmmword_7FF6FA527CE0;
+  if ( !*((_QWORD *)&xmmword_7FF6FA527CE0 + 1) )
+    goto LABEL_6;
+  if ( _InterlockedIncrement((volatile signed __int32 *)(*((_QWORD *)&xmmword_7FF6FA527CE0 + 1) + 8LL)) == 1 )
+    MEMORY[0] = (char *)&v16 + 8;
+  if ( *((_QWORD *)&v16 + 1) )
+    v6 = *(_DWORD *)(*((_QWORD *)&v16 + 1) + 24LL);
+  else
+LABEL_6:
+    v6 = 0;
+  v17 = v6;
+  v18 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v7 = v10;
+  if ( a2[7] )
+    v7 = (_QWORD *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v5) = v8 != 0;
+  a2[4] = v8 + v5;
+  *a3 = sub_7FF6F5E5FEE0(v7);
+  return sub_7FF6F3C36760(&v15);
+}
+
+
+======================================================================
+KismetInputLibrary::EqualEqual_KeyKey @ RVA 0x2C2F2E0 EA 0x7FF6F664F2E0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F664F2E0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  int v5; // ebx
+  int v6; // edx
+  __int64 v8; // [rsp+28h] [rbp-39h] BYREF
+  __int128 v9; // [rsp+30h] [rbp-31h]
+  int v10; // [rsp+40h] [rbp-21h]
+  __int64 v11; // [rsp+48h] [rbp-19h] BYREF
+  __int128 v12; // [rsp+50h] [rbp-11h]
+  int v13; // [rsp+60h] [rbp-1h]
+  __int64 v14; // [rsp+68h] [rbp+7h] BYREF
+  __int128 v15; // [rsp+70h] [rbp+Fh] BYREF
+  int v16; // [rsp+80h] [rbp+1Fh]
+  __int64 v17; // [rsp+88h] [rbp+27h] BYREF
+  __int128 v18; // [rsp+90h] [rbp+2Fh] BYREF
+  int v19; // [rsp+A0h] [rbp+3Fh]
+  __int64 v20; // [rsp+A8h] [rbp+47h]
+
+  v20 = -2;
+  v5 = 0;
+  v11 = 0;
+  v12 = 0;
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v8 = 0;
+  v9 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  a2[4] += a2[4] != 0;
+  v14 = v8;
+  v15 = v9;
+  if ( !*((_QWORD *)&v9 + 1) )
+    goto LABEL_12;
+  if ( _InterlockedIncrement((volatile signed __int32 *)(*((_QWORD *)&v9 + 1) + 8LL)) == 1 )
+    MEMORY[0] = (char *)&v15 + 8;
+  if ( *((_QWORD *)&v15 + 1) )
+    v6 = *(_DWORD *)(*((_QWORD *)&v15 + 1) + 24LL);
+  else
+LABEL_12:
+    v6 = 0;
+  v16 = v6;
+  v17 = v11;
+  v18 = v12;
+  if ( *((_QWORD *)&v12 + 1) )
+  {
+    if ( _InterlockedIncrement((volatile signed __int32 *)(*((_QWORD *)&v12 + 1) + 8LL)) == 1 )
+      MEMORY[0] = (char *)&v18 + 8;
+    if ( *((_QWORD *)&v18 + 1) )
+      v5 = *(_DWORD *)(*((_QWORD *)&v18 + 1) + 24LL);
+  }
+  v19 = v5;
+  *a3 = sub_7FF6F5E662B0(&v17, &v14);
+  sub_7FF6F3C36760(&v8);
+  return sub_7FF6F3C36760(&v11);
+}
+
+
+======================================================================
+KismetInputLibrary::GetAnalogValue @ RVA 0x2C31860 EA 0x7FF6F6651860
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6651860(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v5; // rdi
+  _QWORD *v6; // rcx
+  __int64 v7; // rax
+  _QWORD v9[2]; // [rsp+38h] [rbp-39h] BYREF
+  char v10; // [rsp+48h] [rbp-29h]
+  int v11; // [rsp+4Ch] [rbp-25h]
+  char v12; // [rsp+50h] [rbp-21h]
+  __int64 v13; // [rsp+58h] [rbp-19h]
+  __int64 v14; // [rsp+60h] [rbp-11h] BYREF
+  __int128 v15; // [rsp+68h] [rbp-9h]
+  int v16; // [rsp+78h] [rbp+7h]
+  __int64 v17; // [rsp+80h] [rbp+Fh]
+  int v18; // [rsp+88h] [rbp+17h]
+  __int64 v19; // [rsp+98h] [rbp+27h] BYREF
+  __int128 v20; // [rsp+A0h] [rbp+2Fh]
+  int v21; // [rsp+B0h] [rbp+3Fh]
+  __int64 v22; // [rsp+B8h] [rbp+47h]
+
+  v22 = -2;
+  v5 = 0;
+  v19 = 0;
+  v20 = 0;
+  v21 = 0;
+  v9[1] = 0;
+  v10 = 0;
+  v11 = 0;
+  v12 = 0;
+  v13 = 0;
+  v14 = 0;
+  v15 = 0;
+  v16 = 0;
+  v17 = 0;
+  sub_7FF6F3C36760(&v19);
+  v9[0] = off_7FF6F8C1B148;
+  v18 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  *a3 = sub_7FF6F5E68A10(v6);
+  return sub_7FF6F3C36760(&v14);
+}
+
+
+======================================================================
+KismetInputLibrary::GetKey @ RVA 0x2C32A50 EA 0x7FF6F6652A50
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6652A50(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  int v5; // ebx
+  _QWORD *v6; // rdx
+  __int64 v7; // rax
+  __int64 v8; // rcx
+  __int64 v9; // rcx
+  _QWORD v11[2]; // [rsp+38h] [rbp-29h] BYREF
+  char v12; // [rsp+48h] [rbp-19h]
+  int v13; // [rsp+4Ch] [rbp-15h]
+  char v14; // [rsp+50h] [rbp-11h]
+  __int64 v15; // [rsp+58h] [rbp-9h]
+  __int64 v16; // [rsp+60h] [rbp-1h] BYREF
+  __int128 v17; // [rsp+68h] [rbp+7h]
+  int v18; // [rsp+78h] [rbp+17h]
+  __int64 v19; // [rsp+80h] [rbp+1Fh]
+  __int64 v20; // [rsp+88h] [rbp+27h]
+  _BYTE v21[40]; // [rsp+90h] [rbp+2Fh] BYREF
+
+  v20 = -2;
+  v11[1] = 0;
+  v12 = 0;
+  v5 = 0;
+  v13 = 0;
+  v14 = 0;
+  v15 = 0;
+  v11[0] = off_7FF6F8821410;
+  v16 = 0;
+  v17 = 0;
+  v18 = 0;
+  v19 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v6 = v11;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  a2[4] += a2[4] != 0;
+  v7 = sub_7FF6F5E69AA0(v21, v6);
+  *(_QWORD *)a3 = *(_QWORD *)v7;
+  v8 = *(_QWORD *)(v7 + 8);
+  if ( *(_QWORD *)(a3 + 8) != v8 )
+  {
+    *(_QWORD *)(a3 + 8) = v8;
+    *(_QWORD *)(v7 + 8) = 0;
+    v9 = *(_QWORD *)(v7 + 16);
+    if ( v9 )
+      v5 = *(_DWORD *)(v9 + 24);
+    *(_DWORD *)(a3 + 24) = v5;
+    *(_DWORD *)(v7 + 24) = -2040109466;
+    sub_7FF6F3C379A0(a3 + 16, v7 + 16);
+  }
+  sub_7FF6F3C36760(v21);
+  return sub_7FF6F3C36760(&v16);
+}
+
+
+======================================================================
+KismetInputLibrary::GetUserIndex @ RVA 0x2C33F90 EA 0x7FF6F6653F90
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6653F90(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v5; // rdi
+  _QWORD *v6; // rcx
+  __int64 v7; // rax
+  _QWORD v9[2]; // [rsp+48h] [rbp+7h] BYREF
+  char v10; // [rsp+58h] [rbp+17h]
+  int v11; // [rsp+5Ch] [rbp+1Bh]
+  char v12; // [rsp+60h] [rbp+1Fh]
+  __int64 v13; // [rsp+68h] [rbp+27h]
+  __int64 v14; // [rsp+70h] [rbp+2Fh] BYREF
+  __int128 v15; // [rsp+78h] [rbp+37h]
+  int v16; // [rsp+88h] [rbp+47h]
+  __int64 v17; // [rsp+90h] [rbp+4Fh]
+
+  v9[1] = 0;
+  v10 = 0;
+  v5 = 0;
+  v11 = 0;
+  v12 = 0;
+  v13 = 0;
+  v9[0] = off_7FF6F8821410;
+  v14 = 0;
+  v15 = 0;
+  v16 = 0;
+  v17 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  *a3 = sub_7FF6F5E6C5C0(v6);
+  return sub_7FF6F3C36760(&v14);
+}
+
+
+======================================================================
+KismetInputLibrary::InputEvent_IsAltDown @ RVA 0x2C355A0 EA 0x7FF6F66555A0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F66555A0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  _QWORD *v6; // rcx
+  __int64 v7; // rax
+  __int64 result; // rax
+  _QWORD v9[2]; // [rsp+28h] [rbp-30h] BYREF
+  char v10; // [rsp+38h] [rbp-20h]
+  int v11; // [rsp+3Ch] [rbp-1Ch]
+  char v12; // [rsp+40h] [rbp-18h]
+  __int64 v13; // [rsp+48h] [rbp-10h]
+
+  v9[0] = off_7FF6F88213F8;
+  v9[1] = 0;
+  v10 = 0;
+  v5 = 0;
+  v11 = 0;
+  v12 = 0;
+  v13 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  result = sub_7FF6F5E6DA70(v6);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+KismetInputLibrary::InputEvent_IsCommandDown @ RVA 0x2C35660 EA 0x7FF6F6655660
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6655660(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  _QWORD *v6; // rcx
+  __int64 v7; // rax
+  __int64 result; // rax
+  _QWORD v9[2]; // [rsp+28h] [rbp-30h] BYREF
+  char v10; // [rsp+38h] [rbp-20h]
+  int v11; // [rsp+3Ch] [rbp-1Ch]
+  char v12; // [rsp+40h] [rbp-18h]
+  __int64 v13; // [rsp+48h] [rbp-10h]
+
+  v9[0] = off_7FF6F88213F8;
+  v9[1] = 0;
+  v10 = 0;
+  v5 = 0;
+  v11 = 0;
+  v12 = 0;
+  v13 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  result = sub_7FF6F5E6DA90(v6);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+KismetInputLibrary::InputEvent_IsControlDown @ RVA 0x2C35720 EA 0x7FF6F6655720
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6655720(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  _QWORD *v6; // rcx
+  __int64 v7; // rax
+  __int64 result; // rax
+  _QWORD v9[2]; // [rsp+28h] [rbp-30h] BYREF
+  char v10; // [rsp+38h] [rbp-20h]
+  int v11; // [rsp+3Ch] [rbp-1Ch]
+  char v12; // [rsp+40h] [rbp-18h]
+  __int64 v13; // [rsp+48h] [rbp-10h]
+
+  v9[0] = off_7FF6F88213F8;
+  v9[1] = 0;
+  v10 = 0;
+  v5 = 0;
+  v11 = 0;
+  v12 = 0;
+  v13 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  result = sub_7FF6F5E6DAB0(v6);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+KismetInputLibrary::InputEvent_IsLeftAltDown @ RVA 0x2C357E0 EA 0x7FF6F66557E0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F66557E0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  _QWORD *v6; // rcx
+  __int64 v7; // rax
+  __int64 result; // rax
+  _QWORD v9[2]; // [rsp+28h] [rbp-30h] BYREF
+  char v10; // [rsp+38h] [rbp-20h]
+  int v11; // [rsp+3Ch] [rbp-1Ch]
+  char v12; // [rsp+40h] [rbp-18h]
+  __int64 v13; // [rsp+48h] [rbp-10h]
+
+  v9[0] = off_7FF6F88213F8;
+  v9[1] = 0;
+  v10 = 0;
+  v5 = 0;
+  v11 = 0;
+  v12 = 0;
+  v13 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  result = sub_7FF6F5E6DAD0(v6);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+KismetInputLibrary::InputEvent_IsLeftCommandDown @ RVA 0x2C358A0 EA 0x7FF6F66558A0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F66558A0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  _QWORD *v6; // rcx
+  __int64 v7; // rax
+  __int64 result; // rax
+  _QWORD v9[2]; // [rsp+28h] [rbp-30h] BYREF
+  char v10; // [rsp+38h] [rbp-20h]
+  int v11; // [rsp+3Ch] [rbp-1Ch]
+  char v12; // [rsp+40h] [rbp-18h]
+  __int64 v13; // [rsp+48h] [rbp-10h]
+
+  v9[0] = off_7FF6F88213F8;
+  v9[1] = 0;
+  v10 = 0;
+  v5 = 0;
+  v11 = 0;
+  v12 = 0;
+  v13 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  result = sub_7FF6F5E6DAE0(v6);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+KismetInputLibrary::InputEvent_IsLeftControlDown @ RVA 0x2C35960 EA 0x7FF6F6655960
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6655960(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  _QWORD *v6; // rcx
+  __int64 v7; // rax
+  __int64 result; // rax
+  _QWORD v9[2]; // [rsp+28h] [rbp-30h] BYREF
+  char v10; // [rsp+38h] [rbp-20h]
+  int v11; // [rsp+3Ch] [rbp-1Ch]
+  char v12; // [rsp+40h] [rbp-18h]
+  __int64 v13; // [rsp+48h] [rbp-10h]
+
+  v9[0] = off_7FF6F88213F8;
+  v9[1] = 0;
+  v10 = 0;
+  v5 = 0;
+  v11 = 0;
+  v12 = 0;
+  v13 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  result = sub_7FF6F5E6DAF0(v6);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+KismetInputLibrary::InputEvent_IsLeftShiftDown @ RVA 0x2C35A20 EA 0x7FF6F6655A20
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6655A20(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  _QWORD *v6; // rcx
+  __int64 v7; // rax
+  __int64 result; // rax
+  _QWORD v9[2]; // [rsp+28h] [rbp-30h] BYREF
+  char v10; // [rsp+38h] [rbp-20h]
+  int v11; // [rsp+3Ch] [rbp-1Ch]
+  char v12; // [rsp+40h] [rbp-18h]
+  __int64 v13; // [rsp+48h] [rbp-10h]
+
+  v9[0] = off_7FF6F88213F8;
+  v9[1] = 0;
+  v10 = 0;
+  v5 = 0;
+  v11 = 0;
+  v12 = 0;
+  v13 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  result = sub_7FF6F5E6DB00(v6);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+KismetInputLibrary::InputEvent_IsRepeat @ RVA 0x2C35AE0 EA 0x7FF6F6655AE0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6655AE0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  _QWORD *v6; // rcx
+  __int64 v7; // rax
+  __int64 result; // rax
+  _QWORD v9[2]; // [rsp+28h] [rbp-30h] BYREF
+  char v10; // [rsp+38h] [rbp-20h]
+  int v11; // [rsp+3Ch] [rbp-1Ch]
+  char v12; // [rsp+40h] [rbp-18h]
+  __int64 v13; // [rsp+48h] [rbp-10h]
+
+  v9[0] = off_7FF6F88213F8;
+  v9[1] = 0;
+  v10 = 0;
+  v5 = 0;
+  v11 = 0;
+  v12 = 0;
+  v13 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  result = sub_7FF6F5E6DB10(v6);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+KismetInputLibrary::InputEvent_IsRightAltDown @ RVA 0x2C35BA0 EA 0x7FF6F6655BA0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6655BA0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  _QWORD *v6; // rcx
+  __int64 v7; // rax
+  __int64 result; // rax
+  _QWORD v9[2]; // [rsp+28h] [rbp-30h] BYREF
+  char v10; // [rsp+38h] [rbp-20h]
+  int v11; // [rsp+3Ch] [rbp-1Ch]
+  char v12; // [rsp+40h] [rbp-18h]
+  __int64 v13; // [rsp+48h] [rbp-10h]
+
+  v9[0] = off_7FF6F88213F8;
+  v9[1] = 0;
+  v10 = 0;
+  v5 = 0;
+  v11 = 0;
+  v12 = 0;
+  v13 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  result = sub_7FF6F5E6DB20(v6);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+KismetInputLibrary::InputEvent_IsRightCommandDown @ RVA 0x2C35C60 EA 0x7FF6F6655C60
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6655C60(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  _QWORD *v6; // rcx
+  __int64 v7; // rax
+  __int64 result; // rax
+  _QWORD v9[2]; // [rsp+28h] [rbp-30h] BYREF
+  char v10; // [rsp+38h] [rbp-20h]
+  int v11; // [rsp+3Ch] [rbp-1Ch]
+  char v12; // [rsp+40h] [rbp-18h]
+  __int64 v13; // [rsp+48h] [rbp-10h]
+
+  v9[0] = off_7FF6F88213F8;
+  v9[1] = 0;
+  v10 = 0;
+  v5 = 0;
+  v11 = 0;
+  v12 = 0;
+  v13 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  result = sub_7FF6F5E6DB30(v6);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+KismetInputLibrary::InputEvent_IsRightControlDown @ RVA 0x2C35D20 EA 0x7FF6F6655D20
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6655D20(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  _QWORD *v6; // rcx
+  __int64 v7; // rax
+  __int64 result; // rax
+  _QWORD v9[2]; // [rsp+28h] [rbp-30h] BYREF
+  char v10; // [rsp+38h] [rbp-20h]
+  int v11; // [rsp+3Ch] [rbp-1Ch]
+  char v12; // [rsp+40h] [rbp-18h]
+  __int64 v13; // [rsp+48h] [rbp-10h]
+
+  v9[0] = off_7FF6F88213F8;
+  v9[1] = 0;
+  v10 = 0;
+  v5 = 0;
+  v11 = 0;
+  v12 = 0;
+  v13 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  result = sub_7FF6F5E6DB40(v6);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+KismetInputLibrary::InputEvent_IsRightShiftDown @ RVA 0x2C35DE0 EA 0x7FF6F6655DE0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6655DE0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  _QWORD *v6; // rcx
+  __int64 v7; // rax
+  __int64 result; // rax
+  _QWORD v9[2]; // [rsp+28h] [rbp-30h] BYREF
+  char v10; // [rsp+38h] [rbp-20h]
+  int v11; // [rsp+3Ch] [rbp-1Ch]
+  char v12; // [rsp+40h] [rbp-18h]
+  __int64 v13; // [rsp+48h] [rbp-10h]
+
+  v9[0] = off_7FF6F88213F8;
+  v9[1] = 0;
+  v10 = 0;
+  v5 = 0;
+  v11 = 0;
+  v12 = 0;
+  v13 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  result = sub_7FF6F5E6DB50(v6);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+KismetInputLibrary::InputEvent_IsShiftDown @ RVA 0x2C35EA0 EA 0x7FF6F6655EA0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6655EA0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  _QWORD *v6; // rcx
+  __int64 v7; // rax
+  __int64 result; // rax
+  _QWORD v9[2]; // [rsp+28h] [rbp-30h] BYREF
+  char v10; // [rsp+38h] [rbp-20h]
+  int v11; // [rsp+3Ch] [rbp-1Ch]
+  char v12; // [rsp+40h] [rbp-18h]
+  __int64 v13; // [rsp+48h] [rbp-10h]
+
+  v9[0] = off_7FF6F88213F8;
+  v9[1] = 0;
+  v10 = 0;
+  v5 = 0;
+  v11 = 0;
+  v12 = 0;
+  v13 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  result = sub_7FF6F5E6DB60(v6);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+KismetInputLibrary::Key_GetDisplayName @ RVA 0x2C39BE0 EA 0x7FF6F6659BE0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6659BE0(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  __int64 *v6; // rdx
+  __int64 v7; // rax
+  __int64 v8; // rax
+  __int64 v10; // [rsp+28h] [rbp-60h] BYREF
+  __int128 v11; // [rsp+30h] [rbp-58h]
+  int v12; // [rsp+40h] [rbp-48h]
+  _BYTE v13[56]; // [rsp+48h] [rbp-40h] BYREF
+
+  v5 = 0;
+  v10 = 0;
+  v11 = 0;
+  v12 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = &v10;
+  if ( a2[7] )
+    v6 = (__int64 *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  v8 = sub_7FF6F5E705C0(v13, v6);
+  sub_7FF6F4DD3BC0(a3, v8);
+  sub_7FF6F3C37050(v13);
+  return sub_7FF6F3C36760(&v10);
+}
+
+
+======================================================================
+KismetInputLibrary::Key_IsFloatAxis @ RVA 0x2C39CB0 EA 0x7FF6F6659CB0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6659CB0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  __int64 *v6; // rcx
+  __int64 v7; // rax
+  __int64 v9; // [rsp+28h] [rbp-30h] BYREF
+  __int128 v10; // [rsp+30h] [rbp-28h]
+  int v11; // [rsp+40h] [rbp-18h]
+
+  v5 = 0;
+  v9 = 0;
+  v10 = 0;
+  v11 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = &v9;
+  if ( a2[7] )
+    v6 = (__int64 *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  *a3 = sub_7FF6F5E705E0(v6);
+  return sub_7FF6F3C36760(&v9);
+}
+
+
+======================================================================
+KismetInputLibrary::Key_IsGamepadKey @ RVA 0x2C39D60 EA 0x7FF6F6659D60
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6659D60(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  __int64 *v6; // rcx
+  __int64 v7; // rax
+  __int64 v9; // [rsp+28h] [rbp-30h] BYREF
+  __int128 v10; // [rsp+30h] [rbp-28h]
+  int v11; // [rsp+40h] [rbp-18h]
+
+  v5 = 0;
+  v9 = 0;
+  v10 = 0;
+  v11 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = &v9;
+  if ( a2[7] )
+    v6 = (__int64 *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  *a3 = sub_7FF6F5E705F0(v6);
+  return sub_7FF6F3C36760(&v9);
+}
+
+
+======================================================================
+KismetInputLibrary::Key_IsKeyboardKey @ RVA 0x2C39E10 EA 0x7FF6F6659E10
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6659E10(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  __int64 *v6; // rcx
+  __int64 v7; // rax
+  __int64 v9; // [rsp+28h] [rbp-30h] BYREF
+  __int128 v10; // [rsp+30h] [rbp-28h]
+  int v11; // [rsp+40h] [rbp-18h]
+
+  v5 = 0;
+  v9 = 0;
+  v10 = 0;
+  v11 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = &v9;
+  if ( a2[7] )
+    v6 = (__int64 *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  *a3 = sub_7FF6F5E70600(v6);
+  return sub_7FF6F3C36760(&v9);
+}
+
+
+======================================================================
+KismetInputLibrary::Key_IsModifierKey @ RVA 0x2C39EC0 EA 0x7FF6F6659EC0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6659EC0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  __int64 *v6; // rcx
+  __int64 v7; // rax
+  __int64 v9; // [rsp+28h] [rbp-30h] BYREF
+  __int128 v10; // [rsp+30h] [rbp-28h]
+  int v11; // [rsp+40h] [rbp-18h]
+
+  v5 = 0;
+  v9 = 0;
+  v10 = 0;
+  v11 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = &v9;
+  if ( a2[7] )
+    v6 = (__int64 *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  *a3 = sub_7FF6F5E70640(v6);
+  return sub_7FF6F3C36760(&v9);
+}
+
+
+======================================================================
+KismetInputLibrary::Key_IsMouseButton @ RVA 0x2C39F70 EA 0x7FF6F6659F70
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6659F70(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  __int64 *v6; // rcx
+  __int64 v7; // rax
+  __int64 v9; // [rsp+28h] [rbp-30h] BYREF
+  __int128 v10; // [rsp+30h] [rbp-28h]
+  int v11; // [rsp+40h] [rbp-18h]
+
+  v5 = 0;
+  v9 = 0;
+  v10 = 0;
+  v11 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = &v9;
+  if ( a2[7] )
+    v6 = (__int64 *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  *a3 = sub_7FF6F5E70650(v6);
+  return sub_7FF6F3C36760(&v9);
+}
+
+
+======================================================================
+KismetInputLibrary::Key_IsVectorAxis @ RVA 0x2C3A020 EA 0x7FF6F665A020
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F665A020(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  __int64 *v6; // rcx
+  __int64 v7; // rax
+  __int64 v9; // [rsp+28h] [rbp-30h] BYREF
+  __int128 v10; // [rsp+30h] [rbp-28h]
+  int v11; // [rsp+40h] [rbp-18h]
+
+  v5 = 0;
+  v9 = 0;
+  v10 = 0;
+  v11 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = &v9;
+  if ( a2[7] )
+    v6 = (__int64 *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  *a3 = sub_7FF6F5E70660(v6);
+  return sub_7FF6F3C36760(&v9);
+}
+
+
+======================================================================
+KismetInputLibrary::PointerEvent_GetCursorDelta @ RVA 0x2C432D0 EA 0x7FF6F66632D0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F66632D0(__int64 a1, _QWORD *a2, _QWORD *a3)
+{
+  __int64 v5; // rbx
+  _QWORD *v6; // rdx
+  __int64 v7; // rax
+  _QWORD v9[2]; // [rsp+28h] [rbp-49h] BYREF
+  char v10; // [rsp+38h] [rbp-39h]
+  int v11; // [rsp+3Ch] [rbp-35h]
+  char v12; // [rsp+40h] [rbp-31h]
+  __int64 v13; // [rsp+48h] [rbp-29h]
+  __int64 v14; // [rsp+50h] [rbp-21h]
+  __int128 v15; // [rsp+58h] [rbp-19h]
+  __int64 *v16; // [rsp+68h] [rbp-9h]
+  __int64 v17; // [rsp+70h] [rbp-1h] BYREF
+  __int128 v18; // [rsp+78h] [rbp+7h]
+  int v19; // [rsp+88h] [rbp+17h]
+  __int64 v20; // [rsp+90h] [rbp+1Fh]
+  char v21; // [rsp+98h] [rbp+27h]
+  __int64 v22; // [rsp+9Ch] [rbp+2Bh]
+  int v23; // [rsp+A4h] [rbp+33h]
+  char v24; // [rsp+A8h] [rbp+37h]
+  __int64 v25; // [rsp+B8h] [rbp+47h]
+  char v26; // [rsp+E0h] [rbp+6Fh] BYREF
+
+  v25 = -2;
+  v9[1] = 0;
+  v10 = 0;
+  v5 = 0;
+  v11 = 0;
+  v12 = 0;
+  v13 = 0;
+  v9[0] = off_7FF6F8821428;
+  v14 = 0;
+  v15 = 0;
+  v16 = &qword_7FF6FA528A30;
+  v17 = 0;
+  v18 = 0;
+  v19 = 0;
+  v20 = 0;
+  v21 = 0;
+  v22 = 0;
+  v23 = 0;
+  v24 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  *a3 = *(_QWORD *)sub_7FF6F5E74D60(&v26, v6);
+  return sub_7FF6F3C36760(&v17);
+}
+
+
+======================================================================
+KismetInputLibrary::PointerEvent_GetEffectingButton @ RVA 0x2C433E0 EA 0x7FF6F66633E0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F66633E0(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  int v5; // ebx
+  _QWORD *v6; // rdx
+  __int64 v7; // rax
+  __int64 v8; // rcx
+  __int64 v9; // rcx
+  _QWORD v11[2]; // [rsp+28h] [rbp-69h] BYREF
+  char v12; // [rsp+38h] [rbp-59h]
+  int v13; // [rsp+3Ch] [rbp-55h]
+  char v14; // [rsp+40h] [rbp-51h]
+  __int64 v15; // [rsp+48h] [rbp-49h]
+  __int64 v16; // [rsp+50h] [rbp-41h]
+  __int128 v17; // [rsp+58h] [rbp-39h]
+  __int64 *v18; // [rsp+68h] [rbp-29h]
+  __int64 v19; // [rsp+70h] [rbp-21h] BYREF
+  __int128 v20; // [rsp+78h] [rbp-19h]
+  int v21; // [rsp+88h] [rbp-9h]
+  __int64 v22; // [rsp+90h] [rbp-1h]
+  char v23; // [rsp+98h] [rbp+7h]
+  __int64 v24; // [rsp+9Ch] [rbp+Bh]
+  int v25; // [rsp+A4h] [rbp+13h]
+  char v26; // [rsp+A8h] [rbp+17h]
+  __int64 v27; // [rsp+B8h] [rbp+27h]
+  _BYTE v28[40]; // [rsp+C0h] [rbp+2Fh] BYREF
+
+  v27 = -2;
+  v11[1] = 0;
+  v12 = 0;
+  v5 = 0;
+  v13 = 0;
+  v14 = 0;
+  v15 = 0;
+  v11[0] = off_7FF6F8821428;
+  v16 = 0;
+  v17 = 0;
+  v18 = &qword_7FF6FA528A30;
+  v19 = 0;
+  v20 = 0;
+  v21 = 0;
+  v22 = 0;
+  v23 = 0;
+  v24 = 0;
+  v25 = 0;
+  v26 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v6 = v11;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  a2[4] += a2[4] != 0;
+  v7 = sub_7FF6F5E74D70(v28, v6);
+  *(_QWORD *)a3 = *(_QWORD *)v7;
+  v8 = *(_QWORD *)(v7 + 8);
+  if ( *(_QWORD *)(a3 + 8) != v8 )
+  {
+    *(_QWORD *)(a3 + 8) = v8;
+    *(_QWORD *)(v7 + 8) = 0;
+    v9 = *(_QWORD *)(v7 + 16);
+    if ( v9 )
+      v5 = *(_DWORD *)(v9 + 24);
+    *(_DWORD *)(a3 + 24) = v5;
+    *(_DWORD *)(v7 + 24) = -2040109466;
+    sub_7FF6F3C379A0(a3 + 16, v7 + 16);
+  }
+  sub_7FF6F3C36760(v28);
+  return sub_7FF6F3C36760(&v19);
+}
+
+
+======================================================================
+KismetInputLibrary::PointerEvent_GetGestureDelta @ RVA 0x2C43530 EA 0x7FF6F6663530
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6663530(__int64 a1, _QWORD *a2, _QWORD *a3)
+{
+  __int64 v5; // rbx
+  _QWORD *v6; // rdx
+  __int64 v7; // rax
+  _QWORD v9[2]; // [rsp+28h] [rbp-49h] BYREF
+  char v10; // [rsp+38h] [rbp-39h]
+  int v11; // [rsp+3Ch] [rbp-35h]
+  char v12; // [rsp+40h] [rbp-31h]
+  __int64 v13; // [rsp+48h] [rbp-29h]
+  __int64 v14; // [rsp+50h] [rbp-21h]
+  __int128 v15; // [rsp+58h] [rbp-19h]
+  __int64 *v16; // [rsp+68h] [rbp-9h]
+  __int64 v17; // [rsp+70h] [rbp-1h] BYREF
+  __int128 v18; // [rsp+78h] [rbp+7h]
+  int v19; // [rsp+88h] [rbp+17h]
+  __int64 v20; // [rsp+90h] [rbp+1Fh]
+  char v21; // [rsp+98h] [rbp+27h]
+  __int64 v22; // [rsp+9Ch] [rbp+2Bh]
+  int v23; // [rsp+A4h] [rbp+33h]
+  char v24; // [rsp+A8h] [rbp+37h]
+  __int64 v25; // [rsp+B8h] [rbp+47h]
+  char v26; // [rsp+E0h] [rbp+6Fh] BYREF
+
+  v25 = -2;
+  v9[1] = 0;
+  v10 = 0;
+  v5 = 0;
+  v11 = 0;
+  v12 = 0;
+  v13 = 0;
+  v9[0] = off_7FF6F8821428;
+  v14 = 0;
+  v15 = 0;
+  v16 = &qword_7FF6FA528A30;
+  v17 = 0;
+  v18 = 0;
+  v19 = 0;
+  v20 = 0;
+  v21 = 0;
+  v22 = 0;
+  v23 = 0;
+  v24 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  *a3 = *(_QWORD *)sub_7FF6F5E74DC0(&v26, v6);
+  return sub_7FF6F3C36760(&v17);
+}
+
+
+======================================================================
+KismetInputLibrary::PointerEvent_GetLastScreenSpacePosition @ RVA 0x2C43640 EA 0x7FF6F6663640
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6663640(__int64 a1, _QWORD *a2, _QWORD *a3)
+{
+  __int64 v5; // rbx
+  _QWORD *v6; // rdx
+  __int64 v7; // rax
+  _QWORD v9[2]; // [rsp+28h] [rbp-49h] BYREF
+  char v10; // [rsp+38h] [rbp-39h]
+  int v11; // [rsp+3Ch] [rbp-35h]
+  char v12; // [rsp+40h] [rbp-31h]
+  __int64 v13; // [rsp+48h] [rbp-29h]
+  __int64 v14; // [rsp+50h] [rbp-21h]
+  __int128 v15; // [rsp+58h] [rbp-19h]
+  __int64 *v16; // [rsp+68h] [rbp-9h]
+  __int64 v17; // [rsp+70h] [rbp-1h] BYREF
+  __int128 v18; // [rsp+78h] [rbp+7h]
+  int v19; // [rsp+88h] [rbp+17h]
+  __int64 v20; // [rsp+90h] [rbp+1Fh]
+  char v21; // [rsp+98h] [rbp+27h]
+  __int64 v22; // [rsp+9Ch] [rbp+2Bh]
+  int v23; // [rsp+A4h] [rbp+33h]
+  char v24; // [rsp+A8h] [rbp+37h]
+  __int64 v25; // [rsp+B8h] [rbp+47h]
+  char v26; // [rsp+E0h] [rbp+6Fh] BYREF
+
+  v25 = -2;
+  v9[1] = 0;
+  v10 = 0;
+  v5 = 0;
+  v11 = 0;
+  v12 = 0;
+  v13 = 0;
+  v9[0] = off_7FF6F8821428;
+  v14 = 0;
+  v15 = 0;
+  v16 = &qword_7FF6FA528A30;
+  v17 = 0;
+  v18 = 0;
+  v19 = 0;
+  v20 = 0;
+  v21 = 0;
+  v22 = 0;
+  v23 = 0;
+  v24 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  *a3 = *(_QWORD *)sub_7FF6F5E74DD0(&v26, v6);
+  return sub_7FF6F3C36760(&v17);
+}
+
+
+======================================================================
+KismetInputLibrary::PointerEvent_GetPointerIndex @ RVA 0x2C43750 EA 0x7FF6F6663750
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6663750(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v5; // rbx
+  _QWORD *v6; // rcx
+  __int64 v7; // rax
+  _QWORD v9[2]; // [rsp+28h] [rbp-49h] BYREF
+  char v10; // [rsp+38h] [rbp-39h]
+  int v11; // [rsp+3Ch] [rbp-35h]
+  char v12; // [rsp+40h] [rbp-31h]
+  __int64 v13; // [rsp+48h] [rbp-29h]
+  __int64 v14; // [rsp+50h] [rbp-21h]
+  __int128 v15; // [rsp+58h] [rbp-19h]
+  __int64 *v16; // [rsp+68h] [rbp-9h]
+  __int64 v17; // [rsp+70h] [rbp-1h] BYREF
+  __int128 v18; // [rsp+78h] [rbp+7h]
+  int v19; // [rsp+88h] [rbp+17h]
+  __int64 v20; // [rsp+90h] [rbp+1Fh]
+  char v21; // [rsp+98h] [rbp+27h]
+  __int64 v22; // [rsp+9Ch] [rbp+2Bh]
+  int v23; // [rsp+A4h] [rbp+33h]
+  char v24; // [rsp+A8h] [rbp+37h]
+  __int64 v25; // [rsp+B8h] [rbp+47h]
+
+  v25 = -2;
+  v9[1] = 0;
+  v10 = 0;
+  v5 = 0;
+  v11 = 0;
+  v12 = 0;
+  v13 = 0;
+  v9[0] = off_7FF6F8821428;
+  v14 = 0;
+  v15 = 0;
+  v16 = &qword_7FF6FA528A30;
+  v17 = 0;
+  v18 = 0;
+  v19 = 0;
+  v20 = 0;
+  v21 = 0;
+  v22 = 0;
+  v23 = 0;
+  v24 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  *a3 = sub_7FF6F5E74DE0(v6);
+  return sub_7FF6F3C36760(&v17);
+}
+
+
+======================================================================
+KismetInputLibrary::PointerEvent_GetScreenSpacePosition @ RVA 0x2C43860 EA 0x7FF6F6663860
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6663860(__int64 a1, _QWORD *a2, _QWORD *a3)
+{
+  __int64 v5; // rbx
+  _QWORD *v6; // rdx
+  __int64 v7; // rax
+  _QWORD v9[2]; // [rsp+28h] [rbp-49h] BYREF
+  char v10; // [rsp+38h] [rbp-39h]
+  int v11; // [rsp+3Ch] [rbp-35h]
+  char v12; // [rsp+40h] [rbp-31h]
+  __int64 v13; // [rsp+48h] [rbp-29h]
+  __int64 v14; // [rsp+50h] [rbp-21h]
+  __int128 v15; // [rsp+58h] [rbp-19h]
+  __int64 *v16; // [rsp+68h] [rbp-9h]
+  __int64 v17; // [rsp+70h] [rbp-1h] BYREF
+  __int128 v18; // [rsp+78h] [rbp+7h]
+  int v19; // [rsp+88h] [rbp+17h]
+  __int64 v20; // [rsp+90h] [rbp+1Fh]
+  char v21; // [rsp+98h] [rbp+27h]
+  __int64 v22; // [rsp+9Ch] [rbp+2Bh]
+  int v23; // [rsp+A4h] [rbp+33h]
+  char v24; // [rsp+A8h] [rbp+37h]
+  __int64 v25; // [rsp+B8h] [rbp+47h]
+  char v26; // [rsp+E0h] [rbp+6Fh] BYREF
+
+  v25 = -2;
+  v9[1] = 0;
+  v10 = 0;
+  v5 = 0;
+  v11 = 0;
+  v12 = 0;
+  v13 = 0;
+  v9[0] = off_7FF6F8821428;
+  v14 = 0;
+  v15 = 0;
+  v16 = &qword_7FF6FA528A30;
+  v17 = 0;
+  v18 = 0;
+  v19 = 0;
+  v20 = 0;
+  v21 = 0;
+  v22 = 0;
+  v23 = 0;
+  v24 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  *a3 = *(_QWORD *)sub_7FF6F5E74DF0(&v26, v6);
+  return sub_7FF6F3C36760(&v17);
+}
+
+
+======================================================================
+KismetInputLibrary::PointerEvent_GetTouchpadIndex @ RVA 0x2C43970 EA 0x7FF6F6663970
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6663970(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v5; // rbx
+  _QWORD *v6; // rcx
+  __int64 v7; // rax
+  _QWORD v9[2]; // [rsp+28h] [rbp-49h] BYREF
+  char v10; // [rsp+38h] [rbp-39h]
+  int v11; // [rsp+3Ch] [rbp-35h]
+  char v12; // [rsp+40h] [rbp-31h]
+  __int64 v13; // [rsp+48h] [rbp-29h]
+  __int64 v14; // [rsp+50h] [rbp-21h]
+  __int128 v15; // [rsp+58h] [rbp-19h]
+  __int64 *v16; // [rsp+68h] [rbp-9h]
+  __int64 v17; // [rsp+70h] [rbp-1h] BYREF
+  __int128 v18; // [rsp+78h] [rbp+7h]
+  int v19; // [rsp+88h] [rbp+17h]
+  __int64 v20; // [rsp+90h] [rbp+1Fh]
+  char v21; // [rsp+98h] [rbp+27h]
+  __int64 v22; // [rsp+9Ch] [rbp+2Bh]
+  int v23; // [rsp+A4h] [rbp+33h]
+  char v24; // [rsp+A8h] [rbp+37h]
+  __int64 v25; // [rsp+B8h] [rbp+47h]
+
+  v25 = -2;
+  v9[1] = 0;
+  v10 = 0;
+  v5 = 0;
+  v11 = 0;
+  v12 = 0;
+  v13 = 0;
+  v9[0] = off_7FF6F8821428;
+  v14 = 0;
+  v15 = 0;
+  v16 = &qword_7FF6FA528A30;
+  v17 = 0;
+  v18 = 0;
+  v19 = 0;
+  v20 = 0;
+  v21 = 0;
+  v22 = 0;
+  v23 = 0;
+  v24 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  *a3 = sub_7FF6F5E74E00(v6);
+  return sub_7FF6F3C36760(&v17);
+}
+
+
+======================================================================
+KismetInputLibrary::PointerEvent_GetUserIndex @ RVA 0x2C43A80 EA 0x7FF6F6663A80
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6663A80(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v5; // rbx
+  _QWORD *v6; // rcx
+  __int64 v7; // rax
+  _QWORD v9[2]; // [rsp+28h] [rbp-49h] BYREF
+  char v10; // [rsp+38h] [rbp-39h]
+  int v11; // [rsp+3Ch] [rbp-35h]
+  char v12; // [rsp+40h] [rbp-31h]
+  __int64 v13; // [rsp+48h] [rbp-29h]
+  __int64 v14; // [rsp+50h] [rbp-21h]
+  __int128 v15; // [rsp+58h] [rbp-19h]
+  __int64 *v16; // [rsp+68h] [rbp-9h]
+  __int64 v17; // [rsp+70h] [rbp-1h] BYREF
+  __int128 v18; // [rsp+78h] [rbp+7h]
+  int v19; // [rsp+88h] [rbp+17h]
+  __int64 v20; // [rsp+90h] [rbp+1Fh]
+  char v21; // [rsp+98h] [rbp+27h]
+  __int64 v22; // [rsp+9Ch] [rbp+2Bh]
+  int v23; // [rsp+A4h] [rbp+33h]
+  char v24; // [rsp+A8h] [rbp+37h]
+  __int64 v25; // [rsp+B8h] [rbp+47h]
+
+  v25 = -2;
+  v9[1] = 0;
+  v10 = 0;
+  v5 = 0;
+  v11 = 0;
+  v12 = 0;
+  v13 = 0;
+  v9[0] = off_7FF6F8821428;
+  v14 = 0;
+  v15 = 0;
+  v16 = &qword_7FF6FA528A30;
+  v17 = 0;
+  v18 = 0;
+  v19 = 0;
+  v20 = 0;
+  v21 = 0;
+  v22 = 0;
+  v23 = 0;
+  v24 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  *a3 = sub_7FF6F5E74E10(v6);
+  return sub_7FF6F3C36760(&v17);
+}
+
+
+======================================================================
+KismetInputLibrary::PointerEvent_GetWheelDelta @ RVA 0x2C43B90 EA 0x7FF6F6663B90
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6663B90(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v5; // rbx
+  _QWORD *v6; // rcx
+  __int64 v7; // rax
+  _QWORD v9[2]; // [rsp+28h] [rbp-49h] BYREF
+  char v10; // [rsp+38h] [rbp-39h]
+  int v11; // [rsp+3Ch] [rbp-35h]
+  char v12; // [rsp+40h] [rbp-31h]
+  __int64 v13; // [rsp+48h] [rbp-29h]
+  __int64 v14; // [rsp+50h] [rbp-21h]
+  __int128 v15; // [rsp+58h] [rbp-19h]
+  __int64 *v16; // [rsp+68h] [rbp-9h]
+  __int64 v17; // [rsp+70h] [rbp-1h] BYREF
+  __int128 v18; // [rsp+78h] [rbp+7h]
+  int v19; // [rsp+88h] [rbp+17h]
+  __int64 v20; // [rsp+90h] [rbp+1Fh]
+  char v21; // [rsp+98h] [rbp+27h]
+  __int64 v22; // [rsp+9Ch] [rbp+2Bh]
+  int v23; // [rsp+A4h] [rbp+33h]
+  char v24; // [rsp+A8h] [rbp+37h]
+  __int64 v25; // [rsp+B8h] [rbp+47h]
+
+  v25 = -2;
+  v9[1] = 0;
+  v10 = 0;
+  v5 = 0;
+  v11 = 0;
+  v12 = 0;
+  v13 = 0;
+  v9[0] = off_7FF6F8821428;
+  v14 = 0;
+  v15 = 0;
+  v16 = &qword_7FF6FA528A30;
+  v17 = 0;
+  v18 = 0;
+  v19 = 0;
+  v20 = 0;
+  v21 = 0;
+  v22 = 0;
+  v23 = 0;
+  v24 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  *a3 = sub_7FF6F5E74E20(v6);
+  return sub_7FF6F3C36760(&v17);
+}
+
+
+======================================================================
+KismetInputLibrary::PointerEvent_IsMouseButtonDown @ RVA 0x2C43CA0 EA 0x7FF6F6663CA0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6663CA0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  int v5; // edi
+  _QWORD *v6; // rsi
+  _BYTE v8[24]; // [rsp+28h] [rbp-99h] BYREF
+  int v9; // [rsp+40h] [rbp-81h]
+  __int128 v10; // [rsp+48h] [rbp-79h] BYREF
+  __int64 v11; // [rsp+58h] [rbp-69h] BYREF
+  int v12; // [rsp+60h] [rbp-61h]
+  _QWORD v13[2]; // [rsp+68h] [rbp-59h] BYREF
+  char v14; // [rsp+78h] [rbp-49h]
+  int v15; // [rsp+7Ch] [rbp-45h]
+  char v16; // [rsp+80h] [rbp-41h]
+  __int64 v17; // [rsp+88h] [rbp-39h]
+  __int64 v18; // [rsp+90h] [rbp-31h]
+  __int128 v19; // [rsp+98h] [rbp-29h]
+  __int64 *v20; // [rsp+A8h] [rbp-19h]
+  __int64 v21; // [rsp+B0h] [rbp-11h] BYREF
+  __int128 v22; // [rsp+B8h] [rbp-9h]
+  int v23; // [rsp+C8h] [rbp+7h]
+  __int64 v24; // [rsp+D0h] [rbp+Fh]
+  char v25; // [rsp+D8h] [rbp+17h]
+  __int64 v26; // [rsp+DCh] [rbp+1Bh]
+  int v27; // [rsp+E4h] [rbp+23h]
+  char v28; // [rsp+E8h] [rbp+27h]
+  __int64 v29; // [rsp+F8h] [rbp+37h]
+
+  v29 = -2;
+  v13[1] = 0;
+  v14 = 0;
+  v5 = 0;
+  v15 = 0;
+  v16 = 0;
+  v17 = 0;
+  v13[0] = off_7FF6F8821428;
+  v18 = 0;
+  v19 = 0;
+  v20 = &qword_7FF6FA528A30;
+  v21 = 0;
+  v22 = 0;
+  v23 = 0;
+  v24 = 0;
+  v25 = 0;
+  v26 = 0;
+  v27 = 0;
+  v28 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v13);
+  }
+  v6 = v13;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  memset(v8, 0, sizeof(v8));
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  a2[4] += a2[4] != 0;
+  v10 = *(_OWORD *)v8;
+  v11 = *(_QWORD *)&v8[16];
+  if ( *(_QWORD *)&v8[16] )
+  {
+    if ( _InterlockedIncrement((volatile signed __int32 *)(*(_QWORD *)&v8[16] + 8LL)) == 1 )
+      MEMORY[0] = &v11;
+    if ( v11 )
+      v5 = *(_DWORD *)(v11 + 24);
+  }
+  v12 = v5;
+  *a3 = sub_7FF6F5E74E30(v6, &v10);
+  sub_7FF6F3C36760(v8);
+  return sub_7FF6F3C36760(&v21);
+}
+
+
+======================================================================
+KismetInputLibrary::PointerEvent_IsTouchEvent @ RVA 0x2C43E50 EA 0x7FF6F6663E50
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6663E50(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rbx
+  _QWORD *v6; // rcx
+  __int64 v7; // rax
+  _QWORD v9[2]; // [rsp+28h] [rbp-49h] BYREF
+  char v10; // [rsp+38h] [rbp-39h]
+  int v11; // [rsp+3Ch] [rbp-35h]
+  char v12; // [rsp+40h] [rbp-31h]
+  __int64 v13; // [rsp+48h] [rbp-29h]
+  __int64 v14; // [rsp+50h] [rbp-21h]
+  __int128 v15; // [rsp+58h] [rbp-19h]
+  __int64 *v16; // [rsp+68h] [rbp-9h]
+  __int64 v17; // [rsp+70h] [rbp-1h] BYREF
+  __int128 v18; // [rsp+78h] [rbp+7h]
+  int v19; // [rsp+88h] [rbp+17h]
+  __int64 v20; // [rsp+90h] [rbp+1Fh]
+  char v21; // [rsp+98h] [rbp+27h]
+  __int64 v22; // [rsp+9Ch] [rbp+2Bh]
+  int v23; // [rsp+A4h] [rbp+33h]
+  char v24; // [rsp+A8h] [rbp+37h]
+  __int64 v25; // [rsp+B8h] [rbp+47h]
+
+  v25 = -2;
+  v9[1] = 0;
+  v10 = 0;
+  v5 = 0;
+  v11 = 0;
+  v12 = 0;
+  v13 = 0;
+  v9[0] = off_7FF6F8821428;
+  v14 = 0;
+  v15 = 0;
+  v16 = &qword_7FF6FA528A30;
+  v17 = 0;
+  v18 = 0;
+  v19 = 0;
+  v20 = 0;
+  v21 = 0;
+  v22 = 0;
+  v23 = 0;
+  v24 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  *a3 = sub_7FF6F5E74F20(v6);
+  return sub_7FF6F3C36760(&v17);
+}
+

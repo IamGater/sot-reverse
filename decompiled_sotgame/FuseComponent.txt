@@ -1,0 +1,113 @@
+// Class: FuseComponent (4 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+FuseComponent::GetIsActive @ RVA 0xDDE9B0 EA 0x7FF6F47FE9B0
+======================================================================
+__int64 __fastcall sub_7FF6F47FE9B0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 952LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FuseComponent::OnRep_FuseEnabled @ RVA 0xDE1860 EA 0x7FF6F4801860
+======================================================================
+void __fastcall sub_7FF6F4801860(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F3F380B0LL);
+}
+
+
+======================================================================
+FuseComponent::Server_RequestEnableFuse @ RVA 0xDE31A0 EA 0x7FF6F48031A0
+======================================================================
+__int64 __fastcall sub_7FF6F48031A0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  bool v5; // bp
+  __int64 v6; // rax
+  __int64 v7; // r8
+  int v9; // [rsp+40h] [rbp+8h] BYREF
+  __int64 v10; // [rsp+48h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v10 = 0;
+  v5 = v9 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64, bool, __int64))(*(_QWORD *)a1 + 984LL))(a1, v5, v7) )
+    return (*(__int64 (__fastcall **)(__int64, bool, __int64))(*(_QWORD *)a1 + 976LL))(a1, v5, v10);
+  else
+    return sub_7FF6F4F0F6D0(L"Server_RequestEnableFuse_Validate");
+}
+
+
+======================================================================
+FuseComponent::TriggerFuse @ RVA 0xDE4A00 EA 0x7FF6F4804A00
+======================================================================
+__int64 __fastcall sub_7FF6F4804A00(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  bool v5; // si
+  __int64 v6; // rax
+  __int64 v7; // r8
+  int v9; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v10; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v10 = 0;
+  v5 = v9 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  return sub_7FF6F3F3EAE0(a1, v5, v7);
+}
+

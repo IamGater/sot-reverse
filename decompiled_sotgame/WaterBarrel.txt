@@ -1,0 +1,134 @@
+// Class: WaterBarrel (8 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+WaterBarrel::CollectLiquidAmount @ RVA 0x109E380 EA 0x7FF6F4ABE380
+======================================================================
+void __fastcall sub_7FF6F4ABE380(__int64 a1, _QWORD *a2, float *a3)
+{
+  bool v3; // zf
+  int v7; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = a2[4] == 0;
+  v7 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  a2[4] += a2[4] != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)(a1 + 1424) + 24LL))(a1 + 1424);
+}
+
+
+======================================================================
+WaterBarrel::GetLiquidLevel @ RVA 0x109F540 EA 0x7FF6F4ABF540
+======================================================================
+void __fastcall sub_7FF6F4ABF540(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)(a1 + 1424) + 40LL))(a1 + 1424);
+}
+
+
+======================================================================
+WaterBarrel::GetMaxLiquidCollectionAmount @ RVA 0x109F7D0 EA 0x7FF6F4ABF7D0
+======================================================================
+void __fastcall sub_7FF6F4ABF7D0(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)(a1 + 1424) + 32LL))(a1 + 1424);
+}
+
+
+======================================================================
+WaterBarrel::GetWantedLiquidLevel @ RVA 0x10A08B0 EA 0x7FF6F4AC08B0
+======================================================================
+void __fastcall sub_7FF6F4AC08B0(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)(a1 + 1424) + 48LL))(a1 + 1424);
+}
+
+
+======================================================================
+WaterBarrel::OnRep_CurrentCapacity @ RVA 0x10A25D0 EA 0x7FF6F4AC25D0
+======================================================================
+__int64 __fastcall sub_7FF6F4AC25D0(__int64 a1, __int64 a2)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = *(_QWORD *)(a1 + 1600);
+  if ( result )
+    return sub_7FF6F7648230(*(_QWORD *)(a1 + 1600));
+  return result;
+}
+
+
+======================================================================
+WaterBarrel::OnRep_IsPumpingWater @ RVA 0x10A2730 EA 0x7FF6F4AC2730
+======================================================================
+void __fastcall sub_7FF6F4AC2730(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F40DF0F0LL);
+}
+
+
+======================================================================
+WaterBarrel::Server_SetPumpingWater @ RVA 0x10A45B0 EA 0x7FF6F4AC45B0
+======================================================================
+__int64 __fastcall sub_7FF6F4AC45B0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  int v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v6 = a2[4];
+  LOBYTE(v5) = v8 != 0;
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1600LL))(a1, v5);
+}
+
+
+======================================================================
+WaterBarrel::SetLiquidLevel @ RVA 0x10A4AE0 EA 0x7FF6F4AC4AE0
+======================================================================
+__int64 __fastcall sub_7FF6F4AC4AE0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)(a1 + 1424) + 16LL))(a1 + 1424);
+}
+

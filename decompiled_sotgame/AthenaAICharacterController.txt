@@ -1,0 +1,132 @@
+// Class: AthenaAICharacterController (4 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+AthenaAICharacterController::ClearOverridePrioritiseInteractablesBeforeEnemies @ RVA 0x3548A50 EA 0x7FF6F6F68A50
+======================================================================
+void __fastcall sub_7FF6F6F68A50(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F6EA43C0LL);
+}
+
+
+======================================================================
+AthenaAICharacterController::SetDisableTurningForTest @ RVA 0x354A440 EA 0x7FF6F6F6A440
+======================================================================
+__int64 __fastcall sub_7FF6F6F6A440(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return nullsub_4129(a1, v5);
+}
+
+
+======================================================================
+AthenaAICharacterController::SetItemSpecificNamedControllerParam @ RVA 0x354A6F0 EA 0x7FF6F6F6A6F0
+======================================================================
+__int64 __fastcall sub_7FF6F6F6A6F0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 *v5; // rax
+  __int64 *v6; // rsi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  _QWORD v10[5]; // [rsp+20h] [rbp-28h] BYREF
+  int v11; // [rsp+58h] [rbp+10h] BYREF
+  __int64 v12; // [rsp+68h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v10[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v12 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v5 = (__int64 *)a2[7];
+  v6 = &v12;
+  v11 = 0;
+  if ( v5 )
+    v6 = v5;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v7 = a2[4];
+  v8 = v10[0];
+  LOBYTE(v2) = v7 != 0;
+  a2[4] = v7 + v2;
+  return nullsub_4130(a1, v8, v6);
+}
+
+
+======================================================================
+AthenaAICharacterController::SetOverridePrioritiseInteractablesBeforeEnemies @ RVA 0x354AC00 EA 0x7FF6F6F6AC00
+======================================================================
+__int64 __fastcall sub_7FF6F6F6AC00(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return nullsub_4131(a1, v5);
+}
+

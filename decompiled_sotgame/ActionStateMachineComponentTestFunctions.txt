@@ -1,0 +1,644 @@
+// Class: ActionStateMachineComponentTestFunctions (14 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+ActionStateMachineComponentTestFunctions::CreateCustomClientValidityCheckCallback @ RVA 0x2F25FB0 EA 0x7FF6F6945FB0
+======================================================================
+__int64 __fastcall sub_7FF6F6945FB0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F6929F80();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ActionStateMachineComponentTestFunctions::GetTestActionStateSerialisableDataOnTrack @ RVA 0x2F26690 EA 0x7FF6F6946690
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 (__fastcall **__fastcall sub_7FF6F6946690(__int64 a1, _QWORD *a2, _BYTE *a3))()
+{
+  __int64 v5; // rdi
+  _BYTE *v6; // r8
+  __int64 v7; // rax
+  __int64 (__fastcall **result)(); // rax
+  _BYTE v9[24]; // [rsp+28h] [rbp-40h] BYREF
+  __int64 (__fastcall **v10)(); // [rsp+40h] [rbp-28h] BYREF
+  int v11; // [rsp+58h] [rbp-10h]
+  unsigned __int8 v12; // [rsp+78h] [rbp+10h] BYREF
+  __int64 v13; // [rsp+80h] [rbp+18h] BYREF
+
+  v5 = 0;
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  sub_7FF6F6926F80(v9);
+  v11 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  *a3 = sub_7FF6F692BBF0(v13, v12, v6);
+  result = off_7FF6F861B4B0;
+  v10 = off_7FF6F861B4B0;
+  if ( qword_7FF6FA523D08 )
+    return (__int64 (__fastcall **)())sub_7FF6F4EE0D40(qword_7FF6FA523D08, &v10);
+  return result;
+}
+
+
+======================================================================
+ActionStateMachineComponentTestFunctions::GetTypeOfActionStateActiveOnTrack @ RVA 0x2F26A20 EA 0x7FF6F6946A20
+======================================================================
+_QWORD *__fastcall sub_7FF6F6946A20(__int64 a1, _QWORD *a2, _QWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // r8
+  __int64 v8; // rdx
+  _QWORD *result; // rax
+  unsigned __int8 v10; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+50h] [rbp+18h] BYREF
+  char v12; // [rsp+58h] [rbp+20h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  v8 = v11;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = (_QWORD *)sub_7FF6F692BEF0(&v12, v8, v7);
+  *a3 = *result;
+  return result;
+}
+
+
+======================================================================
+ActionStateMachineComponentTestFunctions::IsActionStateTypeActiveOnTrack @ RVA 0x2F26C40 EA 0x7FF6F6946C40
+======================================================================
+__int64 __fastcall sub_7FF6F6946C40(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // r8
+  __int64 v8; // rdx
+  __int64 v9; // rcx
+  __int64 result; // rax
+  unsigned __int8 v11; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v12; // [rsp+50h] [rbp+18h] BYREF
+  __int64 v13; // [rsp+58h] [rbp+20h] BYREF
+
+  v3 = 0;
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v6 = a2[4];
+  v7 = v12;
+  v8 = v11;
+  v9 = v13;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F692C790(v9, v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ActionStateMachineComponentTestFunctions::PushTestActionStateSerialisableDataOnTrack @ RVA 0x2F27120 EA 0x7FF6F6947120
+======================================================================
+__int64 __fastcall sub_7FF6F6947120(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // r9
+  __int64 v6; // r8
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 v10; // [rsp+20h] [rbp-18h] BYREF
+  _QWORD v11[2]; // [rsp+28h] [rbp-10h] BYREF
+  unsigned __int8 v12; // [rsp+48h] [rbp+10h] BYREF
+  unsigned int v13; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v11[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v4 = a2[4];
+  v5 = v13;
+  v6 = v10;
+  v7 = v12;
+  LOBYTE(v2) = v4 != 0;
+  v8 = v11[0];
+  a2[4] = v4 + v2;
+  return nullsub_3259(v8, v7, v6, v5);
+}
+
+
+======================================================================
+ActionStateMachineComponentTestFunctions::RequestNullActionStateOnTrack @ RVA 0x2F27250 EA 0x7FF6F6947250
+======================================================================
+__int64 __fastcall sub_7FF6F6947250(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 result; // rax
+  unsigned __int8 v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  v8 = v11;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F692E170(v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ActionStateMachineComponentTestFunctions::RequestTestActionStateWithIdOnTrack @ RVA 0x2F27310 EA 0x7FF6F6947310
+======================================================================
+__int64 __fastcall sub_7FF6F6947310(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // r8
+  __int64 v8; // rdx
+  __int64 v9; // rcx
+  __int64 result; // rax
+  unsigned __int8 v11; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v12; // [rsp+50h] [rbp+18h] BYREF
+  __int64 v13; // [rsp+58h] [rbp+20h] BYREF
+
+  v3 = 0;
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v6 = a2[4];
+  v7 = v12;
+  v8 = v11;
+  v9 = v13;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F692E180(v9, v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ActionStateMachineComponentTestFunctions::RequestUnpredictedTestActionStateWithIdOnTrack @ RVA 0x2F27400 EA 0x7FF6F6947400
+======================================================================
+__int64 __fastcall sub_7FF6F6947400(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // r9
+  __int64 v8; // r8
+  __int64 v9; // rdx
+  __int64 v10; // rcx
+  __int64 result; // rax
+  _QWORD v12[5]; // [rsp+20h] [rbp-28h] BYREF
+  unsigned __int8 v13; // [rsp+58h] [rbp+10h] BYREF
+  __int64 v14; // [rsp+60h] [rbp+18h] BYREF
+  __int64 v15; // [rsp+68h] [rbp+20h] BYREF
+
+  v3 = 0;
+  v12[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v6 = a2[4];
+  v7 = v14;
+  v8 = v15;
+  v9 = v13;
+  LOBYTE(v3) = v6 != 0;
+  v10 = v12[0];
+  a2[4] = v6 + v3;
+  result = sub_7FF6F692E190(v10, v9, v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ActionStateMachineComponentTestFunctions::SetCustomClientValidationTestStateFactory @ RVA 0x2F278E0 EA 0x7FF6F69478E0
+======================================================================
+__int64 __fastcall sub_7FF6F69478E0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  v8 = v11;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F692FC00(v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ActionStateMachineComponentTestFunctions::SetTestStateFactory @ RVA 0x2F279A0 EA 0x7FF6F69479A0
+======================================================================
+__int64 __fastcall sub_7FF6F69479A0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  __int64 result; // rax
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  v7 = v9;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F6930050(v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ActionStateMachineComponentTestFunctions::SetTestStateFactoryChangeToNullOnUpdate @ RVA 0x2F27A20 EA 0x7FF6F6947A20
+======================================================================
+__int64 __fastcall sub_7FF6F6947A20(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  __int64 result; // rax
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  v7 = v9;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F6930060(v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ActionStateMachineComponentTestFunctions::SetTestStateValidatorThatAlwaysFails @ RVA 0x2F27AA0 EA 0x7FF6F6947AA0
+======================================================================
+__int64 __fastcall sub_7FF6F6947AA0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  __int64 result; // rax
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  v7 = v9;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F6930070(v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ActionStateMachineComponentTestFunctions::SetTestStateValidatorThatAlwaysPasses @ RVA 0x2F27B20 EA 0x7FF6F6947B20
+======================================================================
+__int64 __fastcall sub_7FF6F6947B20(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  __int64 result; // rax
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  v7 = v9;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F6930080(v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ActionStateMachineComponentTestFunctions::SetTestStateValidatorThatAlwaysPassesExceptForId @ RVA 0x2F27BA0 EA 0x7FF6F6947BA0
+======================================================================
+__int64 __fastcall sub_7FF6F6947BA0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  v8 = v11;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F6930090(v8, v7);
+  *a3 = result;
+  return result;
+}
+

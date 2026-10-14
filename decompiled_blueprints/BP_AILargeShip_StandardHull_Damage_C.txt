@@ -1,0 +1,74 @@
+// E:\unreal-projects\Athena\Content\Blueprints\Ships\bp_ailargeship_standardhull_damage.uasset -> BP_AILargeShip_StandardHull_Damage_C
+
+=== BP_AILargeShip_StandardHull_Damage_C::UserConstructionScript (13 bytes) ===
+$0: FinalFunction target=UserConstructionScript@0x2139d002940 (
+  $9: EndFunctionParms
+)
+$10: Return expression:
+  $11: Nothing
+$12: EndOfScript
+
+=== BP_AILargeShip_StandardHull_Damage_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_AILargeShip_StandardHull_Damage" (
+  $13: literal int32 184
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_AILargeShip_StandardHull_Damage_C::ExecuteUbergraph_BP_AILargeShip_StandardHull_Damage (202 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x212a994ad40
+$10: LetBool (Variable = Expression)
+  Variable:
+  $11: LocalVariable named CallFunc_IsDedicatedServer_ReturnValue@0x2128c893400
+  Expression:
+  $20: Context
+    ObjectExpression:
+    $21: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_IsDedicatedServer_ReturnValue@0x2128c893400
+    ContextExpression:
+    $42: FinalFunction target=IsDedicatedServer@0x212d63add00 (
+      $51: Self
+      $52: EndFunctionParms
+    )
+$53: JumpIfNot -> 0x48, cond:
+  $58: LocalVariable named CallFunc_IsDedicatedServer_ReturnValue@0x2128c893400
+$67: Jump to offset 0xc7
+$72: LetBool (Variable = Expression)
+  Variable:
+  $73: LocalVariable named CallFunc_IsValid_ReturnValue@0x2128c893200
+  Expression:
+  $82: Context
+    ObjectExpression:
+    $83: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x2128c893200
+    ContextExpression:
+    $104: FinalFunction target=IsValid@0x212d63ae380 (
+      $113: InstanceVariable named BaseDamageMask@0x2128c891c00
+      $122: EndFunctionParms
+    )
+$123: JumpIfNot -> 0xc7, cond:
+  $128: LocalVariable named CallFunc_IsValid_ReturnValue@0x2128c893200
+$137: Context
+  ObjectExpression:
+  $138: InstanceVariable named ImpactDecalComponent@0x21397f42180
+  SkipBytes: 0x14
+  RValueProperty: (null)
+  ContextExpression:
+  $159: FinalFunction target=CopyToTargetTexture@0x212d6727650 (
+    $168: Self
+    $169: InstanceVariable named BaseDamageMask@0x2128c891c00
+    $178: EndFunctionParms
+  )
+$179: Jump to offset 0xc7
+$184: FinalFunction target=ReceiveBeginPlay@0x21397c31b00 (
+  $193: EndFunctionParms
+)
+$194: Jump to offset 0xa
+$199: Return expression:
+  $200: Nothing
+$201: EndOfScript

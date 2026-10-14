@@ -1,0 +1,63 @@
+// Class: PetAIController (2 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+PetAIController::GetAthenaAICharPathFollowingComp @ RVA 0x39E7050 EA 0x7FF6F7407050
+======================================================================
+__int64 __fastcall sub_7FF6F7407050(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F73B4A00();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PetAIController::OnPerceptionUpdated @ RVA 0x39E7160 EA 0x7FF6F7407160
+======================================================================
+// Hidden C++ exception states: #wind=3
+__int64 __fastcall sub_7FF6F7407160(__int64 a1, _QWORD *a2)
+{
+  void *v4; // rbx
+  void *v5; // rbp
+  __int64 v6; // rdi
+  __int64 result; // rax
+  void *v8; // [rsp+28h] [rbp-30h] BYREF
+  __int64 v9; // [rsp+30h] [rbp-28h]
+  void *Src; // [rsp+38h] [rbp-20h] BYREF
+  __int64 v11; // [rsp+40h] [rbp-18h]
+
+  v4 = nullptr;
+  Src = nullptr;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &Src);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &Src);
+  }
+  a2[4] += a2[4] != 0;
+  v8 = nullptr;
+  v9 = 0;
+  v5 = Src;
+  v6 = (int)v11;
+  if ( (_DWORD)v11 )
+  {
+    v4 = (void *)sub_7FF6F4DFAA90(0, 8LL * (int)v11, 0);
+    v8 = v4;
+  }
+  memcpy(v4, v5, 8 * v6);
+  LODWORD(v9) = v6;
+  HIDWORD(v9) = v6;
+  result = (*(__int64 (__fastcall **)(__int64, void **))(*(_QWORD *)a1 + 2080LL))(a1, &v8);
+  if ( Src )
+    return sub_7FF6F4DED1F0((__int64)Src);
+  return result;
+}
+

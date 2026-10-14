@@ -1,0 +1,128 @@
+// /Game/Blueprints/Prompts/PromptActors/bp_promptactor_repairshipcapstan -> BP_PromptActor_RepairShipCapstan_C
+
+=== BP_PromptActor_RepairShipCapstan_C::fn_idx_9202 (13 bytes) ===
+$0: FinalFunction target=UserConstructionScript@0x19f424b6840 (
+  $9: EndFunctionParms
+)
+$10: Return expression:
+  $11: Nothing
+$12: EndOfScript
+
+=== BP_PromptActor_RepairShipCapstan_C::fn_idx_9152 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_PromptActor_RepairShipCapstan" (
+  $13: literal int32 10
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_PromptActor_RepairShipCapstan_C::fn_idx_9159 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_EndPlayReason@0x19f49538380
+  Expression:
+  $9: LocalVariable named EndPlayReason@0x19f49538200
+$18: VirtualFunction call "ExecuteUbergraph_BP_PromptActor_RepairShipCapstan" (
+  $31: literal int32 294
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_PromptActor_RepairShipCapstan_C::fn_idx_218334 (394 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19f494c64a0
+$10: LetBool (Variable = Expression)
+  Variable:
+  $11: LocalVariable named CallFunc_IsServer_ReturnValue@0x19f49538300
+  Expression:
+  $20: Context
+    ObjectExpression:
+    $21: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_IsServer_ReturnValue@0x19f49538300
+    ContextExpression:
+    $42: FinalFunction target=IsServer@0x19e4cd8e1c0 (
+      $51: Self
+      $52: EndFunctionParms
+    )
+$53: JumpIfNot -> 0x48, cond:
+  $58: LocalVariable named CallFunc_IsServer_ReturnValue@0x19f49538300
+$67: Jump to offset 0x187
+$72: LetObj (Variable = Expression)
+  Variable:
+  $73: LocalVariable named CallFunc_CreateObject_ReturnValue@0x19f49538400
+  Expression:
+  $82: Context
+    ObjectExpression:
+    $83: ObjectConst Default__ObjectUtilities@0x19e4d79db60
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_CreateObject_ReturnValue@0x19f49538400
+    ContextExpression:
+    $104: FinalFunction target=CreateObject@0x19e4d1f7c10 (
+      $113: ObjectConst BP_Prompt_RepairShipCapstan_C@0x19f47be3840
+      $122: EndFunctionParms
+    )
+$123: Let (Variable = Expression)
+  Variable:
+  $132: LocalVariable named K2Node_DynamicCast_AsBP_Prompt_Repair_Ship_Capstan@0x19f49538480
+  Expression:
+  $141: DynamicCast to BP_Prompt_RepairShipCapstan_C@0x19f47be3840 of expr:
+  $150: LocalVariable named CallFunc_CreateObject_ReturnValue@0x19f49538400
+$159: Let (Variable = Expression)
+  Variable:
+  $168: LocalVariable named K2Node_DynamicCast_bSuccess@0x19f49538500
+  Expression:
+  $177: PrimitiveCast type=71
+    Argument:
+    $179: LocalVariable named K2Node_DynamicCast_AsBP_Prompt_Repair_Ship_Capstan@0x19f49538480
+$188: JumpIfNot -> 0x187, cond:
+  $193: LocalVariable named K2Node_DynamicCast_bSuccess@0x19f49538500
+$202: VirtualFunction call "GetAthenaPlayerController" (
+  $215: LocalVariable named CallFunc_GetAthenaPlayerController_AthenaPlayerController@0x19f49538280
+  $224: EndFunctionParms
+)
+$225: Context
+  ObjectExpression:
+  $226: LocalVariable named K2Node_DynamicCast_AsBP_Prompt_Repair_Ship_Capstan@0x19f49538480
+  SkipBytes: 0x17
+  RValueProperty: (null)
+  ContextExpression:
+  $247: VirtualFunction call "InitializeAndStart" (
+    $260: LocalVariable named CallFunc_GetAthenaPlayerController_AthenaPlayerController@0x19f49538280
+    $269: EndFunctionParms
+  )
+$270: LetObj (Variable = Expression)
+  Variable:
+  $271: InstanceVariable named PromptCoordinator@0x19f49538680
+  Expression:
+  $280: LocalVariable named K2Node_DynamicCast_AsBP_Prompt_Repair_Ship_Capstan@0x19f49538480
+$289: Jump to offset 0x187
+$294: LetBool (Variable = Expression)
+  Variable:
+  $295: LocalVariable named CallFunc_IsValid_ReturnValue@0x19f49538580
+  Expression:
+  $304: Context
+    ObjectExpression:
+    $305: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19f49538580
+    ContextExpression:
+    $326: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $335: InstanceVariable named PromptCoordinator@0x19f49538680
+      $344: EndFunctionParms
+    )
+$345: JumpIfNot -> 0x187, cond:
+  $350: LocalVariable named CallFunc_IsValid_ReturnValue@0x19f49538580
+$359: Context
+  ObjectExpression:
+  $360: InstanceVariable named PromptCoordinator@0x19f49538680
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $381: FinalFunction target=Uninitialize@0x19e4d4b5c00 (
+    $390: EndFunctionParms
+  )
+$391: Return expression:
+  $392: Nothing
+$393: EndOfScript

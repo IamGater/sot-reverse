@@ -1,0 +1,138 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_5_WildRose/bp_wildrose_createeventdispatcherproxy -> BP_WildRose_CreateEventDispatcherProxy_C
+
+=== BP_WildRose_CreateEventDispatcherProxy_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fcc5a7c80
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fcc5a7c00
+$18: VirtualFunction call "idx:284257" (
+  $31: literal int32 25
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_WildRose_CreateEventDispatcherProxy_C::fn_idx_284257 (569 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19e586bb8a0
+$10: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $19: EndFunctionParms
+)
+$20: Jump to offset 0x236
+$25: Let (Variable = Expression)
+  Variable:
+  $34: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x19fcc5a7d00
+  Expression:
+  $43: CallMath target=MakeTransform@0x19e4d38a650 (
+    $52: literal vector (0,0,0)
+    $65: literal rotation (0,0,0)
+    $78: literal vector (1,1,1)
+    $91: EndFunctionParms
+  )
+$92: LetObj (Variable = Expression)
+  Variable:
+  $93: LocalVariable named CallFunc_SpawnActor_ReturnValue@0x19fcc5a7e00
+  Expression:
+  $102: FinalFunction target=SpawnActor@0x19e4cda7ec0 (
+    $111: InstanceVariable named ProxyClass@0x19fcc5a8000
+    $120: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x19fcc5a7d00
+    $129: False
+    $130: EndFunctionParms
+  )
+$131: Let (Variable = Expression)
+  Variable:
+  $140: LocalVariable named idx:284258@0x19fcc5a7e80
+  Expression:
+  $149: DynamicCast to BP_WildRose_TrinketTrackerProxy_C@0x19fd167b640 of expr:
+  $158: LocalVariable named CallFunc_SpawnActor_ReturnValue@0x19fcc5a7e00
+$167: Let (Variable = Expression)
+  Variable:
+  $176: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcc5a7f00
+  Expression:
+  $185: PrimitiveCast type=71
+    Argument:
+    $187: LocalVariable named idx:284258@0x19fcc5a7e80
+$196: JumpIfNot -> 0x119, cond:
+  $201: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcc5a7f00
+$210: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $219: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc5a7d80
+  $228: EndFunctionParms
+)
+$229: LetObj (Variable = Expression)
+  Variable:
+  $230: StructMemberContext prop=idx:284188@0x19f81ca0600
+    Expression to struct:
+    $239: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc5a7d80
+  Expression:
+  $248: LocalVariable named idx:284258@0x19fcc5a7e80
+$257: FinalFunction target=SetVariables@0x19e4cda7cc0 (
+  $266: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc5a7d80
+  $275: EndFunctionParms
+)
+$276: Jump to offset 0xa
+$281: LetObj (Variable = Expression)
+  Variable:
+  $282: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x19fcc5a7f80
+  Expression:
+  $291: Context
+    ObjectExpression:
+    $292: ObjectConst Default__GameplayStatics@0x19e4d95eb20
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetObjectClass_ReturnValue@0x19fcc5a7f80
+    ContextExpression:
+    $313: FinalFunction target=GetObjectClass@0x19e4d35dd20 (
+      $322: Self
+      $323: EndFunctionParms
+    )
+$324: Let (Variable = Expression)
+  Variable:
+  $333: LocalVariable named CallFunc_GetClassDisplayName_ReturnValue@0x19e586bb910
+  Expression:
+  $342: Context
+    ObjectExpression:
+    $343: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetClassDisplayName_ReturnValue@0x19e586bb910
+    ContextExpression:
+    $364: FinalFunction target=GetClassDisplayName@0x19e4cd8bf90 (
+      $373: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x19fcc5a7f80
+      $382: EndFunctionParms
+    )
+$383: Let (Variable = Expression)
+  Variable:
+  $392: LocalVariable named CallFunc_Concat_StrStr_ReturnValue@0x19e586bc630
+  Expression:
+  $401: Context
+    ObjectExpression:
+    $402: ObjectConst Default__KismetStringLibrary@0x19e4d95ecd0
+    SkipBytes: 0x3c
+    RValueProperty: CallFunc_Concat_StrStr_ReturnValue@0x19e586bc630
+    ContextExpression:
+    $423: FinalFunction target=Concat_StrStr@0x19e4d3a1520 (
+      $432: literal ansi string "cast to TrinketTrackerProxy failed in: "
+      $473: LocalVariable named CallFunc_GetClassDisplayName_ReturnValue@0x19e586bb910
+      $482: EndFunctionParms
+    )
+$483: Context
+  ObjectExpression:
+  $484: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x3d
+  RValueProperty: (null)
+  ContextExpression:
+  $505: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $514: NoObject
+    $515: LocalVariable named CallFunc_Concat_StrStr_ReturnValue@0x19e586bc630
+    $524: True
+    $525: True
+    $526: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $539: literal float 1
+      $544: literal float 0
+      $549: literal float 0.14274199306964874
+      $554: literal float 1
+      $559: EndStructConst
+    $560: literal float 100
+    $565: EndFunctionParms
+  )
+$566: Return expression:
+  $567: Nothing
+$568: EndOfScript

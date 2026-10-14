@@ -1,0 +1,81 @@
+// Class: MusicZoneComponent (5 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+MusicZoneComponent::ActivateZone @ RVA 0x36327A0 EA 0x7FF6F70527A0
+======================================================================
+__int64 __fastcall sub_7FF6F70527A0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F704CFE0();
+}
+
+
+======================================================================
+MusicZoneComponent::Client_PlayOneShot @ RVA 0x3632860 EA 0x7FF6F7052860
+======================================================================
+__int64 __fastcall sub_7FF6F7052860(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  unsigned int v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F704D2E0(a1, v6);
+}
+
+
+======================================================================
+MusicZoneComponent::Client_StopMusicAndDisableZone @ RVA 0x36328E0 EA 0x7FF6F70528E0
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+MusicZoneComponent::DisableZone @ RVA 0x3632900 EA 0x7FF6F7052900
+======================================================================
+__int64 __fastcall sub_7FF6F7052900(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F704D5B0();
+}
+
+
+======================================================================
+MusicZoneComponent::GetEmitter @ RVA 0x3632920 EA 0x7FF6F7052920
+======================================================================
+__int64 __fastcall sub_7FF6F7052920(__int64 a1, __int64 a2, __int64 a3)
+{
+  int v3; // esi
+  _QWORD *v5; // r14
+  __int64 v6; // rax
+  __int64 result; // rax
+
+  v3 = 0;
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v5 = (_QWORD *)(*(__int64 (__fastcall **)(__int64))(*(_QWORD *)(a1 + 648) + 48LL))(a1 + 648);
+  sub_7FF6F3C57840(a3 + 8, v5 + 1);
+  *(_QWORD *)a3 = *v5;
+  v6 = *(_QWORD *)(a3 + 8);
+  if ( v6 )
+    v3 = *(_DWORD *)(v6 + 24);
+  *(_DWORD *)(a3 + 16) = v3;
+  result = v5[3];
+  *(_QWORD *)(a3 + 24) = result;
+  return result;
+}
+

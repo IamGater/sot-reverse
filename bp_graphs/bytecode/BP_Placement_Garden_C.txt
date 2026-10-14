@@ -1,0 +1,630 @@
+// /Game/Blueprints/Environment/Wide_Sea_Of_Plunder/bp_wsp_garden_small_rocks -> BP_Placement_Garden_C
+
+=== BP_Placement_Garden_C::fn_idx_222199 (135 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: InstanceVariable named Radius@0x19f5c4b1b20
+  Expression:
+  $18: LocalVariable named Radius@0x19f5c4b11f0
+$27: Let (Variable = Expression)
+  Variable:
+  $36: InstanceVariable named Seed@0x19f5c4b1c70
+  Expression:
+  $45: LocalVariable named Int@0x19f5c4b1260
+$54: LetBool (Variable = Expression)
+  Variable:
+  $55: InstanceVariable named Update On Drag@0x19f5e9cfd00
+  Expression:
+  $64: True
+$65: VirtualFunction call "Create Garden" (
+  $78: EndFunctionParms
+)
+$79: LetBool (Variable = Expression)
+  Variable:
+  $80: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19f5e9cf080
+  Expression:
+  $89: CallMath target=Greater_IntInt@0x19e4d382770 (
+    $98: InstanceVariable named Instance Count@0x19f5c4b1ce0
+    $107: literal int32 0
+    $112: EndFunctionParms
+  )
+$113: LetBool (Variable = Expression)
+  Variable:
+  $114: LocalOutVariable named Instances Created@0x19f5e9cf000
+  Expression:
+  $123: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19f5e9cf080
+$132: Return expression:
+  $133: Nothing
+$134: EndOfScript
+
+=== BP_Placement_Garden_C::fn_idx_222185 (1752 bytes) ===
+$0: FlowStack.Push(0x6d5)
+$5: Context
+  ObjectExpression:
+  $6: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $27: FinalFunction target=Array_Clear@0x19e4d366fd0 (
+    $36: InstanceVariable named Mesh Radii@0x19f5e9cff00
+    $45: EndFunctionParms
+  )
+$46: Context
+  ObjectExpression:
+  $47: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $68: FinalFunction target=Array_Clear@0x19e4d366fd0 (
+    $77: InstanceVariable named Mesh Probabilities@0x19f5c680080
+    $86: EndFunctionParms
+  )
+$87: Let (Variable = Expression)
+  Variable:
+  $96: InstanceVariable named Instance Count@0x19f5c4b1ce0
+  Expression:
+  $105: literal int32 0
+$110: Context
+  ObjectExpression:
+  $111: InstanceVariable named Spherical Volume@0x19f5e9cfb80
+  SkipBytes: 0x14
+  RValueProperty: (null)
+  ContextExpression:
+  $132: FinalFunction target=SetSphereRadius@0x19e4d34a8a0 (
+    $141: InstanceVariable named Radius@0x19f5c4b1b20
+    $150: False
+    $151: EndFunctionParms
+  )
+$152: Context
+  ObjectExpression:
+  $153: InstanceVariable named Spherical Volume@0x19f5e9cfb80
+  SkipBytes: 0x18
+  RValueProperty: (null)
+  ContextExpression:
+  $174: VirtualFunction call "SetVisibility" (
+    $187: InstanceVariable named Radius Visible@0x19f5e9cfc80
+    $196: False
+    $197: EndFunctionParms
+  )
+$198: Let (Variable = Expression)
+  Variable:
+  $207: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f5c4b1420
+  Expression:
+  $216: Context
+    ObjectExpression:
+    $217: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19f5c4b1420
+    ContextExpression:
+    $238: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $247: InstanceVariable named Meshes@0x19f41c59980
+      $256: EndFunctionParms
+    )
+$257: LetBool (Variable = Expression)
+  Variable:
+  $258: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19f5e9cf100
+  Expression:
+  $267: CallMath target=Greater_IntInt@0x19e4d382770 (
+    $276: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f5c4b1420
+    $285: literal int32 0
+    $290: EndFunctionParms
+  )
+$291: PopExecutionFlowIfNot, cond:
+$292: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19f5e9cf100
+$301: Context
+  ObjectExpression:
+  $302: ObjectConst Default__BP_Placement_Functions_C@0x19f5b5de7c0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $323: VirtualFunction call "Normalise Mesh Probabilities" (
+    $336: InstanceVariable named Meshes@0x19f41c59980
+    $345: InstanceVariable named Mesh Probabilities@0x19f5c680080
+    $354: Self
+    $355: EndFunctionParms
+  )
+$356: VirtualFunction call "Initialise Instances" (
+  $369: EndFunctionParms
+)
+$370: Context
+  ObjectExpression:
+  $371: ObjectConst Default__BP_Placement_Functions_C@0x19f5b5de7c0
+  SkipBytes: 0x2a
+  RValueProperty: (null)
+  ContextExpression:
+  $392: VirtualFunction call "Get Radial Sample Count" (
+    $405: InstanceVariable named Radius@0x19f5c4b1b20
+    $414: InstanceVariable named Spawn Density@0x19f5c4b1b90
+    $423: Self
+    $424: LocalVariable named CallFunc_Get_Radial_Sample_Count_Sample_Count@0x19f5c4b1810
+    $433: EndFunctionParms
+  )
+$434: LetBool (Variable = Expression)
+  Variable:
+  $435: LocalVariable named CallFunc_Greater_IntInt_ReturnValue2@0x19f5e9cf680
+  Expression:
+  $444: CallMath target=Greater_IntInt@0x19e4d382770 (
+    $453: LocalVariable named CallFunc_Get_Radial_Sample_Count_Sample_Count@0x19f5c4b1810
+    $462: literal int32 0
+    $467: EndFunctionParms
+  )
+$468: PopExecutionFlowIfNot, cond:
+$469: LocalVariable named CallFunc_Greater_IntInt_ReturnValue2@0x19f5e9cf680
+$478: Context
+  ObjectExpression:
+  $479: ObjectConst Default__KismetMathLibrary@0x19e4d95ec70
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $500: FinalFunction target=SetRandomStreamSeed@0x19e4d398830 (
+    $509: InstanceVariable named Random@0x19f5e9cfd80
+    $518: InstanceVariable named Seed@0x19f5c4b1c70
+    $527: EndFunctionParms
+  )
+$528: Let (Variable = Expression)
+  Variable:
+  $537: LocalVariable named Temp_int_Variable@0x19f5c4b12d0
+  Expression:
+  $546: literal int32 1
+$551: Context
+  ObjectExpression:
+  $552: ObjectConst Default__BP_Placement_Functions_C@0x19f5b5de7c0
+  SkipBytes: 0x2a
+  RValueProperty: (null)
+  ContextExpression:
+  $573: VirtualFunction call "Get Radial Sample Count" (
+    $586: InstanceVariable named Radius@0x19f5c4b1b20
+    $595: InstanceVariable named Spawn Density@0x19f5c4b1b90
+    $604: Self
+    $605: LocalVariable named CallFunc_Get_Radial_Sample_Count_Sample_Count@0x19f5c4b1810
+    $614: EndFunctionParms
+  )
+$615: LetBool (Variable = Expression)
+  Variable:
+  $616: LocalVariable named CallFunc_LessEqual_IntInt_ReturnValue@0x19f5e9cf700
+  Expression:
+  $625: CallMath target=LessEqual_IntInt@0x19e4d3869d0 (
+    $634: LocalVariable named Temp_int_Variable@0x19f5c4b12d0
+    $643: LocalVariable named CallFunc_Get_Radial_Sample_Count_Sample_Count@0x19f5c4b1810
+    $652: EndFunctionParms
+  )
+$653: PopExecutionFlowIfNot, cond:
+$654: LocalVariable named CallFunc_LessEqual_IntInt_ReturnValue@0x19f5e9cf700
+$663: FlowStack.Push(0x68b)
+$668: Context
+  ObjectExpression:
+  $669: ObjectConst Default__BP_Placement_Functions_C@0x19f5b5de7c0
+  SkipBytes: 0x81
+  RValueProperty: (null)
+  ContextExpression:
+  $690: VirtualFunction call "Set Mesh" (
+    $703: InstanceVariable named Meshes@0x19f41c59980
+    $712: InstanceVariable named Mesh Probabilities@0x19f5c680080
+    $721: InstanceVariable named Radius@0x19f5c4b1b20
+    $730: InstanceVariable named Spawn Clustering@0x19f5c4b1c00
+    $739: literal float 1
+    $744: InstanceVariable named Physical Materials@0x19f5c680180
+    $753: InstanceVariable named Mesh Radii@0x19f5e9cff00
+    $762: InstanceVariable named Random@0x19f5e9cfd80
+    $771: Self
+    $772: Self
+    $773: LocalVariable named CallFunc_Set_Mesh_Spawn_Permission@0x19f5e9cf180
+    $782: LocalVariable named CallFunc_Set_Mesh_Transform@0x19f5e9cf200
+    $791: LocalVariable named CallFunc_Set_Mesh_Radius@0x19f5c4b1490
+    $800: LocalVariable named CallFunc_Set_Mesh_Mesh_Index@0x19f5c4b1500
+    $809: LocalVariable named CallFunc_Set_Mesh_Mesh@0x19f5e9cf300
+    $818: EndFunctionParms
+  )
+$819: PopExecutionFlowIfNot, cond:
+$820: LocalVariable named CallFunc_Set_Mesh_Spawn_Permission@0x19f5e9cf180
+$829: Context
+  ObjectExpression:
+  $830: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $851: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $860: InstanceVariable named Instanced Meshes@0x19f5c680000
+    $869: LocalVariable named CallFunc_Set_Mesh_Mesh_Index@0x19f5c4b1500
+    $878: LocalVariable named CallFunc_Array_Get_Item@0x19f5e9cf380
+    $887: EndFunctionParms
+  )
+$888: Let (Variable = Expression)
+  Variable:
+  $897: LocalVariable named CallFunc_AddInstanceWorldSpace_ReturnValue@0x19f5c4b15e0
+  Expression:
+  $906: Context
+    ObjectExpression:
+    $907: LocalVariable named CallFunc_Array_Get_Item@0x19f5e9cf380
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_AddInstanceWorldSpace_ReturnValue@0x19f5c4b15e0
+    ContextExpression:
+    $928: FinalFunction target=AddInstanceWorldSpace@0x19e4d29a0b0 (
+      $937: LocalVariable named CallFunc_Set_Mesh_Transform@0x19f5e9cf200
+      $946: EndFunctionParms
+    )
+$947: Context
+  ObjectExpression:
+  $948: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $969: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $978: InstanceVariable named Instanced Meshes@0x19f5c680000
+    $987: LocalVariable named CallFunc_Set_Mesh_Mesh_Index@0x19f5c4b1500
+    $996: LocalVariable named CallFunc_Array_Get_Item@0x19f5e9cf380
+    $1005: EndFunctionParms
+  )
+$1006: Context
+  ObjectExpression:
+  $1007: LocalVariable named CallFunc_Array_Get_Item@0x19f5e9cf380
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $1028: FinalFunction target=SetCullDistance@0x19e4d0d30d0 (
+    $1037: InstanceVariable named Max Draw Distance@0x19f5c4b1d50
+    $1046: EndFunctionParms
+  )
+$1047: Context
+  ObjectExpression:
+  $1048: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $1069: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $1078: InstanceVariable named Instanced Meshes@0x19f5c680000
+    $1087: LocalVariable named CallFunc_Set_Mesh_Mesh_Index@0x19f5c4b1500
+    $1096: LocalVariable named CallFunc_Array_Get_Item@0x19f5e9cf380
+    $1105: EndFunctionParms
+  )
+$1106: Context
+  ObjectExpression:
+  $1107: LocalVariable named CallFunc_Array_Get_Item@0x19f5e9cf380
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $1128: FinalFunction target=SetCastShadow@0x19e4d0d25f0 (
+    $1137: InstanceVariable named Cast Shadows@0x19f5e9cfe00
+    $1146: EndFunctionParms
+  )
+$1147: Let (Variable = Expression)
+  Variable:
+  $1156: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f5c4b1340
+  Expression:
+  $1165: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $1174: InstanceVariable named Instance Count@0x19f5c4b1ce0
+    $1183: literal int32 1
+    $1188: EndFunctionParms
+  )
+$1189: Let (Variable = Expression)
+  Variable:
+  $1198: InstanceVariable named Instance Count@0x19f5c4b1ce0
+  Expression:
+  $1207: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f5c4b1340
+$1216: Let (Variable = Expression)
+  Variable:
+  $1225: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x19f5c4b1570
+  Expression:
+  $1234: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $1243: LocalVariable named CallFunc_Set_Mesh_Radius@0x19f5c4b1490
+    $1252: StructMemberContext prop=RadiusOverlap_10_3A052E52449C395FA85BB99D6EB0A126@0x19f26c04ec0
+      Expression to struct:
+      $1261: LocalVariable named CallFunc_Set_Mesh_Mesh@0x19f5e9cf300
+    $1270: EndFunctionParms
+  )
+$1271: LetBool (Variable = Expression)
+  Variable:
+  $1272: LocalVariable named CallFunc_Greater_FloatFloat_ReturnValue@0x19f5e9cf400
+  Expression:
+  $1281: CallMath target=Greater_FloatFloat@0x19e4d382550 (
+    $1290: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x19f5c4b1570
+    $1299: literal float 0
+    $1304: EndFunctionParms
+  )
+$1305: PopExecutionFlowIfNot, cond:
+$1306: LocalVariable named CallFunc_Greater_FloatFloat_ReturnValue@0x19f5e9cf400
+$1315: Let (Variable = Expression)
+  Variable:
+  $1324: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x19f5c4b1570
+  Expression:
+  $1333: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $1342: LocalVariable named CallFunc_Set_Mesh_Radius@0x19f5c4b1490
+    $1351: StructMemberContext prop=RadiusOverlap_10_3A052E52449C395FA85BB99D6EB0A126@0x19f26c04ec0
+      Expression to struct:
+      $1360: LocalVariable named CallFunc_Set_Mesh_Mesh@0x19f5e9cf300
+    $1369: EndFunctionParms
+  )
+$1370: CallMath target=BreakTransform@0x19e4d372df0 (
+  $1379: LocalVariable named CallFunc_Set_Mesh_Transform@0x19f5e9cf200
+  $1388: LocalVariable named CallFunc_BreakTransform_Location@0x19f5e9cf480
+  $1397: LocalVariable named CallFunc_BreakTransform_Rotation@0x19f5e9cf500
+  $1406: LocalVariable named CallFunc_BreakTransform_Scale@0x19f5e9cf580
+  $1415: EndFunctionParms
+)
+$1416: CallMath target=BreakVector@0x19e4d3730b0 (
+  $1425: LocalVariable named CallFunc_BreakTransform_Location@0x19f5e9cf480
+  $1434: LocalVariable named CallFunc_BreakVector_X@0x19f5c4b1650
+  $1443: LocalVariable named CallFunc_BreakVector_Y@0x19f5c4b16c0
+  $1452: LocalVariable named CallFunc_BreakVector_Z@0x19f5c4b1730
+  $1461: EndFunctionParms
+)
+$1462: Let (Variable = Expression)
+  Variable:
+  $1471: StructMemberContext prop=idx:6476@0x19e4cd589b0
+    Expression to struct:
+    $1480: LocalVariable named K2Node_MakeStruct_LinearColor@0x19f5e9cf600
+  Expression:
+  $1489: LocalVariable named CallFunc_BreakVector_X@0x19f5c4b1650
+$1498: Let (Variable = Expression)
+  Variable:
+  $1507: StructMemberContext prop=idx:6465@0x19e4cd58940
+    Expression to struct:
+    $1516: LocalVariable named K2Node_MakeStruct_LinearColor@0x19f5e9cf600
+  Expression:
+  $1525: LocalVariable named CallFunc_BreakVector_Y@0x19f5c4b16c0
+$1534: Let (Variable = Expression)
+  Variable:
+  $1543: StructMemberContext prop=idx:6460@0x19e4cd588d0
+    Expression to struct:
+    $1552: LocalVariable named K2Node_MakeStruct_LinearColor@0x19f5e9cf600
+  Expression:
+  $1561: LocalVariable named CallFunc_BreakVector_Z@0x19f5c4b1730
+$1570: Let (Variable = Expression)
+  Variable:
+  $1579: StructMemberContext prop=idx:6459@0x19e4cd58860
+    Expression to struct:
+    $1588: LocalVariable named K2Node_MakeStruct_LinearColor@0x19f5e9cf600
+  Expression:
+  $1597: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x19f5c4b1570
+$1606: Let (Variable = Expression)
+  Variable:
+  $1615: LocalVariable named CallFunc_Array_Add_ReturnValue@0x19f5c4b17a0
+  Expression:
+  $1624: Context
+    ObjectExpression:
+    $1625: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Add_ReturnValue@0x19f5c4b17a0
+    ContextExpression:
+    $1646: FinalFunction target=Array_Add@0x19e4d366810 (
+      $1655: InstanceVariable named Mesh Radii@0x19f5e9cff00
+      $1664: LocalVariable named K2Node_MakeStruct_LinearColor@0x19f5e9cf600
+      $1673: EndFunctionParms
+    )
+$1674: PopExecutionFlow (jump to popped addr)
+$1675: Let (Variable = Expression)
+  Variable:
+  $1684: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x19f5c4b13b0
+  Expression:
+  $1693: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $1702: LocalVariable named Temp_int_Variable@0x19f5c4b12d0
+    $1711: literal int32 1
+    $1716: EndFunctionParms
+  )
+$1717: Let (Variable = Expression)
+  Variable:
+  $1726: LocalVariable named Temp_int_Variable@0x19f5c4b12d0
+  Expression:
+  $1735: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x19f5c4b13b0
+$1744: Jump to offset 0x227
+$1749: Return expression:
+  $1750: Nothing
+$1751: EndOfScript
+
+=== BP_Placement_Garden_C::fn_idx_222190 (853 bytes) ===
+$0: FlowStack.Push(0x352)
+$5: Context
+  ObjectExpression:
+  $6: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $27: FinalFunction target=Array_Clear@0x19e4d366fd0 (
+    $36: InstanceVariable named Instanced Meshes@0x19f5c680000
+    $45: EndFunctionParms
+  )
+$46: Let (Variable = Expression)
+  Variable:
+  $55: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f5c4b1960
+  Expression:
+  $64: literal int32 0
+$69: Let (Variable = Expression)
+  Variable:
+  $78: LocalVariable named Temp_int_Array_Index_Variable@0x19f5c4b1880
+  Expression:
+  $87: literal int32 0
+$92: Let (Variable = Expression)
+  Variable:
+  $101: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f5c4b18f0
+  Expression:
+  $110: Context
+    ObjectExpression:
+    $111: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19f5c4b18f0
+    ContextExpression:
+    $132: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $141: InstanceVariable named Meshes@0x19f41c59980
+      $150: EndFunctionParms
+    )
+$151: LetBool (Variable = Expression)
+  Variable:
+  $152: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19f5e9cf980
+  Expression:
+  $161: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $170: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f5c4b1960
+    $179: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f5c4b18f0
+    $188: EndFunctionParms
+  )
+$189: PopExecutionFlowIfNot, cond:
+$190: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19f5e9cf980
+$199: Let (Variable = Expression)
+  Variable:
+  $208: LocalVariable named Temp_int_Array_Index_Variable@0x19f5c4b1880
+  Expression:
+  $217: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f5c4b1960
+$226: FlowStack.Push(0x2d2)
+$231: Let (Variable = Expression)
+  Variable:
+  $240: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x19f5e9cf800
+  Expression:
+  $249: CallMath target=MakeTransform@0x19e4d38a650 (
+    $258: literal vector (0,0,0)
+    $271: literal rotation (0,0,0)
+    $284: literal vector (1,1,1)
+    $297: EndFunctionParms
+  )
+$298: LetObj (Variable = Expression)
+  Variable:
+  $299: LocalVariable named CallFunc_AddComponent_ReturnValue@0x19f5e9cf880
+  Expression:
+  $308: FinalFunction target=AddComponent@0x19e4cd601e0 (
+    $317: literal name "InstancedStaticMeshComponent"
+    $330: False
+    $331: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x19f5e9cf800
+    $340: Self
+    $341: EndFunctionParms
+  )
+$342: Context
+  ObjectExpression:
+  $343: LocalVariable named CallFunc_AddComponent_ReturnValue@0x19f5e9cf880
+  SkipBytes: 0x23
+  RValueProperty: (null)
+  ContextExpression:
+  $364: FinalFunction target=K2_AttachTo@0x19e4d071040 (
+    $373: InstanceVariable named Scene@0x19f5e9cfc00
+    $382: literal name "None"
+    $395: literal byte 0
+    $397: True
+    $398: EndFunctionParms
+  )
+$399: Context
+  ObjectExpression:
+  $400: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $421: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $430: InstanceVariable named Meshes@0x19f41c59980
+    $439: LocalVariable named Temp_int_Array_Index_Variable@0x19f5c4b1880
+    $448: LocalVariable named CallFunc_Array_Get_Item@0x19f5e9cf780
+    $457: EndFunctionParms
+  )
+$458: JumpIfNot -> 0x31c, cond:
+  $463: StructMemberContext prop=CollideWithPlayer_35_697A910F4984B3701F758BAEA60D8CF3@0x19f5846eb80
+    Expression to struct:
+    $472: LocalVariable named CallFunc_Array_Get_Item@0x19f5e9cf780
+$481: Context
+  ObjectExpression:
+  $482: LocalVariable named CallFunc_AddComponent_ReturnValue@0x19f5e9cf880
+  SkipBytes: 0x1b
+  RValueProperty: (null)
+  ContextExpression:
+  $503: VirtualFunction call "SetCollisionProfileName" (
+    $516: literal name "BlockAll"
+    $529: EndFunctionParms
+  )
+$530: Context
+  ObjectExpression:
+  $531: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $552: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $561: InstanceVariable named Meshes@0x19f41c59980
+    $570: LocalVariable named Temp_int_Array_Index_Variable@0x19f5c4b1880
+    $579: LocalVariable named CallFunc_Array_Get_Item@0x19f5e9cf780
+    $588: EndFunctionParms
+  )
+$589: LetBool (Variable = Expression)
+  Variable:
+  $590: LocalVariable named CallFunc_SetStaticMesh_ReturnValue@0x19f5e9cf900
+  Expression:
+  $599: Context
+    ObjectExpression:
+    $600: LocalVariable named CallFunc_AddComponent_ReturnValue@0x19f5e9cf880
+    SkipBytes: 0x20
+    RValueProperty: CallFunc_SetStaticMesh_ReturnValue@0x19f5e9cf900
+    ContextExpression:
+    $621: VirtualFunction call "SetStaticMesh" (
+      $634: StructMemberContext prop=Mesh_27_C9BD6A6847185FAAF40455801B2F864F@0x19f5b8f6c00
+        Expression to struct:
+        $643: LocalVariable named CallFunc_Array_Get_Item@0x19f5e9cf780
+      $652: EndFunctionParms
+    )
+$653: Let (Variable = Expression)
+  Variable:
+  $662: LocalVariable named CallFunc_Array_Add_ReturnValue@0x19f5c4b1a40
+  Expression:
+  $671: Context
+    ObjectExpression:
+    $672: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Add_ReturnValue@0x19f5c4b1a40
+    ContextExpression:
+    $693: FinalFunction target=Array_Add@0x19e4d366810 (
+      $702: InstanceVariable named Instanced Meshes@0x19f5c680000
+      $711: LocalVariable named CallFunc_AddComponent_ReturnValue@0x19f5e9cf880
+      $720: EndFunctionParms
+    )
+$721: PopExecutionFlow (jump to popped addr)
+$722: Let (Variable = Expression)
+  Variable:
+  $731: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f5c4b19d0
+  Expression:
+  $740: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $749: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f5c4b1960
+    $758: literal int32 1
+    $763: EndFunctionParms
+  )
+$764: Let (Variable = Expression)
+  Variable:
+  $773: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f5c4b1960
+  Expression:
+  $782: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f5c4b19d0
+$791: Jump to offset 0x5c
+$796: Context
+  ObjectExpression:
+  $797: LocalVariable named CallFunc_AddComponent_ReturnValue@0x19f5e9cf880
+  SkipBytes: 0x1b
+  RValueProperty: (null)
+  ContextExpression:
+  $818: VirtualFunction call "SetCollisionProfileName" (
+    $831: literal name "NoCollision"
+    $844: EndFunctionParms
+  )
+$845: Jump to offset 0x212
+$850: Return expression:
+  $851: Nothing
+$852: EndOfScript
+
+=== BP_Placement_Garden_C::fn_idx_9202 (31 bytes) ===
+$0: JumpIfNot -> 0x1c, cond:
+  $5: InstanceVariable named Update On Drag@0x19f5e9cfd00
+$14: VirtualFunction call "Create Garden" (
+  $27: EndFunctionParms
+)
+$28: Return expression:
+  $29: Nothing
+$30: EndOfScript
+
+=== BP_Placement_Garden_C::fn_idx_222188 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Placement_Garden" (
+  $13: literal int32 29
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Placement_Garden_C::fn_idx_222187 (37 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19f5c4b1ab0
+$10: VirtualFunction call "Create Garden" (
+  $23: EndFunctionParms
+)
+$24: Jump to offset 0x22
+$29: Jump to offset 0xa
+$34: Return expression:
+  $35: Nothing
+$36: EndOfScript

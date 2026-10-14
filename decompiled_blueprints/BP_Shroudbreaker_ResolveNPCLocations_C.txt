@@ -1,0 +1,162 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_1_Shroudbreaker/bp_shroudbreaker_resolvenpclocations -> BP_Shroudbreaker_ResolveNPCLocations_C
+
+=== BP_Shroudbreaker_ResolveNPCLocations_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fce0dd880
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fce0dd800
+$18: VirtualFunction call "idx:283500" (
+  $31: literal int32 635
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Shroudbreaker_ResolveNPCLocations_C::fn_idx_283500 (662 bytes) ===
+$0: FlowStack.Push(0x293)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x19fcdbb1dc0
+$15: FlowStack.Push(0x111)
+$20: Context
+  ObjectExpression:
+  $21: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x2e
+  RValueProperty: (null)
+  ContextExpression:
+  $42: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $51: StructMemberContext prop=idx:283501@0x19fce0de600
+      Expression to struct:
+      $60: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce0dd900
+    $69: LocalVariable named Temp_int_Array_Index_Variable@0x19fcdbb1e30
+    $78: LocalVariable named CallFunc_Array_Get_Item@0x19fce0dda00
+    $87: EndFunctionParms
+  )
+$88: LetObj (Variable = Expression)
+  Variable:
+  $89: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue@0x19fce0dda80
+  Expression:
+  $98: Context
+    ObjectExpression:
+    $99: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Conv_AssetToObject_ReturnValue@0x19fce0dda80
+    ContextExpression:
+    $120: FinalFunction target=Conv_AssetToObject@0x19e4cd86800 (
+      $129: LocalVariable named CallFunc_Array_Get_Item@0x19fce0dda00
+      $138: EndFunctionParms
+    )
+$139: Let (Variable = Expression)
+  Variable:
+  $148: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19fce0ddb80
+  Expression:
+  $157: DynamicCast to Actor@0x19e261ddc80 of expr:
+  $166: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue@0x19fce0dda80
+$175: Let (Variable = Expression)
+  Variable:
+  $184: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x19fce0ddc00
+  Expression:
+  $193: PrimitiveCast type=71
+    Argument:
+    $195: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19fce0ddb80
+$204: Let (Variable = Expression)
+  Variable:
+  $213: LocalVariable named CallFunc_Array_Add_ReturnValue@0x19fcdbb2220
+  Expression:
+  $222: Context
+    ObjectExpression:
+    $223: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Add_ReturnValue@0x19fcdbb2220
+    ContextExpression:
+    $244: FinalFunction target=Array_Add@0x19e4d366810 (
+      $253: InstanceVariable named idx:283502@0x19fce0ddd00
+      $262: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19fce0ddb80
+      $271: EndFunctionParms
+    )
+$272: PopExecutionFlow (jump to popped addr)
+$273: Let (Variable = Expression)
+  Variable:
+  $282: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19fcdbb1f10
+  Expression:
+  $291: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $300: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fcdbb1ea0
+    $309: literal int32 1
+    $314: EndFunctionParms
+  )
+$315: Let (Variable = Expression)
+  Variable:
+  $324: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fcdbb1ea0
+  Expression:
+  $333: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19fcdbb1f10
+$342: Let (Variable = Expression)
+  Variable:
+  $351: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fcdbb20d0
+  Expression:
+  $360: Context
+    ObjectExpression:
+    $361: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19fcdbb20d0
+    ContextExpression:
+    $382: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $391: StructMemberContext prop=idx:283501@0x19fce0de600
+        Expression to struct:
+        $400: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce0dd900
+      $409: EndFunctionParms
+    )
+$410: LetBool (Variable = Expression)
+  Variable:
+  $411: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19fce0ddb00
+  Expression:
+  $420: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $429: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fcdbb1ea0
+    $438: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fcdbb20d0
+    $447: EndFunctionParms
+  )
+$448: JumpIfNot -> 0x1ee, cond:
+  $453: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19fce0ddb00
+$462: Let (Variable = Expression)
+  Variable:
+  $471: LocalVariable named Temp_int_Array_Index_Variable@0x19fcdbb1e30
+  Expression:
+  $480: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fcdbb1ea0
+$489: Jump to offset 0xf
+$494: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $503: LocalVariable named CallFunc_GetVariables_OutStruct2@0x19fce0dd980
+  $512: EndFunctionParms
+)
+$513: Let (Variable = Expression)
+  Variable:
+  $522: StructMemberContext prop=idx:283367@0x19fce6e4480
+    Expression to struct:
+    $531: LocalVariable named CallFunc_GetVariables_OutStruct2@0x19fce0dd980
+  Expression:
+  $540: InstanceVariable named idx:283502@0x19fce0ddd00
+$549: FinalFunction target=SetVariables@0x19e4cda7cc0 (
+  $558: LocalVariable named CallFunc_GetVariables_OutStruct2@0x19fce0dd980
+  $567: EndFunctionParms
+)
+$568: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $577: EndFunctionParms
+)
+$578: PopExecutionFlow (jump to popped addr)
+$579: Let (Variable = Expression)
+  Variable:
+  $588: LocalVariable named Temp_int_Array_Index_Variable@0x19fcdbb1e30
+  Expression:
+  $597: literal int32 0
+$602: Jump to offset 0x156
+$607: Let (Variable = Expression)
+  Variable:
+  $616: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fcdbb1ea0
+  Expression:
+  $625: literal int32 0
+$630: Jump to offset 0x243
+$635: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $644: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce0dd900
+  $653: EndFunctionParms
+)
+$654: Jump to offset 0x25f
+$659: Return expression:
+  $660: Nothing
+$661: EndOfScript

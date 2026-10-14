@@ -1,0 +1,226 @@
+// Class: AvoidanceManager (6 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+AvoidanceManager::GetAvoidanceVelocity @ RVA 0x2B14400 EA 0x7FF6F6534400
+======================================================================
+__int64 __fastcall sub_7FF6F6534400(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v3; // rdi
+  _BYTE *v7; // rax
+  _BYTE *v8; // rsi
+  __int64 v9; // rax
+  __int64 v10; // rax
+  __int64 result; // rax
+  _BYTE v12[16]; // [rsp+20h] [rbp-68h] BYREF
+  _BYTE v13[64]; // [rsp+30h] [rbp-58h] BYREF
+  int v14; // [rsp+98h] [rbp+10h] BYREF
+
+  v3 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v13);
+  }
+  v7 = (_BYTE *)a2[7];
+  v8 = v13;
+  v14 = 0;
+  if ( v7 )
+    v8 = v7;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v9 = a2[4];
+  LOBYTE(v3) = v9 != 0;
+  a2[4] = v9 + v3;
+  v10 = sub_7FF6F5B92CB0(a1, v12, v8);
+  *(_QWORD *)a3 = *(_QWORD *)v10;
+  result = *(unsigned int *)(v10 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+AvoidanceManager::GetAvoidanceVelocityForComponent @ RVA 0x2B14500 EA 0x7FF6F6534500
+======================================================================
+__int64 __fastcall sub_7FF6F6534500(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rax
+  __int64 result; // rax
+  _BYTE v11[24]; // [rsp+20h] [rbp-18h] BYREF
+  __int64 v12; // [rsp+48h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v7 = a2[4];
+  v8 = v12;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  v9 = sub_7FF6F5B92CD0(a1, v11, v8);
+  *(_QWORD *)a3 = *(_QWORD *)v9;
+  result = *(unsigned int *)(v9 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+AvoidanceManager::GetAvoidanceVelocityIgnoringUID @ RVA 0x2B145A0 EA 0x7FF6F65345A0
+======================================================================
+__int64 __fastcall sub_7FF6F65345A0(int a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  _BYTE *v8; // rsi
+  int v9; // r9d
+  __int64 v10; // rax
+  __int64 v11; // rdi
+  __int64 v12; // rax
+  __int64 result; // rax
+  char v14; // [rsp+30h] [rbp-68h] BYREF
+  _BYTE v15[64]; // [rsp+40h] [rbp-58h] BYREF
+  int v16; // [rsp+A8h] [rbp+10h] BYREF
+  int v17; // [rsp+B0h] [rbp+18h] BYREF
+
+  v3 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v15);
+  }
+  v7 = a2[7];
+  v8 = v15;
+  v17 = 0;
+  if ( v7 )
+    LODWORD(v8) = v7;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v10 = a2[4];
+  LOBYTE(v3) = v10 != 0;
+  v11 = v10 + v3;
+  LOBYTE(v10) = v16;
+  a2[4] = v11;
+  v12 = sub_7FF6F5B92D80(a1, (unsigned int)&v14, (_DWORD)v8, v9, v10);
+  *(_QWORD *)a3 = *(_QWORD *)v12;
+  result = *(unsigned int *)(v12 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+AvoidanceManager::GetNewAvoidanceUID @ RVA 0x2B16700 EA 0x7FF6F6536700
+======================================================================
+__int64 __fastcall sub_7FF6F6536700(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5B97850();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AvoidanceManager::GetObjectCount @ RVA 0x2B169E0 EA 0x7FF6F65369E0
+======================================================================
+__int64 __fastcall sub_7FF6F65369E0(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5B978F0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AvoidanceManager::RegisterMovementComponent @ RVA 0x2B1AFA0 EA 0x7FF6F653AFA0
+======================================================================
+__int64 __fastcall sub_7FF6F653AFA0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 result; // rax
+  int v10; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+50h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v11;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = sub_7FF6F5BA04B0(a1, v8);
+  *a3 = result;
+  return result;
+}
+

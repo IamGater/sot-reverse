@@ -1,0 +1,246 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_6_TheArtOfTheTrickster/bp_tale_6_setupvaultassets -> BP_Tale_6_SetUpVaultAssets_C
+
+=== BP_Tale_6_SetUpVaultAssets_C::fn_idx_1828 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fcc9cd880
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fcc9cd780
+$18: VirtualFunction call "idx:284460" (
+  $31: literal int32 877
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Tale_6_SetUpVaultAssets_C::fn_idx_284460 (985 bytes) ===
+$0: FlowStack.Push(0x3d6)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x19e586badb0
+$15: Let (Variable = Expression)
+  Variable:
+  $24: LocalVariable named Temp_int_Array_Index_Variable@0x19e586bafe0
+  Expression:
+  $33: literal int32 0
+$38: Let (Variable = Expression)
+  Variable:
+  $47: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19e586bb2f0
+  Expression:
+  $56: Context
+    ObjectExpression:
+    $57: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19e586bb2f0
+    ContextExpression:
+    $78: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $87: StructMemberContext prop=idx:284399@0x19fcc5a3b00
+        Expression to struct:
+        $96: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc9cd900
+      $105: EndFunctionParms
+    )
+$106: LetBool (Variable = Expression)
+  Variable:
+  $107: LocalVariable named CallFunc_Not_PreBool_ReturnValue@0x19fcc9cdd80
+  Expression:
+  $116: CallMath target=Not_PreBool@0x19e4d390310 (
+    $125: LocalVariable named Temp_bool_True_if_break_was_hit_Variable@0x19fcc9cdd00
+    $134: EndFunctionParms
+  )
+$135: LetBool (Variable = Expression)
+  Variable:
+  $136: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19fcc9cde00
+  Expression:
+  $145: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $154: LocalVariable named Temp_int_Loop_Counter_Variable@0x19e586bb440
+    $163: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19e586bb2f0
+    $172: EndFunctionParms
+  )
+$173: LetBool (Variable = Expression)
+  Variable:
+  $174: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x19fcc9cde80
+  Expression:
+  $183: CallMath target=BooleanAND@0x19e4d3710f0 (
+    $192: LocalVariable named CallFunc_Not_PreBool_ReturnValue@0x19fcc9cdd80
+    $201: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19fcc9cde00
+    $210: EndFunctionParms
+  )
+$211: JumpIfNot -> 0x318, cond:
+  $216: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x19fcc9cde80
+$225: Let (Variable = Expression)
+  Variable:
+  $234: LocalVariable named Temp_int_Array_Index_Variable@0x19e586bafe0
+  Expression:
+  $243: LocalVariable named Temp_int_Loop_Counter_Variable@0x19e586bb440
+$252: FlowStack.Push(0x323)
+$257: Context
+  ObjectExpression:
+  $258: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x2e
+  RValueProperty: (null)
+  ContextExpression:
+  $279: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $288: StructMemberContext prop=idx:284399@0x19fcc5a3b00
+      Expression to struct:
+      $297: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc9cd900
+    $306: LocalVariable named Temp_int_Array_Index_Variable@0x19e586bafe0
+    $315: LocalVariable named CallFunc_Array_Get_Item@0x19fcc9cda00
+    $324: EndFunctionParms
+  )
+$325: LetObj (Variable = Expression)
+  Variable:
+  $326: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue@0x19fcc9cdb00
+  Expression:
+  $335: Context
+    ObjectExpression:
+    $336: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Conv_AssetToObject_ReturnValue@0x19fcc9cdb00
+    ContextExpression:
+    $357: FinalFunction target=Conv_AssetToObject@0x19e4cd86800 (
+      $366: StructMemberContext prop=idx:284417@0x19fcc5a3f80
+        Expression to struct:
+        $375: LocalVariable named CallFunc_Array_Get_Item@0x19fcc9cda00
+      $384: EndFunctionParms
+    )
+$385: Let (Variable = Expression)
+  Variable:
+  $394: LocalVariable named UniqueObjectNameForCooking_AsPuzzle_Vault@0x19fcc9cdb80
+  Expression:
+  $403: DynamicCast to PuzzleVault@0x19e4c4378c0 of expr:
+  $412: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue@0x19fcc9cdb00
+$421: Let (Variable = Expression)
+  Variable:
+  $430: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x19fcc9cdc00
+  Expression:
+  $439: PrimitiveCast type=71
+    Argument:
+    $441: LocalVariable named UniqueObjectNameForCooking_AsPuzzle_Vault@0x19fcc9cdb80
+$450: LetBool (Variable = Expression)
+  Variable:
+  $451: LocalVariable named CallFunc_EqualEqual_ObjectObject_ReturnValue@0x19fcc9cdc80
+  Expression:
+  $460: CallMath target=EqualEqual_ObjectObject@0x19e4d37b340 (
+    $469: LocalVariable named UniqueObjectNameForCooking_AsPuzzle_Vault@0x19fcc9cdb80
+    $478: InstanceVariable named idx:284464@0x19fcc9cdf00
+    $487: EndFunctionParms
+  )
+$488: PopExecutionFlowIfNot, cond:
+$489: LocalVariable named CallFunc_EqualEqual_ObjectObject_ReturnValue@0x19fcc9cdc80
+$498: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $507: LocalVariable named CallFunc_GetVariables_OutStruct3@0x19fcc9cda80
+  $516: EndFunctionParms
+)
+$517: Context
+  ObjectExpression:
+  $518: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x2e
+  RValueProperty: (null)
+  ContextExpression:
+  $539: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $548: StructMemberContext prop=idx:284399@0x19fcc5a3b00
+      Expression to struct:
+      $557: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc9cd900
+    $566: LocalVariable named Temp_int_Array_Index_Variable@0x19e586bafe0
+    $575: LocalVariable named CallFunc_Array_Get_Item@0x19fcc9cda00
+    $584: EndFunctionParms
+  )
+$585: LetObj (Variable = Expression)
+  Variable:
+  $586: StructMemberContext prop=idx:284461@0x19fcc9ce080
+    Expression to struct:
+    $595: LocalVariable named CallFunc_GetVariables_OutStruct3@0x19fcc9cda80
+  Expression:
+  $604: StructMemberContext prop=idx:284390@0x19fcc5a3400
+    Expression to struct:
+    $613: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc9cd900
+$622: LetObj (Variable = Expression)
+  Variable:
+  $623: StructMemberContext prop=idx:284457@0x19fcc9ce100
+    Expression to struct:
+    $632: LocalVariable named CallFunc_GetVariables_OutStruct3@0x19fcc9cda80
+  Expression:
+  $641: StructMemberContext prop=idx:284387@0x19fcc5a3480
+    Expression to struct:
+    $650: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc9cd900
+$659: LetObj (Variable = Expression)
+  Variable:
+  $660: StructMemberContext prop=idx:284462@0x19fcc9ce500
+    Expression to struct:
+    $669: LocalVariable named CallFunc_GetVariables_OutStruct3@0x19fcc9cda80
+  Expression:
+  $678: StructMemberContext prop=idx:284415@0x19fcc5a3e80
+    Expression to struct:
+    $687: LocalVariable named CallFunc_Array_Get_Item@0x19fcc9cda00
+$696: LetBool (Variable = Expression)
+  Variable:
+  $697: StructMemberContext prop=idx:284463@0x19fcc9cdf80
+    Expression to struct:
+    $706: LocalVariable named CallFunc_GetVariables_OutStruct3@0x19fcc9cda80
+  Expression:
+  $715: StructMemberContext prop=idx:284416@0x19fcc5a3f00
+    Expression to struct:
+    $724: LocalVariable named CallFunc_Array_Get_Item@0x19fcc9cda00
+$733: LetObj (Variable = Expression)
+  Variable:
+  $734: StructMemberContext prop=idx:284465@0x19fcc9ce000
+    Expression to struct:
+    $743: LocalVariable named CallFunc_GetVariables_OutStruct3@0x19fcc9cda80
+  Expression:
+  $752: InstanceVariable named idx:284464@0x19fcc9cdf00
+$761: FinalFunction target=SetVariables@0x19e4cda7cc0 (
+  $770: LocalVariable named CallFunc_GetVariables_OutStruct3@0x19fcc9cda80
+  $779: EndFunctionParms
+)
+$780: LetBool (Variable = Expression)
+  Variable:
+  $781: LocalVariable named Temp_bool_True_if_break_was_hit_Variable@0x19fcc9cdd00
+  Expression:
+  $790: True
+$791: PopExecutionFlow (jump to popped addr)
+$792: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $801: EndFunctionParms
+)
+$802: PopExecutionFlow (jump to popped addr)
+$803: Let (Variable = Expression)
+  Variable:
+  $812: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19e586bbb40
+  Expression:
+  $821: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $830: LocalVariable named Temp_int_Loop_Counter_Variable@0x19e586bb440
+    $839: literal int32 1
+    $844: EndFunctionParms
+  )
+$845: Let (Variable = Expression)
+  Variable:
+  $854: LocalVariable named Temp_int_Loop_Counter_Variable@0x19e586bb440
+  Expression:
+  $863: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19e586bbb40
+$872: Jump to offset 0x26
+$877: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $886: LocalVariable named CallFunc_GetVariables_OutStruct2@0x19fcc9cd980
+  $895: EndFunctionParms
+)
+$896: LetObj (Variable = Expression)
+  Variable:
+  $897: InstanceVariable named idx:284464@0x19fcc9cdf00
+  Expression:
+  $906: StructMemberContext prop=idx:284375@0x19fcc5a2b00
+    Expression to struct:
+    $915: LocalVariable named CallFunc_GetVariables_OutStruct2@0x19fcc9cd980
+$924: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $933: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc9cd900
+  $942: EndFunctionParms
+)
+$943: LetBool (Variable = Expression)
+  Variable:
+  $944: LocalVariable named Temp_bool_True_if_break_was_hit_Variable@0x19fcc9cdd00
+  Expression:
+  $953: False
+$954: Let (Variable = Expression)
+  Variable:
+  $963: LocalVariable named Temp_int_Loop_Counter_Variable@0x19e586bb440
+  Expression:
+  $972: literal int32 0
+$977: Jump to offset 0xf
+$982: Return expression:
+  $983: Nothing
+$984: EndOfScript

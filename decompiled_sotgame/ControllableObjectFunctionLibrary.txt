@@ -1,0 +1,130 @@
+// Class: ControllableObjectFunctionLibrary (3 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+ControllableObjectFunctionLibrary::FilterControllableActors @ RVA 0xCF5F20 EA 0x7FF6F4715F20
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F4715F20(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  __int64 *v6; // rcx
+  __int64 v7; // rax
+  __int64 v8; // rax
+  __int64 result; // rax
+  __int64 v10[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  v5 = 0;
+  v10[0] = 0;
+  v10[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v6 = v10;
+  if ( a2[7] )
+    v6 = (__int64 *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  v8 = sub_7FF6F3EFEAE0(v6);
+  result = sub_7FF6F40C3D40(a3, v8);
+  if ( v10[0] )
+    return sub_7FF6F4DED1F0(v10[0]);
+  return result;
+}
+
+
+======================================================================
+ControllableObjectFunctionLibrary::FilterUncontrolledActors @ RVA 0xCF5FE0 EA 0x7FF6F4715FE0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F4715FE0(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  __int64 *v6; // rcx
+  __int64 v7; // rax
+  __int64 v8; // rax
+  __int64 result; // rax
+  __int64 v10[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  v5 = 0;
+  v10[0] = 0;
+  v10[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v6 = v10;
+  if ( a2[7] )
+    v6 = (__int64 *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  v8 = sub_7FF6F3EFEC20(v6);
+  result = sub_7FF6F40C3D40(a3, v8);
+  if ( v10[0] )
+    return sub_7FF6F4DED1F0(v10[0]);
+  return result;
+}
+
+
+======================================================================
+ControllableObjectFunctionLibrary::GetAnyUncontrolledActor @ RVA 0xCF6500 EA 0x7FF6F4716500
+======================================================================
+// Hidden C++ exception states: #wind=3
+__int64 __fastcall sub_7FF6F4716500(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  void *v5; // rbx
+  void *v6; // rbp
+  __int64 v7; // rdi
+  __int64 result; // rax
+  void *v9; // [rsp+28h] [rbp-30h] BYREF
+  __int64 v10; // [rsp+30h] [rbp-28h]
+  void *Src; // [rsp+38h] [rbp-20h] BYREF
+  __int64 v12; // [rsp+40h] [rbp-18h]
+
+  v5 = nullptr;
+  Src = nullptr;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &Src);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &Src);
+  }
+  a2[4] += a2[4] != 0;
+  v9 = nullptr;
+  v10 = 0;
+  v6 = Src;
+  v7 = (int)v12;
+  if ( (_DWORD)v12 )
+  {
+    v5 = (void *)sub_7FF6F4DFAA90(0, 8LL * (int)v12, 0);
+    v9 = v5;
+  }
+  memcpy(v5, v6, 8 * v7);
+  LODWORD(v10) = v7;
+  HIDWORD(v10) = v7;
+  result = sub_7FF6F3EFFE40(&v9);
+  *a3 = result;
+  if ( Src )
+    return sub_7FF6F4DED1F0((__int64)Src);
+  return result;
+}
+

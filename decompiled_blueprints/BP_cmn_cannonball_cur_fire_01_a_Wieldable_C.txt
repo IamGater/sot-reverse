@@ -1,0 +1,197 @@
+// E:\unreal-projects\Athena\Content\Blueprints\GameObjects\Props\Common\CursedCannonBalls\FireBomb\bp_cmn_cannonball_cur_fire_01_a_wieldable.uasset -> BP_cmn_cannonball_cur_fire_01_a_Wieldable_C
+
+=== BP_cmn_cannonball_cur_fire_01_a_Wieldable_C::SetLightVisibility (216 bytes) ===
+$0: Context
+  ObjectExpression:
+  $1: InstanceVariable named PointLight@0x213b2e21c80
+  SkipBytes: 0x18
+  RValueProperty: (null)
+  ContextExpression:
+  $22: VirtualFunction call "SetVisibility" (
+    $35: LocalVariable named Visibility@0x213b2e21800
+    $44: False
+    $45: EndFunctionParms
+  )
+$46: JumpIfNot -> 0xd5, cond:
+  $51: LocalVariable named Visibility@0x213b2e21800
+$60: LetBool (Variable = Expression)
+  Variable:
+  $61: LocalVariable named CallFunc_GetIsFirstPerson_ReturnValue@0x213b2e21880
+  Expression:
+  $70: FinalFunction target=GetIsFirstPerson@0x212d672cfe0 (
+    $79: EndFunctionParms
+  )
+$80: JumpIfNot -> 0x9c, cond:
+  $85: LocalVariable named CallFunc_GetIsFirstPerson_ReturnValue@0x213b2e21880
+$94: Context
+  ObjectExpression:
+  $95: InstanceVariable named PointLight@0x213b2e21c80
+  SkipBytes: 0x23
+  RValueProperty: (null)
+  ContextExpression:
+  $116: FinalFunction target=K2_AttachTo@0x212d6691040 (
+    $125: InstanceVariable named FirstPersonMesh@0x212d672ee80
+    $134: literal name "LightSocket"
+    $147: literal byte 2
+    $149: False
+    $150: EndFunctionParms
+  )
+$151: Jump to offset 0xd5
+$156: Context
+  ObjectExpression:
+  $157: InstanceVariable named PointLight@0x213b2e21c80
+  SkipBytes: 0x23
+  RValueProperty: (null)
+  ContextExpression:
+  $178: FinalFunction target=K2_AttachTo@0x212d6691040 (
+    $187: InstanceVariable named ThirdPersonMesh@0x212d672ee00
+    $196: literal name "LightSocket"
+    $209: literal byte 2
+    $211: False
+    $212: EndFunctionParms
+  )
+$213: Return expression:
+  $214: Nothing
+$215: EndOfScript
+
+=== BP_cmn_cannonball_cur_fire_01_a_Wieldable_C::OnRep_IsWielded (26 bytes) ===
+$0: VirtualFunction call "SetLightVisibility" (
+  $13: InstanceVariable named IsWielded@0x213b2e21d80
+  $22: EndFunctionParms
+)
+$23: Return expression:
+  $24: Nothing
+$25: EndOfScript
+
+=== BP_cmn_cannonball_cur_fire_01_a_Wieldable_C::UserConstructionScript (13 bytes) ===
+$0: FinalFunction target=UserConstructionScript@0x213b55afe40 (
+  $9: EndFunctionParms
+)
+$10: Return expression:
+  $11: Nothing
+$12: EndOfScript
+
+=== BP_cmn_cannonball_cur_fire_01_a_Wieldable_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_cmn_cannonball_cur_fire_01_a_Wieldable" (
+  $13: literal int32 250
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_cmn_cannonball_cur_fire_01_a_Wieldable_C::OnIsWielded (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_NewParam@0x213b2e21b00
+  Expression:
+  $9: LocalVariable named NewParam@0x213b2e21900
+$18: VirtualFunction call "ExecuteUbergraph_BP_cmn_cannonball_cur_fire_01_a_Wieldable" (
+  $31: literal int32 255
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_cmn_cannonball_cur_fire_01_a_Wieldable_C::ReceiveEndPlay (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_EndPlayReason@0x213b2e21b80
+  Expression:
+  $9: LocalVariable named EndPlayReason@0x213b2e21980
+$18: VirtualFunction call "ExecuteUbergraph_BP_cmn_cannonball_cur_fire_01_a_Wieldable" (
+  $31: literal int32 260
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_cmn_cannonball_cur_fire_01_a_Wieldable_C::ExecuteUbergraph_BP_cmn_cannonball_cur_fire_01_a_Wieldable (378 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x213add62a70
+$10: VirtualFunction call "OnRep_IsWielded" (
+  $23: EndFunctionParms
+)
+$24: Jump to offset 0x177
+$29: VirtualFunction call "SetLightVisibility" (
+  $42: InstanceVariable named IsWielded@0x213b2e21d80
+  $51: EndFunctionParms
+)
+$52: Jump to offset 0x177
+$57: LetBool (Variable = Expression)
+  Variable:
+  $58: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue@0x213b2e21a00
+  Expression:
+  $67: FinalFunction target=FlushNetDormancy@0x212d6381090 (
+    $76: EndFunctionParms
+  )
+$77: LetBool (Variable = Expression)
+  Variable:
+  $78: InstanceVariable named IsWielded@0x213b2e21d80
+  Expression:
+  $87: StructMemberContext prop=bIsWielded@0x212d65dfb90
+    Expression to struct:
+    $96: LocalVariable named K2Node_CustomEvent_NewParam@0x213b2e21b00
+$105: Jump to offset 0xa
+$110: LetBool (Variable = Expression)
+  Variable:
+  $111: LocalVariable named CallFunc_IsServer_ReturnValue@0x213b2e21a80
+  Expression:
+  $120: Context
+    ObjectExpression:
+    $121: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_IsServer_ReturnValue@0x213b2e21a80
+    ContextExpression:
+    $142: FinalFunction target=IsServer@0x212d63ae1c0 (
+      $151: Self
+      $152: EndFunctionParms
+    )
+$153: JumpIfNot -> 0xac, cond:
+  $158: LocalVariable named CallFunc_IsServer_ReturnValue@0x213b2e21a80
+$167: Jump to offset 0x177
+$172: Context
+  ObjectExpression:
+  $173: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x33
+  RValueProperty: (null)
+  ContextExpression:
+  $194: FinalFunction target=RegisterEvent@0x212d6a308d0 (
+    $203: InstanceVariable named MessagingDispatcher@0x212d672ec80
+    $212: InstanceVariable named OnWieldedHandle@0x213b2e21d00
+    $221: Self
+    $222: literal ansi string "OnIsWielded"
+    $235: ObjectConst EventWieldableItemSetIsWielded@0x212d65df9f0
+    $244: EndFunctionParms
+  )
+$245: Jump to offset 0x1d
+$250: Jump to offset 0x6e
+$255: Jump to offset 0x39
+$260: LetBool (Variable = Expression)
+  Variable:
+  $261: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue@0x213b2e21c00
+  Expression:
+  $270: Context
+    ObjectExpression:
+    $271: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsHandleRegistered_ReturnValue@0x213b2e21c00
+    ContextExpression:
+    $292: FinalFunction target=IsHandleRegistered@0x212d6a30550 (
+      $301: InstanceVariable named OnWieldedHandle@0x213b2e21d00
+      $310: EndFunctionParms
+    )
+$311: JumpIfNot -> 0x177, cond:
+  $316: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue@0x213b2e21c00
+$325: Context
+  ObjectExpression:
+  $326: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $347: FinalFunction target=UnregisterEvent@0x212d6a31260 (
+    $356: InstanceVariable named MessagingDispatcher@0x212d672ec80
+    $365: InstanceVariable named OnWieldedHandle@0x213b2e21d00
+    $374: EndFunctionParms
+  )
+$375: Return expression:
+  $376: Nothing
+$377: EndOfScript

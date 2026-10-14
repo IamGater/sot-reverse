@@ -1,0 +1,106 @@
+// Class: CompositeInputHandler (2 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+CompositeInputHandler::SetAnalogInputHandler @ RVA 0x3158360 EA 0x7FF6F6B78360
+======================================================================
+__int64 __fastcall sub_7FF6F6B78360(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  _BYTE *v5; // rcx
+  __int64 v6; // rdx
+  __int64 v7; // rax
+  _BYTE v9[8]; // [rsp+20h] [rbp-28h] BYREF
+  __int64 v10; // [rsp+28h] [rbp-20h]
+  _DWORD v11[2]; // [rsp+30h] [rbp-18h] BYREF
+  __int64 v12; // [rsp+38h] [rbp-10h]
+  __int64 v13; // [rsp+58h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  sub_7FF6F4F56600(v9, 0);
+  v10 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v5 = v9;
+  v6 = v13;
+  if ( a2[7] )
+    v5 = (_BYTE *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v2) = v7 != 0;
+  a2[4] = v7 + v2;
+  v11[0] = *(_DWORD *)v5;
+  v11[1] = *((_DWORD *)v5 + 1);
+  v12 = *((_QWORD *)v5 + 1);
+  return sub_7FF6F6B69480(a1, v6, v11);
+}
+
+
+======================================================================
+CompositeInputHandler::SetNotificationInputHandler @ RVA 0x3158460 EA 0x7FF6F6B78460
+======================================================================
+__int64 __fastcall sub_7FF6F6B78460(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  _BYTE *v5; // rcx
+  __int64 v6; // rdx
+  __int64 v7; // rax
+  _BYTE v9[8]; // [rsp+20h] [rbp-28h] BYREF
+  __int64 v10; // [rsp+28h] [rbp-20h]
+  _DWORD v11[2]; // [rsp+30h] [rbp-18h] BYREF
+  __int64 v12; // [rsp+38h] [rbp-10h]
+  __int64 v13; // [rsp+58h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  sub_7FF6F4F56600(v9, 0);
+  v10 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v5 = v9;
+  v6 = v13;
+  if ( a2[7] )
+    v5 = (_BYTE *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v2) = v7 != 0;
+  a2[4] = v7 + v2;
+  v11[0] = *(_DWORD *)v5;
+  v11[1] = *((_DWORD *)v5 + 1);
+  v12 = *((_QWORD *)v5 + 1);
+  return sub_7FF6F6B694C0(a1, v6, v11);
+}
+

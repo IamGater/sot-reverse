@@ -1,0 +1,153 @@
+// Class: CharacterSocketCollisionFunctionLibrary (3 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+CharacterSocketCollisionFunctionLibrary::Equal @ RVA 0xCF5BB0 EA 0x7FF6F4715BB0
+======================================================================
+__int64 __fastcall sub_7FF6F4715BB0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  int *v6; // rax
+  int *v7; // rsi
+  int *v8; // rdx
+  __int64 v9; // rax
+  __int64 result; // rax
+  int v11; // [rsp+20h] [rbp-28h] BYREF
+  _BYTE v12[12]; // [rsp+24h] [rbp-24h] BYREF
+  int v13; // [rsp+30h] [rbp-18h] BYREF
+  _BYTE v14[20]; // [rsp+34h] [rbp-14h] BYREF
+
+  v11 = -1;
+  sub_7FF6F4F56600(v12, 0);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = (int *)a2[7];
+  v7 = &v11;
+  v13 = -1;
+  if ( v6 )
+    v7 = v6;
+  sub_7FF6F4F56600(v14, 0);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v8 = &v13;
+  if ( a2[7] )
+    v8 = (int *)a2[7];
+  v9 = a2[4];
+  LOBYTE(v5) = v9 != 0;
+  a2[4] = v9 + v5;
+  result = sub_7FF6F3E8DAB0(v7, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+CharacterSocketCollisionFunctionLibrary::IsValid @ RVA 0xCF81C0 EA 0x7FF6F47181C0
+======================================================================
+__int64 __fastcall sub_7FF6F47181C0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  int *v6; // rcx
+  __int64 v7; // rax
+  __int64 result; // rax
+  int v9; // [rsp+20h] [rbp-18h] BYREF
+  _BYTE v10[20]; // [rsp+24h] [rbp-14h] BYREF
+
+  v9 = -1;
+  sub_7FF6F4F56600(v10, 0);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = &v9;
+  if ( a2[7] )
+    v6 = (int *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  result = sub_7FF6F3E942C0(v6);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+CharacterSocketCollisionFunctionLibrary::NotEqual @ RVA 0xCF8D10 EA 0x7FF6F4718D10
+======================================================================
+__int64 __fastcall sub_7FF6F4718D10(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  int *v6; // rax
+  int *v7; // rsi
+  int *v8; // rdx
+  __int64 v9; // rax
+  __int64 result; // rax
+  int v11; // [rsp+20h] [rbp-28h] BYREF
+  _BYTE v12[12]; // [rsp+24h] [rbp-24h] BYREF
+  int v13; // [rsp+30h] [rbp-18h] BYREF
+  _BYTE v14[20]; // [rsp+34h] [rbp-14h] BYREF
+
+  v11 = -1;
+  sub_7FF6F4F56600(v12, 0);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = (int *)a2[7];
+  v7 = &v11;
+  v13 = -1;
+  if ( v6 )
+    v7 = v6;
+  sub_7FF6F4F56600(v14, 0);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v8 = &v13;
+  if ( a2[7] )
+    v8 = (int *)a2[7];
+  v9 = a2[4];
+  LOBYTE(v5) = v9 != 0;
+  a2[4] = v9 + v5;
+  result = sub_7FF6F3E949D0(v7, v8);
+  *a3 = result;
+  return result;
+}
+

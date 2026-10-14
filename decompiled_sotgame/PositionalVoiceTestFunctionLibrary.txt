@@ -1,0 +1,80 @@
+// Class: PositionalVoiceTestFunctionLibrary (3 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+PositionalVoiceTestFunctionLibrary::GetMaxNumberOfAudibleChatEmitters @ RVA 0x3444760 EA 0x7FF6F6E64760
+======================================================================
+__int64 __fastcall sub_7FF6F6E64760(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F6E5FA80();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PositionalVoiceTestFunctionLibrary::GetNumberOfRegisteredChatEmitters @ RVA 0x3444790 EA 0x7FF6F6E64790
+======================================================================
+__int64 __fastcall sub_7FF6F6E64790(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  __int64 result; // rax
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  v7 = v9;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F6E5FAE0(v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PositionalVoiceTestFunctionLibrary::GetNumberOfUnmutedRemotePlayers @ RVA 0x3444810 EA 0x7FF6F6E64810
+======================================================================
+__int64 __fastcall sub_7FF6F6E64810(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  __int64 result; // rax
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  v7 = v9;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F6E5FB60(v7);
+  *a3 = result;
+  return result;
+}
+

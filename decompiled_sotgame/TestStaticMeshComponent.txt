@@ -1,0 +1,64 @@
+// Class: TestStaticMeshComponent (1 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+TestStaticMeshComponent::AddForce @ RVA 0x31BF4A0 EA 0x7FF6F6BDF4A0
+======================================================================
+__int64 __fastcall sub_7FF6F6BDF4A0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // r9
+  __int64 v6; // rax
+  __int64 v7; // r8
+  __int64 v8; // rdi
+  bool v9; // zf
+  __int64 v11; // [rsp+20h] [rbp-28h] BYREF
+  int v12; // [rsp+28h] [rbp-20h]
+  __int64 v13; // [rsp+30h] [rbp-18h] BYREF
+  int v14; // [rsp+38h] [rbp-10h]
+  int v15; // [rsp+50h] [rbp+8h] BYREF
+  __int64 v16; // [rsp+58h] [rbp+10h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v4 = 0;
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v6 = a2[4];
+  v7 = v16;
+  LOBYTE(v4) = v6 != 0;
+  v13 = v11;
+  v8 = v6 + v4;
+  LODWORD(v6) = v12;
+  v9 = v15 == 0;
+  a2[4] = v8;
+  v14 = v6;
+  LOBYTE(v5) = !v9;
+  return (*(__int64 (__fastcall **)(__int64, __int64 *, __int64, __int64))(*(_QWORD *)a1 + 1416LL))(a1, &v13, v7, v5);
+}
+

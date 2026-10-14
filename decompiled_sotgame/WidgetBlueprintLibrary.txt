@@ -1,0 +1,2638 @@
+// Class: WidgetBlueprintLibrary (47 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+WidgetBlueprintLibrary::CancelDragDrop @ RVA 0x1F29EE0 EA 0x7FF6F5949EE0
+======================================================================
+void __fastcall sub_7FF6F5949EE0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F5877240LL);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::CaptureJoystick @ RVA 0x1F29F00 EA 0x7FF6F5949F00
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F5949F00(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  _BYTE *v6; // rsi
+  __int64 v7; // r9
+  __int64 v8; // rax
+  __int64 v9; // rax
+  int v11; // [rsp+20h] [rbp-228h] BYREF
+  _QWORD v12[3]; // [rsp+28h] [rbp-220h] BYREF
+  _BYTE v13[240]; // [rsp+40h] [rbp-208h] BYREF
+  _BYTE v14[240]; // [rsp+130h] [rbp-118h] BYREF
+
+  v12[1] = -2;
+  sub_7FF6F58581D0(v13, 0);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v13);
+  }
+  v6 = v13;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  v12[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  LOBYTE(v7) = v11 != 0;
+  v8 = a2[4];
+  LOBYTE(v5) = v8 != 0;
+  a2[4] = v8 + v5;
+  v9 = sub_7FF6F5877250(v14, v6, v12[0], v7);
+  sub_7FF6F3C37CE0(a3, v9);
+  sub_7FF6F3C36860(v14);
+  return sub_7FF6F3C36860(v13);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::CaptureMouse @ RVA 0x1F2A080 EA 0x7FF6F594A080
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F594A080(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  _BYTE *v6; // rsi
+  __int64 v7; // rax
+  __int64 v8; // rax
+  _QWORD v10[2]; // [rsp+20h] [rbp-218h] BYREF
+  _BYTE v11[240]; // [rsp+30h] [rbp-208h] BYREF
+  _BYTE v12[240]; // [rsp+120h] [rbp-118h] BYREF
+
+  v10[1] = -2;
+  sub_7FF6F58581D0(v11, 0);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v6 = v11;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  v10[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  v8 = sub_7FF6F58773B0(v12, v6, v10[0]);
+  sub_7FF6F3C37CE0(a3, v8);
+  sub_7FF6F3C36860(v12);
+  return sub_7FF6F3C36860(v11);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::ClearUserFocus @ RVA 0x1F2A360 EA 0x7FF6F594A360
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F594A360(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  _BYTE *v6; // rsi
+  __int64 v7; // r8
+  __int64 v8; // rax
+  __int64 v9; // rax
+  int v11; // [rsp+20h] [rbp-218h] BYREF
+  __int64 v12; // [rsp+28h] [rbp-210h]
+  _BYTE v13[240]; // [rsp+30h] [rbp-208h] BYREF
+  _BYTE v14[240]; // [rsp+120h] [rbp-118h] BYREF
+
+  v12 = -2;
+  sub_7FF6F58581D0(v13, 0);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v13);
+  }
+  v6 = v13;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  LOBYTE(v7) = v11 != 0;
+  v8 = a2[4];
+  LOBYTE(v5) = v8 != 0;
+  a2[4] = v8 + v5;
+  v9 = sub_7FF6F5877C70(v14, v6, v7);
+  sub_7FF6F3C37CE0(a3, v9);
+  sub_7FF6F3C36860(v14);
+  return sub_7FF6F3C36860(v13);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::Create @ RVA 0x1F2A4E0 EA 0x7FF6F594A4E0
+======================================================================
+__int64 __fastcall sub_7FF6F594A4E0(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // r8
+  __int64 v8; // rdx
+  __int64 v9; // rcx
+  __int64 result; // rax
+  __int64 v11; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v12; // [rsp+50h] [rbp+18h] BYREF
+  __int64 v13; // [rsp+58h] [rbp+20h] BYREF
+
+  v3 = 0;
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = a2[4];
+  v7 = v11;
+  v8 = v12;
+  v9 = v13;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F587B970(v9, v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::CreateDragDropOperation @ RVA 0x1F2A5D0 EA 0x7FF6F594A5D0
+======================================================================
+__int64 __fastcall sub_7FF6F594A5D0(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  __int64 result; // rax
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  v7 = v9;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F587CFC0(v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::DetectDrag @ RVA 0x1F2A650 EA 0x7FF6F594A650
+======================================================================
+// Hidden C++ exception states: #wind=3
+__int64 __fastcall sub_7FF6F594A650(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  int v5; // edi
+  _BYTE *v6; // rsi
+  __int64 v7; // rax
+  __int64 v9; // [rsp+28h] [rbp-E0h] BYREF
+  _BYTE v10[24]; // [rsp+30h] [rbp-D8h] BYREF
+  __int64 v11; // [rsp+48h] [rbp-C0h]
+  __int128 v12; // [rsp+50h] [rbp-B8h] BYREF
+  __int64 v13; // [rsp+60h] [rbp-A8h] BYREF
+  __int64 v14; // [rsp+68h] [rbp-A0h]
+  __int64 v15; // [rsp+70h] [rbp-98h]
+  _BYTE v16[240]; // [rsp+88h] [rbp-80h] BYREF
+  _BYTE v17[240]; // [rsp+178h] [rbp+70h] BYREF
+
+  v15 = -2;
+  sub_7FF6F58581D0(v16, 0);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v16);
+  }
+  v6 = v16;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  memset(v10, 0, sizeof(v10));
+  LODWORD(v11) = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  a2[4] += a2[4] != 0;
+  v12 = *(_OWORD *)v10;
+  v13 = *(_QWORD *)&v10[16];
+  if ( *(_QWORD *)&v10[16] )
+  {
+    if ( _InterlockedIncrement((volatile signed __int32 *)(*(_QWORD *)&v10[16] + 8LL)) == 1 )
+      MEMORY[0] = &v13;
+    if ( v13 )
+      v5 = *(_DWORD *)(v13 + 24);
+  }
+  LODWORD(v14) = v5;
+  v7 = sub_7FF6F587E4A0(v17, v6, v9, &v12);
+  sub_7FF6F3C37CE0(a3, v7);
+  sub_7FF6F3C36860(v17);
+  sub_7FF6F3C36760(v10);
+  return sub_7FF6F3C36860(v16);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::DetectDragIfPressed @ RVA 0x1F2A830 EA 0x7FF6F594A830
+======================================================================
+// Hidden C++ exception states: #wind=3
+__int64 __fastcall sub_7FF6F594A830(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  int v5; // edi
+  _QWORD *v6; // rsi
+  __int64 v7; // rax
+  __int64 v9; // [rsp+28h] [rbp-E0h] BYREF
+  _BYTE v10[24]; // [rsp+30h] [rbp-D8h] BYREF
+  __int64 v11; // [rsp+48h] [rbp-C0h]
+  __int128 v12; // [rsp+50h] [rbp-B8h] BYREF
+  __int64 v13; // [rsp+60h] [rbp-A8h] BYREF
+  int v14; // [rsp+68h] [rbp-A0h]
+  _QWORD v15[2]; // [rsp+78h] [rbp-90h] BYREF
+  char v16; // [rsp+88h] [rbp-80h]
+  int v17; // [rsp+8Ch] [rbp-7Ch]
+  char v18; // [rsp+90h] [rbp-78h]
+  __int64 v19; // [rsp+98h] [rbp-70h]
+  __int64 v20; // [rsp+A0h] [rbp-68h]
+  __int128 v21; // [rsp+A8h] [rbp-60h]
+  __int64 *v22; // [rsp+B8h] [rbp-50h]
+  __int64 v23; // [rsp+C0h] [rbp-48h] BYREF
+  __int128 v24; // [rsp+C8h] [rbp-40h]
+  int v25; // [rsp+D8h] [rbp-30h]
+  __int64 v26; // [rsp+E0h] [rbp-28h]
+  char v27; // [rsp+E8h] [rbp-20h]
+  __int64 v28; // [rsp+ECh] [rbp-1Ch]
+  int v29; // [rsp+F4h] [rbp-14h]
+  char v30; // [rsp+F8h] [rbp-10h]
+  __int64 v31; // [rsp+108h] [rbp+0h]
+  _BYTE v32[240]; // [rsp+118h] [rbp+10h] BYREF
+
+  v31 = -2;
+  v15[1] = 0;
+  v16 = 0;
+  v5 = 0;
+  v17 = 0;
+  v18 = 0;
+  v19 = 0;
+  v15[0] = off_7FF6F8821428;
+  v20 = 0;
+  v21 = 0;
+  v22 = &qword_7FF6FA528A30;
+  v23 = 0;
+  v24 = 0;
+  v25 = 0;
+  v26 = 0;
+  v27 = 0;
+  v28 = 0;
+  v29 = 0;
+  v30 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v15);
+  }
+  v6 = v15;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  memset(v10, 0, sizeof(v10));
+  LODWORD(v11) = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  a2[4] += a2[4] != 0;
+  v12 = *(_OWORD *)v10;
+  v13 = *(_QWORD *)&v10[16];
+  if ( *(_QWORD *)&v10[16] )
+  {
+    if ( _InterlockedIncrement((volatile signed __int32 *)(*(_QWORD *)&v10[16] + 8LL)) == 1 )
+      MEMORY[0] = &v13;
+    if ( v13 )
+      v5 = *(_DWORD *)(v13 + 24);
+  }
+  v14 = v5;
+  v7 = sub_7FF6F587E6B0(v32, v6, v9, &v12);
+  sub_7FF6F3C37CE0(a3, v7);
+  sub_7FF6F3C36860(v32);
+  sub_7FF6F3C36760(v10);
+  return sub_7FF6F3C36760(&v23);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::DismissAllMenus @ RVA 0x1F2AA60 EA 0x7FF6F594AA60
+======================================================================
+__int64 __fastcall sub_7FF6F594AA60(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F505C020(qword_7FF6FA52EC90);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::DrawBox @ RVA 0x1F2AD50 EA 0x7FF6F594AD50
+======================================================================
+__int64 __fastcall sub_7FF6F594AD50(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  _QWORD *v4; // rsi
+  __int64 v5; // rax
+  int v6; // r9d
+  int v7; // r8d
+  int v8; // edx
+  __int64 v10; // [rsp+30h] [rbp-19h] BYREF
+  __int128 v11; // [rsp+38h] [rbp-11h] BYREF
+  __int128 v12; // [rsp+50h] [rbp+7h] BYREF
+  _QWORD v13[3]; // [rsp+60h] [rbp+17h] BYREF
+  int v14; // [rsp+78h] [rbp+2Fh]
+  int *v15; // [rsp+80h] [rbp+37h]
+  char v16; // [rsp+88h] [rbp+3Fh]
+  int v17; // [rsp+8Ch] [rbp+43h]
+  __int64 v18; // [rsp+B8h] [rbp+6Fh] BYREF
+  __int64 v19; // [rsp+C8h] [rbp+7Fh] BYREF
+
+  v2 = 0;
+  v16 = 1;
+  v13[0] = &qword_7FF6FA5BA7D8;
+  v14 = 0;
+  v13[1] = qword_7FF6FA4585F0;
+  v13[2] = qword_7FF6FA5BA810;
+  v15 = &dword_7FF6FA5BA938;
+  v17 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v13);
+  }
+  v4 = v13;
+  if ( a2[7] )
+    v4 = (_QWORD *)a2[7];
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  v18 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v5 = a2[4];
+  v6 = v18;
+  v7 = v19;
+  v8 = v10;
+  LOBYTE(v2) = v5 != 0;
+  v12 = v11;
+  a2[4] = v5 + v2;
+  return sub_7FF6F587EF70((_DWORD)v4, v8, v7, v6, (__int64)&v12);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::DrawLine @ RVA 0x1F2AF00 EA 0x7FF6F594AF00
+======================================================================
+__int64 __fastcall sub_7FF6F594AF00(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  _QWORD *v4; // rsi
+  __int64 v5; // rax
+  int v6; // r8d
+  int v7; // edx
+  bool v8; // zf
+  __int64 v10; // [rsp+30h] [rbp-19h] BYREF
+  __int128 v11; // [rsp+38h] [rbp-11h] BYREF
+  __int128 v12; // [rsp+50h] [rbp+7h] BYREF
+  _QWORD v13[3]; // [rsp+60h] [rbp+17h] BYREF
+  int v14; // [rsp+78h] [rbp+2Fh]
+  int *v15; // [rsp+80h] [rbp+37h]
+  char v16; // [rsp+88h] [rbp+3Fh]
+  int v17; // [rsp+8Ch] [rbp+43h]
+  int v18; // [rsp+B8h] [rbp+6Fh] BYREF
+  __int64 v19; // [rsp+C8h] [rbp+7Fh] BYREF
+
+  v2 = 0;
+  v16 = 1;
+  v13[0] = &qword_7FF6FA5BA7D8;
+  v14 = 0;
+  v13[1] = qword_7FF6FA4585F0;
+  v13[2] = qword_7FF6FA5BA810;
+  v15 = &dword_7FF6FA5BA938;
+  v17 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v13);
+  }
+  v4 = v13;
+  if ( a2[7] )
+    v4 = (_QWORD *)a2[7];
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v18 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  v5 = a2[4];
+  v6 = v19;
+  v7 = v10;
+  LOBYTE(v2) = v5 != 0;
+  v12 = v11;
+  v8 = v18 == 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F587F020((_DWORD)v4, v7, v6, (unsigned int)&v12, !v8);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::DrawLines @ RVA 0x1F2B0C0 EA 0x7FF6F594B0C0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F594B0C0(__int64 a1, _QWORD *a2)
+{
+  __int64 v3; // rdi
+  _QWORD *v4; // r14
+  __int64 *v5; // rsi
+  __int64 v6; // r9
+  __int64 v7; // rax
+  __int64 result; // rax
+  __int64 v9[2]; // [rsp+30h] [rbp-21h] BYREF
+  __int128 v10; // [rsp+40h] [rbp-11h] BYREF
+  __int128 v11; // [rsp+58h] [rbp+7h] BYREF
+  _QWORD v12[3]; // [rsp+68h] [rbp+17h] BYREF
+  int v13; // [rsp+80h] [rbp+2Fh]
+  int *v14; // [rsp+88h] [rbp+37h]
+  char v15; // [rsp+90h] [rbp+3Fh]
+  int v16; // [rsp+94h] [rbp+43h]
+  int v17; // [rsp+C0h] [rbp+6Fh] BYREF
+
+  v12[0] = &qword_7FF6FA5BA7D8;
+  v12[1] = qword_7FF6FA4585F0;
+  v12[2] = qword_7FF6FA5BA810;
+  v3 = 0;
+  v13 = 0;
+  v14 = &dword_7FF6FA5BA938;
+  v15 = 1;
+  v16 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v4 = v12;
+  if ( a2[7] )
+    v4 = (_QWORD *)a2[7];
+  v9[0] = 0;
+  v9[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v5 = v9;
+  if ( a2[7] )
+    v5 = (__int64 *)a2[7];
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v17 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  LOBYTE(v6) = v17 != 0;
+  v7 = a2[4];
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  v11 = v10;
+  result = sub_7FF6F587F1A0(v4, v5, &v11, v6, -2);
+  if ( v9[0] )
+    return sub_7FF6F4DED1F0(v9[0]);
+  return result;
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::DrawText @ RVA 0x1F2B280 EA 0x7FF6F594B280
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F594B280(__int64 a1, _QWORD *a2)
+{
+  __int64 v3; // rdi
+  _QWORD *v4; // rsi
+  __int64 v5; // rax
+  __int64 result; // rax
+  __int64 v7[2]; // [rsp+30h] [rbp-11h] BYREF
+  __int128 v8; // [rsp+40h] [rbp-1h] BYREF
+  __int128 v9; // [rsp+58h] [rbp+17h] BYREF
+  _QWORD v10[3]; // [rsp+68h] [rbp+27h] BYREF
+  int v11; // [rsp+80h] [rbp+3Fh]
+  int *v12; // [rsp+88h] [rbp+47h]
+  char v13; // [rsp+90h] [rbp+4Fh]
+  int v14; // [rsp+94h] [rbp+53h]
+  __int64 v15; // [rsp+B0h] [rbp+6Fh] BYREF
+
+  v10[0] = &qword_7FF6FA5BA7D8;
+  v10[1] = qword_7FF6FA4585F0;
+  v10[2] = qword_7FF6FA5BA810;
+  v3 = 0;
+  v11 = 0;
+  v12 = &dword_7FF6FA5BA938;
+  v13 = 1;
+  v14 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v4 = v10;
+  if ( a2[7] )
+    v4 = (_QWORD *)a2[7];
+  v7[0] = 0;
+  v7[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  LOBYTE(v3) = v5 != 0;
+  a2[4] = v5 + v3;
+  v9 = v8;
+  result = sub_7FF6F587F240(v4, v7, v15, &v9, -2);
+  if ( v7[0] )
+    return sub_7FF6F4DED1F0(v7[0]);
+  return result;
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::DrawTextFormatted @ RVA 0x1F2B420 EA 0x7FF6F594B420
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F594B420(__int64 a1, _QWORD *a2)
+{
+  __int64 v3; // rdi
+  _QWORD *v4; // r14
+  _BYTE *v5; // rsi
+  __int64 v6; // rax
+  __int64 v8; // [rsp+48h] [rbp-69h] BYREF
+  __int64 v9; // [rsp+50h] [rbp-61h] BYREF
+  _QWORD v10[3]; // [rsp+58h] [rbp-59h] BYREF
+  int v11; // [rsp+70h] [rbp-41h]
+  int *v12; // [rsp+78h] [rbp-39h]
+  char v13; // [rsp+80h] [rbp-31h]
+  int v14; // [rsp+84h] [rbp-2Dh]
+  __int128 v15; // [rsp+88h] [rbp-29h] BYREF
+  __int64 v16; // [rsp+98h] [rbp-19h]
+  __int128 v17; // [rsp+A8h] [rbp-9h] BYREF
+  _BYTE v18[64]; // [rsp+B8h] [rbp+7h] BYREF
+  int v19; // [rsp+120h] [rbp+6Fh] BYREF
+  __int64 v20; // [rsp+130h] [rbp+7Fh] BYREF
+
+  v16 = -2;
+  v10[0] = &qword_7FF6FA5BA7D8;
+  v10[1] = qword_7FF6FA4585F0;
+  v10[2] = qword_7FF6FA5BA810;
+  v3 = 0;
+  v11 = 0;
+  v12 = &dword_7FF6FA5BA938;
+  v13 = 1;
+  v14 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v4 = v10;
+  if ( a2[7] )
+    v4 = (_QWORD *)a2[7];
+  sub_7FF6F4DCDFA0(v18);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v18);
+  }
+  v5 = v18;
+  if ( a2[7] )
+    v5 = (_BYTE *)a2[7];
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v19 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  v20 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v20);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v20);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v6 = a2[4];
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  v17 = v15;
+  sub_7FF6F587F3B0((_DWORD)v4, (_DWORD)v5, v9, v8, v19, v20, (__int64)&v17);
+  return sub_7FF6F3C37050(v18);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::EndDragDrop @ RVA 0x1F2B7A0 EA 0x7FF6F594B7A0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F594B7A0(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  _BYTE *v6; // rdx
+  __int64 v7; // rax
+  __int64 v8; // rax
+  _BYTE v10[240]; // [rsp+30h] [rbp-1F8h] BYREF
+  _BYTE v11[240]; // [rsp+120h] [rbp-108h] BYREF
+
+  sub_7FF6F58581D0(v10, 0);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v6 = v10;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  v8 = sub_7FF6F587FAC0(v11, v6);
+  sub_7FF6F3C37CE0(a3, v8);
+  sub_7FF6F3C36860(v11);
+  return sub_7FF6F3C36860(v10);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::GetAllWidgetsOfClass @ RVA 0x1F2BA70 EA 0x7FF6F594BA70
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F594BA70(__int64 a1, _QWORD *a2)
+{
+  __int64 v3; // rdi
+  __int64 *v4; // rsi
+  __int64 v5; // r9
+  __int64 v6; // rax
+  __int64 result; // rax
+  _QWORD v8[2]; // [rsp+20h] [rbp-28h] BYREF
+  __int64 v9[3]; // [rsp+30h] [rbp-18h] BYREF
+  int v10; // [rsp+58h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+68h] [rbp+20h] BYREF
+
+  v8[1] = -2;
+  v3 = 0;
+  v8[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v9[0] = 0;
+  v9[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v4 = v9;
+  if ( a2[7] )
+    v4 = (__int64 *)a2[7];
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  LOBYTE(v5) = v10 != 0;
+  v6 = a2[4];
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F5886110(v8[0], v4, v11, v5);
+  if ( v9[0] )
+    return sub_7FF6F4DED1F0(v9[0]);
+  return result;
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::GetAllWidgetsWithInterface @ RVA 0x1F2BBE0 EA 0x7FF6F594BBE0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F594BBE0(__int64 a1, _QWORD *a2)
+{
+  __int64 v3; // rdi
+  __int64 *v4; // rsi
+  __int64 v5; // r9
+  __int64 v6; // rax
+  __int64 result; // rax
+  _QWORD v8[2]; // [rsp+20h] [rbp-28h] BYREF
+  __int64 v9[3]; // [rsp+30h] [rbp-18h] BYREF
+  int v10; // [rsp+58h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+68h] [rbp+20h] BYREF
+
+  v8[1] = -2;
+  v3 = 0;
+  v8[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v9[0] = 0;
+  v9[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v4 = v9;
+  if ( a2[7] )
+    v4 = (__int64 *)a2[7];
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  LOBYTE(v5) = v10 != 0;
+  v6 = a2[4];
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F5886330(v8[0], v11, v4, v5);
+  if ( v9[0] )
+    return sub_7FF6F4DED1F0(v9[0]);
+  return result;
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::GetBrushResource @ RVA 0x1F2BDC0 EA 0x7FF6F594BDC0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F594BDC0(__int64 a1, _QWORD *a2, _QWORD *a3)
+{
+  __int64 v5; // rdi
+  _DWORD *v6; // rcx
+  __int64 v7; // rax
+  _DWORD v9[2]; // [rsp+28h] [rbp-49h] BYREF
+  char v10; // [rsp+30h] [rbp-41h]
+  __int64 v11; // [rsp+34h] [rbp-3Dh]
+  __int64 v12; // [rsp+3Ch] [rbp-35h]
+  __int128 v13; // [rsp+44h] [rbp-2Dh]
+  __int128 v14; // [rsp+58h] [rbp-19h] BYREF
+  char v15; // [rsp+68h] [rbp-9h]
+  __int64 v16; // [rsp+70h] [rbp-1h]
+  __int64 v17; // [rsp+78h] [rbp+7h]
+  int v18; // [rsp+80h] [rbp+Fh]
+  __int16 v19; // [rsp+88h] [rbp+17h]
+  char v20; // [rsp+8Ah] [rbp+19h]
+  __int64 v21; // [rsp+90h] [rbp+1Fh]
+  __int64 v22; // [rsp+98h] [rbp+27h]
+  __int16 v23; // [rsp+A0h] [rbp+2Fh]
+  __int64 v24; // [rsp+A4h] [rbp+33h]
+  __int64 v25; // [rsp+ACh] [rbp+3Bh]
+  char v26; // [rsp+B4h] [rbp+43h]
+  __int64 v27; // [rsp+B8h] [rbp+47h]
+
+  v27 = -2;
+  v9[0] = 1107296256;
+  v9[1] = 1107296256;
+  v10 = 3;
+  v11 = 0;
+  v12 = 0;
+  v13 = xmmword_7FF6FA447570;
+  v14 = xmmword_7FF6FA447570;
+  v15 = 0;
+  v5 = 0;
+  v16 = 0;
+  v17 = 0;
+  v18 = 0;
+  v19 = 0;
+  v20 = 0;
+  v21 = 0;
+  v22 = 0;
+  v23 = 0;
+  v25 = xmmword_7FF6FA4F60F8;
+  v24 = xmmword_7FF6FA4F60F8;
+  v26 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_DWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  *a3 = sub_7FF6F5886AA0(v6);
+  return sub_7FF6F4FBBAF0(&v14);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::GetBrushResourceAsMaterial @ RVA 0x1F2BEF0 EA 0x7FF6F594BEF0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F594BEF0(__int64 a1, _QWORD *a2, _QWORD *a3)
+{
+  __int64 v5; // rdi
+  _DWORD *v6; // rcx
+  __int64 v7; // rax
+  _DWORD v9[2]; // [rsp+28h] [rbp-49h] BYREF
+  char v10; // [rsp+30h] [rbp-41h]
+  __int64 v11; // [rsp+34h] [rbp-3Dh]
+  __int64 v12; // [rsp+3Ch] [rbp-35h]
+  __int128 v13; // [rsp+44h] [rbp-2Dh]
+  __int128 v14; // [rsp+58h] [rbp-19h] BYREF
+  char v15; // [rsp+68h] [rbp-9h]
+  __int64 v16; // [rsp+70h] [rbp-1h]
+  __int64 v17; // [rsp+78h] [rbp+7h]
+  int v18; // [rsp+80h] [rbp+Fh]
+  __int16 v19; // [rsp+88h] [rbp+17h]
+  char v20; // [rsp+8Ah] [rbp+19h]
+  __int64 v21; // [rsp+90h] [rbp+1Fh]
+  __int64 v22; // [rsp+98h] [rbp+27h]
+  __int16 v23; // [rsp+A0h] [rbp+2Fh]
+  __int64 v24; // [rsp+A4h] [rbp+33h]
+  __int64 v25; // [rsp+ACh] [rbp+3Bh]
+  char v26; // [rsp+B4h] [rbp+43h]
+  __int64 v27; // [rsp+B8h] [rbp+47h]
+
+  v27 = -2;
+  v9[0] = 1107296256;
+  v9[1] = 1107296256;
+  v10 = 3;
+  v11 = 0;
+  v12 = 0;
+  v13 = xmmword_7FF6FA447570;
+  v14 = xmmword_7FF6FA447570;
+  v15 = 0;
+  v5 = 0;
+  v16 = 0;
+  v17 = 0;
+  v18 = 0;
+  v19 = 0;
+  v20 = 0;
+  v21 = 0;
+  v22 = 0;
+  v23 = 0;
+  v25 = xmmword_7FF6FA4F60F8;
+  v24 = xmmword_7FF6FA4F60F8;
+  v26 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_DWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  *a3 = sub_7FF6F5886AB0(v6);
+  return sub_7FF6F4FBBAF0(&v14);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::GetBrushResourceAsTexture2D @ RVA 0x1F2C020 EA 0x7FF6F594C020
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F594C020(__int64 a1, _QWORD *a2, _QWORD *a3)
+{
+  __int64 v5; // rdi
+  _DWORD *v6; // rcx
+  __int64 v7; // rax
+  _DWORD v9[2]; // [rsp+28h] [rbp-49h] BYREF
+  char v10; // [rsp+30h] [rbp-41h]
+  __int64 v11; // [rsp+34h] [rbp-3Dh]
+  __int64 v12; // [rsp+3Ch] [rbp-35h]
+  __int128 v13; // [rsp+44h] [rbp-2Dh]
+  __int128 v14; // [rsp+58h] [rbp-19h] BYREF
+  char v15; // [rsp+68h] [rbp-9h]
+  __int64 v16; // [rsp+70h] [rbp-1h]
+  __int64 v17; // [rsp+78h] [rbp+7h]
+  int v18; // [rsp+80h] [rbp+Fh]
+  __int16 v19; // [rsp+88h] [rbp+17h]
+  char v20; // [rsp+8Ah] [rbp+19h]
+  __int64 v21; // [rsp+90h] [rbp+1Fh]
+  __int64 v22; // [rsp+98h] [rbp+27h]
+  __int16 v23; // [rsp+A0h] [rbp+2Fh]
+  __int64 v24; // [rsp+A4h] [rbp+33h]
+  __int64 v25; // [rsp+ACh] [rbp+3Bh]
+  char v26; // [rsp+B4h] [rbp+43h]
+  __int64 v27; // [rsp+B8h] [rbp+47h]
+
+  v27 = -2;
+  v9[0] = 1107296256;
+  v9[1] = 1107296256;
+  v10 = 3;
+  v11 = 0;
+  v12 = 0;
+  v13 = xmmword_7FF6FA447570;
+  v14 = xmmword_7FF6FA447570;
+  v15 = 0;
+  v5 = 0;
+  v16 = 0;
+  v17 = 0;
+  v18 = 0;
+  v19 = 0;
+  v20 = 0;
+  v21 = 0;
+  v22 = 0;
+  v23 = 0;
+  v25 = xmmword_7FF6FA4F60F8;
+  v24 = xmmword_7FF6FA4F60F8;
+  v26 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_DWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  *a3 = sub_7FF6F5886B10(v6);
+  return sub_7FF6F4FBBAF0(&v14);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::GetDragDroppingContent @ RVA 0x1F2C340 EA 0x7FF6F594C340
+======================================================================
+__int64 __fastcall sub_7FF6F594C340(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F58877A0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::GetDynamicMaterial @ RVA 0x1F2C410 EA 0x7FF6F594C410
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F594C410(__int64 a1, _QWORD *a2, _QWORD *a3)
+{
+  __int64 v5; // rdi
+  _DWORD *v6; // rcx
+  __int64 v7; // rax
+  _DWORD v9[2]; // [rsp+28h] [rbp-49h] BYREF
+  char v10; // [rsp+30h] [rbp-41h]
+  __int64 v11; // [rsp+34h] [rbp-3Dh]
+  __int64 v12; // [rsp+3Ch] [rbp-35h]
+  __int128 v13; // [rsp+44h] [rbp-2Dh]
+  __int128 v14; // [rsp+58h] [rbp-19h] BYREF
+  char v15; // [rsp+68h] [rbp-9h]
+  __int64 v16; // [rsp+70h] [rbp-1h]
+  __int64 v17; // [rsp+78h] [rbp+7h]
+  int v18; // [rsp+80h] [rbp+Fh]
+  __int16 v19; // [rsp+88h] [rbp+17h]
+  char v20; // [rsp+8Ah] [rbp+19h]
+  __int64 v21; // [rsp+90h] [rbp+1Fh]
+  __int64 v22; // [rsp+98h] [rbp+27h]
+  __int16 v23; // [rsp+A0h] [rbp+2Fh]
+  __int64 v24; // [rsp+A4h] [rbp+33h]
+  __int64 v25; // [rsp+ACh] [rbp+3Bh]
+  char v26; // [rsp+B4h] [rbp+43h]
+  __int64 v27; // [rsp+B8h] [rbp+47h]
+
+  v27 = -2;
+  v9[0] = 1107296256;
+  v9[1] = 1107296256;
+  v10 = 3;
+  v11 = 0;
+  v12 = 0;
+  v13 = xmmword_7FF6FA447570;
+  v14 = xmmword_7FF6FA447570;
+  v15 = 0;
+  v5 = 0;
+  v16 = 0;
+  v17 = 0;
+  v18 = 0;
+  v19 = 0;
+  v20 = 0;
+  v21 = 0;
+  v22 = 0;
+  v23 = 0;
+  v25 = xmmword_7FF6FA4F60F8;
+  v24 = xmmword_7FF6FA4F60F8;
+  v26 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_DWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  *a3 = sub_7FF6F5887BC0(v6);
+  return sub_7FF6F4FBBAF0(&v14);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::GetInputEventFromCharacterEvent @ RVA 0x1F2C570 EA 0x7FF6F594C570
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F594C570(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  _QWORD *v6; // rdx
+  __int64 v7; // rax
+  __int64 v8; // rax
+  __int64 result; // rax
+  _BYTE v10[40]; // [rsp+38h] [rbp-60h] BYREF
+  _QWORD v11[2]; // [rsp+60h] [rbp-38h] BYREF
+  char v12; // [rsp+70h] [rbp-28h]
+  int v13; // [rsp+74h] [rbp-24h]
+  char v14; // [rsp+78h] [rbp-20h]
+  __int64 v15; // [rsp+80h] [rbp-18h]
+  __int16 v16; // [rsp+88h] [rbp-10h]
+
+  v11[1] = 0;
+  v12 = 0;
+  v5 = 0;
+  v13 = 0;
+  v14 = 0;
+  v15 = 0;
+  v11[0] = off_7FF6F8C1B160;
+  v16 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v6 = v11;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  v8 = sub_7FF6F58893C0(v10, v6);
+  *(_QWORD *)(a3 + 8) = *(_QWORD *)(v8 + 8);
+  *(_BYTE *)(a3 + 16) = *(_BYTE *)(v8 + 16);
+  *(_DWORD *)(a3 + 20) = *(_DWORD *)(v8 + 20);
+  *(_BYTE *)(a3 + 24) = *(_BYTE *)(v8 + 24);
+  result = *(_QWORD *)(v8 + 32);
+  *(_QWORD *)(a3 + 32) = result;
+  return result;
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::GetInputEventFromControllerEvent @ RVA 0x1F2C670 EA 0x7FF6F594C670
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F594C670(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  int v6; // eax
+  _QWORD *v7; // rdx
+  __int64 v8; // rax
+  __int64 v9; // rax
+  _QWORD v11[2]; // [rsp+28h] [rbp-29h] BYREF
+  char v12; // [rsp+38h] [rbp-19h]
+  int v13; // [rsp+3Ch] [rbp-15h]
+  char v14; // [rsp+40h] [rbp-11h]
+  __int64 v15; // [rsp+48h] [rbp-9h]
+  __int64 v16; // [rsp+50h] [rbp-1h] BYREF
+  __int128 v17; // [rsp+58h] [rbp+7h] BYREF
+  int v18; // [rsp+68h] [rbp+17h]
+  int v19; // [rsp+70h] [rbp+1Fh]
+  __int64 v20; // [rsp+78h] [rbp+27h]
+  _BYTE v21[40]; // [rsp+80h] [rbp+2Fh] BYREF
+
+  v20 = -2;
+  v11[1] = 0;
+  v12 = 0;
+  v5 = 0;
+  v13 = 0;
+  v14 = 0;
+  v15 = 0;
+  v11[0] = off_7FF6F8C1B178;
+  v16 = qword_7FF6FA527CD8;
+  v17 = xmmword_7FF6FA527CE0;
+  if ( !*((_QWORD *)&xmmword_7FF6FA527CE0 + 1) )
+    goto LABEL_6;
+  if ( _InterlockedIncrement((volatile signed __int32 *)(*((_QWORD *)&xmmword_7FF6FA527CE0 + 1) + 8LL)) == 1 )
+    MEMORY[0] = (char *)&v17 + 8;
+  if ( *((_QWORD *)&v17 + 1) )
+    v6 = *(_DWORD *)(*((_QWORD *)&v17 + 1) + 24LL);
+  else
+LABEL_6:
+    v6 = 0;
+  v18 = v6;
+  v19 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v7 = v11;
+  if ( a2[7] )
+    v7 = (_QWORD *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v5) = v8 != 0;
+  a2[4] = v8 + v5;
+  v9 = sub_7FF6F5889400(v21, v7);
+  *(_QWORD *)(a3 + 8) = *(_QWORD *)(v9 + 8);
+  *(_BYTE *)(a3 + 16) = *(_BYTE *)(v9 + 16);
+  *(_DWORD *)(a3 + 20) = *(_DWORD *)(v9 + 20);
+  *(_BYTE *)(a3 + 24) = *(_BYTE *)(v9 + 24);
+  *(_QWORD *)(a3 + 32) = *(_QWORD *)(v9 + 32);
+  return sub_7FF6F3C36760(&v16);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::GetInputEventFromKeyEvent @ RVA 0x1F2C7C0 EA 0x7FF6F594C7C0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F594C7C0(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  _QWORD *v6; // rdx
+  __int64 v7; // rax
+  __int64 v8; // rax
+  _QWORD v10[2]; // [rsp+38h] [rbp-29h] BYREF
+  char v11; // [rsp+48h] [rbp-19h]
+  int v12; // [rsp+4Ch] [rbp-15h]
+  char v13; // [rsp+50h] [rbp-11h]
+  __int64 v14; // [rsp+58h] [rbp-9h]
+  __int64 v15; // [rsp+60h] [rbp-1h] BYREF
+  __int128 v16; // [rsp+68h] [rbp+7h]
+  int v17; // [rsp+78h] [rbp+17h]
+  __int64 v18; // [rsp+80h] [rbp+1Fh]
+  __int64 v19; // [rsp+88h] [rbp+27h]
+  _BYTE v20[40]; // [rsp+90h] [rbp+2Fh] BYREF
+
+  v19 = -2;
+  v10[1] = 0;
+  v11 = 0;
+  v5 = 0;
+  v12 = 0;
+  v13 = 0;
+  v14 = 0;
+  v10[0] = off_7FF6F8821410;
+  v15 = 0;
+  v16 = 0;
+  v17 = 0;
+  v18 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v6 = v10;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  v8 = sub_7FF6F5889440(v20, v6);
+  *(_QWORD *)(a3 + 8) = *(_QWORD *)(v8 + 8);
+  *(_BYTE *)(a3 + 16) = *(_BYTE *)(v8 + 16);
+  *(_DWORD *)(a3 + 20) = *(_DWORD *)(v8 + 20);
+  *(_BYTE *)(a3 + 24) = *(_BYTE *)(v8 + 24);
+  *(_QWORD *)(a3 + 32) = *(_QWORD *)(v8 + 32);
+  return sub_7FF6F3C36760(&v15);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::GetInputEventFromNavigationEvent @ RVA 0x1F2C8E0 EA 0x7FF6F594C8E0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F594C8E0(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  _QWORD *v6; // rdx
+  __int64 v7; // rax
+  __int64 v8; // rax
+  __int64 result; // rax
+  _BYTE v10[40]; // [rsp+28h] [rbp-60h] BYREF
+  _QWORD v11[2]; // [rsp+50h] [rbp-38h] BYREF
+  char v12; // [rsp+60h] [rbp-28h]
+  int v13; // [rsp+64h] [rbp-24h]
+  char v14; // [rsp+68h] [rbp-20h]
+  __int64 v15; // [rsp+70h] [rbp-18h]
+  char v16; // [rsp+78h] [rbp-10h]
+
+  v11[1] = 0;
+  v12 = 0;
+  v5 = 0;
+  v13 = 0;
+  v14 = 0;
+  v15 = 0;
+  v11[0] = off_7FF6F8C1B1A8;
+  v16 = 7;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v6 = v11;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  v8 = sub_7FF6F5889480(v10, v6);
+  *(_QWORD *)(a3 + 8) = *(_QWORD *)(v8 + 8);
+  *(_BYTE *)(a3 + 16) = *(_BYTE *)(v8 + 16);
+  *(_DWORD *)(a3 + 20) = *(_DWORD *)(v8 + 20);
+  *(_BYTE *)(a3 + 24) = *(_BYTE *)(v8 + 24);
+  result = *(_QWORD *)(v8 + 32);
+  *(_QWORD *)(a3 + 32) = result;
+  return result;
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::GetInputEventFromPointerEvent @ RVA 0x1F2C9D0 EA 0x7FF6F594C9D0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F594C9D0(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rbx
+  _QWORD *v6; // rdx
+  __int64 v7; // rax
+  __int64 v8; // rax
+  _QWORD v10[2]; // [rsp+28h] [rbp-69h] BYREF
+  char v11; // [rsp+38h] [rbp-59h]
+  int v12; // [rsp+3Ch] [rbp-55h]
+  char v13; // [rsp+40h] [rbp-51h]
+  __int64 v14; // [rsp+48h] [rbp-49h]
+  __int64 v15; // [rsp+50h] [rbp-41h]
+  __int128 v16; // [rsp+58h] [rbp-39h]
+  __int64 *v17; // [rsp+68h] [rbp-29h]
+  __int64 v18; // [rsp+70h] [rbp-21h] BYREF
+  __int128 v19; // [rsp+78h] [rbp-19h]
+  int v20; // [rsp+88h] [rbp-9h]
+  __int64 v21; // [rsp+90h] [rbp-1h]
+  char v22; // [rsp+98h] [rbp+7h]
+  __int64 v23; // [rsp+9Ch] [rbp+Bh]
+  int v24; // [rsp+A4h] [rbp+13h]
+  char v25; // [rsp+A8h] [rbp+17h]
+  __int64 v26; // [rsp+B8h] [rbp+27h]
+  _BYTE v27[40]; // [rsp+C0h] [rbp+2Fh] BYREF
+
+  v26 = -2;
+  v10[1] = 0;
+  v11 = 0;
+  v5 = 0;
+  v12 = 0;
+  v13 = 0;
+  v14 = 0;
+  v10[0] = off_7FF6F8821428;
+  v15 = 0;
+  v16 = 0;
+  v17 = &qword_7FF6FA528A30;
+  v18 = 0;
+  v19 = 0;
+  v20 = 0;
+  v21 = 0;
+  v22 = 0;
+  v23 = 0;
+  v24 = 0;
+  v25 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v6 = v10;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  v8 = sub_7FF6F58894C0(v27, v6);
+  *(_QWORD *)(a3 + 8) = *(_QWORD *)(v8 + 8);
+  *(_BYTE *)(a3 + 16) = *(_BYTE *)(v8 + 16);
+  *(_DWORD *)(a3 + 20) = *(_DWORD *)(v8 + 20);
+  *(_BYTE *)(a3 + 24) = *(_BYTE *)(v8 + 24);
+  *(_QWORD *)(a3 + 32) = *(_QWORD *)(v8 + 32);
+  return sub_7FF6F3C36760(&v18);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::GetKeyEventFromAnalogInputEvent @ RVA 0x1F2CB90 EA 0x7FF6F594CB90
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F594CB90(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  int v5; // ebx
+  _QWORD *v6; // rdx
+  __int64 v7; // rdi
+  __int64 v8; // rax
+  __int64 v9; // rax
+  _QWORD v11[2]; // [rsp+38h] [rbp-D0h] BYREF
+  char v12; // [rsp+48h] [rbp-C0h]
+  int v13; // [rsp+4Ch] [rbp-BCh]
+  __int64 v14; // [rsp+50h] [rbp-B8h]
+  __int64 v15; // [rsp+58h] [rbp-B0h]
+  _BYTE v16[24]; // [rsp+60h] [rbp-A8h] BYREF
+  __int64 v17; // [rsp+78h] [rbp-90h]
+  __int64 v18; // [rsp+80h] [rbp-88h]
+  int v19; // [rsp+88h] [rbp-80h]
+  __int64 v20; // [rsp+98h] [rbp-70h] BYREF
+  __int128 v21; // [rsp+A0h] [rbp-68h]
+  int v22; // [rsp+B0h] [rbp-58h]
+  __int64 v23; // [rsp+B8h] [rbp-50h]
+  _BYTE v24[40]; // [rsp+C0h] [rbp-48h] BYREF
+  _BYTE v25[48]; // [rsp+E8h] [rbp-20h] BYREF
+
+  v23 = -2;
+  v5 = 0;
+  v20 = 0;
+  v21 = 0;
+  v22 = 0;
+  v11[1] = 0;
+  v12 = 0;
+  v13 = 0;
+  LOBYTE(v14) = 0;
+  v15 = 0;
+  memset(v16, 0, sizeof(v16));
+  LODWORD(v17) = 0;
+  v18 = 0;
+  sub_7FF6F3C36760(&v20);
+  v11[0] = off_7FF6F8C1B148;
+  v19 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v6 = v11;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  a2[4] += a2[4] != 0;
+  v7 = sub_7FF6F5889650(v24, v6);
+  *(_QWORD *)(a3 + 8) = *(_QWORD *)(v7 + 8);
+  *(_BYTE *)(a3 + 16) = *(_BYTE *)(v7 + 16);
+  *(_DWORD *)(a3 + 20) = *(_DWORD *)(v7 + 20);
+  *(_BYTE *)(a3 + 24) = *(_BYTE *)(v7 + 24);
+  *(_QWORD *)(a3 + 32) = *(_QWORD *)(v7 + 32);
+  *(_QWORD *)(a3 + 40) = *(_QWORD *)(v7 + 40);
+  v8 = *(_QWORD *)(v7 + 48);
+  if ( *(_QWORD *)(a3 + 48) != v8 )
+  {
+    *(_QWORD *)(a3 + 48) = v8;
+    *(_QWORD *)(v7 + 48) = 0;
+    v9 = *(_QWORD *)(v7 + 56);
+    if ( v9 )
+      v5 = *(_DWORD *)(v9 + 24);
+    *(_DWORD *)(a3 + 64) = v5;
+    *(_DWORD *)(v7 + 64) = -2040109466;
+    sub_7FF6F3C379A0(a3 + 56, v7 + 56);
+  }
+  *(_DWORD *)(a3 + 72) = *(_DWORD *)(v7 + 72);
+  *(_DWORD *)(a3 + 76) = *(_DWORD *)(v7 + 76);
+  sub_7FF6F3C36760(v25);
+  return sub_7FF6F3C36760(v16);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::Handled @ RVA 0x1F2DCF0 EA 0x7FF6F594DCF0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F594DCF0(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rdx
+  _BYTE v6[240]; // [rsp+30h] [rbp-108h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = sub_7FF6F5890C00(v6);
+  sub_7FF6F3C37CE0(a3, v4);
+  return sub_7FF6F3C36860(v6);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::IsDragDropping @ RVA 0x1F2E0B0 EA 0x7FF6F594E0B0
+======================================================================
+__int64 __fastcall sub_7FF6F594E0B0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5892FF0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::LockMouse @ RVA 0x1F2E5E0 EA 0x7FF6F594E5E0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F594E5E0(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  _BYTE *v6; // rsi
+  __int64 v7; // rax
+  __int64 v8; // rax
+  _QWORD v10[2]; // [rsp+20h] [rbp-218h] BYREF
+  _BYTE v11[240]; // [rsp+30h] [rbp-208h] BYREF
+  _BYTE v12[240]; // [rsp+120h] [rbp-118h] BYREF
+
+  v10[1] = -2;
+  sub_7FF6F58581D0(v11, 0);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v6 = v11;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  v10[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  v8 = sub_7FF6F5896A80(v12, v6, v10[0]);
+  sub_7FF6F3C37CE0(a3, v8);
+  sub_7FF6F3C36860(v12);
+  return sub_7FF6F3C36860(v11);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::MakeBrushFromAsset @ RVA 0x1F2E720 EA 0x7FF6F594E720
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F594E720(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rax
+  _BYTE v9[48]; // [rsp+28h] [rbp-A0h] BYREF
+  _BYTE v10[104]; // [rsp+58h] [rbp-70h] BYREF
+  __int64 v11; // [rsp+D8h] [rbp+10h] BYREF
+
+  v5 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = a2[4];
+  LOBYTE(v5) = v6 != 0;
+  a2[4] = v6 + v5;
+  v7 = sub_7FF6F5896BD0(v9, v11);
+  sub_7FF6F58682E0(a3, v7);
+  return sub_7FF6F4FBBAF0(v10);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::MakeBrushFromMaterial @ RVA 0x1F2E7D0 EA 0x7FF6F594E7D0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F594E7D0(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rax
+  _QWORD v9[2]; // [rsp+20h] [rbp-A8h] BYREF
+  _BYTE v10[48]; // [rsp+30h] [rbp-98h] BYREF
+  _BYTE v11[96]; // [rsp+60h] [rbp-68h] BYREF
+  unsigned int v12; // [rsp+D8h] [rbp+10h] BYREF
+  unsigned int v13; // [rsp+E8h] [rbp+20h] BYREF
+
+  v9[1] = -2;
+  v5 = 0;
+  v9[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v6 = a2[4];
+  LOBYTE(v5) = v6 != 0;
+  a2[4] = v6 + v5;
+  v7 = sub_7FF6F5896C30(v10, v9[0], v13, v12);
+  sub_7FF6F58682E0(a3, v7);
+  return sub_7FF6F4FBBAF0(v11);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::MakeBrushFromTexture @ RVA 0x1F2E910 EA 0x7FF6F594E910
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F594E910(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rax
+  _QWORD v9[2]; // [rsp+20h] [rbp-A8h] BYREF
+  _BYTE v10[48]; // [rsp+30h] [rbp-98h] BYREF
+  _BYTE v11[96]; // [rsp+60h] [rbp-68h] BYREF
+  unsigned int v12; // [rsp+D8h] [rbp+10h] BYREF
+  unsigned int v13; // [rsp+E8h] [rbp+20h] BYREF
+
+  v9[1] = -2;
+  v5 = 0;
+  v9[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v6 = a2[4];
+  LOBYTE(v5) = v6 != 0;
+  a2[4] = v6 + v5;
+  v7 = sub_7FF6F5896D20(v10, v9[0], v13, v12);
+  sub_7FF6F58682E0(a3, v7);
+  return sub_7FF6F4FBBAF0(v11);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::NoResourceBrush @ RVA 0x1F2EA50 EA 0x7FF6F594EA50
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F594EA50(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rdx
+  _BYTE v6[48]; // [rsp+28h] [rbp-A0h] BYREF
+  _BYTE v7[112]; // [rsp+58h] [rbp-70h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = sub_7FF6F5898C20(v6);
+  sub_7FF6F58682E0(a3, v4);
+  return sub_7FF6F4FBBAF0(v7);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::ReleaseJoystickCapture @ RVA 0x1F2F010 EA 0x7FF6F594F010
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F594F010(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  _BYTE *v6; // rsi
+  __int64 v7; // r8
+  __int64 v8; // rax
+  __int64 v9; // rax
+  int v11; // [rsp+20h] [rbp-218h] BYREF
+  __int64 v12; // [rsp+28h] [rbp-210h]
+  _BYTE v13[240]; // [rsp+30h] [rbp-208h] BYREF
+  _BYTE v14[240]; // [rsp+120h] [rbp-118h] BYREF
+
+  v12 = -2;
+  sub_7FF6F58581D0(v13, 0);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v13);
+  }
+  v6 = v13;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  LOBYTE(v7) = v11 != 0;
+  v8 = a2[4];
+  LOBYTE(v5) = v8 != 0;
+  a2[4] = v8 + v5;
+  v9 = sub_7FF6F58B8E00(v14, v6, v7);
+  sub_7FF6F3C37CE0(a3, v9);
+  sub_7FF6F3C36860(v14);
+  return sub_7FF6F3C36860(v13);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::ReleaseMouseCapture @ RVA 0x1F2F150 EA 0x7FF6F594F150
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F594F150(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  _BYTE *v6; // rdx
+  __int64 v7; // rax
+  __int64 v8; // rax
+  _BYTE v10[240]; // [rsp+30h] [rbp-1F8h] BYREF
+  _BYTE v11[240]; // [rsp+120h] [rbp-108h] BYREF
+
+  sub_7FF6F58581D0(v10, 0);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v6 = v10;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  v8 = sub_7FF6F58B8F50(v11, v6);
+  sub_7FF6F3C37CE0(a3, v8);
+  sub_7FF6F3C36860(v11);
+  return sub_7FF6F3C36860(v10);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::SetBrushResourceToMaterial @ RVA 0x1F30230 EA 0x7FF6F5950230
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F5950230(__int64 a1, _QWORD *a2)
+{
+  __int64 v3; // rdi
+  _DWORD *v4; // rsi
+  __int64 v5; // rax
+  _DWORD v7[2]; // [rsp+28h] [rbp-49h] BYREF
+  char v8; // [rsp+30h] [rbp-41h]
+  __int64 v9; // [rsp+34h] [rbp-3Dh]
+  __int64 v10; // [rsp+3Ch] [rbp-35h]
+  __int128 v11; // [rsp+44h] [rbp-2Dh]
+  __int128 v12; // [rsp+58h] [rbp-19h] BYREF
+  char v13; // [rsp+68h] [rbp-9h]
+  __int64 v14; // [rsp+70h] [rbp-1h]
+  __int64 v15; // [rsp+78h] [rbp+7h]
+  int v16; // [rsp+80h] [rbp+Fh]
+  __int16 v17; // [rsp+88h] [rbp+17h]
+  char v18; // [rsp+8Ah] [rbp+19h]
+  __int64 v19; // [rsp+90h] [rbp+1Fh]
+  __int64 v20; // [rsp+98h] [rbp+27h]
+  __int16 v21; // [rsp+A0h] [rbp+2Fh]
+  __int64 v22; // [rsp+A4h] [rbp+33h]
+  __int64 v23; // [rsp+ACh] [rbp+3Bh]
+  char v24; // [rsp+B4h] [rbp+43h]
+  __int64 v25; // [rsp+B8h] [rbp+47h]
+  __int64 v26; // [rsp+E0h] [rbp+6Fh] BYREF
+
+  v25 = -2;
+  v7[0] = 1107296256;
+  v7[1] = 1107296256;
+  v8 = 3;
+  v9 = 0;
+  v10 = 0;
+  v11 = xmmword_7FF6FA447570;
+  v12 = xmmword_7FF6FA447570;
+  v13 = 0;
+  v3 = 0;
+  v14 = 0;
+  v15 = 0;
+  v16 = 0;
+  v17 = 0;
+  v18 = 0;
+  v19 = 0;
+  v20 = 0;
+  v21 = 0;
+  v26 = xmmword_7FF6FA4F60F8;
+  v23 = xmmword_7FF6FA4F60F8;
+  v22 = xmmword_7FF6FA4F60F8;
+  v24 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  v4 = v7;
+  if ( a2[7] )
+    v4 = (_DWORD *)a2[7];
+  v26 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v26);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v26);
+  }
+  v5 = a2[4];
+  LOBYTE(v3) = v5 != 0;
+  a2[4] = v5 + v3;
+  sub_7FF6F58BF050(v4, v26);
+  return sub_7FF6F4FBBAF0(&v12);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::SetBrushResourceToTexture @ RVA 0x1F303A0 EA 0x7FF6F59503A0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F59503A0(__int64 a1, _QWORD *a2)
+{
+  __int64 v3; // rdi
+  _DWORD *v4; // rsi
+  __int64 v5; // rax
+  _DWORD v7[2]; // [rsp+28h] [rbp-49h] BYREF
+  char v8; // [rsp+30h] [rbp-41h]
+  __int64 v9; // [rsp+34h] [rbp-3Dh]
+  __int64 v10; // [rsp+3Ch] [rbp-35h]
+  __int128 v11; // [rsp+44h] [rbp-2Dh]
+  __int128 v12; // [rsp+58h] [rbp-19h] BYREF
+  char v13; // [rsp+68h] [rbp-9h]
+  __int64 v14; // [rsp+70h] [rbp-1h]
+  __int64 v15; // [rsp+78h] [rbp+7h]
+  int v16; // [rsp+80h] [rbp+Fh]
+  __int16 v17; // [rsp+88h] [rbp+17h]
+  char v18; // [rsp+8Ah] [rbp+19h]
+  __int64 v19; // [rsp+90h] [rbp+1Fh]
+  __int64 v20; // [rsp+98h] [rbp+27h]
+  __int16 v21; // [rsp+A0h] [rbp+2Fh]
+  __int64 v22; // [rsp+A4h] [rbp+33h]
+  __int64 v23; // [rsp+ACh] [rbp+3Bh]
+  char v24; // [rsp+B4h] [rbp+43h]
+  __int64 v25; // [rsp+B8h] [rbp+47h]
+  __int64 v26; // [rsp+E0h] [rbp+6Fh] BYREF
+
+  v25 = -2;
+  v7[0] = 1107296256;
+  v7[1] = 1107296256;
+  v8 = 3;
+  v9 = 0;
+  v10 = 0;
+  v11 = xmmword_7FF6FA447570;
+  v12 = xmmword_7FF6FA447570;
+  v13 = 0;
+  v3 = 0;
+  v14 = 0;
+  v15 = 0;
+  v16 = 0;
+  v17 = 0;
+  v18 = 0;
+  v19 = 0;
+  v20 = 0;
+  v21 = 0;
+  v26 = xmmword_7FF6FA4F60F8;
+  v23 = xmmword_7FF6FA4F60F8;
+  v22 = xmmword_7FF6FA4F60F8;
+  v24 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  v4 = v7;
+  if ( a2[7] )
+    v4 = (_DWORD *)a2[7];
+  v26 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v26);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v26);
+  }
+  v5 = a2[4];
+  LOBYTE(v3) = v5 != 0;
+  a2[4] = v5 + v3;
+  sub_7FF6F58BF060(v4, v26);
+  return sub_7FF6F4FBBAF0(&v12);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::SetFocusToGameViewport @ RVA 0x1F30E90 EA 0x7FF6F5950E90
+======================================================================
+__int64 __fastcall sub_7FF6F5950E90(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F58BFF50();
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::SetInputMode_GameAndUI @ RVA 0x1F31AA0 EA 0x7FF6F5951AA0
+======================================================================
+__int64 __fastcall sub_7FF6F5951AA0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  bool v4; // si
+  __int64 v5; // r9
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  bool v9; // zf
+  __int64 v11; // [rsp+20h] [rbp-18h] BYREF
+  _QWORD v12[2]; // [rsp+28h] [rbp-10h] BYREF
+  int v13; // [rsp+48h] [rbp+10h] BYREF
+  int v14; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v12[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v14 = 0;
+  v4 = v13 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v6 = a2[4];
+  v7 = v11;
+  v8 = v12[0];
+  LOBYTE(v2) = v6 != 0;
+  v9 = v14 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v9;
+  return sub_7FF6F58C05F0(v8, v7, v4, v5);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::SetInputMode_GameOnly @ RVA 0x1F31BE0 EA 0x7FF6F5951BE0
+======================================================================
+__int64 __fastcall sub_7FF6F5951BE0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  __int64 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v7 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v5 = v7;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return sub_7FF6F58C0850(v5);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::SetInputMode_UIOnly @ RVA 0x1F31C50 EA 0x7FF6F5951C50
+======================================================================
+__int64 __fastcall sub_7FF6F5951C50(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // r8
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v7; // rcx
+  bool v8; // zf
+  _QWORD v10[3]; // [rsp+20h] [rbp-18h] BYREF
+  int v11; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v12; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v10[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v5 = a2[4];
+  v6 = v12;
+  v7 = v10[0];
+  LOBYTE(v2) = v5 != 0;
+  v8 = v11 == 0;
+  a2[4] = v5 + v2;
+  LOBYTE(v4) = !v8;
+  return sub_7FF6F58C0880(v7, v6, v4);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::SetMousePosition @ RVA 0x1F32A00 EA 0x7FF6F5952A00
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F5952A00(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rsi
+  _BYTE *v6; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rax
+  _QWORD v10[2]; // [rsp+20h] [rbp-218h] BYREF
+  _BYTE v11[240]; // [rsp+30h] [rbp-208h] BYREF
+  _BYTE v12[240]; // [rsp+120h] [rbp-118h] BYREF
+
+  v10[1] = -2;
+  sub_7FF6F58581D0(v11, 0);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v6 = v11;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  v8 = sub_7FF6F58C1940(v12, v6, v10[0]);
+  sub_7FF6F3C37CE0(a3, v8);
+  sub_7FF6F3C36860(v12);
+  return sub_7FF6F3C36860(v11);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::SetUserFocus @ RVA 0x1F34770 EA 0x7FF6F5954770
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F5954770(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  _BYTE *v6; // rsi
+  __int64 v7; // r9
+  __int64 v8; // rax
+  __int64 v9; // rax
+  int v11; // [rsp+20h] [rbp-228h] BYREF
+  _QWORD v12[3]; // [rsp+28h] [rbp-220h] BYREF
+  _BYTE v13[240]; // [rsp+40h] [rbp-208h] BYREF
+  _BYTE v14[240]; // [rsp+130h] [rbp-118h] BYREF
+
+  v12[1] = -2;
+  sub_7FF6F58581D0(v13, 0);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v13);
+  }
+  v6 = v13;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  v12[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  LOBYTE(v7) = v11 != 0;
+  v8 = a2[4];
+  LOBYTE(v5) = v8 != 0;
+  a2[4] = v8 + v5;
+  v9 = sub_7FF6F58C3930(v14, v6, v12[0], v7);
+  sub_7FF6F3C37CE0(a3, v9);
+  sub_7FF6F3C36860(v14);
+  return sub_7FF6F3C36860(v13);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::Unhandled @ RVA 0x1F357E0 EA 0x7FF6F59557E0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F59557E0(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rdx
+  _BYTE v6[240]; // [rsp+30h] [rbp-108h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = sub_7FF6F58CD4B0(v6);
+  sub_7FF6F3C37CE0(a3, v4);
+  return sub_7FF6F3C36860(v6);
+}
+
+
+======================================================================
+WidgetBlueprintLibrary::UnlockMouse @ RVA 0x1F35860 EA 0x7FF6F5955860
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F5955860(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  _BYTE *v6; // rdx
+  __int64 v7; // rax
+  __int64 v8; // rax
+  _BYTE v10[240]; // [rsp+30h] [rbp-1F8h] BYREF
+  _BYTE v11[240]; // [rsp+120h] [rbp-108h] BYREF
+
+  sub_7FF6F58581D0(v10, 0);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v6 = v10;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  v8 = sub_7FF6F58CD5B0(v11, v6);
+  sub_7FF6F3C37CE0(a3, v8);
+  sub_7FF6F3C36860(v11);
+  return sub_7FF6F3C36860(v10);
+}
+

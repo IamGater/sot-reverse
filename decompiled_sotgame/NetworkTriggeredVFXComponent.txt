@@ -1,0 +1,74 @@
+// Class: NetworkTriggeredVFXComponent (1 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+NetworkTriggeredVFXComponent::Multicast_PlayVFXRPC @ RVA 0x2F81A40 EA 0x7FF6F69A1A40
+======================================================================
+__int64 __fastcall sub_7FF6F69A1A40(int a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  int v6; // edx
+  __int64 v8; // [rsp+20h] [rbp-58h]
+  __int64 v9; // [rsp+30h] [rbp-48h] BYREF
+  int v10; // [rsp+38h] [rbp-40h]
+  __int64 v11; // [rsp+40h] [rbp-38h] BYREF
+  int v12; // [rsp+48h] [rbp-30h]
+  __int64 v13; // [rsp+50h] [rbp-28h] BYREF
+  int v14; // [rsp+58h] [rbp-20h]
+  __int64 v15; // [rsp+60h] [rbp-18h] BYREF
+  int v16; // [rsp+68h] [rbp-10h]
+  int v17; // [rsp+88h] [rbp+10h] BYREF
+  __int64 v18; // [rsp+98h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v17 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v18 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  v5 = a2[4];
+  v6 = v17;
+  v13 = v9;
+  LOBYTE(v2) = v5 != 0;
+  v15 = v11;
+  v14 = v10;
+  v16 = v12;
+  v8 = v18;
+  a2[4] = v5 + v2;
+  return sub_7FF6F6996870(a1, v6, (unsigned int)&v15, (unsigned int)&v13, v8);
+}
+

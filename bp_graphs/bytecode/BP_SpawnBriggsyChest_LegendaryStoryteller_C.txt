@@ -1,0 +1,109 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_3_LegendaryStoryteller/bp_spawnbriggsychest_legendarystoryteller -> BP_SpawnBriggsyChest_LegendaryStoryteller_C
+
+=== BP_SpawnBriggsyChest_LegendaryStoryteller_C::fn_idx_1828 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19f81caf300
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19f81caf200
+$18: VirtualFunction call "idx:283955" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_SpawnBriggsyChest_LegendaryStoryteller_C::fn_idx_283956 (22 bytes) ===
+$0: VirtualFunction call "idx:283955" (
+  $13: literal int32 325
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_SpawnBriggsyChest_LegendaryStoryteller_C::fn_idx_283955 (338 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19e586bdf90
+$10: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $19: LocalVariable named CallFunc_GetVariables_OutStruct@0x19f81caf380
+  $28: EndFunctionParms
+)
+$29: Let (Variable = Expression)
+  Variable:
+  $38: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19f81caf400
+  Expression:
+  $47: Context
+    ObjectExpression:
+    $48: StructMemberContext prop=idx:283793@0x19fce7f3700
+      Expression to struct:
+      $57: LocalVariable named CallFunc_GetVariables_OutStruct@0x19f81caf380
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetTransform_ReturnValue@0x19f81caf400
+    ContextExpression:
+    $78: FinalFunction target=GetTransform@0x19e4cd64700 (
+      $87: EndFunctionParms
+    )
+$88: LetObj (Variable = Expression)
+  Variable:
+  $89: LocalVariable named idx:283603@0x19f81caf480
+  Expression:
+  $98: FinalFunction target=SpawnItem@0x19e4cda87f0 (
+    $107: InstanceVariable named idx:283953@0x19f81caf680
+    $116: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19f81caf400
+    $125: False
+    $126: False
+    $127: literal text (not decoded)
+    $128: literal ansi string ""
+    $130: literal ansi string ""
+    $132: literal ansi string ""
+    $134: EndFunctionParms
+  )
+$135: Let (Variable = Expression)
+  Variable:
+  $144: LocalVariable named K2Node_DynamicCast_AsItem_Proxy@0x19f81caf500
+  Expression:
+  $153: DynamicCast to ItemProxy@0x19e4c38b980 of expr:
+  $162: LocalVariable named idx:283603@0x19f81caf480
+$171: Let (Variable = Expression)
+  Variable:
+  $180: LocalVariable named K2Node_DynamicCast_bSuccess@0x19f81caf580
+  Expression:
+  $189: PrimitiveCast type=71
+    Argument:
+    $191: LocalVariable named K2Node_DynamicCast_AsItem_Proxy@0x19f81caf500
+$200: JumpIfNot -> 0x14f, cond:
+  $205: LocalVariable named K2Node_DynamicCast_bSuccess@0x19f81caf580
+$214: BindDelegate 'idx:283956'
+  Delegate:
+  $227: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19f81caf280
+  Object:
+  $236: Self
+$237: LetObj (Variable = Expression)
+  Variable:
+  $238: LocalVariable named CallFunc_GetItemInfo_ReturnValue@0x19f81caf600
+  Expression:
+  $247: Context
+    ObjectExpression:
+    $248: LocalVariable named K2Node_DynamicCast_AsItem_Proxy@0x19f81caf500
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetItemInfo_ReturnValue@0x19f81caf600
+    ContextExpression:
+    $269: FinalFunction target=GetItemInfo@0x19e4d108840 (
+      $278: EndFunctionParms
+    )
+$279: AddMulticastDelegate
+$280: Context
+  ObjectExpression:
+  $281: LocalVariable named CallFunc_GetItemInfo_ReturnValue@0x19f81caf600
+  SkipBytes: 0x9
+  RValueProperty: OnItemPickedUpDelegate@0x19e4d10b7b0
+  ContextExpression:
+  $302: InstanceVariable named OnItemPickedUpDelegate@0x19e4d10b7b0
+$311: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19f81caf280
+$320: Jump to offset 0x14f
+$325: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $334: EndFunctionParms
+)
+$335: Return expression:
+  $336: Nothing
+$337: EndOfScript

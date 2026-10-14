@@ -1,0 +1,542 @@
+// /Game/Blueprints/Character/bp_playerpirate_tavern -> BP_PlayerPirate_Tavern_C
+
+=== BP_PlayerPirate_Tavern_C::fn_idx_1553 (31 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalOutVariable named ReturnValue@0x2221cd9ba80
+  Expression:
+  $18: literal byte 4
+$20: Return expression:
+  $21: LocalOutVariable named ReturnValue@0x2221cd9ba80
+$30: EndOfScript
+
+=== BP_PlayerPirate_Tavern_C::fn_idx_217627 (930 bytes) ===
+$0: FlowStack.Push(0x39f)
+$5: Let (Variable = Expression)
+  Variable:
+  $14: LocalVariable named Temp_int_Variable@0x222322a5da0
+  Expression:
+  $23: literal int32 0
+$28: Let (Variable = Expression)
+  Variable:
+  $37: LocalVariable named CallFunc_GetNumMaterials_ReturnValue@0x222322a6270
+  Expression:
+  $46: Context
+    ObjectExpression:
+    $47: LocalVariable named Mesh@0x2221cd9ba00
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetNumMaterials_ReturnValue@0x222322a6270
+    ContextExpression:
+    $68: VirtualFunction call "GetNumMaterials" (
+      $81: EndFunctionParms
+    )
+$82: Let (Variable = Expression)
+  Variable:
+  $91: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x222322a6120
+  Expression:
+  $100: CallMath target=Subtract_IntInt@0x2216caa9ad0 (
+    $109: LocalVariable named CallFunc_GetNumMaterials_ReturnValue@0x222322a6270
+    $118: literal int32 1
+    $123: EndFunctionParms
+  )
+$124: LetBool (Variable = Expression)
+  Variable:
+  $125: LocalVariable named CallFunc_LessEqual_IntInt_ReturnValue@0x2221cd9b800
+  Expression:
+  $134: CallMath target=LessEqual_IntInt@0x2216ca969d0 (
+    $143: LocalVariable named Temp_int_Variable@0x222322a5da0
+    $152: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x222322a6120
+    $161: EndFunctionParms
+  )
+$162: PopExecutionFlowIfNot, cond:
+$163: LocalVariable named CallFunc_LessEqual_IntInt_ReturnValue@0x2221cd9b800
+$172: FlowStack.Push(0x1d7)
+$177: LetObj (Variable = Expression)
+  Variable:
+  $178: LocalVariable named CallFunc_GetMaterial_ReturnValue@0x2221cd9b980
+  Expression:
+  $187: Context
+    ObjectExpression:
+    $188: LocalVariable named Mesh@0x2221cd9ba00
+    SkipBytes: 0x17
+    RValueProperty: CallFunc_GetMaterial_ReturnValue@0x2221cd9b980
+    ContextExpression:
+    $209: VirtualFunction call "GetMaterial" (
+      $222: LocalVariable named Temp_int_Variable@0x222322a5da0
+      $231: EndFunctionParms
+    )
+$232: Let (Variable = Expression)
+  Variable:
+  $241: LocalVariable named K2Node_DynamicCast_AsMaterial_Instance_Dynamic@0x2221cd9b700
+  Expression:
+  $250: DynamicCast to MaterialInstanceDynamic@0x2216bc8b980 of expr:
+  $259: LocalVariable named CallFunc_GetMaterial_ReturnValue@0x2221cd9b980
+$268: Let (Variable = Expression)
+  Variable:
+  $277: LocalVariable named K2Node_DynamicCast_bSuccess@0x2221cd9b680
+  Expression:
+  $286: PrimitiveCast type=71
+    Argument:
+    $288: LocalVariable named K2Node_DynamicCast_AsMaterial_Instance_Dynamic@0x2221cd9b700
+$297: JumpIfNot -> 0x221, cond:
+  $302: LocalVariable named K2Node_DynamicCast_bSuccess@0x2221cd9b680
+$311: Let (Variable = Expression)
+  Variable:
+  $320: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x222322a6190
+  Expression:
+  $329: Context
+    ObjectExpression:
+    $330: ObjectConst Default__KismetSystemLibrary@0x2216d06ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue@0x222322a6190
+    ContextExpression:
+    $351: FinalFunction target=GetGameTimeInSeconds@0x2216c49c800 (
+      $360: Self
+      $361: EndFunctionParms
+    )
+$362: Context
+  ObjectExpression:
+  $363: LocalVariable named K2Node_DynamicCast_AsMaterial_Instance_Dynamic@0x2221cd9b700
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $384: FinalFunction target=SetScalarParameterValue@0x2216cae4620 (
+    $393: literal name "TattooGlowStartTime"
+    $406: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x222322a6190
+    $415: EndFunctionParms
+  )
+$416: Context
+  ObjectExpression:
+  $417: LocalVariable named K2Node_DynamicCast_AsMaterial_Instance_Dynamic@0x2221cd9b700
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $438: FinalFunction target=SetScalarParameterValue@0x2216cae4620 (
+    $447: literal name "TattooGlowDuration"
+    $460: InstanceVariable named TattooGlowDuration@0x2222dbf1810
+    $469: EndFunctionParms
+  )
+$470: PopExecutionFlow (jump to popped addr)
+$471: Let (Variable = Expression)
+  Variable:
+  $480: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x222322a6200
+  Expression:
+  $489: CallMath target=Add_IntInt@0x2216ca7fa30 (
+    $498: LocalVariable named Temp_int_Variable@0x222322a5da0
+    $507: literal int32 1
+    $512: EndFunctionParms
+  )
+$513: Let (Variable = Expression)
+  Variable:
+  $522: LocalVariable named Temp_int_Variable@0x222322a5da0
+  Expression:
+  $531: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x222322a6200
+$540: Jump to offset 0x1c
+$545: LetObj (Variable = Expression)
+  Variable:
+  $546: LocalVariable named CallFunc_GetMaterial_ReturnValue@0x2221cd9b980
+  Expression:
+  $555: Context
+    ObjectExpression:
+    $556: LocalVariable named Mesh@0x2221cd9ba00
+    SkipBytes: 0x17
+    RValueProperty: CallFunc_GetMaterial_ReturnValue@0x2221cd9b980
+    ContextExpression:
+    $577: VirtualFunction call "GetMaterial" (
+      $590: LocalVariable named Temp_int_Variable@0x222322a5da0
+      $599: EndFunctionParms
+    )
+$600: LetObj (Variable = Expression)
+  Variable:
+  $601: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x2221cd9b880
+  Expression:
+  $610: Context
+    ObjectExpression:
+    $611: ObjectConst Default__KismetMaterialLibrary@0x2216d06ec40
+    SkipBytes: 0x14
+    RValueProperty: CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x2221cd9b880
+    ContextExpression:
+    $632: FinalFunction target=CreateDynamicMaterialInstance@0x2216ca7e1e0 (
+      $641: Self
+      $642: LocalVariable named CallFunc_GetMaterial_ReturnValue@0x2221cd9b980
+      $651: EndFunctionParms
+    )
+$652: LetBool (Variable = Expression)
+  Variable:
+  $653: LocalVariable named CallFunc_IsValid_ReturnValue@0x2221cd9b780
+  Expression:
+  $662: Context
+    ObjectExpression:
+    $663: ObjectConst Default__KismetSystemLibrary@0x2216d06ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x2221cd9b780
+    ContextExpression:
+    $684: FinalFunction target=IsValid@0x2216c49e380 (
+      $693: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x2221cd9b880
+      $702: EndFunctionParms
+    )
+$703: PopExecutionFlowIfNot, cond:
+$704: LocalVariable named CallFunc_IsValid_ReturnValue@0x2221cd9b780
+$713: Context
+  ObjectExpression:
+  $714: LocalVariable named Mesh@0x2221cd9ba00
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $735: VirtualFunction call "SetMaterial" (
+    $748: LocalVariable named Temp_int_Variable@0x222322a5da0
+    $757: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x2221cd9b880
+    $766: EndFunctionParms
+  )
+$767: Let (Variable = Expression)
+  Variable:
+  $776: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x222322a6190
+  Expression:
+  $785: Context
+    ObjectExpression:
+    $786: ObjectConst Default__KismetSystemLibrary@0x2216d06ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue@0x222322a6190
+    ContextExpression:
+    $807: FinalFunction target=GetGameTimeInSeconds@0x2216c49c800 (
+      $816: Self
+      $817: EndFunctionParms
+    )
+$818: Context
+  ObjectExpression:
+  $819: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x2221cd9b880
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $840: FinalFunction target=SetScalarParameterValue@0x2216cae4620 (
+    $849: literal name "TattooGlowStartTime"
+    $862: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x222322a6190
+    $871: EndFunctionParms
+  )
+$872: Context
+  ObjectExpression:
+  $873: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x2221cd9b880
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $894: FinalFunction target=SetScalarParameterValue@0x2216cae4620 (
+    $903: literal name "TattooGlowDuration"
+    $916: InstanceVariable named TattooGlowDuration@0x2222dbf1810
+    $925: EndFunctionParms
+  )
+$926: PopExecutionFlow (jump to popped addr)
+$927: Return expression:
+  $928: Nothing
+$929: EndOfScript
+
+=== BP_PlayerPirate_Tavern_C::fn_idx_1741 (105 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_GetSocketLocation_ReturnValue@0x2221cd9b580
+  Expression:
+  $18: Context
+    ObjectExpression:
+    $19: InstanceVariable named Mesh@0x2216c78ced0
+    SkipBytes: 0x1b
+    RValueProperty: CallFunc_GetSocketLocation_ReturnValue@0x2221cd9b580
+    ContextExpression:
+    $40: VirtualFunction call "GetSocketLocation" (
+      $53: literal name "JAW__Skeleton"
+      $66: EndFunctionParms
+    )
+$67: Let (Variable = Expression)
+  Variable:
+  $76: LocalOutVariable named ReturnValue@0x2221cd9b600
+  Expression:
+  $85: LocalVariable named CallFunc_GetSocketLocation_ReturnValue@0x2221cd9b580
+$94: Return expression:
+  $95: LocalOutVariable named ReturnValue@0x2221cd9b600
+$104: EndOfScript
+
+=== BP_PlayerPirate_Tavern_C::fn_idx_9202 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_PlayerPirate_Tavern_C::fn_idx_172673 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_AthenaCharacter@0x2221cd9ad80
+  Expression:
+  $9: LocalVariable named AthenaCharacter@0x2221cd9b500
+$18: VirtualFunction call "idx:222432" (
+  $31: literal int32 315
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_PlayerPirate_Tavern_C::fn_idx_172656 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_RotationSpeed@0x222322a7ee0
+  Expression:
+  $9: LocalVariable named RotationSpeed@0x222322addd0
+$18: VirtualFunction call "idx:222432" (
+  $31: literal int32 320
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_PlayerPirate_Tavern_C::fn_idx_172659 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_Docking@0x2221cd9ad00
+  Expression:
+  $9: LocalVariable named Docking@0x2221cd9b480
+$18: VirtualFunction call "idx:222432" (
+  $31: literal int32 325
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_PlayerPirate_Tavern_C::fn_idx_172655 (94 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_IndividualForce@0x222322aa560
+  Expression:
+  $9: LocalVariable named IndividualForce@0x222322a9990
+$18: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_LH_IK@0x2221cd9ac80
+  Expression:
+  $27: LocalVariable named LH_IK@0x2221cd9b400
+$36: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_RH_IK@0x2221cd9ab00
+  Expression:
+  $45: LocalVariable named RH_IK@0x2221cd9b380
+$54: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_Actor@0x2221cd9aa00
+  Expression:
+  $63: LocalVariable named Actor@0x2221cd9b300
+$72: VirtualFunction call "idx:222432" (
+  $85: literal int32 330
+  $90: EndFunctionParms
+)
+$91: Return expression:
+  $92: Nothing
+$93: EndOfScript
+
+=== BP_PlayerPirate_Tavern_C::fn_idx_172664 (58 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_LimbId4@0x2221cd9a900
+  Expression:
+  $9: LocalVariable named LimbId@0x2221cd9b200
+$18: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_TransformUpdate@0x2221cd9a880
+  Expression:
+  $27: LocalVariable named TransformUpdate@0x2221cd9b180
+$36: VirtualFunction call "idx:222432" (
+  $49: literal int32 335
+  $54: EndFunctionParms
+)
+$55: Return expression:
+  $56: Nothing
+$57: EndOfScript
+
+=== BP_PlayerPirate_Tavern_C::fn_idx_172661 (76 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_LimbId3@0x2221cd9a800
+  Expression:
+  $9: LocalVariable named LimbId@0x2221cd9b100
+$18: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_BlendIn@0x222322a8880
+  Expression:
+  $27: LocalVariable named BlendIn@0x222322ace80
+$36: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_BlendOut@0x222322a9c30
+  Expression:
+  $45: LocalVariable named BlendOut@0x222322ace10
+$54: VirtualFunction call "idx:222432" (
+  $67: literal int32 340
+  $72: EndFunctionParms
+)
+$73: Return expression:
+  $74: Nothing
+$75: EndOfScript
+
+=== BP_PlayerPirate_Tavern_C::fn_idx_172663 (76 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_LimbId2@0x2221cd9a700
+  Expression:
+  $9: LocalVariable named LimbId@0x2221cd9b080
+$18: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_LocationStrength@0x2222f286190
+  Expression:
+  $27: LocalVariable named LocationStrength@0x222322acda0
+$36: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_RotationStrength@0x2222f285470
+  Expression:
+  $45: LocalVariable named RotationStrength@0x222322a8dc0
+$54: VirtualFunction call "idx:222432" (
+  $67: literal int32 345
+  $72: EndFunctionParms
+)
+$73: Return expression:
+  $74: Nothing
+$75: EndOfScript
+
+=== BP_PlayerPirate_Tavern_C::fn_idx_172660 (76 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_LimbId@0x2221cd9a680
+  Expression:
+  $9: LocalVariable named LimbId@0x2221cd9b000
+$18: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_Active@0x2221cd9a600
+  Expression:
+  $27: LocalVariable named Active@0x2221cd9af80
+$36: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_CoordinateSpace@0x2221cd9a500
+  Expression:
+  $45: LocalVariable named CoordinateSpace@0x2221cd9af00
+$54: VirtualFunction call "idx:222432" (
+  $67: literal int32 350
+  $72: EndFunctionParms
+)
+$73: Return expression:
+  $74: Nothing
+$75: EndOfScript
+
+=== BP_PlayerPirate_Tavern_C::fn_idx_172662 (76 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_ArmStretch@0x2222f2855c0
+  Expression:
+  $9: LocalVariable named ArmStretch@0x222322a8d50
+$18: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_SpineStretch@0x2222f285710
+  Expression:
+  $27: LocalVariable named SpineStretch@0x222322a5fd0
+$36: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_LegStretch@0x2222f2856a0
+  Expression:
+  $45: LocalVariable named LegStretch@0x222322a5d30
+$54: VirtualFunction call "idx:222432" (
+  $67: literal int32 355
+  $72: EndFunctionParms
+)
+$73: Return expression:
+  $74: Nothing
+$75: EndOfScript
+
+=== BP_PlayerPirate_Tavern_C::fn_idx_9152 (22 bytes) ===
+$0: VirtualFunction call "idx:222432" (
+  $13: literal int32 360
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_PlayerPirate_Tavern_C::fn_idx_2010 (22 bytes) ===
+$0: VirtualFunction call "idx:222432" (
+  $13: literal int32 468
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_PlayerPirate_Tavern_C::fn_idx_222432 (499 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x222322a62e0
+$10: VirtualFunction call "TattoGlowDynamicMaterials" (
+  $23: InstanceVariable named FirstPersonMesh@0x2216c797f30
+  $32: EndFunctionParms
+)
+$33: Jump to offset 0x1f0
+$38: Context
+  ObjectExpression:
+  $39: InstanceVariable named BodyLight@0x2221cd99e80
+  SkipBytes: 0xf
+  RValueProperty: (null)
+  ContextExpression:
+  $60: FinalFunction target=SetAmbientIntensity@0x2216ca489a0 (
+    $69: literal float 0
+    $74: EndFunctionParms
+  )
+$75: LetBool (Variable = Expression)
+  Variable:
+  $76: LocalVariable named CallFunc_IsLocallyControlled_ReturnValue@0x2221cd9a480
+  Expression:
+  $85: VirtualFunction call "IsLocallyControlled" (
+    $98: EndFunctionParms
+  )
+$99: JumpIfNot -> 0x1f0, cond:
+  $104: LocalVariable named CallFunc_IsLocallyControlled_ReturnValue@0x2221cd9a480
+$113: Context
+  ObjectExpression:
+  $114: InstanceVariable named AnimNotifyWwiseEmitter@0x2221cd9a200
+  SkipBytes: 0x23
+  RValueProperty: (null)
+  ContextExpression:
+  $135: FinalFunction target=K2_AttachTo@0x2216c781040 (
+    $144: InstanceVariable named FirstPersonCamera@0x2216c797eb0
+    $153: literal name "None"
+    $166: literal byte 0
+    $168: True
+    $169: EndFunctionParms
+  )
+$170: Context
+  ObjectExpression:
+  $171: InstanceVariable named AnimNotifyWwiseEmitter@0x2221cd9a200
+  SkipBytes: 0x22
+  RValueProperty: (null)
+  ContextExpression:
+  $192: FinalFunction target=K2_SetRelativeLocation@0x2216c7817f0 (
+    $201: literal vector (50,0,0)
+    $214: False
+    $215: LocalVariable named CallFunc_K2_SetRelativeLocation_SweepHitResult@0x2221cd9a400
+    $224: True
+    $225: EndFunctionParms
+  )
+$226: Jump to offset 0x1f0
+$231: Context
+  ObjectExpression:
+  $232: InstanceVariable named BodyLightController@0x2221cd99f00
+  SkipBytes: 0xb
+  RValueProperty: (null)
+  ContextExpression:
+  $253: FinalFunction target=AssignTargetLight@0x2216c823350 (
+    $262: NoObject
+    $263: EndFunctionParms
+  )
+$264: Jump to offset 0x26
+$269: Context
+  ObjectExpression:
+  $270: InstanceVariable named BodyLightController@0x2221cd99f00
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $291: FinalFunction target=AssignTargetLight@0x2216c823350 (
+    $300: InstanceVariable named BodyLight@0x2221cd99e80
+    $309: EndFunctionParms
+  )
+$310: Jump to offset 0x4b
+$315: Jump to offset 0x1f0
+$320: Jump to offset 0x1f0
+$325: Jump to offset 0x1f0
+$330: Jump to offset 0x1f0
+$335: Jump to offset 0x1f0
+$340: Jump to offset 0x1f0
+$345: Jump to offset 0x1f0
+$350: Jump to offset 0x1f0
+$355: Jump to offset 0x1f0
+$360: LetBool (Variable = Expression)
+  Variable:
+  $361: LocalVariable named CallFunc_IsLocallyControlled_ReturnValue@0x2221cd9a480
+  Expression:
+  $370: VirtualFunction call "IsLocallyControlled" (
+    $383: EndFunctionParms
+  )
+$384: Context
+  ObjectExpression:
+  $385: InstanceVariable named InteractionComponent@0x2216c797bb0
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $406: FinalFunction target=SetGenerateOverlapEvents@0x2216c7e3470 (
+    $415: LocalVariable named CallFunc_IsLocallyControlled_ReturnValue@0x2221cd9a480
+    $424: EndFunctionParms
+  )
+$425: LetBool (Variable = Expression)
+  Variable:
+  $426: LocalVariable named CallFunc_IsLocallyControlled_ReturnValue2@0x2221cd9a300
+  Expression:
+  $435: VirtualFunction call "IsLocallyControlled" (
+    $448: EndFunctionParms
+  )
+$449: JumpIfNot -> 0xe7, cond:
+  $454: LocalVariable named CallFunc_IsLocallyControlled_ReturnValue2@0x2221cd9a300
+$463: Jump to offset 0x10d
+$468: VirtualFunction call "TattoGlowDynamicMaterials" (
+  $481: InstanceVariable named Mesh@0x2216c78ced0
+  $490: EndFunctionParms
+)
+$491: Jump to offset 0xa
+$496: Return expression:
+  $497: Nothing
+$498: EndOfScript

@@ -1,0 +1,150 @@
+// Class: CloudDomeServiceInterface (5 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+CloudDomeServiceInterface::GetActualCloudDome @ RVA 0xB0A960 EA 0x7FF6F452A960
+======================================================================
+__int64 __fastcall sub_7FF6F452A960(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 result; // rax
+  unsigned int v10; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 40LL))(a1, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+CloudDomeServiceInterface::GetCloudDome @ RVA 0xB0B0B0 EA 0x7FF6F452B0B0
+======================================================================
+__int64 __fastcall sub_7FF6F452B0B0(__int64 a1, _QWORD *a2, _QWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  _QWORD *v9; // rax
+  __int64 result; // rax
+  _BYTE v11[24]; // [rsp+20h] [rbp-18h] BYREF
+  unsigned int v12; // [rsp+40h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v7 = a2[4];
+  v8 = v12;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  v9 = (_QWORD *)(*(__int64 (__fastcall **)(__int64, _BYTE *, __int64))(*(_QWORD *)a1 + 48LL))(a1, v11, v8);
+  *a3 = *v9;
+  result = v9[1];
+  a3[1] = result;
+  return result;
+}
+
+
+======================================================================
+CloudDomeServiceInterface::GetNumberOfCloudDomes @ RVA 0xB0D720 EA 0x7FF6F452D720
+======================================================================
+__int64 __fastcall sub_7FF6F452D720(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 32LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+CloudDomeServiceInterface::RegisterCloudDomeWithService @ RVA 0xB10710 EA 0x7FF6F4530710
+======================================================================
+__int64 __fastcall sub_7FF6F4530710(__int64 *a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  __int128 v8; // [rsp+20h] [rbp-28h] BYREF
+  _QWORD v9[3]; // [rsp+30h] [rbp-18h] BYREF
+
+  v2 = a2[4] == 0;
+  v8 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  v5 = 0;
+  a2[4] += a2[4] != 0;
+  v9[0] = v8;
+  v6 = *a1;
+  if ( (_QWORD)v8 )
+    v5 = *((_QWORD *)&v8 + 1);
+  v9[1] = v5;
+  return (*(__int64 (__fastcall **)(__int64 *, _QWORD *))(v6 + 16))(a1, v9);
+}
+
+
+======================================================================
+CloudDomeServiceInterface::UnregisterCloudDomeFromService @ RVA 0xB13570 EA 0x7FF6F4533570
+======================================================================
+__int64 __fastcall sub_7FF6F4533570(__int64 *a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  __int128 v8; // [rsp+20h] [rbp-28h] BYREF
+  _QWORD v9[3]; // [rsp+30h] [rbp-18h] BYREF
+
+  v2 = a2[4] == 0;
+  v8 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  v5 = 0;
+  a2[4] += a2[4] != 0;
+  v9[0] = v8;
+  v6 = *a1;
+  if ( (_QWORD)v8 )
+    v5 = *((_QWORD *)&v8 + 1);
+  v9[1] = v5;
+  return (*(__int64 (__fastcall **)(__int64 *, _QWORD *))(v6 + 24))(a1, v9);
+}
+

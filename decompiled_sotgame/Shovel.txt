@@ -1,0 +1,101 @@
+// Class: Shovel (5 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+Shovel::GetCurrentDigType @ RVA 0xEC4050 EA 0x7FF6F48E4050
+======================================================================
+__int64 __fastcall sub_7FF6F48E4050(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F4124040();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+Shovel::GetLastKnownDigTypeOnServer @ RVA 0xEC4470 EA 0x7FF6F48E4470
+======================================================================
+__int64 __fastcall sub_7FF6F48E4470(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F4124A70();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+Shovel::GetShouldWielderBeLocked @ RVA 0xEC4CB0 EA 0x7FF6F48E4CB0
+======================================================================
+__int64 __fastcall sub_7FF6F48E4CB0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F4128050();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+Shovel::Multicast_DigRPC @ RVA 0xEC5BD0 EA 0x7FF6F48E5BD0
+======================================================================
+__int64 __fastcall sub_7FF6F48E5BD0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  __int64 v6; // rax
+  __int64 v7; // r8
+  __int64 v8; // rdx
+  unsigned __int8 v10; // [rsp+30h] [rbp+8h] BYREF
+  __int64 v11; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v10 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  v5 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = a2[4];
+  v7 = v11;
+  v8 = v10;
+  LOBYTE(v5) = v6 != 0;
+  a2[4] = v6 + v5;
+  return (*(__int64 (__fastcall **)(__int64, __int64, __int64))(*(_QWORD *)a1 + 1680LL))(a1, v8, v7);
+}
+
+
+======================================================================
+Shovel::Server_RequestDigRPC @ RVA 0xECA0A0 EA 0x7FF6F48EA0A0
+======================================================================
+__int64 __fastcall sub_7FF6F48EA0A0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1696LL))(a1) )
+    return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1688LL))(a1);
+  else
+    return sub_7FF6F4F0F6D0(L"Server_RequestDigRPC_Validate");
+}
+

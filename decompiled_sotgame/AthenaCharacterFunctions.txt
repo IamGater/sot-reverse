@@ -1,0 +1,249 @@
+// Class: AthenaCharacterFunctions (6 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+AthenaCharacterFunctions::AllAnimationsLoadedForCharacter @ RVA 0xB09420 EA 0x7FF6F4529420
+======================================================================
+__int64 __fastcall sub_7FF6F4529420(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  __int64 result; // rax
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  v7 = v9;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F3E4E720(v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaCharacterFunctions::GetTeleportLocationForPlayer @ RVA 0xB0DB30 EA 0x7FF6F452DB30
+======================================================================
+__int64 __fastcall sub_7FF6F452DB30(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 result; // rax
+  _BYTE v9[56]; // [rsp+20h] [rbp-38h] BYREF
+  __int64 v10; // [rsp+68h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F3E62D80(v9, v7);
+  *(_OWORD *)a3 = *(_OWORD *)result;
+  *(_OWORD *)(a3 + 16) = *(_OWORD *)(result + 16);
+  *(_QWORD *)(a3 + 32) = *(_QWORD *)(result + 32);
+  return result;
+}
+
+
+======================================================================
+AthenaCharacterFunctions::ResetItemMovementSpeed @ RVA 0xB10950 EA 0x7FF6F4530950
+======================================================================
+__int64 __fastcall sub_7FF6F4530950(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  __int64 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v7 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v5 = v7;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return sub_7FF6F3E6EBB0(v5);
+}
+
+
+======================================================================
+AthenaCharacterFunctions::SetItemMovementSpeed @ RVA 0xB11680 EA 0x7FF6F4531680
+======================================================================
+__int64 __fastcall sub_7FF6F4531680(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rdx
+  __int64 v6; // r8
+  __int64 v7; // rcx
+  _QWORD v9[3]; // [rsp+20h] [rbp-18h] BYREF
+  unsigned __int8 v10; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v9[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  sub_7FF6F3E44620(&v11);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v4 = a2[4];
+  v5 = v10;
+  v6 = v11;
+  v7 = v9[0];
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return sub_7FF6F3E71450(v7, v5, v6);
+}
+
+
+======================================================================
+AthenaCharacterFunctions::TeleportPlayerToLocation @ RVA 0xB12C10 EA 0x7FF6F4532C10
+======================================================================
+__int64 __fastcall sub_7FF6F4532C10(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  _BYTE *v6; // rdx
+  __int64 v7; // rcx
+  __int64 v8; // rax
+  __int64 result; // rax
+  _BYTE v10[56]; // [rsp+20h] [rbp-38h] BYREF
+  __int64 v11; // [rsp+68h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  sub_7FF6F74AB530(v10);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v6 = v10;
+  v7 = v11;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = sub_7FF6F3E74F90(v7, v6);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaCharacterFunctions::TeleportPlayerToLocationDuringSpawning @ RVA 0xB12CF0 EA 0x7FF6F4532CF0
+======================================================================
+__int64 __fastcall sub_7FF6F4532CF0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  _BYTE *v6; // rdx
+  __int64 v7; // rcx
+  __int64 v8; // rax
+  __int64 result; // rax
+  _BYTE v10[56]; // [rsp+20h] [rbp-38h] BYREF
+  __int64 v11; // [rsp+68h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  sub_7FF6F74AB530(v10);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v6 = v10;
+  v7 = v11;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = sub_7FF6F3E75220(v7, v6);
+  *a3 = result;
+  return result;
+}
+

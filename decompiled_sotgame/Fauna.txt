@@ -1,0 +1,228 @@
+// Class: Fauna (12 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+Fauna::ActivateResponseRPC @ RVA 0x3654C10 EA 0x7FF6F7074C10
+======================================================================
+__int64 __fastcall sub_7FF6F7074C10(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 2232LL))(a1);
+}
+
+
+======================================================================
+Fauna::GenerateNewRandomAnimationSeed @ RVA 0x3654C90 EA 0x7FF6F7074C90
+======================================================================
+__int64 __fastcall sub_7FF6F7074C90(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F7066530();
+}
+
+
+======================================================================
+Fauna::Multicast_HightlightLeader @ RVA 0x3654DC0 EA 0x7FF6F7074DC0
+======================================================================
+__int64 __fastcall sub_7FF6F7074DC0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2240LL))(a1, v5);
+}
+
+
+======================================================================
+Fauna::Multicast_JustBeenFedRPC @ RVA 0x3654E50 EA 0x7FF6F7074E50
+======================================================================
+__int64 __fastcall sub_7FF6F7074E50(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2256LL))(a1, v6);
+}
+
+
+======================================================================
+Fauna::Multicast_PlayPutInCrateEffectsRPC @ RVA 0x3654EE0 EA 0x7FF6F7074EE0
+======================================================================
+__int64 __fastcall sub_7FF6F7074EE0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2248LL))(a1, v6);
+}
+
+
+======================================================================
+Fauna::OnRep_CratedState @ RVA 0x3654F70 EA 0x7FF6F7074F70
+======================================================================
+__int64 __fastcall sub_7FF6F7074F70(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  char *v5; // rdx
+  __int64 v6; // rax
+  char v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = &v8;
+  if ( a2[7] )
+    v5 = (char *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  return sub_7FF6F7068240(a1, v5);
+}
+
+
+======================================================================
+Fauna::OnRep_InWaterState @ RVA 0x3655000 EA 0x7FF6F7075000
+======================================================================
+__int64 __fastcall sub_7FF6F7075000(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F7068260();
+}
+
+
+======================================================================
+Fauna::OnRep_IsAgitated @ RVA 0x3655020 EA 0x7FF6F7075020
+======================================================================
+__int64 __fastcall sub_7FF6F7075020(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F7068430();
+}
+
+
+======================================================================
+Fauna::OnRep_IsCalm @ RVA 0x3655040 EA 0x7FF6F7075040
+======================================================================
+__int64 __fastcall sub_7FF6F7075040(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F7068550();
+}
+
+
+======================================================================
+Fauna::OnRep_IsPlayingStarvingAnim @ RVA 0x3655060 EA 0x7FF6F7075060
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+Fauna::OnRep_TargetTurnAngle @ RVA 0x3655080 EA 0x7FF6F7075080
+======================================================================
+void __fastcall sub_7FF6F7075080(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F7068650LL);
+}
+
+
+======================================================================
+Fauna::TestingSetWaterState @ RVA 0x3655150 EA 0x7FF6F7075150
+======================================================================
+__int64 __fastcall sub_7FF6F7075150(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F7069430(a1, v5);
+}
+

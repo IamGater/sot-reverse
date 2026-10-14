@@ -1,0 +1,69 @@
+// Class: ChestOfRageComponent (5 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+ChestOfRageComponent::Multicast_PlayExplosionEffect @ RVA 0xCF8CB0 EA 0x7FF6F4718CB0
+======================================================================
+__int64 __fastcall sub_7FF6F4718CB0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F412A190();
+}
+
+
+======================================================================
+ChestOfRageComponent::Multicast_PlayStartWhistlingOneShotSfx @ RVA 0xCF8CD0 EA 0x7FF6F4718CD0
+======================================================================
+__int64 __fastcall sub_7FF6F4718CD0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F412A200();
+}
+
+
+======================================================================
+ChestOfRageComponent::Multicast_PlaySteamBlastEffect @ RVA 0xCF8CF0 EA 0x7FF6F4718CF0
+======================================================================
+__int64 __fastcall sub_7FF6F4718CF0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F412A250();
+}
+
+
+======================================================================
+ChestOfRageComponent::OnRep_ReplicatedData @ RVA 0xCF9E80 EA 0x7FF6F4719E80
+======================================================================
+__int64 __fastcall sub_7FF6F4719E80(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F412B770();
+}
+
+
+======================================================================
+ChestOfRageComponent::SetForceIsUnderwater @ RVA 0xCFCC10 EA 0x7FF6F471CC10
+======================================================================
+__int64 __fastcall sub_7FF6F471CC10(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 result; // rax
+  int v5; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v5 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v5);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v5);
+  }
+  result = a2[4];
+  LOBYTE(v2) = result != 0;
+  a2[4] = result + v2;
+  return result;
+}
+

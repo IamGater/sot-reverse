@@ -1,0 +1,802 @@
+// E:\unreal-projects\Athena\Content\Blueprints\GameObjects\VoyageVoting\bp_votabletaleproposal_vertical.uasset -> BP_VotableTaleProposal_Vertical_C
+
+=== BP_VotableTaleProposal_Vertical_C::PlayShowTokenAnimation (360 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_GetMaterial_ReturnValue@0x212a2c43a00
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: LocalVariable named Token@0x212a2c43980
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetMaterial_ReturnValue@0x212a2c43a00
+    ContextExpression:
+    $32: VirtualFunction call "GetMaterial" (
+      $45: literal int32 0
+      $50: EndFunctionParms
+    )
+$51: Let (Variable = Expression)
+  Variable:
+  $60: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x213af44bc90
+  Expression:
+  $69: Context
+    ObjectExpression:
+    $70: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue@0x213af44bc90
+    ContextExpression:
+    $91: FinalFunction target=GetGameTimeInSeconds@0x212d63ac800 (
+      $100: Self
+      $101: EndFunctionParms
+    )
+$102: Let (Variable = Expression)
+  Variable:
+  $111: LocalVariable named K2Node_DynamicCast_AsMaterial_Instance_Dynamic@0x212a2c47a80
+  Expression:
+  $120: DynamicCast to MaterialInstanceDynamic@0x212d5bbbec0 of expr:
+  $129: LocalVariable named CallFunc_GetMaterial_ReturnValue@0x212a2c43a00
+$138: Let (Variable = Expression)
+  Variable:
+  $147: LocalVariable named K2Node_DynamicCast_bSuccess@0x212a2c47280
+  Expression:
+  $156: PrimitiveCast type=71
+    Argument:
+    $158: LocalVariable named K2Node_DynamicCast_AsMaterial_Instance_Dynamic@0x212a2c47a80
+$167: Let (Variable = Expression)
+  Variable:
+  $176: StructMemberContext prop=idx:6476@0x212d63789b0
+    Expression to struct:
+    $185: LocalVariable named UniqueObjectNameForCooking_LinearColor@0x212a2c47b80
+  Expression:
+  $194: literal float 0
+$199: Let (Variable = Expression)
+  Variable:
+  $208: StructMemberContext prop=idx:6465@0x212d6378940
+    Expression to struct:
+    $217: LocalVariable named UniqueObjectNameForCooking_LinearColor@0x212a2c47b80
+  Expression:
+  $226: literal float 1
+$231: Let (Variable = Expression)
+  Variable:
+  $240: StructMemberContext prop=idx:6460@0x212d63788d0
+    Expression to struct:
+    $249: LocalVariable named UniqueObjectNameForCooking_LinearColor@0x212a2c47b80
+  Expression:
+  $258: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x213af44bc90
+$267: Let (Variable = Expression)
+  Variable:
+  $276: StructMemberContext prop=idx:6459@0x212d6378860
+    Expression to struct:
+    $285: LocalVariable named UniqueObjectNameForCooking_LinearColor@0x212a2c47b80
+  Expression:
+  $294: InstanceVariable named Show Token Animation Time@0x213af44b440
+$303: Context
+  ObjectExpression:
+  $304: LocalVariable named K2Node_DynamicCast_AsMaterial_Instance_Dynamic@0x212a2c47a80
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $325: FinalFunction target=SetVectorParameterValue@0x212d69f4970 (
+    $334: literal name "Timed Blend Values"
+    $347: LocalVariable named UniqueObjectNameForCooking_LinearColor@0x212a2c47b80
+    $356: EndFunctionParms
+  )
+$357: Return expression:
+  $358: Nothing
+$359: EndOfScript
+
+=== BP_VotableTaleProposal_Vertical_C::Is Session Locked (162 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named K2Node_DynamicCast_AsVotable_with_Session_Component@0x212a2c47c00
+  Expression:
+  $18: DynamicCast to VotableWithSessionComponent@0x212d5ac3d40 of expr:
+  $27: InstanceVariable named VotableObject@0x212d6895660
+$36: Let (Variable = Expression)
+  Variable:
+  $45: LocalVariable named K2Node_DynamicCast_bSuccess@0x212a2c47100
+  Expression:
+  $54: PrimitiveCast type=71
+    Argument:
+    $56: LocalVariable named K2Node_DynamicCast_AsVotable_with_Session_Component@0x212a2c47c00
+$65: JumpIfNot -> 0x8c, cond:
+  $70: LocalVariable named K2Node_DynamicCast_bSuccess@0x212a2c47100
+$79: LetBool (Variable = Expression)
+  Variable:
+  $80: LocalVariable named CallFunc_IsSessionLocked_ReturnValue@0x212a2c47d00
+  Expression:
+  $89: Context
+    ObjectExpression:
+    $90: LocalVariable named K2Node_DynamicCast_AsVotable_with_Session_Component@0x212a2c47c00
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_IsSessionLocked_ReturnValue@0x212a2c47d00
+    ContextExpression:
+    $111: FinalFunction target=IsSessionLocked@0x212d6895890 (
+      $120: EndFunctionParms
+    )
+$121: LetBool (Variable = Expression)
+  Variable:
+  $122: LocalVariable named Result@0x212a2c47180
+  Expression:
+  $131: LocalVariable named CallFunc_IsSessionLocked_ReturnValue@0x212a2c47d00
+$140: LetBool (Variable = Expression)
+  Variable:
+  $141: LocalOutVariable named IsLocked@0x212a2c47080
+  Expression:
+  $150: LocalVariable named Result@0x212a2c47180
+$159: Return expression:
+  $160: Nothing
+$161: EndOfScript
+
+=== BP_VotableTaleProposal_Vertical_C::UserConstructionScript (786 bytes) ===
+$0: FlowStack.Push(0x30f)
+$5: Let (Variable = Expression)
+  Variable:
+  $14: LocalVariable named Temp_int_Loop_Counter_Variable@0x213af44ba60
+  Expression:
+  $23: literal int32 0
+$28: Let (Variable = Expression)
+  Variable:
+  $37: LocalVariable named Temp_int_Array_Index_Variable@0x213af44bad0
+  Expression:
+  $46: literal int32 0
+$51: SetArray
+  $52: LocalVariable named K2Node_MakeArray_Array@0x212a2c47a00
+  $61: InstanceVariable named Token 1@0x212a2c4ed00
+  $70: InstanceVariable named Token 2@0x212a2c48a80
+  $79: InstanceVariable named Token 3@0x212a2c47c80
+  $88: InstanceVariable named Token 4@0x212a2c45000
+  $97: EndArray
+$98: Let (Variable = Expression)
+  Variable:
+  $107: LocalVariable named CallFunc_Array_Length_ReturnValue@0x213af44b980
+  Expression:
+  $116: Context
+    ObjectExpression:
+    $117: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x213af44b980
+    ContextExpression:
+    $138: FinalFunction target=Array_Length@0x212d6987df0 (
+      $147: LocalVariable named K2Node_MakeArray_Array@0x212a2c47a00
+      $156: EndFunctionParms
+    )
+$157: LetBool (Variable = Expression)
+  Variable:
+  $158: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x212a2c47500
+  Expression:
+  $167: CallMath target=Less_IntInt@0x212d69a5ed0 (
+    $176: LocalVariable named Temp_int_Loop_Counter_Variable@0x213af44ba60
+    $185: LocalVariable named CallFunc_Array_Length_ReturnValue@0x213af44b980
+    $194: EndFunctionParms
+  )
+$195: PopExecutionFlowIfNot, cond:
+$196: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x212a2c47500
+$205: Let (Variable = Expression)
+  Variable:
+  $214: LocalVariable named Temp_int_Array_Index_Variable@0x213af44bad0
+  Expression:
+  $223: LocalVariable named Temp_int_Loop_Counter_Variable@0x213af44ba60
+$232: FlowStack.Push(0x2c5)
+$237: SetArray
+  $238: LocalVariable named K2Node_MakeArray_Array@0x212a2c47a00
+  $247: InstanceVariable named Token 1@0x212a2c4ed00
+  $256: InstanceVariable named Token 2@0x212a2c48a80
+  $265: InstanceVariable named Token 3@0x212a2c47c80
+  $274: InstanceVariable named Token 4@0x212a2c45000
+  $283: EndArray
+$284: Context
+  ObjectExpression:
+  $285: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $306: FinalFunction target=Array_Get@0x212d69876b0 (
+    $315: LocalVariable named K2Node_MakeArray_Array@0x212a2c47a00
+    $324: LocalVariable named Temp_int_Array_Index_Variable@0x213af44bad0
+    $333: LocalVariable named CallFunc_Array_Get_Item@0x212a2c47e00
+    $342: EndFunctionParms
+  )
+$343: LetBool (Variable = Expression)
+  Variable:
+  $344: LocalVariable named CallFunc_SetStaticMesh_ReturnValue@0x212a2c47600
+  Expression:
+  $353: Context
+    ObjectExpression:
+    $354: LocalVariable named CallFunc_Array_Get_Item@0x212a2c47e00
+    SkipBytes: 0x17
+    RValueProperty: CallFunc_SetStaticMesh_ReturnValue@0x212a2c47600
+    ContextExpression:
+    $375: VirtualFunction call "SetStaticMesh" (
+      $388: InstanceVariable named Token Asset@0x212a2c48700
+      $397: EndFunctionParms
+    )
+$398: SetArray
+  $399: LocalVariable named K2Node_MakeArray_Array@0x212a2c47a00
+  $408: InstanceVariable named Token 1@0x212a2c4ed00
+  $417: InstanceVariable named Token 2@0x212a2c48a80
+  $426: InstanceVariable named Token 3@0x212a2c47c80
+  $435: InstanceVariable named Token 4@0x212a2c45000
+  $444: EndArray
+$445: Context
+  ObjectExpression:
+  $446: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $467: FinalFunction target=Array_Get@0x212d69876b0 (
+    $476: LocalVariable named K2Node_MakeArray_Array@0x212a2c47a00
+    $485: LocalVariable named Temp_int_Array_Index_Variable@0x213af44bad0
+    $494: LocalVariable named CallFunc_Array_Get_Item@0x212a2c47e00
+    $503: EndFunctionParms
+  )
+$504: LetObj (Variable = Expression)
+  Variable:
+  $505: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x212a2c48000
+  Expression:
+  $514: Context
+    ObjectExpression:
+    $515: LocalVariable named CallFunc_Array_Get_Item@0x212a2c47e00
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x212a2c48000
+    ContextExpression:
+    $536: VirtualFunction call "CreateDynamicMaterialInstance" (
+      $549: literal int32 0
+      $554: InstanceVariable named Token Material@0x212a2c4a480
+      $563: EndFunctionParms
+    )
+$564: SetArray
+  $565: LocalVariable named K2Node_MakeArray_Array@0x212a2c47a00
+  $574: InstanceVariable named Token 1@0x212a2c4ed00
+  $583: InstanceVariable named Token 2@0x212a2c48a80
+  $592: InstanceVariable named Token 3@0x212a2c47c80
+  $601: InstanceVariable named Token 4@0x212a2c45000
+  $610: EndArray
+$611: Context
+  ObjectExpression:
+  $612: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $633: FinalFunction target=Array_Get@0x212d69876b0 (
+    $642: LocalVariable named K2Node_MakeArray_Array@0x212a2c47a00
+    $651: LocalVariable named Temp_int_Array_Index_Variable@0x213af44bad0
+    $660: LocalVariable named CallFunc_Array_Get_Item@0x212a2c47e00
+    $669: EndFunctionParms
+  )
+$670: Context
+  ObjectExpression:
+  $671: LocalVariable named CallFunc_Array_Get_Item@0x212a2c47e00
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $692: VirtualFunction call "SetVisibility" (
+    $705: False
+    $706: False
+    $707: EndFunctionParms
+  )
+$708: PopExecutionFlow (jump to popped addr)
+$709: Let (Variable = Expression)
+  Variable:
+  $718: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x213af44b9f0
+  Expression:
+  $727: CallMath target=Add_IntInt@0x212d698fa30 (
+    $736: LocalVariable named Temp_int_Loop_Counter_Variable@0x213af44ba60
+    $745: literal int32 1
+    $750: EndFunctionParms
+  )
+$751: Let (Variable = Expression)
+  Variable:
+  $760: LocalVariable named Temp_int_Loop_Counter_Variable@0x213af44ba60
+  Expression:
+  $769: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x213af44b9f0
+$778: Jump to offset 0x33
+$783: Return expression:
+  $784: Nothing
+$785: EndOfScript
+
+=== BP_VotableTaleProposal_Vertical_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_VotableTaleProposal_Vertical" (
+  $13: literal int32 755
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_VotableTaleProposal_Vertical_C::OnVoteAdded (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_Voter2@0x212a2c48880
+  Expression:
+  $9: LocalOutVariable named Voter@0x212a2c4a700
+$18: VirtualFunction call "ExecuteUbergraph_BP_VotableTaleProposal_Vertical" (
+  $31: literal int32 867
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_VotableTaleProposal_Vertical_C::OnVoteRemoved (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_Voter@0x212a2c48c00
+  Expression:
+  $9: LocalOutVariable named Voter@0x212a2c4a800
+$18: VirtualFunction call "ExecuteUbergraph_BP_VotableTaleProposal_Vertical" (
+  $31: literal int32 1776
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_VotableTaleProposal_Vertical_C::ExecuteUbergraph_BP_VotableTaleProposal_Vertical (2125 bytes) ===
+$0: FlowStack.Push(0x84a)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x213af44b910
+$15: Let (Variable = Expression)
+  Variable:
+  $24: LocalVariable named Temp_int_Array_Index_Variable@0x213af44b8a0
+  Expression:
+  $33: literal int32 0
+$38: Let (Variable = Expression)
+  Variable:
+  $47: LocalVariable named CallFunc_Array_Length_ReturnValue3@0x213af44b670
+  Expression:
+  $56: Context
+    ObjectExpression:
+    $57: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue3@0x213af44b670
+    ContextExpression:
+    $78: FinalFunction target=Array_Length@0x212d6987df0 (
+      $87: InstanceVariable named Tokens@0x212a2c41e00
+      $96: EndFunctionParms
+    )
+$97: LetBool (Variable = Expression)
+  Variable:
+  $98: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x212a2c48900
+  Expression:
+  $107: CallMath target=Less_IntInt@0x212d69a5ed0 (
+    $116: LocalVariable named Temp_int_Loop_Counter_Variable@0x213af44b7c0
+    $125: LocalVariable named CallFunc_Array_Length_ReturnValue3@0x213af44b670
+    $134: EndFunctionParms
+  )
+$135: PopExecutionFlowIfNot, cond:
+$136: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x212a2c48900
+$145: Let (Variable = Expression)
+  Variable:
+  $154: LocalVariable named Temp_int_Array_Index_Variable@0x213af44b8a0
+  Expression:
+  $163: LocalVariable named Temp_int_Loop_Counter_Variable@0x213af44b7c0
+$172: FlowStack.Push(0x28d)
+$177: Let (Variable = Expression)
+  Variable:
+  $186: LocalVariable named CallFunc_GetVoter_ReturnValue@0x212a2c4ac00
+  Expression:
+  $195: FinalFunction target=GetVoter@0x212d6894f80 (
+    $204: LocalVariable named Temp_int_Array_Index_Variable@0x213af44b8a0
+    $213: EndFunctionParms
+  )
+$214: LetObj (Variable = Expression)
+  Variable:
+  $215: LocalVariable named CallFunc_Conv_InterfaceToObject_ReturnValue@0x212a2c4ad80
+  Expression:
+  $224: Context
+    ObjectExpression:
+    $225: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Conv_InterfaceToObject_ReturnValue@0x212a2c4ad80
+    ContextExpression:
+    $246: FinalFunction target=Conv_InterfaceToObject@0x212d63a69c0 (
+      $255: LocalVariable named CallFunc_GetVoter_ReturnValue@0x212a2c4ac00
+      $264: EndFunctionParms
+    )
+$265: LetBool (Variable = Expression)
+  Variable:
+  $266: LocalVariable named CallFunc_IsValid_ReturnValue@0x212a2c4ae00
+  Expression:
+  $275: Context
+    ObjectExpression:
+    $276: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x212a2c4ae00
+    ContextExpression:
+    $297: FinalFunction target=IsValid@0x212d63ae380 (
+      $306: LocalVariable named CallFunc_Conv_InterfaceToObject_ReturnValue@0x212a2c4ad80
+      $315: EndFunctionParms
+    )
+$316: Context
+  ObjectExpression:
+  $317: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $338: FinalFunction target=Array_Get@0x212d69876b0 (
+    $347: InstanceVariable named Tokens@0x212a2c41e00
+    $356: LocalVariable named Temp_int_Array_Index_Variable@0x213af44b8a0
+    $365: LocalVariable named CallFunc_Array_Get_Item@0x212a2c4ae80
+    $374: EndFunctionParms
+  )
+$375: Context
+  ObjectExpression:
+  $376: LocalVariable named CallFunc_Array_Get_Item@0x212a2c4ae80
+  SkipBytes: 0x18
+  RValueProperty: (null)
+  ContextExpression:
+  $397: VirtualFunction call "SetVisibility" (
+    $410: LocalVariable named CallFunc_IsValid_ReturnValue@0x212a2c4ae00
+    $419: False
+    $420: EndFunctionParms
+  )
+$421: Let (Variable = Expression)
+  Variable:
+  $430: LocalVariable named CallFunc_GetVoter_ReturnValue@0x212a2c4ac00
+  Expression:
+  $439: FinalFunction target=GetVoter@0x212d6894f80 (
+    $448: LocalVariable named Temp_int_Array_Index_Variable@0x213af44b8a0
+    $457: EndFunctionParms
+  )
+$458: LetObj (Variable = Expression)
+  Variable:
+  $459: LocalVariable named CallFunc_Conv_InterfaceToObject_ReturnValue@0x212a2c4ad80
+  Expression:
+  $468: Context
+    ObjectExpression:
+    $469: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Conv_InterfaceToObject_ReturnValue@0x212a2c4ad80
+    ContextExpression:
+    $490: FinalFunction target=Conv_InterfaceToObject@0x212d63a69c0 (
+      $499: LocalVariable named CallFunc_GetVoter_ReturnValue@0x212a2c4ac00
+      $508: EndFunctionParms
+    )
+$509: LetBool (Variable = Expression)
+  Variable:
+  $510: LocalVariable named CallFunc_IsValid_ReturnValue@0x212a2c4ae00
+  Expression:
+  $519: Context
+    ObjectExpression:
+    $520: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x212a2c4ae00
+    ContextExpression:
+    $541: FinalFunction target=IsValid@0x212d63ae380 (
+      $550: LocalVariable named CallFunc_Conv_InterfaceToObject_ReturnValue@0x212a2c4ad80
+      $559: EndFunctionParms
+    )
+$560: PopExecutionFlowIfNot, cond:
+$561: LocalVariable named CallFunc_IsValid_ReturnValue@0x212a2c4ae00
+$570: Context
+  ObjectExpression:
+  $571: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $592: FinalFunction target=Array_Get@0x212d69876b0 (
+    $601: InstanceVariable named Tokens@0x212a2c41e00
+    $610: LocalVariable named Temp_int_Array_Index_Variable@0x213af44b8a0
+    $619: LocalVariable named CallFunc_Array_Get_Item@0x212a2c4ae80
+    $628: EndFunctionParms
+  )
+$629: VirtualFunction call "PlayShowTokenAnimation" (
+  $642: LocalVariable named CallFunc_Array_Get_Item@0x212a2c4ae80
+  $651: EndFunctionParms
+)
+$652: PopExecutionFlow (jump to popped addr)
+$653: Let (Variable = Expression)
+  Variable:
+  $662: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x213af44b6e0
+  Expression:
+  $671: CallMath target=Add_IntInt@0x212d698fa30 (
+    $680: LocalVariable named Temp_int_Loop_Counter_Variable@0x213af44b7c0
+    $689: literal int32 1
+    $694: EndFunctionParms
+  )
+$695: Let (Variable = Expression)
+  Variable:
+  $704: LocalVariable named Temp_int_Loop_Counter_Variable@0x213af44b7c0
+  Expression:
+  $713: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x213af44b6e0
+$722: Jump to offset 0x26
+$727: Let (Variable = Expression)
+  Variable:
+  $736: LocalVariable named Temp_int_Loop_Counter_Variable@0x213af44b7c0
+  Expression:
+  $745: literal int32 0
+$750: Jump to offset 0xf
+$755: SetArray
+  $756: LocalVariable named K2Node_MakeArray_Array@0x212a2c4a300
+  $765: InstanceVariable named Token 1@0x212a2c4ed00
+  $774: InstanceVariable named Token 2@0x212a2c48a80
+  $783: InstanceVariable named Token 3@0x212a2c47c80
+  $792: InstanceVariable named Token 4@0x212a2c45000
+  $801: EndArray
+$802: Let (Variable = Expression)
+  Variable:
+  $811: InstanceVariable named Tokens@0x212a2c41e00
+  Expression:
+  $820: LocalVariable named K2Node_MakeArray_Array@0x212a2c4a300
+$829: VirtualFunction call "Is Session Locked" (
+  $842: LocalVariable named CallFunc_Is_Session_Locked_IsLocked@0x212a2c49600
+  $851: EndFunctionParms
+)
+$852: JumpIfNot -> 0x2d7, cond:
+  $857: LocalVariable named CallFunc_Is_Session_Locked_IsLocked@0x212a2c49600
+$866: PopExecutionFlow (jump to popped addr)
+$867: Let (Variable = Expression)
+  Variable:
+  $876: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x213af44b590
+  Expression:
+  $885: CallMath target=Add_IntInt@0x212d698fa30 (
+    $894: InstanceVariable named VoteCount@0x213af44b4b0
+    $903: literal int32 1
+    $908: EndFunctionParms
+  )
+$909: Let (Variable = Expression)
+  Variable:
+  $918: InstanceVariable named VoteCount@0x213af44b4b0
+  Expression:
+  $927: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x213af44b590
+$936: Let (Variable = Expression)
+  Variable:
+  $945: LocalVariable named CallFunc_Array_Length_ReturnValue@0x213af44b830
+  Expression:
+  $954: Context
+    ObjectExpression:
+    $955: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x213af44b830
+    ContextExpression:
+    $976: FinalFunction target=Array_Length@0x212d6987df0 (
+      $985: InstanceVariable named Tokens@0x212a2c41e00
+      $994: EndFunctionParms
+    )
+$995: Let (Variable = Expression)
+  Variable:
+  $1004: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x213af44b600
+  Expression:
+  $1013: CallMath target=Subtract_IntInt@0x212d69b9ad0 (
+    $1022: InstanceVariable named VoteCount@0x213af44b4b0
+    $1031: literal int32 1
+    $1036: EndFunctionParms
+  )
+$1037: LetBool (Variable = Expression)
+  Variable:
+  $1038: LocalVariable named CallFunc_Less_IntInt_ReturnValue2@0x212a2c49200
+  Expression:
+  $1047: CallMath target=Less_IntInt@0x212d69a5ed0 (
+    $1056: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x213af44b600
+    $1065: LocalVariable named CallFunc_Array_Length_ReturnValue@0x213af44b830
+    $1074: EndFunctionParms
+  )
+$1075: LetBool (Variable = Expression)
+  Variable:
+  $1076: LocalVariable named CallFunc_GreaterEqual_IntInt_ReturnValue@0x212a2c48a00
+  Expression:
+  $1085: CallMath target=GreaterEqual_IntInt@0x212d69a3270 (
+    $1094: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x213af44b600
+    $1103: literal int32 0
+    $1108: EndFunctionParms
+  )
+$1109: LetBool (Variable = Expression)
+  Variable:
+  $1110: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x212a2c49300
+  Expression:
+  $1119: CallMath target=BooleanAND@0x212d69910f0 (
+    $1128: LocalVariable named CallFunc_GreaterEqual_IntInt_ReturnValue@0x212a2c48a00
+    $1137: LocalVariable named CallFunc_Less_IntInt_ReturnValue2@0x212a2c49200
+    $1146: EndFunctionParms
+  )
+$1147: PopExecutionFlowIfNot, cond:
+$1148: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x212a2c49300
+$1157: Let (Variable = Expression)
+  Variable:
+  $1166: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x213af44b600
+  Expression:
+  $1175: CallMath target=Subtract_IntInt@0x212d69b9ad0 (
+    $1184: InstanceVariable named VoteCount@0x213af44b4b0
+    $1193: literal int32 1
+    $1198: EndFunctionParms
+  )
+$1199: Context
+  ObjectExpression:
+  $1200: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $1221: FinalFunction target=Array_Get@0x212d69876b0 (
+    $1230: InstanceVariable named Tokens@0x212a2c41e00
+    $1239: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x213af44b600
+    $1248: LocalVariable named CallFunc_Array_Get_Item2@0x212a2c48d80
+    $1257: EndFunctionParms
+  )
+$1258: Context
+  ObjectExpression:
+  $1259: LocalVariable named CallFunc_Array_Get_Item2@0x212a2c48d80
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $1280: VirtualFunction call "SetVisibility" (
+    $1293: True
+    $1294: False
+    $1295: EndFunctionParms
+  )
+$1296: Let (Variable = Expression)
+  Variable:
+  $1305: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x213af44b600
+  Expression:
+  $1314: CallMath target=Subtract_IntInt@0x212d69b9ad0 (
+    $1323: InstanceVariable named VoteCount@0x213af44b4b0
+    $1332: literal int32 1
+    $1337: EndFunctionParms
+  )
+$1338: Context
+  ObjectExpression:
+  $1339: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $1360: FinalFunction target=Array_Get@0x212d69876b0 (
+    $1369: InstanceVariable named Tokens@0x212a2c41e00
+    $1378: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x213af44b600
+    $1387: LocalVariable named CallFunc_Array_Get_Item2@0x212a2c48d80
+    $1396: EndFunctionParms
+  )
+$1397: VirtualFunction call "PlayShowTokenAnimation" (
+  $1410: LocalVariable named CallFunc_Array_Get_Item2@0x212a2c48d80
+  $1419: EndFunctionParms
+)
+$1420: Let (Variable = Expression)
+  Variable:
+  $1429: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x213af44b600
+  Expression:
+  $1438: CallMath target=Subtract_IntInt@0x212d69b9ad0 (
+    $1447: InstanceVariable named VoteCount@0x213af44b4b0
+    $1456: literal int32 1
+    $1461: EndFunctionParms
+  )
+$1462: Context
+  ObjectExpression:
+  $1463: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $1484: FinalFunction target=Array_Get@0x212d69876b0 (
+    $1493: InstanceVariable named Tokens@0x212a2c41e00
+    $1502: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x213af44b600
+    $1511: LocalVariable named CallFunc_Array_Get_Item2@0x212a2c48d80
+    $1520: EndFunctionParms
+  )
+$1521: LetObj (Variable = Expression)
+  Variable:
+  $1522: StructMemberContext prop=Event@0x212d65a8000
+    Expression to struct:
+    $1531: LocalVariable named K2Node_MakeStruct_WwiseEmitterCreationParams@0x212a2c49b00
+  Expression:
+  $1540: ObjectConst Play_ui_voyage_vote_yes@0x2139cc793d0
+$1549: Let (Variable = Expression)
+  Variable:
+  $1558: StructMemberContext prop=RTPCName@0x212d65a7f90
+    Expression to struct:
+    $1567: LocalVariable named K2Node_MakeStruct_WwiseEmitterCreationParams@0x212a2c49b00
+  Expression:
+  $1576: literal name "None"
+$1589: Let (Variable = Expression)
+  Variable:
+  $1598: StructMemberContext prop=RTPCValue@0x212d65a7f20
+    Expression to struct:
+    $1607: LocalVariable named K2Node_MakeStruct_WwiseEmitterCreationParams@0x212a2c49b00
+  Expression:
+  $1616: literal float 0
+$1621: Let (Variable = Expression)
+  Variable:
+  $1630: StructMemberContext prop=SwitchGroup@0x212d65a7eb0
+    Expression to struct:
+    $1639: LocalVariable named K2Node_MakeStruct_WwiseEmitterCreationParams@0x212a2c49b00
+  Expression:
+  $1648: literal name "None"
+$1661: Let (Variable = Expression)
+  Variable:
+  $1670: StructMemberContext prop=SwitchValue@0x212d65a7e40
+    Expression to struct:
+    $1679: LocalVariable named K2Node_MakeStruct_WwiseEmitterCreationParams@0x212a2c49b00
+  Expression:
+  $1688: literal name "None"
+$1701: Context
+  ObjectExpression:
+  $1702: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x212d7001550
+  SkipBytes: 0x34
+  RValueProperty: (null)
+  ContextExpression:
+  $1723: FinalFunction target=WwisePostOneShotOnOwner@0x212d6a21dc0 (
+    $1732: LocalVariable named CallFunc_Array_Get_Item2@0x212a2c48d80
+    $1741: ObjectConst pool_voyagevoting@0x2139cfa8080
+    $1750: LocalVariable named K2Node_MakeStruct_WwiseEmitterCreationParams@0x212a2c49b00
+    $1759: literal vector (0,0,0)
+    $1772: literal byte 2
+    $1774: EndFunctionParms
+  )
+$1775: PopExecutionFlow (jump to popped addr)
+$1776: Let (Variable = Expression)
+  Variable:
+  $1785: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue2@0x213af44b520
+  Expression:
+  $1794: CallMath target=Subtract_IntInt@0x212d69b9ad0 (
+    $1803: InstanceVariable named VoteCount@0x213af44b4b0
+    $1812: literal int32 1
+    $1817: EndFunctionParms
+  )
+$1818: Let (Variable = Expression)
+  Variable:
+  $1827: InstanceVariable named VoteCount@0x213af44b4b0
+  Expression:
+  $1836: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue2@0x213af44b520
+$1845: Let (Variable = Expression)
+  Variable:
+  $1854: LocalVariable named CallFunc_Array_Length_ReturnValue2@0x213af44b750
+  Expression:
+  $1863: Context
+    ObjectExpression:
+    $1864: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue2@0x213af44b750
+    ContextExpression:
+    $1885: FinalFunction target=Array_Length@0x212d6987df0 (
+      $1894: InstanceVariable named Tokens@0x212a2c41e00
+      $1903: EndFunctionParms
+    )
+$1904: LetBool (Variable = Expression)
+  Variable:
+  $1905: LocalVariable named CallFunc_Less_IntInt_ReturnValue3@0x212a2c49400
+  Expression:
+  $1914: CallMath target=Less_IntInt@0x212d69a5ed0 (
+    $1923: InstanceVariable named VoteCount@0x213af44b4b0
+    $1932: LocalVariable named CallFunc_Array_Length_ReturnValue2@0x213af44b750
+    $1941: EndFunctionParms
+  )
+$1942: LetBool (Variable = Expression)
+  Variable:
+  $1943: LocalVariable named CallFunc_GreaterEqual_IntInt_ReturnValue2@0x212a2c49480
+  Expression:
+  $1952: CallMath target=GreaterEqual_IntInt@0x212d69a3270 (
+    $1961: InstanceVariable named VoteCount@0x213af44b4b0
+    $1970: literal int32 0
+    $1975: EndFunctionParms
+  )
+$1976: LetBool (Variable = Expression)
+  Variable:
+  $1977: LocalVariable named CallFunc_BooleanAND_ReturnValue2@0x212a2c49500
+  Expression:
+  $1986: CallMath target=BooleanAND@0x212d69910f0 (
+    $1995: LocalVariable named CallFunc_GreaterEqual_IntInt_ReturnValue2@0x212a2c49480
+    $2004: LocalVariable named CallFunc_Less_IntInt_ReturnValue3@0x212a2c49400
+    $2013: EndFunctionParms
+  )
+$2014: PopExecutionFlowIfNot, cond:
+$2015: LocalVariable named CallFunc_BooleanAND_ReturnValue2@0x212a2c49500
+$2024: Context
+  ObjectExpression:
+  $2025: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $2046: FinalFunction target=Array_Get@0x212d69876b0 (
+    $2055: InstanceVariable named Tokens@0x212a2c41e00
+    $2064: InstanceVariable named VoteCount@0x213af44b4b0
+    $2073: LocalVariable named CallFunc_Array_Get_Item3@0x212a2c49280
+    $2082: EndFunctionParms
+  )
+$2083: Context
+  ObjectExpression:
+  $2084: LocalVariable named CallFunc_Array_Get_Item3@0x212a2c49280
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $2105: VirtualFunction call "SetVisibility" (
+    $2118: False
+    $2119: False
+    $2120: EndFunctionParms
+  )
+$2121: PopExecutionFlow (jump to popped addr)
+$2122: Return expression:
+  $2123: Nothing
+$2124: EndOfScript

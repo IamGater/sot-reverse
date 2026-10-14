@@ -1,0 +1,14 @@
+// Auto-reconstructed from serialized Kismet bytecode and SDK reflection.
+// C++-style logic; original editor graph layout is unavailable in the input.
+
+// Recovered Kismet: BP_Campaign028_GH3Voyage_BilgeRats_NPC_C::UserConstructionScript (3 bytes)
+void BP_Campaign028_GH3Voyage_BilgeRats_NPC_C::UserConstructionScript()
+{
+    return;
+}
+
+// Recovered Kismet: BP_Campaign028_GH3Voyage_BilgeRats_NPC_C::fn_idx_245088 (13 bytes)
+void BP_Campaign028_GH3Voyage_BilgeRats_NPC_C::fn_idx_245088()
+{
+    return;
+}

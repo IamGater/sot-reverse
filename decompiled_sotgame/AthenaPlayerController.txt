@@ -1,0 +1,235 @@
+// Class: AthenaPlayerController (8 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+AthenaPlayerController::AddPitchRotationInput @ RVA 0xC08770 EA 0x7FF6F4628770
+======================================================================
+__int64 __fastcall sub_7FF6F4628770(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  __int64 v6; // r8
+  unsigned __int8 v8; // [rsp+38h] [rbp+10h] BYREF
+  int v9; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v9 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  v2 = a2[4] == 0;
+  v8 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  v6 = v8;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F3F95F90(a1, v5, v6);
+}
+
+
+======================================================================
+AthenaPlayerController::AddYawRotationInput @ RVA 0xC08830 EA 0x7FF6F4628830
+======================================================================
+__int64 __fastcall sub_7FF6F4628830(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  __int64 v6; // r8
+  unsigned __int8 v8; // [rsp+38h] [rbp+10h] BYREF
+  int v9; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v9 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  v2 = a2[4] == 0;
+  v8 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  v6 = v8;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F3F96000(a1, v5, v6);
+}
+
+
+======================================================================
+AthenaPlayerController::EOS @ RVA 0xC09B50 EA 0x7FF6F4629B50
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F4629B50(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rax
+  __int64 result; // rax
+  __int64 v7[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  v4 = 0;
+  v7[0] = 0;
+  v7[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  v5 = a2[4];
+  LOBYTE(v4) = v5 != 0;
+  a2[4] = v5 + v4;
+  result = sub_7FF6F3FA11F0(a1, v7);
+  if ( v7[0] )
+    return sub_7FF6F4DED1F0(v7[0]);
+  return result;
+}
+
+
+======================================================================
+AthenaPlayerController::GetAthenaCheatManager @ RVA 0xC0A840 EA 0x7FF6F462A840
+======================================================================
+__int64 __fastcall sub_7FF6F462A840(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3FA6E70();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaPlayerController::GetPlayerStreamingReferenceLocation @ RVA 0xC0B490 EA 0x7FF6F462B490
+======================================================================
+__int64 __fastcall sub_7FF6F462B490(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  _BYTE *v7; // rdx
+  __int64 v8; // rax
+  __int64 result; // rax
+  _BYTE v10[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  v3 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v7 = v10;
+  if ( a2[7] )
+    v7 = (_BYTE *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, _BYTE *))(*(_QWORD *)a1 + 3016LL))(a1, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaPlayerController::IsPirateLegend @ RVA 0xC0C270 EA 0x7FF6F462C270
+======================================================================
+__int64 __fastcall sub_7FF6F462C270(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3FAE260();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaPlayerController::Server_ExecuteCommand @ RVA 0xC0F730 EA 0x7FF6F462F730
+======================================================================
+// Hidden C++ exception states: #wind=3
+__int64 __fastcall sub_7FF6F462F730(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rax
+  __int64 result; // rax
+  __int64 v7[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  v4 = 0;
+  v7[0] = 0;
+  v7[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  v5 = a2[4];
+  LOBYTE(v4) = v5 != 0;
+  a2[4] = v5 + v4;
+  if ( (unsigned __int8)sub_7FF6F3FB7650(a1, v7) )
+    result = sub_7FF6F3FB73D0(a1, v7);
+  else
+    result = sub_7FF6F4F0F6D0(L"Server_ExecuteCommand_Validate");
+  if ( v7[0] )
+    return sub_7FF6F4DED1F0(v7[0]);
+  return result;
+}
+
+
+======================================================================
+AthenaPlayerController::Server_ReportPlayerDelta @ RVA 0xC0F9F0 EA 0x7FF6F462F9F0
+======================================================================
+__int64 __fastcall sub_7FF6F462F9F0(__int64 a1, _QWORD *a2)
+{
+  _BYTE v5[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v5);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v5);
+  }
+  a2[4] += a2[4] != 0;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64, _BYTE *))(*(_QWORD *)a1 + 3432LL))(a1, v5) )
+    return (*(__int64 (__fastcall **)(__int64, _BYTE *))(*(_QWORD *)a1 + 3424LL))(a1, v5);
+  else
+    return sub_7FF6F4F0F6D0(L"Server_ReportPlayerDelta_Validate");
+}
+

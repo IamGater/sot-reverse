@@ -1,0 +1,86 @@
+// Class: FlamethrowerCoordinatorComponent (2 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+FlamethrowerCoordinatorComponent::OnFirstActorEnteredSimpleCollisionShape @ RVA 0x3957A00 EA 0x7FF6F7377A00
+======================================================================
+__int64 __fastcall sub_7FF6F7377A00(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // r8
+  __int64 v7; // rdx
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v10; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v5 = a2[4];
+  v6 = v9;
+  v7 = v10;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F7326070(a1, v7, v6);
+}
+
+
+======================================================================
+FlamethrowerCoordinatorComponent::OnLastActorLeftSimpleCollisionShape @ RVA 0x3957E60 EA 0x7FF6F7377E60
+======================================================================
+__int64 __fastcall sub_7FF6F7377E60(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // r8
+  __int64 v7; // rdx
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v10; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v5 = a2[4];
+  v6 = v9;
+  v7 = v10;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F7326100(a1, v7, v6);
+}
+

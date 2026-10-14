@@ -1,0 +1,984 @@
+// Class: SkeletalMeshComponent (34 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+SkeletalMeshComponent::AccumulateAllBodiesBelowPhysicsBlendWeight @ RVA 0x2A06A70 EA 0x7FF6F6426A70
+======================================================================
+__int64 __fastcall sub_7FF6F6426A70(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  _QWORD *v5; // rax
+  _QWORD *v6; // rsi
+  __int64 v7; // r8
+  __int64 v8; // r9
+  __int64 v9; // rax
+  bool v10; // zf
+  _QWORD v12[5]; // [rsp+20h] [rbp-28h] BYREF
+  int v13; // [rsp+58h] [rbp+10h] BYREF
+  int v14; // [rsp+68h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v12[0] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v5 = (_QWORD *)a2[7];
+  v6 = v12;
+  v14 = 0;
+  if ( v5 )
+    v6 = v5;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v9 = a2[4];
+  LOBYTE(v2) = v9 != 0;
+  v10 = v13 == 0;
+  a2[4] = v9 + v2;
+  LOBYTE(v8) = !v10;
+  return sub_7FF6F60D88A0(a1, v6, v7, v8, v12[0]);
+}
+
+
+======================================================================
+SkeletalMeshComponent::BindClothToMasterPoseComponent @ RVA 0x2A08470 EA 0x7FF6F6428470
+======================================================================
+__int64 __fastcall sub_7FF6F6428470(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return nullsub_7668();
+}
+
+
+======================================================================
+SkeletalMeshComponent::ClearMorphTargets @ RVA 0x2A08930 EA 0x7FF6F6428930
+======================================================================
+__int64 __fastcall sub_7FF6F6428930(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F5CFDD00();
+}
+
+
+======================================================================
+SkeletalMeshComponent::ForceClothNextUpdateTeleport @ RVA 0x2A0AD10 EA 0x7FF6F642AD10
+======================================================================
+void __fastcall sub_7FF6F642AD10(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F60E4770LL);
+}
+
+
+======================================================================
+SkeletalMeshComponent::ForceClothNextUpdateTeleportAndReset @ RVA 0x2A0AD30 EA 0x7FF6F642AD30
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+SkeletalMeshComponent::GetAnimationMode @ RVA 0x2A0B2A0 EA 0x7FF6F642B2A0
+======================================================================
+__int64 __fastcall sub_7FF6F642B2A0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5D035B0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+SkeletalMeshComponent::GetAnimInstance @ RVA 0x2A0B260 EA 0x7FF6F642B260
+======================================================================
+__int64 __fastcall sub_7FF6F642B260(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)(a1 + 1712) + 16LL))(a1 + 1712);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+SkeletalMeshComponent::GetClothMaxDistanceScale @ RVA 0x2A0B670 EA 0x7FF6F642B670
+======================================================================
+void __fastcall sub_7FF6F642B670(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F60E5B60();
+}
+
+
+======================================================================
+SkeletalMeshComponent::GetMorphTarget @ RVA 0x2A0C9F0 EA 0x7FF6F642C9F0
+======================================================================
+void __fastcall sub_7FF6F642C9F0(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v7 = a2[4];
+  v8 = v9;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  *a3 = sub_7FF6F5D04DF0(a1, v8);
+}
+
+
+======================================================================
+SkeletalMeshComponent::GetPlayRate @ RVA 0x2A0DAE0 EA 0x7FF6F642DAE0
+======================================================================
+void __fastcall sub_7FF6F642DAE0(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F5D057F0();
+}
+
+
+======================================================================
+SkeletalMeshComponent::GetPosition @ RVA 0x2A0DB10 EA 0x7FF6F642DB10
+======================================================================
+void __fastcall sub_7FF6F642DB10(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F5D05820();
+}
+
+
+======================================================================
+SkeletalMeshComponent::IsPlaying @ RVA 0x2A10B40 EA 0x7FF6F6430B40
+======================================================================
+__int64 __fastcall sub_7FF6F6430B40(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5D09B00();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+SkeletalMeshComponent::Play @ RVA 0x2A12460 EA 0x7FF6F6432460
+======================================================================
+__int64 __fastcall sub_7FF6F6432460(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F5D0D0C0(a1, v5);
+}
+
+
+======================================================================
+SkeletalMeshComponent::PlayAnimation @ RVA 0x2A12600 EA 0x7FF6F6432600
+======================================================================
+__int64 __fastcall sub_7FF6F6432600(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // r8
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  bool v8; // zf
+  int v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v11;
+  LOBYTE(v2) = v6 != 0;
+  v8 = v10 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v8;
+  return sub_7FF6F5D0D100(a1, v7, v5);
+}
+
+
+======================================================================
+SkeletalMeshComponent::ResetAllBodiesSimulatePhysics @ RVA 0x2A12EC0 EA 0x7FF6F6432EC0
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+SkeletalMeshComponent::ResetClothTeleportMode @ RVA 0x2A12EE0 EA 0x7FF6F6432EE0
+======================================================================
+__int64 __fastcall sub_7FF6F6432EE0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return nullsub_7853();
+}
+
+
+======================================================================
+SkeletalMeshComponent::SetAllBodiesBelowPhysicsBlendWeight @ RVA 0x2A13470 EA 0x7FF6F6433470
+======================================================================
+__int64 __fastcall sub_7FF6F6433470(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  _QWORD *v5; // rax
+  _QWORD *v6; // rsi
+  __int64 v7; // r8
+  __int64 v8; // r9
+  __int64 v9; // rax
+  bool v10; // zf
+  _QWORD v12[5]; // [rsp+20h] [rbp-28h] BYREF
+  int v13; // [rsp+58h] [rbp+10h] BYREF
+  int v14; // [rsp+68h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v12[0] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v5 = (_QWORD *)a2[7];
+  v6 = v12;
+  v14 = 0;
+  if ( v5 )
+    v6 = v5;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v9 = a2[4];
+  LOBYTE(v2) = v9 != 0;
+  v10 = v13 == 0;
+  a2[4] = v9 + v2;
+  LOBYTE(v8) = !v10;
+  return sub_7FF6F60F8FB0(a1, v6, v7, v8, v12[0]);
+}
+
+
+======================================================================
+SkeletalMeshComponent::SetAllBodiesBelowSimulatePhysics @ RVA 0x2A13590 EA 0x7FF6F6433590
+======================================================================
+__int64 __fastcall sub_7FF6F6433590(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 *v5; // rax
+  __int64 *v6; // rsi
+  __int64 v7; // r8
+  __int64 v8; // rax
+  bool v9; // zf
+  int v11; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v12; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v12 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v5 = (__int64 *)a2[7];
+  v6 = &v12;
+  v11 = 0;
+  if ( v5 )
+    v6 = v5;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v8 = a2[4];
+  LOBYTE(v2) = v8 != 0;
+  v9 = v11 == 0;
+  a2[4] = v8 + v2;
+  LOBYTE(v7) = !v9;
+  return sub_7FF6F60F9230(a1, v6, v7);
+}
+
+
+======================================================================
+SkeletalMeshComponent::SetAllBodiesPhysicsBlendWeight @ RVA 0x2A13660 EA 0x7FF6F6433660
+======================================================================
+__int64 __fastcall sub_7FF6F6433660(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  __int64 v6; // rdx
+  __int64 v7; // r8
+  __int64 v8; // rax
+  int v10; // [rsp+38h] [rbp+10h] BYREF
+  int v11; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v11 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  v5 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v8 = a2[4];
+  LOBYTE(v5) = v8 != 0;
+  v2 = v10 == 0;
+  a2[4] = v8 + v5;
+  LOBYTE(v7) = !v2;
+  return sub_7FF6F60F94C0(a1, v6, v7);
+}
+
+
+======================================================================
+SkeletalMeshComponent::SetAllBodiesSimulatePhysics @ RVA 0x2A13730 EA 0x7FF6F6433730
+======================================================================
+__int64 __fastcall sub_7FF6F6433730(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F60F9560(a1, v5);
+}
+
+
+======================================================================
+SkeletalMeshComponent::SetAllMotorsAngularDriveParams @ RVA 0x2A13840 EA 0x7FF6F6433840
+======================================================================
+__int64 __fastcall sub_7FF6F6433840(int a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  int v6; // edx
+  int v7; // r8d
+  int v8; // r9d
+  __int64 v9; // rax
+  int v11; // [rsp+30h] [rbp-18h] BYREF
+  _DWORD v12[5]; // [rsp+34h] [rbp-14h] BYREF
+  int v13; // [rsp+58h] [rbp+10h] BYREF
+  int v14; // [rsp+68h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v12[0] = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  v2 = a2[4] == 0;
+  v11 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  v2 = a2[4] == 0;
+  v14 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  v5 = 0;
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v9 = a2[4];
+  LOBYTE(v5) = v9 != 0;
+  v2 = v13 == 0;
+  a2[4] = v9 + v5;
+  return sub_7FF6F60F9680(a1, v6, v7, v8, !v2);
+}
+
+
+======================================================================
+SkeletalMeshComponent::SetAllMotorsAngularPositionDrive @ RVA 0x2A139A0 EA 0x7FF6F64339A0
+======================================================================
+__int64 __fastcall sub_7FF6F64339A0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  bool v5; // bp
+  bool v6; // si
+  __int64 v7; // r9
+  __int64 v8; // rax
+  bool v9; // zf
+  _DWORD v11[10]; // [rsp+20h] [rbp-28h] BYREF
+  int v12; // [rsp+58h] [rbp+10h] BYREF
+  int v13; // [rsp+68h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v13 = 0;
+  v5 = v12 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v11[0] = 0;
+  v6 = v13 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v8 = a2[4];
+  LOBYTE(v2) = v8 != 0;
+  v9 = v11[0] == 0;
+  a2[4] = v8 + v2;
+  LOBYTE(v7) = !v9;
+  return sub_7FF6F60F9770(a1, v5, v6, v7);
+}
+
+
+======================================================================
+SkeletalMeshComponent::SetAllMotorsAngularVelocityDrive @ RVA 0x2A13AC0 EA 0x7FF6F6433AC0
+======================================================================
+__int64 __fastcall sub_7FF6F6433AC0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  bool v5; // bp
+  bool v6; // si
+  __int64 v7; // r9
+  __int64 v8; // rax
+  bool v9; // zf
+  _DWORD v11[10]; // [rsp+20h] [rbp-28h] BYREF
+  int v12; // [rsp+58h] [rbp+10h] BYREF
+  int v13; // [rsp+68h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v13 = 0;
+  v5 = v12 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v11[0] = 0;
+  v6 = v13 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v8 = a2[4];
+  LOBYTE(v2) = v8 != 0;
+  v9 = v11[0] == 0;
+  a2[4] = v8 + v2;
+  LOBYTE(v7) = !v9;
+  return sub_7FF6F60F9830(a1, v5, v6, v7);
+}
+
+
+======================================================================
+SkeletalMeshComponent::SetAnimation @ RVA 0x2A143D0 EA 0x7FF6F64343D0
+======================================================================
+__int64 __fastcall sub_7FF6F64343D0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F5D122E0(a1, v6);
+}
+
+
+======================================================================
+SkeletalMeshComponent::SetAnimationMode @ RVA 0x2A14450 EA 0x7FF6F6434450
+======================================================================
+__int64 __fastcall sub_7FF6F6434450(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5D12330(a1, v5);
+}
+
+
+======================================================================
+SkeletalMeshComponent::SetAnimInstanceClass @ RVA 0x2A14350 EA 0x7FF6F6434350
+======================================================================
+__int64 __fastcall sub_7FF6F6434350(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F5D12230(a1, v6);
+}
+
+
+======================================================================
+SkeletalMeshComponent::SetClothMaxDistanceScale @ RVA 0x2A153B0 EA 0x7FF6F64353B0
+======================================================================
+__int64 __fastcall sub_7FF6F64353B0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return nullsub_2371(a1);
+}
+
+
+======================================================================
+SkeletalMeshComponent::SetEnablePhysicsBlending @ RVA 0x2A164D0 EA 0x7FF6F64364D0
+======================================================================
+__int64 __fastcall sub_7FF6F64364D0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F60FA4C0(a1, v5);
+}
+
+
+======================================================================
+SkeletalMeshComponent::SetMorphTarget @ RVA 0x2A17E80 EA 0x7FF6F6437E80
+======================================================================
+__int64 __fastcall sub_7FF6F6437E80(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // r8
+  __int64 v6; // r9
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  bool v9; // zf
+  _QWORD v11[3]; // [rsp+20h] [rbp-18h] BYREF
+  int v12; // [rsp+48h] [rbp+10h] BYREF
+  int v13; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v11[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v7 = a2[4];
+  v8 = v11[0];
+  LOBYTE(v2) = v7 != 0;
+  v9 = v12 == 0;
+  a2[4] = v7 + v2;
+  LOBYTE(v6) = !v9;
+  return sub_7FF6F5D12E00(a1, v8, v5, v6);
+}
+
+
+======================================================================
+SkeletalMeshComponent::SetPhysicsBlendWeight @ RVA 0x2A18430 EA 0x7FF6F6438430
+======================================================================
+__int64 __fastcall sub_7FF6F6438430(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F60FB500(a1);
+}
+
+
+======================================================================
+SkeletalMeshComponent::SetPlayRate @ RVA 0x2A189E0 EA 0x7FF6F64389E0
+======================================================================
+__int64 __fastcall sub_7FF6F64389E0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5D13070(a1);
+}
+
+
+======================================================================
+SkeletalMeshComponent::SetPosition @ RVA 0x2A18B30 EA 0x7FF6F6438B30
+======================================================================
+__int64 __fastcall sub_7FF6F6438B30(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  __int64 v6; // rdx
+  __int64 v7; // r8
+  __int64 v8; // rax
+  int v10; // [rsp+38h] [rbp+10h] BYREF
+  int v11; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v11 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  v5 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v8 = a2[4];
+  LOBYTE(v5) = v8 != 0;
+  v2 = v10 == 0;
+  a2[4] = v8 + v5;
+  LOBYTE(v7) = !v2;
+  return sub_7FF6F5D130A0(a1, v6, v7);
+}
+
+
+======================================================================
+SkeletalMeshComponent::Stop @ RVA 0x2A1A1A0 EA 0x7FF6F643A1A0
+======================================================================
+__int64 __fastcall sub_7FF6F643A1A0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F5D15430();
+}
+
+
+======================================================================
+SkeletalMeshComponent::UnbindClothFromMasterPoseComponent @ RVA 0x2A1A9C0 EA 0x7FF6F643A9C0
+======================================================================
+__int64 __fastcall sub_7FF6F643A9C0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return nullsub_2335(a1, v5);
+}
+

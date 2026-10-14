@@ -1,0 +1,67 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_7_FateOfTheMorningStar/bp_destroyfontainechestvo -> BP_DestroyFontaineChestVO_C
+
+=== BP_DestroyFontaineChestVO_C::fn_idx_1828 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fcc9c3880
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fcc9c3800
+$18: VirtualFunction call "idx:284622" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_DestroyFontaineChestVO_C::fn_idx_284622 (206 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19e586b9d80
+$10: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $19: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc9c3900
+  $28: EndFunctionParms
+)
+$29: LetBool (Variable = Expression)
+  Variable:
+  $30: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fcc9c6d80
+  Expression:
+  $39: Context
+    ObjectExpression:
+    $40: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19fcc9c6d80
+    ContextExpression:
+    $61: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $70: StructMemberContext prop=idx:284593@0x19fcc9c4880
+        Expression to struct:
+        $79: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc9c3900
+      $88: EndFunctionParms
+    )
+$89: JumpIfNot -> 0xc1, cond:
+  $94: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fcc9c6d80
+$103: Context
+  ObjectExpression:
+  $104: StructMemberContext prop=idx:284592@0x19fcc9c4800
+    Expression to struct:
+    $113: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc9c3900
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $134: VirtualFunction call "K2_DestroyActor" (
+    $147: EndFunctionParms
+  )
+$148: Context
+  ObjectExpression:
+  $149: StructMemberContext prop=idx:284593@0x19fcc9c4880
+    Expression to struct:
+    $158: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc9c3900
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $179: VirtualFunction call "K2_DestroyActor" (
+    $192: EndFunctionParms
+  )
+$193: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $202: EndFunctionParms
+)
+$203: Return expression:
+  $204: Nothing
+$205: EndOfScript

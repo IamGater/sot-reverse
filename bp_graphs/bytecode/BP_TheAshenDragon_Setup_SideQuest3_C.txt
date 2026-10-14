@@ -1,0 +1,108 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/AshenAge/Tale_1_TheAshenDragon/bp_theashendragon_setup_sidequest3 -> BP_TheAshenDragon_Setup_SideQuest3_C
+
+=== BP_TheAshenDragon_Setup_SideQuest3_C::fn_idx_1828 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fcda4e780
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fcda4e500
+$18: VirtualFunction call "idx:281907" (
+  $31: literal int32 352
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_TheAshenDragon_Setup_SideQuest3_C::fn_idx_281467 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Actor@0x19fcda4e600
+  Expression:
+  $9: LocalVariable named Actor@0x19fcda4e580
+$18: VirtualFunction call "idx:281907" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_TheAshenDragon_Setup_SideQuest3_C::fn_idx_281907 (360 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fd1850a80
+$10: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $19: EndFunctionParms
+)
+$20: Jump to offset 0x165
+$25: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $34: LocalVariable named CallFunc_GetVariables_OutStruct@0x19f8384a980
+  $43: EndFunctionParms
+)
+$44: LetObj (Variable = Expression)
+  Variable:
+  $45: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue@0x19fcda4e700
+  Expression:
+  $54: Context
+    ObjectExpression:
+    $55: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x25
+    RValueProperty: CallFunc_Conv_AssetToObject_ReturnValue@0x19fcda4e700
+    ContextExpression:
+    $76: FinalFunction target=Conv_AssetToObject@0x19e4cd86800 (
+      $85: StructMemberContext prop=GhostSceneLocation_6_17D4F86A4257749D9D38C096E5F3FD57@0x19fcd2f1200
+        Expression to struct:
+        $94: StructMemberContext prop=SideQuestIsland3_81_7B410E1745BBC09C4318809235111BC4@0x19fcd6ff780
+          Expression to struct:
+          $103: LocalVariable named CallFunc_GetVariables_OutStruct@0x19f8384a980
+      $112: EndFunctionParms
+    )
+$113: Let (Variable = Expression)
+  Variable:
+  $122: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19fcda4e880
+  Expression:
+  $131: DynamicCast to Actor@0x19e261ddc80 of expr:
+  $140: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue@0x19fcda4e700
+$149: Let (Variable = Expression)
+  Variable:
+  $158: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x19fcda4e900
+  Expression:
+  $167: PrimitiveCast type=71
+    Argument:
+    $169: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19fcda4e880
+$178: LetObj (Variable = Expression)
+  Variable:
+  $179: InstanceVariable named LocationActor@0x19fcda4ef80
+  Expression:
+  $188: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19fcda4e880
+$197: BindDelegate 'Spawned'
+  Delegate:
+  $210: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fcda4e680
+  Object:
+  $219: Self
+$220: Let (Variable = Expression)
+  Variable:
+  $229: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19fcda4e980
+  Expression:
+  $238: Context
+    ObjectExpression:
+    $239: InstanceVariable named LocationActor@0x19fcda4ef80
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetTransform_ReturnValue@0x19fcda4e980
+    ContextExpression:
+    $260: FinalFunction target=GetTransform@0x19e4cd64700 (
+      $269: EndFunctionParms
+    )
+$270: FinalFunction target=SpawnPhasedActorAsync@0x19e4cda8ed0 (
+  $279: StructMemberContext prop=GhostScene_19_3FBF307147CC87F2E8F807A02844446B@0x19fcd2f1080
+    Expression to struct:
+    $288: StructMemberContext prop=SideQuestIsland3_81_7B410E1745BBC09C4318809235111BC4@0x19fcd6ff780
+      Expression to struct:
+      $297: LocalVariable named CallFunc_GetVariables_OutStruct@0x19f8384a980
+  $306: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19fcda4e980
+  $315: InstanceVariable named LocationActor@0x19fcda4ef80
+  $324: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fcda4e680
+  $333: literal name "None"
+  $346: EndFunctionParms
+)
+$347: Jump to offset 0x165
+$352: Jump to offset 0x19
+$357: Return expression:
+  $358: Nothing
+$359: EndOfScript

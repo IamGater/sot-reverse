@@ -1,0 +1,28 @@
+// Class: LoadableComponent (1 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+LoadableComponent::OnRepLoadableComponentState @ RVA 0xEC7350 EA 0x7FF6F48E7350
+======================================================================
+__int64 __fastcall sub_7FF6F48E7350(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rax
+  __int128 v6; // [rsp+20h] [rbp-28h] BYREF
+  __int128 v7; // [rsp+30h] [rbp-18h] BYREF
+
+  sub_7FF6F3F48DD0(&v6);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  v4 = a2[4];
+  v7 = v6;
+  a2[4] = v4 + (v4 != 0);
+  return sub_7FF6F3F6F110(a1, &v7);
+}
+

@@ -1,0 +1,161 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Generic/bp_talltales_waitforpickup -> BP_TallTales_WaitForPickup_C
+
+=== BP_TallTales_WaitForPickup_C::fn_idx_282658 (132 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x19fcbb45e80
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__GameplayStatics@0x19e4d95eb20
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetObjectClass_ReturnValue@0x19fcbb45e80
+    ContextExpression:
+    $32: FinalFunction target=GetObjectClass@0x19e4d35dd20 (
+      $41: Self
+      $42: EndFunctionParms
+    )
+$43: Let (Variable = Expression)
+  Variable:
+  $52: LocalVariable named CallFunc_GetClassDisplayName_ReturnValue@0x19fcdbb9bc0
+  Expression:
+  $61: Context
+    ObjectExpression:
+    $62: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetClassDisplayName_ReturnValue@0x19fcdbb9bc0
+    ContextExpression:
+    $83: FinalFunction target=GetClassDisplayName@0x19e4cd8bf90 (
+      $92: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x19fcbb45e80
+      $101: EndFunctionParms
+    )
+$102: Let (Variable = Expression)
+  Variable:
+  $111: LocalOutVariable named Name@0x19fcdbb8ab0
+  Expression:
+  $120: LocalVariable named CallFunc_GetClassDisplayName_ReturnValue@0x19fcdbb9bc0
+$129: Return expression:
+  $130: Nothing
+$131: EndOfScript
+
+=== BP_TallTales_WaitForPickup_C::fn_idx_1828 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fcbb46280
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fcbb45f80
+$18: VirtualFunction call "idx:282657" (
+  $31: literal int32 444
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_TallTales_WaitForPickup_C::fn_idx_282659 (22 bytes) ===
+$0: VirtualFunction call "idx:282657" (
+  $13: literal int32 429
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_TallTales_WaitForPickup_C::fn_idx_282657 (452 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fcdbb8b20
+$10: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $19: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcbb46000
+  $28: EndFunctionParms
+)
+$29: Let (Variable = Expression)
+  Variable:
+  $38: LocalVariable named K2Node_DynamicCast_AsItem_Proxy@0x19fcbb46100
+  Expression:
+  $47: DynamicCast to ItemProxy@0x19e4c38b980 of expr:
+  $56: StructMemberContext prop=TrackedActor_2_2551955D4ACD2662E427BBBC1A1BC844@0x19fcda41800
+    Expression to struct:
+    $65: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcbb46000
+$74: Let (Variable = Expression)
+  Variable:
+  $83: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcbb46180
+  Expression:
+  $92: PrimitiveCast type=71
+    Argument:
+    $94: LocalVariable named K2Node_DynamicCast_AsItem_Proxy@0x19fcbb46100
+$103: JumpIfNot -> 0xe4, cond:
+  $108: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcbb46180
+$117: BindDelegate 'idx:282659'
+  Delegate:
+  $130: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fcbb46080
+  Object:
+  $139: Self
+$140: LetObj (Variable = Expression)
+  Variable:
+  $141: LocalVariable named CallFunc_GetItemInfo_ReturnValue@0x19fcbb48100
+  Expression:
+  $150: Context
+    ObjectExpression:
+    $151: LocalVariable named K2Node_DynamicCast_AsItem_Proxy@0x19fcbb46100
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetItemInfo_ReturnValue@0x19fcbb48100
+    ContextExpression:
+    $172: FinalFunction target=GetItemInfo@0x19e4d108840 (
+      $181: EndFunctionParms
+    )
+$182: AddMulticastDelegate
+$183: Context
+  ObjectExpression:
+  $184: LocalVariable named CallFunc_GetItemInfo_ReturnValue@0x19fcbb48100
+  SkipBytes: 0x9
+  RValueProperty: OnItemPickedUpDelegate@0x19e4d10b7b0
+  ContextExpression:
+  $205: InstanceVariable named OnItemPickedUpDelegate@0x19e4d10b7b0
+$214: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fcbb46080
+$223: Jump to offset 0x1c1
+$228: VirtualFunction call "idx:282658" (
+  $241: LocalVariable named idx:282655@0x19fcdbb8ce0
+  $250: EndFunctionParms
+)
+$251: Let (Variable = Expression)
+  Variable:
+  $260: LocalVariable named CallFunc_Concat_StrStr_ReturnValue@0x19fcdbb8c70
+  Expression:
+  $269: Context
+    ObjectExpression:
+    $270: ObjectConst Default__KismetStringLibrary@0x19e4d95ecd0
+    SkipBytes: 0x32
+    RValueProperty: CallFunc_Concat_StrStr_ReturnValue@0x19fcdbb8c70
+    ContextExpression:
+    $291: FinalFunction target=Concat_StrStr@0x19e4d3a1520 (
+      $300: literal ansi string "Cast to ItemProxy failed in: "
+      $331: LocalVariable named idx:282655@0x19fcdbb8ce0
+      $340: EndFunctionParms
+    )
+$341: Context
+  ObjectExpression:
+  $342: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x3d
+  RValueProperty: (null)
+  ContextExpression:
+  $363: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $372: NoObject
+    $373: LocalVariable named CallFunc_Concat_StrStr_ReturnValue@0x19fcdbb8c70
+    $382: True
+    $383: True
+    $384: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $397: literal float 1
+      $402: literal float 0
+      $407: literal float 0.031044000759720802
+      $412: literal float 1
+      $417: EndStructConst
+    $418: literal float 10
+    $423: EndFunctionParms
+  )
+$424: Jump to offset 0x1c1
+$429: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $438: EndFunctionParms
+)
+$439: Jump to offset 0x1c1
+$444: Jump to offset 0xa
+$449: Return expression:
+  $450: Nothing
+$451: EndOfScript

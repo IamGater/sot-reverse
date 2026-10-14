@@ -1,0 +1,3150 @@
+// /Game/Blueprints/GameObjects/Props/Tools/Lantern/bp_tls_lantern_smp_01_a_wieldable -> BP_Lantern_C
+
+=== BP_Lantern_C::fn_idx_239381 (579 bytes) ===
+$0: FlowStack.Push(0x240)
+$5: Context
+  ObjectExpression:
+  $6: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $27: FinalFunction target=Array_Clear@0x19e4d366fd0 (
+    $36: InstanceVariable named DynamicMaterials@0x19f55c47080
+    $45: EndFunctionParms
+  )
+$46: Let (Variable = Expression)
+  Variable:
+  $55: LocalVariable named Temp_int_Variable@0x19f799f96f0
+  Expression:
+  $64: literal int32 0
+$69: Let (Variable = Expression)
+  Variable:
+  $78: LocalVariable named CallFunc_GetNumMaterials_ReturnValue@0x19f799f97d0
+  Expression:
+  $87: Context
+    ObjectExpression:
+    $88: InstanceVariable named ThirdPersonMesh@0x19e4d10ee00
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetNumMaterials_ReturnValue@0x19f799f97d0
+    ContextExpression:
+    $109: VirtualFunction call "GetNumMaterials" (
+      $122: EndFunctionParms
+    )
+$123: Let (Variable = Expression)
+  Variable:
+  $132: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x19f799f9840
+  Expression:
+  $141: CallMath target=Subtract_IntInt@0x19e4d399ad0 (
+    $150: LocalVariable named CallFunc_GetNumMaterials_ReturnValue@0x19f799f97d0
+    $159: literal int32 1
+    $164: EndFunctionParms
+  )
+$165: LetBool (Variable = Expression)
+  Variable:
+  $166: LocalVariable named CallFunc_LessEqual_IntInt_ReturnValue@0x19f55c44600
+  Expression:
+  $175: CallMath target=LessEqual_IntInt@0x19e4d3869d0 (
+    $184: LocalVariable named Temp_int_Variable@0x19f799f96f0
+    $193: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x19f799f9840
+    $202: EndFunctionParms
+  )
+$203: PopExecutionFlowIfNot, cond:
+$204: LocalVariable named CallFunc_LessEqual_IntInt_ReturnValue@0x19f55c44600
+$213: FlowStack.Push(0x1f6)
+$218: LetObj (Variable = Expression)
+  Variable:
+  $219: LocalVariable named CallFunc_GetMaterial_ReturnValue@0x19f55c44500
+  Expression:
+  $228: Context
+    ObjectExpression:
+    $229: InstanceVariable named ThirdPersonMesh@0x19e4d10ee00
+    SkipBytes: 0x17
+    RValueProperty: CallFunc_GetMaterial_ReturnValue@0x19f55c44500
+    ContextExpression:
+    $250: VirtualFunction call "GetMaterial" (
+      $263: LocalVariable named Temp_int_Variable@0x19f799f96f0
+      $272: EndFunctionParms
+    )
+$273: LetObj (Variable = Expression)
+  Variable:
+  $274: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f55c44580
+  Expression:
+  $283: Context
+    ObjectExpression:
+    $284: ObjectConst Default__KismetMaterialLibrary@0x19e4d95ec40
+    SkipBytes: 0x14
+    RValueProperty: CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f55c44580
+    ContextExpression:
+    $305: FinalFunction target=CreateDynamicMaterialInstance@0x19e4d36e1e0 (
+      $314: Self
+      $315: LocalVariable named CallFunc_GetMaterial_ReturnValue@0x19f55c44500
+      $324: EndFunctionParms
+    )
+$325: Let (Variable = Expression)
+  Variable:
+  $334: LocalVariable named CallFunc_Array_Add_ReturnValue@0x19f799f98b0
+  Expression:
+  $343: Context
+    ObjectExpression:
+    $344: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Add_ReturnValue@0x19f799f98b0
+    ContextExpression:
+    $365: FinalFunction target=Array_Add@0x19e4d366810 (
+      $374: InstanceVariable named DynamicMaterials@0x19f55c47080
+      $383: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f55c44580
+      $392: EndFunctionParms
+    )
+$393: Context
+  ObjectExpression:
+  $394: InstanceVariable named FirstPersonMesh@0x19e4d10ee80
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $415: VirtualFunction call "SetMaterial" (
+    $428: LocalVariable named CallFunc_Array_Add_ReturnValue@0x19f799f98b0
+    $437: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f55c44580
+    $446: EndFunctionParms
+  )
+$447: Context
+  ObjectExpression:
+  $448: InstanceVariable named ThirdPersonMesh@0x19e4d10ee00
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $469: VirtualFunction call "SetMaterial" (
+    $482: LocalVariable named CallFunc_Array_Add_ReturnValue@0x19f799f98b0
+    $491: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f55c44580
+    $500: EndFunctionParms
+  )
+$501: PopExecutionFlow (jump to popped addr)
+$502: Let (Variable = Expression)
+  Variable:
+  $511: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f799f9760
+  Expression:
+  $520: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $529: LocalVariable named Temp_int_Variable@0x19f799f96f0
+    $538: literal int32 1
+    $543: EndFunctionParms
+  )
+$544: Let (Variable = Expression)
+  Variable:
+  $553: LocalVariable named Temp_int_Variable@0x19f799f96f0
+  Expression:
+  $562: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f799f9760
+$571: Jump to offset 0x45
+$576: Return expression:
+  $577: Nothing
+$578: EndOfScript
+
+=== BP_Lantern_C::fn_idx_239398 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_Lantern_C::fn_idx_239397 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_Lantern_C::fn_idx_239408 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_Lantern_C::fn_idx_155279 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_Lantern_C::fn_idx_9202 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_Lantern_C::fn_idx_1930 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Lantern" (
+  $13: literal int32 12139
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Lantern_C::fn_idx_1931 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Lantern" (
+  $13: literal int32 12349
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Lantern_C::fn_idx_9152 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Lantern" (
+  $13: literal int32 12555
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Lantern_C::fn_idx_1924 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Lantern" (
+  $13: literal int32 12874
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Lantern_C::fn_idx_2007 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Lantern" (
+  $13: literal int32 12879
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Lantern_C::fn_idx_1917 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_SkipFlameColourTransition@0x19f55c46780
+  Expression:
+  $9: LocalVariable named SkipFlameColourTransition@0x19f55c44680
+$18: VirtualFunction call "ExecuteUbergraph_BP_Lantern" (
+  $31: literal int32 13179
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Lantern_C::fn_idx_1923 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_WantChangeAnimation@0x19f55c46900
+  Expression:
+  $9: LocalVariable named WantChangeAnimation@0x19f55c44780
+$18: VirtualFunction call "ExecuteUbergraph_BP_Lantern" (
+  $31: literal int32 13198
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Lantern_C::fn_idx_239385 (13206 bytes) ===
+$0: FlowStack.Push(0x3393)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x19f799f9920
+$15: Let (Variable = Expression)
+  Variable:
+  $24: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue@0x19f55c44d80
+  Expression:
+  $33: FinalFunction target=GetColourForFlameOfFateType@0x19e4d1b9390 (
+    $42: literal byte 0
+    $44: InstanceVariable named DefaultSpotlightColour@0x19f55c46e00
+    $53: EndFunctionParms
+  )
+$54: Context
+  ObjectExpression:
+  $55: InstanceVariable named SpotLight@0x19f55c46c00
+  SkipBytes: 0x14
+  RValueProperty: (null)
+  ContextExpression:
+  $76: FinalFunction target=SetLightColor@0x19e4d312c20 (
+    $85: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue@0x19f55c44d80
+    $94: True
+    $95: EndFunctionParms
+  )
+$96: Let (Variable = Expression)
+  Variable:
+  $105: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue2@0x19f55c44e00
+  Expression:
+  $114: FinalFunction target=GetColourForFlameOfFateType@0x19e4d1b9390 (
+    $123: literal byte 0
+    $125: InstanceVariable named DefaultAmbientLightColour@0x19f55c46e80
+    $134: EndFunctionParms
+  )
+$135: Context
+  ObjectExpression:
+  $136: InstanceVariable named AmbientLightSource@0x19f55c46b80
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $157: FinalFunction target=SetTint@0x19e4d338d40 (
+    $166: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue2@0x19f55c44e00
+    $175: EndFunctionParms
+  )
+$176: Let (Variable = Expression)
+  Variable:
+  $185: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue3@0x19f55c44e80
+  Expression:
+  $194: FinalFunction target=GetColourForFlameOfFateType@0x19e4d1b9390 (
+    $203: literal byte 2
+    $205: InstanceVariable named DefaultGlowColour@0x19f55c46f00
+    $214: EndFunctionParms
+  )
+$215: Context
+  ObjectExpression:
+  $216: InstanceVariable named LanternGlowDynamicMaterial@0x19f55c46d00
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $237: FinalFunction target=SetVectorParameterValue@0x19e4d3d4970 (
+    $246: literal name "Glow Colour"
+    $259: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue3@0x19f55c44e80
+    $268: EndFunctionParms
+  )
+$269: PopExecutionFlow (jump to popped addr)
+$270: Let (Variable = Expression)
+  Variable:
+  $279: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue5@0x19f55c45080
+  Expression:
+  $288: FinalFunction target=GetColourForFlameOfFateType@0x19e4d1b9390 (
+    $297: literal byte 0
+    $299: InstanceVariable named DefaultSpotlightColour@0x19f55c46e00
+    $308: EndFunctionParms
+  )
+$309: Context
+  ObjectExpression:
+  $310: InstanceVariable named SpotLight@0x19f55c46c00
+  SkipBytes: 0x14
+  RValueProperty: (null)
+  ContextExpression:
+  $331: FinalFunction target=SetLightColor@0x19e4d312c20 (
+    $340: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue5@0x19f55c45080
+    $349: True
+    $350: EndFunctionParms
+  )
+$351: Let (Variable = Expression)
+  Variable:
+  $360: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue6@0x19f55c45100
+  Expression:
+  $369: FinalFunction target=GetColourForFlameOfFateType@0x19e4d1b9390 (
+    $378: literal byte 0
+    $380: InstanceVariable named DefaultAmbientLightColour@0x19f55c46e80
+    $389: EndFunctionParms
+  )
+$390: Context
+  ObjectExpression:
+  $391: InstanceVariable named AmbientLightSource@0x19f55c46b80
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $412: FinalFunction target=SetTint@0x19e4d338d40 (
+    $421: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue6@0x19f55c45100
+    $430: EndFunctionParms
+  )
+$431: Let (Variable = Expression)
+  Variable:
+  $440: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue7@0x19f55c45180
+  Expression:
+  $449: FinalFunction target=GetColourForFlameOfFateType@0x19e4d1b9390 (
+    $458: literal byte 2
+    $460: InstanceVariable named DefaultGlowColour@0x19f55c46f00
+    $469: EndFunctionParms
+  )
+$470: Context
+  ObjectExpression:
+  $471: InstanceVariable named LanternGlowDynamicMaterial@0x19f55c46d00
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $492: FinalFunction target=SetVectorParameterValue@0x19e4d3d4970 (
+    $501: literal name "Glow Colour"
+    $514: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue7@0x19f55c45180
+    $523: EndFunctionParms
+  )
+$524: PopExecutionFlow (jump to popped addr)
+$525: Let (Variable = Expression)
+  Variable:
+  $534: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue9@0x19f55c45680
+  Expression:
+  $543: FinalFunction target=GetColourForFlameOfFateType@0x19e4d1b9390 (
+    $552: literal byte 0
+    $554: InstanceVariable named DefaultSpotlightColour@0x19f55c46e00
+    $563: EndFunctionParms
+  )
+$564: Context
+  ObjectExpression:
+  $565: InstanceVariable named SpotLight@0x19f55c46c00
+  SkipBytes: 0x14
+  RValueProperty: (null)
+  ContextExpression:
+  $586: FinalFunction target=SetLightColor@0x19e4d312c20 (
+    $595: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue9@0x19f55c45680
+    $604: True
+    $605: EndFunctionParms
+  )
+$606: Let (Variable = Expression)
+  Variable:
+  $615: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue10@0x19f55c45700
+  Expression:
+  $624: FinalFunction target=GetColourForFlameOfFateType@0x19e4d1b9390 (
+    $633: literal byte 0
+    $635: InstanceVariable named DefaultAmbientLightColour@0x19f55c46e80
+    $644: EndFunctionParms
+  )
+$645: Context
+  ObjectExpression:
+  $646: InstanceVariable named AmbientLightSource@0x19f55c46b80
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $667: FinalFunction target=SetTint@0x19e4d338d40 (
+    $676: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue10@0x19f55c45700
+    $685: EndFunctionParms
+  )
+$686: Let (Variable = Expression)
+  Variable:
+  $695: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue11@0x19f55c45780
+  Expression:
+  $704: FinalFunction target=GetColourForFlameOfFateType@0x19e4d1b9390 (
+    $713: literal byte 2
+    $715: InstanceVariable named DefaultGlowColour@0x19f55c46f00
+    $724: EndFunctionParms
+  )
+$725: Context
+  ObjectExpression:
+  $726: InstanceVariable named LanternGlowDynamicMaterial@0x19f55c46d00
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $747: FinalFunction target=SetVectorParameterValue@0x19e4d3d4970 (
+    $756: literal name "Glow Colour"
+    $769: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue11@0x19f55c45780
+    $778: EndFunctionParms
+  )
+$779: PopExecutionFlow (jump to popped addr)
+$780: Let (Variable = Expression)
+  Variable:
+  $789: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue13@0x19f55c45e00
+  Expression:
+  $798: FinalFunction target=GetColourForFlameOfFateType@0x19e4d1b9390 (
+    $807: literal byte 0
+    $809: InstanceVariable named DefaultSpotlightColour@0x19f55c46e00
+    $818: EndFunctionParms
+  )
+$819: Context
+  ObjectExpression:
+  $820: InstanceVariable named SpotLight@0x19f55c46c00
+  SkipBytes: 0x14
+  RValueProperty: (null)
+  ContextExpression:
+  $841: FinalFunction target=SetLightColor@0x19e4d312c20 (
+    $850: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue13@0x19f55c45e00
+    $859: True
+    $860: EndFunctionParms
+  )
+$861: Let (Variable = Expression)
+  Variable:
+  $870: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue14@0x19f55c45e80
+  Expression:
+  $879: FinalFunction target=GetColourForFlameOfFateType@0x19e4d1b9390 (
+    $888: literal byte 0
+    $890: InstanceVariable named DefaultAmbientLightColour@0x19f55c46e80
+    $899: EndFunctionParms
+  )
+$900: Context
+  ObjectExpression:
+  $901: InstanceVariable named AmbientLightSource@0x19f55c46b80
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $922: FinalFunction target=SetTint@0x19e4d338d40 (
+    $931: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue14@0x19f55c45e80
+    $940: EndFunctionParms
+  )
+$941: Let (Variable = Expression)
+  Variable:
+  $950: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue15@0x19f55c45f00
+  Expression:
+  $959: FinalFunction target=GetColourForFlameOfFateType@0x19e4d1b9390 (
+    $968: literal byte 2
+    $970: InstanceVariable named DefaultGlowColour@0x19f55c46f00
+    $979: EndFunctionParms
+  )
+$980: Context
+  ObjectExpression:
+  $981: InstanceVariable named LanternGlowDynamicMaterial@0x19f55c46d00
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $1002: FinalFunction target=SetVectorParameterValue@0x19e4d3d4970 (
+    $1011: literal name "Glow Colour"
+    $1024: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue15@0x19f55c45f00
+    $1033: EndFunctionParms
+  )
+$1034: PopExecutionFlow (jump to popped addr)
+$1035: Let (Variable = Expression)
+  Variable:
+  $1044: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f799f9ae0
+  Expression:
+  $1053: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $1062: LocalVariable named Temp_int_Variable@0x19f799f9a00
+    $1071: literal int32 1
+    $1076: EndFunctionParms
+  )
+$1077: Let (Variable = Expression)
+  Variable:
+  $1086: LocalVariable named Temp_int_Variable@0x19f799f9a00
+  Expression:
+  $1095: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f799f9ae0
+$1104: Let (Variable = Expression)
+  Variable:
+  $1113: LocalVariable named CallFunc_Array_Length_ReturnValue17@0x19f799fc1d0
+  Expression:
+  $1122: Context
+    ObjectExpression:
+    $1123: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue17@0x19f799fc1d0
+    ContextExpression:
+    $1144: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $1153: InstanceVariable named DynamicMaterials@0x19f55c47080
+      $1162: EndFunctionParms
+    )
+$1163: LetBool (Variable = Expression)
+  Variable:
+  $1164: LocalVariable named CallFunc_Less_IntInt_ReturnValue15@0x19f55c46380
+  Expression:
+  $1173: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $1182: LocalVariable named Temp_int_Variable@0x19f799f9a00
+    $1191: LocalVariable named CallFunc_Array_Length_ReturnValue17@0x19f799fc1d0
+    $1200: EndFunctionParms
+  )
+$1201: JumpIfNot -> 0x535, cond:
+  $1206: LocalVariable named CallFunc_Less_IntInt_ReturnValue15@0x19f55c46380
+$1215: Context
+  ObjectExpression:
+  $1216: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $1237: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $1246: InstanceVariable named DynamicMaterials@0x19f55c47080
+    $1255: LocalVariable named Temp_int_Variable@0x19f799f9a00
+    $1264: LocalVariable named CallFunc_Array_Get_Item18@0x19f55c46280
+    $1273: EndFunctionParms
+  )
+$1274: Context
+  ObjectExpression:
+  $1275: LocalVariable named CallFunc_Array_Get_Item18@0x19f55c46280
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $1296: FinalFunction target=SetVectorParameterValue@0x19e4d3d4970 (
+    $1305: literal name "PreviousFlameColour"
+    $1318: LocalVariable named CallFunc_K2_GetVectorParameterValue_ReturnValue5@0x19f55c46400
+    $1327: EndFunctionParms
+  )
+$1328: Jump to offset 0x40b
+$1333: Let (Variable = Expression)
+  Variable:
+  $1342: LocalVariable named Temp_int_Variable5@0x19f799f9df0
+  Expression:
+  $1351: literal int32 0
+$1356: Let (Variable = Expression)
+  Variable:
+  $1365: LocalVariable named CallFunc_Array_Length_ReturnValue16@0x19f799fc160
+  Expression:
+  $1374: Context
+    ObjectExpression:
+    $1375: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue16@0x19f799fc160
+    ContextExpression:
+    $1396: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $1405: InstanceVariable named DynamicMaterials@0x19f55c47080
+      $1414: EndFunctionParms
+    )
+$1415: LetBool (Variable = Expression)
+  Variable:
+  $1416: LocalVariable named CallFunc_Less_IntInt_ReturnValue14@0x19f55c46200
+  Expression:
+  $1425: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $1434: LocalVariable named Temp_int_Variable5@0x19f799f9df0
+    $1443: LocalVariable named CallFunc_Array_Length_ReturnValue16@0x19f799fc160
+    $1452: EndFunctionParms
+  )
+$1453: PopExecutionFlowIfNot, cond:
+$1454: LocalVariable named CallFunc_Less_IntInt_ReturnValue14@0x19f55c46200
+$1463: Context
+  ObjectExpression:
+  $1464: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $1485: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $1494: InstanceVariable named DynamicMaterials@0x19f55c47080
+    $1503: LocalVariable named Temp_int_Variable5@0x19f799f9df0
+    $1512: LocalVariable named CallFunc_Array_Get_Item16@0x19f55c46080
+    $1521: EndFunctionParms
+  )
+$1522: Let (Variable = Expression)
+  Variable:
+  $1531: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue16@0x19f55c46480
+  Expression:
+  $1540: FinalFunction target=GetColourForFlameOfFateType@0x19e4d1b9390 (
+    $1549: literal byte 3
+    $1551: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $1564: literal float 0
+      $1569: literal float 0
+      $1574: literal float 0
+      $1579: literal float 0
+      $1584: EndStructConst
+    $1585: EndFunctionParms
+  )
+$1586: Context
+  ObjectExpression:
+  $1587: LocalVariable named CallFunc_Array_Get_Item16@0x19f55c46080
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $1608: FinalFunction target=SetVectorParameterValue@0x19e4d3d4970 (
+    $1617: literal name "CurrentFlameColour"
+    $1630: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue16@0x19f55c46480
+    $1639: EndFunctionParms
+  )
+$1640: Let (Variable = Expression)
+  Variable:
+  $1649: LocalVariable named CallFunc_Add_IntInt_ReturnValue5@0x19f799f9ed0
+  Expression:
+  $1658: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $1667: LocalVariable named Temp_int_Variable5@0x19f799f9df0
+    $1676: literal int32 1
+    $1681: EndFunctionParms
+  )
+$1682: Let (Variable = Expression)
+  Variable:
+  $1691: LocalVariable named Temp_int_Variable5@0x19f799f9df0
+  Expression:
+  $1700: LocalVariable named CallFunc_Add_IntInt_ReturnValue5@0x19f799f9ed0
+$1709: Jump to offset 0x54c
+$1714: Let (Variable = Expression)
+  Variable:
+  $1723: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x19f799f9b50
+  Expression:
+  $1732: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $1741: LocalVariable named Temp_int_Variable2@0x19f799f9a70
+    $1750: literal int32 1
+    $1755: EndFunctionParms
+  )
+$1756: Let (Variable = Expression)
+  Variable:
+  $1765: LocalVariable named Temp_int_Variable2@0x19f799f9a70
+  Expression:
+  $1774: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x19f799f9b50
+$1783: Let (Variable = Expression)
+  Variable:
+  $1792: LocalVariable named CallFunc_Array_Length_ReturnValue15@0x19f799fc0f0
+  Expression:
+  $1801: Context
+    ObjectExpression:
+    $1802: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue15@0x19f799fc0f0
+    ContextExpression:
+    $1823: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $1832: InstanceVariable named DynamicMaterials@0x19f55c47080
+      $1841: EndFunctionParms
+    )
+$1842: LetBool (Variable = Expression)
+  Variable:
+  $1843: LocalVariable named CallFunc_Less_IntInt_ReturnValue13@0x19f55c46180
+  Expression:
+  $1852: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $1861: LocalVariable named Temp_int_Variable2@0x19f799f9a70
+    $1870: LocalVariable named CallFunc_Array_Length_ReturnValue15@0x19f799fc0f0
+    $1879: EndFunctionParms
+  )
+$1880: PopExecutionFlowIfNot, cond:
+$1881: LocalVariable named CallFunc_Less_IntInt_ReturnValue13@0x19f55c46180
+$1890: Let (Variable = Expression)
+  Variable:
+  $1899: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue4@0x19f799fbf30
+  Expression:
+  $1908: Context
+    ObjectExpression:
+    $1909: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue4@0x19f799fbf30
+    ContextExpression:
+    $1930: FinalFunction target=GetGameTimeInSeconds@0x19e4cd8c800 (
+      $1939: Self
+      $1940: EndFunctionParms
+    )
+$1941: Let (Variable = Expression)
+  Variable:
+  $1950: LocalVariable named CallFunc_SelectFloat_ReturnValue2@0x19f799fc010
+  Expression:
+  $1959: CallMath target=SelectFloat@0x19e4d397580 (
+    $1968: literal float 1
+    $1973: literal float 0
+    $1978: True
+    $1979: EndFunctionParms
+  )
+$1980: Let (Variable = Expression)
+  Variable:
+  $1989: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue2@0x19f799fc080
+  Expression:
+  $1998: CallMath target=Subtract_FloatFloat@0x19e4d3998c0 (
+    $2007: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue4@0x19f799fbf30
+    $2016: LocalVariable named CallFunc_SelectFloat_ReturnValue2@0x19f799fc010
+    $2025: EndFunctionParms
+  )
+$2026: Context
+  ObjectExpression:
+  $2027: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $2048: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $2057: InstanceVariable named DynamicMaterials@0x19f55c47080
+    $2066: LocalVariable named Temp_int_Variable2@0x19f799f9a70
+    $2075: LocalVariable named CallFunc_Array_Get_Item17@0x19f55c46100
+    $2084: EndFunctionParms
+  )
+$2085: Context
+  ObjectExpression:
+  $2086: LocalVariable named CallFunc_Array_Get_Item17@0x19f55c46100
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $2107: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $2116: literal name "FlameColourTransitionTime"
+    $2129: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue2@0x19f799fc080
+    $2138: EndFunctionParms
+  )
+$2139: Jump to offset 0x6b2
+$2144: Let (Variable = Expression)
+  Variable:
+  $2153: LocalVariable named Temp_int_Variable2@0x19f799f9a70
+  Expression:
+  $2162: literal int32 0
+$2167: Jump to offset 0x6f7
+$2172: Let (Variable = Expression)
+  Variable:
+  $2181: LocalVariable named Temp_int_Variable@0x19f799f9a00
+  Expression:
+  $2190: literal int32 0
+$2195: Jump to offset 0x450
+$2200: Let (Variable = Expression)
+  Variable:
+  $2209: LocalVariable named CallFunc_K2_GetVectorParameterValue_ReturnValue@0x19f55c44800
+  Expression:
+  $2218: Context
+    ObjectExpression:
+    $2219: InstanceVariable named LanternGlowDynamicMaterial@0x19f55c46d00
+    SkipBytes: 0x17
+    RValueProperty: CallFunc_K2_GetVectorParameterValue_ReturnValue@0x19f55c44800
+    ContextExpression:
+    $2240: FinalFunction target=K2_GetVectorParameterValue@0x19e4d3d4100 (
+      $2249: literal name "Glow Colour"
+      $2262: EndFunctionParms
+    )
+$2263: Let (Variable = Expression)
+  Variable:
+  $2272: InstanceVariable named DefaultGlowColour@0x19f55c46f00
+  Expression:
+  $2281: LocalVariable named CallFunc_K2_GetVectorParameterValue_ReturnValue@0x19f55c44800
+$2290: PopExecutionFlow (jump to popped addr)
+$2291: Let (Variable = Expression)
+  Variable:
+  $2300: LocalVariable named CallFunc_Add_IntInt_ReturnValue3@0x19f799f9c30
+  Expression:
+  $2309: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $2318: LocalVariable named Temp_int_Variable3@0x19f799f9bc0
+    $2327: literal int32 1
+    $2332: EndFunctionParms
+  )
+$2333: Let (Variable = Expression)
+  Variable:
+  $2342: LocalVariable named Temp_int_Variable3@0x19f799f9bc0
+  Expression:
+  $2351: LocalVariable named CallFunc_Add_IntInt_ReturnValue3@0x19f799f9c30
+$2360: Let (Variable = Expression)
+  Variable:
+  $2369: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f799f9990
+  Expression:
+  $2378: Context
+    ObjectExpression:
+    $2379: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19f799f9990
+    ContextExpression:
+    $2400: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $2409: InstanceVariable named DynamicMaterials@0x19f55c47080
+      $2418: EndFunctionParms
+    )
+$2419: LetBool (Variable = Expression)
+  Variable:
+  $2420: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19f55c44900
+  Expression:
+  $2429: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $2438: LocalVariable named Temp_int_Variable3@0x19f799f9bc0
+    $2447: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f799f9990
+    $2456: EndFunctionParms
+  )
+$2457: PopExecutionFlowIfNot, cond:
+$2458: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19f55c44900
+$2467: Context
+  ObjectExpression:
+  $2468: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $2489: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $2498: InstanceVariable named DynamicMaterials@0x19f55c47080
+    $2507: LocalVariable named Temp_int_Variable3@0x19f799f9bc0
+    $2516: LocalVariable named CallFunc_Array_Get_Item@0x19f55c44880
+    $2525: EndFunctionParms
+  )
+$2526: Let (Variable = Expression)
+  Variable:
+  $2535: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue5@0x19f799fc320
+  Expression:
+  $2544: Context
+    ObjectExpression:
+    $2545: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue5@0x19f799fc320
+    ContextExpression:
+    $2566: FinalFunction target=GetGameTimeInSeconds@0x19e4cd8c800 (
+      $2575: Self
+      $2576: EndFunctionParms
+    )
+$2577: Let (Variable = Expression)
+  Variable:
+  $2586: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x19f799fc390
+  Expression:
+  $2595: CallMath target=Add_FloatFloat@0x19e4d36f820 (
+    $2604: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue5@0x19f799fc320
+    $2613: InstanceVariable named TriggerGlowDuration@0x19f799fee00
+    $2622: EndFunctionParms
+  )
+$2623: Let (Variable = Expression)
+  Variable:
+  $2632: StructMemberContext prop=idx:6476@0x19e4cd589b0
+    Expression to struct:
+    $2641: LocalVariable named K2Node_MakeStruct_LinearColor@0x19f55c46800
+  Expression:
+  $2650: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue5@0x19f799fc320
+$2659: Let (Variable = Expression)
+  Variable:
+  $2668: StructMemberContext prop=idx:6465@0x19e4cd58940
+    Expression to struct:
+    $2677: LocalVariable named K2Node_MakeStruct_LinearColor@0x19f55c46800
+  Expression:
+  $2686: InstanceVariable named TriggerGlowRampInDuration@0x19f799fed20
+$2695: Let (Variable = Expression)
+  Variable:
+  $2704: StructMemberContext prop=idx:6460@0x19e4cd588d0
+    Expression to struct:
+    $2713: LocalVariable named K2Node_MakeStruct_LinearColor@0x19f55c46800
+  Expression:
+  $2722: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x19f799fc390
+$2731: Let (Variable = Expression)
+  Variable:
+  $2740: StructMemberContext prop=idx:6459@0x19e4cd58860
+    Expression to struct:
+    $2749: LocalVariable named K2Node_MakeStruct_LinearColor@0x19f55c46800
+  Expression:
+  $2758: InstanceVariable named TriggerGlowRampOutDuration@0x19f799ffab0
+$2767: Context
+  ObjectExpression:
+  $2768: LocalVariable named CallFunc_Array_Get_Item@0x19f55c44880
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $2789: FinalFunction target=SetVectorParameterValue@0x19e4d3d4970 (
+    $2798: literal name "Timed Blend Values"
+    $2811: LocalVariable named K2Node_MakeStruct_LinearColor@0x19f55c46800
+    $2820: EndFunctionParms
+  )
+$2821: Jump to offset 0x8f3
+$2826: Let (Variable = Expression)
+  Variable:
+  $2835: LocalVariable named Temp_int_Variable3@0x19f799f9bc0
+  Expression:
+  $2844: literal int32 0
+$2849: Jump to offset 0x938
+$2854: Let (Variable = Expression)
+  Variable:
+  $2863: LocalVariable named Temp_int_Variable4@0x19f799f9ca0
+  Expression:
+  $2872: literal int32 0
+$2877: Let (Variable = Expression)
+  Variable:
+  $2886: LocalVariable named CallFunc_Array_Length_ReturnValue4@0x19f799fb440
+  Expression:
+  $2895: Context
+    ObjectExpression:
+    $2896: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue4@0x19f799fb440
+    ContextExpression:
+    $2917: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $2926: InstanceVariable named DynamicMaterials@0x19f55c47080
+      $2935: EndFunctionParms
+    )
+$2936: LetBool (Variable = Expression)
+  Variable:
+  $2937: LocalVariable named CallFunc_Less_IntInt_ReturnValue3@0x19f55c44d00
+  Expression:
+  $2946: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $2955: LocalVariable named Temp_int_Variable4@0x19f799f9ca0
+    $2964: LocalVariable named CallFunc_Array_Length_ReturnValue4@0x19f799fb440
+    $2973: EndFunctionParms
+  )
+$2974: JumpIfNot -> 0xd2a, cond:
+  $2979: LocalVariable named CallFunc_Less_IntInt_ReturnValue3@0x19f55c44d00
+$2988: Let (Variable = Expression)
+  Variable:
+  $2997: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue2@0x19f799fa950
+  Expression:
+  $3006: FinalFunction target=GetUnaryRaisedBlendFactor@0x19e4d1b9840 (
+    $3015: EndFunctionParms
+  )
+$3016: Let (Variable = Expression)
+  Variable:
+  $3025: LocalVariable named CallFunc_Lerp_ReturnValue8@0x19f799fa9c0
+  Expression:
+  $3034: CallMath target=Lerp@0x19e4d3855b0 (
+    $3043: literal float 3
+    $3048: literal float 9
+    $3053: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue2@0x19f799fa950
+    $3062: EndFunctionParms
+  )
+$3063: Let (Variable = Expression)
+  Variable:
+  $3072: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue2@0x19f799fadb0
+  Expression:
+  $3081: FinalFunction target=GetUnaryActiveBlendFactor@0x19e4d1b9710 (
+    $3090: EndFunctionParms
+  )
+$3091: Let (Variable = Expression)
+  Variable:
+  $3100: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue12@0x19f799fae90
+  Expression:
+  $3109: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $3118: LocalVariable named CallFunc_Lerp_ReturnValue8@0x19f799fa9c0
+    $3127: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue2@0x19f799fadb0
+    $3136: EndFunctionParms
+  )
+$3137: Let (Variable = Expression)
+  Variable:
+  $3146: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue19@0x19f799fb280
+  Expression:
+  $3155: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $3164: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue12@0x19f799fae90
+    $3173: InstanceVariable named CurrentThirdPersonMultiplier@0x19e4d1bac90
+    $3182: EndFunctionParms
+  )
+$3183: Context
+  ObjectExpression:
+  $3184: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $3205: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $3214: InstanceVariable named DynamicMaterials@0x19f55c47080
+    $3223: LocalVariable named Temp_int_Variable4@0x19f799f9ca0
+    $3232: LocalVariable named CallFunc_Array_Get_Item3@0x19f55c44c80
+    $3241: EndFunctionParms
+  )
+$3242: Context
+  ObjectExpression:
+  $3243: LocalVariable named CallFunc_Array_Get_Item3@0x19f55c44c80
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $3264: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $3273: literal name "Emissive Intensity"
+    $3286: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue19@0x19f799fb280
+    $3295: EndFunctionParms
+  )
+$3296: Let (Variable = Expression)
+  Variable:
+  $3305: LocalVariable named CallFunc_Add_IntInt_ReturnValue4@0x19f799f9d10
+  Expression:
+  $3314: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $3323: LocalVariable named Temp_int_Variable4@0x19f799f9ca0
+    $3332: literal int32 1
+    $3337: EndFunctionParms
+  )
+$3338: Let (Variable = Expression)
+  Variable:
+  $3347: LocalVariable named Temp_int_Variable4@0x19f799f9ca0
+  Expression:
+  $3356: LocalVariable named CallFunc_Add_IntInt_ReturnValue4@0x19f799f9d10
+$3365: Jump to offset 0xb3d
+$3370: Let (Variable = Expression)
+  Variable:
+  $3379: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue2@0x19f799fadb0
+  Expression:
+  $3388: FinalFunction target=GetUnaryActiveBlendFactor@0x19e4d1b9710 (
+    $3397: EndFunctionParms
+  )
+$3398: Context
+  ObjectExpression:
+  $3399: InstanceVariable named LanternGlowDynamicMaterial@0x19f55c46d00
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $3420: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $3429: literal name "TurnedOn"
+    $3442: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue2@0x19f799fadb0
+    $3451: EndFunctionParms
+  )
+$3452: PopExecutionFlowIfNot, cond:
+$3453: InstanceVariable named CanApplyFlameOfFate@0x19e4d1ba9a0
+$3462: FlowStack.Push(0xfa7)
+$3467: FlowStack.Push(0xf47)
+$3472: Context
+  ObjectExpression:
+  $3473: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $3494: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $3503: InstanceVariable named DynamicMaterials@0x19f55c47080
+    $3512: literal int32 0
+    $3517: LocalVariable named CallFunc_Array_Get_Item7@0x19f55c45400
+    $3526: EndFunctionParms
+  )
+$3527: Let (Variable = Expression)
+  Variable:
+  $3536: LocalVariable named CallFunc_K2_GetVectorParameterValue_ReturnValue3@0x19f55c45480
+  Expression:
+  $3545: Context
+    ObjectExpression:
+    $3546: LocalVariable named CallFunc_Array_Get_Item7@0x19f55c45400
+    SkipBytes: 0x17
+    RValueProperty: CallFunc_K2_GetVectorParameterValue_ReturnValue3@0x19f55c45480
+    ContextExpression:
+    $3567: FinalFunction target=K2_GetVectorParameterValue@0x19e4d3d4100 (
+      $3576: literal name "CurrentFlameColour"
+      $3589: EndFunctionParms
+    )
+$3590: Let (Variable = Expression)
+  Variable:
+  $3599: LocalVariable named Temp_int_Variable11@0x19f799fb6e0
+  Expression:
+  $3608: literal int32 0
+$3613: Let (Variable = Expression)
+  Variable:
+  $3622: LocalVariable named CallFunc_Array_Length_ReturnValue10@0x19f799fb980
+  Expression:
+  $3631: Context
+    ObjectExpression:
+    $3632: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue10@0x19f799fb980
+    ContextExpression:
+    $3653: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $3662: InstanceVariable named DynamicMaterials@0x19f55c47080
+      $3671: EndFunctionParms
+    )
+$3672: LetBool (Variable = Expression)
+  Variable:
+  $3673: LocalVariable named CallFunc_Less_IntInt_ReturnValue5@0x19f55c45380
+  Expression:
+  $3682: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $3691: LocalVariable named Temp_int_Variable11@0x19f799fb6e0
+    $3700: LocalVariable named CallFunc_Array_Length_ReturnValue10@0x19f799fb980
+    $3709: EndFunctionParms
+  )
+$3710: JumpIfNot -> 0x1174, cond:
+  $3715: LocalVariable named CallFunc_Less_IntInt_ReturnValue5@0x19f55c45380
+$3724: Context
+  ObjectExpression:
+  $3725: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $3746: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $3755: InstanceVariable named DynamicMaterials@0x19f55c47080
+    $3764: LocalVariable named Temp_int_Variable11@0x19f799fb6e0
+    $3773: LocalVariable named CallFunc_Array_Get_Item6@0x19f55c45280
+    $3782: EndFunctionParms
+  )
+$3783: Context
+  ObjectExpression:
+  $3784: LocalVariable named CallFunc_Array_Get_Item6@0x19f55c45280
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $3805: FinalFunction target=SetVectorParameterValue@0x19e4d3d4970 (
+    $3814: literal name "PreviousFlameColour"
+    $3827: LocalVariable named CallFunc_K2_GetVectorParameterValue_ReturnValue3@0x19f55c45480
+    $3836: EndFunctionParms
+  )
+$3837: Let (Variable = Expression)
+  Variable:
+  $3846: LocalVariable named CallFunc_Add_IntInt_ReturnValue11@0x19f799fb750
+  Expression:
+  $3855: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $3864: LocalVariable named Temp_int_Variable11@0x19f799fb6e0
+    $3873: literal int32 1
+    $3878: EndFunctionParms
+  )
+$3879: Let (Variable = Expression)
+  Variable:
+  $3888: LocalVariable named Temp_int_Variable11@0x19f799fb6e0
+  Expression:
+  $3897: LocalVariable named CallFunc_Add_IntInt_ReturnValue11@0x19f799fb750
+$3906: Jump to offset 0xe1d
+$3911: JumpIfNot -> 0xf5a, cond:
+  $3916: LocalVariable named K2Node_Event_SkipFlameColourTransition@0x19f55c46780
+$3925: Jump to offset 0x10e
+$3930: Context
+  ObjectExpression:
+  $3931: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $3952: FinalFunction target=Delay@0x19e4cd86d40 (
+    $3961: Self
+    $3962: literal float 0
+    $3967: literal struct LatentActionInfo@0x19e4cd86e80 (size 32)
+      $3980: literal CodeSkipSizeType 0x10e
+      $3985: literal int32 2
+      $3990: literal name "ExecuteUbergraph_BP_Lantern"
+      $4003: Self
+      $4004: EndStructConst
+    $4005: EndFunctionParms
+  )
+$4006: PopExecutionFlow (jump to popped addr)
+$4007: Let (Variable = Expression)
+  Variable:
+  $4016: LocalVariable named Temp_int_Variable10@0x19f799fb360
+  Expression:
+  $4025: literal int32 0
+$4030: Let (Variable = Expression)
+  Variable:
+  $4039: LocalVariable named CallFunc_Array_Length_ReturnValue11@0x19f799fb9f0
+  Expression:
+  $4048: Context
+    ObjectExpression:
+    $4049: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue11@0x19f799fb9f0
+    ContextExpression:
+    $4070: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $4079: InstanceVariable named DynamicMaterials@0x19f55c47080
+      $4088: EndFunctionParms
+    )
+$4089: LetBool (Variable = Expression)
+  Variable:
+  $4090: LocalVariable named CallFunc_Less_IntInt_ReturnValue6@0x19f55c45600
+  Expression:
+  $4099: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $4108: LocalVariable named Temp_int_Variable10@0x19f799fb360
+    $4117: LocalVariable named CallFunc_Array_Length_ReturnValue11@0x19f799fb9f0
+    $4126: EndFunctionParms
+  )
+$4127: PopExecutionFlowIfNot, cond:
+$4128: LocalVariable named CallFunc_Less_IntInt_ReturnValue6@0x19f55c45600
+$4137: Let (Variable = Expression)
+  Variable:
+  $4146: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue2@0x19f799fb7c0
+  Expression:
+  $4155: Context
+    ObjectExpression:
+    $4156: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue2@0x19f799fb7c0
+    ContextExpression:
+    $4177: FinalFunction target=GetGameTimeInSeconds@0x19e4cd8c800 (
+      $4186: Self
+      $4187: EndFunctionParms
+    )
+$4188: Context
+  ObjectExpression:
+  $4189: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $4210: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $4219: InstanceVariable named DynamicMaterials@0x19f55c47080
+    $4228: LocalVariable named Temp_int_Variable10@0x19f799fb360
+    $4237: LocalVariable named CallFunc_Array_Get_Item8@0x19f55c45580
+    $4246: EndFunctionParms
+  )
+$4247: Let (Variable = Expression)
+  Variable:
+  $4256: LocalVariable named CallFunc_SelectFloat_ReturnValue3@0x19f799fc400
+  Expression:
+  $4265: CallMath target=SelectFloat@0x19e4d397580 (
+    $4274: literal float 1
+    $4279: literal float 0
+    $4284: LocalVariable named K2Node_Event_SkipFlameColourTransition@0x19f55c46780
+    $4293: EndFunctionParms
+  )
+$4294: Let (Variable = Expression)
+  Variable:
+  $4303: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue3@0x19f799fc470
+  Expression:
+  $4312: CallMath target=Subtract_FloatFloat@0x19e4d3998c0 (
+    $4321: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue2@0x19f799fb7c0
+    $4330: LocalVariable named CallFunc_SelectFloat_ReturnValue3@0x19f799fc400
+    $4339: EndFunctionParms
+  )
+$4340: Context
+  ObjectExpression:
+  $4341: LocalVariable named CallFunc_Array_Get_Item8@0x19f55c45580
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $4362: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $4371: literal name "FlameColourTransitionTime"
+    $4384: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue3@0x19f799fc470
+    $4393: EndFunctionParms
+  )
+$4394: Let (Variable = Expression)
+  Variable:
+  $4403: LocalVariable named CallFunc_Add_IntInt_ReturnValue10@0x19f799fb3d0
+  Expression:
+  $4412: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $4421: LocalVariable named Temp_int_Variable10@0x19f799fb360
+    $4430: literal int32 1
+    $4435: EndFunctionParms
+  )
+$4436: Let (Variable = Expression)
+  Variable:
+  $4445: LocalVariable named Temp_int_Variable10@0x19f799fb360
+  Expression:
+  $4454: LocalVariable named CallFunc_Add_IntInt_ReturnValue10@0x19f799fb3d0
+$4463: Jump to offset 0xfbe
+$4468: Let (Variable = Expression)
+  Variable:
+  $4477: LocalVariable named Temp_int_Variable12@0x19f799fb830
+  Expression:
+  $4486: literal int32 0
+$4491: Let (Variable = Expression)
+  Variable:
+  $4500: LocalVariable named CallFunc_Array_Length_ReturnValue9@0x19f799fb910
+  Expression:
+  $4509: Context
+    ObjectExpression:
+    $4510: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue9@0x19f799fb910
+    ContextExpression:
+    $4531: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $4540: InstanceVariable named DynamicMaterials@0x19f55c47080
+      $4549: EndFunctionParms
+    )
+$4550: LetBool (Variable = Expression)
+  Variable:
+  $4551: LocalVariable named CallFunc_Less_IntInt_ReturnValue4@0x19f55c45300
+  Expression:
+  $4560: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $4569: LocalVariable named Temp_int_Variable12@0x19f799fb830
+    $4578: LocalVariable named CallFunc_Array_Length_ReturnValue9@0x19f799fb910
+    $4587: EndFunctionParms
+  )
+$4588: PopExecutionFlowIfNot, cond:
+$4589: LocalVariable named CallFunc_Less_IntInt_ReturnValue4@0x19f55c45300
+$4598: Context
+  ObjectExpression:
+  $4599: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $4620: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $4629: InstanceVariable named DynamicMaterials@0x19f55c47080
+    $4638: LocalVariable named Temp_int_Variable12@0x19f799fb830
+    $4647: LocalVariable named CallFunc_Array_Get_Item5@0x19f55c45200
+    $4656: EndFunctionParms
+  )
+$4657: Let (Variable = Expression)
+  Variable:
+  $4666: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue8@0x19f55c45500
+  Expression:
+  $4675: FinalFunction target=GetColourForFlameOfFateType@0x19e4d1b9390 (
+    $4684: literal byte 3
+    $4686: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $4699: literal float 0
+      $4704: literal float 0
+      $4709: literal float 0
+      $4714: literal float 0
+      $4719: EndStructConst
+    $4720: EndFunctionParms
+  )
+$4721: Context
+  ObjectExpression:
+  $4722: LocalVariable named CallFunc_Array_Get_Item5@0x19f55c45200
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $4743: FinalFunction target=SetVectorParameterValue@0x19e4d3d4970 (
+    $4752: literal name "CurrentFlameColour"
+    $4765: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue8@0x19f55c45500
+    $4774: EndFunctionParms
+  )
+$4775: Let (Variable = Expression)
+  Variable:
+  $4784: LocalVariable named CallFunc_Add_IntInt_ReturnValue12@0x19f799fb8a0
+  Expression:
+  $4793: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $4802: LocalVariable named Temp_int_Variable12@0x19f799fb830
+    $4811: literal int32 1
+    $4816: EndFunctionParms
+  )
+$4817: Let (Variable = Expression)
+  Variable:
+  $4826: LocalVariable named Temp_int_Variable12@0x19f799fb830
+  Expression:
+  $4835: LocalVariable named CallFunc_Add_IntInt_ReturnValue12@0x19f799fb8a0
+$4844: Jump to offset 0x118b
+$4849: Let (Variable = Expression)
+  Variable:
+  $4858: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue@0x19f799f9d80
+  Expression:
+  $4867: FinalFunction target=GetUnaryRaisedBlendFactor@0x19e4d1b9840 (
+    $4876: EndFunctionParms
+  )
+$4877: Let (Variable = Expression)
+  Variable:
+  $4886: LocalVariable named CallFunc_Lerp_ReturnValue3@0x19f799f9fb0
+  Expression:
+  $4895: CallMath target=Lerp@0x19e4d3855b0 (
+    $4904: literal float 1
+    $4909: literal float 2
+    $4914: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue@0x19f799f9d80
+    $4923: EndFunctionParms
+  )
+$4924: Let (Variable = Expression)
+  Variable:
+  $4933: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue@0x19f799fa1e0
+  Expression:
+  $4942: FinalFunction target=GetUnaryActiveBlendFactor@0x19e4d1b9710 (
+    $4951: EndFunctionParms
+  )
+$4952: Let (Variable = Expression)
+  Variable:
+  $4961: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x19f799fa250
+  Expression:
+  $4970: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $4979: InstanceVariable named CurrentExternalLightFactor@0x19e4d1bac20
+    $4988: LocalVariable named CallFunc_Lerp_ReturnValue3@0x19f799f9fb0
+    $4997: EndFunctionParms
+  )
+$4998: Let (Variable = Expression)
+  Variable:
+  $5007: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue3@0x19f799fa330
+  Expression:
+  $5016: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $5025: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x19f799fa250
+    $5034: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue@0x19f799fa1e0
+    $5043: EndFunctionParms
+  )
+$5044: Context
+  ObjectExpression:
+  $5045: InstanceVariable named AmbientLightSource@0x19f55c46b80
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $5066: FinalFunction target=SetAmbientIntensity@0x19e4d3389a0 (
+    $5075: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue3@0x19f799fa330
+    $5084: EndFunctionParms
+  )
+$5085: Let (Variable = Expression)
+  Variable:
+  $5094: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue@0x19f799f9d80
+  Expression:
+  $5103: FinalFunction target=GetUnaryRaisedBlendFactor@0x19e4d1b9840 (
+    $5112: EndFunctionParms
+  )
+$5113: Let (Variable = Expression)
+  Variable:
+  $5122: LocalVariable named CallFunc_Lerp_ReturnValue2@0x19f799f9f40
+  Expression:
+  $5131: CallMath target=Lerp@0x19e4d3855b0 (
+    $5140: literal float 3000
+    $5145: literal float 4500
+    $5150: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue@0x19f799f9d80
+    $5159: EndFunctionParms
+  )
+$5160: Let (Variable = Expression)
+  Variable:
+  $5169: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue@0x19f799fa1e0
+  Expression:
+  $5178: FinalFunction target=GetUnaryActiveBlendFactor@0x19e4d1b9710 (
+    $5187: EndFunctionParms
+  )
+$5188: Let (Variable = Expression)
+  Variable:
+  $5197: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue4@0x19f799fa3a0
+  Expression:
+  $5206: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $5215: LocalVariable named CallFunc_Lerp_ReturnValue2@0x19f799f9f40
+    $5224: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue@0x19f799fa1e0
+    $5233: EndFunctionParms
+  )
+$5234: Context
+  ObjectExpression:
+  $5235: InstanceVariable named AmbientLightSource@0x19f55c46b80
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $5256: FinalFunction target=SetRadius@0x19e4d338c10 (
+    $5265: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue4@0x19f799fa3a0
+    $5274: EndFunctionParms
+  )
+$5275: LetBool (Variable = Expression)
+  Variable:
+  $5276: LocalVariable named CallFunc_Less_FloatFloat_ReturnValue@0x19f55c44980
+  Expression:
+  $5285: CallMath target=Less_FloatFloat@0x19e4d385cb0 (
+    $5294: InstanceVariable named CurrentThirdPersonMultiplier@0x19e4d1bac90
+    $5303: InstanceVariable named EmissiveInt_threshold@0x19f799fc710
+    $5312: EndFunctionParms
+  )
+$5313: JumpIfNot -> 0x1726, cond:
+  $5318: LocalVariable named CallFunc_Less_FloatFloat_ReturnValue@0x19f55c44980
+$5327: Let (Variable = Expression)
+  Variable:
+  $5336: LocalVariable named Temp_int_Variable7@0x19f799fa790
+  Expression:
+  $5345: literal int32 0
+$5350: Let (Variable = Expression)
+  Variable:
+  $5359: LocalVariable named CallFunc_Array_Length_ReturnValue3@0x19f799fa8e0
+  Expression:
+  $5368: Context
+    ObjectExpression:
+    $5369: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue3@0x19f799fa8e0
+    ContextExpression:
+    $5390: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $5399: InstanceVariable named DynamicMaterials@0x19f55c47080
+      $5408: EndFunctionParms
+    )
+$5409: LetBool (Variable = Expression)
+  Variable:
+  $5410: LocalVariable named CallFunc_Less_IntInt_ReturnValue2@0x19f55c44b00
+  Expression:
+  $5419: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $5428: LocalVariable named Temp_int_Variable7@0x19f799fa790
+    $5437: LocalVariable named CallFunc_Array_Length_ReturnValue3@0x19f799fa8e0
+    $5446: EndFunctionParms
+  )
+$5447: JumpIfNot -> 0x16d3, cond:
+  $5452: LocalVariable named CallFunc_Less_IntInt_ReturnValue2@0x19f55c44b00
+$5461: Let (Variable = Expression)
+  Variable:
+  $5470: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue@0x19f799f9d80
+  Expression:
+  $5479: FinalFunction target=GetUnaryRaisedBlendFactor@0x19e4d1b9840 (
+    $5488: EndFunctionParms
+  )
+$5489: Let (Variable = Expression)
+  Variable:
+  $5498: LocalVariable named CallFunc_Lerp_ReturnValue@0x19f799f9e60
+  Expression:
+  $5507: CallMath target=Lerp@0x19e4d3855b0 (
+    $5516: literal float 3
+    $5521: literal float 9
+    $5526: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue@0x19f799f9d80
+    $5535: EndFunctionParms
+  )
+$5536: Let (Variable = Expression)
+  Variable:
+  $5545: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue@0x19f799fa1e0
+  Expression:
+  $5554: FinalFunction target=GetUnaryActiveBlendFactor@0x19e4d1b9710 (
+    $5563: EndFunctionParms
+  )
+$5564: Let (Variable = Expression)
+  Variable:
+  $5573: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue2@0x19f799fa2c0
+  Expression:
+  $5582: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $5591: LocalVariable named CallFunc_Lerp_ReturnValue@0x19f799f9e60
+    $5600: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue@0x19f799fa1e0
+    $5609: EndFunctionParms
+  )
+$5610: Let (Variable = Expression)
+  Variable:
+  $5619: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue10@0x19f799fa720
+  Expression:
+  $5628: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $5637: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue2@0x19f799fa2c0
+    $5646: InstanceVariable named EmissiveInt_threshold@0x19f799fc710
+    $5655: EndFunctionParms
+  )
+$5656: Context
+  ObjectExpression:
+  $5657: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $5678: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $5687: InstanceVariable named DynamicMaterials@0x19f55c47080
+    $5696: LocalVariable named Temp_int_Variable7@0x19f799fa790
+    $5705: LocalVariable named CallFunc_Array_Get_Item2@0x19f55c44a80
+    $5714: EndFunctionParms
+  )
+$5715: Context
+  ObjectExpression:
+  $5716: LocalVariable named CallFunc_Array_Get_Item2@0x19f55c44a80
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $5737: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $5746: literal name "Emissive Intensity"
+    $5759: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue10@0x19f799fa720
+    $5768: EndFunctionParms
+  )
+$5769: Let (Variable = Expression)
+  Variable:
+  $5778: LocalVariable named CallFunc_Add_IntInt_ReturnValue7@0x19f799fa870
+  Expression:
+  $5787: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $5796: LocalVariable named Temp_int_Variable7@0x19f799fa790
+    $5805: literal int32 1
+    $5810: EndFunctionParms
+  )
+$5811: Let (Variable = Expression)
+  Variable:
+  $5820: LocalVariable named Temp_int_Variable7@0x19f799fa790
+  Expression:
+  $5829: LocalVariable named CallFunc_Add_IntInt_ReturnValue7@0x19f799fa870
+$5838: Jump to offset 0x14e6
+$5843: Let (Variable = Expression)
+  Variable:
+  $5852: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue@0x19f799fa1e0
+  Expression:
+  $5861: FinalFunction target=GetUnaryActiveBlendFactor@0x19e4d1b9710 (
+    $5870: EndFunctionParms
+  )
+$5871: Context
+  ObjectExpression:
+  $5872: InstanceVariable named LanternGlowDynamicMaterial@0x19f55c46d00
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $5893: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $5902: literal name "TurnedOn"
+    $5915: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue@0x19f799fa1e0
+    $5924: EndFunctionParms
+  )
+$5925: PopExecutionFlow (jump to popped addr)
+$5926: LetBool (Variable = Expression)
+  Variable:
+  $5927: LocalVariable named CallFunc_Greater_FloatFloat_ReturnValue@0x19f55c44a00
+  Expression:
+  $5936: CallMath target=Greater_FloatFloat@0x19e4d382550 (
+    $5945: InstanceVariable named CurrentThirdPersonMultiplier@0x19e4d1bac90
+    $5954: InstanceVariable named EmissiveInt_threshold@0x19f799fc710
+    $5963: EndFunctionParms
+  )
+$5964: JumpIfNot -> 0x175a, cond:
+  $5969: LocalVariable named CallFunc_Greater_FloatFloat_ReturnValue@0x19f55c44a00
+$5978: Let (Variable = Expression)
+  Variable:
+  $5987: LocalVariable named Temp_int_Variable14@0x19f799fbde0
+  Expression:
+  $5996: literal int32 0
+$6001: Let (Variable = Expression)
+  Variable:
+  $6010: LocalVariable named CallFunc_Array_Length_ReturnValue2@0x19f799fa800
+  Expression:
+  $6019: Context
+    ObjectExpression:
+    $6020: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue2@0x19f799fa800
+    ContextExpression:
+    $6041: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $6050: InstanceVariable named DynamicMaterials@0x19f55c47080
+      $6059: EndFunctionParms
+    )
+$6060: LetBool (Variable = Expression)
+  Variable:
+  $6061: LocalVariable named CallFunc_Less_IntInt_ReturnValue11@0x19f55c45d80
+  Expression:
+  $6070: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $6079: LocalVariable named Temp_int_Variable14@0x19f799fbde0
+    $6088: LocalVariable named CallFunc_Array_Length_ReturnValue2@0x19f799fa800
+    $6097: EndFunctionParms
+  )
+$6098: JumpIfNot -> 0x16d3, cond:
+  $6103: LocalVariable named CallFunc_Less_IntInt_ReturnValue11@0x19f55c45d80
+$6112: Let (Variable = Expression)
+  Variable:
+  $6121: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue@0x19f799f9d80
+  Expression:
+  $6130: FinalFunction target=GetUnaryRaisedBlendFactor@0x19e4d1b9840 (
+    $6139: EndFunctionParms
+  )
+$6140: Let (Variable = Expression)
+  Variable:
+  $6149: LocalVariable named CallFunc_Lerp_ReturnValue@0x19f799f9e60
+  Expression:
+  $6158: CallMath target=Lerp@0x19e4d3855b0 (
+    $6167: literal float 3
+    $6172: literal float 9
+    $6177: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue@0x19f799f9d80
+    $6186: EndFunctionParms
+  )
+$6187: Let (Variable = Expression)
+  Variable:
+  $6196: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue@0x19f799fa1e0
+  Expression:
+  $6205: FinalFunction target=GetUnaryActiveBlendFactor@0x19e4d1b9710 (
+    $6214: EndFunctionParms
+  )
+$6215: Let (Variable = Expression)
+  Variable:
+  $6224: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue2@0x19f799fa2c0
+  Expression:
+  $6233: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $6242: LocalVariable named CallFunc_Lerp_ReturnValue@0x19f799f9e60
+    $6251: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue@0x19f799fa1e0
+    $6260: EndFunctionParms
+  )
+$6261: Let (Variable = Expression)
+  Variable:
+  $6270: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue9@0x19f799fa6b0
+  Expression:
+  $6279: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $6288: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue2@0x19f799fa2c0
+    $6297: InstanceVariable named CurrentThirdPersonMultiplier@0x19e4d1bac90
+    $6306: EndFunctionParms
+  )
+$6307: Context
+  ObjectExpression:
+  $6308: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $6329: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $6338: InstanceVariable named DynamicMaterials@0x19f55c47080
+    $6347: LocalVariable named Temp_int_Variable14@0x19f799fbde0
+    $6356: LocalVariable named CallFunc_Array_Get_Item14@0x19f55c45d00
+    $6365: EndFunctionParms
+  )
+$6366: Context
+  ObjectExpression:
+  $6367: LocalVariable named CallFunc_Array_Get_Item14@0x19f55c45d00
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $6388: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $6397: literal name "Emissive Intensity"
+    $6410: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue9@0x19f799fa6b0
+    $6419: EndFunctionParms
+  )
+$6420: Let (Variable = Expression)
+  Variable:
+  $6429: LocalVariable named CallFunc_Add_IntInt_ReturnValue14@0x19f799fbe50
+  Expression:
+  $6438: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $6447: LocalVariable named Temp_int_Variable14@0x19f799fbde0
+    $6456: literal int32 1
+    $6461: EndFunctionParms
+  )
+$6462: Let (Variable = Expression)
+  Variable:
+  $6471: LocalVariable named Temp_int_Variable14@0x19f799fbde0
+  Expression:
+  $6480: LocalVariable named CallFunc_Add_IntInt_ReturnValue14@0x19f799fbe50
+$6489: Jump to offset 0x1771
+$6494: Let (Variable = Expression)
+  Variable:
+  $6503: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue@0x19f799f9d80
+  Expression:
+  $6512: FinalFunction target=GetUnaryRaisedBlendFactor@0x19e4d1b9840 (
+    $6521: EndFunctionParms
+  )
+$6522: Let (Variable = Expression)
+  Variable:
+  $6531: LocalVariable named CallFunc_Lerp_ReturnValue4@0x19f799fa020
+  Expression:
+  $6540: CallMath target=Lerp@0x19e4d3855b0 (
+    $6549: literal float 1000
+    $6554: literal float 1800
+    $6559: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue@0x19f799f9d80
+    $6568: EndFunctionParms
+  )
+$6569: Let (Variable = Expression)
+  Variable:
+  $6578: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue@0x19f799fa1e0
+  Expression:
+  $6587: FinalFunction target=GetUnaryActiveBlendFactor@0x19e4d1b9710 (
+    $6596: EndFunctionParms
+  )
+$6597: Let (Variable = Expression)
+  Variable:
+  $6606: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue5@0x19f799fa410
+  Expression:
+  $6615: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $6624: LocalVariable named CallFunc_Lerp_ReturnValue4@0x19f799fa020
+    $6633: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue@0x19f799fa1e0
+    $6642: EndFunctionParms
+  )
+$6643: Context
+  ObjectExpression:
+  $6644: InstanceVariable named SpotLight@0x19f55c46c00
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $6665: FinalFunction target=SetAttenuationRadius@0x19e4d33adf0 (
+    $6674: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue5@0x19f799fa410
+    $6683: EndFunctionParms
+  )
+$6684: Jump to offset 0x12f1
+$6689: Let (Variable = Expression)
+  Variable:
+  $6698: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue@0x19f799f9d80
+  Expression:
+  $6707: FinalFunction target=GetUnaryRaisedBlendFactor@0x19e4d1b9840 (
+    $6716: EndFunctionParms
+  )
+$6717: Let (Variable = Expression)
+  Variable:
+  $6726: LocalVariable named CallFunc_Lerp_ReturnValue5@0x19f799fa090
+  Expression:
+  $6735: CallMath target=Lerp@0x19e4d3855b0 (
+    $6744: literal float 90
+    $6749: literal float 120
+    $6754: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue@0x19f799f9d80
+    $6763: EndFunctionParms
+  )
+$6764: Let (Variable = Expression)
+  Variable:
+  $6773: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue@0x19f799fa1e0
+  Expression:
+  $6782: FinalFunction target=GetUnaryActiveBlendFactor@0x19e4d1b9710 (
+    $6791: EndFunctionParms
+  )
+$6792: Let (Variable = Expression)
+  Variable:
+  $6801: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue6@0x19f799fa480
+  Expression:
+  $6810: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $6819: LocalVariable named CallFunc_Lerp_ReturnValue5@0x19f799fa090
+    $6828: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue@0x19f799fa1e0
+    $6837: EndFunctionParms
+  )
+$6838: Context
+  ObjectExpression:
+  $6839: InstanceVariable named SpotLight@0x19f55c46c00
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $6860: FinalFunction target=SetOuterConeAngle@0x19e4d33bb60 (
+    $6869: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue6@0x19f799fa480
+    $6878: EndFunctionParms
+  )
+$6879: Jump to offset 0x195e
+$6884: Let (Variable = Expression)
+  Variable:
+  $6893: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue@0x19f799f9d80
+  Expression:
+  $6902: FinalFunction target=GetUnaryRaisedBlendFactor@0x19e4d1b9840 (
+    $6911: EndFunctionParms
+  )
+$6912: Let (Variable = Expression)
+  Variable:
+  $6921: LocalVariable named CallFunc_Lerp_ReturnValue6@0x19f799fa100
+  Expression:
+  $6930: CallMath target=Lerp@0x19e4d3855b0 (
+    $6939: literal float 45
+    $6944: literal float 65
+    $6949: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue@0x19f799f9d80
+    $6958: EndFunctionParms
+  )
+$6959: Let (Variable = Expression)
+  Variable:
+  $6968: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue@0x19f799fa1e0
+  Expression:
+  $6977: FinalFunction target=GetUnaryActiveBlendFactor@0x19e4d1b9710 (
+    $6986: EndFunctionParms
+  )
+$6987: Let (Variable = Expression)
+  Variable:
+  $6996: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue7@0x19f799fa4f0
+  Expression:
+  $7005: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $7014: LocalVariable named CallFunc_Lerp_ReturnValue6@0x19f799fa100
+    $7023: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue@0x19f799fa1e0
+    $7032: EndFunctionParms
+  )
+$7033: Context
+  ObjectExpression:
+  $7034: InstanceVariable named SpotLight@0x19f55c46c00
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $7055: FinalFunction target=SetInnerConeAngle@0x19e4d33b900 (
+    $7064: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue7@0x19f799fa4f0
+    $7073: EndFunctionParms
+  )
+$7074: Jump to offset 0x1a21
+$7079: Let (Variable = Expression)
+  Variable:
+  $7088: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue@0x19f799f9d80
+  Expression:
+  $7097: FinalFunction target=GetUnaryRaisedBlendFactor@0x19e4d1b9840 (
+    $7106: EndFunctionParms
+  )
+$7107: Let (Variable = Expression)
+  Variable:
+  $7116: LocalVariable named CallFunc_Lerp_ReturnValue7@0x19f799fa170
+  Expression:
+  $7125: CallMath target=Lerp@0x19e4d3855b0 (
+    $7134: literal float 3000
+    $7139: literal float 10000
+    $7144: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue@0x19f799f9d80
+    $7153: EndFunctionParms
+  )
+$7154: Let (Variable = Expression)
+  Variable:
+  $7163: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue@0x19f799fa1e0
+  Expression:
+  $7172: FinalFunction target=GetUnaryActiveBlendFactor@0x19e4d1b9710 (
+    $7181: EndFunctionParms
+  )
+$7182: Let (Variable = Expression)
+  Variable:
+  $7191: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue8@0x19f799fa560
+  Expression:
+  $7200: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $7209: LocalVariable named CallFunc_Lerp_ReturnValue7@0x19f799fa170
+    $7218: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue@0x19f799fa1e0
+    $7227: EndFunctionParms
+  )
+$7228: Context
+  ObjectExpression:
+  $7229: InstanceVariable named SpotLight@0x19f55c46c00
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $7250: FinalFunction target=SetIntensity@0x19e4d312af0 (
+    $7259: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue8@0x19f799fa560
+    $7268: EndFunctionParms
+  )
+$7269: Jump to offset 0x1ae4
+$7274: Let (Variable = Expression)
+  Variable:
+  $7283: LocalVariable named CallFunc_Add_IntInt_ReturnValue6@0x19f799fa640
+  Expression:
+  $7292: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $7301: LocalVariable named Temp_int_Variable6@0x19f799fa5d0
+    $7310: literal int32 1
+    $7315: EndFunctionParms
+  )
+$7316: Let (Variable = Expression)
+  Variable:
+  $7325: LocalVariable named Temp_int_Variable6@0x19f799fa5d0
+  Expression:
+  $7334: LocalVariable named CallFunc_Add_IntInt_ReturnValue6@0x19f799fa640
+$7343: Let (Variable = Expression)
+  Variable:
+  $7352: LocalVariable named CallFunc_Array_Length_ReturnValue12@0x19f799fbc90
+  Expression:
+  $7361: Context
+    ObjectExpression:
+    $7362: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue12@0x19f799fbc90
+    ContextExpression:
+    $7383: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $7392: InstanceVariable named DynamicMaterials@0x19f55c47080
+      $7401: EndFunctionParms
+    )
+$7402: LetBool (Variable = Expression)
+  Variable:
+  $7403: LocalVariable named CallFunc_Less_IntInt_ReturnValue8@0x19f55c45a00
+  Expression:
+  $7412: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $7421: LocalVariable named Temp_int_Variable6@0x19f799fa5d0
+    $7430: LocalVariable named CallFunc_Array_Length_ReturnValue12@0x19f799fbc90
+    $7439: EndFunctionParms
+  )
+$7440: PopExecutionFlowIfNot, cond:
+$7441: LocalVariable named CallFunc_Less_IntInt_ReturnValue8@0x19f55c45a00
+$7450: Let (Variable = Expression)
+  Variable:
+  $7459: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue3@0x19f799fba60
+  Expression:
+  $7468: Context
+    ObjectExpression:
+    $7469: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue3@0x19f799fba60
+    ContextExpression:
+    $7490: FinalFunction target=GetGameTimeInSeconds@0x19e4cd8c800 (
+      $7499: Self
+      $7500: EndFunctionParms
+    )
+$7501: Let (Variable = Expression)
+  Variable:
+  $7510: LocalVariable named CallFunc_SelectFloat_ReturnValue@0x19f799fbb40
+  Expression:
+  $7519: CallMath target=SelectFloat@0x19e4d397580 (
+    $7528: literal float 1
+    $7533: literal float 0
+    $7538: True
+    $7539: EndFunctionParms
+  )
+$7540: Let (Variable = Expression)
+  Variable:
+  $7549: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue@0x19f799fbc20
+  Expression:
+  $7558: CallMath target=Subtract_FloatFloat@0x19e4d3998c0 (
+    $7567: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue3@0x19f799fba60
+    $7576: LocalVariable named CallFunc_SelectFloat_ReturnValue@0x19f799fbb40
+    $7585: EndFunctionParms
+  )
+$7586: Context
+  ObjectExpression:
+  $7587: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $7608: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $7617: InstanceVariable named DynamicMaterials@0x19f55c47080
+    $7626: LocalVariable named Temp_int_Variable6@0x19f799fa5d0
+    $7635: LocalVariable named CallFunc_Array_Get_Item11@0x19f55c45980
+    $7644: EndFunctionParms
+  )
+$7645: Context
+  ObjectExpression:
+  $7646: LocalVariable named CallFunc_Array_Get_Item11@0x19f55c45980
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $7667: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $7676: literal name "FlameColourTransitionTime"
+    $7689: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue@0x19f799fbc20
+    $7698: EndFunctionParms
+  )
+$7699: Jump to offset 0x1c6a
+$7704: Let (Variable = Expression)
+  Variable:
+  $7713: LocalVariable named Temp_int_Variable6@0x19f799fa5d0
+  Expression:
+  $7722: literal int32 0
+$7727: Jump to offset 0x1caf
+$7732: Let (Variable = Expression)
+  Variable:
+  $7741: LocalVariable named Temp_int_Variable8@0x19f799facd0
+  Expression:
+  $7750: literal int32 0
+$7755: Let (Variable = Expression)
+  Variable:
+  $7764: LocalVariable named CallFunc_Array_Length_ReturnValue14@0x19f799fbd70
+  Expression:
+  $7773: Context
+    ObjectExpression:
+    $7774: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue14@0x19f799fbd70
+    ContextExpression:
+    $7795: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $7804: InstanceVariable named DynamicMaterials@0x19f55c47080
+      $7813: EndFunctionParms
+    )
+$7814: LetBool (Variable = Expression)
+  Variable:
+  $7815: LocalVariable named CallFunc_Less_IntInt_ReturnValue10@0x19f55c45b80
+  Expression:
+  $7824: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $7833: LocalVariable named Temp_int_Variable8@0x19f799facd0
+    $7842: LocalVariable named CallFunc_Array_Length_ReturnValue14@0x19f799fbd70
+    $7851: EndFunctionParms
+  )
+$7852: JumpIfNot -> 0x1f75, cond:
+  $7857: LocalVariable named CallFunc_Less_IntInt_ReturnValue10@0x19f55c45b80
+$7866: Context
+  ObjectExpression:
+  $7867: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $7888: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $7897: InstanceVariable named DynamicMaterials@0x19f55c47080
+    $7906: LocalVariable named Temp_int_Variable8@0x19f799facd0
+    $7915: LocalVariable named CallFunc_Array_Get_Item12@0x19f55c46500
+    $7924: EndFunctionParms
+  )
+$7925: Context
+  ObjectExpression:
+  $7926: LocalVariable named CallFunc_Array_Get_Item12@0x19f55c46500
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $7947: FinalFunction target=SetVectorParameterValue@0x19e4d3d4970 (
+    $7956: literal name "PreviousFlameColour"
+    $7969: LocalVariable named CallFunc_K2_GetVectorParameterValue_ReturnValue4@0x19f55c45c00
+    $7978: EndFunctionParms
+  )
+$7979: Let (Variable = Expression)
+  Variable:
+  $7988: LocalVariable named CallFunc_Add_IntInt_ReturnValue8@0x19f799fad40
+  Expression:
+  $7997: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $8006: LocalVariable named Temp_int_Variable8@0x19f799facd0
+    $8015: literal int32 1
+    $8020: EndFunctionParms
+  )
+$8021: Let (Variable = Expression)
+  Variable:
+  $8030: LocalVariable named Temp_int_Variable8@0x19f799facd0
+  Expression:
+  $8039: LocalVariable named CallFunc_Add_IntInt_ReturnValue8@0x19f799fad40
+$8048: Jump to offset 0x1e4b
+$8053: Let (Variable = Expression)
+  Variable:
+  $8062: LocalVariable named Temp_int_Variable9@0x19f799fb1a0
+  Expression:
+  $8071: literal int32 0
+$8076: Let (Variable = Expression)
+  Variable:
+  $8085: LocalVariable named CallFunc_Array_Length_ReturnValue13@0x19f799fbd00
+  Expression:
+  $8094: Context
+    ObjectExpression:
+    $8095: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue13@0x19f799fbd00
+    ContextExpression:
+    $8116: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $8125: InstanceVariable named DynamicMaterials@0x19f55c47080
+      $8134: EndFunctionParms
+    )
+$8135: LetBool (Variable = Expression)
+  Variable:
+  $8136: LocalVariable named CallFunc_Less_IntInt_ReturnValue9@0x19f55c45a80
+  Expression:
+  $8145: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $8154: LocalVariable named Temp_int_Variable9@0x19f799fb1a0
+    $8163: LocalVariable named CallFunc_Array_Length_ReturnValue13@0x19f799fbd00
+    $8172: EndFunctionParms
+  )
+$8173: PopExecutionFlowIfNot, cond:
+$8174: LocalVariable named CallFunc_Less_IntInt_ReturnValue9@0x19f55c45a80
+$8183: Context
+  ObjectExpression:
+  $8184: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $8205: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $8214: InstanceVariable named DynamicMaterials@0x19f55c47080
+    $8223: LocalVariable named Temp_int_Variable9@0x19f799fb1a0
+    $8232: LocalVariable named CallFunc_Array_Get_Item10@0x19f55c45900
+    $8241: EndFunctionParms
+  )
+$8242: Let (Variable = Expression)
+  Variable:
+  $8251: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue12@0x19f55c45c80
+  Expression:
+  $8260: FinalFunction target=GetColourForFlameOfFateType@0x19e4d1b9390 (
+    $8269: literal byte 3
+    $8271: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $8284: literal float 0
+      $8289: literal float 0
+      $8294: literal float 0
+      $8299: literal float 0
+      $8304: EndStructConst
+    $8305: EndFunctionParms
+  )
+$8306: Context
+  ObjectExpression:
+  $8307: LocalVariable named CallFunc_Array_Get_Item10@0x19f55c45900
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $8328: FinalFunction target=SetVectorParameterValue@0x19e4d3d4970 (
+    $8337: literal name "CurrentFlameColour"
+    $8350: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue12@0x19f55c45c80
+    $8359: EndFunctionParms
+  )
+$8360: Let (Variable = Expression)
+  Variable:
+  $8369: LocalVariable named CallFunc_Add_IntInt_ReturnValue9@0x19f799fb210
+  Expression:
+  $8378: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $8387: LocalVariable named Temp_int_Variable9@0x19f799fb1a0
+    $8396: literal int32 1
+    $8401: EndFunctionParms
+  )
+$8402: Let (Variable = Expression)
+  Variable:
+  $8411: LocalVariable named Temp_int_Variable9@0x19f799fb1a0
+  Expression:
+  $8420: LocalVariable named CallFunc_Add_IntInt_ReturnValue9@0x19f799fb210
+$8429: Jump to offset 0x1f8c
+$8434: Let (Variable = Expression)
+  Variable:
+  $8443: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue2@0x19f799fa950
+  Expression:
+  $8452: FinalFunction target=GetUnaryRaisedBlendFactor@0x19e4d1b9840 (
+    $8461: EndFunctionParms
+  )
+$8462: Let (Variable = Expression)
+  Variable:
+  $8471: LocalVariable named CallFunc_Lerp_ReturnValue10@0x19f799faaa0
+  Expression:
+  $8480: CallMath target=Lerp@0x19e4d3855b0 (
+    $8489: literal float 1
+    $8494: literal float 2
+    $8499: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue2@0x19f799fa950
+    $8508: EndFunctionParms
+  )
+$8509: Let (Variable = Expression)
+  Variable:
+  $8518: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue2@0x19f799fadb0
+  Expression:
+  $8527: FinalFunction target=GetUnaryActiveBlendFactor@0x19e4d1b9710 (
+    $8536: EndFunctionParms
+  )
+$8537: Let (Variable = Expression)
+  Variable:
+  $8546: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue11@0x19f799fae20
+  Expression:
+  $8555: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $8564: InstanceVariable named CurrentExternalLightFactor@0x19e4d1bac20
+    $8573: LocalVariable named CallFunc_Lerp_ReturnValue10@0x19f799faaa0
+    $8582: EndFunctionParms
+  )
+$8583: Let (Variable = Expression)
+  Variable:
+  $8592: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue13@0x19f799faf00
+  Expression:
+  $8601: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $8610: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue11@0x19f799fae20
+    $8619: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue2@0x19f799fadb0
+    $8628: EndFunctionParms
+  )
+$8629: Context
+  ObjectExpression:
+  $8630: InstanceVariable named AmbientLightSource@0x19f55c46b80
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $8651: FinalFunction target=SetAmbientIntensity@0x19e4d3389a0 (
+    $8660: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue13@0x19f799faf00
+    $8669: EndFunctionParms
+  )
+$8670: Let (Variable = Expression)
+  Variable:
+  $8679: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue2@0x19f799fa950
+  Expression:
+  $8688: FinalFunction target=GetUnaryRaisedBlendFactor@0x19e4d1b9840 (
+    $8697: EndFunctionParms
+  )
+$8698: Let (Variable = Expression)
+  Variable:
+  $8707: LocalVariable named CallFunc_Lerp_ReturnValue9@0x19f799faa30
+  Expression:
+  $8716: CallMath target=Lerp@0x19e4d3855b0 (
+    $8725: literal float 3000
+    $8730: literal float 4500
+    $8735: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue2@0x19f799fa950
+    $8744: EndFunctionParms
+  )
+$8745: Let (Variable = Expression)
+  Variable:
+  $8754: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue2@0x19f799fadb0
+  Expression:
+  $8763: FinalFunction target=GetUnaryActiveBlendFactor@0x19e4d1b9710 (
+    $8772: EndFunctionParms
+  )
+$8773: Let (Variable = Expression)
+  Variable:
+  $8782: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue14@0x19f799faf70
+  Expression:
+  $8791: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $8800: LocalVariable named CallFunc_Lerp_ReturnValue9@0x19f799faa30
+    $8809: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue2@0x19f799fadb0
+    $8818: EndFunctionParms
+  )
+$8819: Context
+  ObjectExpression:
+  $8820: InstanceVariable named AmbientLightSource@0x19f55c46b80
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $8841: FinalFunction target=SetRadius@0x19e4d338c10 (
+    $8850: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue14@0x19f799faf70
+    $8859: EndFunctionParms
+  )
+$8860: LetBool (Variable = Expression)
+  Variable:
+  $8861: LocalVariable named CallFunc_Less_FloatFloat_ReturnValue2@0x19f55c44b80
+  Expression:
+  $8870: CallMath target=Less_FloatFloat@0x19e4d385cb0 (
+    $8879: InstanceVariable named CurrentThirdPersonMultiplier@0x19e4d1bac90
+    $8888: InstanceVariable named EmissiveInt_threshold@0x19f799fc710
+    $8897: EndFunctionParms
+  )
+$8898: JumpIfNot -> 0x24d4, cond:
+  $8903: LocalVariable named CallFunc_Less_FloatFloat_ReturnValue2@0x19f55c44b80
+$8912: Let (Variable = Expression)
+  Variable:
+  $8921: LocalVariable named Temp_int_Variable17@0x19f799fc4e0
+  Expression:
+  $8930: literal int32 0
+$8935: Let (Variable = Expression)
+  Variable:
+  $8944: LocalVariable named CallFunc_Array_Length_ReturnValue5@0x19f799fb4b0
+  Expression:
+  $8953: Context
+    ObjectExpression:
+    $8954: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue5@0x19f799fb4b0
+    ContextExpression:
+    $8975: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $8984: InstanceVariable named DynamicMaterials@0x19f55c47080
+      $8993: EndFunctionParms
+    )
+$8994: LetBool (Variable = Expression)
+  Variable:
+  $8995: LocalVariable named CallFunc_Less_IntInt_ReturnValue17@0x19f55c46a00
+  Expression:
+  $9004: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $9013: LocalVariable named Temp_int_Variable17@0x19f799fc4e0
+    $9022: LocalVariable named CallFunc_Array_Length_ReturnValue5@0x19f799fb4b0
+    $9031: EndFunctionParms
+  )
+$9032: JumpIfNot -> 0xd2a, cond:
+  $9037: LocalVariable named CallFunc_Less_IntInt_ReturnValue17@0x19f55c46a00
+$9046: Let (Variable = Expression)
+  Variable:
+  $9055: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue2@0x19f799fa950
+  Expression:
+  $9064: FinalFunction target=GetUnaryRaisedBlendFactor@0x19e4d1b9840 (
+    $9073: EndFunctionParms
+  )
+$9074: Let (Variable = Expression)
+  Variable:
+  $9083: LocalVariable named CallFunc_Lerp_ReturnValue8@0x19f799fa9c0
+  Expression:
+  $9092: CallMath target=Lerp@0x19e4d3855b0 (
+    $9101: literal float 3
+    $9106: literal float 9
+    $9111: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue2@0x19f799fa950
+    $9120: EndFunctionParms
+  )
+$9121: Let (Variable = Expression)
+  Variable:
+  $9130: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue2@0x19f799fadb0
+  Expression:
+  $9139: FinalFunction target=GetUnaryActiveBlendFactor@0x19e4d1b9710 (
+    $9148: EndFunctionParms
+  )
+$9149: Let (Variable = Expression)
+  Variable:
+  $9158: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue12@0x19f799fae90
+  Expression:
+  $9167: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $9176: LocalVariable named CallFunc_Lerp_ReturnValue8@0x19f799fa9c0
+    $9185: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue2@0x19f799fadb0
+    $9194: EndFunctionParms
+  )
+$9195: Let (Variable = Expression)
+  Variable:
+  $9204: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue20@0x19f799fb2f0
+  Expression:
+  $9213: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $9222: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue12@0x19f799fae90
+    $9231: InstanceVariable named EmissiveInt_threshold@0x19f799fc710
+    $9240: EndFunctionParms
+  )
+$9241: Context
+  ObjectExpression:
+  $9242: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $9263: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $9272: InstanceVariable named DynamicMaterials@0x19f55c47080
+    $9281: LocalVariable named Temp_int_Variable17@0x19f799fc4e0
+    $9290: LocalVariable named CallFunc_Array_Get_Item21@0x19f55c46980
+    $9299: EndFunctionParms
+  )
+$9300: Context
+  ObjectExpression:
+  $9301: LocalVariable named CallFunc_Array_Get_Item21@0x19f55c46980
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $9322: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $9331: literal name "Emissive Intensity"
+    $9344: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue20@0x19f799fb2f0
+    $9353: EndFunctionParms
+  )
+$9354: Let (Variable = Expression)
+  Variable:
+  $9363: LocalVariable named CallFunc_Add_IntInt_ReturnValue17@0x19f799fc5c0
+  Expression:
+  $9372: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $9381: LocalVariable named Temp_int_Variable17@0x19f799fc4e0
+    $9390: literal int32 1
+    $9395: EndFunctionParms
+  )
+$9396: Let (Variable = Expression)
+  Variable:
+  $9405: LocalVariable named Temp_int_Variable17@0x19f799fc4e0
+  Expression:
+  $9414: LocalVariable named CallFunc_Add_IntInt_ReturnValue17@0x19f799fc5c0
+$9423: Jump to offset 0x22e7
+$9428: LetBool (Variable = Expression)
+  Variable:
+  $9429: LocalVariable named CallFunc_Greater_FloatFloat_ReturnValue2@0x19f55c44c00
+  Expression:
+  $9438: CallMath target=Greater_FloatFloat@0x19e4d382550 (
+    $9447: InstanceVariable named CurrentThirdPersonMultiplier@0x19e4d1bac90
+    $9456: InstanceVariable named EmissiveInt_threshold@0x19f799fc710
+    $9465: EndFunctionParms
+  )
+$9466: JumpIfNot -> 0xb26, cond:
+  $9471: LocalVariable named CallFunc_Greater_FloatFloat_ReturnValue2@0x19f55c44c00
+$9480: Jump to offset 0xb26
+$9485: Let (Variable = Expression)
+  Variable:
+  $9494: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue2@0x19f799fa950
+  Expression:
+  $9503: FinalFunction target=GetUnaryRaisedBlendFactor@0x19e4d1b9840 (
+    $9512: EndFunctionParms
+  )
+$9513: Let (Variable = Expression)
+  Variable:
+  $9522: LocalVariable named CallFunc_Lerp_ReturnValue11@0x19f799fab10
+  Expression:
+  $9531: CallMath target=Lerp@0x19e4d3855b0 (
+    $9540: literal float 1000
+    $9545: literal float 1800
+    $9550: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue2@0x19f799fa950
+    $9559: EndFunctionParms
+  )
+$9560: Let (Variable = Expression)
+  Variable:
+  $9569: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue2@0x19f799fadb0
+  Expression:
+  $9578: FinalFunction target=GetUnaryActiveBlendFactor@0x19e4d1b9710 (
+    $9587: EndFunctionParms
+  )
+$9588: Let (Variable = Expression)
+  Variable:
+  $9597: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue15@0x19f799fafe0
+  Expression:
+  $9606: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $9615: LocalVariable named CallFunc_Lerp_ReturnValue11@0x19f799fab10
+    $9624: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue2@0x19f799fadb0
+    $9633: EndFunctionParms
+  )
+$9634: Context
+  ObjectExpression:
+  $9635: InstanceVariable named SpotLight@0x19f55c46c00
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $9656: FinalFunction target=SetAttenuationRadius@0x19e4d33adf0 (
+    $9665: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue15@0x19f799fafe0
+    $9674: EndFunctionParms
+  )
+$9675: Jump to offset 0x20f2
+$9680: Let (Variable = Expression)
+  Variable:
+  $9689: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue2@0x19f799fa950
+  Expression:
+  $9698: FinalFunction target=GetUnaryRaisedBlendFactor@0x19e4d1b9840 (
+    $9707: EndFunctionParms
+  )
+$9708: Let (Variable = Expression)
+  Variable:
+  $9717: LocalVariable named CallFunc_Lerp_ReturnValue12@0x19f799fab80
+  Expression:
+  $9726: CallMath target=Lerp@0x19e4d3855b0 (
+    $9735: literal float 90
+    $9740: literal float 120
+    $9745: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue2@0x19f799fa950
+    $9754: EndFunctionParms
+  )
+$9755: Let (Variable = Expression)
+  Variable:
+  $9764: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue2@0x19f799fadb0
+  Expression:
+  $9773: FinalFunction target=GetUnaryActiveBlendFactor@0x19e4d1b9710 (
+    $9782: EndFunctionParms
+  )
+$9783: Let (Variable = Expression)
+  Variable:
+  $9792: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue16@0x19f799fb050
+  Expression:
+  $9801: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $9810: LocalVariable named CallFunc_Lerp_ReturnValue12@0x19f799fab80
+    $9819: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue2@0x19f799fadb0
+    $9828: EndFunctionParms
+  )
+$9829: Context
+  ObjectExpression:
+  $9830: InstanceVariable named SpotLight@0x19f55c46c00
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $9851: FinalFunction target=SetOuterConeAngle@0x19e4d33bb60 (
+    $9860: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue16@0x19f799fb050
+    $9869: EndFunctionParms
+  )
+$9870: Jump to offset 0x250d
+$9875: Let (Variable = Expression)
+  Variable:
+  $9884: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue2@0x19f799fa950
+  Expression:
+  $9893: FinalFunction target=GetUnaryRaisedBlendFactor@0x19e4d1b9840 (
+    $9902: EndFunctionParms
+  )
+$9903: Let (Variable = Expression)
+  Variable:
+  $9912: LocalVariable named CallFunc_Lerp_ReturnValue13@0x19f799fabf0
+  Expression:
+  $9921: CallMath target=Lerp@0x19e4d3855b0 (
+    $9930: literal float 45
+    $9935: literal float 65
+    $9940: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue2@0x19f799fa950
+    $9949: EndFunctionParms
+  )
+$9950: Let (Variable = Expression)
+  Variable:
+  $9959: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue2@0x19f799fadb0
+  Expression:
+  $9968: FinalFunction target=GetUnaryActiveBlendFactor@0x19e4d1b9710 (
+    $9977: EndFunctionParms
+  )
+$9978: Let (Variable = Expression)
+  Variable:
+  $9987: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue17@0x19f799fb0c0
+  Expression:
+  $9996: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $10005: LocalVariable named CallFunc_Lerp_ReturnValue13@0x19f799fabf0
+    $10014: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue2@0x19f799fadb0
+    $10023: EndFunctionParms
+  )
+$10024: Context
+  ObjectExpression:
+  $10025: InstanceVariable named SpotLight@0x19f55c46c00
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $10046: FinalFunction target=SetInnerConeAngle@0x19e4d33b900 (
+    $10055: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue17@0x19f799fb0c0
+    $10064: EndFunctionParms
+  )
+$10065: Jump to offset 0x25d0
+$10070: Let (Variable = Expression)
+  Variable:
+  $10079: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue2@0x19f799fa950
+  Expression:
+  $10088: FinalFunction target=GetUnaryRaisedBlendFactor@0x19e4d1b9840 (
+    $10097: EndFunctionParms
+  )
+$10098: Let (Variable = Expression)
+  Variable:
+  $10107: LocalVariable named CallFunc_Lerp_ReturnValue14@0x19f799fac60
+  Expression:
+  $10116: CallMath target=Lerp@0x19e4d3855b0 (
+    $10125: literal float 3000
+    $10130: literal float 10000
+    $10135: LocalVariable named CallFunc_GetUnaryRaisedBlendFactor_ReturnValue2@0x19f799fa950
+    $10144: EndFunctionParms
+  )
+$10145: Let (Variable = Expression)
+  Variable:
+  $10154: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue2@0x19f799fadb0
+  Expression:
+  $10163: FinalFunction target=GetUnaryActiveBlendFactor@0x19e4d1b9710 (
+    $10172: EndFunctionParms
+  )
+$10173: Let (Variable = Expression)
+  Variable:
+  $10182: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue18@0x19f799fb130
+  Expression:
+  $10191: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $10200: LocalVariable named CallFunc_Lerp_ReturnValue14@0x19f799fac60
+    $10209: LocalVariable named CallFunc_GetUnaryActiveBlendFactor_ReturnValue2@0x19f799fadb0
+    $10218: EndFunctionParms
+  )
+$10219: Context
+  ObjectExpression:
+  $10220: InstanceVariable named SpotLight@0x19f55c46c00
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $10241: FinalFunction target=SetIntensity@0x19e4d312af0 (
+    $10250: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue18@0x19f799fb130
+    $10259: EndFunctionParms
+  )
+$10260: Jump to offset 0x2693
+$10265: FlowStack.Push(0x2b57)
+$10270: FlowStack.Push(0x2d24)
+$10275: Context
+  ObjectExpression:
+  $10276: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $10297: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $10306: InstanceVariable named DynamicMaterials@0x19f55c47080
+    $10315: literal int32 0
+    $10320: LocalVariable named CallFunc_Array_Get_Item4@0x19f55c44f00
+    $10329: EndFunctionParms
+  )
+$10330: Let (Variable = Expression)
+  Variable:
+  $10339: LocalVariable named CallFunc_K2_GetVectorParameterValue_ReturnValue2@0x19f55c44f80
+  Expression:
+  $10348: Context
+    ObjectExpression:
+    $10349: LocalVariable named CallFunc_Array_Get_Item4@0x19f55c44f00
+    SkipBytes: 0x17
+    RValueProperty: CallFunc_K2_GetVectorParameterValue_ReturnValue2@0x19f55c44f80
+    ContextExpression:
+    $10370: FinalFunction target=K2_GetVectorParameterValue@0x19e4d3d4100 (
+      $10379: literal name "CurrentFlameColour"
+      $10392: EndFunctionParms
+    )
+$10393: Let (Variable = Expression)
+  Variable:
+  $10402: LocalVariable named Temp_int_Variable15@0x19f799fbec0
+  Expression:
+  $10411: literal int32 0
+$10416: Let (Variable = Expression)
+  Variable:
+  $10425: LocalVariable named CallFunc_Array_Length_ReturnValue8@0x19f799fb670
+  Expression:
+  $10434: Context
+    ObjectExpression:
+    $10435: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue8@0x19f799fb670
+    ContextExpression:
+    $10456: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $10465: InstanceVariable named DynamicMaterials@0x19f55c47080
+      $10474: EndFunctionParms
+    )
+$10475: LetBool (Variable = Expression)
+  Variable:
+  $10476: LocalVariable named CallFunc_Less_IntInt_ReturnValue12@0x19f55c46000
+  Expression:
+  $10485: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $10494: LocalVariable named Temp_int_Variable15@0x19f799fbec0
+    $10503: LocalVariable named CallFunc_Array_Length_ReturnValue8@0x19f799fb670
+    $10512: EndFunctionParms
+  )
+$10513: JumpIfNot -> 0x29da, cond:
+  $10518: LocalVariable named CallFunc_Less_IntInt_ReturnValue12@0x19f55c46000
+$10527: Context
+  ObjectExpression:
+  $10528: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $10549: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $10558: InstanceVariable named DynamicMaterials@0x19f55c47080
+    $10567: LocalVariable named Temp_int_Variable15@0x19f799fbec0
+    $10576: LocalVariable named CallFunc_Array_Get_Item15@0x19f55c45f80
+    $10585: EndFunctionParms
+  )
+$10586: Context
+  ObjectExpression:
+  $10587: LocalVariable named CallFunc_Array_Get_Item15@0x19f55c45f80
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $10608: FinalFunction target=SetVectorParameterValue@0x19e4d3d4970 (
+    $10617: literal name "PreviousFlameColour"
+    $10630: LocalVariable named CallFunc_K2_GetVectorParameterValue_ReturnValue2@0x19f55c44f80
+    $10639: EndFunctionParms
+  )
+$10640: Let (Variable = Expression)
+  Variable:
+  $10649: LocalVariable named CallFunc_Add_IntInt_ReturnValue15@0x19f799fbfa0
+  Expression:
+  $10658: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $10667: LocalVariable named Temp_int_Variable15@0x19f799fbec0
+    $10676: literal int32 1
+    $10681: EndFunctionParms
+  )
+$10682: Let (Variable = Expression)
+  Variable:
+  $10691: LocalVariable named Temp_int_Variable15@0x19f799fbec0
+  Expression:
+  $10700: LocalVariable named CallFunc_Add_IntInt_ReturnValue15@0x19f799fbfa0
+$10709: Jump to offset 0x28b0
+$10714: Let (Variable = Expression)
+  Variable:
+  $10723: LocalVariable named Temp_int_Variable16@0x19f799fc240
+  Expression:
+  $10732: literal int32 0
+$10737: Let (Variable = Expression)
+  Variable:
+  $10746: LocalVariable named CallFunc_Array_Length_ReturnValue6@0x19f799fb590
+  Expression:
+  $10755: Context
+    ObjectExpression:
+    $10756: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue6@0x19f799fb590
+    ContextExpression:
+    $10777: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $10786: InstanceVariable named DynamicMaterials@0x19f55c47080
+      $10795: EndFunctionParms
+    )
+$10796: LetBool (Variable = Expression)
+  Variable:
+  $10797: LocalVariable named CallFunc_Less_IntInt_ReturnValue16@0x19f55c46600
+  Expression:
+  $10806: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $10815: LocalVariable named Temp_int_Variable16@0x19f799fc240
+    $10824: LocalVariable named CallFunc_Array_Length_ReturnValue6@0x19f799fb590
+    $10833: EndFunctionParms
+  )
+$10834: PopExecutionFlowIfNot, cond:
+$10835: LocalVariable named CallFunc_Less_IntInt_ReturnValue16@0x19f55c46600
+$10844: Let (Variable = Expression)
+  Variable:
+  $10853: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue4@0x19f55c45000
+  Expression:
+  $10862: FinalFunction target=GetColourForFlameOfFateType@0x19e4d1b9390 (
+    $10871: literal byte 3
+    $10873: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $10886: literal float 0
+      $10891: literal float 0
+      $10896: literal float 0
+      $10901: literal float 0
+      $10906: EndStructConst
+    $10907: EndFunctionParms
+  )
+$10908: Context
+  ObjectExpression:
+  $10909: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $10930: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $10939: InstanceVariable named DynamicMaterials@0x19f55c47080
+    $10948: LocalVariable named Temp_int_Variable16@0x19f799fc240
+    $10957: LocalVariable named CallFunc_Array_Get_Item20@0x19f55c46580
+    $10966: EndFunctionParms
+  )
+$10967: Context
+  ObjectExpression:
+  $10968: LocalVariable named CallFunc_Array_Get_Item20@0x19f55c46580
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $10989: FinalFunction target=SetVectorParameterValue@0x19e4d3d4970 (
+    $10998: literal name "CurrentFlameColour"
+    $11011: LocalVariable named CallFunc_GetColourForFlameOfFateType_ReturnValue4@0x19f55c45000
+    $11020: EndFunctionParms
+  )
+$11021: Let (Variable = Expression)
+  Variable:
+  $11030: LocalVariable named CallFunc_Add_IntInt_ReturnValue16@0x19f799fc2b0
+  Expression:
+  $11039: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $11048: LocalVariable named Temp_int_Variable16@0x19f799fc240
+    $11057: literal int32 1
+    $11062: EndFunctionParms
+  )
+$11063: Let (Variable = Expression)
+  Variable:
+  $11072: LocalVariable named Temp_int_Variable16@0x19f799fc240
+  Expression:
+  $11081: LocalVariable named CallFunc_Add_IntInt_ReturnValue16@0x19f799fc2b0
+$11090: Jump to offset 0x29f1
+$11095: Let (Variable = Expression)
+  Variable:
+  $11104: LocalVariable named Temp_int_Variable13@0x19f799fbad0
+  Expression:
+  $11113: literal int32 0
+$11118: Let (Variable = Expression)
+  Variable:
+  $11127: LocalVariable named CallFunc_Array_Length_ReturnValue7@0x19f799fb600
+  Expression:
+  $11136: Context
+    ObjectExpression:
+    $11137: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue7@0x19f799fb600
+    ContextExpression:
+    $11158: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $11167: InstanceVariable named DynamicMaterials@0x19f55c47080
+      $11176: EndFunctionParms
+    )
+$11177: LetBool (Variable = Expression)
+  Variable:
+  $11178: LocalVariable named CallFunc_Less_IntInt_ReturnValue7@0x19f55c45880
+  Expression:
+  $11187: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $11196: LocalVariable named Temp_int_Variable13@0x19f799fbad0
+    $11205: LocalVariable named CallFunc_Array_Length_ReturnValue7@0x19f799fb600
+    $11214: EndFunctionParms
+  )
+$11215: PopExecutionFlowIfNot, cond:
+$11216: LocalVariable named CallFunc_Less_IntInt_ReturnValue7@0x19f55c45880
+$11225: Let (Variable = Expression)
+  Variable:
+  $11234: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x19f799fb520
+  Expression:
+  $11243: Context
+    ObjectExpression:
+    $11244: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue@0x19f799fb520
+    ContextExpression:
+    $11265: FinalFunction target=GetGameTimeInSeconds@0x19e4cd8c800 (
+      $11274: Self
+      $11275: EndFunctionParms
+    )
+$11276: Context
+  ObjectExpression:
+  $11277: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $11298: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $11307: InstanceVariable named DynamicMaterials@0x19f55c47080
+    $11316: LocalVariable named Temp_int_Variable13@0x19f799fbad0
+    $11325: LocalVariable named CallFunc_Array_Get_Item9@0x19f55c45800
+    $11334: EndFunctionParms
+  )
+$11335: Let (Variable = Expression)
+  Variable:
+  $11344: LocalVariable named CallFunc_SelectFloat_ReturnValue4@0x19f799fc550
+  Expression:
+  $11353: CallMath target=SelectFloat@0x19e4d397580 (
+    $11362: literal float 1
+    $11367: literal float 0
+    $11372: LocalVariable named K2Node_Event_WantChangeAnimation@0x19f55c46900
+    $11381: EndFunctionParms
+  )
+$11382: Let (Variable = Expression)
+  Variable:
+  $11391: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue4@0x19f799fc630
+  Expression:
+  $11400: CallMath target=Subtract_FloatFloat@0x19e4d3998c0 (
+    $11409: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x19f799fb520
+    $11418: LocalVariable named CallFunc_SelectFloat_ReturnValue4@0x19f799fc550
+    $11427: EndFunctionParms
+  )
+$11428: Context
+  ObjectExpression:
+  $11429: LocalVariable named CallFunc_Array_Get_Item9@0x19f55c45800
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $11450: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $11459: literal name "FlameColourTransitionTime"
+    $11472: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue4@0x19f799fc630
+    $11481: EndFunctionParms
+  )
+$11482: Let (Variable = Expression)
+  Variable:
+  $11491: LocalVariable named CallFunc_Add_IntInt_ReturnValue13@0x19f799fbbb0
+  Expression:
+  $11500: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $11509: LocalVariable named Temp_int_Variable13@0x19f799fbad0
+    $11518: literal int32 1
+    $11523: EndFunctionParms
+  )
+$11524: Let (Variable = Expression)
+  Variable:
+  $11533: LocalVariable named Temp_int_Variable13@0x19f799fbad0
+  Expression:
+  $11542: LocalVariable named CallFunc_Add_IntInt_ReturnValue13@0x19f799fbbb0
+$11551: Jump to offset 0x2b6e
+$11556: JumpIfNot -> 0x2d37, cond:
+  $11561: LocalVariable named K2Node_Event_WantChangeAnimation@0x19f55c46900
+$11570: Jump to offset 0xf
+$11575: Context
+  ObjectExpression:
+  $11576: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $11597: FinalFunction target=Delay@0x19e4cd86d40 (
+    $11606: Self
+    $11607: literal float 0
+    $11612: literal struct LatentActionInfo@0x19e4cd86e80 (size 32)
+      $11625: literal CodeSkipSizeType 0xf
+      $11630: literal int32 1
+      $11635: literal name "ExecuteUbergraph_BP_Lantern"
+      $11648: Self
+      $11649: EndStructConst
+    $11650: EndFunctionParms
+  )
+$11651: PopExecutionFlow (jump to popped addr)
+$11652: PopExecutionFlowIfNot, cond:
+$11653: InstanceVariable named CanApplyFlameOfFate@0x19e4d1ba9a0
+$11662: Jump to offset 0x2819
+$11667: FlowStack.Push(0x1e18)
+$11672: FlowStack.Push(0x2e18)
+$11677: Context
+  ObjectExpression:
+  $11678: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $11699: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $11708: InstanceVariable named DynamicMaterials@0x19f55c47080
+    $11717: literal int32 0
+    $11722: LocalVariable named CallFunc_Array_Get_Item13@0x19f55c45b00
+    $11731: EndFunctionParms
+  )
+$11732: Let (Variable = Expression)
+  Variable:
+  $11741: LocalVariable named CallFunc_K2_GetVectorParameterValue_ReturnValue4@0x19f55c45c00
+  Expression:
+  $11750: Context
+    ObjectExpression:
+    $11751: LocalVariable named CallFunc_Array_Get_Item13@0x19f55c45b00
+    SkipBytes: 0x17
+    RValueProperty: CallFunc_K2_GetVectorParameterValue_ReturnValue4@0x19f55c45c00
+    ContextExpression:
+    $11772: FinalFunction target=K2_GetVectorParameterValue@0x19e4d3d4100 (
+      $11781: literal name "CurrentFlameColour"
+      $11794: EndFunctionParms
+    )
+$11795: Jump to offset 0x1e34
+$11800: JumpIfNot -> 0x2e23, cond:
+  $11805: True
+$11806: Jump to offset 0x20d
+$11811: Context
+  ObjectExpression:
+  $11812: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $11833: FinalFunction target=Delay@0x19e4cd86d40 (
+    $11842: Self
+    $11843: literal float 0
+    $11848: literal struct LatentActionInfo@0x19e4cd86e80 (size 32)
+      $11861: literal CodeSkipSizeType 0x20d
+      $11866: literal int32 3
+      $11871: literal name "ExecuteUbergraph_BP_Lantern"
+      $11884: Self
+      $11885: EndStructConst
+    $11886: EndFunctionParms
+  )
+$11887: PopExecutionFlow (jump to popped addr)
+$11888: PopExecutionFlowIfNot, cond:
+$11889: InstanceVariable named CanApplyFlameOfFate@0x19e4d1ba9a0
+$11898: Jump to offset 0x2d93
+$11903: FlowStack.Push(0x860)
+$11908: FlowStack.Push(0x2f04)
+$11913: Context
+  ObjectExpression:
+  $11914: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $11935: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $11944: InstanceVariable named DynamicMaterials@0x19f55c47080
+    $11953: literal int32 0
+    $11958: LocalVariable named CallFunc_Array_Get_Item19@0x19f55c46300
+    $11967: EndFunctionParms
+  )
+$11968: Let (Variable = Expression)
+  Variable:
+  $11977: LocalVariable named CallFunc_K2_GetVectorParameterValue_ReturnValue5@0x19f55c46400
+  Expression:
+  $11986: Context
+    ObjectExpression:
+    $11987: LocalVariable named CallFunc_Array_Get_Item19@0x19f55c46300
+    SkipBytes: 0x17
+    RValueProperty: CallFunc_K2_GetVectorParameterValue_ReturnValue5@0x19f55c46400
+    ContextExpression:
+    $12008: FinalFunction target=K2_GetVectorParameterValue@0x19e4d3d4100 (
+      $12017: literal name "CurrentFlameColour"
+      $12030: EndFunctionParms
+    )
+$12031: Jump to offset 0x87c
+$12036: JumpIfNot -> 0x2f0f, cond:
+  $12041: True
+$12042: Jump to offset 0x30c
+$12047: Context
+  ObjectExpression:
+  $12048: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $12069: FinalFunction target=Delay@0x19e4cd86d40 (
+    $12078: Self
+    $12079: literal float 0
+    $12084: literal struct LatentActionInfo@0x19e4cd86e80 (size 32)
+      $12097: literal CodeSkipSizeType 0x30c
+      $12102: literal int32 4
+      $12107: literal name "ExecuteUbergraph_BP_Lantern"
+      $12120: Self
+      $12121: EndStructConst
+    $12122: EndFunctionParms
+  )
+$12123: PopExecutionFlow (jump to popped addr)
+$12124: PopExecutionFlowIfNot, cond:
+$12125: InstanceVariable named CanApplyFlameOfFate@0x19e4d1ba9a0
+$12134: Jump to offset 0x2e7f
+$12139: Context
+  ObjectExpression:
+  $12140: InstanceVariable named SpotLight@0x19f55c46c00
+  SkipBytes: 0x23
+  RValueProperty: (null)
+  ContextExpression:
+  $12161: FinalFunction target=K2_AttachTo@0x19e4d071040 (
+    $12170: InstanceVariable named FirstPersonMesh@0x19e4d10ee80
+    $12179: literal name "SPOTLIGHT__Socket"
+    $12192: literal byte 2
+    $12194: False
+    $12195: EndFunctionParms
+  )
+$12196: Context
+  ObjectExpression:
+  $12197: InstanceVariable named LanternTriggerGlow@0x19f55c46a80
+  SkipBytes: 0x23
+  RValueProperty: (null)
+  ContextExpression:
+  $12218: FinalFunction target=K2_AttachTo@0x19e4d071040 (
+    $12227: InstanceVariable named FirstPersonMesh@0x19e4d10ee80
+    $12236: literal name "SPOTLIGHT__Socket"
+    $12249: literal byte 2
+    $12251: False
+    $12252: EndFunctionParms
+  )
+$12253: Context
+  ObjectExpression:
+  $12254: InstanceVariable named AmbientLightSource@0x19f55c46b80
+  SkipBytes: 0x23
+  RValueProperty: (null)
+  ContextExpression:
+  $12275: FinalFunction target=K2_AttachTo@0x19e4d071040 (
+    $12284: InstanceVariable named FirstPersonMesh@0x19e4d10ee80
+    $12293: literal name "SPOTLIGHT__Socket"
+    $12306: literal byte 2
+    $12308: False
+    $12309: EndFunctionParms
+  )
+$12310: Context
+  ObjectExpression:
+  $12311: InstanceVariable named AmbientLightSource@0x19f55c46b80
+  SkipBytes: 0xc
+  RValueProperty: (null)
+  ContextExpression:
+  $12332: FinalFunction target=SetGroupingPolicy@0x19e4d338ad0 (
+    $12341: literal byte 1
+    $12343: EndFunctionParms
+  )
+$12344: Jump to offset 0x2f5c
+$12349: Context
+  ObjectExpression:
+  $12350: InstanceVariable named SpotLight@0x19f55c46c00
+  SkipBytes: 0x23
+  RValueProperty: (null)
+  ContextExpression:
+  $12371: FinalFunction target=K2_AttachTo@0x19e4d071040 (
+    $12380: InstanceVariable named ThirdPersonMesh@0x19e4d10ee00
+    $12389: literal name "SPOTLIGHT__Socket"
+    $12402: literal byte 2
+    $12404: True
+    $12405: EndFunctionParms
+  )
+$12406: Context
+  ObjectExpression:
+  $12407: InstanceVariable named LanternTriggerGlow@0x19f55c46a80
+  SkipBytes: 0x23
+  RValueProperty: (null)
+  ContextExpression:
+  $12428: FinalFunction target=K2_AttachTo@0x19e4d071040 (
+    $12437: InstanceVariable named ThirdPersonMesh@0x19e4d10ee00
+    $12446: literal name "SPOTLIGHT__Socket"
+    $12459: literal byte 2
+    $12461: True
+    $12462: EndFunctionParms
+  )
+$12463: Context
+  ObjectExpression:
+  $12464: InstanceVariable named AmbientLightSource@0x19f55c46b80
+  SkipBytes: 0x23
+  RValueProperty: (null)
+  ContextExpression:
+  $12485: FinalFunction target=K2_AttachTo@0x19e4d071040 (
+    $12494: InstanceVariable named ThirdPersonMesh@0x19e4d10ee00
+    $12503: literal name "SPOTLIGHT__Socket"
+    $12516: literal byte 2
+    $12518: True
+    $12519: EndFunctionParms
+  )
+$12520: Context
+  ObjectExpression:
+  $12521: InstanceVariable named AmbientLightSource@0x19f55c46b80
+  SkipBytes: 0xc
+  RValueProperty: (null)
+  ContextExpression:
+  $12542: FinalFunction target=SetGroupingPolicy@0x19e4d338ad0 (
+    $12551: literal byte 2
+    $12553: EndFunctionParms
+  )
+$12554: PopExecutionFlow (jump to popped addr)
+$12555: FlowStack.Push(0x2e70)
+$12560: FlowStack.Push(0x312e)
+$12565: FlowStack.Push(0x31b6)
+$12570: FlowStack.Push(0x31fe)
+$12575: VirtualFunction call "CreateLanternDynamicMaterial" (
+  $12588: EndFunctionParms
+)
+$12589: PopExecutionFlow (jump to popped addr)
+$12590: Let (Variable = Expression)
+  Variable:
+  $12599: LocalVariable named CallFunc_Conv_ColorToLinearColor_ReturnValue@0x19f55c46880
+  Expression:
+  $12608: CallMath target=Conv_ColorToLinearColor@0x19e4d375100 (
+    $12617: Context
+      ObjectExpression:
+      $12618: InstanceVariable named SpotLight@0x19f55c46c00
+      SkipBytes: 0x9
+      RValueProperty: LightColor@0x19e4d311e10
+      ContextExpression:
+      $12639: InstanceVariable named LightColor@0x19e4d311e10
+    $12648: EndFunctionParms
+  )
+$12649: Let (Variable = Expression)
+  Variable:
+  $12658: InstanceVariable named DefaultSpotlightColour@0x19f55c46e00
+  Expression:
+  $12667: LocalVariable named CallFunc_Conv_ColorToLinearColor_ReturnValue@0x19f55c46880
+$12676: Let (Variable = Expression)
+  Variable:
+  $12685: InstanceVariable named DefaultAmbientLightColour@0x19f55c46e80
+  Expression:
+  $12694: Context
+    ObjectExpression:
+    $12695: InstanceVariable named AmbientLightSource@0x19f55c46b80
+    SkipBytes: 0x9
+    RValueProperty: Tint@0x19e4d339000
+    ContextExpression:
+    $12716: InstanceVariable named Tint@0x19e4d339000
+$12725: PopExecutionFlow (jump to popped addr)
+$12726: LetObj (Variable = Expression)
+  Variable:
+  $12727: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue2@0x19f55c46700
+  Expression:
+  $12736: Context
+    ObjectExpression:
+    $12737: InstanceVariable named LanternTriggerGlow@0x19f55c46a80
+    SkipBytes: 0x14
+    RValueProperty: CallFunc_CreateDynamicMaterialInstance_ReturnValue2@0x19f55c46700
+    ContextExpression:
+    $12758: VirtualFunction call "CreateDynamicMaterialInstance" (
+      $12771: literal int32 0
+      $12776: NoObject
+      $12777: EndFunctionParms
+    )
+$12778: LetObj (Variable = Expression)
+  Variable:
+  $12779: InstanceVariable named LanternTriggerGlowDynamicMaterial@0x19f55c46d80
+  Expression:
+  $12788: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue2@0x19f55c46700
+$12797: PopExecutionFlow (jump to popped addr)
+$12798: LetObj (Variable = Expression)
+  Variable:
+  $12799: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f55c46680
+  Expression:
+  $12808: Context
+    ObjectExpression:
+    $12809: InstanceVariable named LanternGlow@0x19f55c46b00
+    SkipBytes: 0x14
+    RValueProperty: CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f55c46680
+    ContextExpression:
+    $12830: VirtualFunction call "CreateDynamicMaterialInstance" (
+      $12843: literal int32 0
+      $12848: NoObject
+      $12849: EndFunctionParms
+    )
+$12850: LetObj (Variable = Expression)
+  Variable:
+  $12851: InstanceVariable named LanternGlowDynamicMaterial@0x19f55c46d00
+  Expression:
+  $12860: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f55c46680
+$12869: Jump to offset 0x898
+$12874: Jump to offset 0x1ba7
+$12879: Let (Variable = Expression)
+  Variable:
+  $12888: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue5@0x19f799fc320
+  Expression:
+  $12897: Context
+    ObjectExpression:
+    $12898: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue5@0x19f799fc320
+    ContextExpression:
+    $12919: FinalFunction target=GetGameTimeInSeconds@0x19e4cd8c800 (
+      $12928: Self
+      $12929: EndFunctionParms
+    )
+$12930: Let (Variable = Expression)
+  Variable:
+  $12939: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x19f799fc390
+  Expression:
+  $12948: CallMath target=Add_FloatFloat@0x19e4d36f820 (
+    $12957: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue5@0x19f799fc320
+    $12966: InstanceVariable named TriggerGlowDuration@0x19f799fee00
+    $12975: EndFunctionParms
+  )
+$12976: Let (Variable = Expression)
+  Variable:
+  $12985: StructMemberContext prop=idx:6476@0x19e4cd589b0
+    Expression to struct:
+    $12994: LocalVariable named K2Node_MakeStruct_LinearColor@0x19f55c46800
+  Expression:
+  $13003: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue5@0x19f799fc320
+$13012: Let (Variable = Expression)
+  Variable:
+  $13021: StructMemberContext prop=idx:6465@0x19e4cd58940
+    Expression to struct:
+    $13030: LocalVariable named K2Node_MakeStruct_LinearColor@0x19f55c46800
+  Expression:
+  $13039: InstanceVariable named TriggerGlowRampInDuration@0x19f799fed20
+$13048: Let (Variable = Expression)
+  Variable:
+  $13057: StructMemberContext prop=idx:6460@0x19e4cd588d0
+    Expression to struct:
+    $13066: LocalVariable named K2Node_MakeStruct_LinearColor@0x19f55c46800
+  Expression:
+  $13075: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x19f799fc390
+$13084: Let (Variable = Expression)
+  Variable:
+  $13093: StructMemberContext prop=idx:6459@0x19e4cd58860
+    Expression to struct:
+    $13102: LocalVariable named K2Node_MakeStruct_LinearColor@0x19f55c46800
+  Expression:
+  $13111: InstanceVariable named TriggerGlowRampOutDuration@0x19f799ffab0
+$13120: Context
+  ObjectExpression:
+  $13121: InstanceVariable named LanternTriggerGlowDynamicMaterial@0x19f55c46d80
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $13142: FinalFunction target=SetVectorParameterValue@0x19e4d3d4970 (
+    $13151: literal name "Timed Blend Values"
+    $13164: LocalVariable named K2Node_MakeStruct_LinearColor@0x19f55c46800
+    $13173: EndFunctionParms
+  )
+$13174: Jump to offset 0xb0a
+$13179: VirtualFunction call "CreateLanternDynamicMaterial" (
+  $13192: EndFunctionParms
+)
+$13193: Jump to offset 0x2756
+$13198: Jump to offset 0x2d84
+$13203: Return expression:
+  $13204: Nothing
+$13205: EndOfScript

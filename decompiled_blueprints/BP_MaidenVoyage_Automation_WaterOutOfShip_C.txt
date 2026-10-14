@@ -1,0 +1,92 @@
+// /Game/Tests/Blueprints/MaidenVoyage/TaleAutomationSteps/bp_maidenvoyage_automation_wateroutofship -> BP_MaidenVoyage_Automation_WaterOutOfShip_C
+
+=== BP_MaidenVoyage_Automation_WaterOutOfShip_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fd11e7480
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fd11e7380
+$18: VirtualFunction call "idx:286116" (
+  $31: literal int32 294
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_MaidenVoyage_Automation_WaterOutOfShip_C::fn_idx_286116 (302 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fceae03f0
+$10: Let (Variable = Expression)
+  Variable:
+  $19: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19fd11e7500
+  Expression:
+  $28: FinalFunction target=GetCrewShips@0x19e4cda5420 (
+    $37: EndFunctionParms
+  )
+$38: Let (Variable = Expression)
+  Variable:
+  $47: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fceae0070
+  Expression:
+  $56: Context
+    ObjectExpression:
+    $57: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19fceae0070
+    ContextExpression:
+    $78: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $87: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19fd11e7500
+      $96: EndFunctionParms
+    )
+$97: LetBool (Variable = Expression)
+  Variable:
+  $98: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fd11e7580
+  Expression:
+  $107: CallMath target=Greater_IntInt@0x19e4d382770 (
+    $116: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fceae0070
+    $125: literal int32 0
+    $130: EndFunctionParms
+  )
+$131: JumpIfNot -> 0x12b, cond:
+  $136: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fd11e7580
+$145: Context
+  ObjectExpression:
+  $146: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $167: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $176: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19fd11e7500
+    $185: literal int32 0
+    $190: LocalVariable named CallFunc_Array_Get_Item@0x19fd11e7100
+    $199: EndFunctionParms
+  )
+$200: LetObj (Variable = Expression)
+  Variable:
+  $201: LocalVariable named CallFunc_GetInternalWater_ReturnValue@0x19fd11e7180
+  Expression:
+  $210: Context
+    ObjectExpression:
+    $211: LocalVariable named CallFunc_Array_Get_Item@0x19fd11e7100
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetInternalWater_ReturnValue@0x19fd11e7180
+    ContextExpression:
+    $232: FinalFunction target=GetInternalWater@0x19e4d11b7e0 (
+      $241: EndFunctionParms
+    )
+$242: Context
+  ObjectExpression:
+  $243: LocalVariable named CallFunc_GetInternalWater_ReturnValue@0x19fd11e7180
+  SkipBytes: 0xf
+  RValueProperty: (null)
+  ContextExpression:
+  $264: FinalFunction target=AddWaterAmount@0x19e4d45d140 (
+    $273: literal float -20
+    $278: EndFunctionParms
+  )
+$279: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $288: EndFunctionParms
+)
+$289: Jump to offset 0x12b
+$294: Jump to offset 0xa
+$299: Return expression:
+  $300: Nothing
+$301: EndOfScript

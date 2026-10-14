@@ -1,0 +1,309 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_6_TheArtOfTheTrickster/bp_theartofthetrickster_vaultencounter -> BP_TheArtOfTheTrickster_VaultEncounter_C
+
+=== BP_TheArtOfTheTrickster_VaultEncounter_C::fn_idx_1901 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_Pawn2@0x19fcc9c7480
+  Expression:
+  $9: LocalVariable named Pawn@0x19fcc9c7280
+$18: VirtualFunction call "idx:284526" (
+  $31: literal int32 228
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_TheArtOfTheTrickster_VaultEncounter_C::fn_idx_1842 (58 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_Pawn@0x19fcc9c7500
+  Expression:
+  $9: LocalVariable named Pawn@0x19fcc9c7300
+$18: LetValueOnPersistentFrame dest=K2Node_Event_DeathType@0x19fcc9c7580
+  Expression:
+  $27: LocalVariable named DeathType@0x19fcc9c7380
+$36: VirtualFunction call "idx:284526" (
+  $49: literal int32 856
+  $54: EndFunctionParms
+)
+$55: Return expression:
+  $56: Nothing
+$57: EndOfScript
+
+=== BP_TheArtOfTheTrickster_VaultEncounter_C::fn_idx_284526 (1318 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19e586b9ae0
+$10: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $19: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc9c7400
+  $28: EndFunctionParms
+)
+$29: LetObj (Variable = Expression)
+  Variable:
+  $30: LocalVariable named CallFunc_SpawnDroppedItem_ReturnValue@0x19fcc9c7880
+  Expression:
+  $39: FinalFunction target=SpawnDroppedItem@0x19e4cda8440 (
+    $48: LocalVariable named K2Node_Event_Pawn@0x19fcc9c7500
+    $57: StructMemberContext prop=idx:284462@0x19fcc9ce500
+      Expression to struct:
+      $66: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc9c7400
+    $75: True
+    $76: True
+    $77: literal text (not decoded)
+    $78: literal ansi string "You lost the medallion"
+    $102: literal ansi string "832A922342300457C79919A4D8ADED0A_FailureMessage7"
+    $152: literal ansi string ""
+    $154: EndFunctionParms
+  )
+$155: LetBool (Variable = Expression)
+  Variable:
+  $156: LocalVariable named CallFunc_EqualEqual_IntInt_ReturnValue@0x19fcc9c7d80
+  Expression:
+  $165: CallMath target=EqualEqual_IntInt@0x19e4d37af00 (
+    $174: InstanceVariable named idx:284523@0x19e586b9d10
+    $183: literal int32 0
+    $188: EndFunctionParms
+  )
+$189: JumpIfNot -> 0x523, cond:
+  $194: LocalVariable named CallFunc_EqualEqual_IntInt_ReturnValue@0x19fcc9c7d80
+$203: FinalFunction target=OnBattleWon@0x19e4d112e50 (
+  $212: EndFunctionParms
+)
+$213: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $222: EndFunctionParms
+)
+$223: Jump to offset 0x523
+$228: Let (Variable = Expression)
+  Variable:
+  $237: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter@0x19fcc9c7600
+  Expression:
+  $246: DynamicCast to AthenaAICharacter@0x19e4c35c080 of expr:
+  $255: LocalVariable named K2Node_Event_Pawn2@0x19fcc9c7480
+$264: Let (Variable = Expression)
+  Variable:
+  $273: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcc9c7680
+  Expression:
+  $282: PrimitiveCast type=71
+    Argument:
+    $284: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter@0x19fcc9c7600
+$293: JumpIfNot -> 0x523, cond:
+  $298: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcc9c7680
+$307: Let (Variable = Expression)
+  Variable:
+  $316: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter@0x19fcc9c7600
+  Expression:
+  $325: DynamicCast to AthenaAICharacter@0x19e4c35c080 of expr:
+  $334: LocalVariable named K2Node_Event_Pawn2@0x19fcc9c7480
+$343: Let (Variable = Expression)
+  Variable:
+  $352: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcc9c7680
+  Expression:
+  $361: PrimitiveCast type=71
+    Argument:
+    $363: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter@0x19fcc9c7600
+$372: Let (Variable = Expression)
+  Variable:
+  $381: LocalVariable named CallFunc_GetAIEncounterSpec_ReturnValue@0x19fcc9c7800
+  Expression:
+  $390: Context
+    ObjectExpression:
+    $391: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter@0x19fcc9c7600
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetAIEncounterSpec_ReturnValue@0x19fcc9c7800
+    ContextExpression:
+    $412: FinalFunction target=GetAIEncounterSpec@0x19e4d0aac60 (
+      $421: EndFunctionParms
+    )
+$422: LetBool (Variable = Expression)
+  Variable:
+  $423: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue@0x19fcc9c7a00
+  Expression:
+  $432: CallMath target=EqualEqual_ClassClass@0x19e4d37a860 (
+    $441: StructMemberContext prop=AIClass@0x19e4ceeffd0
+      Expression to struct:
+      $450: LocalVariable named CallFunc_GetAIEncounterSpec_ReturnValue@0x19fcc9c7800
+    $459: ObjectConst MaleCaptainAIClassId_C@0x19f57ab57c0
+    $468: EndFunctionParms
+  )
+$469: LetBool (Variable = Expression)
+  Variable:
+  $470: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue2@0x19fcc9c7b00
+  Expression:
+  $479: CallMath target=EqualEqual_ClassClass@0x19e4d37a860 (
+    $488: StructMemberContext prop=AIClass@0x19e4ceeffd0
+      Expression to struct:
+      $497: LocalVariable named CallFunc_GetAIEncounterSpec_ReturnValue@0x19fcc9c7800
+    $506: ObjectConst FemaleCaptainAIClassId_C@0x19f57ab3840
+    $515: EndFunctionParms
+  )
+$516: LetBool (Variable = Expression)
+  Variable:
+  $517: LocalVariable named CallFunc_BooleanOR_ReturnValue@0x19fcc9c7b80
+  Expression:
+  $526: CallMath target=BooleanOR@0x19e4d3717b0 (
+    $535: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue@0x19fcc9c7a00
+    $544: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue2@0x19fcc9c7b00
+    $553: EndFunctionParms
+  )
+$554: JumpIfNot -> 0x523, cond:
+  $559: LocalVariable named CallFunc_BooleanOR_ReturnValue@0x19fcc9c7b80
+$568: Context
+  ObjectExpression:
+  $569: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $590: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $599: InstanceVariable named idx:284527@0x19fcc9c7e80
+    $608: InstanceVariable named idx:284524@0x19e586b9df0
+    $617: LocalVariable named CallFunc_Array_Get_Item@0x19e586b9b50
+    $626: EndFunctionParms
+  )
+$627: Context
+  ObjectExpression:
+  $628: ObjectConst Default__AIManagerBlueprintFunctionLibrary@0x19e4da53f40
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $649: FinalFunction target=AddNameplateToAI@0x19e4d4870e0 (
+    $658: LocalVariable named K2Node_Event_Pawn2@0x19fcc9c7480
+    $667: LocalVariable named CallFunc_Array_Get_Item@0x19e586b9b50
+    $676: EndFunctionParms
+  )
+$677: Let (Variable = Expression)
+  Variable:
+  $686: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19e586b9bc0
+  Expression:
+  $695: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $704: InstanceVariable named idx:284524@0x19e586b9df0
+    $713: literal int32 1
+    $718: EndFunctionParms
+  )
+$719: Let (Variable = Expression)
+  Variable:
+  $728: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19e586b9c30
+  Expression:
+  $737: Context
+    ObjectExpression:
+    $738: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19e586b9c30
+    ContextExpression:
+    $759: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $768: InstanceVariable named idx:284527@0x19fcc9c7e80
+      $777: EndFunctionParms
+    )
+$778: Let (Variable = Expression)
+  Variable:
+  $787: LocalVariable named CallFunc_Percent_IntInt_ReturnValue@0x19e586b9ca0
+  Expression:
+  $796: CallMath target=Percent_IntInt@0x19e4d3925b0 (
+    $805: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19e586b9bc0
+    $814: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19e586b9c30
+    $823: EndFunctionParms
+  )
+$824: Let (Variable = Expression)
+  Variable:
+  $833: InstanceVariable named idx:284524@0x19e586b9df0
+  Expression:
+  $842: LocalVariable named CallFunc_Percent_IntInt_ReturnValue@0x19e586b9ca0
+$851: Jump to offset 0x523
+$856: LetBool (Variable = Expression)
+  Variable:
+  $857: LocalVariable named CallFunc_EqualEqual_ByteByte_ReturnValue@0x19fcc9c7780
+  Expression:
+  $866: CallMath target=EqualEqual_ByteByte@0x19e4d37a620 (
+    $875: LocalVariable named K2Node_Event_DeathType@0x19fcc9c7580
+    $884: literal byte 1
+    $886: EndFunctionParms
+  )
+$887: JumpIfNot -> 0x523, cond:
+  $892: LocalVariable named CallFunc_EqualEqual_ByteByte_ReturnValue@0x19fcc9c7780
+$901: Let (Variable = Expression)
+  Variable:
+  $910: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter2@0x19fcc9c7900
+  Expression:
+  $919: DynamicCast to AthenaAICharacter@0x19e4c35c080 of expr:
+  $928: LocalVariable named K2Node_Event_Pawn@0x19fcc9c7500
+$937: Let (Variable = Expression)
+  Variable:
+  $946: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fcc9c7980
+  Expression:
+  $955: PrimitiveCast type=71
+    Argument:
+    $957: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter2@0x19fcc9c7900
+$966: JumpIfNot -> 0x523, cond:
+  $971: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fcc9c7980
+$980: Let (Variable = Expression)
+  Variable:
+  $989: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter2@0x19fcc9c7900
+  Expression:
+  $998: DynamicCast to AthenaAICharacter@0x19e4c35c080 of expr:
+  $1007: LocalVariable named K2Node_Event_Pawn@0x19fcc9c7500
+$1016: Let (Variable = Expression)
+  Variable:
+  $1025: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fcc9c7980
+  Expression:
+  $1034: PrimitiveCast type=71
+    Argument:
+    $1036: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter2@0x19fcc9c7900
+$1045: Let (Variable = Expression)
+  Variable:
+  $1054: LocalVariable named CallFunc_GetAIEncounterSpec_ReturnValue2@0x19fcc9c7a80
+  Expression:
+  $1063: Context
+    ObjectExpression:
+    $1064: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter2@0x19fcc9c7900
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetAIEncounterSpec_ReturnValue2@0x19fcc9c7a80
+    ContextExpression:
+    $1085: FinalFunction target=GetAIEncounterSpec@0x19e4d0aac60 (
+      $1094: EndFunctionParms
+    )
+$1095: LetBool (Variable = Expression)
+  Variable:
+  $1096: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue3@0x19fcc9c7c00
+  Expression:
+  $1105: CallMath target=EqualEqual_ClassClass@0x19e4d37a860 (
+    $1114: StructMemberContext prop=AIClass@0x19e4ceeffd0
+      Expression to struct:
+      $1123: LocalVariable named CallFunc_GetAIEncounterSpec_ReturnValue2@0x19fcc9c7a80
+    $1132: ObjectConst MaleCaptainAIClassId_C@0x19f57ab57c0
+    $1141: EndFunctionParms
+  )
+$1142: LetBool (Variable = Expression)
+  Variable:
+  $1143: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue4@0x19fcc9c7c80
+  Expression:
+  $1152: CallMath target=EqualEqual_ClassClass@0x19e4d37a860 (
+    $1161: StructMemberContext prop=AIClass@0x19e4ceeffd0
+      Expression to struct:
+      $1170: LocalVariable named CallFunc_GetAIEncounterSpec_ReturnValue2@0x19fcc9c7a80
+    $1179: ObjectConst FemaleCaptainAIClassId_C@0x19f57ab3840
+    $1188: EndFunctionParms
+  )
+$1189: LetBool (Variable = Expression)
+  Variable:
+  $1190: LocalVariable named CallFunc_BooleanOR_ReturnValue2@0x19fcc9c7d00
+  Expression:
+  $1199: CallMath target=BooleanOR@0x19e4d3717b0 (
+    $1208: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue3@0x19fcc9c7c00
+    $1217: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue4@0x19fcc9c7c80
+    $1226: EndFunctionParms
+  )
+$1227: JumpIfNot -> 0x523, cond:
+  $1232: LocalVariable named CallFunc_BooleanOR_ReturnValue2@0x19fcc9c7d00
+$1241: Let (Variable = Expression)
+  Variable:
+  $1250: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x19e586ba4f0
+  Expression:
+  $1259: CallMath target=Subtract_IntInt@0x19e4d399ad0 (
+    $1268: InstanceVariable named idx:284523@0x19e586b9d10
+    $1277: literal int32 1
+    $1282: EndFunctionParms
+  )
+$1283: Let (Variable = Expression)
+  Variable:
+  $1292: InstanceVariable named idx:284523@0x19e586b9d10
+  Expression:
+  $1301: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x19e586ba4f0
+$1310: Jump to offset 0xa
+$1315: Return expression:
+  $1316: Nothing
+$1317: EndOfScript

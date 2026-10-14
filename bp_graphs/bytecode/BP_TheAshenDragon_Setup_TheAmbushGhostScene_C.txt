@@ -1,0 +1,123 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/AshenAge/Tale_1_TheAshenDragon/bp_theashendragon_setup_theambushghostscene -> BP_TheAshenDragon_Setup_TheAmbushGhostScene_C
+
+=== BP_TheAshenDragon_Setup_TheAmbushGhostScene_C::fn_idx_1828 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fcda4cb80
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fcda4c700
+$18: VirtualFunction call "idx:281923" (
+  $31: literal int32 418
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_TheAshenDragon_Setup_TheAmbushGhostScene_C::fn_idx_281467 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Actor@0x19fcda4c800
+  Expression:
+  $9: LocalVariable named Actor@0x19fcda4c780
+$18: VirtualFunction call "idx:281923" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_TheAshenDragon_Setup_TheAmbushGhostScene_C::fn_idx_281923 (426 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fd1850150
+$10: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $19: LocalVariable named CallFunc_GetVariables_OutStruct2@0x19fcda4cc00
+  $28: EndFunctionParms
+)
+$29: LetObj (Variable = Expression)
+  Variable:
+  $30: StructMemberContext prop=AmbushGhostScene_116_6B623FCD4E6D45A81D24AB97C8B7FD2E@0x19fcd6ffa00
+    Expression to struct:
+    $39: LocalVariable named CallFunc_GetVariables_OutStruct2@0x19fcda4cc00
+  Expression:
+  $48: LocalVariable named K2Node_CustomEvent_Actor@0x19fcda4c800
+$57: FinalFunction target=SetVariables@0x19e4cda7cc0 (
+  $66: LocalVariable named CallFunc_GetVariables_OutStruct2@0x19fcda4cc00
+  $75: EndFunctionParms
+)
+$76: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $85: EndFunctionParms
+)
+$86: Jump to offset 0x1a7
+$91: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $100: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcda4c880
+  $109: EndFunctionParms
+)
+$110: LetObj (Variable = Expression)
+  Variable:
+  $111: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue@0x19fcda4c980
+  Expression:
+  $120: Context
+    ObjectExpression:
+    $121: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x25
+    RValueProperty: CallFunc_Conv_AssetToObject_ReturnValue@0x19fcda4c980
+    ContextExpression:
+    $142: FinalFunction target=Conv_AssetToObject@0x19e4cd86800 (
+      $151: StructMemberContext prop=TheAmbushGhostSceneLocation_45_A279A05F4273A78747AD50BC59C8687A@0x19fcd6ffc00
+        Expression to struct:
+        $160: StructMemberContext prop=TheAmbushIsland_32_401B83C94BEB72DDB198D89F7847C96A@0x19fcd6ff380
+          Expression to struct:
+          $169: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcda4c880
+      $178: EndFunctionParms
+    )
+$179: Let (Variable = Expression)
+  Variable:
+  $188: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19fcda4ca80
+  Expression:
+  $197: DynamicCast to Actor@0x19e261ddc80 of expr:
+  $206: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue@0x19fcda4c980
+$215: Let (Variable = Expression)
+  Variable:
+  $224: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x19fcda4cb00
+  Expression:
+  $233: PrimitiveCast type=71
+    Argument:
+    $235: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19fcda4ca80
+$244: LetObj (Variable = Expression)
+  Variable:
+  $245: InstanceVariable named LocationActor@0x19fcda4e380
+  Expression:
+  $254: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19fcda4ca80
+$263: Let (Variable = Expression)
+  Variable:
+  $272: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19fcda4c900
+  Expression:
+  $281: Context
+    ObjectExpression:
+    $282: InstanceVariable named LocationActor@0x19fcda4e380
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetTransform_ReturnValue@0x19fcda4c900
+    ContextExpression:
+    $303: FinalFunction target=GetTransform@0x19e4cd64700 (
+      $312: EndFunctionParms
+    )
+$313: BindDelegate 'Spawned'
+  Delegate:
+  $326: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fcda4ca00
+  Object:
+  $335: Self
+$336: FinalFunction target=SpawnPhasedActorAsync@0x19e4cda8ed0 (
+  $345: StructMemberContext prop=TheAmbushGhostScene_97_C80D8A6248250034E7E45CB75A9BA033@0x19fcd6ffc80
+    Expression to struct:
+    $354: StructMemberContext prop=TheAmbushIsland_32_401B83C94BEB72DDB198D89F7847C96A@0x19fcd6ff380
+      Expression to struct:
+      $363: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcda4c880
+  $372: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19fcda4c900
+  $381: InstanceVariable named LocationActor@0x19fcda4e380
+  $390: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fcda4ca00
+  $399: literal name "None"
+  $412: EndFunctionParms
+)
+$413: Jump to offset 0x1a7
+$418: Jump to offset 0x5b
+$423: Return expression:
+  $424: Nothing
+$425: EndOfScript

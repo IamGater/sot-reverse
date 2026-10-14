@@ -1,0 +1,101 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_4_StarsOfAThief/bp_spawnitemoncaptainstablegem2 -> BP_SpawnItemOnCaptainsTableGem2_C
+
+=== BP_SpawnItemOnCaptainsTableGem2_C::OnBeginCustom (469 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19f81ca6200
+  Expression:
+  $18: FinalFunction target=GetCrewShips@0x19e4cda5420 (
+    $27: EndFunctionParms
+  )
+$28: Context
+  ObjectExpression:
+  $29: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $50: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $59: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19f81ca6200
+    $68: literal int32 0
+    $73: LocalVariable named CallFunc_Array_Get_Item@0x19f81ca5f00
+    $82: EndFunctionParms
+  )
+$83: Let (Variable = Expression)
+  Variable:
+  $92: LocalVariable named CallFunc_GetShipLocatorPositionChecked_ReturnValue@0x19f81ca5f80
+  Expression:
+  $101: Context
+    ObjectExpression:
+    $102: LocalVariable named CallFunc_Array_Get_Item@0x19f81ca5f00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetShipLocatorPositionChecked_ReturnValue@0x19f81ca5f80
+    ContextExpression:
+    $123: FinalFunction target=GetShipLocatorPositionChecked@0x19e4d11bdd0 (
+      $132: LocalVariable named Ship Location@0x19f81ca5d80
+      $141: EndFunctionParms
+    )
+$142: Let (Variable = Expression)
+  Variable:
+  $151: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x19f81ca6000
+  Expression:
+  $160: CallMath target=Add_VectorVector@0x19e4d370750 (
+    $169: LocalVariable named CallFunc_GetShipLocatorPositionChecked_ReturnValue@0x19f81ca5f80
+    $178: LocalVariable named Offset@0x19f81ca5e00
+    $187: EndFunctionParms
+  )
+$188: Let (Variable = Expression)
+  Variable:
+  $197: LocalVariable named CallFunc_Conv_VectorToTransform_ReturnValue@0x19f81ca6080
+  Expression:
+  $206: CallMath target=Conv_VectorToTransform@0x19e4d376610 (
+    $215: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x19f81ca6000
+    $224: EndFunctionParms
+  )
+$225: LetObj (Variable = Expression)
+  Variable:
+  $226: LocalVariable named CallFunc_SpawnPhasedItem_ReturnValue@0x19f81ca6100
+  Expression:
+  $235: FinalFunction target=SpawnPhasedItem@0x19e4cda9200 (
+    $244: InstanceVariable named idx:284094@0x19f81ca6280
+    $253: LocalVariable named CallFunc_Conv_VectorToTransform_ReturnValue@0x19f81ca6080
+    $262: True
+    $263: True
+    $264: literal text (not decoded)
+    $265: literal ansi string "Star Jewel lost"
+    $282: literal ansi string "490CF9564B5C9DAE30C9509E50C59210_FailureMessage7"
+    $332: literal ansi string ""
+    $334: EndFunctionParms
+  )
+$335: Context
+  ObjectExpression:
+  $336: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $357: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $366: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19f81ca6200
+    $375: literal int32 0
+    $380: LocalVariable named CallFunc_Array_Get_Item@0x19f81ca5f00
+    $389: EndFunctionParms
+  )
+$390: Context
+  ObjectExpression:
+  $391: LocalVariable named CallFunc_SpawnPhasedItem_ReturnValue@0x19f81ca6100
+  SkipBytes: 0x23
+  RValueProperty: (null)
+  ContextExpression:
+  $412: FinalFunction target=K2_AttachRootComponentToActor@0x19e4cd66660 (
+    $421: LocalVariable named CallFunc_Array_Get_Item@0x19f81ca5f00
+    $430: literal name "None"
+    $443: literal byte 0
+    $445: False
+    $446: EndFunctionParms
+  )
+$447: LetObj (Variable = Expression)
+  Variable:
+  $448: LocalOutVariable named SpawnedItem@0x19f81ca5e80
+  Expression:
+  $457: LocalVariable named CallFunc_SpawnPhasedItem_ReturnValue@0x19f81ca6100
+$466: Return expression:
+  $467: Nothing
+$468: EndOfScript

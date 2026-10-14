@@ -1,0 +1,268 @@
+// /Game/Blueprints/Prompts/PromptConditionals/bp_prompt_useshipsmap -> BP_Prompt_UseShipsMap_C
+
+=== BP_Prompt_UseShipsMap_C::fn_idx_276101 (208 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named idx:276007@0x19fbe5b6d80
+  Expression:
+  $18: CallMath target=Conv_Vector2DToVector@0x19e4d376060 (
+    $27: StructMemberContext prop=PinWorldLocation@0x19e4ce5df50
+      Expression to struct:
+      $36: LocalVariable named InputPin@0x19fbe5b6d00
+    $45: literal float 0
+    $50: EndFunctionParms
+  )
+$51: Let (Variable = Expression)
+  Variable:
+  $60: LocalVariable named CallFunc_Distance_ReturnValue@0x19fbd8bd7b0
+  Expression:
+  $69: Context
+    ObjectExpression:
+    $70: ObjectConst Default__VectorMaths@0x19e4d9e38d0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Distance_ReturnValue@0x19fbd8bd7b0
+    ContextExpression:
+    $91: FinalFunction target=Distance@0x19e4d40e7e0 (
+      $100: InstanceVariable named idx:276023@0x19fbe5b7600
+      $109: LocalVariable named idx:276007@0x19fbe5b6d80
+      $118: EndFunctionParms
+    )
+$119: LetBool (Variable = Expression)
+  Variable:
+  $120: LocalVariable named CallFunc_LessEqual_FloatFloat_ReturnValue@0x19fbe5b6e80
+  Expression:
+  $129: CallMath target=LessEqual_FloatFloat@0x19e4d3867b0 (
+    $138: LocalVariable named CallFunc_Distance_ReturnValue@0x19fbd8bd7b0
+    $147: InstanceVariable named AcceptanceRadius@0x19fbd8bf1f0
+    $156: EndFunctionParms
+  )
+$157: JumpIfNot -> 0xcd, cond:
+  $162: LocalVariable named CallFunc_LessEqual_FloatFloat_ReturnValue@0x19fbe5b6e80
+$171: Let (Variable = Expression)
+  Variable:
+  $180: InstanceVariable named States@0x19fbe5b7680
+  Expression:
+  $189: literal byte 0
+$191: VirtualFunction call "Evaluate" (
+  $204: EndFunctionParms
+)
+$205: Return expression:
+  $206: Nothing
+$207: EndOfScript
+
+=== BP_Prompt_UseShipsMap_C::fn_idx_276102 (125 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named K2Node_DynamicCast_AsMap_Table_Control_Point@0x19fbe5b6f80
+  Expression:
+  $18: DynamicCast to MapTableControlPoint@0x19e4c408340 of expr:
+  $27: StructMemberContext prop=ControllableObject@0x19e4cfc9e30
+    Expression to struct:
+    $36: LocalOutVariable named EventPlayerTakenControlOfControllable@0x19fbe5b6f00
+$45: Let (Variable = Expression)
+  Variable:
+  $54: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fbe5b7000
+  Expression:
+  $63: PrimitiveCast type=71
+    Argument:
+    $65: LocalVariable named K2Node_DynamicCast_AsMap_Table_Control_Point@0x19fbe5b6f80
+$74: JumpIfNot -> 0x7a, cond:
+  $79: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fbe5b7000
+$88: Let (Variable = Expression)
+  Variable:
+  $97: InstanceVariable named States@0x19fbe5b7680
+  Expression:
+  $106: literal byte 1
+$108: VirtualFunction call "Evaluate" (
+  $121: EndFunctionParms
+)
+$122: Return expression:
+  $123: Nothing
+$124: EndOfScript
+
+=== BP_Prompt_UseShipsMap_C::WorldMarkerManager (22 bytes) ===
+$0: VirtualFunction call "idx:276098" (
+  $13: literal int32 185
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_UseShipsMap_C::BP_AthenaPlayerCameraManager (22 bytes) ===
+$0: VirtualFunction call "idx:276098" (
+  $13: literal int32 484
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_UseShipsMap_C::Default__BP_GoldhoarderSpawnProxy_C (22 bytes) ===
+$0: VirtualFunction call "idx:276098" (
+  $13: literal int32 10
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_UseShipsMap_C::fn_idx_276100 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event2@0x19fbe5b7380
+  Expression:
+  $9: LocalVariable named Event@0x19fbe5b7080
+$18: VirtualFunction call "idx:276098" (
+  $31: literal int32 587
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_UseShipsMap_C::fn_idx_275667 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event@0x19fbe5b7480
+  Expression:
+  $9: LocalVariable named Event@0x19fbe5b7100
+$18: VirtualFunction call "idx:276098" (
+  $31: literal int32 615
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_UseShipsMap_C::fn_idx_276098 (641 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fbd8beaf0
+$10: VirtualFunction call "GetControllerObjectMessageDispatcher" (
+  $23: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher@0x19fbe5b7180
+  $32: EndFunctionParms
+)
+$33: Context
+  ObjectExpression:
+  $34: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $55: FinalFunction target=UnregisterEventFromHandle@0x19e4d411420 (
+    $64: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher@0x19fbe5b7180
+    $73: InstanceVariable named idx:276029@0x19fbe5b7780
+    $82: EndFunctionParms
+  )
+$83: VirtualFunction call "GetCharacterObjectMessageDispatcher" (
+  $96: LocalVariable named CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher@0x19fbe5b7280
+  $105: EndFunctionParms
+)
+$106: Context
+  ObjectExpression:
+  $107: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $128: FinalFunction target=UnregisterEventFromHandle@0x19e4d411420 (
+    $137: LocalVariable named CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher@0x19fbe5b7280
+    $146: InstanceVariable named idx:276099@0x19fbe5b7580
+    $155: EndFunctionParms
+  )
+$156: Jump to offset 0x27e
+$161: FinalFunction target=SetPromptAs@0x19e4d4b5a00 (
+  $170: InstanceVariable named idx:276049@0x19fbe5b7800
+  $179: EndFunctionParms
+)
+$180: Jump to offset 0x27e
+$185: LetBool (Variable = Expression)
+  Variable:
+  $186: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x19fbe5b7400
+  Expression:
+  $195: CallMath target=NotEqual_ByteByte@0x19e4d390710 (
+    $204: InstanceVariable named States@0x19fbe5b7680
+    $213: literal byte 0
+    $215: EndFunctionParms
+  )
+$216: JumpIfNot -> 0x145, cond:
+  $221: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x19fbe5b7400
+$230: LetBool (Variable = Expression)
+  Variable:
+  $231: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x19fbe5b7400
+  Expression:
+  $240: CallMath target=NotEqual_ByteByte@0x19e4d390710 (
+    $249: InstanceVariable named States@0x19fbe5b7680
+    $258: literal byte 1
+    $260: EndFunctionParms
+  )
+$261: JumpIfNot -> 0x162, cond:
+  $266: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x19fbe5b7400
+$275: LetBool (Variable = Expression)
+  Variable:
+  $276: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x19fbe5b7400
+  Expression:
+  $285: CallMath target=NotEqual_ByteByte@0x19e4d390710 (
+    $294: InstanceVariable named States@0x19fbe5b7680
+    $303: literal byte 2
+    $305: EndFunctionParms
+  )
+$306: JumpIfNot -> 0xa1, cond:
+  $311: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x19fbe5b7400
+$320: Jump to offset 0x27e
+$325: FinalFunction target=DismissAllPrompts@0x19e4d4b4cc0 (
+  $334: EndFunctionParms
+)
+$335: VirtualFunction call "Complete" (
+  $348: EndFunctionParms
+)
+$349: Jump to offset 0x27e
+$354: FinalFunction target=SetPromptAs@0x19e4d4b5a00 (
+  $363: InstanceVariable named idx:276047@0x19fbe5b7700
+  $372: EndFunctionParms
+)
+$373: Jump to offset 0x27e
+$378: VirtualFunction call "GetCharacterObjectMessageDispatcher" (
+  $391: LocalVariable named CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher2@0x19fbe5b7300
+  $400: EndFunctionParms
+)
+$401: Context
+  ObjectExpression:
+  $402: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x38
+  RValueProperty: (null)
+  ContextExpression:
+  $423: FinalFunction target=RegisterEventFromHandle@0x19e4d410c00 (
+    $432: LocalVariable named CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher2@0x19fbe5b7300
+    $441: InstanceVariable named idx:276099@0x19fbe5b7580
+    $450: Self
+    $451: literal ansi string "OnMapTablePinned"
+    $469: ObjectConst EventPlayerPinnedMapTable@0x19e4ce5deb0
+    $478: EndFunctionParms
+  )
+$479: Jump to offset 0x27e
+$484: VirtualFunction call "GetControllerObjectMessageDispatcher" (
+  $497: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher2@0x19fbe5b7200
+  $506: EndFunctionParms
+)
+$507: Context
+  ObjectExpression:
+  $508: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x35
+  RValueProperty: (null)
+  ContextExpression:
+  $529: FinalFunction target=RegisterEventFromHandle@0x19e4d410c00 (
+    $538: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher2@0x19fbe5b7200
+    $547: InstanceVariable named idx:276029@0x19fbe5b7780
+    $556: Self
+    $557: literal ansi string "CustomEvent_0"
+    $572: ObjectConst EventPlayerTakenControlOfControllable@0x19e4cfc9d90
+    $581: EndFunctionParms
+  )
+$582: Jump to offset 0x17a
+$587: VirtualFunction call "idx:276101" (
+  $600: LocalVariable named K2Node_CustomEvent_Event2@0x19fbe5b7380
+  $609: EndFunctionParms
+)
+$610: Jump to offset 0x27e
+$615: VirtualFunction call "idx:276102" (
+  $628: LocalVariable named K2Node_CustomEvent_Event@0x19fbe5b7480
+  $637: EndFunctionParms
+)
+$638: Return expression:
+  $639: Nothing
+$640: EndOfScript

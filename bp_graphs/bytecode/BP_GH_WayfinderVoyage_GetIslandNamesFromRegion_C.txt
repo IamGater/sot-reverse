@@ -1,0 +1,146 @@
+// /Game/DataAssets/VoyageRecipe/CompanyVoyages_Tales/GoldHoarders/WayfinderVoyage/bp_gh_wayfindervoyage_getislandnamesfromregion -> BP_GH_WayfinderVoyage_GetIslandNamesFromRegion_C
+
+=== BP_GH_WayfinderVoyage_GetIslandNamesFromRegion_C::fn_idx_1698 (657 bytes) ===
+$0: FlowStack.Push(0x28e)
+$5: Let (Variable = Expression)
+  Variable:
+  $14: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fceae7d90
+  Expression:
+  $23: literal int32 0
+$28: Let (Variable = Expression)
+  Variable:
+  $37: LocalVariable named Temp_int_Array_Index_Variable@0x19fceae7a80
+  Expression:
+  $46: literal int32 0
+$51: Let (Variable = Expression)
+  Variable:
+  $60: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fceae7af0
+  Expression:
+  $69: Context
+    ObjectExpression:
+    $70: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x32
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19fceae7af0
+    ContextExpression:
+    $91: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $100: StructMemberContext prop=IslandData@0x19e4d01f260
+        Expression to struct:
+        $109: Context
+          ObjectExpression:
+          $110: LocalVariable named Region@0x19fcd580280
+          SkipBytes: 0x9
+          RValueProperty: RegionData@0x19e4d4bb0b0
+          ContextExpression:
+          $131: InstanceVariable named RegionData@0x19e4d4bb0b0
+      $140: EndFunctionParms
+    )
+$141: LetBool (Variable = Expression)
+  Variable:
+  $142: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19fcd580580
+  Expression:
+  $151: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $160: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fceae7d90
+    $169: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fceae7af0
+    $178: EndFunctionParms
+  )
+$179: JumpIfNot -> 0x192, cond:
+  $184: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19fcd580580
+$193: Let (Variable = Expression)
+  Variable:
+  $202: LocalVariable named Temp_int_Array_Index_Variable@0x19fceae7a80
+  Expression:
+  $211: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fceae7d90
+$220: FlowStack.Push(0x244)
+$225: Context
+  ObjectExpression:
+  $226: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x44
+  RValueProperty: (null)
+  ContextExpression:
+  $247: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $256: StructMemberContext prop=IslandData@0x19e4d01f260
+      Expression to struct:
+      $265: Context
+        ObjectExpression:
+        $266: LocalVariable named Region@0x19fcd580280
+        SkipBytes: 0x9
+        RValueProperty: RegionData@0x19e4d4bb0b0
+        ContextExpression:
+        $287: InstanceVariable named RegionData@0x19e4d4bb0b0
+    $296: LocalVariable named Temp_int_Array_Index_Variable@0x19fceae7a80
+    $305: LocalVariable named CallFunc_Array_Get_Item@0x19fcd580380
+    $314: EndFunctionParms
+  )
+$315: Let (Variable = Expression)
+  Variable:
+  $324: LocalVariable named CallFunc_Array_Add_ReturnValue@0x19fceae7ee0
+  Expression:
+  $333: Context
+    ObjectExpression:
+    $334: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x2e
+    RValueProperty: CallFunc_Array_Add_ReturnValue@0x19fceae7ee0
+    ContextExpression:
+    $355: FinalFunction target=Array_Add@0x19e4d366810 (
+      $364: LocalVariable named Names@0x19fcd580600
+      $373: StructMemberContext prop=IslandName@0x19e4d00ea50
+        Expression to struct:
+        $382: StructMemberContext prop=Island@0x19e4d01f6d0
+          Expression to struct:
+          $391: LocalVariable named CallFunc_Array_Get_Item@0x19fcd580380
+      $400: EndFunctionParms
+    )
+$401: PopExecutionFlow (jump to popped addr)
+$402: CallMath target=BreakVector2D@0x19e4d373340 (
+  $411: StructMemberContext prop=RegionCenter@0x19e4d01faa0
+    Expression to struct:
+    $420: Context
+      ObjectExpression:
+      $421: LocalVariable named Region@0x19fcd580280
+      SkipBytes: 0x9
+      RValueProperty: RegionData@0x19e4d4bb0b0
+      ContextExpression:
+      $442: InstanceVariable named RegionData@0x19e4d4bb0b0
+  $451: LocalVariable named CallFunc_BreakVector2D_X@0x19fceae7b60
+  $460: LocalVariable named CallFunc_BreakVector2D_Y@0x19fceae7bd0
+  $469: EndFunctionParms
+)
+$470: Let (Variable = Expression)
+  Variable:
+  $479: LocalVariable named CallFunc_MakeVector_ReturnValue@0x19fcd580500
+  Expression:
+  $488: CallMath target=MakeVector@0x19e4d38a910 (
+    $497: LocalVariable named CallFunc_BreakVector2D_X@0x19fceae7b60
+    $506: LocalVariable named CallFunc_BreakVector2D_Y@0x19fceae7bd0
+    $515: literal float 0
+    $520: EndFunctionParms
+  )
+$521: Let (Variable = Expression)
+  Variable:
+  $530: LocalOutVariable named idx:285584@0x19fcd580680
+  Expression:
+  $539: LocalVariable named Names@0x19fcd580600
+$548: Let (Variable = Expression)
+  Variable:
+  $557: LocalOutVariable named idx:285608@0x19fcd580300
+  Expression:
+  $566: LocalVariable named CallFunc_MakeVector_ReturnValue@0x19fcd580500
+$575: Jump to offset 0x28e
+$580: Let (Variable = Expression)
+  Variable:
+  $589: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19fceae7c40
+  Expression:
+  $598: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $607: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fceae7d90
+    $616: literal int32 1
+    $621: EndFunctionParms
+  )
+$622: Let (Variable = Expression)
+  Variable:
+  $631: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fceae7d90
+  Expression:
+  $640: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19fceae7c40
+$649: Jump to offset 0x33
+$654: Return expression:
+  $655: Nothing
+$656: EndOfScript

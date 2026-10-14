@@ -1,0 +1,202 @@
+{
+  "class": "BP_SpawnClueSkeleton_C",
+  "source": "decompiled_blueprints/BP_SpawnClueSkeleton_C.txt",
+  "functions": [
+    {
+      "name": "OnDespawn",
+      "bytecode_bytes": 58,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_Event_Pawn2@0x19fd11eee80",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_Event_DeathType@0x19fd11eef00",
+          "edges": []
+        },
+        {
+          "offset": 36,
+          "opcode": "VirtualFunction call \"idx:285984\" (",
+          "edges": []
+        },
+        {
+          "offset": 55,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 57,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 36,
+          "expression": "idx:285984()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "fn_idx_282659",
+      "bytecode_bytes": 22,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "VirtualFunction call \"idx:285984\" (",
+          "edges": []
+        },
+        {
+          "offset": 19,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 21,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 0,
+          "expression": "idx:285984()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "OnSpawn",
+      "bytecode_bytes": 40,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_Event_Pawn@0x19fd11eed80",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "VirtualFunction call \"idx:285984\" (",
+          "edges": []
+        },
+        {
+          "offset": 37,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 39,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 18,
+          "expression": "idx:285984()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "fn_idx_285984",
+      "bytecode_bytes": 253,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "Computed Jump, offset by expr:",
+          "edges": []
+        },
+        {
+          "offset": 10,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 64,
+          "opcode": "Jump to offset 0xfa",
+          "edges": []
+        },
+        {
+          "offset": 69,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 100,
+          "opcode": "JumpIfNot -> 0xfa, cond:",
+          "edges": [
+            {
+              "to_label": "L_FA",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 114,
+          "opcode": "FinalFunction target=OnBattleWon@0x19e4d112e50 (",
+          "edges": []
+        },
+        {
+          "offset": 124,
+          "opcode": "LetObj (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 171,
+          "opcode": "BindDelegate 'OnPickup'",
+          "edges": []
+        },
+        {
+          "offset": 194,
+          "opcode": "AddMulticastDelegate",
+          "edges": []
+        },
+        {
+          "offset": 195,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 226,
+          "opcode": "LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fd11eee00",
+          "edges": []
+        },
+        {
+          "offset": 235,
+          "opcode": "Jump to offset 0xfa",
+          "edges": []
+        },
+        {
+          "offset": 240,
+          "opcode": "FinalFunction target=SignalComplete@0x19e4cda7e00 (",
+          "edges": []
+        },
+        {
+          "offset": 250,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 252,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 114,
+          "expression": "UBlueprintSpawnAIStepBase::OnBattleWon()"
+        },
+        {
+          "offset": 240,
+          "expression": "this->SignalComplete()"
+        }
+      ],
+      "types": {}
+    }
+  ]
+}

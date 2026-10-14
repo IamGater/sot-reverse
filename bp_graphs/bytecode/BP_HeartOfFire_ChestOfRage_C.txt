@@ -1,0 +1,231 @@
+// /Game/Blueprints/TallTales/Actors/AshenAge/Tale_2_HeartOfFire/bp_heartoffire_chestofrage -> BP_HeartOfFire_ChestOfRage_C
+
+=== BP_HeartOfFire_ChestOfRage_C::fn_idx_9202 (13 bytes) ===
+$0: FinalFunction target=UserConstructionScript@0x19f9a904b00 (
+  $9: EndFunctionParms
+)
+$10: Return expression:
+  $11: Nothing
+$12: EndOfScript
+
+=== BP_HeartOfFire_ChestOfRage_C::fn_idx_9152 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_HeartOfFire_ChestOfRage" (
+  $13: literal int32 62
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_HeartOfFire_ChestOfRage_C::fn_idx_8396 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_DeltaSeconds@0x19f9a126c80
+  Expression:
+  $9: LocalVariable named DeltaSeconds@0x19f9a126970
+$18: VirtualFunction call "ExecuteUbergraph_BP_HeartOfFire_ChestOfRage" (
+  $31: literal int32 401
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_HeartOfFire_ChestOfRage_C::fn_idx_255155 (112 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_vfx_ChestofRage_RageUpdate@0x19f9a126cf0
+  Expression:
+  $9: LocalVariable named vfx_ChestofRage_RageUpdate@0x19f9a1269e0
+$18: LetValueOnPersistentFrame dest=K2Node_CustomEvent_mt_ChestofRage_RageUpdate@0x19f9a126d60
+  Expression:
+  $27: LocalVariable named mt_ChestofRage_RageUpdate@0x19f9a126a50
+$36: LetValueOnPersistentFrame dest=K2Node_CustomEvent_vfx_ChestofRage_RitualSwordUpdate@0x19f9a126dd0
+  Expression:
+  $45: LocalVariable named vfx_ChestofRage_RitualSwordUpdate@0x19f9a126ac0
+$54: LetValueOnPersistentFrame dest=K2Node_CustomEvent_mt_ChestofRage_OpacityUpdate@0x19f9a126e40
+  Expression:
+  $63: LocalVariable named mt_ChestofRage_OpacityUpdate@0x19f9a126b30
+$72: LetValueOnPersistentFrame dest=K2Node_CustomEvent_vfx_ChestofRage_DissolveUpdate@0x19f9a126eb0
+  Expression:
+  $81: LocalVariable named vfx_ChestofRage_DissolveUpdate@0x19f9a126ba0
+$90: VirtualFunction call "ExecuteUbergraph_BP_HeartOfFire_ChestOfRage" (
+  $103: literal int32 406
+  $108: EndFunctionParms
+)
+$109: Return expression:
+  $110: Nothing
+$111: EndOfScript
+
+=== BP_HeartOfFire_ChestOfRage_C::fn_idx_255158 (740 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19f9a126c10
+$10: Context
+  ObjectExpression:
+  $11: InstanceVariable named vfx_HoF_ChestofRage_Dissolve_01@0x19f9ac0ff00
+  SkipBytes: 0xf
+  RValueProperty: (null)
+  ContextExpression:
+  $32: VirtualFunction call "Activate" (
+    $45: False
+    $46: EndFunctionParms
+  )
+$47: FinalFunction target=ReceiveBeginPlay@0x19f9a904d40 (
+  $56: EndFunctionParms
+)
+$57: Jump to offset 0x2e1
+$62: LetObj (Variable = Expression)
+  Variable:
+  $63: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f9ac0fe00
+  Expression:
+  $72: Context
+    ObjectExpression:
+    $73: InstanceVariable named SkeletalMesh@0x19f9a400080
+    SkipBytes: 0x14
+    RValueProperty: CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f9ac0fe00
+    ContextExpression:
+    $94: VirtualFunction call "CreateDynamicMaterialInstance" (
+      $107: literal int32 0
+      $112: NoObject
+      $113: EndFunctionParms
+    )
+$114: LetObj (Variable = Expression)
+  Variable:
+  $115: InstanceVariable named dynamic_material@0x19f9a400280
+  Expression:
+  $124: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f9ac0fe00
+$133: LetObj (Variable = Expression)
+  Variable:
+  $134: LocalVariable named CallFunc_GetAnimInstance_ReturnValue@0x19f9ac0fc80
+  Expression:
+  $143: Context
+    ObjectExpression:
+    $144: InstanceVariable named SkeletalMesh@0x19f9a400080
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetAnimInstance_ReturnValue@0x19f9ac0fc80
+    ContextExpression:
+    $165: VirtualFunction call "GetAnimInstance" (
+      $178: EndFunctionParms
+    )
+$179: Let (Variable = Expression)
+  Variable:
+  $188: LocalVariable named K2Node_DynamicCast_AsBP_Heart_Of_Fire_Chest_Of_Rage_Anim@0x19f9ac0fd00
+  Expression:
+  $197: DynamicCast to BP_HeartOfFire_ChestOfRage_Anim_C@0x19f999ee180 of expr:
+  $206: LocalVariable named CallFunc_GetAnimInstance_ReturnValue@0x19f9ac0fc80
+$215: Let (Variable = Expression)
+  Variable:
+  $224: LocalVariable named K2Node_DynamicCast_bSuccess@0x19f9ac0fd80
+  Expression:
+  $233: PrimitiveCast type=71
+    Argument:
+    $235: LocalVariable named K2Node_DynamicCast_AsBP_Heart_Of_Fire_Chest_Of_Rage_Anim@0x19f9ac0fd00
+$244: JumpIfNot -> 0x2e1, cond:
+  $249: LocalVariable named K2Node_DynamicCast_bSuccess@0x19f9ac0fd80
+$258: BindDelegate 'ChestofRageCutsceneHandler'
+  Delegate:
+  $271: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19f9ac0fe80
+  Object:
+  $280: Self
+$281: AddMulticastDelegate
+$282: Context
+  ObjectExpression:
+  $283: LocalVariable named K2Node_DynamicCast_AsBP_Heart_Of_Fire_Chest_Of_Rage_Anim@0x19f9ac0fd00
+  SkipBytes: 0x9
+  RValueProperty: CallChestofRageUpdate@0x19f9a400780
+  ContextExpression:
+  $304: InstanceVariable named CallChestofRageUpdate@0x19f9a400780
+$313: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19f9ac0fe80
+$322: Context
+  ObjectExpression:
+  $323: InstanceVariable named vfx_HoF_ChestofRage_01@0x19f9a400000
+  SkipBytes: 0xf
+  RValueProperty: (null)
+  ContextExpression:
+  $344: VirtualFunction call "Activate" (
+    $357: False
+    $358: EndFunctionParms
+  )
+$359: Context
+  ObjectExpression:
+  $360: InstanceVariable named vfx_HoF_Pendragon_Ritual_SwordtoChestBuildup_01@0x19f9ac0ff80
+  SkipBytes: 0xf
+  RValueProperty: (null)
+  ContextExpression:
+  $381: VirtualFunction call "Activate" (
+    $394: False
+    $395: EndFunctionParms
+  )
+$396: Jump to offset 0xa
+$401: Jump to offset 0x2e1
+$406: Let (Variable = Expression)
+  Variable:
+  $415: Context
+    ObjectExpression:
+    $416: InstanceVariable named vfx_HoF_ChestofRage_01@0x19f9a400000
+    SkipBytes: 0x9
+    RValueProperty: CustomParameterDrivingCurves@0x19e4d23c180
+    ContextExpression:
+    $437: InstanceVariable named CustomParameterDrivingCurves@0x19e4d23c180
+  Expression:
+  $446: LocalVariable named K2Node_CustomEvent_vfx_ChestofRage_RageUpdate@0x19f9a126cf0
+$455: Context
+  ObjectExpression:
+  $456: InstanceVariable named dynamic_material@0x19f9a400280
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $477: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $486: literal name "RageLevel"
+    $499: LocalVariable named K2Node_CustomEvent_mt_ChestofRage_RageUpdate@0x19f9a126d60
+    $508: EndFunctionParms
+  )
+$509: Let (Variable = Expression)
+  Variable:
+  $518: Context
+    ObjectExpression:
+    $519: InstanceVariable named vfx_HoF_Pendragon_Ritual_SwordtoChestBuildup_01@0x19f9ac0ff80
+    SkipBytes: 0x9
+    RValueProperty: CustomParameterDrivingCurves@0x19e4d23c180
+    ContextExpression:
+    $540: InstanceVariable named CustomParameterDrivingCurves@0x19e4d23c180
+  Expression:
+  $549: LocalVariable named K2Node_CustomEvent_vfx_ChestofRage_RitualSwordUpdate@0x19f9a126dd0
+$558: Context
+  ObjectExpression:
+  $559: InstanceVariable named vfx_HoF_Pendragon_Ritual_SwordtoChestBuildup_01@0x19f9ac0ff80
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $580: FinalFunction target=SetFloatParameter@0x19e4d23b100 (
+    $589: literal name "HoF_RateScale"
+    $602: Context
+      ObjectExpression:
+      $603: InstanceVariable named vfx_HoF_Pendragon_Ritual_SwordtoChestBuildup_01@0x19f9ac0ff80
+      SkipBytes: 0x9
+      RValueProperty: CustomParameterDrivingCurves@0x19e4d23c180
+      ContextExpression:
+      $624: InstanceVariable named CustomParameterDrivingCurves@0x19e4d23c180
+    $633: EndFunctionParms
+  )
+$634: Context
+  ObjectExpression:
+  $635: InstanceVariable named dynamic_material@0x19f9a400280
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $656: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $665: literal name "Opacity"
+    $678: LocalVariable named K2Node_CustomEvent_mt_ChestofRage_OpacityUpdate@0x19f9a126e40
+    $687: EndFunctionParms
+  )
+$688: Let (Variable = Expression)
+  Variable:
+  $697: Context
+    ObjectExpression:
+    $698: InstanceVariable named vfx_HoF_ChestofRage_Dissolve_01@0x19f9ac0ff00
+    SkipBytes: 0x9
+    RValueProperty: CustomParameterDrivingCurves@0x19e4d23c180
+    ContextExpression:
+    $719: InstanceVariable named CustomParameterDrivingCurves@0x19e4d23c180
+  Expression:
+  $728: LocalVariable named K2Node_CustomEvent_vfx_ChestofRage_DissolveUpdate@0x19f9a126eb0
+$737: Return expression:
+  $738: Nothing
+$739: EndOfScript

@@ -1,0 +1,190 @@
+{
+  "class": "BP_Cutlass_Item_C",
+  "source": "decompiled_blueprints/BP_Cutlass_Item_C.txt",
+  "functions": [
+    {
+      "name": "DoBlockEffect",
+      "bytecode_bytes": 254,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetObj (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 24,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 60,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 89,
+          "opcode": "JumpIfNot -> 0xfb, cond:",
+          "edges": [
+            {
+              "to_label": "L_FB",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 103,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 127,
+          "opcode": "LetObj (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 251,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 253,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [],
+      "types": {
+        "CallFunc_GetWielder_ReturnValue": "AActor*",
+        "K2Node_DynamicCast_AsAthena_Player_Character": "AthenaPlayerCharacter*",
+        "K2Node_DynamicCast_bSuccess": "bool",
+        "CallFunc_IsUnderwater_ReturnValue": "bool",
+        "CallFunc_AthenaSpawnEmitterAttachedWithOwner_ReturnValue": "UParticleSystemComponent*"
+      }
+    },
+    {
+      "name": "UserConstructionScript",
+      "bytecode_bytes": 3,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 2,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [],
+      "types": {}
+    },
+    {
+      "name": "OnBlockedAttack",
+      "bytecode_bytes": 40,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_Event_Event@0x19f46d14400",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Cutlass_Item\" (",
+          "edges": []
+        },
+        {
+          "offset": 37,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 39,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 18,
+          "expression": "ExecuteUbergraph_BP_Cutlass_Item()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "ExecuteUbergraph_BP_Cutlass_Item",
+      "bytecode_bytes": 118,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "Computed Jump, offset by expr:",
+          "edges": []
+        },
+        {
+          "offset": 10,
+          "opcode": "VirtualFunction call \"DoBlockEffect\" (",
+          "edges": []
+        },
+        {
+          "offset": 24,
+          "opcode": "Jump to offset 0x73",
+          "edges": []
+        },
+        {
+          "offset": 29,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 72,
+          "opcode": "JumpIfNot -> 0xa, cond:",
+          "edges": [
+            {
+              "to_label": "L_A",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 86,
+          "opcode": "Jump to offset 0x73",
+          "edges": []
+        },
+        {
+          "offset": 91,
+          "opcode": "FinalFunction target=OnBlockedAttack@0x19e4d1df4e0 (",
+          "edges": []
+        },
+        {
+          "offset": 110,
+          "opcode": "Jump to offset 0x1d",
+          "edges": []
+        },
+        {
+          "offset": 115,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 117,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 10,
+          "expression": "DoBlockEffect()"
+        },
+        {
+          "offset": 91,
+          "expression": "this->OnBlockedAttack(K2Node_Event_Event)"
+        }
+      ],
+      "types": {
+        "CallFunc_IsDedicatedServer_ReturnValue": "bool"
+      }
+    }
+  ]
+}

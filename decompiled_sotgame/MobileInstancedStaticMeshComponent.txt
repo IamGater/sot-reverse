@@ -1,0 +1,39 @@
+// Class: MobileInstancedStaticMeshComponent (1 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+MobileInstancedStaticMeshComponent::AddInstance @ RVA 0x2B0F7A0 EA 0x7FF6F652F7A0
+======================================================================
+__int64 __fastcall sub_7FF6F652F7A0(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v3; // rdi
+  _OWORD *v7; // rdx
+  __int64 v8; // rax
+  __int64 result; // rax
+  _OWORD v10[3]; // [rsp+20h] [rbp-58h] BYREF
+
+  v10[1] = 0;
+  v3 = 0;
+  v10[0] = _mm_shuffle_ps((__m128)0LL, _mm_movehl_ps((__m128)xmmword_7FF6FA5E7D10, (__m128)0LL), 196);
+  v10[2] = _mm_and_ps((__m128)xmmword_7FF6FA5E7D10, (__m128)xmmword_7FF6FA5E7D20);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v7 = v10;
+  if ( a2[7] )
+    v7 = (_OWORD *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = sub_7FF6F5EEF6D0(a1, v7);
+  *a3 = result;
+  return result;
+}
+

@@ -1,0 +1,226 @@
+// Class: StaticMeshActorBlueprintLibrary (2 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+StaticMeshActorBlueprintLibrary::FindAllStaticMeshActors @ RVA 0x2DEF460 EA 0x7FF6F680F460
+======================================================================
+// Hidden C++ exception states: #wind=5
+__int64 __fastcall sub_7FF6F680F460(__int64 a1, _QWORD *a2)
+{
+  __int64 **v3; // rdi
+  void *v4; // rax
+  void *v5; // rsi
+  __int64 v6; // rbx
+  __int64 result; // rax
+  int v8; // edi
+  __int64 *v9; // rbx
+  __int64 *v10; // [rsp+30h] [rbp-30h] BYREF
+  __int64 v11; // [rsp+38h] [rbp-28h]
+  void *v12; // [rsp+40h] [rbp-20h] BYREF
+  __int64 v13; // [rsp+48h] [rbp-18h]
+  void *Src; // [rsp+50h] [rbp-10h] BYREF
+  __int64 v15; // [rsp+58h] [rbp-8h]
+  __int64 v16; // [rsp+88h] [rbp+28h] BYREF
+  __int64 v17; // [rsp+98h] [rbp+38h] BYREF
+
+  v17 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  Src = nullptr;
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &Src);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &Src);
+  }
+  v10 = nullptr;
+  v11 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v3 = &v10;
+  if ( a2[7] )
+    v3 = (__int64 **)a2[7];
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  a2[4] += a2[4] != 0;
+  v4 = nullptr;
+  v12 = nullptr;
+  v13 = 0;
+  v5 = Src;
+  v6 = (int)v15;
+  if ( (_DWORD)v15 )
+  {
+    v4 = (void *)sub_7FF6F4DFAA90(0, 8LL * (int)v15, 0);
+    v12 = v4;
+  }
+  memcpy(v4, v5, 8 * v6);
+  LODWORD(v13) = v6;
+  HIDWORD(v13) = v6;
+  result = sub_7FF6F6802EE0(v17, &v12, v3, v16, -2, &v12);
+  v8 = v11;
+  v9 = v10;
+  if ( (_DWORD)v11 )
+  {
+    do
+    {
+      if ( *v9 )
+      {
+        result = sub_7FF6F4DED1F0(*v9);
+        if ( *v9 )
+          *v9 = 0;
+      }
+      v9 += 2;
+      --v8;
+    }
+    while ( v8 );
+    v9 = v10;
+  }
+  if ( v9 )
+  {
+    result = sub_7FF6F4DED1F0((__int64)v9);
+    v10 = nullptr;
+  }
+  if ( Src )
+    return sub_7FF6F4DED1F0((__int64)Src);
+  return result;
+}
+
+
+======================================================================
+StaticMeshActorBlueprintLibrary::FindAllStaticMeshComponents @ RVA 0x2DEF660 EA 0x7FF6F680F660
+======================================================================
+// Hidden C++ exception states: #wind=5
+__int64 __fastcall sub_7FF6F680F660(__int64 a1, _QWORD *a2)
+{
+  __int64 **v3; // rdi
+  void *v4; // rax
+  void *v5; // rsi
+  __int64 v6; // rbx
+  __int64 result; // rax
+  int v8; // edi
+  __int64 *v9; // rbx
+  __int64 *v10; // [rsp+30h] [rbp-30h] BYREF
+  __int64 v11; // [rsp+38h] [rbp-28h]
+  void *v12; // [rsp+40h] [rbp-20h] BYREF
+  __int64 v13; // [rsp+48h] [rbp-18h]
+  void *Src; // [rsp+50h] [rbp-10h] BYREF
+  __int64 v15; // [rsp+58h] [rbp-8h]
+  __int64 v16; // [rsp+88h] [rbp+28h] BYREF
+  __int64 v17; // [rsp+98h] [rbp+38h] BYREF
+
+  v17 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  Src = nullptr;
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &Src);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &Src);
+  }
+  v10 = nullptr;
+  v11 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v3 = &v10;
+  if ( a2[7] )
+    v3 = (__int64 **)a2[7];
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  a2[4] += a2[4] != 0;
+  v4 = nullptr;
+  v12 = nullptr;
+  v13 = 0;
+  v5 = Src;
+  v6 = (int)v15;
+  if ( (_DWORD)v15 )
+  {
+    v4 = (void *)sub_7FF6F4DFAA90(0, 8LL * (int)v15, 0);
+    v12 = v4;
+  }
+  memcpy(v4, v5, 8 * v6);
+  LODWORD(v13) = v6;
+  HIDWORD(v13) = v6;
+  result = sub_7FF6F6802F20(v17, &v12, v3, v16, -2, &v12);
+  v8 = v11;
+  v9 = v10;
+  if ( (_DWORD)v11 )
+  {
+    do
+    {
+      if ( *v9 )
+      {
+        result = sub_7FF6F4DED1F0(*v9);
+        if ( *v9 )
+          *v9 = 0;
+      }
+      v9 += 2;
+      --v8;
+    }
+    while ( v8 );
+    v9 = v10;
+  }
+  if ( v9 )
+  {
+    result = sub_7FF6F4DED1F0((__int64)v9);
+    v10 = nullptr;
+  }
+  if ( Src )
+    return sub_7FF6F4DED1F0((__int64)Src);
+  return result;
+}
+

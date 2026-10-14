@@ -1,0 +1,464 @@
+// E:\unreal-projects\Athena\Content\Blueprints\Prompts\PromptConditionals\bp_prompt_repairship.uasset -> BP_Prompt_RepairShip_C
+
+=== BP_Prompt_RepairShip_C::UnregisterDamageEventFromCurrentShip (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_Prompt_RepairShip_C::RegisterDamageEventWithCurrentShip (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_Prompt_RepairShip_C::Evaluate (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Prompt_RepairShip" (
+  $13: literal int32 1640
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_RepairShip_C::RegisterCharacterEvents_Implementable (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_CharacterDispatcher2@0x21393213e00
+  Expression:
+  $9: LocalOutVariable named CharacterDispatcher@0x21393213900
+$18: VirtualFunction call "ExecuteUbergraph_BP_Prompt_RepairShip" (
+  $31: literal int32 622
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_RepairShip_C::OnCurrentShipChanged (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event2@0x21393213f00
+  Expression:
+  $9: LocalVariable named Event@0x21393213980
+$18: VirtualFunction call "ExecuteUbergraph_BP_Prompt_RepairShip" (
+  $31: literal int32 709
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_RepairShip_C::OnShipDamaged (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event@0x21393214380
+  Expression:
+  $9: LocalVariable named Event@0x21393213a00
+$18: VirtualFunction call "ExecuteUbergraph_BP_Prompt_RepairShip" (
+  $31: literal int32 1211
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_RepairShip_C::UnregisterCharacterEvents_Implementable (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_CharacterDispatcher@0x21393214480
+  Expression:
+  $9: LocalOutVariable named CharacterDispatcher@0x21393213a80
+$18: VirtualFunction call "ExecuteUbergraph_BP_Prompt_RepairShip" (
+  $31: literal int32 1358
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_RepairShip_C::ExecuteUbergraph_BP_Prompt_RepairShip (1648 bytes) ===
+$0: FlowStack.Push(0x66d)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x2138e441810
+$15: LetBool (Variable = Expression)
+  Variable:
+  $16: InstanceVariable named State_Complete@0x21393214900
+  Expression:
+  $25: True
+$26: FinalFunction target=DismissAllPrompts@0x212d6ad4cc0 (
+  $35: EndFunctionParms
+)
+$36: PopExecutionFlow (jump to popped addr)
+$37: LetObj (Variable = Expression)
+  Variable:
+  $38: LocalVariable named CallFunc_K2_GetPawn_ReturnValue@0x21393213b00
+  Expression:
+  $47: Context
+    ObjectExpression:
+    $48: InstanceVariable named PlayerController@0x212d6ad6140
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetPawn_ReturnValue@0x21393213b00
+    ContextExpression:
+    $69: FinalFunction target=K2_GetPawn@0x212d670f6a0 (
+      $78: EndFunctionParms
+    )
+$79: Let (Variable = Expression)
+  Variable:
+  $88: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x21393213b80
+  Expression:
+  $97: DynamicCast to AthenaPlayerCharacter@0x212d54d6040 of expr:
+  $106: LocalVariable named CallFunc_K2_GetPawn_ReturnValue@0x21393213b00
+$115: Let (Variable = Expression)
+  Variable:
+  $124: LocalVariable named K2Node_DynamicCast_bSuccess@0x21393213c00
+  Expression:
+  $133: PrimitiveCast type=71
+    Argument:
+    $135: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x21393213b80
+$144: PopExecutionFlowIfNot, cond:
+$145: LocalVariable named K2Node_DynamicCast_bSuccess@0x21393213c00
+$154: LetObj (Variable = Expression)
+  Variable:
+  $155: LocalVariable named CallFunc_GetCurrentShip_ReturnValue@0x21393213c80
+  Expression:
+  $164: Context
+    ObjectExpression:
+    $165: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x21393213b80
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetCurrentShip_ReturnValue@0x21393213c80
+    ContextExpression:
+    $186: VirtualFunction call "GetCurrentShip" (
+      $199: EndFunctionParms
+    )
+$200: Let (Variable = Expression)
+  Variable:
+  $209: LocalVariable named K2Node_DynamicCast_AsShip@0x21393213d00
+  Expression:
+  $218: DynamicCast to Ship@0x212d59cec40 of expr:
+  $227: LocalVariable named CallFunc_GetCurrentShip_ReturnValue@0x21393213c80
+$236: Let (Variable = Expression)
+  Variable:
+  $245: LocalVariable named K2Node_DynamicCast_bSuccess2@0x21393213d80
+  Expression:
+  $254: PrimitiveCast type=71
+    Argument:
+    $256: LocalVariable named K2Node_DynamicCast_AsShip@0x21393213d00
+$265: PopExecutionFlowIfNot, cond:
+$266: LocalVariable named K2Node_DynamicCast_bSuccess2@0x21393213d80
+$275: LetObj (Variable = Expression)
+  Variable:
+  $276: InstanceVariable named CurrentShip@0x21393214a80
+  Expression:
+  $285: LocalVariable named K2Node_DynamicCast_AsShip@0x21393213d00
+$294: Let (Variable = Expression)
+  Variable:
+  $303: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x21393214600
+  Expression:
+  $312: Context
+    ObjectExpression:
+    $313: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x21393214600
+    ContextExpression:
+    $334: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x212d6a30390 (
+      $343: InstanceVariable named CurrentShip@0x21393214a80
+      $352: EndFunctionParms
+    )
+$353: Context
+  ObjectExpression:
+  $354: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x35
+  RValueProperty: (null)
+  ContextExpression:
+  $375: FinalFunction target=RegisterEventFromHandle@0x212d6a30c00 (
+    $384: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x21393214600
+    $393: InstanceVariable named Handle_OnShipDamaged@0x21393214880
+    $402: Self
+    $403: literal ansi string "OnShipDamaged"
+    $418: ObjectConst DamageZoneDamageLevelChanged@0x212d6647770
+    $427: EndFunctionParms
+  )
+$428: PopExecutionFlow (jump to popped addr)
+$429: Context
+  ObjectExpression:
+  $430: ObjectConst Default__TutorialHelpersBlueprintLibrary@0x212d712f570
+  SkipBytes: 0x14
+  RValueProperty: (null)
+  ContextExpression:
+  $451: FinalFunction target=FirePromptCompleted@0x212d6b34330 (
+    $460: ObjectConst RepairShip_PromptAccessKey_C@0x213930b1200
+    $469: Self
+    $470: EndFunctionParms
+  )
+$471: Context
+  ObjectExpression:
+  $472: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $493: FinalFunction target=Delay@0x212d63a6d40 (
+    $502: Self
+    $503: literal float 15
+    $508: literal struct LatentActionInfo@0x212d63a6e80 (size 32)
+      $521: literal CodeSkipSizeType 0xf
+      $526: literal int32 1
+      $531: literal name "ExecuteUbergraph_BP_Prompt_RepairShip"
+      $544: Self
+      $545: EndStructConst
+    $546: EndFunctionParms
+  )
+$547: PopExecutionFlow (jump to popped addr)
+$548: JumpIfNot -> 0x23d, cond:
+  $553: InstanceVariable named State_Complete@0x21393214900
+$562: FinalFunction target=DismissAllPrompts@0x212d6ad4cc0 (
+  $571: EndFunctionParms
+)
+$572: PopExecutionFlow (jump to popped addr)
+$573: JumpIfNot -> 0x263, cond:
+  $578: InstanceVariable named State_ShipDamaged@0x21393214800
+$587: FinalFunction target=SetPromptAs@0x212d6ad5a00 (
+  $596: InstanceVariable named Prompt_RepairShip@0x21393214980
+  $605: EndFunctionParms
+)
+$606: Jump to offset 0x1ad
+$611: FinalFunction target=DismissAllPrompts@0x212d6ad4cc0 (
+  $620: EndFunctionParms
+)
+$621: PopExecutionFlow (jump to popped addr)
+$622: Context
+  ObjectExpression:
+  $623: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x3c
+  RValueProperty: (null)
+  ContextExpression:
+  $644: FinalFunction target=RegisterEventFromHandle@0x212d6a30c00 (
+    $653: LocalVariable named K2Node_Event_CharacterDispatcher2@0x21393213e00
+    $662: InstanceVariable named Handle_CurrentShipChanged@0x21393214a00
+    $671: Self
+    $672: literal ansi string "OnCurrentShipChanged"
+    $694: ObjectConst EventCurrentShipChanged@0x212d65ca110
+    $703: EndFunctionParms
+  )
+$704: Jump to offset 0x25
+$709: LetBool (Variable = Expression)
+  Variable:
+  $710: LocalVariable named CallFunc_IsValid_ReturnValue2@0x21393214100
+  Expression:
+  $719: Context
+    ObjectExpression:
+    $720: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_IsValid_ReturnValue2@0x21393214100
+    ContextExpression:
+    $741: FinalFunction target=IsValid@0x212d63ae380 (
+      $750: StructMemberContext prop=CurrentShip@0x212d65ca1b0
+        Expression to struct:
+        $759: LocalVariable named K2Node_CustomEvent_Event2@0x21393213f00
+      $768: EndFunctionParms
+    )
+$769: LetBool (Variable = Expression)
+  Variable:
+  $770: LocalVariable named CallFunc_NotEqual_ObjectObject_ReturnValue@0x21393214180
+  Expression:
+  $779: CallMath target=NotEqual_ObjectObject@0x212d69b1430 (
+    $788: StructMemberContext prop=CurrentShip@0x212d65ca1b0
+      Expression to struct:
+      $797: LocalVariable named K2Node_CustomEvent_Event2@0x21393213f00
+    $806: InstanceVariable named CurrentShip@0x21393214a80
+    $815: EndFunctionParms
+  )
+$816: LetBool (Variable = Expression)
+  Variable:
+  $817: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x21393214280
+  Expression:
+  $826: CallMath target=BooleanAND@0x212d69910f0 (
+    $835: LocalVariable named CallFunc_NotEqual_ObjectObject_ReturnValue@0x21393214180
+    $844: LocalVariable named CallFunc_IsValid_ReturnValue2@0x21393214100
+    $853: EndFunctionParms
+  )
+$854: PopExecutionFlowIfNot, cond:
+$855: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x21393214280
+$864: LetBool (Variable = Expression)
+  Variable:
+  $865: LocalVariable named CallFunc_IsValid_ReturnValue@0x21393213f80
+  Expression:
+  $874: Context
+    ObjectExpression:
+    $875: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x21393213f80
+    ContextExpression:
+    $896: FinalFunction target=IsValid@0x212d63ae380 (
+      $905: InstanceVariable named CurrentShip@0x21393214a80
+      $914: EndFunctionParms
+    )
+$915: JumpIfNot -> 0x44f, cond:
+  $920: LocalVariable named CallFunc_IsValid_ReturnValue@0x21393213f80
+$929: Let (Variable = Expression)
+  Variable:
+  $938: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x21393214200
+  Expression:
+  $947: Context
+    ObjectExpression:
+    $948: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x21393214200
+    ContextExpression:
+    $969: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x212d6a30390 (
+      $978: InstanceVariable named CurrentShip@0x21393214a80
+      $987: EndFunctionParms
+    )
+$988: LetBool (Variable = Expression)
+  Variable:
+  $989: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue@0x21393214300
+  Expression:
+  $998: Context
+    ObjectExpression:
+    $999: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsHandleRegistered_ReturnValue@0x21393214300
+    ContextExpression:
+    $1020: FinalFunction target=IsHandleRegistered@0x212d6a30550 (
+      $1029: InstanceVariable named Handle_OnShipDamaged@0x21393214880
+      $1038: EndFunctionParms
+    )
+$1039: JumpIfNot -> 0x44f, cond:
+  $1044: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue@0x21393214300
+$1053: Context
+  ObjectExpression:
+  $1054: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $1075: FinalFunction target=UnregisterEventFromHandle@0x212d6a31420 (
+    $1084: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x21393214200
+    $1093: InstanceVariable named Handle_OnShipDamaged@0x21393214880
+    $1102: EndFunctionParms
+  )
+$1103: Let (Variable = Expression)
+  Variable:
+  $1112: LocalVariable named K2Node_DynamicCast_AsShip2@0x21393214000
+  Expression:
+  $1121: DynamicCast to Ship@0x212d59cec40 of expr:
+  $1130: StructMemberContext prop=CurrentShip@0x212d65ca1b0
+    Expression to struct:
+    $1139: LocalVariable named K2Node_CustomEvent_Event2@0x21393213f00
+$1148: Let (Variable = Expression)
+  Variable:
+  $1157: LocalVariable named K2Node_DynamicCast_bSuccess3@0x21393214080
+  Expression:
+  $1166: PrimitiveCast type=71
+    Argument:
+    $1168: LocalVariable named K2Node_DynamicCast_AsShip2@0x21393214000
+$1177: PopExecutionFlowIfNot, cond:
+$1178: LocalVariable named K2Node_DynamicCast_bSuccess3@0x21393214080
+$1187: LetObj (Variable = Expression)
+  Variable:
+  $1188: InstanceVariable named CurrentShip@0x21393214a80
+  Expression:
+  $1197: LocalVariable named K2Node_DynamicCast_AsShip2@0x21393214000
+$1206: Jump to offset 0x126
+$1211: LetBool (Variable = Expression)
+  Variable:
+  $1212: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x21393214400
+  Expression:
+  $1221: CallMath target=Greater_IntInt@0x212d69a2770 (
+    $1230: StructMemberContext prop=DamageLevel@0x212d6647810
+      Expression to struct:
+      $1239: LocalVariable named K2Node_CustomEvent_Event@0x21393214380
+    $1248: literal int32 0
+    $1253: EndFunctionParms
+  )
+$1254: LetBool (Variable = Expression)
+  Variable:
+  $1255: LocalVariable named CallFunc_EqualEqual_BoolBool_ReturnValue@0x21393214500
+  Expression:
+  $1264: CallMath target=EqualEqual_BoolBool@0x212d699a3e0 (
+    $1273: InstanceVariable named State_ShipDamaged@0x21393214800
+    $1282: False
+    $1283: EndFunctionParms
+  )
+$1284: LetBool (Variable = Expression)
+  Variable:
+  $1285: LocalVariable named CallFunc_BooleanAND_ReturnValue2@0x21393214580
+  Expression:
+  $1294: CallMath target=BooleanAND@0x212d69910f0 (
+    $1303: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x21393214400
+    $1312: LocalVariable named CallFunc_EqualEqual_BoolBool_ReturnValue@0x21393214500
+    $1321: EndFunctionParms
+  )
+$1322: PopExecutionFlowIfNot, cond:
+$1323: LocalVariable named CallFunc_BooleanAND_ReturnValue2@0x21393214580
+$1332: LetBool (Variable = Expression)
+  Variable:
+  $1333: InstanceVariable named State_ShipDamaged@0x21393214800
+  Expression:
+  $1342: True
+$1343: VirtualFunction call "Evaluate" (
+  $1356: EndFunctionParms
+)
+$1357: PopExecutionFlow (jump to popped addr)
+$1358: Context
+  ObjectExpression:
+  $1359: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $1380: FinalFunction target=UnregisterEventFromHandle@0x212d6a31420 (
+    $1389: LocalVariable named K2Node_Event_CharacterDispatcher@0x21393214480
+    $1398: InstanceVariable named Handle_CurrentShipChanged@0x21393214a00
+    $1407: EndFunctionParms
+  )
+$1408: LetBool (Variable = Expression)
+  Variable:
+  $1409: LocalVariable named CallFunc_IsValid_ReturnValue3@0x21393214700
+  Expression:
+  $1418: Context
+    ObjectExpression:
+    $1419: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue3@0x21393214700
+    ContextExpression:
+    $1440: FinalFunction target=IsValid@0x212d63ae380 (
+      $1449: InstanceVariable named CurrentShip@0x21393214a80
+      $1458: EndFunctionParms
+    )
+$1459: PopExecutionFlowIfNot, cond:
+$1460: LocalVariable named CallFunc_IsValid_ReturnValue3@0x21393214700
+$1469: Let (Variable = Expression)
+  Variable:
+  $1478: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue3@0x21393214780
+  Expression:
+  $1487: Context
+    ObjectExpression:
+    $1488: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue3@0x21393214780
+    ContextExpression:
+    $1509: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x212d6a30390 (
+      $1518: InstanceVariable named CurrentShip@0x21393214a80
+      $1527: EndFunctionParms
+    )
+$1528: LetBool (Variable = Expression)
+  Variable:
+  $1529: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue2@0x21393214680
+  Expression:
+  $1538: Context
+    ObjectExpression:
+    $1539: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsHandleRegistered_ReturnValue2@0x21393214680
+    ContextExpression:
+    $1560: FinalFunction target=IsHandleRegistered@0x212d6a30550 (
+      $1569: InstanceVariable named Handle_OnShipDamaged@0x21393214880
+      $1578: EndFunctionParms
+    )
+$1579: PopExecutionFlowIfNot, cond:
+$1580: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue2@0x21393214680
+$1589: Context
+  ObjectExpression:
+  $1590: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $1611: FinalFunction target=UnregisterEventFromHandle@0x212d6a31420 (
+    $1620: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue3@0x21393214780
+    $1629: InstanceVariable named Handle_OnShipDamaged@0x21393214880
+    $1638: EndFunctionParms
+  )
+$1639: PopExecutionFlow (jump to popped addr)
+$1640: Jump to offset 0x224
+$1645: Return expression:
+  $1646: Nothing
+$1647: EndOfScript

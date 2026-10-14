@@ -1,0 +1,1351 @@
+// Class: AthenaAnimationInstance (59 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+AthenaAnimationInstance::AdjustIdleTransition @ RVA 0xB093A0 EA 0x7FF6F45293A0
+======================================================================
+__int64 __fastcall sub_7FF6F45293A0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F3DFB980();
+}
+
+
+======================================================================
+AthenaAnimationInstance::EnteredItemBlockingFeedbackState @ RVA 0xB0A160 EA 0x7FF6F452A160
+======================================================================
+__int64 __fastcall sub_7FF6F452A160(__int64 a1, __int64 a2)
+{
+  __int64 v2; // rcx
+  __int64 result; // rax
+
+  result = *(_QWORD *)(a2 + 32);
+  *(_QWORD *)(a2 + 32) = result + (result != 0);
+  v2 = a1 + 4448;
+  *(_BYTE *)(v2 + 68) = 0;
+  *(_BYTE *)(v2 + 60) = 3;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetAnimationLength @ RVA 0xB0ABD0 EA 0x7FF6F452ABD0
+======================================================================
+void __fastcall sub_7FF6F452ABD0(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v7 = a2[4];
+  v8 = v9;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  *a3 = sub_7FF6F3E01F60(a1, v8);
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetControllableSocketGroup @ RVA 0xB0B1A0 EA 0x7FF6F452B1A0
+======================================================================
+__int64 __fastcall sub_7FF6F452B1A0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)(a1 + 1664) + 24LL))(a1 + 1664);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetControllableSocketGroupCharacterSize @ RVA 0xB0B1E0 EA 0x7FF6F452B1E0
+======================================================================
+__int64 __fastcall sub_7FF6F452B1E0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)(a1 + 1664) + 16LL))(a1 + 1664);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetCurrentEqippedItem @ RVA 0xB0B360 EA 0x7FF6F452B360
+======================================================================
+__int64 __fastcall sub_7FF6F452B360(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E02240();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetInDockingTransition @ RVA 0xB0B7A0 EA 0x7FF6F452B7A0
+======================================================================
+__int64 __fastcall sub_7FF6F452B7A0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)(a1 + 1672) + 16LL))(a1 + 1672);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetItemBlockingFeedbackSequence @ RVA 0xB0C040 EA 0x7FF6F452C040
+======================================================================
+__int64 __fastcall sub_7FF6F452C040(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E02BA0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetItemBlockingMainBlendspace @ RVA 0xB0C070 EA 0x7FF6F452C070
+======================================================================
+__int64 __fastcall sub_7FF6F452C070(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E02BD0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetItemBlockingMainIntoAnimation @ RVA 0xB0C0A0 EA 0x7FF6F452C0A0
+======================================================================
+__int64 __fastcall sub_7FF6F452C0A0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E02C00();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetItemBlockingMainOutOfAnimation @ RVA 0xB0C0D0 EA 0x7FF6F452C0D0
+======================================================================
+__int64 __fastcall sub_7FF6F452C0D0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E02C40();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetItemBlockingSubState @ RVA 0xB0C100 EA 0x7FF6F452C100
+======================================================================
+__int64 __fastcall sub_7FF6F452C100(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E02C70();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetItemComplexOneShotPlaySpeed @ RVA 0xB0C130 EA 0x7FF6F452C130
+======================================================================
+void __fastcall sub_7FF6F452C130(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rdx
+  unsigned __int8 v10; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+50h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  v9 = v11;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  *a3 = sub_7FF6F3E02C80(a1, v9, v8);
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetItemComplexOneShotSequence @ RVA 0xB0C200 EA 0x7FF6F452C200
+======================================================================
+__int64 __fastcall sub_7FF6F452C200(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  bool v3; // zf
+  __int64 v7; // rdi
+  __int64 v8; // rax
+  __int64 v9; // r8
+  __int64 v10; // rdx
+  __int64 result; // rax
+  unsigned __int8 v12; // [rsp+48h] [rbp+10h] BYREF
+  unsigned int v13; // [rsp+50h] [rbp+18h] BYREF
+
+  v3 = a2[4] == 0;
+  v12 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  v7 = 0;
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v8 = a2[4];
+  v9 = v13;
+  v10 = v12;
+  LOBYTE(v7) = v8 != 0;
+  a2[4] = v8 + v7;
+  result = sub_7FF6F3E02C90(a1, v10, v9);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetItemComplexOneShotStructure @ RVA 0xB0C2C0 EA 0x7FF6F452C2C0
+======================================================================
+__int64 __fastcall sub_7FF6F452C2C0(int a1, _QWORD *a2, __int64 a3)
+{
+  bool v3; // zf
+  __int64 v7; // rdi
+  bool v8; // r14
+  char v9; // si
+  __int64 v10; // rax
+  int v11; // r8d
+  __int64 result; // rax
+  int v13; // [rsp+28h] [rbp-60h]
+  int v14; // [rsp+30h] [rbp-58h] BYREF
+  char v15; // [rsp+38h] [rbp-50h] BYREF
+  unsigned __int8 v16; // [rsp+98h] [rbp+10h] BYREF
+  int v17; // [rsp+A0h] [rbp+18h] BYREF
+  int v18; // [rsp+A8h] [rbp+20h] BYREF
+
+  v3 = a2[4] == 0;
+  v16 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  v7 = 0;
+  v17 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v18 = 0;
+  v8 = v17 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  v14 = 0;
+  v9 = v18 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v10 = a2[4];
+  v11 = v16;
+  LOBYTE(v7) = v10 != 0;
+  v13 = v14;
+  a2[4] = v10 + v7;
+  result = sub_7FF6F3E02CF0(a1, (unsigned int)&v15, v11, v8, v9, v13);
+  *(_OWORD *)a3 = *(_OWORD *)result;
+  *(_OWORD *)(a3 + 16) = *(_OWORD *)(result + 16);
+  *(_QWORD *)(a3 + 32) = *(_QWORD *)(result + 32);
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetItemContinuousStructure @ RVA 0xB0C460 EA 0x7FF6F452C460
+======================================================================
+_OWORD *__fastcall sub_7FF6F452C460(__int64 a1, _QWORD *a2, _OWORD *a3)
+{
+  __int64 v3; // rdi
+  bool v7; // bp
+  __int64 v8; // r9
+  __int64 v9; // rax
+  _OWORD *result; // rax
+  _BYTE v11[176]; // [rsp+20h] [rbp-C8h] BYREF
+  int v12; // [rsp+F8h] [rbp+10h] BYREF
+  int v13; // [rsp+100h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v13 = 0;
+  v7 = v12 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v9 = a2[4];
+  LOBYTE(v8) = v13 != 0;
+  LOBYTE(v3) = v9 != 0;
+  a2[4] = v9 + v3;
+  result = (_OWORD *)sub_7FF6F3E02E20(a1, v11, v7, v8);
+  *a3 = *result;
+  a3[1] = result[1];
+  a3[2] = result[2];
+  a3[3] = result[3];
+  a3[4] = result[4];
+  a3[5] = result[5];
+  a3[6] = result[6];
+  a3[7] = result[7];
+  a3[8] = result[8];
+  a3[9] = result[9];
+  a3[10] = result[10];
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetItemMeleeBlockingAnimations @ RVA 0xB0C6E0 EA 0x7FF6F452C6E0
+======================================================================
+_OWORD *__fastcall sub_7FF6F452C6E0(__int64 a1, __int64 a2, _OWORD *a3)
+{
+  _OWORD *result; // rax
+  _BYTE v5[104]; // [rsp+20h] [rbp-68h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (_OWORD *)sub_7FF6F3E02EC0(a1, v5);
+  *a3 = *result;
+  a3[1] = result[1];
+  a3[2] = result[2];
+  a3[3] = result[3];
+  a3[4] = result[4];
+  a3[5] = result[5];
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetItemMeleeDodgeBlendspace @ RVA 0xB0C750 EA 0x7FF6F452C750
+======================================================================
+__int64 __fastcall sub_7FF6F452C750(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E02F90();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetItemOneShotStructure @ RVA 0xB0C780 EA 0x7FF6F452C780
+======================================================================
+_OWORD *__fastcall sub_7FF6F452C780(__int64 a1, _QWORD *a2, _OWORD *a3)
+{
+  __int64 v3; // rdi
+  bool v7; // bp
+  __int64 v8; // r9
+  __int64 v9; // rax
+  _OWORD *result; // rax
+  _BYTE v11[72]; // [rsp+20h] [rbp-48h] BYREF
+  int v12; // [rsp+78h] [rbp+10h] BYREF
+  int v13; // [rsp+80h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v13 = 0;
+  v7 = v12 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v9 = a2[4];
+  LOBYTE(v8) = v13 != 0;
+  LOBYTE(v3) = v9 != 0;
+  a2[4] = v9 + v3;
+  result = (_OWORD *)sub_7FF6F3E02FA0(a1, v11, v7, v8);
+  *a3 = *result;
+  a3[1] = result[1];
+  a3[2] = result[2];
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetItemUsePitchOverride @ RVA 0xB0C980 EA 0x7FF6F452C980
+======================================================================
+__int64 __fastcall sub_7FF6F452C980(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E030D0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetJumpingAnimationState @ RVA 0xB0C9B0 EA 0x7FF6F452C9B0
+======================================================================
+__int64 __fastcall sub_7FF6F452C9B0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E030F0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetLoadedItemAllAnimations @ RVA 0xB0C9E0 EA 0x7FF6F452C9E0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F452C9E0(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rdx
+  _BYTE v6[2528]; // [rsp+30h] [rbp-9F8h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = sub_7FF6F3E03B60(a1, v6);
+  sub_7FF6F4436EB0(a3, v4);
+  return sub_7FF6F3DE9960(v6);
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetLoadedItemAlternateIdleAnimations @ RVA 0xB0CA60 EA 0x7FF6F452CA60
+======================================================================
+__int64 __fastcall sub_7FF6F452CA60(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 result; // rax
+  _BYTE v5[40]; // [rsp+20h] [rbp-28h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E03B90(a1, v5);
+  *(_OWORD *)a3 = *(_OWORD *)result;
+  *(_QWORD *)(a3 + 16) = *(_QWORD *)(result + 16);
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetLoadedItemAlternateLocomotionAnimations @ RVA 0xB0CAA0 EA 0x7FF6F452CAA0
+======================================================================
+_OWORD *__fastcall sub_7FF6F452CAA0(__int64 a1, __int64 a2, _OWORD *a3)
+{
+  _OWORD *result; // rax
+  _BYTE v5[72]; // [rsp+20h] [rbp-48h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (_OWORD *)sub_7FF6F3E03BB0(a1, v5);
+  *a3 = *result;
+  a3[1] = result[1];
+  a3[2] = result[2];
+  a3[3] = result[3];
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetLoadedItemEquippingAnimations @ RVA 0xB0CAF0 EA 0x7FF6F452CAF0
+======================================================================
+_OWORD *__fastcall sub_7FF6F452CAF0(__int64 a1, __int64 a2, _OWORD *a3)
+{
+  _OWORD *result; // rax
+  _BYTE v5[72]; // [rsp+20h] [rbp-48h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (_OWORD *)sub_7FF6F3E03BE0(a1, v5);
+  *a3 = *result;
+  a3[1] = result[1];
+  a3[2] = result[2];
+  a3[3] = result[3];
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetLoadedItemFacialAnimations @ RVA 0xB0CB40 EA 0x7FF6F452CB40
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F452CB40(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rdx
+  _BYTE v6[128]; // [rsp+28h] [rbp-80h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = sub_7FF6F3E03C10(a1, v6);
+  sub_7FF6F44374D0(a3, v4);
+  return sub_7FF6F3DE9E00(v6);
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetLoadedItemFishingAnimations @ RVA 0xB0CBA0 EA 0x7FF6F452CBA0
+======================================================================
+_OWORD *__fastcall sub_7FF6F452CBA0(__int64 a1, __int64 a2, _OWORD *a3)
+{
+  _OWORD *result; // rax
+  _BYTE v5[152]; // [rsp+20h] [rbp-98h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (_OWORD *)sub_7FF6F3E03C40(a1, v5);
+  *a3 = *result;
+  a3[1] = result[1];
+  a3[2] = result[2];
+  a3[3] = result[3];
+  a3[4] = result[4];
+  a3[5] = result[5];
+  a3[6] = result[6];
+  a3[7] = result[7];
+  a3[8] = result[8];
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetLoadedItemHandAdditiveOverlayAnimation @ RVA 0xB0CC20 EA 0x7FF6F452CC20
+======================================================================
+__int64 __fastcall sub_7FF6F452CC20(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E03CB0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetLoadedItemIdleAnimations @ RVA 0xB0CC50 EA 0x7FF6F452CC50
+======================================================================
+__int64 __fastcall sub_7FF6F452CC50(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 result; // rax
+  _BYTE v5[40]; // [rsp+20h] [rbp-28h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E03CC0(a1, v5);
+  *(_OWORD *)a3 = *(_OWORD *)result;
+  *(_QWORD *)(a3 + 16) = *(_QWORD *)(result + 16);
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetLoadedItemIsRangedWeapon @ RVA 0xB0CC90 EA 0x7FF6F452CC90
+======================================================================
+__int64 __fastcall sub_7FF6F452CC90(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E03CF0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetLoadedItemJumpingAnimations @ RVA 0xB0CCC0 EA 0x7FF6F452CCC0
+======================================================================
+_OWORD *__fastcall sub_7FF6F452CCC0(__int64 a1, __int64 a2, _OWORD *a3)
+{
+  _OWORD *result; // rax
+  _BYTE v5[40]; // [rsp+20h] [rbp-28h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (_OWORD *)sub_7FF6F3E03D00(a1, v5);
+  *a3 = *result;
+  a3[1] = result[1];
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetLoadedItemLeftHandOffset @ RVA 0xB0CD00 EA 0x7FF6F452CD00
+======================================================================
+_OWORD *__fastcall sub_7FF6F452CD00(__int64 a1, __int64 a2, _OWORD *a3)
+{
+  _OWORD *result; // rax
+  _BYTE v5[48]; // [rsp+20h] [rbp-48h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (_OWORD *)sub_7FF6F3E03D30(a1, v5);
+  *a3 = *result;
+  a3[1] = result[1];
+  a3[2] = result[2];
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetLoadedItemLocomotionAnimations @ RVA 0xB0CD60 EA 0x7FF6F452CD60
+======================================================================
+_OWORD *__fastcall sub_7FF6F452CD60(__int64 a1, __int64 a2, _OWORD *a3)
+{
+  _OWORD *result; // rax
+  _BYTE v5[72]; // [rsp+20h] [rbp-48h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (_OWORD *)sub_7FF6F3E03D60(a1, v5);
+  *a3 = *result;
+  a3[1] = result[1];
+  a3[2] = result[2];
+  a3[3] = result[3];
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetLoadedItemPrimaryContinuousAnimationsMain @ RVA 0xB0CEA0 EA 0x7FF6F452CEA0
+======================================================================
+_OWORD *__fastcall sub_7FF6F452CEA0(__int64 a1, _QWORD *a2, _OWORD *a3)
+{
+  __int64 v3; // rsi
+  __int64 v7; // r8
+  __int64 v8; // rax
+  _OWORD *result; // rax
+  _BYTE v10[176]; // [rsp+20h] [rbp-B8h] BYREF
+  int v11; // [rsp+E8h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v8 = a2[4];
+  LOBYTE(v7) = v11 != 0;
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = (_OWORD *)sub_7FF6F3E03DA0(a1, v10, v7);
+  *a3 = *result;
+  a3[1] = result[1];
+  a3[2] = result[2];
+  a3[3] = result[3];
+  a3[4] = result[4];
+  a3[5] = result[5];
+  a3[6] = result[6];
+  a3[7] = result[7];
+  a3[8] = result[8];
+  a3[9] = result[9];
+  a3[10] = result[10];
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetLoadedItemPrimaryPitchOverride @ RVA 0xB0CFB0 EA 0x7FF6F452CFB0
+======================================================================
+__int64 __fastcall sub_7FF6F452CFB0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E03E30();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetLoadedItemRightHandOffset @ RVA 0xB0CFE0 EA 0x7FF6F452CFE0
+======================================================================
+_OWORD *__fastcall sub_7FF6F452CFE0(__int64 a1, __int64 a2, _OWORD *a3)
+{
+  _OWORD *result; // rax
+  _BYTE v5[48]; // [rsp+20h] [rbp-48h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (_OWORD *)sub_7FF6F3E03E40(a1, v5);
+  *a3 = *result;
+  a3[1] = result[1];
+  a3[2] = result[2];
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetLoadedItemSecondaryContinuousAnimationsMain @ RVA 0xB0D040 EA 0x7FF6F452D040
+======================================================================
+_OWORD *__fastcall sub_7FF6F452D040(__int64 a1, _QWORD *a2, _OWORD *a3)
+{
+  __int64 v3; // rsi
+  __int64 v7; // r8
+  __int64 v8; // rax
+  _OWORD *result; // rax
+  _BYTE v10[176]; // [rsp+20h] [rbp-B8h] BYREF
+  int v11; // [rsp+E8h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v8 = a2[4];
+  LOBYTE(v7) = v11 != 0;
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = (_OWORD *)sub_7FF6F3E03E70(a1, v10, v7);
+  *a3 = *result;
+  a3[1] = result[1];
+  a3[2] = result[2];
+  a3[3] = result[3];
+  a3[4] = result[4];
+  a3[5] = result[5];
+  a3[6] = result[6];
+  a3[7] = result[7];
+  a3[8] = result[8];
+  a3[9] = result[9];
+  a3[10] = result[10];
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetLoadedItemSecondaryPitchOverride @ RVA 0xB0D150 EA 0x7FF6F452D150
+======================================================================
+__int64 __fastcall sub_7FF6F452D150(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E03F00();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetLoadedItemWieldedParams @ RVA 0xB0D180 EA 0x7FF6F452D180
+======================================================================
+__int64 __fastcall sub_7FF6F452D180(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 result; // rax
+  _BYTE v5[64]; // [rsp+20h] [rbp-58h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E03F10(a1, v5);
+  *(_BYTE *)a3 = *(_BYTE *)result;
+  *(_OWORD *)(a3 + 16) = *(_OWORD *)(result + 16);
+  *(_OWORD *)(a3 + 32) = *(_OWORD *)(result + 32);
+  *(_OWORD *)(a3 + 48) = *(_OWORD *)(result + 48);
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetLocomotion @ RVA 0xB0D390 EA 0x7FF6F452D390
+======================================================================
+__int64 __fastcall sub_7FF6F452D390(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 result; // rax
+  _BYTE v5[120]; // [rsp+20h] [rbp-78h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E03F40(a1, v5);
+  *(_OWORD *)a3 = *(_OWORD *)result;
+  *(_OWORD *)(a3 + 16) = *(_OWORD *)(result + 16);
+  *(_OWORD *)(a3 + 32) = *(_OWORD *)(result + 32);
+  *(_OWORD *)(a3 + 48) = *(_OWORD *)(result + 48);
+  *(_OWORD *)(a3 + 64) = *(_OWORD *)(result + 64);
+  *(_OWORD *)(a3 + 80) = *(_OWORD *)(result + 80);
+  *(_QWORD *)(a3 + 96) = *(_QWORD *)(result + 96);
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetMeleeStrikeType @ RVA 0xB0D5E0 EA 0x7FF6F452D5E0
+======================================================================
+__int64 __fastcall sub_7FF6F452D5E0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E040A0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::GetWantsToReenterItemBlockingFeedback @ RVA 0xB0E120 EA 0x7FF6F452E120
+======================================================================
+__int64 __fastcall sub_7FF6F452E120(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E054E0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::InitialiseCharacterAnimations @ RVA 0xB0E4D0 EA 0x7FF6F452E4D0
+======================================================================
+__int64 __fastcall sub_7FF6F452E4D0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 *v5; // r8
+  __int64 v6; // rdx
+  __int64 v7; // rax
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v10; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v9 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v5 = &v9;
+  v6 = v10;
+  if ( a2[7] )
+    v5 = (__int64 *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v2) = v7 != 0;
+  a2[4] = v7 + v2;
+  return sub_7FF6F3E055D0(a1, v6, v5);
+}
+
+
+======================================================================
+AthenaAnimationInstance::InMeleeAttack @ RVA 0xB0E470 EA 0x7FF6F452E470
+======================================================================
+__int64 __fastcall sub_7FF6F452E470(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E055B0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::InMeleeBlock @ RVA 0xB0E4A0 EA 0x7FF6F452E4A0
+======================================================================
+__int64 __fastcall sub_7FF6F452E4A0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E055C0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::IsWieldedItemAPet @ RVA 0xB0EBD0 EA 0x7FF6F452EBD0
+======================================================================
+__int64 __fastcall sub_7FF6F452EBD0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E066B0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::LeftItemBlockingFeedbackState @ RVA 0xB0EF50 EA 0x7FF6F452EF50
+======================================================================
+void __fastcall sub_7FF6F452EF50(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F3E068C0LL);
+}
+
+
+======================================================================
+AthenaAnimationInstance::LoadAllItemAnimations @ RVA 0xB0EF70 EA 0x7FF6F452EF70
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F452EF70(int a1, _QWORD *a2, __int64 a3)
+{
+  __int64 result; // rax
+  __int64 v7; // r14
+  __int64 v8; // rbx
+  int v9; // edi
+  int v10; // edi
+  __int64 v11; // rbx
+  __int64 v12; // [rsp+38h] [rbp-40h] BYREF
+  int v13; // [rsp+40h] [rbp-38h]
+  __int64 v14; // [rsp+88h] [rbp+10h] BYREF
+  __int64 v15; // [rsp+90h] [rbp+18h] BYREF
+  __int64 v16; // [rsp+98h] [rbp+20h] BYREF
+
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  a2[4] += a2[4] != 0;
+  result = sub_7FF6F3E068E0(a1, (unsigned int)&v12, v16, v15, v14);
+  v7 = result;
+  if ( a3 != result )
+  {
+    v8 = *(_QWORD *)a3;
+    v9 = *(_DWORD *)(a3 + 8);
+    if ( v9 )
+    {
+      do
+      {
+        sub_7FF6F3DE9960(v8);
+        v8 += 2928;
+        --v9;
+      }
+      while ( v9 );
+      v8 = *(_QWORD *)a3;
+    }
+    if ( v8 )
+    {
+      sub_7FF6F4DED1F0(v8);
+      if ( *(_QWORD *)a3 )
+        *(_QWORD *)a3 = 0;
+    }
+    *(_QWORD *)a3 = *(_QWORD *)v7;
+    *(_QWORD *)v7 = 0;
+    *(_DWORD *)(a3 + 8) = *(_DWORD *)(v7 + 8);
+    result = *(unsigned int *)(v7 + 12);
+    *(_DWORD *)(a3 + 12) = result;
+    *(_QWORD *)(v7 + 8) = 0;
+  }
+  v10 = v13;
+  v11 = v12;
+  if ( v13 )
+  {
+    do
+    {
+      result = sub_7FF6F3DE9960(v11);
+      v11 += 2928;
+      --v10;
+    }
+    while ( v10 );
+    v11 = v12;
+  }
+  if ( v11 )
+    return sub_7FF6F4DED1F0(v11);
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::NotRunningOnServer @ RVA 0xB0F6D0 EA 0x7FF6F452F6D0
+======================================================================
+__int64 __fastcall sub_7FF6F452F6D0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E06C70();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::PickItemOneShotSequence @ RVA 0xB10390 EA 0x7FF6F4530390
+======================================================================
+__int64 __fastcall sub_7FF6F4530390(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E0CBF0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::PickItemOneShotSequencePitchOverride @ RVA 0xB103C0 EA 0x7FF6F45303C0
+======================================================================
+__int64 __fastcall sub_7FF6F45303C0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E0CC10();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationInstance::SetControllableSocketGroup @ RVA 0xB111C0 EA 0x7FF6F45311C0
+======================================================================
+__int64 __fastcall sub_7FF6F45311C0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F3E0FAF0(a1, v5);
+}
+
+
+======================================================================
+AthenaAnimationInstance::SetControllableSocketGroupCharacterSize @ RVA 0xB11240 EA 0x7FF6F4531240
+======================================================================
+__int64 __fastcall sub_7FF6F4531240(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F3E0FB00(a1, v5);
+}
+
+
+======================================================================
+AthenaAnimationInstance::SetLoadedItemAllAnimations @ RVA 0xB11780 EA 0x7FF6F4531780
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F4531780(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  _BYTE *v5; // rdx
+  __int64 v6; // rax
+  _BYTE v8[2528]; // [rsp+30h] [rbp-9F8h] BYREF
+
+  sub_7FF6F44332B0(v8);
+  v4 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v5 = v8;
+  if ( a2[7] )
+    v5 = (_BYTE *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v4) = v6 != 0;
+  a2[4] = v6 + v4;
+  sub_7FF6F3E0FDD0(a1, v5);
+  return sub_7FF6F3DE9960(v8);
+}
+
+
+======================================================================
+AthenaAnimationInstance::SetUsePrimaryContinuousAnimationsFlag @ RVA 0xB12030 EA 0x7FF6F4532030
+======================================================================
+__int64 __fastcall sub_7FF6F4532030(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F3E0FE30(a1, v5);
+}
+
+
+======================================================================
+AthenaAnimationInstance::SetUsePrimaryOneShotAnimationsFlag @ RVA 0xB120C0 EA 0x7FF6F45320C0
+======================================================================
+__int64 __fastcall sub_7FF6F45320C0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F3E0FE40(a1, v5);
+}
+
+
+======================================================================
+AthenaAnimationInstance::SetWieldedItemContinuousIsAlternate @ RVA 0xB12150 EA 0x7FF6F4532150
+======================================================================
+__int64 __fastcall sub_7FF6F4532150(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F3E0FE50(a1, v5);
+}
+
+
+======================================================================
+AthenaAnimationInstance::UpdateItemComplexOneShotStructurePlaySpeeds @ RVA 0xB13C10 EA 0x7FF6F4533C10
+======================================================================
+__int64 __fastcall sub_7FF6F4533C10(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F3E12710();
+}
+
+
+======================================================================
+AthenaAnimationInstance::UpdateLoadedAnimations @ RVA 0xB13C30 EA 0x7FF6F4533C30
+======================================================================
+__int64 __fastcall sub_7FF6F4533C30(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 664LL))(a1);
+}
+

@@ -1,0 +1,38 @@
+// Class: VoyageProposalContainerInteraction (1 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+VoyageProposalContainerInteraction::Server_VoyageProposalSelected @ RVA 0xECA510 EA 0x7FF6F48EA510
+======================================================================
+// Hidden C++ exception states: #wind=3
+__int64 __fastcall sub_7FF6F48EA510(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rax
+  __int64 result; // rax
+  __int64 v7[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  v4 = 0;
+  v7[0] = 0;
+  v7[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  v5 = a2[4];
+  LOBYTE(v4) = v5 != 0;
+  a2[4] = v5 + v4;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64, __int64 *))(*(_QWORD *)a1 + 1552LL))(a1, v7) )
+    result = (*(__int64 (__fastcall **)(__int64, __int64 *))(*(_QWORD *)a1 + 1560LL))(a1, v7);
+  else
+    result = sub_7FF6F4F0F6D0(L"Server_VoyageProposalSelected_Validate");
+  if ( v7[0] )
+    return sub_7FF6F4DED1F0(v7[0]);
+  return result;
+}
+

@@ -1,0 +1,74 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/AshenAge/Tale_1_TheAshenDragon/bp_theashendragon_fadeanddestroyashendragonscene -> BP_TheAshenDragon_FadeAndDestroyAshenDragonScene_C
+
+=== BP_TheAshenDragon_FadeAndDestroyAshenDragonScene_C::fn_idx_1828 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=idx:281466@0x19fcd6fb600
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fcd6fb500
+$18: VirtualFunction call "idx:281686" (
+  $31: literal int32 243
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_TheAshenDragon_FadeAndDestroyAshenDragonScene_C::fn_idx_281686 (251 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fd18513b0
+$10: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $19: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcd6fb580
+  $28: EndFunctionParms
+)
+$29: LetBool (Variable = Expression)
+  Variable:
+  $30: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fcd6fb680
+  Expression:
+  $39: Context
+    ObjectExpression:
+    $40: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19fcd6fb680
+    ContextExpression:
+    $61: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $70: StructMemberContext prop=idx:281550@0x19fcd6ff100
+        Expression to struct:
+        $79: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcd6fb580
+      $88: EndFunctionParms
+    )
+$89: JumpIfNot -> 0xe4, cond:
+  $94: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fcd6fb680
+$103: Let (Variable = Expression)
+  Variable:
+  $112: LocalVariable named idx:281687@0x19fcd6fb700
+  Expression:
+  $121: DynamicCast to BP_ghost_ship_scene_C@0x19fc26bdec0 of expr:
+  $130: StructMemberContext prop=idx:281550@0x19fcd6ff100
+    Expression to struct:
+    $139: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcd6fb580
+$148: Let (Variable = Expression)
+  Variable:
+  $157: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcd6fb780
+  Expression:
+  $166: PrimitiveCast type=71
+    Argument:
+    $168: LocalVariable named idx:281687@0x19fcd6fb700
+$177: JumpIfNot -> 0xe4, cond:
+  $182: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcd6fb780
+$191: Context
+  ObjectExpression:
+  $192: LocalVariable named idx:281687@0x19fcd6fb700
+  SkipBytes: 0xf
+  RValueProperty: (null)
+  ContextExpression:
+  $213: VirtualFunction call "SetGhostShipVisibility" (
+    $226: False
+    $227: EndFunctionParms
+  )
+$228: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $237: EndFunctionParms
+)
+$238: Jump to offset 0xf8
+$243: Jump to offset 0xa
+$248: Return expression:
+  $249: Nothing
+$250: EndOfScript

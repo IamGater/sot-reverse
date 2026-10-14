@@ -1,0 +1,34 @@
+// Class: NamedNotificationInputInterface (1 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+NamedNotificationInputInterface::GetNotificationInputDisplayName @ RVA 0x3157E60 EA 0x7FF6F6B77E60
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6B77E60(__int64 (__fastcall ***a1)(_QWORD, _BYTE *, __int64), _QWORD *a2, __int64 a3)
+{
+  __int64 v6; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rax
+  _BYTE v10[56]; // [rsp+28h] [rbp-40h] BYREF
+  __int64 v11; // [rsp+70h] [rbp+8h] BYREF
+
+  v6 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v7 = a2[4];
+  LOBYTE(v6) = v7 != 0;
+  a2[4] = v7 + v6;
+  v8 = (**a1)(a1, v10, v11);
+  sub_7FF6F4DD3BC0(a3, v8);
+  return sub_7FF6F3C37050(v10);
+}
+

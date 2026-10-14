@@ -1,0 +1,49 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/AshenAge/Tale_2_HeartOfFire/bp_setlairlock -> BP_SetLairLock_C
+
+=== BP_SetLairLock_C::fn_idx_1698 (189 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_GetComponentInterfaceByClass_ReturnValue@0x19fc182bf80
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: LocalVariable named Lock@0x19fc182bf00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetComponentInterfaceByClass_ReturnValue@0x19fc182bf80
+    ContextExpression:
+    $32: FinalFunction target=GetComponentInterfaceByClass@0x19e4cd622c0 (
+      $41: ObjectConst LockableInterface@0x19e4c6a7380
+      $50: EndFunctionParms
+    )
+$51: Let (Variable = Expression)
+  Variable:
+  $60: LocalVariable named idx:282262@0x19fc182c380
+  Expression:
+  $69: ObjToInterfaceCast to LockableInterface@0x19e4c6a7380
+  $78: LocalVariable named CallFunc_GetComponentInterfaceByClass_ReturnValue@0x19fc182bf80
+$87: Let (Variable = Expression)
+  Variable:
+  $96: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x19fc182c280
+  Expression:
+  $105: PrimitiveCast type=73
+    Argument:
+    $107: LocalVariable named idx:282262@0x19fc182c380
+$116: JumpIfNot -> 0xb0, cond:
+  $121: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x19fc182c280
+$130: Context
+  ObjectExpression:
+  $131: InterfaceContext:
+  $132: LocalVariable named idx:282262@0x19fc182c380
+  SkipBytes: 0x17
+  RValueProperty: (null)
+  ContextExpression:
+  $153: VirtualFunction call "Lock" (
+    $166: InstanceVariable named Locks@0x19fc182c300
+    $175: EndFunctionParms
+  )
+$176: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $185: EndFunctionParms
+)
+$186: Return expression:
+  $187: Nothing
+$188: EndOfScript

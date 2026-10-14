@@ -1,0 +1,380 @@
+// E:\unreal-projects\Athena\Content\Blueprints\Prompts\PromptConditionals\bp_prompt_equipflintlock.uasset -> BP_Prompt_EquipFlintlock_C
+
+=== BP_Prompt_EquipFlintlock_C::OnStowFunc (224 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_Conv_InterfaceToObject_ReturnValue@0x213bf50e580
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Conv_InterfaceToObject_ReturnValue@0x213bf50e580
+    ContextExpression:
+    $32: FinalFunction target=Conv_InterfaceToObject@0x212d63a69c0 (
+      $41: StructMemberContext prop=Object@0x212d65e2220
+        Expression to struct:
+        $50: LocalOutVariable named EventStartStow@0x213bf50e500
+      $59: EndFunctionParms
+    )
+$60: LetObj (Variable = Expression)
+  Variable:
+  $61: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x213bf50e600
+  Expression:
+  $70: Context
+    ObjectExpression:
+    $71: ObjectConst Default__GameplayStatics@0x212d6f7eb20
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectClass_ReturnValue@0x213bf50e600
+    ContextExpression:
+    $92: FinalFunction target=GetObjectClass@0x212d697dd20 (
+      $101: LocalVariable named CallFunc_Conv_InterfaceToObject_ReturnValue@0x213bf50e580
+      $110: EndFunctionParms
+    )
+$111: LetBool (Variable = Expression)
+  Variable:
+  $112: LocalVariable named CallFunc_ClassIsChildOf_ReturnValue@0x213bf50e680
+  Expression:
+  $121: CallMath target=ClassIsChildOf@0x212d69941c0 (
+    $130: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x213bf50e600
+    $139: InstanceVariable named WieldedItemType@0x213bf50f400
+    $148: EndFunctionParms
+  )
+$149: JumpIfNot -> 0xba, cond:
+  $154: LocalVariable named CallFunc_ClassIsChildOf_ReturnValue@0x213bf50e680
+$163: JumpIfNot -> 0xbf, cond:
+  $168: StructMemberContext prop=FastStow@0x212d65e21a0
+    Expression to struct:
+    $177: LocalOutVariable named EventStartStow@0x213bf50e500
+$186: Jump to offset 0xdd
+$191: LetBool (Variable = Expression)
+  Variable:
+  $192: InstanceVariable named State_SwordWielded@0x213bf50f800
+  Expression:
+  $201: False
+$202: VirtualFunction call "Evaluate" (
+  $215: EndFunctionParms
+)
+$216: Jump to offset 0xba
+$221: Return expression:
+  $222: Nothing
+$223: EndOfScript
+
+=== BP_Prompt_EquipFlintlock_C::OnSwordWieldFunc (191 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_Conv_InterfaceToObject_ReturnValue@0x213bf50e780
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Conv_InterfaceToObject_ReturnValue@0x213bf50e780
+    ContextExpression:
+    $32: FinalFunction target=Conv_InterfaceToObject@0x212d63a69c0 (
+      $41: StructMemberContext prop=Object@0x212d65e2500
+        Expression to struct:
+        $50: LocalOutVariable named EventObjectWielded@0x213bf50e700
+      $59: EndFunctionParms
+    )
+$60: LetObj (Variable = Expression)
+  Variable:
+  $61: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x213bf50e880
+  Expression:
+  $70: Context
+    ObjectExpression:
+    $71: ObjectConst Default__GameplayStatics@0x212d6f7eb20
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectClass_ReturnValue@0x213bf50e880
+    ContextExpression:
+    $92: FinalFunction target=GetObjectClass@0x212d697dd20 (
+      $101: LocalVariable named CallFunc_Conv_InterfaceToObject_ReturnValue@0x213bf50e780
+      $110: EndFunctionParms
+    )
+$111: LetBool (Variable = Expression)
+  Variable:
+  $112: LocalVariable named CallFunc_ClassIsChildOf_ReturnValue@0x213bf50e900
+  Expression:
+  $121: CallMath target=ClassIsChildOf@0x212d69941c0 (
+    $130: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x213bf50e880
+    $139: InstanceVariable named Sword_WieldedItemType@0x213bf50f880
+    $148: EndFunctionParms
+  )
+$149: JumpIfNot -> 0xbc, cond:
+  $154: LocalVariable named CallFunc_ClassIsChildOf_ReturnValue@0x213bf50e900
+$163: LetBool (Variable = Expression)
+  Variable:
+  $164: InstanceVariable named State_SwordWielded@0x213bf50f800
+  Expression:
+  $173: True
+$174: VirtualFunction call "Evaluate" (
+  $187: EndFunctionParms
+)
+$188: Return expression:
+  $189: Nothing
+$190: EndOfScript
+
+=== BP_Prompt_EquipFlintlock_C::OnWieldFunc (191 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_Conv_InterfaceToObject_ReturnValue@0x213bf50ea00
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Conv_InterfaceToObject_ReturnValue@0x213bf50ea00
+    ContextExpression:
+    $32: FinalFunction target=Conv_InterfaceToObject@0x212d63a69c0 (
+      $41: StructMemberContext prop=Object@0x212d65e2500
+        Expression to struct:
+        $50: LocalOutVariable named EventObjectWielded@0x213bf50e980
+      $59: EndFunctionParms
+    )
+$60: LetObj (Variable = Expression)
+  Variable:
+  $61: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x213bf50ea80
+  Expression:
+  $70: Context
+    ObjectExpression:
+    $71: ObjectConst Default__GameplayStatics@0x212d6f7eb20
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectClass_ReturnValue@0x213bf50ea80
+    ContextExpression:
+    $92: FinalFunction target=GetObjectClass@0x212d697dd20 (
+      $101: LocalVariable named CallFunc_Conv_InterfaceToObject_ReturnValue@0x213bf50ea00
+      $110: EndFunctionParms
+    )
+$111: LetBool (Variable = Expression)
+  Variable:
+  $112: LocalVariable named CallFunc_ClassIsChildOf_ReturnValue@0x213bf50eb00
+  Expression:
+  $121: CallMath target=ClassIsChildOf@0x212d69941c0 (
+    $130: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x213bf50ea80
+    $139: InstanceVariable named WieldedItemType@0x213bf50f400
+    $148: EndFunctionParms
+  )
+$149: JumpIfNot -> 0xbc, cond:
+  $154: LocalVariable named CallFunc_ClassIsChildOf_ReturnValue@0x213bf50eb00
+$163: LetBool (Variable = Expression)
+  Variable:
+  $164: InstanceVariable named State_ItemWielded@0x213bf50f300
+  Expression:
+  $173: True
+$174: VirtualFunction call "Evaluate" (
+  $187: EndFunctionParms
+)
+$188: Return expression:
+  $189: Nothing
+$190: EndOfScript
+
+=== BP_Prompt_EquipFlintlock_C::Evaluate (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Prompt_EquipFlintlock" (
+  $13: literal int32 239
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_EquipFlintlock_C::RegisterCharacterEvents_Implementable (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_CharacterDispatcher2@0x213bf50ef80
+  Expression:
+  $9: LocalOutVariable named CharacterDispatcher@0x213bf50eb80
+$18: VirtualFunction call "ExecuteUbergraph_BP_Prompt_EquipFlintlock" (
+  $31: literal int32 330
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_EquipFlintlock_C::UnregisterCharacterEvents_Implementable (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_CharacterDispatcher@0x213bf50f000
+  Expression:
+  $9: LocalOutVariable named CharacterDispatcher@0x213bf50ec80
+$18: VirtualFunction call "ExecuteUbergraph_BP_Prompt_EquipFlintlock" (
+  $31: literal int32 615
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_EquipFlintlock_C::OnWield (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event3@0x213bf50f100
+  Expression:
+  $9: LocalVariable named Event@0x213bf50ed00
+$18: VirtualFunction call "ExecuteUbergraph_BP_Prompt_EquipFlintlock" (
+  $31: literal int32 620
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_EquipFlintlock_C::OnStow (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event2@0x213bf50f200
+  Expression:
+  $9: LocalVariable named Event@0x213bf50ed80
+$18: VirtualFunction call "ExecuteUbergraph_BP_Prompt_EquipFlintlock" (
+  $31: literal int32 648
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_EquipFlintlock_C::OnSwordWield (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event@0x213bf50f280
+  Expression:
+  $9: LocalVariable named Event@0x213bf50ee00
+$18: VirtualFunction call "ExecuteUbergraph_BP_Prompt_EquipFlintlock" (
+  $31: literal int32 676
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_EquipFlintlock_C::ExecuteUbergraph_BP_Prompt_EquipFlintlock (702 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x213b47309a0
+$10: VirtualFunction call "GetCharacterObjectMessageDispatcher" (
+  $23: LocalVariable named CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher@0x213bf50ee80
+  $32: EndFunctionParms
+)
+$33: Context
+  ObjectExpression:
+  $34: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $55: FinalFunction target=UnregisterEventFromHandle@0x212d6a31420 (
+    $64: LocalVariable named CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher@0x213bf50ee80
+    $73: InstanceVariable named Handle_Unwield@0x213bf50f500
+    $82: EndFunctionParms
+  )
+$83: VirtualFunction call "GetCharacterObjectMessageDispatcher" (
+  $96: LocalVariable named CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher@0x213bf50ee80
+  $105: EndFunctionParms
+)
+$106: Context
+  ObjectExpression:
+  $107: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $128: FinalFunction target=UnregisterEventFromHandle@0x212d6a31420 (
+    $137: LocalVariable named CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher@0x213bf50ee80
+    $146: InstanceVariable named Handle_OnWieldSword@0x213bf50f780
+    $155: EndFunctionParms
+  )
+$156: Jump to offset 0x2bb
+$161: VirtualFunction call "GetCharacterObjectMessageDispatcher" (
+  $174: LocalVariable named CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher@0x213bf50ee80
+  $183: EndFunctionParms
+)
+$184: Context
+  ObjectExpression:
+  $185: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $206: FinalFunction target=UnregisterEventFromHandle@0x212d6a31420 (
+    $215: LocalVariable named CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher@0x213bf50ee80
+    $224: InstanceVariable named Handle_OnWield@0x213bf50f480
+    $233: EndFunctionParms
+  )
+$234: Jump to offset 0xa
+$239: JumpIfNot -> 0x10c, cond:
+  $244: InstanceVariable named State_ItemWielded@0x213bf50f300
+$253: FinalFunction target=DismissAllPrompts@0x212d6ad4cc0 (
+  $262: EndFunctionParms
+)
+$263: Jump to offset 0x2bb
+$268: JumpIfNot -> 0x132, cond:
+  $273: InstanceVariable named State_SwordWielded@0x213bf50f800
+$282: FinalFunction target=SetPromptAs@0x212d6ad5a00 (
+  $291: InstanceVariable named Prompt_EquipItem@0x213bf50f380
+  $300: EndFunctionParms
+)
+$301: Jump to offset 0x2bb
+$306: FinalFunction target=SetPromptAs@0x212d6ad5a00 (
+  $315: InstanceVariable named Prompt_EquipWeapon@0x213bf50f700
+  $324: EndFunctionParms
+)
+$325: Jump to offset 0x2bb
+$330: VirtualFunction call "GetCharacterObjectMessageDispatcher" (
+  $343: LocalVariable named CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher3@0x213bf50f080
+  $352: EndFunctionParms
+)
+$353: Context
+  ObjectExpression:
+  $354: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x2f
+  RValueProperty: (null)
+  ContextExpression:
+  $375: FinalFunction target=RegisterEventFromHandle@0x212d6a30c00 (
+    $384: LocalVariable named CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher3@0x213bf50f080
+    $393: InstanceVariable named Handle_OnWield@0x213bf50f480
+    $402: Self
+    $403: literal ansi string "OnWield"
+    $412: ObjectConst EventObjectWielded@0x212d65e2460
+    $421: EndFunctionParms
+  )
+$422: VirtualFunction call "GetCharacterObjectMessageDispatcher" (
+  $435: LocalVariable named CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher2@0x213bf50ef00
+  $444: EndFunctionParms
+)
+$445: Context
+  ObjectExpression:
+  $446: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x34
+  RValueProperty: (null)
+  ContextExpression:
+  $467: FinalFunction target=RegisterEventFromHandle@0x212d6a30c00 (
+    $476: LocalVariable named CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher2@0x213bf50ef00
+    $485: InstanceVariable named Handle_OnWieldSword@0x213bf50f780
+    $494: Self
+    $495: literal ansi string "OnSwordWield"
+    $509: ObjectConst EventObjectWielded@0x212d65e2460
+    $518: EndFunctionParms
+  )
+$519: VirtualFunction call "GetCharacterObjectMessageDispatcher" (
+  $532: LocalVariable named CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher4@0x213bf50f180
+  $541: EndFunctionParms
+)
+$542: Context
+  ObjectExpression:
+  $543: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x2e
+  RValueProperty: (null)
+  ContextExpression:
+  $564: FinalFunction target=RegisterEventFromHandle@0x212d6a30c00 (
+    $573: LocalVariable named CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher4@0x213bf50f180
+    $582: InstanceVariable named Handle_Unwield@0x213bf50f500
+    $591: Self
+    $592: literal ansi string "OnStow"
+    $600: ObjectConst EventStartStow@0x212d65e2080
+    $609: EndFunctionParms
+  )
+$610: Jump to offset 0x2bb
+$615: Jump to offset 0xa1
+$620: VirtualFunction call "OnWieldFunc" (
+  $633: LocalVariable named K2Node_CustomEvent_Event3@0x213bf50f100
+  $642: EndFunctionParms
+)
+$643: Jump to offset 0x2bb
+$648: VirtualFunction call "OnStowFunc" (
+  $661: LocalVariable named K2Node_CustomEvent_Event2@0x213bf50f200
+  $670: EndFunctionParms
+)
+$671: Jump to offset 0x2bb
+$676: VirtualFunction call "OnSwordWieldFunc" (
+  $689: LocalVariable named K2Node_CustomEvent_Event@0x213bf50f280
+  $698: EndFunctionParms
+)
+$699: Return expression:
+  $700: Nothing
+$701: EndOfScript

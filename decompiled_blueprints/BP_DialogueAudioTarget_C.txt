@@ -1,0 +1,179 @@
+// /Game/Blueprints/TallTales/Actors/General/bp_dialogueaudiotarget -> BP_DialogueAudioTarget_C
+
+=== BP_DialogueAudioTarget_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_DialogueAudioTarget_C::TriggerAudioEvent (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_AudioEvent@0x19fce569400
+  Expression:
+  $9: LocalVariable named AudioEvent@0x19fce569380
+$18: VirtualFunction call "idx:278841" (
+  $31: literal int32 15
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_DialogueAudioTarget_C::fn_idx_275027 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=idx:278842@0x19fcde4b130
+  Expression:
+  $9: LocalVariable named idx:278840@0x19fcde4b050
+$18: VirtualFunction call "idx:278841" (
+  $31: literal int32 451
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_DialogueAudioTarget_C::StopCurrentAudioEvent (22 bytes) ===
+$0: VirtualFunction call "idx:278841" (
+  $13: literal int32 10
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_DialogueAudioTarget_C::fn_idx_278841 (631 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fcde4b0c0
+$10: Jump to offset 0x274
+$15: Let (Variable = Expression)
+  Variable:
+  $24: LocalVariable named CallFunc_Array_Find_ReturnValue@0x19fcde4b440
+  Expression:
+  $33: Context
+    ObjectExpression:
+    $34: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Find_ReturnValue@0x19fcde4b440
+    ContextExpression:
+    $55: FinalFunction target=Array_Find@0x19e4d367420 (
+      $64: InstanceVariable named AudioEvents@0x19fce569800
+      $73: LocalVariable named K2Node_Event_AudioEvent@0x19fce569400
+      $82: EndFunctionParms
+    )
+$83: LetBool (Variable = Expression)
+  Variable:
+  $84: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fce569480
+  Expression:
+  $93: CallMath target=Greater_IntInt@0x19e4d382770 (
+    $102: LocalVariable named CallFunc_Array_Find_ReturnValue@0x19fcde4b440
+    $111: literal int32 -1
+    $116: EndFunctionParms
+  )
+$117: JumpIfNot -> 0xe3, cond:
+  $122: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fce569480
+$131: Let (Variable = Expression)
+  Variable:
+  $140: LocalVariable named CallFunc_Array_Find_ReturnValue@0x19fcde4b440
+  Expression:
+  $149: Context
+    ObjectExpression:
+    $150: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Find_ReturnValue@0x19fcde4b440
+    ContextExpression:
+    $171: FinalFunction target=Array_Find@0x19e4d367420 (
+      $180: InstanceVariable named AudioEvents@0x19fce569800
+      $189: LocalVariable named K2Node_Event_AudioEvent@0x19fce569400
+      $198: EndFunctionParms
+    )
+$199: VirtualFunction call "Multicast_TriggerAudioEvent" (
+  $212: LocalVariable named CallFunc_Array_Find_ReturnValue@0x19fcde4b440
+  $221: EndFunctionParms
+)
+$222: Jump to offset 0x274
+$227: Let (Variable = Expression)
+  Variable:
+  $236: LocalVariable named CallFunc_GetObjectName_ReturnValue@0x19fcde4b3d0
+  Expression:
+  $245: Context
+    ObjectExpression:
+    $246: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectName_ReturnValue@0x19fcde4b3d0
+    ContextExpression:
+    $267: FinalFunction target=GetObjectName@0x19e4cd8cd40 (
+      $276: LocalVariable named K2Node_Event_AudioEvent@0x19fce569400
+      $285: EndFunctionParms
+    )
+$286: Let (Variable = Expression)
+  Variable:
+  $295: LocalVariable named CallFunc_Concat_StrStr_ReturnValue@0x19fcde4b210
+  Expression:
+  $304: Context
+    ObjectExpression:
+    $305: ObjectConst Default__KismetStringLibrary@0x19e4d95ecd0
+    SkipBytes: 0x25
+    RValueProperty: CallFunc_Concat_StrStr_ReturnValue@0x19fcde4b210
+    ContextExpression:
+    $326: FinalFunction target=Concat_StrStr@0x19e4d3a1520 (
+      $335: literal ansi string "Could not find: "
+      $353: LocalVariable named CallFunc_GetObjectName_ReturnValue@0x19fcde4b3d0
+      $362: EndFunctionParms
+    )
+$363: Context
+  ObjectExpression:
+  $364: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x3d
+  RValueProperty: (null)
+  ContextExpression:
+  $385: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $394: Self
+    $395: LocalVariable named CallFunc_Concat_StrStr_ReturnValue@0x19fcde4b210
+    $404: True
+    $405: True
+    $406: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $419: literal float 1
+      $424: literal float 0
+      $429: literal float 0
+      $434: literal float 1
+      $439: EndStructConst
+    $440: literal float 5
+    $445: EndFunctionParms
+  )
+$446: Jump to offset 0x274
+$451: Context
+  ObjectExpression:
+  $452: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $473: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $482: InstanceVariable named AudioEvents@0x19fce569800
+    $491: LocalVariable named idx:278842@0x19fcde4b130
+    $500: LocalVariable named CallFunc_Array_Get_Item@0x19fce569500
+    $509: EndFunctionParms
+  )
+$510: Let (Variable = Expression)
+  Variable:
+  $519: LocalVariable named CallFunc_WwiseEmitterPostEvent_ReturnValue@0x19fcde4b1a0
+  Expression:
+  $528: Context
+    ObjectExpression:
+    $529: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x19e4d9e1550
+    SkipBytes: 0x4e
+    RValueProperty: CallFunc_WwiseEmitterPostEvent_ReturnValue@0x19fcde4b1a0
+    ContextExpression:
+    $550: FinalFunction target=WwiseEmitterPostEvent@0x19e4d3ff260 (
+      $559: Context
+        ObjectExpression:
+        $560: InstanceVariable named WwiseEmitter@0x19fce569580
+        SkipBytes: 0x9
+        RValueProperty: Emitter@0x19e4d0931d0
+        ContextExpression:
+        $581: InstanceVariable named Emitter@0x19e4d0931d0
+      $590: LocalVariable named CallFunc_Array_Get_Item@0x19fce569500
+      $599: literal byte 2
+      $601: literal name "None"
+      $614: literal name "None"
+      $627: EndFunctionParms
+    )
+$628: Return expression:
+  $629: Nothing
+$630: EndOfScript

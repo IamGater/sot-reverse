@@ -1,0 +1,101 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_3_LegendaryStoryteller/AdditionalPuzzles/bp_spawnitemoncaptainstablecrown -> BP_SpawnItemOnCaptainsTableCrown_C
+
+=== BP_SpawnItemOnCaptainsTableCrown_C::fn_idx_1698 (480 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19fce7f5680
+  Expression:
+  $18: FinalFunction target=GetCrewShips@0x19e4cda5420 (
+    $27: EndFunctionParms
+  )
+$28: Context
+  ObjectExpression:
+  $29: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $50: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $59: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19fce7f5680
+    $68: literal int32 0
+    $73: LocalVariable named CallFunc_Array_Get_Item@0x19fce7f4d00
+    $82: EndFunctionParms
+  )
+$83: Let (Variable = Expression)
+  Variable:
+  $92: LocalVariable named CallFunc_GetShipLocatorPositionChecked_ReturnValue@0x19fce7f4d80
+  Expression:
+  $101: Context
+    ObjectExpression:
+    $102: LocalVariable named CallFunc_Array_Get_Item@0x19fce7f4d00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetShipLocatorPositionChecked_ReturnValue@0x19fce7f4d80
+    ContextExpression:
+    $123: FinalFunction target=GetShipLocatorPositionChecked@0x19e4d11bdd0 (
+      $132: LocalVariable named ShipSpawnLocation@0x19fce7f4b80
+      $141: EndFunctionParms
+    )
+$142: Let (Variable = Expression)
+  Variable:
+  $151: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x19fce7f4e00
+  Expression:
+  $160: CallMath target=Add_VectorVector@0x19e4d370750 (
+    $169: LocalVariable named CallFunc_GetShipLocatorPositionChecked_ReturnValue@0x19fce7f4d80
+    $178: LocalVariable named Offset@0x19fce7f4c00
+    $187: EndFunctionParms
+  )
+$188: Let (Variable = Expression)
+  Variable:
+  $197: LocalVariable named CallFunc_Conv_VectorToTransform_ReturnValue@0x19fce7f4e80
+  Expression:
+  $206: CallMath target=Conv_VectorToTransform@0x19e4d376610 (
+    $215: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x19fce7f4e00
+    $224: EndFunctionParms
+  )
+$225: LetObj (Variable = Expression)
+  Variable:
+  $226: LocalVariable named CallFunc_SpawnPhasedItem_ReturnValue@0x19fce7f4f00
+  Expression:
+  $235: FinalFunction target=SpawnPhasedItem@0x19e4cda9200 (
+    $244: LocalVariable named SpawnItem@0x19fce7f4b00
+    $253: LocalVariable named CallFunc_Conv_VectorToTransform_ReturnValue@0x19fce7f4e80
+    $262: True
+    $263: True
+    $264: literal text (not decoded)
+    $265: literal ansi string "The Ancient Crown was lost"
+    $293: literal ansi string "02E6FBB74DEB35944098539F26CE0400_FailureMessage7"
+    $343: literal ansi string ""
+    $345: EndFunctionParms
+  )
+$346: Context
+  ObjectExpression:
+  $347: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $368: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $377: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19fce7f5680
+    $386: literal int32 0
+    $391: LocalVariable named CallFunc_Array_Get_Item@0x19fce7f4d00
+    $400: EndFunctionParms
+  )
+$401: Context
+  ObjectExpression:
+  $402: LocalVariable named CallFunc_SpawnPhasedItem_ReturnValue@0x19fce7f4f00
+  SkipBytes: 0x23
+  RValueProperty: (null)
+  ContextExpression:
+  $423: FinalFunction target=K2_AttachRootComponentToActor@0x19e4cd66660 (
+    $432: LocalVariable named CallFunc_Array_Get_Item@0x19fce7f4d00
+    $441: literal name "None"
+    $454: literal byte 0
+    $456: False
+    $457: EndFunctionParms
+  )
+$458: LetObj (Variable = Expression)
+  Variable:
+  $459: LocalOutVariable named SpawnedItem@0x19fce7f4c80
+  Expression:
+  $468: LocalVariable named CallFunc_SpawnPhasedItem_ReturnValue@0x19fce7f4f00
+$477: Return expression:
+  $478: Nothing
+$479: EndOfScript

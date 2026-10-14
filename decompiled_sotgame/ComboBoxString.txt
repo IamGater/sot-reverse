@@ -1,0 +1,256 @@
+// Class: ComboBoxString (10 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+ComboBoxString::AddOption @ RVA 0x1F29D30 EA 0x7FF6F5949D30
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F5949D30(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rax
+  __int64 result; // rax
+  __int64 v7[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  v4 = 0;
+  v7[0] = 0;
+  v7[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  v5 = a2[4];
+  LOBYTE(v4) = v5 != 0;
+  a2[4] = v5 + v4;
+  result = sub_7FF6F5871440(a1, v7);
+  if ( v7[0] )
+    return sub_7FF6F4DED1F0(v7[0]);
+  return result;
+}
+
+
+======================================================================
+ComboBoxString::ClearOptions @ RVA 0x1F2A320 EA 0x7FF6F594A320
+======================================================================
+__int64 __fastcall sub_7FF6F594A320(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F5877AB0();
+}
+
+
+======================================================================
+ComboBoxString::ClearSelection @ RVA 0x1F2A340 EA 0x7FF6F594A340
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+ComboBoxString::FindOptionIndex @ RVA 0x1F2B8A0 EA 0x7FF6F594B8A0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F594B8A0(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v6; // rdi
+  __int64 v7; // rax
+  __int64 result; // rax
+  __int64 v9[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  v6 = 0;
+  v9[0] = 0;
+  v9[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v7 = a2[4];
+  LOBYTE(v6) = v7 != 0;
+  a2[4] = v7 + v6;
+  result = sub_7FF6F5884410(a1, v9);
+  *a3 = result;
+  if ( v9[0] )
+    return sub_7FF6F4DED1F0(v9[0]);
+  return result;
+}
+
+
+======================================================================
+ComboBoxString::GetOptionAtIndex @ RVA 0x1F2D150 EA 0x7FF6F594D150
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F594D150(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 result; // rax
+  __int64 v7; // rdi
+  __int64 v8[4]; // [rsp+28h] [rbp-20h] BYREF
+  unsigned int v9; // [rsp+58h] [rbp+10h] BYREF
+
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  a2[4] += a2[4] != 0;
+  result = sub_7FF6F588AC90(a1, v8, v9);
+  v7 = result;
+  if ( a3 != result )
+  {
+    if ( *(_QWORD *)a3 )
+    {
+      sub_7FF6F4DED1F0(*(_QWORD *)a3);
+      if ( *(_QWORD *)a3 )
+        *(_QWORD *)a3 = 0;
+    }
+    *(_QWORD *)a3 = *(_QWORD *)v7;
+    *(_QWORD *)v7 = 0;
+    *(_DWORD *)(a3 + 8) = *(_DWORD *)(v7 + 8);
+    result = *(unsigned int *)(v7 + 12);
+    *(_DWORD *)(a3 + 12) = result;
+    *(_QWORD *)(v7 + 8) = 0;
+  }
+  if ( v8[0] )
+    return sub_7FF6F4DED1F0(v8[0]);
+  return result;
+}
+
+
+======================================================================
+ComboBoxString::GetOptionCount @ RVA 0x1F2D240 EA 0x7FF6F594D240
+======================================================================
+__int64 __fastcall sub_7FF6F594D240(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F588ACE0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ComboBoxString::GetSelectedOption @ RVA 0x1F2D3D0 EA 0x7FF6F594D3D0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F594D3D0(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 result; // rax
+  __int64 v5; // rdi
+  __int64 v6[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F588BC60(a1, v6);
+  v5 = result;
+  if ( a3 != result )
+  {
+    if ( *(_QWORD *)a3 )
+    {
+      sub_7FF6F4DED1F0(*(_QWORD *)a3);
+      if ( *(_QWORD *)a3 )
+        *(_QWORD *)a3 = 0;
+    }
+    *(_QWORD *)a3 = *(_QWORD *)v5;
+    *(_QWORD *)v5 = 0;
+    *(_DWORD *)(a3 + 8) = *(_DWORD *)(v5 + 8);
+    result = *(unsigned int *)(v5 + 12);
+    *(_DWORD *)(a3 + 12) = result;
+    *(_QWORD *)(v5 + 8) = 0;
+  }
+  if ( v6[0] )
+    return sub_7FF6F4DED1F0(v6[0]);
+  return result;
+}
+
+
+======================================================================
+ComboBoxString::RefreshOptions @ RVA 0x1F2EFF0 EA 0x7FF6F594EFF0
+======================================================================
+void __fastcall sub_7FF6F594EFF0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F58B8810LL);
+}
+
+
+======================================================================
+ComboBoxString::RemoveOption @ RVA 0x1F2F420 EA 0x7FF6F594F420
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F594F420(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v6; // rdi
+  __int64 v7; // rax
+  __int64 result; // rax
+  __int64 v9[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  v6 = 0;
+  v9[0] = 0;
+  v9[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v7 = a2[4];
+  LOBYTE(v6) = v7 != 0;
+  a2[4] = v7 + v6;
+  result = sub_7FF6F58BCC80(a1, v9);
+  *a3 = result;
+  if ( v9[0] )
+    return sub_7FF6F4DED1F0(v9[0]);
+  return result;
+}
+
+
+======================================================================
+ComboBoxString::SetSelectedOption @ RVA 0x1F33D10 EA 0x7FF6F5953D10
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F5953D10(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rax
+  __int64 result; // rax
+  __int64 v7[2]; // [rsp+28h] [rbp-30h] BYREF
+  _BYTE v8[32]; // [rsp+38h] [rbp-20h] BYREF
+
+  v4 = 0;
+  v7[0] = 0;
+  v7[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  v5 = a2[4];
+  LOBYTE(v4) = v5 != 0;
+  a2[4] = v5 + v4;
+  sub_7FF6F3C34DB0((__int64)v8, (__int64)v7);
+  result = sub_7FF6F58C28E0(a1, v8);
+  if ( v7[0] )
+    return sub_7FF6F4DED1F0(v7[0]);
+  return result;
+}
+

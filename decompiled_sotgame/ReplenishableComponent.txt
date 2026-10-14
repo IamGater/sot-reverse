@@ -1,0 +1,163 @@
+// Class: ReplenishableComponent (11 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+ReplenishableComponent::AddDefaultStockLevel @ RVA 0xFBE0B0 EA 0x7FF6F49DE0B0
+======================================================================
+__int64 __fastcall sub_7FF6F49DE0B0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)(a1 + 200) + 32LL))(a1 + 200);
+}
+
+
+======================================================================
+ReplenishableComponent::CanBeReplenished @ RVA 0xFBE570 EA 0x7FF6F49DE570
+======================================================================
+__int64 __fastcall sub_7FF6F49DE570(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)(a1 + 200) + 40LL))(a1 + 200);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ReplenishableComponent::Deplete @ RVA 0xFBF5C0 EA 0x7FF6F49DF5C0
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+ReplenishableComponent::FillWithDefaultDesc @ RVA 0xFBF8E0 EA 0x7FF6F49DF8E0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F49DF8E0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 *v5; // rdx
+  __int64 v6; // rax
+  __int64 result; // rax
+  __int64 v8[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  v4 = 0;
+  v8[0] = 0;
+  v8[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v5 = v8;
+  if ( a2[7] )
+    v5 = (__int64 *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v4) = v6 != 0;
+  a2[4] = v6 + v4;
+  result = (*(__int64 (__fastcall **)(__int64, __int64 *))(*(_QWORD *)(a1 + 200) + 88LL))(a1 + 200, v5);
+  if ( v8[0] )
+    return sub_7FF6F4DED1F0(v8[0]);
+  return result;
+}
+
+
+======================================================================
+ReplenishableComponent::GetShouldRefresh @ RVA 0xFC0DA0 EA 0x7FF6F49E0DA0
+======================================================================
+__int64 __fastcall sub_7FF6F49E0DA0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)(a1 + 200) + 72LL))(a1 + 200);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ReplenishableComponent::IsAtMaxCapacity @ RVA 0xFC1360 EA 0x7FF6F49E1360
+======================================================================
+__int64 __fastcall sub_7FF6F49E1360(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)(a1 + 200) + 56LL))(a1 + 200);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ReplenishableComponent::RefreshFromSpawner @ RVA 0xFC3A70 EA 0x7FF6F49E3A70
+======================================================================
+__int64 __fastcall sub_7FF6F49E3A70(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)(a1 + 200) + 80LL))(a1 + 200);
+}
+
+
+======================================================================
+ReplenishableComponent::Replenish @ RVA 0xFC3B20 EA 0x7FF6F49E3B20
+======================================================================
+__int64 __fastcall sub_7FF6F49E3B20(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)(a1 + 200) + 16LL))(a1 + 200);
+}
+
+
+======================================================================
+ReplenishableComponent::ReplenishFromDebugSpawner @ RVA 0xFC3B50 EA 0x7FF6F49E3B50
+======================================================================
+  *** decompilation returned None ***
+
+======================================================================
+ReplenishableComponent::SetShouldRefresh @ RVA 0xFC4D20 EA 0x7FF6F49E4D20
+======================================================================
+__int64 __fastcall sub_7FF6F49E4D20(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)(a1 + 200) + 64LL))(a1 + 200, v5);
+}
+
+
+======================================================================
+ReplenishableComponent::TestReplenish @ RVA 0xFC5BC0 EA 0x7FF6F49E5BC0
+======================================================================
+__int64 __fastcall sub_7FF6F49E5BC0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return nullsub_5387();
+}
+

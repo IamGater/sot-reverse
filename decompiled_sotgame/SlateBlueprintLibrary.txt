@@ -1,0 +1,350 @@
+// Class: SlateBlueprintLibrary (6 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+SlateBlueprintLibrary::AbsoluteToLocal @ RVA 0x1F29660 EA 0x7FF6F5949660
+======================================================================
+_QWORD *__fastcall sub_7FF6F5949660(__int64 a1, _QWORD *a2, _QWORD *a3)
+{
+  __int64 v5; // rsi
+  _BYTE *v6; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  _QWORD *result; // rax
+  __int64 v10; // [rsp+20h] [rbp-68h] BYREF
+  _BYTE v11[8]; // [rsp+28h] [rbp-60h] BYREF
+  _BYTE v12[56]; // [rsp+30h] [rbp-58h] BYREF
+
+  sub_7FF6F4FAD8B0(v12);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v6 = v12;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  result = (_QWORD *)sub_7FF6F58707F0(v11, v6, v8);
+  *a3 = *result;
+  return result;
+}
+
+
+======================================================================
+SlateBlueprintLibrary::AbsoluteToViewport @ RVA 0x1F29760 EA 0x7FF6F5949760
+======================================================================
+__int64 __fastcall sub_7FF6F5949760(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  char *v4; // rax
+  char *v5; // rsi
+  _BYTE *v6; // r9
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 v9; // rax
+  _BYTE v11[8]; // [rsp+20h] [rbp-18h] BYREF
+  _QWORD v12[2]; // [rsp+28h] [rbp-10h] BYREF
+  __int64 v13; // [rsp+48h] [rbp+10h] BYREF
+  char v14; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v4 = (char *)a2[7];
+  v5 = &v14;
+  a2[7] = 0;
+  if ( v4 )
+    v5 = v4;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v6 = v11;
+  v7 = v12[0];
+  v8 = v13;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  v9 = a2[4];
+  LOBYTE(v2) = v9 != 0;
+  a2[4] = v9 + v2;
+  return sub_7FF6F5870810(v8, v7, v5, v6);
+}
+
+
+======================================================================
+SlateBlueprintLibrary::GetLocalSize @ RVA 0x1F2CDD0 EA 0x7FF6F594CDD0
+======================================================================
+_QWORD *__fastcall sub_7FF6F594CDD0(__int64 a1, _QWORD *a2, _QWORD *a3)
+{
+  __int64 v5; // rdi
+  _BYTE *v6; // rdx
+  __int64 v7; // rax
+  _QWORD *result; // rax
+  _BYTE v9[8]; // [rsp+20h] [rbp-58h] BYREF
+  _BYTE v10[56]; // [rsp+28h] [rbp-50h] BYREF
+
+  sub_7FF6F4FAD8B0(v10);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v6 = v10;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  result = (_QWORD *)sub_7FF6F588A5F0(v9, v6);
+  *a3 = *result;
+  return result;
+}
+
+
+======================================================================
+SlateBlueprintLibrary::IsUnderLocation @ RVA 0x1F2E1D0 EA 0x7FF6F594E1D0
+======================================================================
+__int64 __fastcall sub_7FF6F594E1D0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  _BYTE *v6; // rax
+  _BYTE *v7; // rsi
+  _BYTE *v8; // rdx
+  __int64 v9; // rax
+  __int64 result; // rax
+  _BYTE v11[8]; // [rsp+20h] [rbp-68h] BYREF
+  _BYTE v12[56]; // [rsp+28h] [rbp-60h] BYREF
+
+  sub_7FF6F4FAD8B0(v12);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v6 = (_BYTE *)a2[7];
+  v7 = v12;
+  a2[7] = 0;
+  if ( v6 )
+    v7 = v6;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v8 = v11;
+  if ( a2[7] )
+    v8 = (_BYTE *)a2[7];
+  v9 = a2[4];
+  LOBYTE(v5) = v9 != 0;
+  a2[4] = v9 + v5;
+  result = sub_7FF6F5896320(v7, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+SlateBlueprintLibrary::LocalToAbsolute @ RVA 0x1F2E300 EA 0x7FF6F594E300
+======================================================================
+_QWORD *__fastcall sub_7FF6F594E300(__int64 a1, _QWORD *a2, _QWORD *a3)
+{
+  __int64 v5; // rsi
+  _BYTE *v6; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  _QWORD *result; // rax
+  __int64 v10; // [rsp+20h] [rbp-68h] BYREF
+  _BYTE v11[8]; // [rsp+28h] [rbp-60h] BYREF
+  _BYTE v12[56]; // [rsp+30h] [rbp-58h] BYREF
+
+  sub_7FF6F4FAD8B0(v12);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v6 = v12;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  result = (_QWORD *)sub_7FF6F5896770(v11, v6, v8);
+  *a3 = *result;
+  return result;
+}
+
+
+======================================================================
+SlateBlueprintLibrary::LocalToViewport @ RVA 0x1F2E400 EA 0x7FF6F594E400
+======================================================================
+__int64 __fastcall sub_7FF6F594E400(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  _BYTE *v4; // rbp
+  __int64 v5; // rax
+  _BYTE *v6; // rsi
+  _BYTE *v7; // rcx
+  int v8; // r8d
+  __int64 v9; // rax
+  int v10; // ecx
+  __int64 v12; // [rsp+20h] [rbp-78h]
+  __int64 v13; // [rsp+30h] [rbp-68h] BYREF
+  _BYTE v14[8]; // [rsp+38h] [rbp-60h] BYREF
+  _BYTE v15[8]; // [rsp+40h] [rbp-58h] BYREF
+  __int64 v16; // [rsp+48h] [rbp-50h] BYREF
+  _BYTE v17[56]; // [rsp+50h] [rbp-48h] BYREF
+
+  v2 = 0;
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  sub_7FF6F4FAD8B0(v17);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v17);
+  }
+  v4 = v17;
+  if ( a2[7] )
+    v4 = (_BYTE *)a2[7];
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v14);
+  }
+  v5 = a2[7];
+  v6 = v14;
+  a2[7] = 0;
+  if ( v5 )
+    LODWORD(v6) = v5;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v15);
+  }
+  v7 = v15;
+  v8 = v16;
+  if ( a2[7] )
+    v7 = (_BYTE *)a2[7];
+  v9 = a2[4];
+  v12 = (__int64)v7;
+  v10 = v13;
+  LOBYTE(v2) = v9 != 0;
+  a2[4] = v9 + v2;
+  return sub_7FF6F5896790(v10, (_DWORD)v4, v8, (_DWORD)v6, v12);
+}
+

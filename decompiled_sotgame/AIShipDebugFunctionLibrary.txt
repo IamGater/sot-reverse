@@ -1,0 +1,115 @@
+// Class: AIShipDebugFunctionLibrary (2 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+AIShipDebugFunctionLibrary::GenerateAIShipBattleDesc @ RVA 0x37F4600 EA 0x7FF6F7214600
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F7214600(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // r14
+  __int64 *v6; // rbx
+  int v7; // edi
+  _BYTE v9[48]; // [rsp+28h] [rbp-30h] BYREF
+  __int64 v10; // [rsp+68h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+70h] [rbp+18h] BYREF
+
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  a2[4] += a2[4] != 0;
+  v5 = sub_7FF6F71D74D0(v9, v11, v10);
+  if ( a3 != v5 )
+  {
+    v6 = *(__int64 **)a3;
+    v7 = *(_DWORD *)(a3 + 8);
+    if ( v7 )
+    {
+      do
+      {
+        if ( *v6 )
+        {
+          sub_7FF6F4DED1F0(*v6);
+          if ( *v6 )
+            *v6 = 0;
+        }
+        v6 += 2;
+        --v7;
+      }
+      while ( v7 );
+      v6 = *(__int64 **)a3;
+    }
+    if ( v6 )
+    {
+      sub_7FF6F4DED1F0((__int64)v6);
+      if ( *(_QWORD *)a3 )
+        *(_QWORD *)a3 = 0;
+    }
+    *(_QWORD *)a3 = *(_QWORD *)v5;
+    *(_QWORD *)v5 = 0;
+    *(_DWORD *)(a3 + 8) = *(_DWORD *)(v5 + 8);
+    *(_DWORD *)(a3 + 12) = *(_DWORD *)(v5 + 12);
+    *(_QWORD *)(v5 + 8) = 0;
+  }
+  return sub_7FF6F71C3700(v9);
+}
+
+
+======================================================================
+AIShipDebugFunctionLibrary::RequestAIShipForCrew @ RVA 0x37F4750 EA 0x7FF6F7214750
+======================================================================
+__int64 __fastcall sub_7FF6F7214750(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  __int128 v7; // [rsp+20h] [rbp-28h] BYREF
+  __int128 v8; // [rsp+30h] [rbp-18h] BYREF
+  __int64 v9; // [rsp+58h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v7 = 0u;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v5 = v9;
+  LOBYTE(v2) = v4 != 0;
+  v8 = v7;
+  a2[4] = v4 + v2;
+  return sub_7FF6F71E5E70(v5, &v8);
+}
+

@@ -1,0 +1,101 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_6_TheArtOfTheTrickster/bp_spawnitemoncaptainstable_totem -> BP_SpawnItemOnCaptainsTable_Totem_C
+
+=== BP_SpawnItemOnCaptainsTable_Totem_C::fn_idx_1698 (472 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19fcc5a0200
+  Expression:
+  $18: FinalFunction target=GetCrewShips@0x19e4cda5420 (
+    $27: EndFunctionParms
+  )
+$28: Context
+  ObjectExpression:
+  $29: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $50: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $59: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19fcc5a0200
+    $68: literal int32 0
+    $73: LocalVariable named CallFunc_Array_Get_Item@0x19fcc9cff00
+    $82: EndFunctionParms
+  )
+$83: Let (Variable = Expression)
+  Variable:
+  $92: LocalVariable named CallFunc_GetShipLocatorPositionChecked_ReturnValue@0x19fcc9cff80
+  Expression:
+  $101: Context
+    ObjectExpression:
+    $102: LocalVariable named CallFunc_Array_Get_Item@0x19fcc9cff00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetShipLocatorPositionChecked_ReturnValue@0x19fcc9cff80
+    ContextExpression:
+    $123: FinalFunction target=GetShipLocatorPositionChecked@0x19e4d11bdd0 (
+      $132: LocalVariable named Ship Location@0x19fcc9cfd00
+      $141: EndFunctionParms
+    )
+$142: Let (Variable = Expression)
+  Variable:
+  $151: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x19fcc5a0000
+  Expression:
+  $160: CallMath target=Add_VectorVector@0x19e4d370750 (
+    $169: LocalVariable named CallFunc_GetShipLocatorPositionChecked_ReturnValue@0x19fcc9cff80
+    $178: LocalVariable named Offset@0x19fcc9cfd80
+    $187: EndFunctionParms
+  )
+$188: Let (Variable = Expression)
+  Variable:
+  $197: LocalVariable named CallFunc_Conv_VectorToTransform_ReturnValue@0x19fcc5a0080
+  Expression:
+  $206: CallMath target=Conv_VectorToTransform@0x19e4d376610 (
+    $215: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x19fcc5a0000
+    $224: EndFunctionParms
+  )
+$225: LetObj (Variable = Expression)
+  Variable:
+  $226: LocalVariable named CallFunc_SpawnPhasedItem_ReturnValue@0x19fcc5a0100
+  Expression:
+  $235: FinalFunction target=SpawnPhasedItem@0x19e4cda9200 (
+    $244: LocalVariable named SpawnItem@0x19fcc9cfe00
+    $253: LocalVariable named CallFunc_Conv_VectorToTransform_ReturnValue@0x19fcc5a0080
+    $262: True
+    $263: True
+    $264: literal text (not decoded)
+    $265: literal ansi string "The Totem was lost"
+    $285: literal ansi string "7FE50B634E9F787E2DDE04AD8688250A_FailureMessage7"
+    $335: literal ansi string ""
+    $337: EndFunctionParms
+  )
+$338: Context
+  ObjectExpression:
+  $339: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $360: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $369: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19fcc5a0200
+    $378: literal int32 0
+    $383: LocalVariable named CallFunc_Array_Get_Item@0x19fcc9cff00
+    $392: EndFunctionParms
+  )
+$393: Context
+  ObjectExpression:
+  $394: LocalVariable named CallFunc_SpawnPhasedItem_ReturnValue@0x19fcc5a0100
+  SkipBytes: 0x23
+  RValueProperty: (null)
+  ContextExpression:
+  $415: FinalFunction target=K2_AttachRootComponentToActor@0x19e4cd66660 (
+    $424: LocalVariable named CallFunc_Array_Get_Item@0x19fcc9cff00
+    $433: literal name "None"
+    $446: literal byte 0
+    $448: False
+    $449: EndFunctionParms
+  )
+$450: LetObj (Variable = Expression)
+  Variable:
+  $451: LocalOutVariable named SpawnedItem@0x19fcc9cfe80
+  Expression:
+  $460: LocalVariable named CallFunc_SpawnPhasedItem_ReturnValue@0x19fcc5a0100
+$469: Return expression:
+  $470: Nothing
+$471: EndOfScript

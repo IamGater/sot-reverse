@@ -1,0 +1,108 @@
+// /Game/Blueprints/TallTales/Actors/Tale_9_ShoresOfGold/bp_shoresofgold_questparticipanttriggervolume -> BP_ShoresOfGold_QuestParticipantTriggerVolume_C
+
+=== BP_ShoresOfGold_QuestParticipantTriggerVolume_C::fn_idx_278734 (152 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fccb77200
+  Expression:
+  $18: DynamicCast to AthenaPlayerCharacter@0x19e4be85b00 of expr:
+  $27: LocalVariable named Actor@0x19fccb77080
+$36: Let (Variable = Expression)
+  Variable:
+  $45: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fccb77280
+  Expression:
+  $54: PrimitiveCast type=71
+    Argument:
+    $56: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fccb77200
+$65: JumpIfNot -> 0x85, cond:
+  $70: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fccb77280
+$79: LetBool (Variable = Expression)
+  Variable:
+  $80: InstanceVariable named CastSuccessful@0x19fccb77880
+  Expression:
+  $89: True
+$90: LetBool (Variable = Expression)
+  Variable:
+  $91: LocalOutVariable named Successful@0x19fccb77100
+  Expression:
+  $100: InstanceVariable named CastSuccessful@0x19fccb77880
+$109: LetObj (Variable = Expression)
+  Variable:
+  $110: LocalOutVariable named AthenaPlayerCharacter@0x19fccb77180
+  Expression:
+  $119: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fccb77200
+$128: Jump to offset 0x95
+$133: LetBool (Variable = Expression)
+  Variable:
+  $134: InstanceVariable named CastSuccessful@0x19fccb77880
+  Expression:
+  $143: False
+$144: Jump to offset 0x5a
+$149: Return expression:
+  $150: Nothing
+$151: EndOfScript
+
+=== BP_ShoresOfGold_QuestParticipantTriggerVolume_C::Initialise (30 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: InstanceVariable named QuestParticipants@0x19fccb77a00
+  Expression:
+  $18: LocalOutVariable named QuestParticipants@0x19fccb77380
+$27: Return expression:
+  $28: Nothing
+$29: EndOfScript
+
+=== BP_ShoresOfGold_QuestParticipantTriggerVolume_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_ShoresOfGold_QuestParticipantTriggerVolume_C::fn_idx_281006 (112 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_OtherActor@0x19fccb77580
+  Expression:
+  $9: LocalVariable named OtherActor@0x19fccb77400
+$18: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_OtherComp@0x19fccb77600
+  Expression:
+  $27: LocalVariable named OtherComp@0x19fccb77480
+$36: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_OtherBodyIndex@0x19fd1856580
+  Expression:
+  $45: LocalVariable named OtherBodyIndex@0x19fd18564a0
+$54: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_bFromSweep@0x19fccb77680
+  Expression:
+  $63: LocalVariable named bFromSweep@0x19e585a9f80
+$72: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_SweepResult@0x19fccb77700
+  Expression:
+  $81: LocalOutVariable named SweepResult@0x19fccb77500
+$90: VirtualFunction call "idx:281009" (
+  $103: literal int32 34
+  $108: EndFunctionParms
+)
+$109: Return expression:
+  $110: Nothing
+$111: EndOfScript
+
+=== BP_ShoresOfGold_QuestParticipantTriggerVolume_C::fn_idx_281009 (97 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fd1856f90
+$10: CallMulticastDelegate target=OnPlayerEnteredTrigger__DelegateSignature@0x19fcc7c9480 delegate:
+  $19: InstanceVariable named OnPlayerEnteredTrigger@0x19fccb77900
+  Params:
+  $28: EndFunctionParms
+$29: Jump to offset 0x5e
+$34: VirtualFunction call "CastToAthenaPlayerCharacter" (
+  $47: LocalVariable named K2Node_ComponentBoundEvent_OtherActor@0x19fccb77580
+  $56: LocalVariable named CallFunc_CastToAthenaPlayerCharacter_Successful@0x19fccb77780
+  $65: LocalVariable named CallFunc_CastToAthenaPlayerCharacter_AthenaPlayerCharacter@0x19fccb77800
+  $74: EndFunctionParms
+)
+$75: JumpIfNot -> 0x5e, cond:
+  $80: LocalVariable named CallFunc_CastToAthenaPlayerCharacter_Successful@0x19fccb77780
+$89: Jump to offset 0xa
+$94: Return expression:
+  $95: Nothing
+$96: EndOfScript
+
+=== BP_ShoresOfGold_QuestParticipantTriggerVolume_C::fn_idx_278739 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript

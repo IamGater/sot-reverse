@@ -1,0 +1,134 @@
+// Class: InputBinder (4 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+InputBinder::IgnoreNonSpoofedInput @ RVA 0x3158080 EA 0x7FF6F6B78080
+======================================================================
+__int64 __fastcall sub_7FF6F6B78080(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return nullsub_3510(a1, v5);
+}
+
+
+======================================================================
+InputBinder::IsContinuousActionActive @ RVA 0x3158110 EA 0x7FF6F6B78110
+======================================================================
+__int64 __fastcall sub_7FF6F6B78110(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 result; // rax
+  __int64 v10; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 544LL))(a1, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+InputBinder::SpoofAnalogInput @ RVA 0x3158560 EA 0x7FF6F6B78560
+======================================================================
+__int64 __fastcall sub_7FF6F6B78560(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  int v8; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v9; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v9;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return nullsub_3511(a1, v6);
+}
+
+
+======================================================================
+InputBinder::SpoofNotificationInput @ RVA 0x3158630 EA 0x7FF6F6B78630
+======================================================================
+__int64 __fastcall sub_7FF6F6B78630(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return nullsub_3512(a1, v6);
+}
+

@@ -1,0 +1,1088 @@
+// Class: BlackboardComponent (26 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+BlackboardComponent::ClearValue @ RVA 0x20A2290 EA 0x7FF6F5AC2290
+======================================================================
+__int64 __fastcall sub_7FF6F5AC2290(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 *v5; // rdx
+  __int64 v6; // rax
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = &v8;
+  if ( a2[7] )
+    v5 = (__int64 *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  return sub_7FF6F59D7B10(a1, v5);
+}
+
+
+======================================================================
+BlackboardComponent::ClearValueAsRotator @ RVA 0x20A2320 EA 0x7FF6F5AC2320
+======================================================================
+__int64 __fastcall sub_7FF6F5AC2320(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 *v5; // rdx
+  __int64 v6; // rax
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = &v8;
+  if ( a2[7] )
+    v5 = (__int64 *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  return sub_7FF6F59D7FD0(a1, v5);
+}
+
+
+======================================================================
+BlackboardComponent::ClearValueAsVector @ RVA 0x20A23B0 EA 0x7FF6F5AC23B0
+======================================================================
+__int64 __fastcall sub_7FF6F5AC23B0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 *v5; // rdx
+  __int64 v6; // rax
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = &v8;
+  if ( a2[7] )
+    v5 = (__int64 *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  return sub_7FF6F59D8010(a1, v5);
+}
+
+
+======================================================================
+BlackboardComponent::GetLocationFromEntry @ RVA 0x20A39C0 EA 0x7FF6F5AC39C0
+======================================================================
+__int64 __fastcall sub_7FF6F5AC39C0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 *v7; // rax
+  __int64 *v8; // rsi
+  _BYTE *v9; // r8
+  __int64 v10; // rax
+  __int64 result; // rax
+  _BYTE v12[40]; // [rsp+20h] [rbp-28h] BYREF
+  __int64 v13; // [rsp+58h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v13 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v7 = (__int64 *)a2[7];
+  v8 = &v13;
+  a2[7] = 0;
+  if ( v7 )
+    v8 = v7;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v9 = v12;
+  if ( a2[7] )
+    v9 = (_BYTE *)a2[7];
+  v10 = a2[4];
+  LOBYTE(v3) = v10 != 0;
+  a2[4] = v10 + v3;
+  result = sub_7FF6F59DFE80(a1, v8, v9);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+BlackboardComponent::GetRotationFromEntry @ RVA 0x20A3FD0 EA 0x7FF6F5AC3FD0
+======================================================================
+__int64 __fastcall sub_7FF6F5AC3FD0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 *v7; // rax
+  __int64 *v8; // rsi
+  _BYTE *v9; // r8
+  __int64 v10; // rax
+  __int64 result; // rax
+  _BYTE v12[40]; // [rsp+20h] [rbp-28h] BYREF
+  __int64 v13; // [rsp+58h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v13 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v7 = (__int64 *)a2[7];
+  v8 = &v13;
+  a2[7] = 0;
+  if ( v7 )
+    v8 = v7;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v9 = v12;
+  if ( a2[7] )
+    v9 = (_BYTE *)a2[7];
+  v10 = a2[4];
+  LOBYTE(v3) = v10 != 0;
+  a2[4] = v10 + v3;
+  result = sub_7FF6F59E0C50(a1, v8, v9);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+BlackboardComponent::GetValueAsBool @ RVA 0x20A4280 EA 0x7FF6F5AC4280
+======================================================================
+__int64 __fastcall sub_7FF6F5AC4280(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 *v7; // rdx
+  __int64 v8; // rax
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = &v10;
+  if ( a2[7] )
+    v7 = (__int64 *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = sub_7FF6F59E1F90(a1, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+BlackboardComponent::GetValueAsClass @ RVA 0x20A4320 EA 0x7FF6F5AC4320
+======================================================================
+__int64 __fastcall sub_7FF6F5AC4320(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  __int64 *v7; // rdx
+  __int64 v8; // rax
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = &v10;
+  if ( a2[7] )
+    v7 = (__int64 *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = sub_7FF6F59E1FD0(a1, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+BlackboardComponent::GetValueAsEnum @ RVA 0x20A43C0 EA 0x7FF6F5AC43C0
+======================================================================
+__int64 __fastcall sub_7FF6F5AC43C0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 *v7; // rdx
+  __int64 v8; // rax
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = &v10;
+  if ( a2[7] )
+    v7 = (__int64 *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = sub_7FF6F59E2010(a1, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+BlackboardComponent::GetValueAsFloat @ RVA 0x20A4460 EA 0x7FF6F5AC4460
+======================================================================
+void __fastcall sub_7FF6F5AC4460(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 *v7; // rdx
+  __int64 v8; // rax
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v7 = &v9;
+  if ( a2[7] )
+    v7 = (__int64 *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  *a3 = sub_7FF6F59E2050(a1, v7);
+}
+
+
+======================================================================
+BlackboardComponent::GetValueAsInt @ RVA 0x20A4500 EA 0x7FF6F5AC4500
+======================================================================
+__int64 __fastcall sub_7FF6F5AC4500(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 *v7; // rdx
+  __int64 v8; // rax
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = &v10;
+  if ( a2[7] )
+    v7 = (__int64 *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = sub_7FF6F59E2090(a1, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+BlackboardComponent::GetValueAsName @ RVA 0x20A45A0 EA 0x7FF6F5AC45A0
+======================================================================
+_QWORD *__fastcall sub_7FF6F5AC45A0(__int64 a1, _QWORD *a2, _QWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 *v7; // r8
+  __int64 v8; // rax
+  _QWORD *result; // rax
+  __int64 v10; // [rsp+48h] [rbp+10h] BYREF
+  char v11; // [rsp+50h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = &v10;
+  if ( a2[7] )
+    v7 = (__int64 *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = (_QWORD *)sub_7FF6F59E20D0(a1, &v11, v7);
+  *a3 = *result;
+  return result;
+}
+
+
+======================================================================
+BlackboardComponent::GetValueAsObject @ RVA 0x20A4640 EA 0x7FF6F5AC4640
+======================================================================
+__int64 __fastcall sub_7FF6F5AC4640(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  __int64 *v7; // rdx
+  __int64 v8; // rax
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = &v10;
+  if ( a2[7] )
+    v7 = (__int64 *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = sub_7FF6F59E2120(a1, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+BlackboardComponent::GetValueAsRotator @ RVA 0x20A46E0 EA 0x7FF6F5AC46E0
+======================================================================
+__int64 __fastcall sub_7FF6F5AC46E0(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v3; // rdi
+  __int64 *v7; // r8
+  __int64 v8; // rax
+  __int64 v9; // rax
+  __int64 result; // rax
+  _BYTE v11[24]; // [rsp+20h] [rbp-18h] BYREF
+  __int64 v12; // [rsp+48h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v12 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v7 = &v12;
+  if ( a2[7] )
+    v7 = (__int64 *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  v9 = sub_7FF6F59E2160(a1, v11, v7);
+  *(_QWORD *)a3 = *(_QWORD *)v9;
+  result = *(unsigned int *)(v9 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+BlackboardComponent::GetValueAsString @ RVA 0x20A4790 EA 0x7FF6F5AC4790
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F5AC4790(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 *v6; // r8
+  __int64 result; // rax
+  __int64 v8; // rdi
+  __int64 v9[4]; // [rsp+28h] [rbp-20h] BYREF
+  __int64 v10; // [rsp+58h] [rbp+10h] BYREF
+
+  v10 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = &v10;
+  if ( a2[7] )
+    v6 = (__int64 *)a2[7];
+  a2[4] += a2[4] != 0;
+  result = sub_7FF6F59E21B0(a1, v9, v6);
+  v8 = result;
+  if ( a3 != result )
+  {
+    if ( *(_QWORD *)a3 )
+    {
+      sub_7FF6F4DED1F0(*(_QWORD *)a3);
+      if ( *(_QWORD *)a3 )
+        *(_QWORD *)a3 = 0;
+    }
+    *(_QWORD *)a3 = *(_QWORD *)v8;
+    *(_QWORD *)v8 = 0;
+    *(_DWORD *)(a3 + 8) = *(_DWORD *)(v8 + 8);
+    result = *(unsigned int *)(v8 + 12);
+    *(_DWORD *)(a3 + 12) = result;
+    *(_QWORD *)(v8 + 8) = 0;
+  }
+  if ( v9[0] )
+    return sub_7FF6F4DED1F0(v9[0]);
+  return result;
+}
+
+
+======================================================================
+BlackboardComponent::GetValueAsVector @ RVA 0x20A4890 EA 0x7FF6F5AC4890
+======================================================================
+__int64 __fastcall sub_7FF6F5AC4890(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v3; // rdi
+  __int64 *v7; // r8
+  __int64 v8; // rax
+  __int64 v9; // rax
+  __int64 result; // rax
+  _BYTE v11[24]; // [rsp+20h] [rbp-18h] BYREF
+  __int64 v12; // [rsp+48h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v12 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v7 = &v12;
+  if ( a2[7] )
+    v7 = (__int64 *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  v9 = sub_7FF6F59E2200(a1, v11, v7);
+  *(_QWORD *)a3 = *(_QWORD *)v9;
+  result = *(unsigned int *)(v9 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+BlackboardComponent::IsVectorValueSet @ RVA 0x20A4CA0 EA 0x7FF6F5AC4CA0
+======================================================================
+__int64 __fastcall sub_7FF6F5AC4CA0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 *v7; // rdx
+  __int64 v8; // rax
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = &v10;
+  if ( a2[7] )
+    v7 = (__int64 *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = sub_7FF6F59E4D60(a1, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+BlackboardComponent::SetValueAsBool @ RVA 0x20A7860 EA 0x7FF6F5AC7860
+======================================================================
+__int64 __fastcall sub_7FF6F5AC7860(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 *v5; // rax
+  __int64 *v6; // rsi
+  __int64 v7; // r8
+  __int64 v8; // rax
+  bool v9; // zf
+  int v11; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v12; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v12 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v5 = (__int64 *)a2[7];
+  v6 = &v12;
+  v11 = 0;
+  if ( v5 )
+    v6 = v5;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v8 = a2[4];
+  LOBYTE(v2) = v8 != 0;
+  v9 = v11 == 0;
+  a2[4] = v8 + v2;
+  LOBYTE(v7) = !v9;
+  return sub_7FF6F59EF7C0(a1, v6, v7);
+}
+
+
+======================================================================
+BlackboardComponent::SetValueAsClass @ RVA 0x20A7930 EA 0x7FF6F5AC7930
+======================================================================
+__int64 __fastcall sub_7FF6F5AC7930(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 *v5; // rax
+  __int64 *v6; // rsi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v10; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v10 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v5 = (__int64 *)a2[7];
+  v6 = &v10;
+  v11 = 0;
+  if ( v5 )
+    v6 = v5;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v7 = a2[4];
+  v8 = v11;
+  LOBYTE(v2) = v7 != 0;
+  a2[4] = v7 + v2;
+  return sub_7FF6F59EF800(a1, v6, v8);
+}
+
+
+======================================================================
+BlackboardComponent::SetValueAsEnum @ RVA 0x20A7A00 EA 0x7FF6F5AC7A00
+======================================================================
+__int64 __fastcall sub_7FF6F5AC7A00(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 *v5; // rax
+  __int64 *v6; // rsi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  unsigned __int8 v10; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v11 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v5 = (__int64 *)a2[7];
+  v6 = &v11;
+  v10 = 0;
+  if ( v5 )
+    v6 = v5;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v2) = v7 != 0;
+  a2[4] = v7 + v2;
+  return sub_7FF6F59EF840(a1, v6, v8);
+}
+
+
+======================================================================
+BlackboardComponent::SetValueAsFloat @ RVA 0x20A7AD0 EA 0x7FF6F5AC7AD0
+======================================================================
+__int64 __fastcall sub_7FF6F5AC7AD0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 *v5; // rax
+  __int64 *v6; // rsi
+  __int64 v7; // rax
+  int v9; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v10; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v10 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v5 = (__int64 *)a2[7];
+  v6 = &v10;
+  v9 = 0;
+  if ( v5 )
+    v6 = v5;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v7 = a2[4];
+  LOBYTE(v2) = v7 != 0;
+  a2[4] = v7 + v2;
+  return sub_7FF6F59EF880(a1, v6);
+}
+
+
+======================================================================
+BlackboardComponent::SetValueAsInt @ RVA 0x20A7BA0 EA 0x7FF6F5AC7BA0
+======================================================================
+__int64 __fastcall sub_7FF6F5AC7BA0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 *v5; // rax
+  __int64 *v6; // rsi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  unsigned int v10; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v11 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v5 = (__int64 *)a2[7];
+  v6 = &v11;
+  v10 = 0;
+  if ( v5 )
+    v6 = v5;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v2) = v7 != 0;
+  a2[4] = v7 + v2;
+  return sub_7FF6F59EF8C0(a1, v6, v8);
+}
+
+
+======================================================================
+BlackboardComponent::SetValueAsName @ RVA 0x20A7C70 EA 0x7FF6F5AC7C70
+======================================================================
+__int64 __fastcall sub_7FF6F5AC7C70(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 *v5; // rax
+  __int64 *v6; // rsi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v10; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v10 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v5 = (__int64 *)a2[7];
+  v6 = &v10;
+  v11 = 0;
+  if ( v5 )
+    v6 = v5;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v7 = a2[4];
+  v8 = v11;
+  LOBYTE(v2) = v7 != 0;
+  a2[4] = v7 + v2;
+  return sub_7FF6F59EF900(a1, v6, v8);
+}
+
+
+======================================================================
+BlackboardComponent::SetValueAsObject @ RVA 0x20A7D40 EA 0x7FF6F5AC7D40
+======================================================================
+__int64 __fastcall sub_7FF6F5AC7D40(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 *v5; // rax
+  __int64 *v6; // rsi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v10; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v10 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v5 = (__int64 *)a2[7];
+  v6 = &v10;
+  v11 = 0;
+  if ( v5 )
+    v6 = v5;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v7 = a2[4];
+  v8 = v11;
+  LOBYTE(v2) = v7 != 0;
+  a2[4] = v7 + v2;
+  return sub_7FF6F59EF940(a1, v6, v8);
+}
+
+
+======================================================================
+BlackboardComponent::SetValueAsRotator @ RVA 0x20A7E10 EA 0x7FF6F5AC7E10
+======================================================================
+__int64 __fastcall sub_7FF6F5AC7E10(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 *v5; // rsi
+  __int64 v6; // rax
+  __int64 v7; // rdi
+  __int64 v9; // [rsp+20h] [rbp-28h] BYREF
+  int v10; // [rsp+28h] [rbp-20h]
+  __int64 v11; // [rsp+30h] [rbp-18h] BYREF
+  int v12; // [rsp+38h] [rbp-10h]
+  __int64 v13; // [rsp+58h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v13 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v5 = &v13;
+  if ( a2[7] )
+    v5 = (__int64 *)a2[7];
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  v11 = v9;
+  LOBYTE(v2) = v6 != 0;
+  v7 = v6 + v2;
+  LODWORD(v6) = v10;
+  a2[4] = v7;
+  v12 = v6;
+  return sub_7FF6F59EF980(a1, v5, &v11);
+}
+
+
+======================================================================
+BlackboardComponent::SetValueAsString @ RVA 0x20A7F00 EA 0x7FF6F5AC7F00
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F5AC7F00(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 *v5; // rsi
+  __int64 v6; // rax
+  __int64 result; // rax
+  __int64 v8[2]; // [rsp+28h] [rbp-40h] BYREF
+  _BYTE v9[48]; // [rsp+38h] [rbp-30h] BYREF
+  __int64 v10; // [rsp+78h] [rbp+10h] BYREF
+
+  v4 = 0;
+  v10 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v5 = &v10;
+  if ( a2[7] )
+    v5 = (__int64 *)a2[7];
+  v8[0] = 0;
+  v8[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v6 = a2[4];
+  LOBYTE(v4) = v6 != 0;
+  a2[4] = v6 + v4;
+  sub_7FF6F3C34DB0((__int64)v9, (__int64)v8);
+  result = sub_7FF6F59EF9E0(a1, v5, v9);
+  if ( v8[0] )
+    return sub_7FF6F4DED1F0(v8[0]);
+  return result;
+}
+
+
+======================================================================
+BlackboardComponent::SetValueAsVector @ RVA 0x20A8000 EA 0x7FF6F5AC8000
+======================================================================
+__int64 __fastcall sub_7FF6F5AC8000(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 *v5; // rsi
+  __int64 v6; // rax
+  __int64 v7; // rdi
+  __int64 v9; // [rsp+20h] [rbp-28h] BYREF
+  int v10; // [rsp+28h] [rbp-20h]
+  __int64 v11; // [rsp+30h] [rbp-18h] BYREF
+  int v12; // [rsp+38h] [rbp-10h]
+  __int64 v13; // [rsp+58h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v13 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v5 = &v13;
+  if ( a2[7] )
+    v5 = (__int64 *)a2[7];
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  v11 = v9;
+  LOBYTE(v2) = v6 != 0;
+  v7 = v6 + v2;
+  LODWORD(v6) = v10;
+  a2[4] = v7;
+  v12 = v6;
+  return sub_7FF6F59EFA70(a1, v5, &v11);
+}
+

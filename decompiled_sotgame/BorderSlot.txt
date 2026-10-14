@@ -1,0 +1,82 @@
+// Class: BorderSlot (3 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+BorderSlot::SetHorizontalAlignment @ RVA 0x1F31390 EA 0x7FF6F5951390
+======================================================================
+__int64 __fastcall sub_7FF6F5951390(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F58C0460(a1, v5);
+}
+
+
+======================================================================
+BorderSlot::SetPadding @ RVA 0x1F32F50 EA 0x7FF6F5952F50
+======================================================================
+__int64 __fastcall sub_7FF6F5952F50(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rax
+  __int128 v7; // [rsp+20h] [rbp-28h] BYREF
+  __int128 v8; // [rsp+30h] [rbp-18h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = a2[4];
+  v8 = v7;
+  a2[4] = v5 + (v5 != 0);
+  return sub_7FF6F58C2000(a1, &v8);
+}
+
+
+======================================================================
+BorderSlot::SetVerticalAlignment @ RVA 0x1F34A70 EA 0x7FF6F5954A70
+======================================================================
+__int64 __fastcall sub_7FF6F5954A70(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F58C3B90(a1, v5);
+}
+

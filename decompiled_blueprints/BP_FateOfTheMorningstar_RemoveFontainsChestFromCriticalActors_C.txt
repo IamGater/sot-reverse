@@ -1,0 +1,61 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_7_FateOfTheMorningStar/bp_fateofthemorningstar_removefontainschestfromcriticalactors -> BP_FateOfTheMorningstar_RemoveFontainsChestFromCriticalActors_C
+
+=== BP_FateOfTheMorningstar_RemoveFontainsChestFromCriticalActors_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fcc9c2100
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fcc9c2000
+$18: VirtualFunction call "idx:284652" (
+  $31: literal int32 196
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_FateOfTheMorningstar_RemoveFontainsChestFromCriticalActors_C::fn_idx_284652 (204 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19e586b9370
+$10: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $19: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc9c2080
+  $28: EndFunctionParms
+)
+$29: FinalFunction target=MarkActorAsNonCritical@0x19e4cda6360 (
+  $38: StructMemberContext prop=idx:284549@0x19fcc9c5680
+    Expression to struct:
+    $47: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc9c2080
+  $56: EndFunctionParms
+)
+$57: Let (Variable = Expression)
+  Variable:
+  $66: LocalVariable named idx:284643@0x19fcc9c2180
+  Expression:
+  $75: DynamicCast to BP_LockedFateoftheMorningstarChest_ItemInfo_C@0x19e1b4edc80 of expr:
+  $84: StructMemberContext prop=idx:284549@0x19fcc9c5680
+    Expression to struct:
+    $93: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc9c2080
+$102: Let (Variable = Expression)
+  Variable:
+  $111: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcc9c2200
+  Expression:
+  $120: PrimitiveCast type=71
+    Argument:
+    $122: LocalVariable named idx:284643@0x19fcc9c2180
+$131: JumpIfNot -> 0xc9, cond:
+  $136: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcc9c2200
+$145: Context
+  ObjectExpression:
+  $146: LocalVariable named idx:284643@0x19fcc9c2180
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $167: VirtualFunction call "MulticastFreeSouls" (
+    $180: EndFunctionParms
+  )
+$181: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $190: EndFunctionParms
+)
+$191: Jump to offset 0xc9
+$196: Jump to offset 0xa
+$201: Return expression:
+  $202: Nothing
+$203: EndOfScript

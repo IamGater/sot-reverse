@@ -1,0 +1,59 @@
+// Class: LookAtOffsetComponent (1 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+LookAtOffsetComponent::GetLookAtOffset @ RVA 0xB0D400 EA 0x7FF6F452D400
+======================================================================
+__int64 __fastcall sub_7FF6F452D400(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 *v3; // rbx
+  __int64 result; // rax
+  __int64 *v5; // rcx
+  __int64 v6; // rcx
+  __int64 v7; // rdi
+
+  v3 = (__int64 *)(a3 + 128);
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *(_DWORD *)a3 = *(_DWORD *)(a1 + 200);
+  *(_DWORD *)(a3 + 4) = *(_DWORD *)(a1 + 204);
+  *(_DWORD *)(a3 + 8) = *(_DWORD *)(a1 + 208);
+  *(_DWORD *)(a3 + 12) = *(_DWORD *)(a1 + 212);
+  *(_QWORD *)(a3 + 16) = *(_QWORD *)(a1 + 216);
+  *(_DWORD *)(a3 + 24) = *(_DWORD *)(a1 + 224);
+  *(_OWORD *)(a3 + 28) = *(_OWORD *)(a1 + 228);
+  *(_QWORD *)(a3 + 44) = *(_QWORD *)(a1 + 244);
+  *(_OWORD *)(a3 + 52) = *(_OWORD *)(a1 + 252);
+  *(_QWORD *)(a3 + 68) = *(_QWORD *)(a1 + 268);
+  *(_DWORD *)(a3 + 76) = *(_DWORD *)(a1 + 276);
+  *(_DWORD *)(a3 + 80) = *(_DWORD *)(a1 + 280);
+  *(_OWORD *)(a3 + 84) = *(_OWORD *)(a1 + 284);
+  *(_QWORD *)(a3 + 100) = *(_QWORD *)(a1 + 300);
+  *(_DWORD *)(a3 + 108) = *(_DWORD *)(a1 + 308);
+  *(_BYTE *)(a3 + 112) = *(_BYTE *)(a1 + 312);
+  *(_BYTE *)(a3 + 113) = *(_BYTE *)(a1 + 313);
+  *(_DWORD *)(a3 + 116) = *(_DWORD *)(a1 + 316);
+  *(_DWORD *)(a3 + 120) = *(_DWORD *)(a1 + 320);
+  result = *(unsigned int *)(a1 + 324);
+  v5 = (__int64 *)(a1 + 328);
+  *(_DWORD *)(a3 + 124) = result;
+  if ( v5 != (__int64 *)(a3 + 128) )
+  {
+    v6 = *v5;
+    if ( v6 )
+    {
+      result = (*(__int64 (**)(void))(*(_QWORD *)v6 + 72LL))();
+      v7 = result;
+      if ( *v3 )
+        result = (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)*v3 + 64LL))(*v3, 1);
+      *v3 = v7;
+    }
+    else
+    {
+      if ( *v3 )
+        result = (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)*v3 + 64LL))(*v3, 1);
+      *v3 = 0;
+    }
+  }
+  return result;
+}
+

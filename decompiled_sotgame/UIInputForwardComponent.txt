@@ -1,0 +1,123 @@
+// Class: UIInputForwardComponent (6 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+UIInputForwardComponent::CentreMouseCursor @ RVA 0xCF4F50 EA 0x7FF6F4714F50
+======================================================================
+__int64 __fastcall sub_7FF6F4714F50(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F4390F90();
+}
+
+
+======================================================================
+UIInputForwardComponent::GetCurrentInputFocusType @ RVA 0xCF6BE0 EA 0x7FF6F4716BE0
+======================================================================
+__int64 __fastcall sub_7FF6F4716BE0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F439CCF0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+UIInputForwardComponent::IsUIFocused @ RVA 0xCF8190 EA 0x7FF6F4718190
+======================================================================
+__int64 __fastcall sub_7FF6F4718190(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F43A2570();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+UIInputForwardComponent::SetTargetView @ RVA 0xCFD4F0 EA 0x7FF6F471D4F0
+======================================================================
+__int64 __fastcall sub_7FF6F471D4F0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F43B9CD0(a1, v6);
+}
+
+
+======================================================================
+UIInputForwardComponent::SetUIFocus @ RVA 0xCFD630 EA 0x7FF6F471D630
+======================================================================
+__int64 __fastcall sub_7FF6F471D630(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  __int64 v6; // rax
+  __int64 v7; // r8
+  __int64 v8; // rdx
+  unsigned __int8 v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v10 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  v5 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = a2[4];
+  v7 = v11;
+  v8 = v10;
+  LOBYTE(v5) = v6 != 0;
+  a2[4] = v6 + v5;
+  return sub_7FF6F43BA000(a1, v8, v7);
+}
+
+
+======================================================================
+UIInputForwardComponent::TargetViewScriptingReady @ RVA 0xCFDAE0 EA 0x7FF6F471DAE0
+======================================================================
+void __fastcall sub_7FF6F471DAE0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F43BBA50LL);
+}
+

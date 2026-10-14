@@ -1,0 +1,349 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Onboarding/bp_registerwateroutofship -> BP_RegisterWaterOutOfShip_C
+
+=== BP_RegisterWaterOutOfShip_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fce70ab80
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fce70a880
+$18: VirtualFunction call "idx:283134" (
+  $31: literal int32 144
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_RegisterWaterOutOfShip_C::fn_idx_275769 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event2@0x19fce70ae80
+  Expression:
+  $9: LocalVariable named Event@0x19fce70a900
+$18: VirtualFunction call "idx:283134" (
+  $31: literal int32 913
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_RegisterWaterOutOfShip_C::fn_idx_275683 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event@0x19fce70b280
+  Expression:
+  $9: LocalVariable named Event@0x19fce70a980
+$18: VirtualFunction call "idx:283134" (
+  $31: literal int32 980
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_RegisterWaterOutOfShip_C::OnEnd (22 bytes) ===
+$0: VirtualFunction call "idx:283134" (
+  $13: literal int32 1276
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_RegisterWaterOutOfShip_C::fn_idx_283134 (1284 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fcdbb6740
+$10: LetObj (Variable = Expression)
+  Variable:
+  $11: LocalVariable named CallFunc_GetGameState_ReturnValue@0x19fce70aa00
+  Expression:
+  $20: FinalFunction target=GetGameState@0x19e4cda5860 (
+    $29: EndFunctionParms
+  )
+$30: Let (Variable = Expression)
+  Variable:
+  $39: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fce70ab00
+  Expression:
+  $48: Context
+    ObjectExpression:
+    $49: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fce70ab00
+    ContextExpression:
+    $70: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x19e4d410390 (
+      $79: LocalVariable named CallFunc_GetGameState_ReturnValue@0x19fce70aa00
+      $88: EndFunctionParms
+    )
+$89: Context
+  ObjectExpression:
+  $90: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $111: FinalFunction target=UnregisterEventFromHandle@0x19e4d411420 (
+    $120: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fce70ab00
+    $129: InstanceVariable named Handle_ShipSunk@0x19fce70b300
+    $138: EndFunctionParms
+  )
+$139: Jump to offset 0x501
+$144: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $153: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce70ac00
+  $162: EndFunctionParms
+)
+$163: JumpIfNot -> 0xc9, cond:
+  $168: StructMemberContext prop=idx:282738@0x19fcbb41400
+    Expression to struct:
+    $177: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce70ac00
+$186: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $195: EndFunctionParms
+)
+$196: Jump to offset 0x501
+$201: LetBool (Variable = Expression)
+  Variable:
+  $202: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fce70ac80
+  Expression:
+  $211: Context
+    ObjectExpression:
+    $212: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19fce70ac80
+    ContextExpression:
+    $233: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $242: StructMemberContext prop=idx:282734@0x19fcbb42000
+        Expression to struct:
+        $251: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce70ac00
+      $260: EndFunctionParms
+    )
+$261: JumpIfNot -> 0x1bc, cond:
+  $266: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fce70ac80
+$275: LetObj (Variable = Expression)
+  Variable:
+  $276: LocalVariable named idx:283131@0x19fce70ad00
+  Expression:
+  $285: Context
+    ObjectExpression:
+    $286: StructMemberContext prop=idx:282734@0x19fcbb42000
+      Expression to struct:
+      $295: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce70ac00
+    SkipBytes: 0xa
+    RValueProperty: idx:283131@0x19fce70ad00
+    ContextExpression:
+    $316: FinalFunction target=GetInternalWater@0x19e4d11b7e0 (
+      $325: EndFunctionParms
+    )
+$326: Let (Variable = Expression)
+  Variable:
+  $335: LocalVariable named idx:283132@0x19fcdbb5fd0
+  Expression:
+  $344: Context
+    ObjectExpression:
+    $345: LocalVariable named idx:283131@0x19fce70ad00
+    SkipBytes: 0xa
+    RValueProperty: idx:283132@0x19fcdbb5fd0
+    ContextExpression:
+    $366: FinalFunction target=GetWaterAmount@0x19e4d45d7b0 (
+      $375: EndFunctionParms
+    )
+$376: LetBool (Variable = Expression)
+  Variable:
+  $377: LocalVariable named CallFunc_NearlyEqual_FloatFloat_ReturnValue@0x19fce70ae00
+  Expression:
+  $386: CallMath target=NearlyEqual_FloatFloat@0x19e4d38ef90 (
+    $395: LocalVariable named idx:283132@0x19fcdbb5fd0
+    $404: literal float 0
+    $409: literal float 9.999999974752427e-7
+    $414: EndFunctionParms
+  )
+$415: JumpIfNot -> 0x219, cond:
+  $420: LocalVariable named CallFunc_NearlyEqual_FloatFloat_ReturnValue@0x19fce70ae00
+$429: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $438: EndFunctionParms
+)
+$439: Jump to offset 0x501
+$444: Context
+  ObjectExpression:
+  $445: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x42
+  RValueProperty: (null)
+  ContextExpression:
+  $466: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $475: NoObject
+    $476: literal ansi string "Aint no boat"
+    $490: True
+    $491: True
+    $492: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $505: literal float 1
+      $510: literal float 0.2867319881916046
+      $515: literal float 0.12335900217294693
+      $520: literal float 1
+      $525: EndStructConst
+    $526: literal float 10
+    $531: EndFunctionParms
+  )
+$532: Jump to offset 0x501
+$537: Let (Variable = Expression)
+  Variable:
+  $546: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x19fce70ad80
+  Expression:
+  $555: Context
+    ObjectExpression:
+    $556: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x19fce70ad80
+    ContextExpression:
+    $577: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x19e4d410390 (
+      $586: StructMemberContext prop=idx:282734@0x19fcbb42000
+        Expression to struct:
+        $595: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce70ac00
+      $604: EndFunctionParms
+    )
+$605: Context
+  ObjectExpression:
+  $606: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x3a
+  RValueProperty: (null)
+  ContextExpression:
+  $627: FinalFunction target=RegisterEventFromHandle@0x19e4d410c00 (
+    $636: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x19fce70ad80
+    $645: InstanceVariable named idx:283135@0x19fce70b380
+    $654: Self
+    $655: literal ansi string "OnPlayerScoopWater"
+    $675: ObjectConst EventWaterAmountChanged@0x19e4cfc8880
+    $684: EndFunctionParms
+  )
+$685: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $694: LocalVariable named CallFunc_GetVariables_OutStruct2@0x19fce70b180
+  $703: EndFunctionParms
+)
+$704: JumpIfNot -> 0x2e6, cond:
+  $709: StructMemberContext prop=idx:282738@0x19fcbb41400
+    Expression to struct:
+    $718: LocalVariable named CallFunc_GetVariables_OutStruct2@0x19fce70b180
+$727: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $736: EndFunctionParms
+)
+$737: Jump to offset 0x501
+$742: LetObj (Variable = Expression)
+  Variable:
+  $743: LocalVariable named CallFunc_GetGameState_ReturnValue2@0x19fce70af00
+  Expression:
+  $752: FinalFunction target=GetGameState@0x19e4cda5860 (
+    $761: EndFunctionParms
+  )
+$762: Let (Variable = Expression)
+  Variable:
+  $771: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue3@0x19fce70b100
+  Expression:
+  $780: Context
+    ObjectExpression:
+    $781: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue3@0x19fce70b100
+    ContextExpression:
+    $802: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x19e4d410390 (
+      $811: LocalVariable named CallFunc_GetGameState_ReturnValue2@0x19fce70af00
+      $820: EndFunctionParms
+    )
+$821: Context
+  ObjectExpression:
+  $822: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x32
+  RValueProperty: (null)
+  ContextExpression:
+  $843: FinalFunction target=RegisterEventFromHandle@0x19e4d410c00 (
+    $852: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue3@0x19fce70b100
+    $861: InstanceVariable named Handle_ShipSunk@0x19fce70b300
+    $870: Self
+    $871: literal ansi string "OnShipSunk"
+    $883: ObjectConst EventShipBecameUseless@0x19e4cfa99f0
+    $892: EndFunctionParms
+  )
+$893: Jump to offset 0x501
+$898: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $907: EndFunctionParms
+)
+$908: Jump to offset 0x501
+$913: LetBool (Variable = Expression)
+  Variable:
+  $914: LocalVariable named CallFunc_NearlyEqual_FloatFloat_ReturnValue2@0x19fce70b080
+  Expression:
+  $923: CallMath target=NearlyEqual_FloatFloat@0x19e4d38ef90 (
+    $932: StructMemberContext prop=NewWaterAmount@0x19e4cfc8920
+      Expression to struct:
+      $941: LocalVariable named K2Node_CustomEvent_Event2@0x19fce70ae80
+    $950: literal float 0
+    $955: literal float 9.999999974752427e-7
+    $960: EndFunctionParms
+  )
+$961: JumpIfNot -> 0x501, cond:
+  $966: LocalVariable named CallFunc_NearlyEqual_FloatFloat_ReturnValue2@0x19fce70b080
+$975: Jump to offset 0x382
+$980: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $989: EndFunctionParms
+)
+$990: Jump to offset 0x501
+$995: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $1004: LocalVariable named CallFunc_GetVariables_OutStruct3@0x19fce70b200
+  $1013: EndFunctionParms
+)
+$1014: LetBool (Variable = Expression)
+  Variable:
+  $1015: LocalVariable named CallFunc_IsValid_ReturnValue2@0x19fce70b000
+  Expression:
+  $1024: Context
+    ObjectExpression:
+    $1025: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_IsValid_ReturnValue2@0x19fce70b000
+    ContextExpression:
+    $1046: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $1055: StructMemberContext prop=idx:282734@0x19fcbb42000
+        Expression to struct:
+        $1064: LocalVariable named CallFunc_GetVariables_OutStruct3@0x19fce70b200
+      $1073: EndFunctionParms
+    )
+$1074: JumpIfNot -> 0x501, cond:
+  $1079: LocalVariable named CallFunc_IsValid_ReturnValue2@0x19fce70b000
+$1088: Let (Variable = Expression)
+  Variable:
+  $1097: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue4@0x19fce70af80
+  Expression:
+  $1106: Context
+    ObjectExpression:
+    $1107: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue4@0x19fce70af80
+    ContextExpression:
+    $1128: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x19e4d410390 (
+      $1137: StructMemberContext prop=idx:282734@0x19fcbb42000
+        Expression to struct:
+        $1146: LocalVariable named CallFunc_GetVariables_OutStruct3@0x19fce70b200
+      $1155: EndFunctionParms
+    )
+$1156: Context
+  ObjectExpression:
+  $1157: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $1178: FinalFunction target=UnregisterEventFromHandle@0x19e4d411420 (
+    $1187: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue4@0x19fce70af80
+    $1196: InstanceVariable named idx:283135@0x19fce70b380
+    $1205: EndFunctionParms
+  )
+$1206: LetBool (Variable = Expression)
+  Variable:
+  $1207: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue@0x19fce70b400
+  Expression:
+  $1216: Context
+    ObjectExpression:
+    $1217: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsHandleRegistered_ReturnValue@0x19fce70b400
+    ContextExpression:
+    $1238: FinalFunction target=IsHandleRegistered@0x19e4d410550 (
+      $1247: InstanceVariable named Handle_ShipSunk@0x19fce70b300
+      $1256: EndFunctionParms
+    )
+$1257: JumpIfNot -> 0x501, cond:
+  $1262: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue@0x19fce70b400
+$1271: Jump to offset 0xa
+$1276: Jump to offset 0x3e3
+$1281: Return expression:
+  $1282: Nothing
+$1283: EndOfScript

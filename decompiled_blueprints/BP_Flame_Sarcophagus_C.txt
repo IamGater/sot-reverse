@@ -1,0 +1,275 @@
+// E:\unreal-projects\Athena\Content\Blueprints\TallTales\Actors\AshenAge\Tale_1_TheAshenDragon\bp_flame_sarcophagus.uasset -> BP_Flame_Sarcophagus_C
+
+=== BP_Flame_Sarcophagus_C::CanInteract (59 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_Not_PreBool_ReturnValue@0x213ae602180
+  Expression:
+  $10: CallMath target=Not_PreBool@0x212d69b0310 (
+    $19: InstanceVariable named HasBeenInteractedWith@0x213ae602c80
+    $28: EndFunctionParms
+  )
+$29: LetBool (Variable = Expression)
+  Variable:
+  $30: LocalOutVariable named ReturnValue@0x213ae602100
+  Expression:
+  $39: LocalVariable named CallFunc_Not_PreBool_ReturnValue@0x213ae602180
+$48: Return expression:
+  $49: LocalOutVariable named ReturnValue@0x213ae602100
+$58: EndOfScript
+
+=== BP_Flame_Sarcophagus_C::Open (45 bytes) ===
+$0: Context
+  ObjectExpression:
+  $1: InstanceVariable named Sarcophagus@0x213ae602b80
+  SkipBytes: 0x14
+  RValueProperty: (null)
+  ContextExpression:
+  $22: FinalFunction target=PlayAnimation@0x212d6946370 (
+    $31: ObjectConst prop_sarcophagus_open_loop@0x213af825880
+    $40: False
+    $41: EndFunctionParms
+  )
+$42: Return expression:
+  $43: Nothing
+$44: EndOfScript
+
+=== BP_Flame_Sarcophagus_C::TriggerOpenAnimation (45 bytes) ===
+$0: Context
+  ObjectExpression:
+  $1: InstanceVariable named Sarcophagus@0x213ae602b80
+  SkipBytes: 0x14
+  RValueProperty: (null)
+  ContextExpression:
+  $22: FinalFunction target=PlayAnimation@0x212d6946370 (
+    $31: ObjectConst prop_sarcophagus_open@0x213af825a00
+    $40: False
+    $41: EndFunctionParms
+  )
+$42: Return expression:
+  $43: Nothing
+$44: EndOfScript
+
+=== BP_Flame_Sarcophagus_C::GetObjectDisplayName (92 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalOutVariable named ReturnValue@0x213af44fb90
+  Expression:
+  $18: literal text (not decoded)
+$19: literal ansi string "Sarcophagus"
+$32: literal ansi string "FE10C1ED4BBEBC3B464D45A66614BC5D_ReturnValue1"
+$79: literal ansi string ""
+$81: Return expression:
+  $82: LocalOutVariable named ReturnValue@0x213af44fb90
+$91: EndOfScript
+
+=== BP_Flame_Sarcophagus_C::GetClosestInteractionPoint (165 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_GetBoxSphereRadius_ReturnValue@0x213af44fab0
+  Expression:
+  $18: Context
+    ObjectExpression:
+    $19: InstanceVariable named Interactable@0x213ae602a00
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetBoxSphereRadius_ReturnValue@0x213af44fab0
+    ContextExpression:
+    $40: FinalFunction target=GetBoxSphereRadius@0x212d674e1d0 (
+      $49: EndFunctionParms
+    )
+$50: Let (Variable = Expression)
+  Variable:
+  $59: LocalVariable named CallFunc_GetBoxWorldOrigin_ReturnValue@0x213ae602380
+  Expression:
+  $68: Context
+    ObjectExpression:
+    $69: InstanceVariable named Interactable@0x213ae602a00
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetBoxWorldOrigin_ReturnValue@0x213ae602380
+    ContextExpression:
+    $90: FinalFunction target=GetBoxWorldOrigin@0x212d674e300 (
+      $99: EndFunctionParms
+    )
+$100: Let (Variable = Expression)
+  Variable:
+  $109: LocalOutVariable named OutInteractionPointRadius@0x213af44fb20
+  Expression:
+  $118: LocalVariable named CallFunc_GetBoxSphereRadius_ReturnValue@0x213af44fab0
+$127: Let (Variable = Expression)
+  Variable:
+  $136: LocalOutVariable named ReturnValue@0x213ae602300
+  Expression:
+  $145: LocalVariable named CallFunc_GetBoxWorldOrigin_ReturnValue@0x213ae602380
+$154: Return expression:
+  $155: LocalOutVariable named ReturnValue@0x213ae602300
+$164: EndOfScript
+
+=== BP_Flame_Sarcophagus_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_Flame_Sarcophagus_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Flame_Sarcophagus" (
+  $13: literal int32 482
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Flame_Sarcophagus_C::Blueprint_OnInteract_Server (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InInteractor2@0x213ae602880
+  Expression:
+  $9: LocalVariable named InInteractor@0x213ae602480
+$18: VirtualFunction call "ExecuteUbergraph_BP_Flame_Sarcophagus" (
+  $31: literal int32 487
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Flame_Sarcophagus_C::Blueprint_OnInteract_Client (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InInteractor@0x213ae602900
+  Expression:
+  $9: LocalVariable named InInteractor@0x213ae602500
+$18: VirtualFunction call "ExecuteUbergraph_BP_Flame_Sarcophagus" (
+  $31: literal int32 492
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Flame_Sarcophagus_C::ExecuteUbergraph_BP_Flame_Sarcophagus (514 bytes) ===
+$0: FlowStack.Push(0x1ff)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x213b32441a0
+$15: LetBool (Variable = Expression)
+  Variable:
+  $16: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue@0x213ae602580
+  Expression:
+  $25: FinalFunction target=FlushNetDormancy@0x212d6381090 (
+    $34: EndFunctionParms
+  )
+$35: LetBool (Variable = Expression)
+  Variable:
+  $36: InstanceVariable named HasBeenInteractedWith@0x213ae602c80
+  Expression:
+  $45: True
+$46: CallMulticastDelegate target=OnHasBeenInteracted__DelegateSignature@0x213aeda4800 delegate:
+  $55: InstanceVariable named OnHasBeenInteracted@0x213ae602d00
+  Params:
+  $64: EndFunctionParms
+$65: Let (Variable = Expression)
+  Variable:
+  $74: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x213ae602680
+  Expression:
+  $83: Context
+    ObjectExpression:
+    $84: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x213ae602680
+    ContextExpression:
+    $105: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x212d6a30390 (
+      $114: Self
+      $115: EndFunctionParms
+    )
+$116: LetObj (Variable = Expression)
+  Variable:
+  $117: StructMemberContext prop=CalledOnActor_2_0B4819044DED9AF905D21D94D7DA3D93@0x213ae601e80
+    Expression to struct:
+    $126: LocalVariable named K2Node_MakeStruct_SarcophagusOpenedEvent@0x213ae602600
+  Expression:
+  $135: Self
+$136: Context
+  ObjectExpression:
+  $137: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x29
+  RValueProperty: (null)
+  ContextExpression:
+  $158: FinalFunction target=FireEventWithDataFromHandle@0x212d6a2feb0 (
+    $167: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x213ae602680
+    $176: ObjectConst SarcophagusOpenedEvent@0x213af8ad5c0
+    $185: literal ansi string ""
+    $187: literal ansi string ""
+    $189: LocalVariable named K2Node_MakeStruct_SarcophagusOpenedEvent@0x213ae602600
+    $198: EndFunctionParms
+  )
+$199: PopExecutionFlow (jump to popped addr)
+$200: Context
+  ObjectExpression:
+  $201: LocalVariable named CallFunc_AddComponent_ReturnValue@0x213ae602800
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $222: FinalFunction target=K2_DestroyComponent@0x212d63924d0 (
+    $231: LocalVariable named CallFunc_AddComponent_ReturnValue@0x213ae602800
+    $240: EndFunctionParms
+  )
+$241: PopExecutionFlow (jump to popped addr)
+$242: LetBool (Variable = Expression)
+  Variable:
+  $243: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x213ae602780
+  Expression:
+  $252: FinalFunction target=HasAuthority@0x212d6384b30 (
+    $261: EndFunctionParms
+  )
+$262: JumpIfNot -> 0x115, cond:
+  $267: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x213ae602780
+$276: PopExecutionFlow (jump to popped addr)
+$277: PopExecutionFlowIfNot, cond:
+$278: InstanceVariable named HasBeenInteractedWith@0x213ae602c80
+$287: VirtualFunction call "Open" (
+  $300: EndFunctionParms
+)
+$301: PopExecutionFlow (jump to popped addr)
+$302: Let (Variable = Expression)
+  Variable:
+  $311: LocalVariable named Temp_struct_Variable@0x213ae602700
+  Expression:
+  $320: literal transform R(0,0,0,1) T(0,0,0) S(1,1,1)
+$361: LetObj (Variable = Expression)
+  Variable:
+  $362: LocalVariable named CallFunc_AddComponent_ReturnValue@0x213ae602800
+  Expression:
+  $371: FinalFunction target=AddComponent@0x212d63801e0 (
+    $380: literal name "Music Zone Component"
+    $393: False
+    $394: LocalVariable named Temp_struct_Variable@0x213ae602700
+    $403: Self
+    $404: EndFunctionParms
+  )
+$405: Context
+  ObjectExpression:
+  $406: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $427: FinalFunction target=Delay@0x212d63a6d40 (
+    $436: Self
+    $437: literal float 24
+    $442: literal struct LatentActionInfo@0x212d63a6e80 (size 32)
+      $455: literal CodeSkipSizeType 0xc8
+      $460: literal int32 1
+      $465: literal name "ExecuteUbergraph_BP_Flame_Sarcophagus"
+      $478: Self
+      $479: EndStructConst
+    $480: EndFunctionParms
+  )
+$481: PopExecutionFlow (jump to popped addr)
+$482: Jump to offset 0xf2
+$487: Jump to offset 0xf
+$492: VirtualFunction call "TriggerOpenAnimation" (
+  $505: EndFunctionParms
+)
+$506: Jump to offset 0x12e
+$511: Return expression:
+  $512: Nothing
+$513: EndOfScript
+
+=== BP_Flame_Sarcophagus_C::OnHasBeenInteracted__DelegateSignature (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript

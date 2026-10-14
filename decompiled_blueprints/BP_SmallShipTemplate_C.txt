@@ -1,0 +1,266 @@
+// /Game/Blueprints/Ships/Templates/bp_smallshiptemplate -> BP_SmallShipTemplate_C
+
+=== BP_SmallShipTemplate_C::GetPxActorCapacityForPhysXAggregate (31 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalOutVariable named ReturnValue@0x19fc26ccb00
+  Expression:
+  $18: literal byte 9
+$20: Return expression:
+  $21: LocalOutVariable named ReturnValue@0x19fc26ccb00
+$30: EndOfScript
+
+=== BP_SmallShipTemplate_C::UserConstructionScript (1224 bytes) ===
+$0: FlowStack.Push(0x4c5)
+$5: FlowStack.Push(0x3b8)
+$10: FlowStack.Push(0x2f5)
+$15: FlowStack.Push(0x237)
+$20: FlowStack.Push(0x179)
+$25: Let (Variable = Expression)
+  Variable:
+  $34: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fc17ce930
+  Expression:
+  $43: literal int32 0
+$48: Let (Variable = Expression)
+  Variable:
+  $57: LocalVariable named Temp_int_Array_Index_Variable@0x19fc17ce8c0
+  Expression:
+  $66: literal int32 0
+$71: Let (Variable = Expression)
+  Variable:
+  $80: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fc26cd080
+  Expression:
+  $89: FinalFunction target=GetComponentsByClass@0x19e4cd626c0 (
+    $98: ObjectConst RiggingSystemComponent@0x19e4c6f3480
+    $107: EndFunctionParms
+  )
+$108: Let (Variable = Expression)
+  Variable:
+  $117: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fc17ce9a0
+  Expression:
+  $126: Context
+    ObjectExpression:
+    $127: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19fc17ce9a0
+    ContextExpression:
+    $148: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $157: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fc26cd080
+      $166: EndFunctionParms
+    )
+$167: LetBool (Variable = Expression)
+  Variable:
+  $168: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19f72c4de00
+  Expression:
+  $177: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $186: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fc17ce930
+    $195: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fc17ce9a0
+    $204: EndFunctionParms
+  )
+$205: PopExecutionFlowIfNot, cond:
+$206: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19f72c4de00
+$215: Let (Variable = Expression)
+  Variable:
+  $224: LocalVariable named Temp_int_Array_Index_Variable@0x19fc17ce8c0
+  Expression:
+  $233: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fc17ce930
+$242: FlowStack.Push(0x47b)
+$247: Let (Variable = Expression)
+  Variable:
+  $256: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fc26cd080
+  Expression:
+  $265: FinalFunction target=GetComponentsByClass@0x19e4cd626c0 (
+    $274: ObjectConst RiggingSystemComponent@0x19e4c6f3480
+    $283: EndFunctionParms
+  )
+$284: Context
+  ObjectExpression:
+  $285: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $306: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $315: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fc26cd080
+    $324: LocalVariable named Temp_int_Array_Index_Variable@0x19fc17ce8c0
+    $333: LocalVariable named CallFunc_Array_Get_Item@0x19fc26ccf80
+    $342: EndFunctionParms
+  )
+$343: Context
+  ObjectExpression:
+  $344: LocalVariable named CallFunc_Array_Get_Item@0x19fc26ccf80
+  SkipBytes: 0xb
+  RValueProperty: (null)
+  ContextExpression:
+  $365: FinalFunction target=SetSocketLookupSource@0x19e4d4e7900 (
+    $374: Self
+    $375: EndFunctionParms
+  )
+$376: PopExecutionFlow (jump to popped addr)
+$377: Let (Variable = Expression)
+  Variable:
+  $386: LocalVariable named K2Node_DynamicCast_AsSail_Hoist2@0x19fc26cce80
+  Expression:
+  $395: DynamicCast to SailHoist@0x19e261de540 of expr:
+  $404: Context
+    ObjectExpression:
+    $405: InstanceVariable named MastMainSailHoistLeft@0x19fc26cee00
+    SkipBytes: 0x9
+    RValueProperty: ChildActor@0x19e4d3359f0
+    ContextExpression:
+    $426: InstanceVariable named ChildActor@0x19e4d3359f0
+$435: Let (Variable = Expression)
+  Variable:
+  $444: LocalVariable named K2Node_DynamicCast_bSuccess4@0x19fc26ccf00
+  Expression:
+  $453: PrimitiveCast type=71
+    Argument:
+    $455: LocalVariable named K2Node_DynamicCast_AsSail_Hoist2@0x19fc26cce80
+$464: PopExecutionFlowIfNot, cond:
+$465: LocalVariable named K2Node_DynamicCast_bSuccess4@0x19fc26ccf00
+$474: Context
+  ObjectExpression:
+  $475: ObjectConst Default__SailManipulatorBlueprintFunctions@0x19e4d7d0e40
+  SkipBytes: 0x46
+  RValueProperty: (null)
+  ContextExpression:
+  $496: FinalFunction target=SetupHoistControl@0x19e4d22e730 (
+    $505: LocalVariable named K2Node_DynamicCast_AsSail_Hoist2@0x19fc26cce80
+    $514: literal ansi string "Main Yard"
+    $525: literal name "PortBottEnd"
+    $538: InstanceVariable named ControlsRigging@0x19fc26cd880
+    $547: literal name "idx:277617"
+    $560: literal int32 0
+    $565: EndFunctionParms
+  )
+$566: PopExecutionFlow (jump to popped addr)
+$567: Let (Variable = Expression)
+  Variable:
+  $576: LocalVariable named K2Node_DynamicCast_AsSail_Hoist@0x19fc26ccd80
+  Expression:
+  $585: DynamicCast to SailHoist@0x19e261de540 of expr:
+  $594: Context
+    ObjectExpression:
+    $595: InstanceVariable named MastMainSailHoistRight@0x19fc26ced80
+    SkipBytes: 0x9
+    RValueProperty: ChildActor@0x19e4d3359f0
+    ContextExpression:
+    $616: InstanceVariable named ChildActor@0x19e4d3359f0
+$625: Let (Variable = Expression)
+  Variable:
+  $634: LocalVariable named K2Node_DynamicCast_bSuccess3@0x19fc26cce00
+  Expression:
+  $643: PrimitiveCast type=71
+    Argument:
+    $645: LocalVariable named K2Node_DynamicCast_AsSail_Hoist@0x19fc26ccd80
+$654: PopExecutionFlowIfNot, cond:
+$655: LocalVariable named K2Node_DynamicCast_bSuccess3@0x19fc26cce00
+$664: Context
+  ObjectExpression:
+  $665: ObjectConst Default__SailManipulatorBlueprintFunctions@0x19e4d7d0e40
+  SkipBytes: 0x46
+  RValueProperty: (null)
+  ContextExpression:
+  $686: FinalFunction target=SetupHoistControl@0x19e4d22e730 (
+    $695: LocalVariable named K2Node_DynamicCast_AsSail_Hoist@0x19fc26ccd80
+    $704: literal ansi string "Main Yard"
+    $715: literal name "StbdBottEnd"
+    $728: InstanceVariable named ControlsRigging@0x19fc26cd880
+    $737: literal name "idx:277617"
+    $750: literal int32 1
+    $755: EndFunctionParms
+  )
+$756: PopExecutionFlow (jump to popped addr)
+$757: Let (Variable = Expression)
+  Variable:
+  $766: LocalVariable named K2Node_DynamicCast_AsSail_Angle@0x19fc26ccb80
+  Expression:
+  $775: DynamicCast to SailAngle@0x19e261dd900 of expr:
+  $784: Context
+    ObjectExpression:
+    $785: InstanceVariable named MastMainSailAngleLeft@0x19fc26ce300
+    SkipBytes: 0x9
+    RValueProperty: ChildActor@0x19e4d3359f0
+    ContextExpression:
+    $806: InstanceVariable named ChildActor@0x19e4d3359f0
+$815: Let (Variable = Expression)
+  Variable:
+  $824: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fc26ccc00
+  Expression:
+  $833: PrimitiveCast type=71
+    Argument:
+    $835: LocalVariable named K2Node_DynamicCast_AsSail_Angle@0x19fc26ccb80
+$844: PopExecutionFlowIfNot, cond:
+$845: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fc26ccc00
+$854: Context
+  ObjectExpression:
+  $855: ObjectConst Default__SailManipulatorBlueprintFunctions@0x19e4d7d0e40
+  SkipBytes: 0x4b
+  RValueProperty: (null)
+  ContextExpression:
+  $876: FinalFunction target=SetupAngleControl@0x19e4d22e340 (
+    $885: LocalVariable named K2Node_DynamicCast_AsSail_Angle@0x19fc26ccb80
+    $894: literal ansi string "Main Yard"
+    $905: literal name "PortBackMid"
+    $918: InstanceVariable named ControlsRigging@0x19fc26cd880
+    $927: literal name "Angles"
+    $940: literal int32 0
+    $945: literal int32 1
+    $950: EndFunctionParms
+  )
+$951: PopExecutionFlow (jump to popped addr)
+$952: Let (Variable = Expression)
+  Variable:
+  $961: LocalVariable named K2Node_DynamicCast_AsSail_Angle2@0x19fc26ccc80
+  Expression:
+  $970: DynamicCast to SailAngle@0x19e261dd900 of expr:
+  $979: Context
+    ObjectExpression:
+    $980: InstanceVariable named MastMainSailAngleRight@0x19fc26ced00
+    SkipBytes: 0x9
+    RValueProperty: ChildActor@0x19e4d3359f0
+    ContextExpression:
+    $1001: InstanceVariable named ChildActor@0x19e4d3359f0
+$1010: Let (Variable = Expression)
+  Variable:
+  $1019: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fc26ccd00
+  Expression:
+  $1028: PrimitiveCast type=71
+    Argument:
+    $1030: LocalVariable named K2Node_DynamicCast_AsSail_Angle2@0x19fc26ccc80
+$1039: PopExecutionFlowIfNot, cond:
+$1040: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fc26ccd00
+$1049: Context
+  ObjectExpression:
+  $1050: ObjectConst Default__SailManipulatorBlueprintFunctions@0x19e4d7d0e40
+  SkipBytes: 0x4b
+  RValueProperty: (null)
+  ContextExpression:
+  $1071: FinalFunction target=SetupAngleControl@0x19e4d22e340 (
+    $1080: LocalVariable named K2Node_DynamicCast_AsSail_Angle2@0x19fc26ccc80
+    $1089: literal ansi string "Main Yard"
+    $1100: literal name "StbdBackMid"
+    $1113: InstanceVariable named ControlsRigging@0x19fc26cd880
+    $1122: literal name "Angles"
+    $1135: literal int32 2
+    $1140: literal int32 3
+    $1145: EndFunctionParms
+  )
+$1146: PopExecutionFlow (jump to popped addr)
+$1147: Let (Variable = Expression)
+  Variable:
+  $1156: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19fc17cea10
+  Expression:
+  $1165: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $1174: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fc17ce930
+    $1183: literal int32 1
+    $1188: EndFunctionParms
+  )
+$1189: Let (Variable = Expression)
+  Variable:
+  $1198: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fc17ce930
+  Expression:
+  $1207: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19fc17cea10
+$1216: Jump to offset 0x47
+$1221: Return expression:
+  $1222: Nothing
+$1223: EndOfScript

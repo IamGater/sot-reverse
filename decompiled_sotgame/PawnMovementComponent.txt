@@ -1,0 +1,151 @@
+// Class: PawnMovementComponent (7 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+PawnMovementComponent::AddInputVector @ RVA 0x2A079E0 EA 0x7FF6F64279E0
+======================================================================
+__int64 __fastcall sub_7FF6F64279E0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // r8
+  __int64 v6; // rax
+  __int64 v7; // rdi
+  bool v8; // zf
+  __int64 v10; // [rsp+20h] [rbp-28h] BYREF
+  int v11; // [rsp+28h] [rbp-20h]
+  __int64 v12; // [rsp+30h] [rbp-18h] BYREF
+  int v13; // [rsp+38h] [rbp-10h]
+  int v14; // [rsp+50h] [rbp+8h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v4 = 0;
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v6 = a2[4];
+  v12 = v10;
+  LOBYTE(v4) = v6 != 0;
+  v7 = v6 + v4;
+  LODWORD(v6) = v11;
+  v8 = v14 == 0;
+  a2[4] = v7;
+  v13 = v6;
+  LOBYTE(v5) = !v8;
+  return (*(__int64 (__fastcall **)(__int64, __int64 *, __int64))(*(_QWORD *)a1 + 1344LL))(a1, &v12, v5);
+}
+
+
+======================================================================
+PawnMovementComponent::ConsumeInputVector @ RVA 0x2A08C00 EA 0x7FF6F6428C00
+======================================================================
+__int64 __fastcall sub_7FF6F6428C00(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rax
+  __int64 result; // rax
+  _BYTE v6[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = (*(__int64 (__fastcall **)(__int64, _BYTE *))(*(_QWORD *)a1 + 1352LL))(a1, v6);
+  *(_QWORD *)a3 = *(_QWORD *)v4;
+  result = *(unsigned int *)(v4 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+PawnMovementComponent::GetLastInputVector @ RVA 0x2A0C0A0 EA 0x7FF6F642C0A0
+======================================================================
+__int64 __fastcall sub_7FF6F642C0A0(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rax
+  __int64 result; // rax
+  _BYTE v6[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = sub_7FF6F5CE63B0(a1, v6);
+  *(_QWORD *)a3 = *(_QWORD *)v4;
+  result = *(unsigned int *)(v4 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+PawnMovementComponent::GetPawnOwner @ RVA 0x2A0D700 EA 0x7FF6F642D700
+======================================================================
+__int64 __fastcall sub_7FF6F642D700(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5CE70B0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PawnMovementComponent::GetPendingInputVector @ RVA 0x2A0D730 EA 0x7FF6F642D730
+======================================================================
+__int64 __fastcall sub_7FF6F642D730(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rax
+  __int64 result; // rax
+  _BYTE v6[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = sub_7FF6F5CE70C0(a1, v6);
+  *(_QWORD *)a3 = *(_QWORD *)v4;
+  result = *(unsigned int *)(v4 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+PawnMovementComponent::IsMoveInputIgnored @ RVA 0x2A10940 EA 0x7FF6F6430940
+======================================================================
+__int64 __fastcall sub_7FF6F6430940(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1360LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PawnMovementComponent::K2_GetInputVector @ RVA 0x2A10DA0 EA 0x7FF6F6430DA0
+======================================================================
+__int64 __fastcall sub_7FF6F6430DA0(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rax
+  __int64 result; // rax
+  _BYTE v6[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = sub_7FF6F5CEC3E0(a1, v6);
+  *(_QWORD *)a3 = *(_QWORD *)v4;
+  result = *(unsigned int *)(v4 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+

@@ -1,0 +1,2190 @@
+// Class: AnimInstance (54 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+AnimInstance::AnimNotify_Sound @ RVA 0x2B0FFA0 EA 0x7FF6F652FFA0
+======================================================================
+__int64 __fastcall sub_7FF6F652FFA0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F5C16870(a1, v6);
+}
+
+
+======================================================================
+AnimInstance::BlueprintInitializeAnimation @ RVA 0x152AB10 EA 0x7FF6F4F4AB10
+======================================================================
+  (RVA 0x152AB10 shared with another function already decompiled above/elsewhere - likely a generic Blueprint/K2 bytecode executor, not unique native code)
+unsigned __int8 *__fastcall sub_7FF6F4F4AB10(_QWORD *a1, _QWORD *a2, void *a3)
+{
+  unsigned __int8 *result; // rax
+  char v7; // bp
+  _BYTE *i; // rax
+  unsigned __int8 *v9; // rax
+  int v10; // ecx
+  unsigned __int8 *v11; // rcx
+  __int64 v12; // rax
+  unsigned __int8 *v13; // rbx
+  char v14[64]; // [rsp+30h] [rbp-68h] BYREF
+
+  result = (unsigned __int8 *)a1[2];
+  if ( *((int *)result + 49) >= 0 )
+  {
+    v7 = (*(__int64 (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD))(*a1 + 480LL))(a1, a2[2], a2[5], 0);
+    if ( (v7 & 1) != 0 )
+      (*(void (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD, _QWORD))(*a1 + 488LL))(a1, a2[2], a2[5], a2[15], 0);
+    if ( (v7 & 2) != 0 )
+    {
+      for ( i = (_BYTE *)a2[4]; *i != 4; i = (_BYTE *)a2[4] )
+      {
+        v9 = (unsigned __int8 *)a2[4];
+        v10 = *v9;
+        a2[4] = v9 + 1;
+        ((void (__fastcall *)(_QWORD, _QWORD *, char *))funcs_7FF6F4F44D4F[v10])(a2[3], a2, v14);
+      }
+      result = i + 1;
+      a2[4] = result;
+      v11 = result + 1;
+      if ( *result == 11 )
+      {
+        a2[4] = v11;
+      }
+      else
+      {
+        v12 = *result;
+        a2[4] = v11;
+        return (unsigned __int8 *)((__int64 (__fastcall *)(_QWORD, _QWORD *, void *))funcs_7FF6F4F44D4F[v12])(
+                                    a2[3],
+                                    a2,
+                                    a3);
+      }
+    }
+    else
+    {
+      result = (unsigned __int8 *)sub_7FF6F4F072B0(a2[2]);
+      v13 = result;
+      if ( result )
+      {
+        if ( (*((_QWORD *)result + 7) & 0x1000000000LL) == 0 )
+          (*(void (__fastcall **)(unsigned __int8 *, void *))(*(_QWORD *)result + 688LL))(result, a3);
+        return (unsigned __int8 *)memset(a3, 0, *((_DWORD *)v13 + 12) * *((_DWORD *)v13 + 13));
+      }
+    }
+  }
+  else if ( !byte_7FF6FA4F64EF )
+  {
+    ++dword_7FF6FA525F48;
+  }
+  return result;
+}
+
+
+======================================================================
+AnimInstance::BlueprintPostEvaluateAnimation @ RVA 0x152AB10 EA 0x7FF6F4F4AB10
+======================================================================
+  (RVA 0x152AB10 shared with another function already decompiled above/elsewhere - likely a generic Blueprint/K2 bytecode executor, not unique native code)
+unsigned __int8 *__fastcall sub_7FF6F4F4AB10(_QWORD *a1, _QWORD *a2, void *a3)
+{
+  unsigned __int8 *result; // rax
+  char v7; // bp
+  _BYTE *i; // rax
+  unsigned __int8 *v9; // rax
+  int v10; // ecx
+  unsigned __int8 *v11; // rcx
+  __int64 v12; // rax
+  unsigned __int8 *v13; // rbx
+  char v14[64]; // [rsp+30h] [rbp-68h] BYREF
+
+  result = (unsigned __int8 *)a1[2];
+  if ( *((int *)result + 49) >= 0 )
+  {
+    v7 = (*(__int64 (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD))(*a1 + 480LL))(a1, a2[2], a2[5], 0);
+    if ( (v7 & 1) != 0 )
+      (*(void (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD, _QWORD))(*a1 + 488LL))(a1, a2[2], a2[5], a2[15], 0);
+    if ( (v7 & 2) != 0 )
+    {
+      for ( i = (_BYTE *)a2[4]; *i != 4; i = (_BYTE *)a2[4] )
+      {
+        v9 = (unsigned __int8 *)a2[4];
+        v10 = *v9;
+        a2[4] = v9 + 1;
+        ((void (__fastcall *)(_QWORD, _QWORD *, char *))funcs_7FF6F4F44D4F[v10])(a2[3], a2, v14);
+      }
+      result = i + 1;
+      a2[4] = result;
+      v11 = result + 1;
+      if ( *result == 11 )
+      {
+        a2[4] = v11;
+      }
+      else
+      {
+        v12 = *result;
+        a2[4] = v11;
+        return (unsigned __int8 *)((__int64 (__fastcall *)(_QWORD, _QWORD *, void *))funcs_7FF6F4F44D4F[v12])(
+                                    a2[3],
+                                    a2,
+                                    a3);
+      }
+    }
+    else
+    {
+      result = (unsigned __int8 *)sub_7FF6F4F072B0(a2[2]);
+      v13 = result;
+      if ( result )
+      {
+        if ( (*((_QWORD *)result + 7) & 0x1000000000LL) == 0 )
+          (*(void (__fastcall **)(unsigned __int8 *, void *))(*(_QWORD *)result + 688LL))(result, a3);
+        return (unsigned __int8 *)memset(a3, 0, *((_DWORD *)v13 + 12) * *((_DWORD *)v13 + 13));
+      }
+    }
+  }
+  else if ( !byte_7FF6FA4F64EF )
+  {
+    ++dword_7FF6FA525F48;
+  }
+  return result;
+}
+
+
+======================================================================
+AnimInstance::BlueprintUninitializeAnimation @ RVA 0x152AB10 EA 0x7FF6F4F4AB10
+======================================================================
+  (RVA 0x152AB10 shared with another function already decompiled above/elsewhere - likely a generic Blueprint/K2 bytecode executor, not unique native code)
+unsigned __int8 *__fastcall sub_7FF6F4F4AB10(_QWORD *a1, _QWORD *a2, void *a3)
+{
+  unsigned __int8 *result; // rax
+  char v7; // bp
+  _BYTE *i; // rax
+  unsigned __int8 *v9; // rax
+  int v10; // ecx
+  unsigned __int8 *v11; // rcx
+  __int64 v12; // rax
+  unsigned __int8 *v13; // rbx
+  char v14[64]; // [rsp+30h] [rbp-68h] BYREF
+
+  result = (unsigned __int8 *)a1[2];
+  if ( *((int *)result + 49) >= 0 )
+  {
+    v7 = (*(__int64 (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD))(*a1 + 480LL))(a1, a2[2], a2[5], 0);
+    if ( (v7 & 1) != 0 )
+      (*(void (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD, _QWORD))(*a1 + 488LL))(a1, a2[2], a2[5], a2[15], 0);
+    if ( (v7 & 2) != 0 )
+    {
+      for ( i = (_BYTE *)a2[4]; *i != 4; i = (_BYTE *)a2[4] )
+      {
+        v9 = (unsigned __int8 *)a2[4];
+        v10 = *v9;
+        a2[4] = v9 + 1;
+        ((void (__fastcall *)(_QWORD, _QWORD *, char *))funcs_7FF6F4F44D4F[v10])(a2[3], a2, v14);
+      }
+      result = i + 1;
+      a2[4] = result;
+      v11 = result + 1;
+      if ( *result == 11 )
+      {
+        a2[4] = v11;
+      }
+      else
+      {
+        v12 = *result;
+        a2[4] = v11;
+        return (unsigned __int8 *)((__int64 (__fastcall *)(_QWORD, _QWORD *, void *))funcs_7FF6F4F44D4F[v12])(
+                                    a2[3],
+                                    a2,
+                                    a3);
+      }
+    }
+    else
+    {
+      result = (unsigned __int8 *)sub_7FF6F4F072B0(a2[2]);
+      v13 = result;
+      if ( result )
+      {
+        if ( (*((_QWORD *)result + 7) & 0x1000000000LL) == 0 )
+          (*(void (__fastcall **)(unsigned __int8 *, void *))(*(_QWORD *)result + 688LL))(result, a3);
+        return (unsigned __int8 *)memset(a3, 0, *((_DWORD *)v13 + 12) * *((_DWORD *)v13 + 13));
+      }
+    }
+  }
+  else if ( !byte_7FF6FA4F64EF )
+  {
+    ++dword_7FF6FA525F48;
+  }
+  return result;
+}
+
+
+======================================================================
+AnimInstance::BlueprintUpdateAnimation @ RVA 0x152AB10 EA 0x7FF6F4F4AB10
+======================================================================
+  (RVA 0x152AB10 shared with another function already decompiled above/elsewhere - likely a generic Blueprint/K2 bytecode executor, not unique native code)
+unsigned __int8 *__fastcall sub_7FF6F4F4AB10(_QWORD *a1, _QWORD *a2, void *a3)
+{
+  unsigned __int8 *result; // rax
+  char v7; // bp
+  _BYTE *i; // rax
+  unsigned __int8 *v9; // rax
+  int v10; // ecx
+  unsigned __int8 *v11; // rcx
+  __int64 v12; // rax
+  unsigned __int8 *v13; // rbx
+  char v14[64]; // [rsp+30h] [rbp-68h] BYREF
+
+  result = (unsigned __int8 *)a1[2];
+  if ( *((int *)result + 49) >= 0 )
+  {
+    v7 = (*(__int64 (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD))(*a1 + 480LL))(a1, a2[2], a2[5], 0);
+    if ( (v7 & 1) != 0 )
+      (*(void (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD, _QWORD))(*a1 + 488LL))(a1, a2[2], a2[5], a2[15], 0);
+    if ( (v7 & 2) != 0 )
+    {
+      for ( i = (_BYTE *)a2[4]; *i != 4; i = (_BYTE *)a2[4] )
+      {
+        v9 = (unsigned __int8 *)a2[4];
+        v10 = *v9;
+        a2[4] = v9 + 1;
+        ((void (__fastcall *)(_QWORD, _QWORD *, char *))funcs_7FF6F4F44D4F[v10])(a2[3], a2, v14);
+      }
+      result = i + 1;
+      a2[4] = result;
+      v11 = result + 1;
+      if ( *result == 11 )
+      {
+        a2[4] = v11;
+      }
+      else
+      {
+        v12 = *result;
+        a2[4] = v11;
+        return (unsigned __int8 *)((__int64 (__fastcall *)(_QWORD, _QWORD *, void *))funcs_7FF6F4F44D4F[v12])(
+                                    a2[3],
+                                    a2,
+                                    a3);
+      }
+    }
+    else
+    {
+      result = (unsigned __int8 *)sub_7FF6F4F072B0(a2[2]);
+      v13 = result;
+      if ( result )
+      {
+        if ( (*((_QWORD *)result + 7) & 0x1000000000LL) == 0 )
+          (*(void (__fastcall **)(unsigned __int8 *, void *))(*(_QWORD *)result + 688LL))(result, a3);
+        return (unsigned __int8 *)memset(a3, 0, *((_DWORD *)v13 + 12) * *((_DWORD *)v13 + 13));
+      }
+    }
+  }
+  else if ( !byte_7FF6FA4F64EF )
+  {
+    ++dword_7FF6FA525F48;
+  }
+  return result;
+}
+
+
+======================================================================
+AnimInstance::CalculateDirection @ RVA 0x2B12030 EA 0x7FF6F6532030
+======================================================================
+void __fastcall sub_7FF6F6532030(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  _BYTE *v7; // rax
+  _BYTE *v8; // rsi
+  _BYTE *v9; // r8
+  __int64 v10; // rax
+  _BYTE v11[16]; // [rsp+20h] [rbp-28h] BYREF
+  _BYTE v12[24]; // [rsp+30h] [rbp-18h] BYREF
+
+  v3 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v7 = (_BYTE *)a2[7];
+  v8 = v11;
+  a2[7] = 0;
+  if ( v7 )
+    v8 = v7;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v9 = v12;
+  if ( a2[7] )
+    v9 = (_BYTE *)a2[7];
+  v10 = a2[4];
+  LOBYTE(v3) = v10 != 0;
+  a2[4] = v10 + v3;
+  *a3 = sub_7FF6F5C190D0(a1, v8, v9);
+}
+
+
+======================================================================
+AnimInstance::ClearMorphTargets @ RVA 0x2B12330 EA 0x7FF6F6532330
+======================================================================
+void __fastcall sub_7FF6F6532330(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F5C197E0LL);
+}
+
+
+======================================================================
+AnimInstance::GetAnimAssetPlayerLength @ RVA 0x2B14070 EA 0x7FF6F6534070
+======================================================================
+void __fastcall sub_7FF6F6534070(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v6 = a2[4];
+  v7 = v8;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  *a3 = sub_7FF6F5C20D00(v7);
+}
+
+
+======================================================================
+AnimInstance::GetAnimAssetPlayerTimeFraction @ RVA 0x2B14100 EA 0x7FF6F6534100
+======================================================================
+void __fastcall sub_7FF6F6534100(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  int v8; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v9; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v6 = a2[4];
+  v7 = v9;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  *a3 = sub_7FF6F5C20D20(v7);
+}
+
+
+======================================================================
+AnimInstance::GetAnimAssetPlayerTimeFromEnd @ RVA 0x2B141D0 EA 0x7FF6F65341D0
+======================================================================
+void __fastcall sub_7FF6F65341D0(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  int v9; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v10; // [rsp+50h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  *a3 = sub_7FF6F5C20D70(a1, v8);
+}
+
+
+======================================================================
+AnimInstance::GetAnimAssetPlayerTimeFromEndFraction @ RVA 0x2B142A0 EA 0x7FF6F65342A0
+======================================================================
+void __fastcall sub_7FF6F65342A0(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  int v8; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v9; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v6 = a2[4];
+  v7 = v9;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  *a3 = sub_7FF6F5C20DB0(v7);
+}
+
+
+======================================================================
+AnimInstance::GetCurrentStateElapsedTime @ RVA 0x2B14F70 EA 0x7FF6F6534F70
+======================================================================
+void __fastcall sub_7FF6F6534F70(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  unsigned int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v7 = a2[4];
+  v8 = v9;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  *a3 = sub_7FF6F5C29390(a1, v8);
+}
+
+
+======================================================================
+AnimInstance::GetCurrentStateName @ RVA 0x2B15000 EA 0x7FF6F6535000
+======================================================================
+_QWORD *__fastcall sub_7FF6F6535000(__int64 a1, _QWORD *a2, _QWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  _QWORD *result; // rax
+  unsigned int v10; // [rsp+48h] [rbp+10h] BYREF
+  char v11; // [rsp+50h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (_QWORD *)sub_7FF6F5C29440(a1, &v11, v8);
+  *a3 = *result;
+  return result;
+}
+
+
+======================================================================
+AnimInstance::GetCurveValue @ RVA 0x2B15090 EA 0x7FF6F6535090
+======================================================================
+void __fastcall sub_7FF6F6535090(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v7 = a2[4];
+  v8 = v9;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  *a3 = sub_7FF6F5C294F0(a1, v8);
+}
+
+
+======================================================================
+AnimInstance::GetInstanceAssetPlayerLength @ RVA 0x2B15750 EA 0x7FF6F6535750
+======================================================================
+void __fastcall sub_7FF6F6535750(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  unsigned int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v7 = a2[4];
+  v8 = v9;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  *a3 = sub_7FF6F5C29960(a1, v8);
+}
+
+
+======================================================================
+AnimInstance::GetInstanceAssetPlayerTime @ RVA 0x2B157E0 EA 0x7FF6F65357E0
+======================================================================
+void __fastcall sub_7FF6F65357E0(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  unsigned int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v7 = a2[4];
+  v8 = v9;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  *a3 = sub_7FF6F5C29990(a1, v8);
+}
+
+
+======================================================================
+AnimInstance::GetInstanceAssetPlayerTimeFraction @ RVA 0x2B15870 EA 0x7FF6F6535870
+======================================================================
+void __fastcall sub_7FF6F6535870(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  unsigned int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v7 = a2[4];
+  v8 = v9;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  *a3 = sub_7FF6F5C299C0(a1, v8);
+}
+
+
+======================================================================
+AnimInstance::GetInstanceAssetPlayerTimeFromEnd @ RVA 0x2B15900 EA 0x7FF6F6535900
+======================================================================
+void __fastcall sub_7FF6F6535900(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  unsigned int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v7 = a2[4];
+  v8 = v9;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  *a3 = sub_7FF6F5C29A40(a1, v8);
+}
+
+
+======================================================================
+AnimInstance::GetInstanceAssetPlayerTimeFromEndFraction @ RVA 0x2B15990 EA 0x7FF6F6535990
+======================================================================
+void __fastcall sub_7FF6F6535990(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  unsigned int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v7 = a2[4];
+  v8 = v9;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  *a3 = sub_7FF6F5C29AB0(a1, v8);
+}
+
+
+======================================================================
+AnimInstance::GetInstanceCurrentStateElapsedTime @ RVA 0x2B15A50 EA 0x7FF6F6535A50
+======================================================================
+void __fastcall sub_7FF6F6535A50(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  unsigned int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v7 = a2[4];
+  v8 = v9;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  *a3 = sub_7FF6F5C29B30(a1, v8);
+}
+
+
+======================================================================
+AnimInstance::GetInstanceStateWeight @ RVA 0x2B15AE0 EA 0x7FF6F6535AE0
+======================================================================
+void __fastcall sub_7FF6F6535AE0(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rdx
+  unsigned int v10; // [rsp+48h] [rbp+10h] BYREF
+  unsigned int v11; // [rsp+50h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  v9 = v11;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  *a3 = sub_7FF6F5C29B50(a1, v9, v8);
+}
+
+
+======================================================================
+AnimInstance::GetInstanceTransitionCrossfadeDuration @ RVA 0x2B15D00 EA 0x7FF6F6535D00
+======================================================================
+void __fastcall sub_7FF6F6535D00(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rdx
+  unsigned int v10; // [rsp+48h] [rbp+10h] BYREF
+  unsigned int v11; // [rsp+50h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  v9 = v11;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  *a3 = sub_7FF6F5C29B80(a1, v9, v8);
+}
+
+
+======================================================================
+AnimInstance::GetInstanceTransitionTimeElapsed @ RVA 0x2B15DC0 EA 0x7FF6F6535DC0
+======================================================================
+void __fastcall sub_7FF6F6535DC0(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rdx
+  unsigned int v10; // [rsp+48h] [rbp+10h] BYREF
+  unsigned int v11; // [rsp+50h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  v9 = v11;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  *a3 = sub_7FF6F5C29BD0(a1, v9, v8);
+}
+
+
+======================================================================
+AnimInstance::GetInstanceTransitionTimeElapsedFraction @ RVA 0x2B15E80 EA 0x7FF6F6535E80
+======================================================================
+void __fastcall sub_7FF6F6535E80(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rdx
+  unsigned int v10; // [rsp+48h] [rbp+10h] BYREF
+  unsigned int v11; // [rsp+50h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  v9 = v11;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  *a3 = sub_7FF6F5C29BF0(a1, v9, v8);
+}
+
+
+======================================================================
+AnimInstance::GetMaxAnimTimeRemaining @ RVA 0x2B164E0 EA 0x7FF6F65364E0
+======================================================================
+void __fastcall sub_7FF6F65364E0(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rdx
+  unsigned int v10; // [rsp+48h] [rbp+10h] BYREF
+  unsigned int v11; // [rsp+50h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  v9 = v11;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  *a3 = sub_7FF6F5C29C60(a1, v9, v8);
+}
+
+
+======================================================================
+AnimInstance::GetMaxPlayingAnimTimeRemaining @ RVA 0x2B165E0 EA 0x7FF6F65365E0
+======================================================================
+void __fastcall sub_7FF6F65365E0(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rdx
+  unsigned int v10; // [rsp+48h] [rbp+10h] BYREF
+  unsigned int v11; // [rsp+50h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  v9 = v11;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  *a3 = sub_7FF6F5C29D70(a1, v9, v8);
+}
+
+
+======================================================================
+AnimInstance::GetOwningActor @ RVA 0x2B16A10 EA 0x7FF6F6536A10
+======================================================================
+__int64 __fastcall sub_7FF6F6536A10(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5C29F60();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AnimInstance::GetOwningComponent @ RVA 0x2B16AD0 EA 0x7FF6F6536AD0
+======================================================================
+__int64 __fastcall sub_7FF6F6536AD0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5C29F70();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AnimInstance::GetRelevantAnimLength @ RVA 0x2B17000 EA 0x7FF6F6537000
+======================================================================
+void __fastcall sub_7FF6F6537000(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rdx
+  unsigned int v10; // [rsp+48h] [rbp+10h] BYREF
+  unsigned int v11; // [rsp+50h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  v9 = v11;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  *a3 = sub_7FF6F5C2FD00(a1, v9, v8);
+}
+
+
+======================================================================
+AnimInstance::GetRelevantAnimTime @ RVA 0x2B170C0 EA 0x7FF6F65370C0
+======================================================================
+void __fastcall sub_7FF6F65370C0(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rdx
+  unsigned int v10; // [rsp+48h] [rbp+10h] BYREF
+  unsigned int v11; // [rsp+50h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  v9 = v11;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  *a3 = sub_7FF6F5C2FD50(a1, v9, v8);
+}
+
+
+======================================================================
+AnimInstance::GetRelevantAnimTimeFraction @ RVA 0x2B17180 EA 0x7FF6F6537180
+======================================================================
+void __fastcall sub_7FF6F6537180(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rdx
+  unsigned int v10; // [rsp+48h] [rbp+10h] BYREF
+  unsigned int v11; // [rsp+50h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  v9 = v11;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  *a3 = sub_7FF6F5C2FD80(a1, v9, v8);
+}
+
+
+======================================================================
+AnimInstance::GetRelevantAnimTimeRemaining @ RVA 0x2B17240 EA 0x7FF6F6537240
+======================================================================
+void __fastcall sub_7FF6F6537240(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rdx
+  unsigned int v10; // [rsp+48h] [rbp+10h] BYREF
+  unsigned int v11; // [rsp+50h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  v9 = v11;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  *a3 = sub_7FF6F5C2FDF0(a1, v9, v8);
+}
+
+
+======================================================================
+AnimInstance::GetRelevantAnimTimeRemainingFraction @ RVA 0x2B17300 EA 0x7FF6F6537300
+======================================================================
+void __fastcall sub_7FF6F6537300(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rdx
+  unsigned int v10; // [rsp+48h] [rbp+10h] BYREF
+  unsigned int v11; // [rsp+50h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  v9 = v11;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  *a3 = sub_7FF6F5C2FE60(a1, v9, v8);
+}
+
+
+======================================================================
+AnimInstance::GetStateWeight @ RVA 0x2B178E0 EA 0x7FF6F65378E0
+======================================================================
+void __fastcall sub_7FF6F65378E0(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rdx
+  unsigned int v10; // [rsp+48h] [rbp+10h] BYREF
+  unsigned int v11; // [rsp+50h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  v9 = v11;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  *a3 = sub_7FF6F5C30490(a1, v9, v8);
+}
+
+
+======================================================================
+AnimInstance::GetSyncGroupPosition @ RVA 0x2B17BB0 EA 0x7FF6F6537BB0
+======================================================================
+void __fastcall sub_7FF6F6537BB0(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 v9; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v7 = a2[4];
+  v8 = v9;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  *a3 = (*(float (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 560LL))(a1, v8);
+}
+
+
+======================================================================
+AnimInstance::IsPlayingSlotAnimation @ RVA 0x2B18780 EA 0x7FF6F6538780
+======================================================================
+__int64 __fastcall sub_7FF6F6538780(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rdx
+  __int64 result; // rax
+  __int64 v11; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v12; // [rsp+50h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v7 = a2[4];
+  v8 = v11;
+  v9 = v12;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = sub_7FF6F5C314C0(a1, v9, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AnimInstance::LockAIResources @ RVA 0x2B18E00 EA 0x7FF6F6538E00
+======================================================================
+__int64 __fastcall sub_7FF6F6538E00(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  bool v5; // si
+  __int64 v6; // r8
+  __int64 v7; // rax
+  bool v8; // zf
+  int v10; // [rsp+48h] [rbp+10h] BYREF
+  int v11; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v11 = 0;
+  v5 = v10 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v7 = a2[4];
+  LOBYTE(v2) = v7 != 0;
+  v8 = v11 == 0;
+  a2[4] = v7 + v2;
+  LOBYTE(v6) = !v8;
+  return nullsub_2315(a1, v5, v6);
+}
+
+
+======================================================================
+AnimInstance::Montage_GetCurrentSection @ RVA 0x2B18FF0 EA 0x7FF6F6538FF0
+======================================================================
+_QWORD *__fastcall sub_7FF6F6538FF0(__int64 a1, _QWORD *a2, _QWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  _QWORD *result; // rax
+  __int64 v10; // [rsp+48h] [rbp+10h] BYREF
+  char v11; // [rsp+50h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (_QWORD *)sub_7FF6F5C31FC0(a1, &v11, v8);
+  *a3 = *result;
+  return result;
+}
+
+
+======================================================================
+AnimInstance::Montage_IsActive @ RVA 0x2B19080 EA 0x7FF6F6539080
+======================================================================
+__int64 __fastcall sub_7FF6F6539080(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = sub_7FF6F5C32370(a1, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AnimInstance::Montage_IsPlaying @ RVA 0x2B19110 EA 0x7FF6F6539110
+======================================================================
+__int64 __fastcall sub_7FF6F6539110(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = sub_7FF6F5C32420(a1, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AnimInstance::Montage_JumpToSection @ RVA 0x2B191A0 EA 0x7FF6F65391A0
+======================================================================
+__int64 __fastcall sub_7FF6F65391A0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // r8
+  __int64 v7; // rdx
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v10; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v5 = a2[4];
+  v6 = v10;
+  v7 = v9;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F5C324E0(a1, v7, v6);
+}
+
+
+======================================================================
+AnimInstance::Montage_JumpToSectionsEnd @ RVA 0x2B19260 EA 0x7FF6F6539260
+======================================================================
+__int64 __fastcall sub_7FF6F6539260(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // r8
+  __int64 v7; // rdx
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v10; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v5 = a2[4];
+  v6 = v10;
+  v7 = v9;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F5C325F0(a1, v7, v6);
+}
+
+
+======================================================================
+AnimInstance::Montage_Pause @ RVA 0x2B19320 EA 0x7FF6F6539320
+======================================================================
+__int64 __fastcall sub_7FF6F6539320(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F5C32700(a1, v6);
+}
+
+
+======================================================================
+AnimInstance::Montage_Play @ RVA 0x2B193A0 EA 0x7FF6F65393A0
+======================================================================
+void __fastcall sub_7FF6F65393A0(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  int v9; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v10; // [rsp+50h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  *a3 = sub_7FF6F5C327C0(a1, v8);
+}
+
+
+======================================================================
+AnimInstance::Montage_Resume @ RVA 0x2B19470 EA 0x7FF6F6539470
+======================================================================
+__int64 __fastcall sub_7FF6F6539470(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F5C32B10(a1, v6);
+}
+
+
+======================================================================
+AnimInstance::Montage_SetNextSection @ RVA 0x2B194F0 EA 0x7FF6F65394F0
+======================================================================
+__int64 __fastcall sub_7FF6F65394F0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // r9
+  __int64 v7; // r8
+  __int64 v8; // rdx
+  _QWORD v10[3]; // [rsp+20h] [rbp-18h] BYREF
+  __int64 v11; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v12; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v5 = a2[4];
+  v6 = v10[0];
+  v7 = v11;
+  v8 = v12;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F5C32DC0(a1, v8, v7, v6);
+}
+
+
+======================================================================
+AnimInstance::Montage_SetPlayRate @ RVA 0x2B195F0 EA 0x7FF6F65395F0
+======================================================================
+__int64 __fastcall sub_7FF6F65395F0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  int v8; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v9; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v9;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F5C32EB0(a1, v6);
+}
+
+
+======================================================================
+AnimInstance::Montage_Stop @ RVA 0x2B196C0 EA 0x7FF6F65396C0
+======================================================================
+__int64 __fastcall sub_7FF6F65396C0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  __int64 v6; // rdx
+  __int64 v7; // rax
+  __int64 v8; // r8
+  int v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v10 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  v5 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v7 = a2[4];
+  v8 = v11;
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  return sub_7FF6F5C33050(a1, v6, v8);
+}
+
+
+======================================================================
+AnimInstance::PlaySlotAnimation @ RVA 0x2B1A280 EA 0x7FF6F653A280
+======================================================================
+__int64 __fastcall sub_7FF6F653A280(int a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v3; // rdi
+  int v7; // r9d
+  __int64 v8; // rax
+  int v9; // xmm0_4
+  int v10; // r8d
+  int v11; // edx
+  __int64 result; // rax
+  int v13; // [rsp+20h] [rbp-40h]
+  int v14; // [rsp+28h] [rbp-38h]
+  int v15; // [rsp+30h] [rbp-30h]
+  int v16; // [rsp+40h] [rbp-20h] BYREF
+  __int64 v17; // [rsp+48h] [rbp-18h] BYREF
+  _QWORD v18[2]; // [rsp+50h] [rbp-10h] BYREF
+  int v19; // [rsp+98h] [rbp+38h] BYREF
+  int v20; // [rsp+A0h] [rbp+40h] BYREF
+  int v21; // [rsp+A8h] [rbp+48h] BYREF
+
+  v3 = 0;
+  v18[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v18);
+  }
+  v17 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v21 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v21);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v21);
+  }
+  v20 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v20);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v20);
+  }
+  v19 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  v8 = a2[4];
+  v9 = v20;
+  LOBYTE(v3) = v8 != 0;
+  v10 = v17;
+  v11 = v18[0];
+  v15 = v19;
+  v14 = v20;
+  v13 = v21;
+  a2[4] = v8 + v3;
+  result = sub_7FF6F5C33EB0(a1, v11, v10, v7, v13, v14, v15);
+  *a3 = v9;
+  return result;
+}
+
+
+======================================================================
+AnimInstance::PlaySlotAnimationAsDynamicMontage @ RVA 0x2B1A440 EA 0x7FF6F653A440
+======================================================================
+__int64 __fastcall sub_7FF6F653A440(int a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  int v7; // r9d
+  __int64 v8; // rax
+  int v9; // r8d
+  int v10; // edx
+  __int64 result; // rax
+  int v12; // [rsp+20h] [rbp-40h]
+  int v13; // [rsp+28h] [rbp-38h]
+  int v14; // [rsp+30h] [rbp-30h]
+  int v15; // [rsp+38h] [rbp-28h]
+  int v16; // [rsp+40h] [rbp-20h] BYREF
+  int v17; // [rsp+44h] [rbp-1Ch] BYREF
+  __int64 v18; // [rsp+48h] [rbp-18h] BYREF
+  _QWORD v19[2]; // [rsp+50h] [rbp-10h] BYREF
+  int v20; // [rsp+98h] [rbp+38h] BYREF
+  int v21; // [rsp+A0h] [rbp+40h] BYREF
+  int v22; // [rsp+A8h] [rbp+48h] BYREF
+
+  v3 = 0;
+  v19[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v19);
+  }
+  v18 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  v17 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v22 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v22);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v22);
+  }
+  v21 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v21);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v21);
+  }
+  v20 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v20);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v20);
+  }
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  v9 = v18;
+  v10 = v19[0];
+  v15 = v20;
+  v14 = v21;
+  v13 = v22;
+  v12 = v16;
+  a2[4] = v8 + v3;
+  result = sub_7FF6F5C34170(a1, v10, v9, v7, v12, v13, v14, v15);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AnimInstance::SetMorphTarget @ RVA 0x2B20300 EA 0x7FF6F6540300
+======================================================================
+__int64 __fastcall sub_7FF6F6540300(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  int v8; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v9; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v9;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F5C35DD0(a1, v6);
+}
+
+
+======================================================================
+AnimInstance::StopSlotAnimation @ RVA 0x2B249B0 EA 0x7FF6F65449B0
+======================================================================
+__int64 __fastcall sub_7FF6F65449B0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  __int64 v6; // rdx
+  __int64 v7; // rax
+  __int64 v8; // r8
+  int v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v10 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  v5 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v7 = a2[4];
+  v8 = v11;
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  return sub_7FF6F5C37830(a1, v6, v8);
+}
+
+
+======================================================================
+AnimInstance::TryGetPawnOwner @ RVA 0x2B24B30 EA 0x7FF6F6544B30
+======================================================================
+__int64 __fastcall sub_7FF6F6544B30(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 536LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AnimInstance::UnlockAIResources @ RVA 0x2B24C80 EA 0x7FF6F6544C80
+======================================================================
+__int64 __fastcall sub_7FF6F6544C80(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  bool v5; // si
+  __int64 v6; // r8
+  __int64 v7; // rax
+  bool v8; // zf
+  int v10; // [rsp+48h] [rbp+10h] BYREF
+  int v11; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v11 = 0;
+  v5 = v10 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v7 = a2[4];
+  LOBYTE(v2) = v7 != 0;
+  v8 = v11 == 0;
+  a2[4] = v7 + v2;
+  LOBYTE(v6) = !v8;
+  return nullsub_2319(a1, v5, v6);
+}
+

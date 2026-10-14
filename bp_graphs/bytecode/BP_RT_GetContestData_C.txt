@@ -1,0 +1,65 @@
+// /Game/Blueprints/Rome/ContestTale/bp_rt_getcontestdata -> BP_RT_GetContestData_C
+
+=== BP_RT_GetContestData_C::fn_idx_1698 (270 bytes) ===
+$0: FlowStack.Push(0x10b)
+$5: FlowStack.Push(0xc4)
+$10: LetObj (Variable = Expression)
+  Variable:
+  $11: LocalVariable named CallFunc_GetService_ReturnValue@0x19fbf742f00
+  Expression:
+  $20: FinalFunction target=GetService@0x19e4cda5b60 (
+    $29: InstanceVariable named idx:276431@0x19fbf743380
+    $38: EndFunctionParms
+  )
+$39: Let (Variable = Expression)
+  Variable:
+  $48: LocalVariable named idx:276433@0x19fbf742f80
+  Expression:
+  $57: DynamicCast to ContestTaleQuestService@0x19e4c3b4280 of expr:
+  $66: LocalVariable named CallFunc_GetService_ReturnValue@0x19fbf742f00
+$75: Let (Variable = Expression)
+  Variable:
+  $84: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fbf743000
+  Expression:
+  $93: PrimitiveCast type=71
+    Argument:
+    $95: LocalVariable named idx:276433@0x19fbf742f80
+$104: JumpIfNot -> 0xe4, cond:
+  $109: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fbf743000
+$118: Let (Variable = Expression)
+  Variable:
+  $127: LocalVariable named idx:276430@0x19fbf743100
+  Expression:
+  $136: Context
+    ObjectExpression:
+    $137: LocalVariable named idx:276433@0x19fbf742f80
+    SkipBytes: 0xa
+    RValueProperty: idx:276430@0x19fbf743100
+    ContextExpression:
+    $158: FinalFunction target=GetContestVoyageData@0x19e4d158010 (
+      $167: EndFunctionParms
+    )
+$168: Let (Variable = Expression)
+  Variable:
+  $177: InstanceVariable named idx:276428@0x19fbf743580
+  Expression:
+  $186: LocalVariable named idx:276430@0x19fbf743100
+$195: PopExecutionFlow (jump to popped addr)
+$196: Let (Variable = Expression)
+  Variable:
+  $205: LocalOutVariable named AvailableIslandArchetypes@0x19fbf743300
+  Expression:
+  $214: InstanceVariable named idx:276428@0x19fbf743580
+$223: Jump to offset 0x10b
+$228: SetArray
+  $229: LocalVariable named K2Node_MakeArray_Array@0x19fbf743200
+  $238: EndArray
+$239: Let (Variable = Expression)
+  Variable:
+  $248: InstanceVariable named idx:276428@0x19fbf743580
+  Expression:
+  $257: LocalVariable named K2Node_MakeArray_Array@0x19fbf743200
+$266: PopExecutionFlow (jump to popped addr)
+$267: Return expression:
+  $268: Nothing
+$269: EndOfScript

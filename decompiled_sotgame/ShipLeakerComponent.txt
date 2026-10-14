@@ -1,0 +1,137 @@
+// Class: ShipLeakerComponent (3 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+ShipLeakerComponent::AddLeak @ RVA 0xDDBA40 EA 0x7FF6F47FBA40
+======================================================================
+__int64 __fastcall sub_7FF6F47FBA40(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v3; // rsi
+  _OWORD *v7; // rax
+  _OWORD *v8; // rdi
+  __int64 v9; // r8
+  _BYTE *v10; // r9
+  __int64 v11; // rax
+  __int64 result; // rax
+  int v13; // [rsp+20h] [rbp-98h] BYREF
+  _BYTE v14[40]; // [rsp+28h] [rbp-90h] BYREF
+  _OWORD v15[3]; // [rsp+50h] [rbp-68h] BYREF
+
+  v15[1] = 0;
+  v3 = 0;
+  v15[0] = _mm_shuffle_ps((__m128)0LL, _mm_movehl_ps((__m128)xmmword_7FF6FA4CFB50, (__m128)0LL), 196);
+  v15[2] = _mm_and_ps((__m128)xmmword_7FF6FA4CFB50, (__m128)xmmword_7FF6FA4CFB60);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v15);
+  }
+  v7 = (_OWORD *)a2[7];
+  v8 = v15;
+  v13 = 0;
+  if ( v7 )
+    v8 = v7;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  sub_7FF6F3F16DC0(v14);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v14);
+  }
+  v10 = v14;
+  if ( a2[7] )
+    v10 = (_BYTE *)a2[7];
+  v11 = a2[4];
+  LOBYTE(v3) = v11 != 0;
+  a2[4] = v11 + v3;
+  result = sub_7FF6F3F1F4B0(a1, v8, v9, v10);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ShipLeakerComponent::SetShip @ RVA 0xDE41E0 EA 0x7FF6F48041E0
+======================================================================
+__int64 __fastcall sub_7FF6F48041E0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F3F3C800(a1, v6);
+}
+
+
+======================================================================
+ShipLeakerComponent::Update @ RVA 0xDE4B70 EA 0x7FF6F4804B70
+======================================================================
+__int64 __fastcall sub_7FF6F4804B70(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  __int64 v6; // r8
+  unsigned __int8 v8; // [rsp+38h] [rbp+10h] BYREF
+  int v9; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v9 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  v2 = a2[4] == 0;
+  v8 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  v6 = v8;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F3F3F4E0(a1, v5, v6);
+}
+

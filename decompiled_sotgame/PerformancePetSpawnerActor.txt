@@ -1,0 +1,158 @@
+// Class: PerformancePetSpawnerActor (7 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+PerformancePetSpawnerActor::CancelReactWithName @ RVA 0xEC32D0 EA 0x7FF6F48E32D0
+======================================================================
+__int64 __fastcall sub_7FF6F48E32D0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 *v5; // rdx
+  __int64 v6; // rax
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = &v8;
+  if ( a2[7] )
+    v5 = (__int64 *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  return sub_7FF6F3F9D4A0(a1, v5);
+}
+
+
+======================================================================
+PerformancePetSpawnerActor::DespawnPets @ RVA 0xEC39A0 EA 0x7FF6F48E39A0
+======================================================================
+__int64 __fastcall sub_7FF6F48E39A0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F3FA08D0();
+}
+
+
+======================================================================
+PerformancePetSpawnerActor::GetSpawnedPets @ RVA 0xEC4CE0 EA 0x7FF6F48E4CE0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F48E4CE0(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 result; // rax
+  __int64 v5; // rdi
+  __int64 v6[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3FAC030(a1, v6);
+  v5 = result;
+  if ( a3 != result )
+  {
+    if ( *(_QWORD *)a3 )
+    {
+      sub_7FF6F4DED1F0(*(_QWORD *)a3);
+      if ( *(_QWORD *)a3 )
+        *(_QWORD *)a3 = 0;
+    }
+    *(_QWORD *)a3 = *(_QWORD *)v5;
+    *(_QWORD *)v5 = 0;
+    *(_DWORD *)(a3 + 8) = *(_DWORD *)(v5 + 8);
+    result = *(unsigned int *)(v5 + 12);
+    *(_DWORD *)(a3 + 12) = result;
+    *(_QWORD *)(v5 + 8) = 0;
+  }
+  if ( v6[0] )
+    return sub_7FF6F4DED1F0(v6[0]);
+  return result;
+}
+
+
+======================================================================
+PerformancePetSpawnerActor::HavePetsFinishedSpawning @ RVA 0xEC50F0 EA 0x7FF6F48E50F0
+======================================================================
+__int64 __fastcall sub_7FF6F48E50F0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3FACD30();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PerformancePetSpawnerActor::RequestReactWithName @ RVA 0xEC8F10 EA 0x7FF6F48E8F10
+======================================================================
+__int64 __fastcall sub_7FF6F48E8F10(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 *v5; // rdx
+  __int64 v6; // rax
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = &v8;
+  if ( a2[7] )
+    v5 = (__int64 *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  return sub_7FF6F3FB6690(a1, v5);
+}
+
+
+======================================================================
+PerformancePetSpawnerActor::SetOverridePetOwner @ RVA 0xECB170 EA 0x7FF6F48EB170
+======================================================================
+__int64 __fastcall sub_7FF6F48EB170(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F3FB8300(a1, v6);
+}
+
+
+======================================================================
+PerformancePetSpawnerActor::SpawnPets @ RVA 0xECB610 EA 0x7FF6F48EB610
+======================================================================
+  *** no function recognized at this EA ***

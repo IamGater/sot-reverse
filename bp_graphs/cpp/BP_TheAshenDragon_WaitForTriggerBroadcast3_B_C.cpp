@@ -1,0 +1,28 @@
+// Auto-reconstructed from serialized Kismet bytecode and SDK reflection.
+// C++-style logic; original editor graph layout is unavailable in the input.
+
+// Recovered Kismet: BP_TheAshenDragon_WaitForTriggerBroadcast3_B_C::OnBegin (40 bytes)
+void BP_TheAshenDragon_WaitForTriggerBroadcast3_B_C::OnBegin()
+{
+    ExecuteUbergraph_BP_TheAshenDragon_WaitForTriggerBroadcast3_B();
+    return;
+}
+
+// Recovered Kismet: BP_TheAshenDragon_WaitForTriggerBroadcast3_B_C::Player Entered Trigger (40 bytes)
+void BP_TheAshenDragon_WaitForTriggerBroadcast3_B_C::Player Entered Trigger()
+{
+    ExecuteUbergraph_BP_TheAshenDragon_WaitForTriggerBroadcast3_B();
+    return;
+}
+
+// Recovered Kismet: BP_TheAshenDragon_WaitForTriggerBroadcast3_B_C::ExecuteUbergraph_BP_TheAshenDragon_WaitForTriggerBroadcast3_B (327 bytes)
+void BP_TheAshenDragon_WaitForTriggerBroadcast3_B_C::ExecuteUbergraph_BP_TheAshenDragon_WaitForTriggerBroadcast3_B()
+{
+    UBlueprintStepBase::GetParticipants(idx_281947);
+    bool CallFunc_Array_Contains_ReturnValue = UKismetArrayLibrary::Array_Contains(idx_281947, idx_281950);
+    if (!CallFunc_Array_Contains_ReturnValue) goto L_144;
+    this->SignalComplete();
+    this->GetVariables(CallFunc_GetVariables_OutStruct);
+L_144:
+    return;
+}

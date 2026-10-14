@@ -1,0 +1,79 @@
+// Class: WatercraftBlueprintFunctionLibrary (1 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+WatercraftBlueprintFunctionLibrary::SpawnWatercraft @ RVA 0x35F3280 EA 0x7FF6F7013280
+======================================================================
+__int64 __fastcall sub_7FF6F7013280(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 v9; // xmm0_8
+  __int64 result; // rax
+  __int64 v11; // [rsp+20h] [rbp-48h] BYREF
+  int v12; // [rsp+28h] [rbp-40h]
+  __int64 v13; // [rsp+30h] [rbp-38h] BYREF
+  int v14; // [rsp+38h] [rbp-30h]
+  __int64 v15; // [rsp+40h] [rbp-28h] BYREF
+  int v16; // [rsp+48h] [rbp-20h]
+  __int64 v17; // [rsp+50h] [rbp-18h] BYREF
+  int v18; // [rsp+58h] [rbp-10h]
+  __int64 v19; // [rsp+78h] [rbp+10h] BYREF
+  __int64 v20; // [rsp+80h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v20 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v20);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v20);
+  }
+  v19 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = a2[4];
+  v7 = v19;
+  v8 = v20;
+  LOBYTE(v3) = v6 != 0;
+  v15 = v11;
+  v9 = v13;
+  v16 = v12;
+  v18 = v14;
+  a2[4] = v6 + v3;
+  v17 = v9;
+  result = sub_7FF6F6FF3770(v8, v7, &v17, &v15);
+  *a3 = result;
+  return result;
+}
+

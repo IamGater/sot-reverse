@@ -1,0 +1,82 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_5_WildRose/bp_setroselocation -> BP_SetRoseLocation_C
+
+=== BP_SetRoseLocation_C::OnBeginCustom (340 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19e586bc9b0
+  Expression:
+  $18: Context
+    ObjectExpression:
+    $19: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19e586bc9b0
+    ContextExpression:
+    $40: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $49: LocalOutVariable named idx:284229@0x19fcc5abd80
+      $58: EndFunctionParms
+    )
+$59: Let (Variable = Expression)
+  Variable:
+  $68: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x19e586bc160
+  Expression:
+  $77: CallMath target=Subtract_IntInt@0x19e4d399ad0 (
+    $86: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19e586bc9b0
+    $95: literal int32 1
+    $100: EndFunctionParms
+  )
+$101: Let (Variable = Expression)
+  Variable:
+  $110: LocalVariable named CallFunc_RandomIntegerInRange_ReturnValue@0x19e586bbc20
+  Expression:
+  $119: CallMath target=RandomIntegerInRange@0x19e4d394190 (
+    $128: literal int32 0
+    $133: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x19e586bc160
+    $142: EndFunctionParms
+  )
+$143: Context
+  ObjectExpression:
+  $144: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $165: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $174: LocalOutVariable named idx:284229@0x19fcc5abd80
+    $183: LocalVariable named CallFunc_RandomIntegerInRange_ReturnValue@0x19e586bbc20
+    $192: LocalVariable named CallFunc_Array_Get_Item@0x19fcc5abb00
+    $201: EndFunctionParms
+  )
+$202: LetObj (Variable = Expression)
+  Variable:
+  $203: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue@0x19fcc5abb80
+  Expression:
+  $212: Context
+    ObjectExpression:
+    $213: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Conv_AssetToObject_ReturnValue@0x19fcc5abb80
+    ContextExpression:
+    $234: FinalFunction target=Conv_AssetToObject@0x19e4cd86800 (
+      $243: LocalVariable named CallFunc_Array_Get_Item@0x19fcc5abb00
+      $252: EndFunctionParms
+    )
+$253: Let (Variable = Expression)
+  Variable:
+  $262: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19fcc5abc00
+  Expression:
+  $271: DynamicCast to Actor@0x19e261ddc80 of expr:
+  $280: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue@0x19fcc5abb80
+$289: Let (Variable = Expression)
+  Variable:
+  $298: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x19fcc5abc80
+  Expression:
+  $307: PrimitiveCast type=71
+    Argument:
+    $309: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19fcc5abc00
+$318: LetObj (Variable = Expression)
+  Variable:
+  $319: LocalOutVariable named idx:284212@0x19fcc5aba80
+  Expression:
+  $328: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19fcc5abc00
+$337: Return expression:
+  $338: Nothing
+$339: EndOfScript

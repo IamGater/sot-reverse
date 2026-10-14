@@ -1,0 +1,44 @@
+// Class: PickupObjectActionStateId (1 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+PickupObjectActionStateId::PushCharacterIntoPickupObjectActionState @ RVA 0x324B350 EA 0x7FF6F6C6B350
+======================================================================
+__int64 __fastcall sub_7FF6F6C6B350(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rdx
+  __int64 v6; // rcx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v9; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v4 = a2[4];
+  v5 = v8;
+  v6 = v9;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return sub_7FF6F6C12D60(v6, v5);
+}
+

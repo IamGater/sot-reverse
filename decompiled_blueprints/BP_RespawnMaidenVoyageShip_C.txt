@@ -1,0 +1,174 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Onboarding/bp_respawnmaidenvoyageship -> BP_RespawnMaidenVoyageShip_C
+
+=== BP_RespawnMaidenVoyageShip_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fce709f80
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fce709e80
+$18: VirtualFunction call "idx:283142" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_RespawnMaidenVoyageShip_C::fn_idx_275683 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event@0x19fce70a000
+  Expression:
+  $9: LocalVariable named Event@0x19fce709f00
+$18: VirtualFunction call "idx:283142" (
+  $31: literal int32 166
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_RespawnMaidenVoyageShip_C::OnEnd (22 bytes) ===
+$0: VirtualFunction call "idx:283142" (
+  $13: literal int32 432
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_RespawnMaidenVoyageShip_C::fn_idx_283142 (564 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fcdbb5d30
+$10: LetObj (Variable = Expression)
+  Variable:
+  $11: LocalVariable named CallFunc_GetGameState_ReturnValue@0x19fce70a080
+  Expression:
+  $20: FinalFunction target=GetGameState@0x19e4cda5860 (
+    $29: EndFunctionParms
+  )
+$30: Let (Variable = Expression)
+  Variable:
+  $39: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fce70a100
+  Expression:
+  $48: Context
+    ObjectExpression:
+    $49: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fce70a100
+    ContextExpression:
+    $70: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x19e4d410390 (
+      $79: LocalVariable named CallFunc_GetGameState_ReturnValue@0x19fce70a080
+      $88: EndFunctionParms
+    )
+$89: Context
+  ObjectExpression:
+  $90: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x32
+  RValueProperty: (null)
+  ContextExpression:
+  $111: FinalFunction target=RegisterEventFromHandle@0x19e4d410c00 (
+    $120: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fce70a100
+    $129: InstanceVariable named idx:283143@0x19fce70a600
+    $138: Self
+    $139: literal ansi string "OnShipSunk"
+    $151: ObjectConst EventShipBecameUseless@0x19e4cfa99f0
+    $160: EndFunctionParms
+  )
+$161: Jump to offset 0x231
+$166: LetObj (Variable = Expression)
+  Variable:
+  $167: LocalVariable named CallFunc_GetGameState_ReturnValue2@0x19fce70a180
+  Expression:
+  $176: FinalFunction target=GetGameState@0x19e4cda5860 (
+    $185: EndFunctionParms
+  )
+$186: SetArray
+  $187: LocalVariable named idx:283139@0x19fce70a580
+  $196: EndArray
+$197: FinalFunction target=GetCrewIds@0x19e4cda5260 (
+  $206: LocalVariable named idx:283139@0x19fce70a580
+  $215: EndFunctionParms
+)
+$216: Context
+  ObjectExpression:
+  $217: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $238: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $247: LocalVariable named idx:283139@0x19fce70a580
+    $256: literal int32 0
+    $261: LocalVariable named CallFunc_Array_Get_Item@0x19fce70a200
+    $270: EndFunctionParms
+  )
+$271: LetBool (Variable = Expression)
+  Variable:
+  $272: LocalVariable named idx:283140@0x19fce70a300
+  Expression:
+  $281: Context
+    ObjectExpression:
+    $282: ObjectConst Default__CrewFunctions@0x19e4d70efd0
+    SkipBytes: 0x1c
+    RValueProperty: idx:283140@0x19fce70a300
+    ContextExpression:
+    $303: FinalFunction target=QueueNewShipForRespawnAndSetCrewSpawnLocation@0x19e4d1652a0 (
+      $312: LocalVariable named CallFunc_GetGameState_ReturnValue2@0x19fce70a180
+      $321: LocalVariable named CallFunc_Array_Get_Item@0x19fce70a200
+      $330: EndFunctionParms
+    )
+$331: JumpIfNot -> 0x15e, cond:
+  $336: InstanceVariable named idx:283144@0x19fce70a680
+$345: Jump to offset 0x231
+$350: LetBool (Variable = Expression)
+  Variable:
+  $351: InstanceVariable named idx:283144@0x19fce70a680
+  Expression:
+  $360: True
+$361: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $370: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce70a480
+  $379: EndFunctionParms
+)
+$380: LetBool (Variable = Expression)
+  Variable:
+  $381: StructMemberContext prop=idx:282738@0x19fcbb41400
+    Expression to struct:
+    $390: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce70a480
+  Expression:
+  $399: InstanceVariable named idx:283144@0x19fce70a680
+$408: FinalFunction target=SetVariables@0x19e4cda7cc0 (
+  $417: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce70a480
+  $426: EndFunctionParms
+)
+$427: Jump to offset 0x231
+$432: LetObj (Variable = Expression)
+  Variable:
+  $433: LocalVariable named CallFunc_GetGameState_ReturnValue3@0x19fce70a280
+  Expression:
+  $442: FinalFunction target=GetGameState@0x19e4cda5860 (
+    $451: EndFunctionParms
+  )
+$452: Let (Variable = Expression)
+  Variable:
+  $461: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x19fce70a400
+  Expression:
+  $470: Context
+    ObjectExpression:
+    $471: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x19fce70a400
+    ContextExpression:
+    $492: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x19e4d410390 (
+      $501: LocalVariable named CallFunc_GetGameState_ReturnValue3@0x19fce70a280
+      $510: EndFunctionParms
+    )
+$511: Context
+  ObjectExpression:
+  $512: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $533: FinalFunction target=UnregisterEventFromHandle@0x19e4d411420 (
+    $542: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x19fce70a400
+    $551: InstanceVariable named idx:283143@0x19fce70a600
+    $560: EndFunctionParms
+  )
+$561: Return expression:
+  $562: Nothing
+$563: EndOfScript

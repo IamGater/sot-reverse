@@ -1,0 +1,101 @@
+// Class: TextureFeedbackComponent (4 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+TextureFeedbackComponent::ClearTexture @ RVA 0x109E220 EA 0x7FF6F4ABE220
+======================================================================
+__int64 __fastcall sub_7FF6F4ABE220(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rax
+  __int128 v6; // [rsp+20h] [rbp-28h] BYREF
+  __int128 v7; // [rsp+30h] [rbp-18h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  v4 = a2[4];
+  v7 = v6;
+  a2[4] = v4 + (v4 != 0);
+  return sub_7FF6F427CF40(a1, &v7);
+}
+
+
+======================================================================
+TextureFeedbackComponent::GetTexture @ RVA 0x10A03D0 EA 0x7FF6F4AC03D0
+======================================================================
+__int64 __fastcall sub_7FF6F4AC03D0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F42925C0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+TextureFeedbackComponent::SetEffectActive @ RVA 0x10A4870 EA 0x7FF6F4AC4870
+======================================================================
+__int64 __fastcall sub_7FF6F4AC4870(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F42AAC30(a1, v5);
+}
+
+
+======================================================================
+TextureFeedbackComponent::SetInputTexture1 @ RVA 0x10A49C0 EA 0x7FF6F4AC49C0
+======================================================================
+__int64 __fastcall sub_7FF6F4AC49C0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F42AAD10(a1, v6);
+}
+

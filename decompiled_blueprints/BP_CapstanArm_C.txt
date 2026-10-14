@@ -1,0 +1,145 @@
+// /Game/Blueprints/GameObjects/Capstan/bp_capstanarm_dvr -> BP_CapstanArm_C
+
+=== BP_CapstanArm_C::GetLookAtPosBasisSpace (134 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_GetAttachedBasisTransform_ReturnValue@0x19f44a10880
+  Expression:
+  $18: Context
+    ObjectExpression:
+    $19: InstanceVariable named LookAtPos@0x19f44a11000
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetAttachedBasisTransform_ReturnValue@0x19f44a10880
+    ContextExpression:
+    $40: FinalFunction target=GetAttachedBasisTransform@0x19e4d06dcc0 (
+      $49: EndFunctionParms
+    )
+$50: CallMath target=BreakTransform@0x19e4d372df0 (
+  $59: LocalVariable named CallFunc_GetAttachedBasisTransform_ReturnValue@0x19f44a10880
+  $68: LocalVariable named CallFunc_BreakTransform_Location@0x19f44a10900
+  $77: LocalVariable named CallFunc_BreakTransform_Rotation@0x19f44a10980
+  $86: LocalVariable named CallFunc_BreakTransform_Scale@0x19f44a10a00
+  $95: EndFunctionParms
+)
+$96: Let (Variable = Expression)
+  Variable:
+  $105: LocalOutVariable named ReturnValue@0x19f44a10800
+  Expression:
+  $114: LocalVariable named CallFunc_BreakTransform_Location@0x19f44a10900
+$123: Return expression:
+  $124: LocalOutVariable named ReturnValue@0x19f44a10800
+$133: EndOfScript
+
+=== BP_CapstanArm_C::GetFrontFacingVector (66 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_GetActorRightVector_ReturnValue@0x19f44a10b00
+  Expression:
+  $18: FinalFunction target=GetActorRightVector@0x19e4cd61a50 (
+    $27: EndFunctionParms
+  )
+$28: Let (Variable = Expression)
+  Variable:
+  $37: LocalOutVariable named ReturnValue@0x19f44a10a80
+  Expression:
+  $46: LocalVariable named CallFunc_GetActorRightVector_ReturnValue@0x19f44a10b00
+$55: Return expression:
+  $56: LocalOutVariable named ReturnValue@0x19f44a10a80
+$65: EndOfScript
+
+=== BP_CapstanArm_C::DoesRequireFacingFront (22 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalOutVariable named ReturnValue@0x19f44a10b80
+  Expression:
+  $10: True
+$11: Return expression:
+  $12: LocalOutVariable named ReturnValue@0x19f44a10b80
+$21: EndOfScript
+
+=== BP_CapstanArm_C::GetDockableInfo (135 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: StructMemberContext prop=SocketName@0x19e4cf8c8f0
+    Expression to struct:
+    $18: LocalVariable named K2Node_MakeStruct_DockableInfo@0x19f44a10c80
+  Expression:
+  $27: literal name "DockingPoint"
+$40: LetObj (Variable = Expression)
+  Variable:
+  $41: StructMemberContext prop=SceneComponent@0x19e4cf8c870
+    Expression to struct:
+    $50: LocalVariable named K2Node_MakeStruct_DockableInfo@0x19f44a10c80
+  Expression:
+  $59: InstanceVariable named MeshComponent@0x19e4d130470
+$68: Let (Variable = Expression)
+  Variable:
+  $77: StructMemberContext prop=ShouldOverlapsUpdateOnParentUpdate@0x19e4cf8c7f0
+    Expression to struct:
+    $86: LocalVariable named K2Node_MakeStruct_DockableInfo@0x19f44a10c80
+  Expression:
+  $95: literal byte 0
+$97: Let (Variable = Expression)
+  Variable:
+  $106: LocalOutVariable named ReturnValue@0x19f44a10c00
+  Expression:
+  $115: LocalVariable named K2Node_MakeStruct_DockableInfo@0x19f44a10c80
+$124: Return expression:
+  $125: LocalOutVariable named ReturnValue@0x19f44a10c00
+$134: EndOfScript
+
+=== BP_CapstanArm_C::GetClosestInteractionPoint (111 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_GetBoxWorldOrigin_ReturnValue@0x19f44a10e00
+  Expression:
+  $18: Context
+    ObjectExpression:
+    $19: InstanceVariable named Interactable@0x19f44a10f80
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetBoxWorldOrigin_ReturnValue@0x19f44a10e00
+    ContextExpression:
+    $40: FinalFunction target=GetBoxWorldOrigin@0x19e4d12e300 (
+      $49: EndFunctionParms
+    )
+$50: Let (Variable = Expression)
+  Variable:
+  $59: LocalOutVariable named OutInteractionPointRadius@0x19f43e93e20
+  Expression:
+  $68: literal float 0
+$73: Let (Variable = Expression)
+  Variable:
+  $82: LocalOutVariable named ReturnValue@0x19f44a10d80
+  Expression:
+  $91: LocalVariable named CallFunc_GetBoxWorldOrigin_ReturnValue@0x19f44a10e00
+$100: Return expression:
+  $101: LocalOutVariable named ReturnValue@0x19f44a10d80
+$110: EndOfScript
+
+=== BP_CapstanArm_C::GetLookAtPos (88 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_K2_GetComponentLocation_ReturnValue@0x19f44a10f00
+  Expression:
+  $18: Context
+    ObjectExpression:
+    $19: InstanceVariable named LookAtPos@0x19f44a11000
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetComponentLocation_ReturnValue@0x19f44a10f00
+    ContextExpression:
+    $40: FinalFunction target=K2_GetComponentLocation@0x19e4d0712f0 (
+      $49: EndFunctionParms
+    )
+$50: Let (Variable = Expression)
+  Variable:
+  $59: LocalOutVariable named ReturnValue@0x19f44a10e80
+  Expression:
+  $68: LocalVariable named CallFunc_K2_GetComponentLocation_ReturnValue@0x19f44a10f00
+$77: Return expression:
+  $78: LocalOutVariable named ReturnValue@0x19f44a10e80
+$87: EndOfScript
+
+=== BP_CapstanArm_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript

@@ -1,0 +1,44 @@
+// Class: StatusEffectHelperFunctionLibrary (1 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+StatusEffectHelperFunctionLibrary::ApplyOneShotStatus @ RVA 0x325E1E0 EA 0x7FF6F6C7E1E0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6C7E1E0(__int64 a1, _QWORD *a2)
+{
+  __int64 v3; // rdi
+  __int64 result; // rax
+  __int64 v5[4]; // [rsp+28h] [rbp-20h] BYREF
+  __int64 v6; // [rsp+58h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v6 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  sub_7FF6F6C6DB20(v5);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v5);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v5);
+  }
+  result = a2[4];
+  LOBYTE(v3) = result != 0;
+  a2[4] = result + v3;
+  if ( v5[0] )
+    return sub_7FF6F4DED1F0(v5[0]);
+  return result;
+}
+

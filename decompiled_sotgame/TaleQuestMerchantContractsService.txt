@@ -1,0 +1,111 @@
+// Class: TaleQuestMerchantContractsService (2 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+TaleQuestMerchantContractsService::AddContract @ RVA 0x36A30D0 EA 0x7FF6F70C30D0
+======================================================================
+// Hidden C++ exception states: #wind=2
+_OWORD *__fastcall sub_7FF6F70C30D0(int a1, _QWORD *a2, _OWORD *a3)
+{
+  __int64 *v6; // rdi
+  _OWORD *result; // rax
+  int v8; // edi
+  __int64 *v9; // rbx
+  __int64 v10; // [rsp+38h] [rbp-40h] BYREF
+  __int64 v11; // [rsp+40h] [rbp-38h]
+  char v12; // [rsp+48h] [rbp-30h] BYREF
+  int v13; // [rsp+88h] [rbp+10h] BYREF
+  __int64 v14; // [rsp+90h] [rbp+18h] BYREF
+
+  v10 = 0;
+  v11 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = &v10;
+  if ( a2[7] )
+    v6 = (__int64 *)a2[7];
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  a2[4] += a2[4] != 0;
+  result = (_OWORD *)sub_7FF6F7091540(a1, (unsigned int)&v12, (_DWORD)v6, v14, v13);
+  *a3 = *result;
+  v8 = v11;
+  if ( (_DWORD)v11 )
+  {
+    v9 = (__int64 *)(v10 + 16);
+    do
+    {
+      if ( *v9 )
+      {
+        result = (_OWORD *)sub_7FF6F4DED1F0(*v9);
+        if ( *v9 )
+          *v9 = 0;
+      }
+      v9 += 7;
+      --v8;
+    }
+    while ( v8 );
+  }
+  if ( v10 )
+    return (_OWORD *)sub_7FF6F4DED1F0(v10);
+  return result;
+}
+
+
+======================================================================
+TaleQuestMerchantContractsService::GetContract @ RVA 0x36A3310 EA 0x7FF6F70C3310
+======================================================================
+__int64 __fastcall sub_7FF6F70C3310(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 result; // rax
+  __int128 v9; // [rsp+20h] [rbp-28h] BYREF
+  __int128 v10; // [rsp+30h] [rbp-18h] BYREF
+
+  v3 = 0;
+  v9 = 0u;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v7 = a2[4];
+  v10 = v9;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = sub_7FF6F70999C0(a1, &v10);
+  *a3 = result;
+  return result;
+}
+

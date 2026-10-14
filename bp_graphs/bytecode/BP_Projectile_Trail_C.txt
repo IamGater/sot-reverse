@@ -1,0 +1,206 @@
+// /Game/Blueprints/GameObjects/Cannon/bp_projectile_trail_fire -> BP_Projectile_Trail_C
+
+=== BP_Projectile_Trail_C::fn_idx_17427 (94 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_Conv_VectorToLinearColor_ReturnValue@0x19f5bb7b680
+  Expression:
+  $18: CallMath target=Conv_VectorToLinearColor@0x19e4d376290 (
+    $27: LocalVariable named Velocity@0x19f5bb7b700
+    $36: EndFunctionParms
+  )
+$37: Context
+  ObjectExpression:
+  $38: InstanceVariable named DynamicMaterial@0x19f5bb7bf80
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $59: FinalFunction target=SetVectorParameterValue@0x19e4d3d4970 (
+    $68: literal name "StartVelocity"
+    $81: LocalVariable named CallFunc_Conv_VectorToLinearColor_ReturnValue@0x19f5bb7b680
+    $90: EndFunctionParms
+  )
+$91: Return expression:
+  $92: Nothing
+$93: EndOfScript
+
+=== BP_Projectile_Trail_C::fn_idx_9202 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_Projectile_Trail_C::fn_idx_9152 (22 bytes) ===
+$0: VirtualFunction call "idx:231739" (
+  $13: literal int32 250
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Projectile_Trail_C::fn_idx_231731 (22 bytes) ===
+$0: VirtualFunction call "idx:231739" (
+  $13: literal int32 624
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Projectile_Trail_C::fn_idx_231739 (632 bytes) ===
+$0: FlowStack.Push(0x275)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x19e04861420
+$15: VirtualFunction call "K2_DestroyActor" (
+  $28: EndFunctionParms
+)
+$29: PopExecutionFlow (jump to popped addr)
+$30: Context
+  ObjectExpression:
+  $31: InstanceVariable named StaticMeshComponent@0x19e4d103360
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $52: VirtualFunction call "SetVisibility" (
+    $65: True
+    $66: False
+    $67: EndFunctionParms
+  )
+$68: Let (Variable = Expression)
+  Variable:
+  $77: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue2@0x19e0486c080
+  Expression:
+  $86: Context
+    ObjectExpression:
+    $87: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue2@0x19e0486c080
+    ContextExpression:
+    $108: FinalFunction target=GetGameTimeInSeconds@0x19e4cd8c800 (
+      $117: Self
+      $118: EndFunctionParms
+    )
+$119: Context
+  ObjectExpression:
+  $120: InstanceVariable named DynamicMaterial@0x19f5bb7bf80
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $141: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $150: literal name "EndTime"
+    $163: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue2@0x19e0486c080
+    $172: EndFunctionParms
+  )
+$173: Context
+  ObjectExpression:
+  $174: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $195: FinalFunction target=Delay@0x19e4cd86d40 (
+    $204: Self
+    $205: literal float 2
+    $210: literal struct LatentActionInfo@0x19e4cd86e80 (size 32)
+      $223: literal CodeSkipSizeType 0xf
+      $228: literal int32 1
+      $233: literal name "idx:231739"
+      $246: Self
+      $247: EndStructConst
+    $248: EndFunctionParms
+  )
+$249: PopExecutionFlow (jump to popped addr)
+$250: LetObj (Variable = Expression)
+  Variable:
+  $251: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f5bb7b800
+  Expression:
+  $260: Context
+    ObjectExpression:
+    $261: InstanceVariable named StaticMeshComponent@0x19e4d103360
+    SkipBytes: 0x14
+    RValueProperty: CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f5bb7b800
+    ContextExpression:
+    $282: VirtualFunction call "CreateDynamicMaterialInstance" (
+      $295: literal int32 0
+      $300: NoObject
+      $301: EndFunctionParms
+    )
+$302: LetObj (Variable = Expression)
+  Variable:
+  $303: InstanceVariable named DynamicMaterial@0x19f5bb7bf80
+  Expression:
+  $312: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f5bb7b800
+$321: Context
+  ObjectExpression:
+  $322: InstanceVariable named StaticMeshComponent@0x19e4d103360
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $343: VirtualFunction call "SetMaterial" (
+    $356: literal int32 0
+    $361: InstanceVariable named DynamicMaterial@0x19f5bb7bf80
+    $370: EndFunctionParms
+  )
+$371: Let (Variable = Expression)
+  Variable:
+  $380: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x19e0486a1e0
+  Expression:
+  $389: Context
+    ObjectExpression:
+    $390: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue@0x19e0486a1e0
+    ContextExpression:
+    $411: FinalFunction target=GetGameTimeInSeconds@0x19e4cd8c800 (
+      $420: Self
+      $421: EndFunctionParms
+    )
+$422: Context
+  ObjectExpression:
+  $423: InstanceVariable named DynamicMaterial@0x19f5bb7bf80
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $444: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $453: literal name "StartTime"
+    $466: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x19e0486a1e0
+    $475: EndFunctionParms
+  )
+$476: Let (Variable = Expression)
+  Variable:
+  $485: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x19e0486a1e0
+  Expression:
+  $494: Context
+    ObjectExpression:
+    $495: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue@0x19e0486a1e0
+    ContextExpression:
+    $516: FinalFunction target=GetGameTimeInSeconds@0x19e4cd8c800 (
+      $525: Self
+      $526: EndFunctionParms
+    )
+$527: Let (Variable = Expression)
+  Variable:
+  $536: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x19e04869e60
+  Expression:
+  $545: CallMath target=Add_FloatFloat@0x19e4d36f820 (
+    $554: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x19e0486a1e0
+    $563: literal float 20
+    $568: EndFunctionParms
+  )
+$569: Context
+  ObjectExpression:
+  $570: InstanceVariable named DynamicMaterial@0x19f5bb7bf80
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $591: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $600: literal name "EndTime"
+    $613: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x19e04869e60
+    $622: EndFunctionParms
+  )
+$623: PopExecutionFlow (jump to popped addr)
+$624: Jump to offset 0x1e
+$629: Return expression:
+  $630: Nothing
+$631: EndOfScript

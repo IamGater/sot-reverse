@@ -1,0 +1,118 @@
+// Class: ShipHullCollisionComponent (6 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+ShipHullCollisionComponent::GetIsShipInContactWithLand @ RVA 0xFC0240 EA 0x7FF6F49E0240
+======================================================================
+__int64 __fastcall sub_7FF6F49E0240(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F40A7840();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ShipHullCollisionComponent::GetIsShipInContactWithSolidHits @ RVA 0xFC0270 EA 0x7FF6F49E0270
+======================================================================
+__int64 __fastcall sub_7FF6F49E0270(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F40A7850();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ShipHullCollisionComponent::IsWorldSpacePositionInsideCabin @ RVA 0xFC14C0 EA 0x7FF6F49E14C0
+======================================================================
+__int64 __fastcall sub_7FF6F49E14C0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  _BYTE *v7; // rdx
+  __int64 v8; // rax
+  __int64 result; // rax
+  _BYTE v10[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  v3 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v7 = v10;
+  if ( a2[7] )
+    v7 = (_BYTE *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = sub_7FF6F40AE1D0(a1, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ShipHullCollisionComponent::IsWorldSpacePositionInsideHull @ RVA 0xFC1560 EA 0x7FF6F49E1560
+======================================================================
+__int64 __fastcall sub_7FF6F49E1560(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  _BYTE *v7; // rdx
+  __int64 v8; // rax
+  __int64 result; // rax
+  _BYTE v10[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  v3 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v7 = v10;
+  if ( a2[7] )
+    v7 = (_BYTE *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = sub_7FF6F40AE1F0(a1, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ShipHullCollisionComponent::PlayShipBarrelBumpSfx_RPC @ RVA 0xFC3810 EA 0x7FF6F49E3810
+======================================================================
+__int64 __fastcall sub_7FF6F49E3810(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F40B03D0();
+}
+
+
+======================================================================
+ShipHullCollisionComponent::PlayShipImpactSfx_RPC @ RVA 0xFC3830 EA 0x7FF6F49E3830
+======================================================================
+__int64 __fastcall sub_7FF6F49E3830(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F40B0460();
+}
+

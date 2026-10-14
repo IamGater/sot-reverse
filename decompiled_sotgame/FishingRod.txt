@@ -1,0 +1,339 @@
+// Class: FishingRod (22 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+FishingRod::Multicast_BringInACatch @ RVA 0x38E8580 EA 0x7FF6F7308580
+======================================================================
+__int64 __fastcall sub_7FF6F7308580(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F72D9320(a1, v5);
+}
+
+
+======================================================================
+FishingRod::Multicast_FishEscaped @ RVA 0x38E8610 EA 0x7FF6F7308610
+======================================================================
+__int64 __fastcall sub_7FF6F7308603(__int64 a1, __int64 a2, __int64 a3)
+{
+  LOBYTE(a3) = 0;
+  *(_QWORD *)(a2 + 32) = a3;
+  return sub_7FF6F72D95B0();
+}
+
+
+======================================================================
+FishingRod::Multicast_RemoveFishFromLine @ RVA 0x38E8630 EA 0x7FF6F7308630
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+FishingRod::Multicast_RemoveFishInstant @ RVA 0x38E8650 EA 0x7FF6F7308650
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+FishingRod::Multicast_RetractLine @ RVA 0x38E8670 EA 0x7FF6F7308670
+======================================================================
+__int64 __fastcall sub_7FF6F7308670(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F72D9650(a1, v5);
+}
+
+
+======================================================================
+FishingRod::OnRep_BaitOnFloat @ RVA 0x38E8B00 EA 0x7FF6F7308B00
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+FishingRod::OnRep_BaitOnRodType @ RVA 0x38E8B20 EA 0x7FF6F7308B20
+======================================================================
+void __fastcall sub_7FF6F7308B20(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F72D9A60LL);
+}
+
+
+======================================================================
+FishingRod::OnRep_BattlingState @ RVA 0x38E8B40 EA 0x7FF6F7308B40
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+FishingRod::OnRep_CaughtFishClass @ RVA 0x38E8B60 EA 0x7FF6F7308B60
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+FishingRod::OnRep_ComedyItemOnFloat @ RVA 0x38E8B80 EA 0x7FF6F7308B80
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+FishingRod::OnRep_FishingMiniGamePlayerInput @ RVA 0x38E8BC0 EA 0x7FF6F7308BC0
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+FishingRod::OnRep_FishInteractionProxy @ RVA 0x38E8BA0 EA 0x7FF6F7308BA0
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+FishingRod::OnRep_PlayerIsBattlingFish @ RVA 0x38E8BE0 EA 0x7FF6F7308BE0
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+FishingRod::OnRep_ReplicatedFishState @ RVA 0x38E8C00 EA 0x7FF6F7308C00
+======================================================================
+__int64 __fastcall sub_7FF6F7308C00(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 *v5; // rdx
+  __int64 v6; // rax
+  __int64 v8; // [rsp+20h] [rbp-18h] BYREF
+  __int16 v9; // [rsp+28h] [rbp-10h]
+
+  v2 = 0;
+  v8 = 0;
+  v9 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = &v8;
+  if ( a2[7] )
+    v5 = (__int64 *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  return sub_7FF6F72D9E10(a1, v5);
+}
+
+
+======================================================================
+FishingRod::OnRep_ServerState @ RVA 0x38E8CA0 EA 0x7FF6F7308CA0
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+FishingRod::Server_AddBaitToFloat @ RVA 0x38E8DA0 EA 0x7FF6F7308DA0
+======================================================================
+__int64 __fastcall sub_7FF6F7308DA0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rsi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1680LL))(a1, v6) )
+    return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1688LL))(a1, v8);
+  else
+    return sub_7FF6F4F0F6D0(L"Server_AddBaitToFloat_Validate");
+}
+
+
+======================================================================
+FishingRod::Server_BattlingStateChanged @ RVA 0x38E8E60 EA 0x7FF6F7308E60
+======================================================================
+__int64 __fastcall sub_7FF6F7308E60(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // r8
+  __int64 v6; // rdx
+  unsigned __int8 v8; // [rsp+30h] [rbp+8h] BYREF
+  unsigned __int8 v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v9 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  v2 = a2[4] == 0;
+  v8 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  v5 = v8;
+  v6 = v9;
+  a2[4] += a2[4] != 0;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64, __int64, __int64))(*(_QWORD *)a1 + 1696LL))(a1, v6, v5) )
+    return (*(__int64 (__fastcall **)(__int64, _QWORD, _QWORD))(*(_QWORD *)a1 + 1704LL))(a1, v9, v8);
+  else
+    return sub_7FF6F4F0F6D0(L"Server_BattlingStateChanged_Validate");
+}
+
+
+======================================================================
+FishingRod::Server_BeginPreCasting @ RVA 0x38E8F50 EA 0x7FF6F7308F50
+======================================================================
+__int64 __fastcall sub_7FF6F7308F50(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1768LL))(a1) )
+    return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1760LL))(a1);
+  else
+    return sub_7FF6F4F0F6D0(L"Server_BeginPreCasting_Validate");
+}
+
+
+======================================================================
+FishingRod::Server_EndPreCasting @ RVA 0x38E8FA0 EA 0x7FF6F7308FA0
+======================================================================
+__int64 __fastcall sub_7FF6F7308FA0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1784LL))(a1) )
+    return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1776LL))(a1);
+  else
+    return sub_7FF6F4F0F6D0(L"Server_EndPreCasting_Validate");
+}
+
+
+======================================================================
+FishingRod::Server_PlayerHasDetectedABlockedFish @ RVA 0x38E9050 EA 0x7FF6F7309050
+======================================================================
+__int64 __fastcall sub_7FF6F7309050(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1736LL))(a1) )
+    return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1728LL))(a1);
+  else
+    return sub_7FF6F4F0F6D0(L"Server_PlayerHasDetectedABlockedFish_Validate");
+}
+
+
+======================================================================
+FishingRod::Server_PlayerHasDetectedABlockedLine @ RVA 0x38E90A0 EA 0x7FF6F73090A0
+======================================================================
+__int64 __fastcall sub_7FF6F73090A0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1720LL))(a1) )
+    return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1712LL))(a1);
+  else
+    return sub_7FF6F4F0F6D0(L"Server_PlayerHasDetectedABlockedLine_Validate");
+}
+
+
+======================================================================
+FishingRod::Server_ToggleReeling @ RVA 0x38E90F0 EA 0x7FF6F73090F0
+======================================================================
+__int64 __fastcall sub_7FF6F73090F0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rsi
+  __int64 v5; // rax
+  bool v6; // bp
+  _BOOL8 v7; // rdx
+  int v9; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v5 = a2[4];
+  v6 = v9 != 0;
+  v7 = v9 != 0;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64, _BOOL8))(*(_QWORD *)a1 + 1752LL))(a1, v7) )
+    return (*(__int64 (__fastcall **)(__int64, bool))(*(_QWORD *)a1 + 1744LL))(a1, v6);
+  else
+    return sub_7FF6F4F0F6D0(L"Server_ToggleReeling_Validate");
+}
+

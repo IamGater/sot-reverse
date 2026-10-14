@@ -1,0 +1,692 @@
+// /Game/Blueprints/TallTales/Actors/MaidenVoyage/bp_maidenvoyage_animatedplayership -> BP_MaidenVoyage_AnimatedPlayerShip_C
+
+=== BP_MaidenVoyage_AnimatedPlayerShip_C::fn_idx_279156 (279 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_VSize_ReturnValue@0x19fcde443d0
+  Expression:
+  $18: CallMath target=VSize@0x19e4d39d810 (
+    $27: LocalVariable named v1@0x19fd074f280
+    $36: EndFunctionParms
+  )
+$37: Let (Variable = Expression)
+  Variable:
+  $46: LocalVariable named CallFunc_VSize_ReturnValue2@0x19fcde44440
+  Expression:
+  $55: CallMath target=VSize@0x19e4d39d810 (
+    $64: LocalVariable named v2@0x19fd074f300
+    $73: EndFunctionParms
+  )
+$74: Let (Variable = Expression)
+  Variable:
+  $83: LocalVariable named CallFunc_Dot_VectorVector_ReturnValue@0x19fcde444b0
+  Expression:
+  $92: CallMath target=Dot_VectorVector@0x19e4d379ba0 (
+    $101: LocalVariable named v1@0x19fd074f280
+    $110: LocalVariable named v2@0x19fd074f300
+    $119: EndFunctionParms
+  )
+$120: Let (Variable = Expression)
+  Variable:
+  $129: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x19fcde44520
+  Expression:
+  $138: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $147: LocalVariable named CallFunc_VSize_ReturnValue@0x19fcde443d0
+    $156: LocalVariable named CallFunc_VSize_ReturnValue2@0x19fcde44440
+    $165: EndFunctionParms
+  )
+$166: Let (Variable = Expression)
+  Variable:
+  $175: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue@0x19fcde44590
+  Expression:
+  $184: CallMath target=Divide_FloatFloat@0x19e4d378eb0 (
+    $193: LocalVariable named CallFunc_Dot_VectorVector_ReturnValue@0x19fcde444b0
+    $202: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x19fcde44520
+    $211: EndFunctionParms
+  )
+$212: Let (Variable = Expression)
+  Variable:
+  $221: LocalVariable named CallFunc_DegAcos_ReturnValue@0x19fcde44600
+  Expression:
+  $230: CallMath target=DegAcos@0x19e4d377f00 (
+    $239: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue@0x19fcde44590
+    $248: EndFunctionParms
+  )
+$249: Let (Variable = Expression)
+  Variable:
+  $258: LocalOutVariable named Angle@0x19fcde44360
+  Expression:
+  $267: LocalVariable named CallFunc_DegAcos_ReturnValue@0x19fcde44600
+$276: Return expression:
+  $277: Nothing
+$278: EndOfScript
+
+=== BP_MaidenVoyage_AnimatedPlayerShip_C::fn_idx_279168 (983 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named idx:279172@0x19fd074f800
+  Expression:
+  $18: DynamicCast to BP_AILargeShip_StandardHull_C@0x19e14f4ca80 of expr:
+  $27: Context
+    ObjectExpression:
+    $28: InstanceVariable named Ship@0x19fcf4c0c00
+    SkipBytes: 0x9
+    RValueProperty: ChildActor@0x19e4d3359f0
+    ContextExpression:
+    $49: InstanceVariable named ChildActor@0x19e4d3359f0
+$58: Let (Variable = Expression)
+  Variable:
+  $67: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fd074f880
+  Expression:
+  $76: PrimitiveCast type=71
+    Argument:
+    $78: LocalVariable named idx:279172@0x19fd074f800
+$87: JumpIfNot -> 0x3d4, cond:
+  $92: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fd074f880
+$101: Let (Variable = Expression)
+  Variable:
+  $110: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x19fd074f580
+  Expression:
+  $119: Context
+    ObjectExpression:
+    $120: InstanceVariable named TargetShip@0x19fcf4c0c80
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetActorLocation_ReturnValue@0x19fd074f580
+    ContextExpression:
+    $141: FinalFunction target=K2_GetActorLocation@0x19e4cd66b10 (
+      $150: EndFunctionParms
+    )
+$151: Let (Variable = Expression)
+  Variable:
+  $160: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue2@0x19fd074f680
+  Expression:
+  $169: Context
+    ObjectExpression:
+    $170: Context
+      ObjectExpression:
+      $171: InstanceVariable named Ship@0x19fcf4c0c00
+      SkipBytes: 0x9
+      RValueProperty: ChildActor@0x19e4d3359f0
+      ContextExpression:
+      $192: InstanceVariable named ChildActor@0x19e4d3359f0
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetActorLocation_ReturnValue2@0x19fd074f680
+    ContextExpression:
+    $213: FinalFunction target=K2_GetActorLocation@0x19e4cd66b10 (
+      $222: EndFunctionParms
+    )
+$223: Let (Variable = Expression)
+  Variable:
+  $232: LocalVariable named CallFunc_GetActorRightVector_ReturnValue@0x19fd074f700
+  Expression:
+  $241: Context
+    ObjectExpression:
+    $242: Context
+      ObjectExpression:
+      $243: InstanceVariable named Ship@0x19fcf4c0c00
+      SkipBytes: 0x9
+      RValueProperty: ChildActor@0x19e4d3359f0
+      ContextExpression:
+      $264: InstanceVariable named ChildActor@0x19e4d3359f0
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetActorRightVector_ReturnValue@0x19fd074f700
+    ContextExpression:
+    $285: FinalFunction target=GetActorRightVector@0x19e4cd61a50 (
+      $294: EndFunctionParms
+    )
+$295: Let (Variable = Expression)
+  Variable:
+  $304: LocalVariable named CallFunc_Subtract_VectorVector_ReturnValue@0x19fd074f780
+  Expression:
+  $313: CallMath target=Subtract_VectorVector@0x19e4d39a7f0 (
+    $322: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x19fd074f580
+    $331: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue2@0x19fd074f680
+    $340: EndFunctionParms
+  )
+$341: VirtualFunction call "idx:279156" (
+  $354: LocalVariable named CallFunc_GetActorRightVector_ReturnValue@0x19fd074f700
+  $363: LocalVariable named CallFunc_Subtract_VectorVector_ReturnValue@0x19fd074f780
+  $372: LocalVariable named idx:279159@0x19fcde446e0
+  $381: EndFunctionParms
+)
+$382: LetBool (Variable = Expression)
+  Variable:
+  $383: LocalVariable named CallFunc_Greater_FloatFloat_ReturnValue@0x19fd074f980
+  Expression:
+  $392: CallMath target=Greater_FloatFloat@0x19e4d382550 (
+    $401: LocalVariable named idx:279159@0x19fcde446e0
+    $410: literal float -45
+    $415: EndFunctionParms
+  )
+$416: LetBool (Variable = Expression)
+  Variable:
+  $417: LocalVariable named CallFunc_Less_FloatFloat_ReturnValue@0x19fd074fa00
+  Expression:
+  $426: CallMath target=Less_FloatFloat@0x19e4d385cb0 (
+    $435: LocalVariable named idx:279159@0x19fcde446e0
+    $444: literal float 45
+    $449: EndFunctionParms
+  )
+$450: LetBool (Variable = Expression)
+  Variable:
+  $451: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x19fd074fa80
+  Expression:
+  $460: CallMath target=BooleanAND@0x19e4d3710f0 (
+    $469: LocalVariable named CallFunc_Less_FloatFloat_ReturnValue@0x19fd074fa00
+    $478: LocalVariable named CallFunc_Greater_FloatFloat_ReturnValue@0x19fd074f980
+    $487: EndFunctionParms
+  )
+$488: JumpIfNot -> 0x3d4, cond:
+  $493: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x19fd074fa80
+$502: Context
+  ObjectExpression:
+  $503: LocalVariable named idx:279172@0x19fd074f800
+  SkipBytes: 0x17
+  RValueProperty: (null)
+  ContextExpression:
+  $524: VirtualFunction call "GetFiringPosition" (
+    $537: LocalVariable named idx:279163@0x19fd074f900
+    $546: EndFunctionParms
+  )
+$547: Let (Variable = Expression)
+  Variable:
+  $556: LocalVariable named CallFunc_RandomFloatInRange_ReturnValue@0x19fcde44670
+  Expression:
+  $565: CallMath target=RandomFloatInRange@0x19e4d393930 (
+    $574: literal float -2000
+    $579: literal float 2000
+    $584: EndFunctionParms
+  )
+$585: Let (Variable = Expression)
+  Variable:
+  $594: LocalVariable named CallFunc_MakeVector_ReturnValue@0x19fd074f400
+  Expression:
+  $603: CallMath target=MakeVector@0x19e4d38a910 (
+    $612: literal float 0
+    $617: LocalVariable named CallFunc_RandomFloatInRange_ReturnValue@0x19fcde44670
+    $626: literal float 0
+    $631: EndFunctionParms
+  )
+$632: Let (Variable = Expression)
+  Variable:
+  $641: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x19fd074f480
+  Expression:
+  $650: CallMath target=Add_VectorVector@0x19e4d370750 (
+    $659: InstanceVariable named idx:279176@0x19fcf4c0d00
+    $668: LocalVariable named CallFunc_MakeVector_ReturnValue@0x19fd074f400
+    $677: EndFunctionParms
+  )
+$678: Let (Variable = Expression)
+  Variable:
+  $687: LocalVariable named CallFunc_GetVelocity_ReturnValue@0x19fd074f500
+  Expression:
+  $696: Context
+    ObjectExpression:
+    $697: InstanceVariable named TargetShip@0x19fcf4c0c80
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetVelocity_ReturnValue@0x19fd074f500
+    ContextExpression:
+    $718: VirtualFunction call "GetVelocity" (
+      $731: EndFunctionParms
+    )
+$732: Let (Variable = Expression)
+  Variable:
+  $741: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x19fd074f580
+  Expression:
+  $750: Context
+    ObjectExpression:
+    $751: InstanceVariable named TargetShip@0x19fcf4c0c80
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetActorLocation_ReturnValue@0x19fd074f580
+    ContextExpression:
+    $772: FinalFunction target=K2_GetActorLocation@0x19e4cd66b10 (
+      $781: EndFunctionParms
+    )
+$782: Let (Variable = Expression)
+  Variable:
+  $791: LocalVariable named CallFunc_Add_VectorVector_ReturnValue2@0x19fd074f600
+  Expression:
+  $800: CallMath target=Add_VectorVector@0x19e4d370750 (
+    $809: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x19fd074f580
+    $818: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x19fd074f480
+    $827: EndFunctionParms
+  )
+$828: LetBool (Variable = Expression)
+  Variable:
+  $829: LocalVariable named idx:279162@0x19fd074fb80
+  Expression:
+  $838: Context
+    ObjectExpression:
+    $839: ObjectConst Default__ProjectileMaths@0x19e4d9e3750
+    SkipBytes: 0x4a
+    RValueProperty: idx:279162@0x19fd074fb80
+    ContextExpression:
+    $860: FinalFunction target=CalculateLaunchVelocity@0x19e4d40b100 (
+      $869: LocalVariable named idx:279161@0x19fd074fb00
+      $878: LocalVariable named idx:279160@0x19fcde44750
+      $887: LocalVariable named idx:279163@0x19fd074f900
+      $896: LocalVariable named CallFunc_Add_VectorVector_ReturnValue2@0x19fd074f600
+      $905: LocalVariable named CallFunc_GetVelocity_ReturnValue@0x19fd074f500
+      $914: InstanceVariable named ProjectileSpeed@0x19fcde44c90
+      $923: InstanceVariable named Gravity@0x19fcde44d00
+      $932: False
+      $933: EndFunctionParms
+    )
+$934: JumpIfNot -> 0x3d4, cond:
+  $939: LocalVariable named idx:279162@0x19fd074fb80
+$948: VirtualFunction call "idx:279169" (
+  $961: LocalVariable named idx:279163@0x19fd074f900
+  $970: LocalVariable named idx:279161@0x19fd074fb00
+  $979: EndFunctionParms
+)
+$980: Return expression:
+  $981: Nothing
+$982: EndOfScript
+
+=== BP_MaidenVoyage_AnimatedPlayerShip_C::fn_idx_9202 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_MaidenVoyage_AnimatedPlayerShip_C::fn_idx_8396 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_DeltaSeconds@0x19fcde449f0
+  Expression:
+  $9: LocalVariable named DeltaSeconds@0x19fcde447c0
+$18: VirtualFunction call "idx:279167" (
+  $31: literal int32 1396
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_MaidenVoyage_AnimatedPlayerShip_C::fn_idx_279169 (58 bytes) ===
+$0: LetValueOnPersistentFrame dest=idx:279171@0x19fd074fd80
+  Expression:
+  $9: LocalVariable named SpawnLocation@0x19fd074fc00
+$18: LetValueOnPersistentFrame dest=idx:279170@0x19fd074fe00
+  Expression:
+  $27: LocalVariable named LaunchVelocity@0x19fd074fc80
+$36: VirtualFunction call "idx:279167" (
+  $49: literal int32 29
+  $54: EndFunctionParms
+)
+$55: Return expression:
+  $56: Nothing
+$57: EndOfScript
+
+=== BP_MaidenVoyage_AnimatedPlayerShip_C::fn_idx_279167 (1709 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fcde44830
+$10: VirtualFunction call "idx:279168" (
+  $23: EndFunctionParms
+)
+$24: Jump to offset 0x6aa
+$29: CallMath target=GetYawPitchFromVector@0x19e4d381d00 (
+  $38: LocalVariable named idx:279170@0x19fd074fe00
+  $47: LocalVariable named CallFunc_GetYawPitchFromVector_Yaw@0x19fcde448a0
+  $56: LocalVariable named CallFunc_GetYawPitchFromVector_Pitch@0x19fcde44910
+  $65: EndFunctionParms
+)
+$66: Let (Variable = Expression)
+  Variable:
+  $75: LocalVariable named CallFunc_MakeRotator_ReturnValue@0x19fd074ff80
+  Expression:
+  $84: CallMath target=MakeRotator@0x19e4d388d90 (
+    $93: literal float 0
+    $98: LocalVariable named CallFunc_GetYawPitchFromVector_Yaw@0x19fcde448a0
+    $107: literal float 0
+    $112: EndFunctionParms
+  )
+$113: Let (Variable = Expression)
+  Variable:
+  $122: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x19fcf4c0000
+  Expression:
+  $131: CallMath target=MakeTransform@0x19e4d38a650 (
+    $140: LocalVariable named idx:279171@0x19fd074fd80
+    $149: LocalVariable named CallFunc_MakeRotator_ReturnValue@0x19fd074ff80
+    $158: literal vector (1,1,1)
+    $171: EndFunctionParms
+  )
+$172: LetObj (Variable = Expression)
+  Variable:
+  $173: LocalVariable named CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue@0x19fcf4c0080
+  Expression:
+  $182: Context
+    ObjectExpression:
+    $183: ObjectConst Default__GameplayStatics@0x19e4d95eb20
+    SkipBytes: 0x20
+    RValueProperty: CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue@0x19fcf4c0080
+    ContextExpression:
+    $204: FinalFunction target=BeginDeferredActorSpawnFromClass@0x19e4d359260 (
+      $213: Self
+      $214: ObjectConst BP_Projectile_CannonBall_MaidenVoyage_C@0x19e0ed73600
+      $223: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x19fcf4c0000
+      $232: literal byte 0
+      $234: NoObject
+      $235: EndFunctionParms
+    )
+$236: CallMath target=GetYawPitchFromVector@0x19e4d381d00 (
+  $245: LocalVariable named idx:279170@0x19fd074fe00
+  $254: LocalVariable named CallFunc_GetYawPitchFromVector_Yaw@0x19fcde448a0
+  $263: LocalVariable named CallFunc_GetYawPitchFromVector_Pitch@0x19fcde44910
+  $272: EndFunctionParms
+)
+$273: Let (Variable = Expression)
+  Variable:
+  $282: LocalVariable named CallFunc_MakeRotator_ReturnValue@0x19fd074ff80
+  Expression:
+  $291: CallMath target=MakeRotator@0x19e4d388d90 (
+    $300: literal float 0
+    $305: LocalVariable named CallFunc_GetYawPitchFromVector_Yaw@0x19fcde448a0
+    $314: literal float 0
+    $319: EndFunctionParms
+  )
+$320: Let (Variable = Expression)
+  Variable:
+  $329: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x19fcf4c0000
+  Expression:
+  $338: CallMath target=MakeTransform@0x19e4d38a650 (
+    $347: LocalVariable named idx:279171@0x19fd074fd80
+    $356: LocalVariable named CallFunc_MakeRotator_ReturnValue@0x19fd074ff80
+    $365: literal vector (1,1,1)
+    $378: EndFunctionParms
+  )
+$379: LetObj (Variable = Expression)
+  Variable:
+  $380: LocalVariable named CallFunc_FinishSpawningActor_ReturnValue@0x19fcf4c0100
+  Expression:
+  $389: Context
+    ObjectExpression:
+    $390: ObjectConst Default__GameplayStatics@0x19e4d95eb20
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_FinishSpawningActor_ReturnValue@0x19fcf4c0100
+    ContextExpression:
+    $411: FinalFunction target=FinishSpawningActor@0x19e4d35bd20 (
+      $420: LocalVariable named CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue@0x19fcf4c0080
+      $429: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x19fcf4c0000
+      $438: EndFunctionParms
+    )
+$439: LetObj (Variable = Expression)
+  Variable:
+  $440: LocalVariable named CallFunc_K2_GetRootComponent_ReturnValue@0x19fcf4c0280
+  Expression:
+  $449: Context
+    ObjectExpression:
+    $450: LocalVariable named CallFunc_FinishSpawningActor_ReturnValue@0x19fcf4c0100
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetRootComponent_ReturnValue@0x19fcf4c0280
+    ContextExpression:
+    $471: FinalFunction target=K2_GetRootComponent@0x19e4cd66d90 (
+      $480: EndFunctionParms
+    )
+$481: Let (Variable = Expression)
+  Variable:
+  $490: LocalVariable named idx:279173@0x19fcf4c0300
+  Expression:
+  $499: DynamicCast to PrimitiveComponent@0x19e4c355080 of expr:
+  $508: LocalVariable named CallFunc_K2_GetRootComponent_ReturnValue@0x19fcf4c0280
+$517: Let (Variable = Expression)
+  Variable:
+  $526: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcf4c0380
+  Expression:
+  $535: PrimitiveCast type=71
+    Argument:
+    $537: LocalVariable named idx:279173@0x19fcf4c0300
+$546: JumpIfNot -> 0x6aa, cond:
+  $551: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcf4c0380
+$560: Context
+  ObjectExpression:
+  $561: LocalVariable named idx:279173@0x19fcf4c0300
+  SkipBytes: 0xc
+  RValueProperty: (null)
+  ContextExpression:
+  $582: FinalFunction target=IgnoreActorWhenMoving@0x19e4d0d1340 (
+    $591: Self
+    $592: True
+    $593: EndFunctionParms
+  )
+$594: Let (Variable = Expression)
+  Variable:
+  $603: Context
+    ObjectExpression:
+    $604: Context
+      ObjectExpression:
+      $605: LocalVariable named CallFunc_FinishSpawningActor_ReturnValue@0x19fcf4c0100
+      SkipBytes: 0x9
+      RValueProperty: ProjectileComponent@0x19e4d0ea450
+      ContextExpression:
+      $626: InstanceVariable named ProjectileComponent@0x19e4d0ea450
+    SkipBytes: 0x9
+    RValueProperty: ProjectileGravityScale@0x19e4cd7b290
+    ContextExpression:
+    $647: InstanceVariable named ProjectileGravityScale@0x19e4cd7b290
+  Expression:
+  $656: InstanceVariable named ProjectileGravityScale@0x19fcde44c20
+$665: Let (Variable = Expression)
+  Variable:
+  $674: LocalVariable named CallFunc_MakeVector_ReturnValue@0x19fcf4c0180
+  Expression:
+  $683: CallMath target=MakeVector@0x19e4d38a910 (
+    $692: literal float 0
+    $697: literal float 0
+    $702: literal float 0
+    $707: EndFunctionParms
+  )
+$708: Context
+  ObjectExpression:
+  $709: LocalVariable named CallFunc_FinishSpawningActor_ReturnValue@0x19fcf4c0100
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $730: VirtualFunction call "LaunchWithOffset" (
+    $743: LocalVariable named idx:279170@0x19fd074fe00
+    $752: LocalVariable named CallFunc_MakeVector_ReturnValue@0x19fcf4c0180
+    $761: EndFunctionParms
+  )
+$762: Let (Variable = Expression)
+  Variable:
+  $771: LocalVariable named CallFunc_Normal_ReturnValue@0x19fd074fe80
+  Expression:
+  $780: CallMath target=Normal@0x19e4d38f930 (
+    $789: LocalVariable named idx:279170@0x19fd074fe00
+    $798: EndFunctionParms
+  )
+$799: Let (Variable = Expression)
+  Variable:
+  $808: LocalVariable named CallFunc_WwisePostEventAtLocation_ReturnValue@0x19fcde44980
+  Expression:
+  $817: Context
+    ObjectExpression:
+    $818: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x19e4d9e1550
+    SkipBytes: 0x39
+    RValueProperty: CallFunc_WwisePostEventAtLocation_ReturnValue@0x19fcde44980
+    ContextExpression:
+    $839: FinalFunction target=WwisePostEventAtLocation@0x19e4d4017e0 (
+      $848: LocalVariable named CallFunc_WwisePostEventAtLocation_Emitter@0x19fd074ff00
+      $857: ObjectConst Play_sfx_weapon_cannon_fire@0x19f49b3cd50
+      $866: LocalVariable named idx:279171@0x19fd074fd80
+      $875: LocalVariable named CallFunc_Normal_ReturnValue@0x19fd074fe80
+      $884: ObjectConst pool_weapons_cannon_fire@0x19f3059e200
+      $893: literal byte 2
+      $895: EndFunctionParms
+    )
+$896: Let (Variable = Expression)
+  Variable:
+  $905: LocalVariable named idx:279172@0x19fcf4c0580
+  Expression:
+  $914: DynamicCast to BP_AILargeShip_StandardHull_C@0x19e14f4ca80 of expr:
+  $923: Context
+    ObjectExpression:
+    $924: InstanceVariable named Ship@0x19fcf4c0c00
+    SkipBytes: 0x9
+    RValueProperty: ChildActor@0x19e4d3359f0
+    ContextExpression:
+    $945: InstanceVariable named ChildActor@0x19e4d3359f0
+$954: Let (Variable = Expression)
+  Variable:
+  $963: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fcf4c0600
+  Expression:
+  $972: PrimitiveCast type=71
+    Argument:
+    $974: LocalVariable named idx:279172@0x19fcf4c0580
+$983: JumpIfNot -> 0x6aa, cond:
+  $988: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fcf4c0600
+$997: Let (Variable = Expression)
+  Variable:
+  $1006: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19fcf4c0700
+  Expression:
+  $1015: Context
+    ObjectExpression:
+    $1016: LocalVariable named idx:279172@0x19fcf4c0580
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetTransform_ReturnValue@0x19fcf4c0700
+    ContextExpression:
+    $1037: FinalFunction target=GetTransform@0x19e4cd64700 (
+      $1046: EndFunctionParms
+    )
+$1047: Let (Variable = Expression)
+  Variable:
+  $1056: LocalVariable named CallFunc_InverseTransformLocation_ReturnValue@0x19fcf4c0780
+  Expression:
+  $1065: CallMath target=InverseTransformLocation@0x19e4d384a40 (
+    $1074: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19fcf4c0700
+    $1083: LocalVariable named idx:279170@0x19fd074fe00
+    $1092: EndFunctionParms
+  )
+$1093: CallMath target=GetYawPitchFromVector@0x19e4d381d00 (
+  $1102: LocalVariable named CallFunc_InverseTransformLocation_ReturnValue@0x19fcf4c0780
+  $1111: LocalVariable named CallFunc_GetYawPitchFromVector_Yaw2@0x19fcde44b40
+  $1120: LocalVariable named CallFunc_GetYawPitchFromVector_Pitch2@0x19fcde44bb0
+  $1129: EndFunctionParms
+)
+$1130: Let (Variable = Expression)
+  Variable:
+  $1139: LocalVariable named CallFunc_MakeRotator_ReturnValue2@0x19fcf4c0800
+  Expression:
+  $1148: CallMath target=MakeRotator@0x19e4d388d90 (
+    $1157: LocalVariable named CallFunc_GetYawPitchFromVector_Pitch2@0x19fcde44bb0
+    $1166: LocalVariable named CallFunc_GetYawPitchFromVector_Yaw2@0x19fcde44b40
+    $1175: literal float 0
+    $1180: EndFunctionParms
+  )
+$1181: LetObj (Variable = Expression)
+  Variable:
+  $1182: LocalVariable named CallFunc_AthenaSpawnEmitterAttachedWithOwner_ReturnValue@0x19fcf4c0880
+  Expression:
+  $1191: Context
+    ObjectExpression:
+    $1192: ObjectConst Default__VfxFunctionLibrary@0x19e4d8493d0
+    SkipBytes: 0x66
+    RValueProperty: CallFunc_AthenaSpawnEmitterAttachedWithOwner_ReturnValue@0x19fcf4c0880
+    ContextExpression:
+    $1213: FinalFunction target=AthenaSpawnEmitterAttachedWithOwner@0x19e4d26e900 (
+      $1222: ObjectConst vfx_muzzle_cannon_3rd@0x19f3142bb80
+      $1231: Context
+        ObjectExpression:
+        $1232: LocalVariable named idx:279172@0x19fcf4c0580
+        SkipBytes: 0x9
+        RValueProperty: FiringPosition@0x19e11aed200
+        ContextExpression:
+        $1253: InstanceVariable named FiringPosition@0x19e11aed200
+      $1262: LocalVariable named idx:279172@0x19fcf4c0580
+      $1271: literal name "None"
+      $1284: literal vector (0,0,0)
+      $1297: LocalVariable named CallFunc_MakeRotator_ReturnValue2@0x19fcf4c0800
+      $1306: literal byte 0
+      $1308: True
+      $1309: False
+      $1310: False
+      $1311: False
+      $1312: literal byte 0
+      $1314: EndFunctionParms
+    )
+$1315: Jump to offset 0x6aa
+$1320: LetBool (Variable = Expression)
+  Variable:
+  $1321: LocalVariable named CallFunc_GreaterEqual_FloatFloat_ReturnValue@0x19fd074fd00
+  Expression:
+  $1330: CallMath target=GreaterEqual_FloatFloat@0x19e4d383050 (
+    $1339: InstanceVariable named idx:279177@0x19fcde44ec0
+    $1348: literal float 4
+    $1353: EndFunctionParms
+  )
+$1354: JumpIfNot -> 0x6aa, cond:
+  $1359: LocalVariable named CallFunc_GreaterEqual_FloatFloat_ReturnValue@0x19fd074fd00
+$1368: Let (Variable = Expression)
+  Variable:
+  $1377: InstanceVariable named idx:279177@0x19fcde44ec0
+  Expression:
+  $1386: literal float 0
+$1391: Jump to offset 0xa
+$1396: LetBool (Variable = Expression)
+  Variable:
+  $1397: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x19fcf4c0400
+  Expression:
+  $1406: FinalFunction target=HasAuthority@0x19e4cd64b30 (
+    $1415: EndFunctionParms
+  )
+$1416: JumpIfNot -> 0x59b, cond:
+  $1421: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x19fcf4c0400
+$1430: Jump to offset 0x6aa
+$1435: Let (Variable = Expression)
+  Variable:
+  $1444: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x19fcde44a60
+  Expression:
+  $1453: CallMath target=Add_FloatFloat@0x19e4d36f820 (
+    $1462: LocalVariable named K2Node_Event_DeltaSeconds@0x19fcde449f0
+    $1471: InstanceVariable named ElapsedTime@0x19fcde44de0
+    $1480: EndFunctionParms
+  )
+$1481: Let (Variable = Expression)
+  Variable:
+  $1490: InstanceVariable named ElapsedTime@0x19fcde44de0
+  Expression:
+  $1499: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x19fcde44a60
+$1508: Let (Variable = Expression)
+  Variable:
+  $1517: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue2@0x19fcde44ad0
+  Expression:
+  $1526: CallMath target=Add_FloatFloat@0x19e4d36f820 (
+    $1535: LocalVariable named K2Node_Event_DeltaSeconds@0x19fcde449f0
+    $1544: InstanceVariable named idx:279177@0x19fcde44ec0
+    $1553: EndFunctionParms
+  )
+$1554: Let (Variable = Expression)
+  Variable:
+  $1563: InstanceVariable named idx:279177@0x19fcde44ec0
+  Expression:
+  $1572: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue2@0x19fcde44ad0
+$1581: LetBool (Variable = Expression)
+  Variable:
+  $1582: LocalVariable named CallFunc_Greater_FloatFloat_ReturnValue@0x19fcf4c0480
+  Expression:
+  $1591: CallMath target=Greater_FloatFloat@0x19e4d382550 (
+    $1600: InstanceVariable named ElapsedTime@0x19fcde44de0
+    $1609: literal float 5
+    $1614: EndFunctionParms
+  )
+$1615: LetBool (Variable = Expression)
+  Variable:
+  $1616: LocalVariable named CallFunc_Less_FloatFloat_ReturnValue@0x19fcf4c0500
+  Expression:
+  $1625: CallMath target=Less_FloatFloat@0x19e4d385cb0 (
+    $1634: InstanceVariable named ElapsedTime@0x19fcde44de0
+    $1643: literal float 60
+    $1648: EndFunctionParms
+  )
+$1649: LetBool (Variable = Expression)
+  Variable:
+  $1650: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x19fcf4c0680
+  Expression:
+  $1659: CallMath target=BooleanAND@0x19e4d3710f0 (
+    $1668: LocalVariable named CallFunc_Less_FloatFloat_ReturnValue@0x19fcf4c0500
+    $1677: LocalVariable named CallFunc_Greater_FloatFloat_ReturnValue@0x19fcf4c0480
+    $1686: EndFunctionParms
+  )
+$1687: JumpIfNot -> 0x6aa, cond:
+  $1692: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x19fcf4c0680
+$1701: Jump to offset 0x528
+$1706: Return expression:
+  $1707: Nothing
+$1708: EndOfScript

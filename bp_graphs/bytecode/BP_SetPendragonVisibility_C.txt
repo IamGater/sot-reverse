@@ -1,0 +1,173 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/AshenAge/Tale_2_HeartOfFire/bp_setpendragonvisibility -> BP_SetPendragonVisibility_C
+
+=== BP_SetPendragonVisibility_C::fn_idx_1698 (772 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fc182c000
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19fc182c000
+    ContextExpression:
+    $32: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $41: LocalVariable named idx:282266@0x19fc182bc80
+      $50: EndFunctionParms
+    )
+$51: JumpIfNot -> 0xf4, cond:
+  $56: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fc182c000
+$65: Let (Variable = Expression)
+  Variable:
+  $74: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fc182be80
+  Expression:
+  $83: Context
+    ObjectExpression:
+    $84: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fc182be80
+    ContextExpression:
+    $105: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x19e4d410390 (
+      $114: LocalVariable named idx:282266@0x19fc182bc80
+      $123: EndFunctionParms
+    )
+$124: JumpIfNot -> 0x2a1, cond:
+  $129: LocalVariable named Visible@0x19fc182bd00
+$138: LetObj (Variable = Expression)
+  Variable:
+  $139: StructMemberContext prop=CalledOnActor_2_0B4819044DED9AF905D21D94D7DA3D93@0x19fa940df00
+    Expression to struct:
+    $148: LocalVariable named idx:281886@0x19fc182be00
+  Expression:
+  $157: LocalVariable named idx:282266@0x19fc182bc80
+$166: Context
+  ObjectExpression:
+  $167: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x29
+  RValueProperty: (null)
+  ContextExpression:
+  $188: FinalFunction target=FireEventWithDataFromHandle@0x19e4d40feb0 (
+    $197: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fc182be80
+    $206: ObjectConst PendragonAppearEvent@0x19fbae48f40
+    $215: literal ansi string ""
+    $217: literal ansi string ""
+    $219: LocalVariable named idx:281886@0x19fc182be00
+    $228: EndFunctionParms
+  )
+$229: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $238: EndFunctionParms
+)
+$239: Jump to offset 0x301
+$244: Let (Variable = Expression)
+  Variable:
+  $253: LocalVariable named CallFunc_GetDisplayName_ReturnValue@0x19fcdbbdba0
+  Expression:
+  $262: Context
+    ObjectExpression:
+    $263: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetDisplayName_ReturnValue@0x19fcdbbdba0
+    ContextExpression:
+    $284: FinalFunction target=GetDisplayName@0x19e4cd8c3f0 (
+      $293: LocalVariable named idx:282266@0x19fc182bc80
+      $302: EndFunctionParms
+    )
+$303: Let (Variable = Expression)
+  Variable:
+  $312: LocalVariable named CallFunc_Conv_StringToText_ReturnValue@0x19fcdbbddd0
+  Expression:
+  $321: Context
+    ObjectExpression:
+    $322: ObjectConst Default__KismetTextLibrary@0x19e4d95ed30
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Conv_StringToText_ReturnValue@0x19fcdbbddd0
+    ContextExpression:
+    $343: FinalFunction target=Conv_StringToText@0x19e4d3a9840 (
+      $352: LocalVariable named CallFunc_GetDisplayName_ReturnValue@0x19fcdbbdba0
+      $361: EndFunctionParms
+    )
+$362: Let (Variable = Expression)
+  Variable:
+  $371: StructMemberContext prop=ArgumentName@0x19e4cf5f720
+    Expression to struct:
+    $380: LocalVariable named UniqueObjectNameForCooking_FormatTextArgument@0x19fc182c080
+  Expression:
+  $389: literal text (not decoded)
+$390: literal ansi string "0"
+$393: literal ansi string ""
+$395: literal ansi string ""
+$397: Let (Variable = Expression)
+  Variable:
+  $406: StructMemberContext prop=TextValue@0x19e4cf5f6b0
+    Expression to struct:
+    $415: LocalVariable named UniqueObjectNameForCooking_FormatTextArgument@0x19fc182c080
+  Expression:
+  $424: LocalVariable named CallFunc_Conv_StringToText_ReturnValue@0x19fcdbbddd0
+$433: SetArray
+  $434: LocalVariable named UniqueObjectNameForCooking_Array@0x19fc182c480
+  $443: LocalVariable named UniqueObjectNameForCooking_FormatTextArgument@0x19fc182c080
+  $452: EndArray
+$453: Let (Variable = Expression)
+  Variable:
+  $462: LocalVariable named CallFunc_Format_ReturnValue@0x19fcdbbdf20
+  Expression:
+  $471: Context
+    ObjectExpression:
+    $472: ObjectConst Default__KismetTextLibrary@0x19e4d95ed30
+    SkipBytes: 0x5c
+    RValueProperty: CallFunc_Format_ReturnValue@0x19fcdbbdf20
+    ContextExpression:
+    $493: FinalFunction target=Format@0x19e4d3aa250 (
+      $502: literal text (not decoded)
+      $503: literal ansi string "Given actor [{0}] is null!"
+      $531: literal ansi string "78C01C04485657A07AA4518279B10AEA_Format0"
+      $573: literal ansi string ""
+      $575: LocalVariable named UniqueObjectNameForCooking_Array@0x19fc182c480
+      $584: EndFunctionParms
+    )
+$585: Context
+  ObjectExpression:
+  $586: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x3d
+  RValueProperty: (null)
+  ContextExpression:
+  $607: FinalFunction target=PrintText@0x19e4cd97190 (
+    $616: NoObject
+    $617: LocalVariable named CallFunc_Format_ReturnValue@0x19fcdbbdf20
+    $626: True
+    $627: True
+    $628: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $641: literal float 1
+      $646: literal float 0.013261999934911728
+      $651: literal float 0
+      $656: literal float 1
+      $661: EndStructConst
+    $662: literal float 20
+    $667: EndFunctionParms
+  )
+$668: Jump to offset 0x301
+$673: LetObj (Variable = Expression)
+  Variable:
+  $674: StructMemberContext prop=CalledOnActor_2_0B4819044DED9AF905D21D94D7DA3D93@0x19fa940de00
+    Expression to struct:
+    $683: LocalVariable named K2Node_MakeStruct_PendragonDisappearEvent@0x19fc182bd80
+  Expression:
+  $692: LocalVariable named idx:282266@0x19fc182bc80
+$701: Context
+  ObjectExpression:
+  $702: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x29
+  RValueProperty: (null)
+  ContextExpression:
+  $723: FinalFunction target=FireEventWithDataFromHandle@0x19e4d40feb0 (
+    $732: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fc182be80
+    $741: ObjectConst PendragonDisappearEvent@0x19fbae48a00
+    $750: literal ansi string ""
+    $752: literal ansi string ""
+    $754: LocalVariable named K2Node_MakeStruct_PendragonDisappearEvent@0x19fc182bd80
+    $763: EndFunctionParms
+  )
+$764: Jump to offset 0xe5
+$769: Return expression:
+  $770: Nothing
+$771: EndOfScript

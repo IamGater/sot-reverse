@@ -1,0 +1,31 @@
+// Class: MechanismElementProxyInterface (1 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+MechanismElementProxyInterface::ApplyInstanceProperties @ RVA 0x3956380 EA 0x7FF6F7376380
+======================================================================
+__int64 __fastcall sub_7FF6F7376380(__int64 (__fastcall ***a1)(_QWORD, __int64), _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (**a1)(a1, v6);
+}
+

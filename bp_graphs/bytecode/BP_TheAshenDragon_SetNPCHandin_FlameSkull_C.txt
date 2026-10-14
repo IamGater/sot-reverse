@@ -1,0 +1,81 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/AshenAge/Tale_1_TheAshenDragon/bp_theashendragon_setnpchandin_flameskull -> BP_TheAshenDragon_SetNPCHandin_FlameSkull_C (RECOVERED via retry pass)
+
+=== BP_TheAshenDragon_SetNPCHandin_FlameSkull_C::fn_idx_1828 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=idx:227637@0x1a3b718bd80
+  Expression:
+  $9: LocalVariable named InBeginMode@0x1a3b718bd00
+$18: VirtualFunction call "idx:227753" (
+  $31: literal int32 25
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_TheAshenDragon_SetNPCHandin_FlameSkull_C::fn_idx_227753 (263 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x1a3b3c60e00
+$10: FinalFunction target=SignalComplete@0x1a2a95f7e00 (
+  $19: EndFunctionParms
+)
+$20: Jump to offset 0x104
+$25: FinalFunction target=GetVariables@0x1a2a95f5d20 (
+  $34: LocalVariable named idx:227630@0x1a3b718be00
+  $43: EndFunctionParms
+)
+$44: LetObj (Variable = Expression)
+  Variable:
+  $45: LocalVariable named CallFunc_GetComponentInterfaceByClass_ReturnValue@0x1a3b718be80
+  Expression:
+  $54: Context
+    ObjectExpression:
+    $55: StructMemberContext prop=idx:227737@0x1a3b718e180
+      Expression to struct:
+      $64: LocalVariable named idx:227630@0x1a3b718be00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetComponentInterfaceByClass_ReturnValue@0x1a3b718be80
+    ContextExpression:
+    $85: FinalFunction target=GetComponentInterfaceByClass@0x1a2a95b22c0 (
+      $94: ObjectConst NPCCustomItemPurchaseInterface@0x1a2a8beab80
+      $103: EndFunctionParms
+    )
+$104: Let (Variable = Expression)
+  Variable:
+  $113: LocalVariable named idx:227755@0x1a3b718bf00
+  Expression:
+  $122: ObjToInterfaceCast to NPCCustomItemPurchaseInterface@0x1a2a8beab80
+  $131: LocalVariable named CallFunc_GetComponentInterfaceByClass_ReturnValue@0x1a3b718be80
+$140: Let (Variable = Expression)
+  Variable:
+  $149: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x1a3b718bf80
+  Expression:
+  $158: PrimitiveCast type=73
+    Argument:
+    $160: LocalVariable named idx:227755@0x1a3b718bf00
+$169: JumpIfNot -> 0xf4, cond:
+  $174: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x1a3b718bf80
+$183: LetBool (Variable = Expression)
+  Variable:
+  $184: LocalVariable named idx:227751@0x1a3b718c000
+  Expression:
+  $193: Context
+    ObjectExpression:
+    $194: InterfaceContext:
+    $195: LocalVariable named idx:227755@0x1a3b718bf00
+    SkipBytes: 0x17
+    RValueProperty: idx:227751@0x1a3b718c000
+    ContextExpression:
+    $216: VirtualFunction call "AddItemToPurchaseList" (
+      $229: InstanceVariable named idx:227754@0x1a3b718c080
+      $238: EndFunctionParms
+    )
+$239: Jump to offset 0xa
+$244: LetBool (Variable = Expression)
+  Variable:
+  $245: LocalVariable named idx:227751@0x1a3b718c000
+  Expression:
+  $254: False
+$255: Jump to offset 0xa
+$260: Return expression:
+  $261: Nothing
+$262: EndOfScript

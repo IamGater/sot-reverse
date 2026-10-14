@@ -1,0 +1,155 @@
+// Class: AudioUtilities (2 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+AudioUtilities::FilterLocalPlayerFootStepSounds @ RVA 0xC09FF0 EA 0x7FF6F4629FF0
+======================================================================
+__int64 __fastcall sub_7FF6F4629FF0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  unsigned __int8 v5; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v5 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v5);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v5);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F3CC5120(v5);
+}
+
+
+======================================================================
+AudioUtilities::UpdateCharacterWadingRtpc @ RVA 0xC119D0 EA 0x7FF6F46319D0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F46319D0(__int64 a1, _QWORD *a2)
+{
+  __int64 v3; // rax
+  __int64 v4; // rdi
+  int v5; // ebx
+  int v6; // r9d
+  _QWORD *v7; // rdx
+  __int64 v8; // rcx
+  __int64 v9; // r8
+  int v10; // r8d
+  __int64 v12; // [rsp+30h] [rbp-50h] BYREF
+  __int64 v13; // [rsp+38h] [rbp-48h] BYREF
+  _QWORD v14[3]; // [rsp+40h] [rbp-40h] BYREF
+  __int64 v15; // [rsp+58h] [rbp-28h] BYREF
+  __int64 v16; // [rsp+60h] [rbp-20h]
+  __int64 v17; // [rsp+68h] [rbp-18h] BYREF
+  __int64 v18; // [rsp+70h] [rbp-10h]
+  int v19; // [rsp+A8h] [rbp+28h] BYREF
+  int v20; // [rsp+B8h] [rbp+38h] BYREF
+
+  v14[1] = -2;
+  v14[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v14);
+  }
+  v17 = 0;
+  v18 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v20 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v20);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v20);
+  }
+  v19 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  a2[4] += a2[4] != 0;
+  v14[2] = &v15;
+  v3 = 0;
+  v15 = 0;
+  v16 = 0;
+  v4 = v17;
+  v5 = v18;
+  if ( (_DWORD)v18 )
+  {
+    v3 = sub_7FF6F4DFAA90(0, 32LL * (int)v18, 0);
+    v15 = v3;
+  }
+  v6 = v5;
+  if ( v5 )
+  {
+    v7 = (_QWORD *)(v4 + 24);
+    v8 = v3 + 8;
+    do
+    {
+      *(_QWORD *)(v8 - 8) = *(v7 - 3);
+      v9 = *(v7 - 2);
+      *(_QWORD *)v8 = v9;
+      if ( v9 && _InterlockedIncrement((volatile signed __int32 *)(v9 + 8)) == 1 )
+        MEMORY[0] = v8;
+      if ( *(_QWORD *)v8 )
+        v10 = *(_DWORD *)(*(_QWORD *)v8 + 24LL);
+      else
+        v10 = 0;
+      *(_DWORD *)(v8 + 8) = v10;
+      *(_QWORD *)(v8 + 16) = *v7;
+      v8 += 32;
+      v7 += 4;
+      --v6;
+    }
+    while ( v6 );
+  }
+  LODWORD(v16) = v5;
+  HIDWORD(v16) = v5;
+  sub_7FF6F3CE7D00(v14[0], (unsigned int)&v15, v13, v12, v20, v19);
+  return sub_7FF6F3CA6DC0(&v17);
+}
+

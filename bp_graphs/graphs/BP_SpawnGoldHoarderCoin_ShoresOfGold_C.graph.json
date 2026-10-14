@@ -1,0 +1,173 @@
+{
+  "class": "BP_SpawnGoldHoarderCoin_ShoresOfGold_C",
+  "source": "decompiled_blueprints/BP_SpawnGoldHoarderCoin_ShoresOfGold_C.txt",
+  "functions": [
+    {
+      "name": "OnBegin",
+      "bytecode_bytes": 40,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fcc0ef580",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "VirtualFunction call \"idx:285114\" (",
+          "edges": []
+        },
+        {
+          "offset": 37,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 39,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 18,
+          "expression": "idx:285114()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "OnItemPickedUp",
+      "bytecode_bytes": 22,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "VirtualFunction call \"idx:285114\" (",
+          "edges": []
+        },
+        {
+          "offset": 19,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 21,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 0,
+          "expression": "idx:285114()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "ExecuteUbergraph_BP_SpawnGoldHoarderCoin_ShoresOfGold",
+      "bytecode_bytes": 407,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "Computed Jump, offset by expr:",
+          "edges": []
+        },
+        {
+          "offset": 10,
+          "opcode": "FinalFunction target=GetVariables@0x19e4cda5d20 (",
+          "edges": []
+        },
+        {
+          "offset": 29,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 88,
+          "opcode": "LetObj (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 204,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 240,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 269,
+          "opcode": "JumpIfNot -> 0x194, cond:",
+          "edges": [
+            {
+              "to_label": "L_194",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 283,
+          "opcode": "BindDelegate 'OnItemPickedUp'",
+          "edges": []
+        },
+        {
+          "offset": 306,
+          "opcode": "LetObj (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 348,
+          "opcode": "AddMulticastDelegate",
+          "edges": []
+        },
+        {
+          "offset": 349,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 380,
+          "opcode": "LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fcc0ef500",
+          "edges": []
+        },
+        {
+          "offset": 389,
+          "opcode": "Jump to offset 0x194",
+          "edges": []
+        },
+        {
+          "offset": 394,
+          "opcode": "FinalFunction target=SignalComplete@0x19e4cda7e00 (",
+          "edges": []
+        },
+        {
+          "offset": 404,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 406,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 10,
+          "expression": "this->GetVariables(CallFunc_GetVariables_OutStruct)"
+        },
+        {
+          "offset": 394,
+          "expression": "this->SignalComplete()"
+        }
+      ],
+      "types": {
+        "CallFunc_SpawnPhasedItem_ReturnValue": "AActor*",
+        "K2Node_DynamicCast_AsItem_Proxy": "ItemProxy*",
+        "K2Node_DynamicCast_bSuccess": "bool"
+      }
+    }
+  ]
+}

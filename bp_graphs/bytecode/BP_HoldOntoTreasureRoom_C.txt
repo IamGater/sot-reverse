@@ -1,0 +1,165 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_9_ShoresOfGold/bp_holdontotreasureroom -> BP_HoldOntoTreasureRoom_C
+
+=== BP_HoldOntoTreasureRoom_C::fn_idx_285052 (111 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_Conv_StringToText_ReturnValue@0x19fceaefce0
+  Expression:
+  $18: Context
+    ObjectExpression:
+    $19: ObjectConst Default__KismetTextLibrary@0x19e4d95ed30
+    SkipBytes: 0x31
+    RValueProperty: CallFunc_Conv_StringToText_ReturnValue@0x19fceaefce0
+    ContextExpression:
+    $40: FinalFunction target=Conv_StringToText@0x19e4d3a9840 (
+      $49: literal ansi string "The Goldhoarder has lost his patience"
+      $88: EndFunctionParms
+    )
+$89: FinalFunction target=FailTale@0x19e4cda5130 (
+  $98: LocalVariable named CallFunc_Conv_StringToText_ReturnValue@0x19fceaefce0
+  $107: EndFunctionParms
+)
+$108: Return expression:
+  $109: Nothing
+$110: EndOfScript
+
+=== BP_HoldOntoTreasureRoom_C::fn_idx_285054 (166 bytes) ===
+$0: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $9: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce792800
+  $18: EndFunctionParms
+)
+$19: LetObj (Variable = Expression)
+  Variable:
+  $20: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue@0x19fce792880
+  Expression:
+  $29: Context
+    ObjectExpression:
+    $30: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Conv_AssetToObject_ReturnValue@0x19fce792880
+    ContextExpression:
+    $51: FinalFunction target=Conv_AssetToObject@0x19e4cd86800 (
+      $60: StructMemberContext prop=idx:285056@0x19fce792e80
+        Expression to struct:
+        $69: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce792800
+      $78: EndFunctionParms
+    )
+$79: Let (Variable = Expression)
+  Variable:
+  $88: LocalVariable named idx:285057@0x19fce792900
+  Expression:
+  $97: DynamicCast to TreasureRoom@0x19e4c4a8500 of expr:
+  $106: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue@0x19fce792880
+$115: Let (Variable = Expression)
+  Variable:
+  $124: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x19fce792980
+  Expression:
+  $133: PrimitiveCast type=71
+    Argument:
+    $135: LocalVariable named idx:285057@0x19fce792900
+$144: LetObj (Variable = Expression)
+  Variable:
+  $145: LocalOutVariable named Object@0x19fce792780
+  Expression:
+  $154: LocalVariable named idx:285057@0x19fce792900
+$163: Return expression:
+  $164: Nothing
+$165: EndOfScript
+
+=== BP_HoldOntoTreasureRoom_C::fn_idx_1828 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fce792b00
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fce792a00
+$18: VirtualFunction call "idx:285051" (
+  $31: literal int32 29
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_HoldOntoTreasureRoom_C::fn_idx_1845 (22 bytes) ===
+$0: VirtualFunction call "idx:285051" (
+  $13: literal int32 153
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_HoldOntoTreasureRoom_C::fn_idx_285053 (22 bytes) ===
+$0: VirtualFunction call "idx:285051" (
+  $13: literal int32 277
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_HoldOntoTreasureRoom_C::fn_idx_285051 (285 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fceaef8f0
+$10: VirtualFunction call "idx:285052" (
+  $23: EndFunctionParms
+)
+$24: Jump to offset 0x11a
+$29: VirtualFunction call "idx:285054" (
+  $42: LocalVariable named idx:285047@0x19fce792b80
+  $51: EndFunctionParms
+)
+$52: Context
+  ObjectExpression:
+  $53: LocalVariable named idx:285047@0x19fce792b80
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $74: FinalFunction target=AddLock@0x19e4d266cc0 (
+    $83: EndFunctionParms
+  )
+$84: BindDelegate 'idx:285053'
+  Delegate:
+  $97: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fce792a80
+  Object:
+  $106: Self
+$107: AddMulticastDelegate
+$108: Context
+  ObjectExpression:
+  $109: LocalVariable named idx:285047@0x19fce792b80
+  SkipBytes: 0x9
+  RValueProperty: FailDelegate@0x19e4d267fe0
+  ContextExpression:
+  $130: InstanceVariable named FailDelegate@0x19e4d267fe0
+$139: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fce792a80
+$148: Jump to offset 0x11a
+$153: VirtualFunction call "idx:285054" (
+  $166: LocalVariable named idx:285048@0x19fce792c00
+  $175: EndFunctionParms
+)
+$176: Context
+  ObjectExpression:
+  $177: LocalVariable named idx:285048@0x19fce792c00
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $198: FinalFunction target=RemoveLock@0x19e4d267570 (
+    $207: EndFunctionParms
+  )
+$208: BindDelegate 'idx:285053'
+  Delegate:
+  $221: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fce792a80
+  Object:
+  $230: Self
+$231: RemoveMulticastDelegate
+$232: Context
+  ObjectExpression:
+  $233: LocalVariable named idx:285048@0x19fce792c00
+  SkipBytes: 0x9
+  RValueProperty: FailDelegate@0x19e4d267fe0
+  ContextExpression:
+  $254: InstanceVariable named FailDelegate@0x19e4d267fe0
+$263: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fce792a80
+$272: Jump to offset 0x11a
+$277: Jump to offset 0xa
+$282: Return expression:
+  $283: Nothing
+$284: EndOfScript

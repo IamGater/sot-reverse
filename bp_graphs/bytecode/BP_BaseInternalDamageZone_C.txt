@@ -1,0 +1,193 @@
+// /Game/Blueprints/GameObjects/Hull/Damage/bp_smallship_damagezone_mezzaninedeck_01 -> BP_BaseInternalDamageZone_C
+
+=== BP_BaseInternalDamageZone_C::fn_idx_1882 (356 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_IsServer_ReturnValue@0x19f58463100
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_IsServer_ReturnValue@0x19f58463100
+    ContextExpression:
+    $32: FinalFunction target=IsServer@0x19e4cd8e1c0 (
+      $41: Self
+      $42: EndFunctionParms
+    )
+$43: JumpIfNot -> 0x3e, cond:
+  $48: LocalVariable named CallFunc_IsServer_ReturnValue@0x19f58463100
+$57: Jump to offset 0x161
+$62: LetBool (Variable = Expression)
+  Variable:
+  $63: LocalVariable named CallFunc_WwiseEmitterIsValid_ReturnValue@0x19f58463080
+  Expression:
+  $72: Context
+    ObjectExpression:
+    $73: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x19e4d9e1550
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_WwiseEmitterIsValid_ReturnValue@0x19f58463080
+    ContextExpression:
+    $94: FinalFunction target=WwiseEmitterIsValid@0x19e4d3ff0a0 (
+      $103: InstanceVariable named RepairEmitter@0x19f58463780
+      $112: EndFunctionParms
+    )
+$113: JumpIfNot -> 0xe4, cond:
+  $118: LocalVariable named CallFunc_WwiseEmitterIsValid_ReturnValue@0x19f58463080
+$127: Let (Variable = Expression)
+  Variable:
+  $136: LocalVariable named CallFunc_WwiseEmitterPostEvent_ReturnValue@0x19f482c5940
+  Expression:
+  $145: Context
+    ObjectExpression:
+    $146: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x19e4d9e1550
+    SkipBytes: 0x38
+    RValueProperty: CallFunc_WwiseEmitterPostEvent_ReturnValue@0x19f482c5940
+    ContextExpression:
+    $167: FinalFunction target=WwiseEmitterPostEvent@0x19e4d3ff260 (
+      $176: InstanceVariable named RepairEmitter@0x19f58463780
+      $185: InstanceVariable named Start Repair Cue@0x19f58463700
+      $194: literal byte 2
+      $196: literal name "None"
+      $209: literal name "None"
+      $222: EndFunctionParms
+    )
+$223: Jump to offset 0x39
+$228: LetBool (Variable = Expression)
+  Variable:
+  $229: LocalVariable named CallFunc_WwiseCreateEmitter_ReturnValue@0x19f58463000
+  Expression:
+  $238: Context
+    ObjectExpression:
+    $239: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x19e4d9e1550
+    SkipBytes: 0x2f
+    RValueProperty: CallFunc_WwiseCreateEmitter_ReturnValue@0x19f58463000
+    ContextExpression:
+    $260: FinalFunction target=WwiseCreateEmitter@0x19e4d3fd8f0 (
+      $269: LocalVariable named CallFunc_WwiseCreateEmitter_Emitter@0x19f58462f80
+      $278: literal name "Repair"
+      $291: Self
+      $292: NoObject
+      $293: literal vector (0,0,0)
+      $306: EndFunctionParms
+    )
+$307: JumpIfNot -> 0x39, cond:
+  $312: LocalVariable named CallFunc_WwiseCreateEmitter_ReturnValue@0x19f58463000
+$321: Let (Variable = Expression)
+  Variable:
+  $330: InstanceVariable named RepairEmitter@0x19f58463780
+  Expression:
+  $339: LocalVariable named CallFunc_WwiseCreateEmitter_Emitter@0x19f58462f80
+$348: Jump to offset 0x7f
+$353: Return expression:
+  $354: Nothing
+$355: EndOfScript
+
+=== BP_BaseInternalDamageZone_C::fn_idx_1742 (72 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalOutVariable named MountLocation@0x19f58463180
+  Expression:
+  $10: InstanceVariable named RepairWood@0x19f58463680
+$19: Let (Variable = Expression)
+  Variable:
+  $28: LocalOutVariable named MountSocket@0x19f482c59b0
+  Expression:
+  $37: literal name "None"
+$50: LetBool (Variable = Expression)
+  Variable:
+  $51: LocalOutVariable named ReturnValue@0x19f58463200
+  Expression:
+  $60: True
+$61: Return expression:
+  $62: LocalOutVariable named ReturnValue@0x19f58463200
+$71: EndOfScript
+
+=== BP_BaseInternalDamageZone_C::fn_idx_11761 (99 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_K2_GetComponentLocation_ReturnValue@0x19f58463400
+  Expression:
+  $18: Context
+    ObjectExpression:
+    $19: InstanceVariable named RepairWood@0x19f58463680
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetComponentLocation_ReturnValue@0x19f58463400
+    ContextExpression:
+    $40: FinalFunction target=K2_GetComponentLocation@0x19e4d0712f0 (
+      $49: EndFunctionParms
+    )
+$50: Let (Variable = Expression)
+  Variable:
+  $59: LocalOutVariable named DesiredTooltipWorldPosition@0x19f58463300
+  Expression:
+  $68: LocalVariable named CallFunc_K2_GetComponentLocation_ReturnValue@0x19f58463400
+$77: LetBool (Variable = Expression)
+  Variable:
+  $78: LocalOutVariable named ReturnValue@0x19f58463380
+  Expression:
+  $87: True
+$88: Return expression:
+  $89: LocalOutVariable named ReturnValue@0x19f58463380
+$98: EndOfScript
+
+=== BP_BaseInternalDamageZone_C::fn_idx_9202 (13 bytes) ===
+$0: FinalFunction target=UserConstructionScript@0x19f28e8ef40 (
+  $9: EndFunctionParms
+)
+$10: Return expression:
+  $11: Nothing
+$12: EndOfScript
+
+=== BP_BaseInternalDamageZone_C::fn_idx_9159 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_EndPlayReason@0x19f58463600
+  Expression:
+  $9: LocalVariable named EndPlayReason@0x19f58463480
+$18: VirtualFunction call "ExecuteUbergraph_BP_BaseInternalDamageZone" (
+  $31: literal int32 137
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_BaseInternalDamageZone_C::fn_idx_220135 (145 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19f482c5a90
+$10: LetBool (Variable = Expression)
+  Variable:
+  $11: LocalVariable named CallFunc_WwiseEmitterStop_ReturnValue@0x19f58463500
+  Expression:
+  $20: Context
+    ObjectExpression:
+    $21: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x19e4d9e1550
+    SkipBytes: 0x1d
+    RValueProperty: CallFunc_WwiseEmitterStop_ReturnValue@0x19f58463500
+    ContextExpression:
+    $42: FinalFunction target=WwiseEmitterStop@0x19e4d400760 (
+      $51: InstanceVariable named RepairEmitter@0x19f58463780
+      $60: literal int32 0
+      $65: literal float 0.019999999552965164
+      $70: EndFunctionParms
+    )
+$71: LetBool (Variable = Expression)
+  Variable:
+  $72: LocalVariable named CallFunc_WwiseEmitterStop_ReturnValue2@0x19f58463580
+  Expression:
+  $81: Context
+    ObjectExpression:
+    $82: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x19e4d9e1550
+    SkipBytes: 0x1d
+    RValueProperty: CallFunc_WwiseEmitterStop_ReturnValue2@0x19f58463580
+    ContextExpression:
+    $103: FinalFunction target=WwiseEmitterStop@0x19e4d400760 (
+      $112: InstanceVariable named WaterLeakEmitter@0x19e4d16f100
+      $121: literal int32 0
+      $126: literal float 0.019999999552965164
+      $131: EndFunctionParms
+    )
+$132: Jump to offset 0x8e
+$137: Jump to offset 0xa
+$142: Return expression:
+  $143: Nothing
+$144: EndOfScript

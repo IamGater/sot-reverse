@@ -1,0 +1,91 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Onboarding/bp_waitforpiratelordshotinhead -> BP_WaitForPirateLordShotInHead_C
+
+=== BP_WaitForPirateLordShotInHead_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fce6e8700
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fce6e8600
+$18: VirtualFunction call "idx:283321" (
+  $31: literal int32 113
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_WaitForPirateLordShotInHead_C::fn_idx_283323 (22 bytes) ===
+$0: VirtualFunction call "idx:283321" (
+  $13: literal int32 304
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_WaitForPirateLordShotInHead_C::fn_idx_283321 (312 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fcdbb3790
+$10: Context
+  ObjectExpression:
+  $11: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x4c
+  RValueProperty: (null)
+  ContextExpression:
+  $32: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $41: NoObject
+    $42: literal ansi string "No cast to Pirate Lord"
+    $66: True
+    $67: True
+    $68: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $81: literal float 0
+      $86: literal float 0.6600000262260437
+      $91: literal float 1
+      $96: literal float 1
+      $101: EndStructConst
+    $102: literal float 10
+    $107: EndFunctionParms
+  )
+$108: Jump to offset 0x135
+$113: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $122: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce6e8780
+  $131: EndFunctionParms
+)
+$132: Let (Variable = Expression)
+  Variable:
+  $141: LocalVariable named idx:283322@0x19fce6e8800
+  Expression:
+  $150: DynamicCast to BP_PirateLord_MaidenVoyage_Beach_C@0x19e14f433c0 of expr:
+  $159: StructMemberContext prop=idx:282732@0x19fcbb41800
+    Expression to struct:
+    $168: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce6e8780
+$177: Let (Variable = Expression)
+  Variable:
+  $186: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fce6e8880
+  Expression:
+  $195: PrimitiveCast type=71
+    Argument:
+    $197: LocalVariable named idx:283322@0x19fce6e8800
+$206: JumpIfNot -> 0xa, cond:
+  $211: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fce6e8880
+$220: BindDelegate 'idx:283323'
+  Delegate:
+  $233: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fce6e8680
+  Object:
+  $242: Self
+$243: AddMulticastDelegate
+$244: Context
+  ObjectExpression:
+  $245: LocalVariable named idx:283322@0x19fce6e8800
+  SkipBytes: 0x9
+  RValueProperty: BroadcastDamage@0x19fbf3fd400
+  ContextExpression:
+  $266: InstanceVariable named BroadcastDamage@0x19fbf3fd400
+$275: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fce6e8680
+$284: Jump to offset 0x135
+$289: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $298: EndFunctionParms
+)
+$299: Jump to offset 0x135
+$304: Jump to offset 0x121
+$309: Return expression:
+  $310: Nothing
+$311: EndOfScript

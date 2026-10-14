@@ -1,0 +1,274 @@
+// E:\unreal-projects\Athena\Content\Blueprints\Prompts\PromptConditionals\bp_prompt_maidenvoyage_returntopiratelordwhenready.uasset -> BP_Prompt_MaidenVoyage_ReturnToPirateLordWhenReady_C
+
+=== BP_Prompt_MaidenVoyage_ReturnToPirateLordWhenReady_C::OnPlayerExitFunc (52 bytes) ===
+$0: JumpIfNot -> 0x13, cond:
+  $5: InstanceVariable named State_SpeakToPirateLord@0x21282a42b80
+$14: Jump to offset 0x31
+$19: LetBool (Variable = Expression)
+  Variable:
+  $20: InstanceVariable named State_WithinRadius@0x2139b5a4100
+  Expression:
+  $29: False
+$30: VirtualFunction call "Evaluate" (
+  $43: EndFunctionParms
+)
+$44: Jump to offset 0xe
+$49: Return expression:
+  $50: Nothing
+$51: EndOfScript
+
+=== BP_Prompt_MaidenVoyage_ReturnToPirateLordWhenReady_C::OnPlayerEnterFunc (52 bytes) ===
+$0: JumpIfNot -> 0x13, cond:
+  $5: InstanceVariable named State_SpeakToPirateLord@0x21282a42b80
+$14: Jump to offset 0x31
+$19: LetBool (Variable = Expression)
+  Variable:
+  $20: InstanceVariable named State_WithinRadius@0x2139b5a4100
+  Expression:
+  $29: True
+$30: VirtualFunction call "Evaluate" (
+  $43: EndFunctionParms
+)
+$44: Jump to offset 0xe
+$49: Return expression:
+  $50: Nothing
+$51: EndOfScript
+
+=== BP_Prompt_MaidenVoyage_ReturnToPirateLordWhenReady_C::StopPrompts (28 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: InstanceVariable named State_SpeakToPirateLord@0x21282a42b80
+  Expression:
+  $10: True
+$11: VirtualFunction call "Evaluate" (
+  $24: EndFunctionParms
+)
+$25: Return expression:
+  $26: Nothing
+$27: EndOfScript
+
+=== BP_Prompt_MaidenVoyage_ReturnToPirateLordWhenReady_C::Evaluate (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Prompt_MaidenVoyage_ReturnToPirateLordWhenReady" (
+  $13: literal int32 711
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_MaidenVoyage_ReturnToPirateLordWhenReady_C::PostInitialize (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Prompt_MaidenVoyage_ReturnToPirateLordWhenReady" (
+  $13: literal int32 706
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_MaidenVoyage_ReturnToPirateLordWhenReady_C::UninitializeImplementable (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Prompt_MaidenVoyage_ReturnToPirateLordWhenReady" (
+  $13: literal int32 271
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_MaidenVoyage_ReturnToPirateLordWhenReady_C::OnPlayerExit (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Prompt_MaidenVoyage_ReturnToPirateLordWhenReady" (
+  $13: literal int32 420
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_MaidenVoyage_ReturnToPirateLordWhenReady_C::OnPlayerEnter (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Prompt_MaidenVoyage_ReturnToPirateLordWhenReady" (
+  $13: literal int32 425
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_MaidenVoyage_ReturnToPirateLordWhenReady_C::ExecuteUbergraph_BP_Prompt_MaidenVoyage_ReturnToPirateLordWhenReady (719 bytes) ===
+$0: FlowStack.Push(0x2cc)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x2139380cc50
+$15: JumpIfNot -> 0x28, cond:
+  $20: InstanceVariable named State_SpeakToPirateLord@0x21282a42b80
+$29: FinalFunction target=DismissAllPrompts@0x212d6ad4cc0 (
+  $38: EndFunctionParms
+)
+$39: PopExecutionFlow (jump to popped addr)
+$40: JumpIfNot -> 0x37, cond:
+  $45: InstanceVariable named State_WithinRadius@0x2139b5a4100
+$54: PopExecutionFlow (jump to popped addr)
+$55: FinalFunction target=SetPromptAs@0x212d6ad5a00 (
+  $64: InstanceVariable named Prompt_TalkToPirateLord@0x2136e0d2280
+  $73: EndFunctionParms
+)
+$74: Context
+  ObjectExpression:
+  $75: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $96: FinalFunction target=Delay@0x212d63a6d40 (
+    $105: Self
+    $106: literal float 8
+    $111: literal struct LatentActionInfo@0x212d63a6e80 (size 32)
+      $124: literal CodeSkipSizeType 0x97
+      $129: literal int32 2
+      $134: literal name "ExecuteUbergraph_BP_Prompt_MaidenVoyage_ReturnToPirateLordWhenReady"
+      $147: Self
+      $148: EndStructConst
+    $149: EndFunctionParms
+  )
+$150: PopExecutionFlow (jump to popped addr)
+$151: FinalFunction target=DismissAllPrompts@0x212d6ad4cc0 (
+  $160: EndFunctionParms
+)
+$161: Context
+  ObjectExpression:
+  $162: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $183: FinalFunction target=Delay@0x212d63a6d40 (
+    $192: Self
+    $193: literal float 180
+    $198: literal struct LatentActionInfo@0x212d63a6e80 (size 32)
+      $211: literal CodeSkipSizeType 0xf
+      $216: literal int32 1
+      $221: literal name "ExecuteUbergraph_BP_Prompt_MaidenVoyage_ReturnToPirateLordWhenReady"
+      $234: Self
+      $235: EndStructConst
+    $236: EndFunctionParms
+  )
+$237: PopExecutionFlow (jump to popped addr)
+$238: Context
+  ObjectExpression:
+  $239: InstanceVariable named OverlapTrigger@0x21293e72d00
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $260: FinalFunction target=ClearDelegatesAndDestroy@0x212d6a9c0b0 (
+    $269: EndFunctionParms
+  )
+$270: PopExecutionFlow (jump to popped addr)
+$271: LetBool (Variable = Expression)
+  Variable:
+  $272: LocalVariable named CallFunc_IsValid_ReturnValue@0x2137ecd0600
+  Expression:
+  $281: Context
+    ObjectExpression:
+    $282: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x2137ecd0600
+    ContextExpression:
+    $303: FinalFunction target=IsValid@0x212d63ae380 (
+      $312: InstanceVariable named OverlapTrigger@0x21293e72d00
+      $321: EndFunctionParms
+    )
+$322: PopExecutionFlowIfNot, cond:
+$323: LocalVariable named CallFunc_IsValid_ReturnValue@0x2137ecd0600
+$332: Jump to offset 0xee
+$337: JumpIfNot -> 0x97, cond:
+  $342: InstanceVariable named State_WithinRadius@0x2139b5a4100
+$351: FinalFunction target=SetPromptAs@0x212d6ad5a00 (
+  $360: InstanceVariable named Prompt_TalkToPirateLord@0x2136e0d2280
+  $369: EndFunctionParms
+)
+$370: PopExecutionFlow (jump to popped addr)
+$371: JumpIfNot -> 0x151, cond:
+  $376: InstanceVariable named State_SpeakToPirateLord@0x21282a42b80
+$385: Jump to offset 0x1d
+$390: VirtualFunction call "OnPlayerExitFunc" (
+  $403: EndFunctionParms
+)
+$404: PopExecutionFlow (jump to popped addr)
+$405: VirtualFunction call "OnPlayerEnterFunc" (
+  $418: EndFunctionParms
+)
+$419: PopExecutionFlow (jump to popped addr)
+$420: Jump to offset 0x186
+$425: Jump to offset 0x195
+$430: LetObj (Variable = Expression)
+  Variable:
+  $431: LocalVariable named CallFunc_CreateOverlapTriggerActor_ReturnValue@0x2137ecd0580
+  Expression:
+  $440: Context
+    ObjectExpression:
+    $441: ObjectConst Default__OverlapTriggerActor@0x212d706b3d0
+    SkipBytes: 0x1d
+    RValueProperty: CallFunc_CreateOverlapTriggerActor_ReturnValue@0x2137ecd0580
+    ContextExpression:
+    $462: FinalFunction target=CreateOverlapTriggerActor@0x212d6a9c170 (
+      $471: Self
+      $472: InstanceVariable named Location@0x21293e7f200
+      $481: InstanceVariable named Radius@0x2139380c630
+      $490: EndFunctionParms
+    )
+$491: LetObj (Variable = Expression)
+  Variable:
+  $492: InstanceVariable named OverlapTrigger@0x21293e72d00
+  Expression:
+  $501: LocalVariable named CallFunc_CreateOverlapTriggerActor_ReturnValue@0x2137ecd0580
+$510: BindDelegate 'OnPlayerExit'
+  Delegate:
+  $523: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x2137ecd0300
+  Object:
+  $532: Self
+$533: BindDelegate 'OnPlayerEnter'
+  Delegate:
+  $546: LocalVariable named UniqueObjectNameForCooking_OutputDelegate2@0x2137ecd0980
+  Object:
+  $555: Self
+$556: LetObj (Variable = Expression)
+  Variable:
+  $557: LocalVariable named CallFunc_GetPlayerController_ReturnValue@0x2137ecd0800
+  Expression:
+  $566: Context
+    ObjectExpression:
+    $567: ObjectConst Default__GameplayStatics@0x212d6f7eb20
+    SkipBytes: 0x10
+    RValueProperty: CallFunc_GetPlayerController_ReturnValue@0x2137ecd0800
+    ContextExpression:
+    $588: FinalFunction target=GetPlayerController@0x212d697e470 (
+      $597: Self
+      $598: literal int32 0
+      $603: EndFunctionParms
+    )
+$604: LetObj (Variable = Expression)
+  Variable:
+  $605: LocalVariable named CallFunc_K2_GetPawn_ReturnValue@0x2137ecd0c80
+  Expression:
+  $614: Context
+    ObjectExpression:
+    $615: LocalVariable named CallFunc_GetPlayerController_ReturnValue@0x2137ecd0800
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetPawn_ReturnValue@0x2137ecd0c80
+    ContextExpression:
+    $636: FinalFunction target=K2_GetPawn@0x212d670f6a0 (
+      $645: EndFunctionParms
+    )
+$646: Context
+  ObjectExpression:
+  $647: InstanceVariable named OverlapTrigger@0x21293e72d00
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $668: FinalFunction target=SetDelegatesForActor@0x212d6a9c720 (
+    $677: LocalVariable named CallFunc_K2_GetPawn_ReturnValue@0x2137ecd0c80
+    $686: LocalVariable named UniqueObjectNameForCooking_OutputDelegate2@0x2137ecd0980
+    $695: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x2137ecd0300
+    $704: EndFunctionParms
+  )
+$705: PopExecutionFlow (jump to popped addr)
+$706: Jump to offset 0x1ae
+$711: Jump to offset 0x173
+$716: Return expression:
+  $717: Nothing
+$718: EndOfScript

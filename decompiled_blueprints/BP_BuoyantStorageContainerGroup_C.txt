@@ -1,0 +1,342 @@
+// /Game/Tests/Blueprints/GameObjects/StorageContainer/bp_buoyantstoragecontainergroup -> BP_BuoyantStorageContainerGroup_C (RECOVERED via retry pass)
+
+=== BP_BuoyantStorageContainerGroup_C::SpawnBarrelGroup (1447 bytes) ===
+$0: FlowStack.Push(0x5a4)
+$5: Let (Variable = Expression)
+  Variable:
+  $14: LocalVariable named Temp_int_Variable@0x1a3b8401ff0
+  Expression:
+  $23: literal int32 0
+$28: Let (Variable = Expression)
+  Variable:
+  $37: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x1a3b8401f80
+  Expression:
+  $46: CallMath target=Subtract_IntInt@0x1a2a9be9ad0 (
+    $55: InstanceVariable named idx:230606@0x1a3b8402450
+    $64: literal int32 1
+    $69: EndFunctionParms
+  )
+$70: LetBool (Variable = Expression)
+  Variable:
+  $71: LocalVariable named CallFunc_LessEqual_IntInt_ReturnValue@0x1a3bc0d0800
+  Expression:
+  $80: CallMath target=LessEqual_IntInt@0x1a2a9bd69d0 (
+    $89: LocalVariable named Temp_int_Variable@0x1a3b8401ff0
+    $98: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x1a3b8401f80
+    $107: EndFunctionParms
+  )
+$108: PopExecutionFlowIfNot, cond:
+$109: LocalVariable named CallFunc_LessEqual_IntInt_ReturnValue@0x1a3bc0d0800
+$118: FlowStack.Push(0x55a)
+$123: Let (Variable = Expression)
+  Variable:
+  $132: LocalVariable named idx:230603@0x1a3bc0d0600
+  Expression:
+  $141: FinalFunction target=K2_GetActorRotation@0x1a2a95b6c50 (
+    $150: EndFunctionParms
+  )
+$151: Let (Variable = Expression)
+  Variable:
+  $160: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x1a3bc0d0700
+  Expression:
+  $169: FinalFunction target=K2_GetActorLocation@0x1a2a95b6b10 (
+    $178: EndFunctionParms
+  )
+$179: Let (Variable = Expression)
+  Variable:
+  $188: LocalVariable named CallFunc_Conv_IntToFloat_ReturnValue@0x1a3b8401f10
+  Expression:
+  $197: CallMath target=Conv_IntToFloat@0x1a2a9bc5980 (
+    $206: InstanceVariable named idx:230607@0x1a3b84024c0
+    $215: EndFunctionParms
+  )
+$216: Let (Variable = Expression)
+  Variable:
+  $225: LocalVariable named CallFunc_Conv_IntToFloat_ReturnValue2@0x1a3b84020d0
+  Expression:
+  $234: CallMath target=Conv_IntToFloat@0x1a2a9bc5980 (
+    $243: LocalVariable named Temp_int_Variable@0x1a3b8401ff0
+    $252: EndFunctionParms
+  )
+$253: Let (Variable = Expression)
+  Variable:
+  $262: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue@0x1a3b8402140
+  Expression:
+  $271: CallMath target=Divide_FloatFloat@0x1a2a9bc8eb0 (
+    $280: LocalVariable named CallFunc_Conv_IntToFloat_ReturnValue2@0x1a3b84020d0
+    $289: LocalVariable named CallFunc_Conv_IntToFloat_ReturnValue@0x1a3b8401f10
+    $298: EndFunctionParms
+  )
+$299: Let (Variable = Expression)
+  Variable:
+  $308: LocalVariable named CallFunc_Percent_IntInt_ReturnValue@0x1a3b84021b0
+  Expression:
+  $317: CallMath target=Percent_IntInt@0x1a2a9be25b0 (
+    $326: LocalVariable named Temp_int_Variable@0x1a3b8401ff0
+    $335: InstanceVariable named idx:230607@0x1a3b84024c0
+    $344: EndFunctionParms
+  )
+$345: Let (Variable = Expression)
+  Variable:
+  $354: LocalVariable named CallFunc_FFloor_ReturnValue@0x1a3b8402220
+  Expression:
+  $363: CallMath target=FFloor@0x1a2a9bcc520 (
+    $372: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue@0x1a3b8402140
+    $381: EndFunctionParms
+  )
+$382: Let (Variable = Expression)
+  Variable:
+  $391: LocalVariable named CallFunc_Multiply_IntFloat_ReturnValue@0x1a3b8402290
+  Expression:
+  $400: CallMath target=Multiply_IntFloat@0x1a2a9bdd3f0 (
+    $409: LocalVariable named CallFunc_Percent_IntInt_ReturnValue@0x1a3b84021b0
+    $418: InstanceVariable named idx:230608@0x1a3b8402530
+    $427: EndFunctionParms
+  )
+$428: Let (Variable = Expression)
+  Variable:
+  $437: LocalVariable named CallFunc_Multiply_IntFloat_ReturnValue2@0x1a3b8402300
+  Expression:
+  $446: CallMath target=Multiply_IntFloat@0x1a2a9bdd3f0 (
+    $455: LocalVariable named CallFunc_FFloor_ReturnValue@0x1a3b8402220
+    $464: InstanceVariable named idx:230608@0x1a3b8402530
+    $473: EndFunctionParms
+  )
+$474: Let (Variable = Expression)
+  Variable:
+  $483: LocalVariable named CallFunc_MakeVector_ReturnValue@0x1a3bc0d0780
+  Expression:
+  $492: CallMath target=MakeVector@0x1a2a9bda910 (
+    $501: LocalVariable named CallFunc_Multiply_IntFloat_ReturnValue2@0x1a3b8402300
+    $510: LocalVariable named CallFunc_Multiply_IntFloat_ReturnValue@0x1a3b8402290
+    $519: InstanceVariable named ZOffset@0x1a3b8402610
+    $528: EndFunctionParms
+  )
+$529: Let (Variable = Expression)
+  Variable:
+  $538: LocalVariable named idx:230602@0x1a3bc0d0880
+  Expression:
+  $547: CallMath target=GreaterGreater_VectorRotator@0x1a2a9bd36d0 (
+    $556: LocalVariable named CallFunc_MakeVector_ReturnValue@0x1a3bc0d0780
+    $565: LocalVariable named idx:230603@0x1a3bc0d0600
+    $574: EndFunctionParms
+  )
+$575: Let (Variable = Expression)
+  Variable:
+  $584: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x1a3bc0d0900
+  Expression:
+  $593: CallMath target=Add_VectorVector@0x1a2a9bc0750 (
+    $602: LocalVariable named idx:230602@0x1a3bc0d0880
+    $611: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x1a3bc0d0700
+    $620: EndFunctionParms
+  )
+$621: Let (Variable = Expression)
+  Variable:
+  $630: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x1a3bc0d0980
+  Expression:
+  $639: CallMath target=MakeTransform@0x1a2a9bda650 (
+    $648: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x1a3bc0d0900
+    $657: literal rotation (0,0,0)
+    $670: literal vector (1,1,1)
+    $683: EndFunctionParms
+  )
+$684: LetObj (Variable = Expression)
+  Variable:
+  $685: LocalVariable named idx:226676@0x1a3bc0d0a00
+  Expression:
+  $694: Context
+    ObjectExpression:
+    $695: ObjectConst Default__GameplayStatics@0x1a2aa1aeb20
+    SkipBytes: 0x20
+    RValueProperty: idx:226676@0x1a3bc0d0a00
+    ContextExpression:
+    $716: FinalFunction target=BeginDeferredActorSpawnFromClass@0x1a2a9ba9260 (
+      $725: Self
+      $726: ObjectConst idx:230600@0x1a3c2a28b80
+      $735: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x1a3bc0d0980
+      $744: literal byte 0
+      $746: NoObject
+      $747: EndFunctionParms
+    )
+$748: Let (Variable = Expression)
+  Variable:
+  $757: LocalVariable named idx:230603@0x1a3bc0d0600
+  Expression:
+  $766: FinalFunction target=K2_GetActorRotation@0x1a2a95b6c50 (
+    $775: EndFunctionParms
+  )
+$776: Let (Variable = Expression)
+  Variable:
+  $785: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x1a3bc0d0700
+  Expression:
+  $794: FinalFunction target=K2_GetActorLocation@0x1a2a95b6b10 (
+    $803: EndFunctionParms
+  )
+$804: Let (Variable = Expression)
+  Variable:
+  $813: LocalVariable named CallFunc_Conv_IntToFloat_ReturnValue@0x1a3b8401f10
+  Expression:
+  $822: CallMath target=Conv_IntToFloat@0x1a2a9bc5980 (
+    $831: InstanceVariable named idx:230607@0x1a3b84024c0
+    $840: EndFunctionParms
+  )
+$841: Let (Variable = Expression)
+  Variable:
+  $850: LocalVariable named CallFunc_Conv_IntToFloat_ReturnValue2@0x1a3b84020d0
+  Expression:
+  $859: CallMath target=Conv_IntToFloat@0x1a2a9bc5980 (
+    $868: LocalVariable named Temp_int_Variable@0x1a3b8401ff0
+    $877: EndFunctionParms
+  )
+$878: Let (Variable = Expression)
+  Variable:
+  $887: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue@0x1a3b8402140
+  Expression:
+  $896: CallMath target=Divide_FloatFloat@0x1a2a9bc8eb0 (
+    $905: LocalVariable named CallFunc_Conv_IntToFloat_ReturnValue2@0x1a3b84020d0
+    $914: LocalVariable named CallFunc_Conv_IntToFloat_ReturnValue@0x1a3b8401f10
+    $923: EndFunctionParms
+  )
+$924: Let (Variable = Expression)
+  Variable:
+  $933: LocalVariable named CallFunc_Percent_IntInt_ReturnValue@0x1a3b84021b0
+  Expression:
+  $942: CallMath target=Percent_IntInt@0x1a2a9be25b0 (
+    $951: LocalVariable named Temp_int_Variable@0x1a3b8401ff0
+    $960: InstanceVariable named idx:230607@0x1a3b84024c0
+    $969: EndFunctionParms
+  )
+$970: Let (Variable = Expression)
+  Variable:
+  $979: LocalVariable named CallFunc_FFloor_ReturnValue@0x1a3b8402220
+  Expression:
+  $988: CallMath target=FFloor@0x1a2a9bcc520 (
+    $997: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue@0x1a3b8402140
+    $1006: EndFunctionParms
+  )
+$1007: Let (Variable = Expression)
+  Variable:
+  $1016: LocalVariable named CallFunc_Multiply_IntFloat_ReturnValue@0x1a3b8402290
+  Expression:
+  $1025: CallMath target=Multiply_IntFloat@0x1a2a9bdd3f0 (
+    $1034: LocalVariable named CallFunc_Percent_IntInt_ReturnValue@0x1a3b84021b0
+    $1043: InstanceVariable named idx:230608@0x1a3b8402530
+    $1052: EndFunctionParms
+  )
+$1053: Let (Variable = Expression)
+  Variable:
+  $1062: LocalVariable named CallFunc_Multiply_IntFloat_ReturnValue2@0x1a3b8402300
+  Expression:
+  $1071: CallMath target=Multiply_IntFloat@0x1a2a9bdd3f0 (
+    $1080: LocalVariable named CallFunc_FFloor_ReturnValue@0x1a3b8402220
+    $1089: InstanceVariable named idx:230608@0x1a3b8402530
+    $1098: EndFunctionParms
+  )
+$1099: Let (Variable = Expression)
+  Variable:
+  $1108: LocalVariable named CallFunc_MakeVector_ReturnValue@0x1a3bc0d0780
+  Expression:
+  $1117: CallMath target=MakeVector@0x1a2a9bda910 (
+    $1126: LocalVariable named CallFunc_Multiply_IntFloat_ReturnValue2@0x1a3b8402300
+    $1135: LocalVariable named CallFunc_Multiply_IntFloat_ReturnValue@0x1a3b8402290
+    $1144: InstanceVariable named ZOffset@0x1a3b8402610
+    $1153: EndFunctionParms
+  )
+$1154: Let (Variable = Expression)
+  Variable:
+  $1163: LocalVariable named idx:230602@0x1a3bc0d0880
+  Expression:
+  $1172: CallMath target=GreaterGreater_VectorRotator@0x1a2a9bd36d0 (
+    $1181: LocalVariable named CallFunc_MakeVector_ReturnValue@0x1a3bc0d0780
+    $1190: LocalVariable named idx:230603@0x1a3bc0d0600
+    $1199: EndFunctionParms
+  )
+$1200: Let (Variable = Expression)
+  Variable:
+  $1209: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x1a3bc0d0900
+  Expression:
+  $1218: CallMath target=Add_VectorVector@0x1a2a9bc0750 (
+    $1227: LocalVariable named idx:230602@0x1a3bc0d0880
+    $1236: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x1a3bc0d0700
+    $1245: EndFunctionParms
+  )
+$1246: Let (Variable = Expression)
+  Variable:
+  $1255: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x1a3bc0d0980
+  Expression:
+  $1264: CallMath target=MakeTransform@0x1a2a9bda650 (
+    $1273: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x1a3bc0d0900
+    $1282: literal rotation (0,0,0)
+    $1295: literal vector (1,1,1)
+    $1308: EndFunctionParms
+  )
+$1309: LetObj (Variable = Expression)
+  Variable:
+  $1310: LocalVariable named idx:226680@0x1a3bc0d0a80
+  Expression:
+  $1319: Context
+    ObjectExpression:
+    $1320: ObjectConst Default__GameplayStatics@0x1a2aa1aeb20
+    SkipBytes: 0x1c
+    RValueProperty: idx:226680@0x1a3bc0d0a80
+    ContextExpression:
+    $1341: FinalFunction target=FinishSpawningActor@0x1a2a9babd20 (
+      $1350: LocalVariable named idx:226676@0x1a3bc0d0a00
+      $1359: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x1a3bc0d0980
+      $1368: EndFunctionParms
+    )
+$1369: PopExecutionFlow (jump to popped addr)
+$1370: Let (Variable = Expression)
+  Variable:
+  $1379: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x1a3b8402060
+  Expression:
+  $1388: CallMath target=Add_IntInt@0x1a2a9bbfa30 (
+    $1397: LocalVariable named Temp_int_Variable@0x1a3b8401ff0
+    $1406: literal int32 1
+    $1411: EndFunctionParms
+  )
+$1412: Let (Variable = Expression)
+  Variable:
+  $1421: LocalVariable named Temp_int_Variable@0x1a3b8401ff0
+  Expression:
+  $1430: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x1a3b8402060
+$1439: Jump to offset 0x1c
+$1444: Return expression:
+  $1445: Nothing
+$1446: EndOfScript
+
+=== BP_BuoyantStorageContainerGroup_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_BuoyantStorageContainerGroup_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "idx:230605" (
+  $13: literal int32 68
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_BuoyantStorageContainerGroup_C::fn_idx_230605 (76 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x1a3b8402370
+$10: VirtualFunction call "SpawnBarrelGroup" (
+  $23: EndFunctionParms
+)
+$24: Jump to offset 0x49
+$29: LetBool (Variable = Expression)
+  Variable:
+  $30: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x1a3bc0d0b00
+  Expression:
+  $39: FinalFunction target=HasAuthority@0x1a2a95b4b30 (
+    $48: EndFunctionParms
+  )
+$49: JumpIfNot -> 0x49, cond:
+  $54: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x1a3bc0d0b00
+$63: Jump to offset 0xa
+$68: Jump to offset 0x1d
+$73: Return expression:
+  $74: Nothing
+$75: EndOfScript

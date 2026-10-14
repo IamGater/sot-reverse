@@ -1,0 +1,243 @@
+// /Game/Blueprints/Ships/Templates/bp_aismallshiptemplate -> BP_AISmallShipTemplate_C
+
+=== BP_AISmallShipTemplate_C::fn_idx_277155 (252 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_K2_GetRootComponent_ReturnValue@0x19fc170d500
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: Context
+      ObjectExpression:
+      $12: InstanceVariable named Hull@0x19fc170e600
+      SkipBytes: 0x9
+      RValueProperty: ChildActor@0x19e4d3359f0
+      ContextExpression:
+      $33: InstanceVariable named ChildActor@0x19e4d3359f0
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetRootComponent_ReturnValue@0x19fc170d500
+    ContextExpression:
+    $54: FinalFunction target=K2_GetRootComponent@0x19e4cd66d90 (
+      $63: EndFunctionParms
+    )
+$64: Let (Variable = Expression)
+  Variable:
+  $73: LocalVariable named idx:277144@0x19fc170d580
+  Expression:
+  $82: DynamicCast to ChildActorComponent@0x19e4c538180 of expr:
+  $91: LocalVariable named CallFunc_K2_GetRootComponent_ReturnValue@0x19fc170d500
+$100: Let (Variable = Expression)
+  Variable:
+  $109: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fc170d600
+  Expression:
+  $118: PrimitiveCast type=71
+    Argument:
+    $120: LocalVariable named idx:277144@0x19fc170d580
+$129: Let (Variable = Expression)
+  Variable:
+  $138: LocalVariable named idx:277276@0x19fc170d680
+  Expression:
+  $147: DynamicCast to BP_AISmallShip_StandardHull_Art_C@0x19e13f372c0 of expr:
+  $156: Context
+    ObjectExpression:
+    $157: LocalVariable named idx:277144@0x19fc170d580
+    SkipBytes: 0x9
+    RValueProperty: ChildActor@0x19e4d3359f0
+    ContextExpression:
+    $178: InstanceVariable named ChildActor@0x19e4d3359f0
+$187: Let (Variable = Expression)
+  Variable:
+  $196: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fc170d700
+  Expression:
+  $205: PrimitiveCast type=71
+    Argument:
+    $207: LocalVariable named idx:277276@0x19fc170d680
+$216: JumpIfNot -> 0xf9, cond:
+  $221: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fc170d700
+$230: LetObj (Variable = Expression)
+  Variable:
+  $231: InstanceVariable named idx:277157@0x19fc170e780
+  Expression:
+  $240: LocalVariable named idx:277276@0x19fc170d680
+$249: Return expression:
+  $250: Nothing
+$251: EndOfScript
+
+=== BP_AISmallShipTemplate_C::fn_idx_277149 (137 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fc170d780
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19fc170d780
+    ContextExpression:
+    $32: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $41: InstanceVariable named idx:277157@0x19fc170e780
+      $50: EndFunctionParms
+    )
+$51: JumpIfNot -> 0x73, cond:
+  $56: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fc170d780
+$65: Context
+  ObjectExpression:
+  $66: InstanceVariable named idx:277157@0x19fc170e780
+  SkipBytes: 0x17
+  RValueProperty: (null)
+  ContextExpression:
+  $87: VirtualFunction call "SetSailColour" (
+    $100: InstanceVariable named SailData@0x19fc170e880
+    $109: EndFunctionParms
+  )
+$110: Jump to offset 0x86
+$115: VirtualFunction call "idx:277155" (
+  $128: EndFunctionParms
+)
+$129: Jump to offset 0x41
+$134: Return expression:
+  $135: Nothing
+$136: EndOfScript
+
+=== BP_AISmallShipTemplate_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_AISmallShipTemplate_C::fn_idx_277151 (22 bytes) ===
+$0: VirtualFunction call "idx:277275" (
+  $13: literal int32 76
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_AISmallShipTemplate_C::OnShipSurface (22 bytes) ===
+$0: VirtualFunction call "idx:277275" (
+  $13: literal int32 213
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_AISmallShipTemplate_C::fn_idx_277150 (22 bytes) ===
+$0: VirtualFunction call "idx:277275" (
+  $13: literal int32 232
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_AISmallShipTemplate_C::OnShipDive (22 bytes) ===
+$0: VirtualFunction call "idx:277275" (
+  $13: literal int32 333
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_AISmallShipTemplate_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "idx:277275" (
+  $13: literal int32 352
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_AISmallShipTemplate_C::SetCursedCrewCustomisationProperties (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=idx:277145@0x19fc170d880
+  Expression:
+  $9: LocalOutVariable named SailData@0x19fc170d800
+$18: VirtualFunction call "idx:277275" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_AISmallShipTemplate_C::fn_idx_277275 (369 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fba781650
+$10: LetBool (Variable = Expression)
+  Variable:
+  $11: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue@0x19fc170d900
+  Expression:
+  $20: FinalFunction target=FlushNetDormancy@0x19e4cd61090 (
+    $29: EndFunctionParms
+  )
+$30: Let (Variable = Expression)
+  Variable:
+  $39: InstanceVariable named SailData@0x19fc170e880
+  Expression:
+  $48: LocalVariable named idx:277145@0x19fc170d880
+$57: VirtualFunction call "idx:277149" (
+  $70: EndFunctionParms
+)
+$71: Jump to offset 0x16e
+$76: Context
+  ObjectExpression:
+  $77: InstanceVariable named idx:277157@0x19fc170e780
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $98: VirtualFunction call "StartWetEffect" (
+    $111: EndFunctionParms
+  )
+$112: Let (Variable = Expression)
+  Variable:
+  $121: LocalVariable named CallFunc_WwiseEmitterComponentPostEvent_ReturnValue@0x19fba7816c0
+  Expression:
+  $130: Context
+    ObjectExpression:
+    $131: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x19e4d9e1550
+    SkipBytes: 0x38
+    RValueProperty: CallFunc_WwiseEmitterComponentPostEvent_ReturnValue@0x19fba7816c0
+    ContextExpression:
+    $152: FinalFunction target=WwiseEmitterComponentPostEvent@0x19e4d3fdca0 (
+      $161: InstanceVariable named idx:277130@0x19fc170dc80
+      $170: ObjectConst idx:277277@0x19fbf157bc0
+      $179: literal byte 2
+      $181: literal name "None"
+      $194: literal name "None"
+      $207: EndFunctionParms
+    )
+$208: Jump to offset 0x16e
+$213: VirtualFunction call "idx:277151" (
+  $226: EndFunctionParms
+)
+$227: Jump to offset 0x16e
+$232: Let (Variable = Expression)
+  Variable:
+  $241: LocalVariable named CallFunc_WwiseEmitterComponentPostEvent_ReturnValue2@0x19fba781730
+  Expression:
+  $250: Context
+    ObjectExpression:
+    $251: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x19e4d9e1550
+    SkipBytes: 0x38
+    RValueProperty: CallFunc_WwiseEmitterComponentPostEvent_ReturnValue2@0x19fba781730
+    ContextExpression:
+    $272: FinalFunction target=WwiseEmitterComponentPostEvent@0x19e4d3fdca0 (
+      $281: InstanceVariable named idx:277130@0x19fc170dc80
+      $290: ObjectConst idx:277278@0x19fbf157ad0
+      $299: literal byte 2
+      $301: literal name "None"
+      $314: literal name "None"
+      $327: EndFunctionParms
+    )
+$328: Jump to offset 0x16e
+$333: VirtualFunction call "idx:277150" (
+  $346: EndFunctionParms
+)
+$347: Jump to offset 0x16e
+$352: VirtualFunction call "idx:277155" (
+  $365: EndFunctionParms
+)
+$366: Return expression:
+  $367: Nothing
+$368: EndOfScript

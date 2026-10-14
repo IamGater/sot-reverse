@@ -1,0 +1,146 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/CompanyTales/MerchantAlliance/Rank0_Fauna/bp_ct_fauna_addcontract -> BP_CT_Fauna_AddContract_C
+
+=== BP_CT_Fauna_AddContract_C::OnBeginCustom (656 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_GetService_ReturnValue@0x19fc1821900
+  Expression:
+  $10: FinalFunction target=GetService@0x19e4cda5b60 (
+    $19: ObjectConst TaleQuestMerchantContractsService@0x19e4c6c5940
+    $28: EndFunctionParms
+  )
+$29: Let (Variable = Expression)
+  Variable:
+  $38: LocalVariable named idx:282456@0x19fc1821b00
+  Expression:
+  $47: DynamicCast to TaleQuestMerchantContractsService@0x19e4c6c5940 of expr:
+  $56: LocalVariable named CallFunc_GetService_ReturnValue@0x19fc1821900
+$65: Let (Variable = Expression)
+  Variable:
+  $74: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fc1821a00
+  Expression:
+  $83: PrimitiveCast type=71
+    Argument:
+    $85: LocalVariable named idx:282456@0x19fc1821b00
+$94: JumpIfNot -> 0x259, cond:
+  $99: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fc1821a00
+$108: Let (Variable = Expression)
+  Variable:
+  $117: StructMemberContext prop=RewardId@0x19e4cda7300
+    Expression to struct:
+    $126: LocalVariable named idx:282459@0x19fc1821780
+  Expression:
+  $135: literal name "CT_MA_Rank0_Fauna"
+$148: LetObj (Variable = Expression)
+  Variable:
+  $149: StructMemberContext prop=ItemDesc@0x19e4cda7370
+    Expression to struct:
+    $158: LocalVariable named idx:282457@0x19fc1821980
+  Expression:
+  $167: ObjectConst BP_MerchantCrate_ChickenCrate_Desc_C@0x19f27be9d80
+$176: Let (Variable = Expression)
+  Variable:
+  $185: StructMemberContext prop=HandInOnTimeRewardId@0x19e4cda71e0
+    Expression to struct:
+    $194: LocalVariable named idx:282457@0x19fc1821980
+  Expression:
+  $203: LocalVariable named idx:282459@0x19fc1821780
+$212: SetArray
+  $213: LocalVariable named K2Node_MakeArray_Array@0x19fc1821c00
+  $222: LocalVariable named idx:282457@0x19fc1821980
+  $231: EndArray
+$232: LetObj (Variable = Expression)
+  Variable:
+  $233: StructMemberContext prop=AllocatedCrate@0x19e4cda73f0
+    Expression to struct:
+    $242: LocalVariable named idx:282458@0x19fc1821a80
+  Expression:
+  $251: ObjectConst BP_MerchantCrate_ChickenCrate_Desc_C@0x19f27be9d80
+$260: Let (Variable = Expression)
+  Variable:
+  $269: StructMemberContext prop=ItemData@0x19e4cda7040
+    Expression to struct:
+    $278: LocalVariable named idx:282458@0x19fc1821a80
+  Expression:
+  $287: LocalVariable named K2Node_MakeArray_Array@0x19fc1821c00
+$296: LetObj (Variable = Expression)
+  Variable:
+  $297: StructMemberContext prop=FaunaSpecies@0x19e4cda6fc0
+    Expression to struct:
+    $306: LocalVariable named idx:282458@0x19fc1821a80
+  Expression:
+  $315: ObjectConst FaunaSpecies_Chicken_C@0x19f847bad40
+$324: LetObj (Variable = Expression)
+  Variable:
+  $325: StructMemberContext prop=FaunaBreed@0x19e4cda6f40
+    Expression to struct:
+    $334: LocalVariable named idx:282458@0x19fc1821a80
+  Expression:
+  $343: NoObject
+$344: Let (Variable = Expression)
+  Variable:
+  $353: StructMemberContext prop=Id@0x19e4cda7470
+    Expression to struct:
+    $362: LocalVariable named idx:282460@0x19fc1821800
+  Expression:
+  $371: literal int32 0
+$376: Let (Variable = Expression)
+  Variable:
+  $385: StructMemberContext prop=Item@0x19e4cda6e20
+    Expression to struct:
+    $394: LocalVariable named idx:282460@0x19fc1821800
+  Expression:
+  $403: LocalVariable named idx:282458@0x19fc1821a80
+$412: Let (Variable = Expression)
+  Variable:
+  $421: StructMemberContext prop=NumToDeliver@0x19e4cda6db0
+    Expression to struct:
+    $430: LocalVariable named idx:282460@0x19fc1821800
+  Expression:
+  $439: literal int32 1
+$444: Let (Variable = Expression)
+  Variable:
+  $453: StructMemberContext prop=NumToAllocate@0x19e4cda6d40
+    Expression to struct:
+    $462: LocalVariable named idx:282460@0x19fc1821800
+  Expression:
+  $471: literal int32 1
+$476: SetArray
+  $477: LocalVariable named K2Node_MakeArray_Array2@0x19fc1821b80
+  $486: LocalVariable named idx:282460@0x19fc1821800
+  $495: EndArray
+$496: Let (Variable = Expression)
+  Variable:
+  $505: LocalVariable named idx:282396@0x19fc1821880
+  Expression:
+  $514: Context
+    ObjectExpression:
+    $515: LocalVariable named idx:282456@0x19fc1821b00
+    SkipBytes: 0x21
+    RValueProperty: idx:282396@0x19fc1821880
+    ContextExpression:
+    $536: FinalFunction target=AddContract@0x19e4d4b7ba0 (
+      $545: LocalVariable named K2Node_MakeArray_Array2@0x19fc1821b80
+      $554: LocalVariable named idx:282455@0x19fcdbbbec0
+      $563: literal float 1440
+      $568: EndFunctionParms
+    )
+$569: Let (Variable = Expression)
+  Variable:
+  $578: LocalOutVariable named idx:282397@0x19fc1821700
+  Expression:
+  $587: LocalVariable named idx:282396@0x19fc1821880
+$596: Jump to offset 0x28d
+$601: Let (Variable = Expression)
+  Variable:
+  $610: LocalOutVariable named idx:282397@0x19fc1821700
+  Expression:
+  $619: literal struct Guid@0x19e4cd56ef0 (size 16)
+    $632: literal int32 0
+    $637: literal int32 0
+    $642: literal int32 0
+    $647: literal int32 0
+    $652: EndStructConst
+$653: Return expression:
+  $654: Nothing
+$655: EndOfScript

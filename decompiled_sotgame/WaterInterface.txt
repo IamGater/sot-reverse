@@ -1,0 +1,688 @@
+// Class: WaterInterface (9 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+WaterInterface::GetActorWaterInformation @ RVA 0x3041010 EA 0x7FF6F6A61010
+======================================================================
+_OWORD *__fastcall sub_7FF6F6A61010(__int64 a1, _QWORD *a2, _OWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  _OWORD *result; // rax
+  _BYTE v10[24]; // [rsp+20h] [rbp-18h] BYREF
+  __int64 v11; // [rsp+40h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v7 = a2[4];
+  v8 = v11;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (_OWORD *)(*(__int64 (__fastcall **)(__int64, _BYTE *, __int64))(*(_QWORD *)a1 + 128LL))(a1, v10, v8);
+  *a3 = *result;
+  return result;
+}
+
+
+======================================================================
+WaterInterface::GetActorWaterPlane @ RVA 0x30410B0 EA 0x7FF6F6A610B0
+======================================================================
+_OWORD *__fastcall sub_7FF6F6A610B0(__int64 a1, _QWORD *a2, _OWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  _OWORD *result; // rax
+  _BYTE v10[56]; // [rsp+20h] [rbp-38h] BYREF
+  __int64 v11; // [rsp+60h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v7 = a2[4];
+  v8 = v11;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (_OWORD *)(*(__int64 (__fastcall **)(__int64, _BYTE *, __int64))(*(_QWORD *)a1 + 120LL))(a1, v10, v8);
+  *a3 = *result;
+  a3[1] = result[1];
+  a3[2] = result[2];
+  return result;
+}
+
+
+======================================================================
+WaterInterface::GetWaterHeight @ RVA 0x3041350 EA 0x7FF6F6A61350
+======================================================================
+__int64 __fastcall sub_7FF6F6A61350(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  _BYTE *v7; // rax
+  _BYTE *v8; // rsi
+  bool v9; // bp
+  int *v10; // rcx
+  __int64 v11; // r8
+  __int64 v12; // rax
+  __int64 result; // rax
+  _BYTE v14[56]; // [rsp+30h] [rbp-38h] BYREF
+  int v15; // [rsp+70h] [rbp+8h] BYREF
+  int v16; // [rsp+78h] [rbp+10h] BYREF
+  __int64 v17; // [rsp+80h] [rbp+18h] BYREF
+
+  v3 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v14);
+  }
+  v7 = (_BYTE *)a2[7];
+  v8 = v14;
+  v17 = 0;
+  if ( v7 )
+    v8 = v7;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v16 = 0;
+  v9 = v15 != 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v10 = &v16;
+  v11 = v17;
+  if ( a2[7] )
+    v10 = (int *)a2[7];
+  v12 = a2[4];
+  LOBYTE(v3) = v12 != 0;
+  a2[4] = v12 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, _BYTE *, __int64, bool, int *))(*(_QWORD *)a1 + 16LL))(
+             a1,
+             v8,
+             v11,
+             v9,
+             v10);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+WaterInterface::GetWaterHeightsBatched @ RVA 0x30416B0 EA 0x7FF6F6A616B0
+======================================================================
+// Hidden C++ exception states: #wind=4
+__int64 __fastcall sub_7FF6F6A616B0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 *v6; // rdi
+  __int64 *v7; // r9
+  __int64 result; // rax
+  __int64 v9[2]; // [rsp+28h] [rbp-40h] BYREF
+  __int64 v10[6]; // [rsp+38h] [rbp-30h] BYREF
+  __int64 v11; // [rsp+70h] [rbp+8h] BYREF
+
+  v10[0] = 0;
+  v10[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v6 = v10;
+  if ( a2[7] )
+    v6 = (__int64 *)a2[7];
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v9[0] = 0;
+  v9[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v7 = v9;
+  if ( a2[7] )
+    v7 = (__int64 *)a2[7];
+  a2[4] += a2[4] != 0;
+  result = (*(__int64 (__fastcall **)(__int64, __int64 *, __int64, __int64 *, __int64))(*(_QWORD *)a1 + 72LL))(
+             a1,
+             v6,
+             v11,
+             v7,
+             -2);
+  *a3 = result;
+  if ( v9[0] )
+  {
+    result = sub_7FF6F4DED1F0(v9[0]);
+    v9[0] = 0;
+  }
+  if ( v10[0] )
+    return sub_7FF6F4DED1F0(v10[0]);
+  return result;
+}
+
+
+======================================================================
+WaterInterface::GetWaterHeightWithScaledChoppyness @ RVA 0x30414D0 EA 0x7FF6F6A614D0
+======================================================================
+__int64 __fastcall sub_7FF6F6A614D0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  _BYTE *v7; // rax
+  _BYTE *v8; // rbp
+  bool v9; // r14
+  int *v10; // rax
+  int *v11; // rsi
+  __int64 v12; // rax
+  __int64 v13; // r8
+  __int64 result; // rax
+  int v15; // [rsp+28h] [rbp-50h]
+  _BYTE v16[72]; // [rsp+30h] [rbp-48h] BYREF
+  int v17; // [rsp+80h] [rbp+8h] BYREF
+  int v18; // [rsp+88h] [rbp+10h] BYREF
+  int v19; // [rsp+90h] [rbp+18h] BYREF
+  __int64 v20; // [rsp+98h] [rbp+20h] BYREF
+
+  v3 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v16);
+  }
+  v7 = (_BYTE *)a2[7];
+  v8 = v16;
+  v20 = 0;
+  if ( v7 )
+    v8 = v7;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v20);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v20);
+  }
+  v17 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v18 = 0;
+  v9 = v17 != 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  v10 = (int *)a2[7];
+  v11 = &v18;
+  v19 = 0;
+  if ( v10 )
+    v11 = v10;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  v12 = a2[4];
+  v13 = v20;
+  LOBYTE(v3) = v12 != 0;
+  v15 = v19;
+  a2[4] = v12 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, _BYTE *, __int64, bool, int *, int))(*(_QWORD *)a1 + 24LL))(
+             a1,
+             v8,
+             v13,
+             v9,
+             v11,
+             v15);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+WaterInterface::GetWaterInformation @ RVA 0x3041820 EA 0x7FF6F6A61820
+======================================================================
+__int64 __fastcall sub_7FF6F6A61820(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  _BYTE *v7; // rax
+  _BYTE *v8; // r15
+  int *v9; // rax
+  int *v10; // r14
+  char *v11; // rax
+  char *v12; // rbp
+  _BYTE *v13; // rax
+  _BYTE *v14; // rsi
+  __int64 v15; // rax
+  __int64 v16; // rdi
+  __int64 v17; // rax
+  __int64 result; // rax
+  _BYTE v19[16]; // [rsp+30h] [rbp-58h] BYREF
+  _BYTE v20[72]; // [rsp+40h] [rbp-48h] BYREF
+  int v21; // [rsp+90h] [rbp+8h] BYREF
+  __int64 v22; // [rsp+98h] [rbp+10h] BYREF
+  char v23; // [rsp+A0h] [rbp+18h] BYREF
+
+  v3 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v19);
+  }
+  v7 = (_BYTE *)a2[7];
+  v8 = v19;
+  a2[7] = 0;
+  if ( v7 )
+    v8 = v7;
+  v21 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v21);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v21);
+  }
+  v9 = (int *)a2[7];
+  v10 = &v21;
+  a2[7] = 0;
+  if ( v9 )
+    v10 = v9;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v23);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v23);
+  }
+  v11 = (char *)a2[7];
+  v12 = &v23;
+  a2[7] = 0;
+  if ( v11 )
+    v12 = v11;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v20);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v20);
+  }
+  v13 = (_BYTE *)a2[7];
+  v14 = v20;
+  v22 = 0;
+  if ( v13 )
+    v14 = v13;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v22);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v22);
+  }
+  v15 = a2[4];
+  LOBYTE(v3) = v15 != 0;
+  v16 = v15 + v3;
+  v17 = v22;
+  a2[4] = v16;
+  result = (*(__int64 (__fastcall **)(__int64, _BYTE *, int *, char *, _BYTE *, __int64))(*(_QWORD *)a1 + 40LL))(
+             a1,
+             v8,
+             v10,
+             v12,
+             v14,
+             v17);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+WaterInterface::GetWaterInformationBatched @ RVA 0x3041A20 EA 0x7FF6F6A61A20
+======================================================================
+// Hidden C++ exception states: #wind=8
+__int64 __fastcall sub_7FF6F6A61A20(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 *v6; // r15
+  __int64 *v7; // r14
+  __int64 *v8; // rsi
+  __int64 *v9; // rdi
+  __int64 result; // rax
+  __int64 v11[2]; // [rsp+38h] [rbp-48h] BYREF
+  __int64 v12[2]; // [rsp+48h] [rbp-38h] BYREF
+  __int64 v13[2]; // [rsp+58h] [rbp-28h] BYREF
+  __int64 v14[3]; // [rsp+68h] [rbp-18h] BYREF
+  __int64 v15; // [rsp+B0h] [rbp+30h] BYREF
+
+  v14[0] = 0;
+  v14[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v14);
+  }
+  v6 = v14;
+  if ( a2[7] )
+    v6 = (__int64 *)a2[7];
+  v13[0] = 0;
+  v13[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v13);
+  }
+  v7 = v13;
+  if ( a2[7] )
+    v7 = (__int64 *)a2[7];
+  v12[0] = 0;
+  v12[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v8 = v12;
+  if ( a2[7] )
+    v8 = (__int64 *)a2[7];
+  v11[0] = 0;
+  v11[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v9 = v11;
+  if ( a2[7] )
+    v9 = (__int64 *)a2[7];
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  a2[4] += a2[4] != 0;
+  result = (*(__int64 (__fastcall **)(__int64, __int64 *, __int64 *, __int64 *, __int64 *, __int64, __int64))(*(_QWORD *)a1 + 112LL))(
+             a1,
+             v6,
+             v7,
+             v8,
+             v9,
+             v15,
+             -2);
+  *a3 = result;
+  if ( v11[0] )
+  {
+    result = sub_7FF6F4DED1F0(v11[0]);
+    v11[0] = 0;
+  }
+  if ( v12[0] )
+  {
+    result = sub_7FF6F4DED1F0(v12[0]);
+    v12[0] = 0;
+  }
+  if ( v13[0] )
+  {
+    result = sub_7FF6F4DED1F0(v13[0]);
+    v13[0] = 0;
+  }
+  if ( v14[0] )
+    return sub_7FF6F4DED1F0(v14[0]);
+  return result;
+}
+
+
+======================================================================
+WaterInterface::GetWaterInformationWithScaledChoppyness @ RVA 0x3041C80 EA 0x7FF6F6A61C80
+======================================================================
+__int64 __fastcall sub_7FF6F6A61C80(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  _BYTE *v7; // rax
+  _BYTE *v8; // r15
+  int *v9; // rax
+  int *v10; // r14
+  char *v11; // rax
+  char *v12; // rbp
+  _BYTE *v13; // rax
+  _BYTE *v14; // rsi
+  __int64 v15; // rax
+  __int64 v16; // rdi
+  __int64 v17; // rax
+  __int64 result; // rax
+  int v19; // [rsp+30h] [rbp-78h]
+  _BYTE v20[16]; // [rsp+40h] [rbp-68h] BYREF
+  _BYTE v21[88]; // [rsp+50h] [rbp-58h] BYREF
+  int v22; // [rsp+B0h] [rbp+8h] BYREF
+  int v23; // [rsp+B8h] [rbp+10h] BYREF
+  __int64 v24; // [rsp+C0h] [rbp+18h] BYREF
+  char v25; // [rsp+C8h] [rbp+20h] BYREF
+
+  v3 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v20);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v20);
+  }
+  v7 = (_BYTE *)a2[7];
+  v8 = v20;
+  v22 = 0;
+  a2[7] = 0;
+  if ( v7 )
+    v8 = v7;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v22);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v22);
+  }
+  v9 = (int *)a2[7];
+  v10 = &v22;
+  a2[7] = 0;
+  if ( v9 )
+    v10 = v9;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v25);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v25);
+  }
+  v11 = (char *)a2[7];
+  v12 = &v25;
+  a2[7] = 0;
+  if ( v11 )
+    v12 = v11;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v21);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v21);
+  }
+  v13 = (_BYTE *)a2[7];
+  v14 = v21;
+  v24 = 0;
+  if ( v13 )
+    v14 = v13;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v24);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v24);
+  }
+  v23 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v23);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v23);
+  }
+  v15 = a2[4];
+  v19 = v23;
+  LOBYTE(v3) = v15 != 0;
+  v16 = v15 + v3;
+  v17 = v24;
+  a2[4] = v16;
+  result = (*(__int64 (__fastcall **)(__int64, _BYTE *, int *, char *, _BYTE *, __int64, int))(*(_QWORD *)a1 + 48LL))(
+             a1,
+             v8,
+             v10,
+             v12,
+             v14,
+             v17,
+             v19);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+WaterInterface::IsReadyToBeQueried @ RVA 0x3041F20 EA 0x7FF6F6A61F20
+======================================================================
+__int64 __fastcall sub_7FF6F6A61F20(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 136LL))(a1);
+  *a3 = result;
+  return result;
+}
+

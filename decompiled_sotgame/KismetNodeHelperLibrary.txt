@@ -1,0 +1,597 @@
+// Class: KismetNodeHelperLibrary (12 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+KismetNodeHelperLibrary::BitIsMarked @ RVA 0x2C202F0 EA 0x7FF6F66402F0
+======================================================================
+__int64 __fastcall sub_7FF6F66402F0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 result; // rax
+  unsigned int v10; // [rsp+38h] [rbp+10h] BYREF
+  unsigned int v11; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  v8 = v11;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F5E58840(v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+KismetNodeHelperLibrary::ClearAllBits @ RVA 0x2C27430 EA 0x7FF6F6647430
+======================================================================
+__int64 __fastcall sub_7FF6F6647430(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  int *v4; // rcx
+  __int64 v5; // rax
+  int v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v7 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = &v7;
+  if ( a2[7] )
+    v4 = (int *)a2[7];
+  v5 = a2[4];
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F5E5EA30(v4);
+}
+
+
+======================================================================
+KismetNodeHelperLibrary::ClearBit @ RVA 0x2C274B0 EA 0x7FF6F66474B0
+======================================================================
+__int64 __fastcall sub_7FF6F66474B0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  int *v4; // rax
+  int *v5; // rsi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+  unsigned int v10; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v4 = (int *)a2[7];
+  v5 = &v9;
+  v10 = 0;
+  if ( v4 )
+    v5 = v4;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  return sub_7FF6F5E5EA40(v5, v7);
+}
+
+
+======================================================================
+KismetNodeHelperLibrary::GetEnumeratorName @ RVA 0x2C32450 EA 0x7FF6F6652450
+======================================================================
+_QWORD *__fastcall sub_7FF6F6652450(__int64 a1, _QWORD *a2, _QWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // r8
+  __int64 v8; // rdx
+  _QWORD *result; // rax
+  unsigned __int8 v10; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+50h] [rbp+18h] BYREF
+  char v12; // [rsp+58h] [rbp+20h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  v8 = v11;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = (_QWORD *)sub_7FF6F5E692B0(&v12, v8, v7);
+  *a3 = *result;
+  return result;
+}
+
+
+======================================================================
+KismetNodeHelperLibrary::GetEnumeratorUserFriendlyName @ RVA 0x2C32510 EA 0x7FF6F6652510
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6652510(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 result; // rax
+  __int64 v6; // rbx
+  __int64 v7[4]; // [rsp+28h] [rbp-20h] BYREF
+  unsigned __int8 v8; // [rsp+58h] [rbp+10h] BYREF
+  __int64 v9; // [rsp+60h] [rbp+18h] BYREF
+
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  a2[4] += a2[4] != 0;
+  result = sub_7FF6F5E69320(v7, v9, v8);
+  v6 = result;
+  if ( a3 != result )
+  {
+    if ( *(_QWORD *)a3 )
+    {
+      sub_7FF6F4DED1F0(*(_QWORD *)a3);
+      if ( *(_QWORD *)a3 )
+        *(_QWORD *)a3 = 0;
+    }
+    *(_QWORD *)a3 = *(_QWORD *)v6;
+    *(_QWORD *)v6 = 0;
+    *(_DWORD *)(a3 + 8) = *(_DWORD *)(v6 + 8);
+    result = *(unsigned int *)(v6 + 12);
+    *(_DWORD *)(a3 + 12) = result;
+    *(_QWORD *)(v6 + 8) = 0;
+  }
+  if ( v7[0] )
+    return sub_7FF6F4DED1F0(v7[0]);
+  return result;
+}
+
+
+======================================================================
+KismetNodeHelperLibrary::GetFirstUnmarkedBit @ RVA 0x2C32630 EA 0x7FF6F6652630
+======================================================================
+__int64 __fastcall sub_7FF6F6652630(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // r8
+  __int64 v8; // rdx
+  __int64 v9; // rcx
+  __int64 result; // rax
+  unsigned int v11; // [rsp+48h] [rbp+10h] BYREF
+  unsigned int v12; // [rsp+50h] [rbp+18h] BYREF
+  unsigned int v13; // [rsp+58h] [rbp+20h] BYREF
+
+  v3 = 0;
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = a2[4];
+  v7 = v11;
+  v8 = v12;
+  v9 = v13;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F5E69590(v9, v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+KismetNodeHelperLibrary::GetRandomUnmarkedBit @ RVA 0x2C333E0 EA 0x7FF6F66533E0
+======================================================================
+__int64 __fastcall sub_7FF6F66533E0(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // r8
+  __int64 v8; // rdx
+  __int64 v9; // rcx
+  __int64 result; // rax
+  unsigned int v11; // [rsp+48h] [rbp+10h] BYREF
+  unsigned int v12; // [rsp+50h] [rbp+18h] BYREF
+  unsigned int v13; // [rsp+58h] [rbp+20h] BYREF
+
+  v3 = 0;
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = a2[4];
+  v7 = v11;
+  v8 = v12;
+  v9 = v13;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F5E6ACE0(v9, v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+KismetNodeHelperLibrary::GetUnmarkedBit @ RVA 0x2C33DC0 EA 0x7FF6F6653DC0
+======================================================================
+__int64 __fastcall sub_7FF6F6653DC0(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // r9
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rdx
+  __int64 v10; // rcx
+  __int64 result; // rax
+  _DWORD v12[10]; // [rsp+20h] [rbp-28h] BYREF
+  int v13; // [rsp+58h] [rbp+10h] BYREF
+  unsigned int v14; // [rsp+60h] [rbp+18h] BYREF
+  unsigned int v15; // [rsp+68h] [rbp+20h] BYREF
+
+  v3 = 0;
+  v12[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v7 = a2[4];
+  v8 = v14;
+  LOBYTE(v6) = v13 != 0;
+  v9 = v15;
+  v10 = v12[0];
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = sub_7FF6F5E6C440(v10, v9, v8, v6);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+KismetNodeHelperLibrary::GetValidIndex @ RVA 0x2C34080 EA 0x7FF6F6654080
+======================================================================
+__int64 __fastcall sub_7FF6F6654080(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 result; // rax
+  unsigned __int8 v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  v8 = v11;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F5E6C5D0(v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+KismetNodeHelperLibrary::HasMarkedBit @ RVA 0x2C351A0 EA 0x7FF6F66551A0
+======================================================================
+__int64 __fastcall sub_7FF6F66551A0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 result; // rax
+  unsigned int v10; // [rsp+38h] [rbp+10h] BYREF
+  unsigned int v11; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  v8 = v11;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F5E6D5D0(v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+KismetNodeHelperLibrary::HasUnmarkedBit @ RVA 0x2C35260 EA 0x7FF6F6655260
+======================================================================
+__int64 __fastcall sub_7FF6F6655260(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 result; // rax
+  unsigned int v10; // [rsp+38h] [rbp+10h] BYREF
+  unsigned int v11; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  v8 = v11;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F5E6D600(v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+KismetNodeHelperLibrary::MarkBit @ RVA 0x2C3F340 EA 0x7FF6F665F340
+======================================================================
+__int64 __fastcall sub_7FF6F665F340(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  int *v4; // rax
+  int *v5; // rsi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+  unsigned int v10; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v4 = (int *)a2[7];
+  v5 = &v9;
+  v10 = 0;
+  if ( v4 )
+    v5 = v4;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  return sub_7FF6F5E72AF0(v5, v7);
+}
+

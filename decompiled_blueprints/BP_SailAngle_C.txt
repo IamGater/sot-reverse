@@ -1,0 +1,60 @@
+// /Game/Blueprints/GameObjects/SailAngle/bp_sailangle_middlesail -> BP_SailAngle_C
+
+=== BP_SailAngle_C::GetDockableInfo (135 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: StructMemberContext prop=SocketName@0x19e4cf8c8f0
+    Expression to struct:
+    $18: LocalVariable named K2Node_MakeStruct_DockableInfo@0x19f5b673980
+  Expression:
+  $27: literal name "DockingPoint"
+$40: LetObj (Variable = Expression)
+  Variable:
+  $41: StructMemberContext prop=SceneComponent@0x19e4cf8c870
+    Expression to struct:
+    $50: LocalVariable named K2Node_MakeStruct_DockableInfo@0x19f5b673980
+  Expression:
+  $59: InstanceVariable named BaseMeshComponent@0x19e4d162a90
+$68: Let (Variable = Expression)
+  Variable:
+  $77: StructMemberContext prop=ShouldOverlapsUpdateOnParentUpdate@0x19e4cf8c7f0
+    Expression to struct:
+    $86: LocalVariable named K2Node_MakeStruct_DockableInfo@0x19f5b673980
+  Expression:
+  $95: literal byte 0
+$97: Let (Variable = Expression)
+  Variable:
+  $106: LocalOutVariable named ReturnValue@0x19f5b673900
+  Expression:
+  $115: LocalVariable named K2Node_MakeStruct_DockableInfo@0x19f5b673980
+$124: Return expression:
+  $125: LocalOutVariable named ReturnValue@0x19f5b673900
+$134: EndOfScript
+
+=== BP_SailAngle_C::UserConstructionScript (102 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_MakeVector_ReturnValue@0x19f5b673a00
+  Expression:
+  $18: CallMath target=MakeVector@0x19e4d38a910 (
+    $27: literal float 0
+    $32: literal float 0
+    $37: InstanceVariable named RopeLength@0x19e4d162b10
+    $46: EndFunctionParms
+  )
+$47: Context
+  ObjectExpression:
+  $48: InstanceVariable named TopMeshComponent@0x19e4d162a10
+  SkipBytes: 0x1e
+  RValueProperty: (null)
+  ContextExpression:
+  $69: FinalFunction target=K2_SetRelativeLocation@0x19e4d0717f0 (
+    $78: LocalVariable named CallFunc_MakeVector_ReturnValue@0x19f5b673a00
+    $87: False
+    $88: LocalVariable named CallFunc_K2_SetRelativeLocation_SweepHitResult@0x19f5b673a80
+    $97: False
+    $98: EndFunctionParms
+  )
+$99: Return expression:
+  $100: Nothing
+$101: EndOfScript

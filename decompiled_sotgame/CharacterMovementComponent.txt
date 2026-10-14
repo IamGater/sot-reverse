@@ -1,0 +1,1898 @@
+// Class: CharacterMovementComponent (37 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+CharacterMovementComponent::AddForce @ RVA 0x2B0F550 EA 0x7FF6F652F550
+======================================================================
+__int64 __fastcall sub_7FF6F652F550(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  __int64 v7; // [rsp+20h] [rbp-28h] BYREF
+  int v8; // [rsp+28h] [rbp-20h]
+  __int64 v9; // [rsp+30h] [rbp-18h] BYREF
+  int v10; // [rsp+38h] [rbp-10h]
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v9 = v7;
+  v5 = v4 + (v4 != 0);
+  LODWORD(v4) = v8;
+  a2[4] = v5;
+  v10 = v4;
+  return (*(__int64 (__fastcall **)(__int64, __int64 *))(*(_QWORD *)a1 + 1904LL))(a1, &v9);
+}
+
+
+======================================================================
+CharacterMovementComponent::AddImpulse @ RVA 0x2B0F5E0 EA 0x7FF6F652F5E0
+======================================================================
+__int64 __fastcall sub_7FF6F652F5E0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // r8
+  __int64 v6; // rax
+  __int64 v7; // rdi
+  bool v8; // zf
+  __int64 v10; // [rsp+20h] [rbp-28h] BYREF
+  int v11; // [rsp+28h] [rbp-20h]
+  __int64 v12; // [rsp+30h] [rbp-18h] BYREF
+  int v13; // [rsp+38h] [rbp-10h]
+  int v14; // [rsp+50h] [rbp+8h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v4 = 0;
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v6 = a2[4];
+  v12 = v10;
+  LOBYTE(v4) = v6 != 0;
+  v7 = v6 + v4;
+  LODWORD(v6) = v11;
+  v8 = v14 == 0;
+  a2[4] = v7;
+  v13 = v6;
+  LOBYTE(v5) = !v8;
+  return (*(__int64 (__fastcall **)(__int64, __int64 *, __int64))(*(_QWORD *)a1 + 1896LL))(a1, &v12, v5);
+}
+
+
+======================================================================
+CharacterMovementComponent::CalcVelocity @ RVA 0x2B11ED0 EA 0x7FF6F6531ED0
+======================================================================
+__int64 __fastcall sub_7FF6F6531ED0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  bool v6; // si
+  __int64 v7; // rdx
+  __int64 v8; // r8
+  __int64 v9; // rax
+  int v11; // [rsp+20h] [rbp-38h]
+  _DWORD v12[10]; // [rsp+30h] [rbp-28h] BYREF
+  int v13; // [rsp+60h] [rbp+8h] BYREF
+  int v14; // [rsp+68h] [rbp+10h] BYREF
+  int v15; // [rsp+78h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v12[0] = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  v2 = a2[4] == 0;
+  v15 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  v5 = 0;
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v14 = 0;
+  v6 = v13 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v9 = a2[4];
+  LOBYTE(v5) = v9 != 0;
+  v11 = v14;
+  a2[4] = v9 + v5;
+  return (*(__int64 (__fastcall **)(__int64, __int64, __int64, bool, int))(*(_QWORD *)a1 + 1640LL))(a1, v7, v8, v6, v11);
+}
+
+
+======================================================================
+CharacterMovementComponent::CapsuleTouched @ RVA 0x2B12130 EA 0x7FF6F6532130
+======================================================================
+__int64 __fastcall sub_7FF6F6532130(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  bool v5; // si
+  _DWORD *v6; // rcx
+  __int64 v7; // r9
+  __int64 v8; // r8
+  __int64 v9; // rdx
+  __int64 v10; // rax
+  bool v12; // [rsp+20h] [rbp-B8h]
+  _QWORD v13[2]; // [rsp+30h] [rbp-A8h] BYREF
+  _DWORD v14[38]; // [rsp+40h] [rbp-98h] BYREF
+  int v15; // [rsp+E0h] [rbp+8h] BYREF
+  unsigned int v16; // [rsp+E8h] [rbp+10h] BYREF
+  __int64 v17; // [rsp+F8h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v13[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v13);
+  }
+  v17 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v5 = v15 != 0;
+  memset(v14, 0, 0x80u);
+  v14[1] = 1065353216;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v14);
+  }
+  v6 = v14;
+  v7 = v16;
+  v8 = v17;
+  v9 = v13[0];
+  if ( a2[7] )
+    v6 = (_DWORD *)a2[7];
+  v10 = a2[4];
+  v12 = v5;
+  LOBYTE(v2) = v10 != 0;
+  a2[4] = v10 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64, __int64, __int64, bool, _DWORD *))(*(_QWORD *)a1 + 2128LL))(
+           a1,
+           v9,
+           v8,
+           v7,
+           v12,
+           v6);
+}
+
+
+======================================================================
+CharacterMovementComponent::ClientAckGoodMove @ RVA 0x2B123C0 EA 0x7FF6F65323C0
+======================================================================
+__int64 __fastcall sub_7FF6F65323C0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 2504LL))(a1);
+}
+
+
+======================================================================
+CharacterMovementComponent::ClientAdjustPosition @ RVA 0x2B12440 EA 0x7FF6F6532440
+======================================================================
+__int64 __fastcall sub_7FF6F6532440(_QWORD *a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  bool v6; // r14
+  bool v7; // si
+  __int64 v8; // rax
+  __int64 v9; // rdi
+  __int64 v10; // rax
+  bool v12; // [rsp+30h] [rbp-49h]
+  bool v13; // [rsp+38h] [rbp-41h]
+  char v14; // [rsp+40h] [rbp-39h]
+  int v15; // [rsp+50h] [rbp-29h] BYREF
+  __int64 v16; // [rsp+58h] [rbp-21h] BYREF
+  __int64 v17; // [rsp+60h] [rbp-19h] BYREF
+  __int64 v18; // [rsp+68h] [rbp-11h] BYREF
+  int v19; // [rsp+70h] [rbp-9h]
+  __int64 v20; // [rsp+78h] [rbp-1h] BYREF
+  int v21; // [rsp+80h] [rbp+7h]
+  __int64 v22; // [rsp+90h] [rbp+17h] BYREF
+  int v23; // [rsp+98h] [rbp+1Fh]
+  __int64 v24; // [rsp+A0h] [rbp+27h] BYREF
+  int v25; // [rsp+A8h] [rbp+2Fh]
+  char v26; // [rsp+E0h] [rbp+67h] BYREF
+  int v27; // [rsp+E8h] [rbp+6Fh] BYREF
+  int v28; // [rsp+F8h] [rbp+7Fh] BYREF
+
+  v2 = a2[4] == 0;
+  v15 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v20);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v20);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  v5 = 0;
+  v17 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v27 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v27);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v27);
+  }
+  v28 = 0;
+  v6 = v27 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v28);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v28);
+  }
+  v26 = 0;
+  v7 = v28 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v26);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v26);
+  }
+  v8 = a2[4];
+  v22 = v18;
+  LOBYTE(v5) = v8 != 0;
+  v9 = v8 + v5;
+  v24 = v20;
+  v23 = v19;
+  v25 = v21;
+  v14 = v26;
+  v10 = v16;
+  v13 = v7;
+  a2[4] = v9;
+  v12 = v6;
+  return (*(__int64 (__fastcall **)(_QWORD *, _QWORD, __int64 *, __int64 *, __int64, __int64, bool, bool, char))(*a1 + 2520LL))(
+           a1,
+           *a1,
+           &v24,
+           &v22,
+           v17,
+           v10,
+           v12,
+           v13,
+           v14);
+}
+
+
+======================================================================
+CharacterMovementComponent::ClientAdjustRootMotionPosition @ RVA 0x2B126B0 EA 0x7FF6F65326B0
+======================================================================
+__int64 __fastcall sub_7FF6F65326B0(int a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  char v6; // r14
+  char v7; // si
+  int v8; // edx
+  int v9; // r8d
+  __int64 v10; // rax
+  int v12; // [rsp+28h] [rbp-61h]
+  __int64 v13; // [rsp+30h] [rbp-59h]
+  __int64 v14; // [rsp+38h] [rbp-51h]
+  char v15; // [rsp+50h] [rbp-39h]
+  int v16; // [rsp+60h] [rbp-29h] BYREF
+  int v17; // [rsp+64h] [rbp-25h] BYREF
+  int v18; // [rsp+68h] [rbp-21h] BYREF
+  int v19; // [rsp+6Ch] [rbp-1Dh] BYREF
+  __int64 v20; // [rsp+70h] [rbp-19h] BYREF
+  __int64 v21; // [rsp+78h] [rbp-11h] BYREF
+  __int64 v22; // [rsp+80h] [rbp-9h] BYREF
+  int v23; // [rsp+88h] [rbp-1h]
+  __int64 v24; // [rsp+90h] [rbp+7h] BYREF
+  int v25; // [rsp+98h] [rbp+Fh]
+  __int64 v26; // [rsp+A0h] [rbp+17h] BYREF
+  int v27; // [rsp+A8h] [rbp+1Fh]
+  __int64 v28; // [rsp+B0h] [rbp+27h] BYREF
+  int v29; // [rsp+B8h] [rbp+2Fh]
+  char v30; // [rsp+F8h] [rbp+6Fh] BYREF
+  int v31; // [rsp+108h] [rbp+7Fh] BYREF
+
+  v2 = a2[4] == 0;
+  v19 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  v2 = a2[4] == 0;
+  v18 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v24);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v24);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v22);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v22);
+  }
+  v2 = a2[4] == 0;
+  v17 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  v5 = 0;
+  v21 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v21);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v21);
+  }
+  v20 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v20);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v20);
+  }
+  v31 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v31);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v31);
+  }
+  v16 = 0;
+  v6 = v31 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v30 = 0;
+  v7 = v16 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v30);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v30);
+  }
+  v10 = a2[4];
+  LOBYTE(v5) = v10 != 0;
+  v26 = v22;
+  v27 = v23;
+  v29 = v25;
+  v15 = v30;
+  v14 = v20;
+  v13 = v21;
+  v28 = v24;
+  v12 = v17;
+  a2[4] = v10 + v5;
+  return sub_7FF6F5CAA880(a1, v8, v9, (unsigned int)&v28, (__int64)&v26, v12, v13, v14, v6, v7, v15);
+}
+
+
+======================================================================
+CharacterMovementComponent::ClientVeryShortAdjustPosition @ RVA 0x2B129A0 EA 0x7FF6F65329A0
+======================================================================
+__int64 __fastcall sub_7FF6F65329A0(_QWORD *a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  bool v6; // r14
+  bool v7; // si
+  __int64 v8; // rax
+  __int64 v9; // r9
+  __int64 v10; // rdi
+  __int64 v11; // rax
+  bool v13; // [rsp+28h] [rbp-58h]
+  bool v14; // [rsp+30h] [rbp-50h]
+  char v15; // [rsp+38h] [rbp-48h]
+  int v16; // [rsp+40h] [rbp-40h] BYREF
+  __int64 v17; // [rsp+48h] [rbp-38h] BYREF
+  __int64 v18; // [rsp+50h] [rbp-30h] BYREF
+  __int64 v19; // [rsp+58h] [rbp-28h] BYREF
+  int v20; // [rsp+60h] [rbp-20h]
+  __int64 v21; // [rsp+70h] [rbp-10h] BYREF
+  int v22; // [rsp+78h] [rbp-8h]
+  char v23; // [rsp+B0h] [rbp+30h] BYREF
+  int v24; // [rsp+B8h] [rbp+38h] BYREF
+  int v25; // [rsp+C8h] [rbp+48h] BYREF
+
+  v2 = a2[4] == 0;
+  v16 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  v5 = 0;
+  v18 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  v17 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v24 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v24);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v24);
+  }
+  v25 = 0;
+  v6 = v24 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v25);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v25);
+  }
+  v23 = 0;
+  v7 = v25 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v23);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v23);
+  }
+  v8 = a2[4];
+  v9 = v18;
+  LOBYTE(v5) = v8 != 0;
+  v10 = v8 + v5;
+  v21 = v19;
+  v22 = v20;
+  v15 = v23;
+  v11 = v17;
+  a2[4] = v10;
+  v14 = v7;
+  v13 = v6;
+  return (*(__int64 (__fastcall **)(_QWORD *, _QWORD, __int64 *, __int64, __int64, bool, bool, char))(*a1 + 2536LL))(
+           a1,
+           *a1,
+           &v21,
+           v9,
+           v11,
+           v13,
+           v14,
+           v15);
+}
+
+
+======================================================================
+CharacterMovementComponent::DisableMovement @ RVA 0x2B132B0 EA 0x7FF6F65332B0
+======================================================================
+__int64 __fastcall sub_7FF6F65332B0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1424LL))(a1);
+}
+
+
+======================================================================
+CharacterMovementComponent::GetAnalogInputModifier @ RVA 0x2B14040 EA 0x7FF6F6534040
+======================================================================
+void __fastcall sub_7FF6F6534040(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F5CB3F00();
+}
+
+
+======================================================================
+CharacterMovementComponent::GetCharacterOwner @ RVA 0x2B14DF0 EA 0x7FF6F6534DF0
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+CharacterMovementComponent::GetCurrentAcceleration @ RVA 0x2B14E10 EA 0x7FF6F6534E10
+======================================================================
+__int64 __fastcall sub_7FF6F6534E10(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rax
+  __int64 result; // rax
+  _BYTE v6[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = sub_7FF6F5CB4790(a1, v6);
+  *(_QWORD *)a3 = *(_QWORD *)v4;
+  result = *(unsigned int *)(v4 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+CharacterMovementComponent::GetImpartedMovementBaseVelocity @ RVA 0x2B15710 EA 0x7FF6F6535710
+======================================================================
+__int64 __fastcall sub_7FF6F6535710(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rax
+  __int64 result; // rax
+  _BYTE v6[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = (*(__int64 (__fastcall **)(__int64, _BYTE *))(*(_QWORD *)a1 + 1552LL))(a1, v6);
+  *(_QWORD *)a3 = *(_QWORD *)v4;
+  result = *(unsigned int *)(v4 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+CharacterMovementComponent::GetMaxAcceleration @ RVA 0x2B164A0 EA 0x7FF6F65364A0
+======================================================================
+void __fastcall sub_7FF6F65364A0(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)a1 + 1672LL))(a1);
+}
+
+
+======================================================================
+CharacterMovementComponent::GetMaxJumpHeight @ RVA 0x2B165A0 EA 0x7FF6F65365A0
+======================================================================
+void __fastcall sub_7FF6F65365A0(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)a1 + 1648LL))(a1);
+}
+
+
+======================================================================
+CharacterMovementComponent::GetMovementBase @ RVA 0x2B166A0 EA 0x7FF6F65366A0
+======================================================================
+__int64 __fastcall sub_7FF6F65366A0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5CB6830();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+CharacterMovementComponent::GetNavMeshProjectionInterval @ RVA 0x2B166D0 EA 0x7FF6F65366D0
+======================================================================
+void __fastcall sub_7FF6F65366D0(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F5CB6C50();
+}
+
+
+======================================================================
+CharacterMovementComponent::GetPerchRadiusThreshold @ RVA 0x2B16B00 EA 0x7FF6F6536B00
+======================================================================
+void __fastcall sub_7FF6F6536B00(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F5CB6DD0();
+}
+
+
+======================================================================
+CharacterMovementComponent::GetValidPerchRadius @ RVA 0x2B17F60 EA 0x7FF6F6537F60
+======================================================================
+void __fastcall sub_7FF6F6537F60(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F5CB8030();
+}
+
+
+======================================================================
+CharacterMovementComponent::IsWalkable @ RVA 0x2B18870 EA 0x7FF6F6538870
+======================================================================
+__int64 __fastcall sub_7FF6F6538870(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v6; // rdi
+  _DWORD *v7; // rdx
+  __int64 v8; // rax
+  __int64 result; // rax
+  _DWORD v10[32]; // [rsp+20h] [rbp-88h] BYREF
+
+  memset(v10, 0, sizeof(v10));
+  v6 = 0;
+  v10[1] = 1065353216;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v7 = v10;
+  if ( a2[7] )
+    v7 = (_DWORD *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v6) = v8 != 0;
+  a2[4] = v8 + v6;
+  result = (*(__int64 (__fastcall **)(__int64, _DWORD *))(*(_QWORD *)a1 + 1944LL))(a1, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+CharacterMovementComponent::IsWalking @ RVA 0x2B18940 EA 0x7FF6F6538940
+======================================================================
+__int64 __fastcall sub_7FF6F6538940(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1320LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+CharacterMovementComponent::K2_GetModifiedMaxAcceleration @ RVA 0x2B18970 EA 0x7FF6F6538970
+======================================================================
+void __fastcall sub_7FF6F6538970(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)a1 + 1664LL))(a1);
+}
+
+
+======================================================================
+CharacterMovementComponent::K2_GetWalkableFloorAngle @ RVA 0x2B189B0 EA 0x7FF6F65389B0
+======================================================================
+void __fastcall sub_7FF6F65389B0(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F5CBA5C0();
+}
+
+
+======================================================================
+CharacterMovementComponent::K2_GetWalkableFloorZ @ RVA 0x2B189E0 EA 0x7FF6F65389E0
+======================================================================
+void __fastcall sub_7FF6F65389E0(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F5CBA5D0();
+}
+
+
+======================================================================
+CharacterMovementComponent::ServerMove @ RVA 0x2B1B520 EA 0x7FF6F653B520
+======================================================================
+__int64 __fastcall sub_7FF6F653B520(_QWORD *a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdi
+  __int64 v9; // rdx
+  char v10; // [rsp+20h] [rbp-49h]
+  int v11; // [rsp+20h] [rbp-49h]
+  char v12; // [rsp+28h] [rbp-41h]
+  int v13; // [rsp+28h] [rbp-41h]
+  int v14; // [rsp+30h] [rbp-39h]
+  __int64 v15; // [rsp+38h] [rbp-31h]
+  __int64 v16; // [rsp+40h] [rbp-29h]
+  char v17; // [rsp+48h] [rbp-21h]
+  int v18; // [rsp+48h] [rbp-21h]
+  int v19; // [rsp+50h] [rbp-19h] BYREF
+  int v20; // [rsp+54h] [rbp-15h] BYREF
+  __int64 v21; // [rsp+58h] [rbp-11h] BYREF
+  __int64 v22; // [rsp+60h] [rbp-9h] BYREF
+  __int64 v23; // [rsp+68h] [rbp-1h] BYREF
+  int v24; // [rsp+70h] [rbp+7h]
+  __int64 v25; // [rsp+78h] [rbp+Fh] BYREF
+  int v26; // [rsp+80h] [rbp+17h]
+  __int64 v27; // [rsp+90h] [rbp+27h] BYREF
+  int v28; // [rsp+98h] [rbp+2Fh]
+  __int64 v29; // [rsp+A0h] [rbp+37h] BYREF
+  int v30; // [rsp+A8h] [rbp+3Fh]
+  char v31; // [rsp+D0h] [rbp+67h] BYREF
+  char v32; // [rsp+D8h] [rbp+6Fh] BYREF
+  char v33; // [rsp+E8h] [rbp+7Fh] BYREF
+
+  v2 = a2[4] == 0;
+  v20 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v20);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v20);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v25);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v25);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v23);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v23);
+  }
+  v2 = a2[4] == 0;
+  v33 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v33);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v33);
+  }
+  v2 = a2[4] == 0;
+  v32 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v32);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v32);
+  }
+  v5 = 0;
+  v19 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  v22 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v22);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v22);
+  }
+  v21 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v21);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v21);
+  }
+  v31 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v31);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v31);
+  }
+  v6 = a2[4];
+  v27 = v23;
+  LOBYTE(v5) = v6 != 0;
+  v7 = v6 + v5;
+  v29 = v25;
+  v28 = v24;
+  v30 = v26;
+  v17 = v31;
+  v16 = v21;
+  v15 = v22;
+  v14 = v19;
+  v12 = v32;
+  LOBYTE(v6) = v33;
+  a2[4] = v7;
+  v10 = v6;
+  if ( !(*(unsigned __int8 (__fastcall **)(_QWORD *, _QWORD, __int64 *, __int64 *, char, char, int, __int64, __int64, char))(*a1 + 2416LL))(
+          a1,
+          *a1,
+          &v29,
+          &v27,
+          v10,
+          v12,
+          v14,
+          v15,
+          v16,
+          v17) )
+    return sub_7FF6F4F0F6D0(L"ServerMove_Validate");
+  v9 = *a1;
+  v30 = v24;
+  v28 = v26;
+  LOBYTE(v18) = v31;
+  LOBYTE(v13) = v32;
+  v29 = v23;
+  LOBYTE(v11) = v33;
+  v27 = v25;
+  return (*(__int64 (__fastcall **)(_QWORD *, __int64, __int64 *, __int64 *, int, int, int, __int64, __int64, int))(v9 + 2408))(
+           a1,
+           v9,
+           &v27,
+           &v29,
+           v11,
+           v13,
+           v19,
+           v22,
+           v21,
+           v18);
+}
+
+
+======================================================================
+CharacterMovementComponent::ServerMoveDual @ RVA 0x2B1B840 EA 0x7FF6F653B840
+======================================================================
+__int64 __fastcall sub_7FF6F653B840(__int64 *a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  __int64 v6; // rax
+  __int64 v7; // r9
+  __int64 v8; // rdi
+  __int64 v9; // xmm0_8
+  __int64 v10; // rdx
+  __int64 v12; // rdx
+  char v13; // [rsp+40h] [rbp-79h]
+  int v14; // [rsp+40h] [rbp-79h]
+  char v15; // [rsp+48h] [rbp-71h]
+  int v16; // [rsp+48h] [rbp-71h]
+  int v17; // [rsp+50h] [rbp-69h]
+  __int64 v18; // [rsp+58h] [rbp-61h]
+  __int64 v19; // [rsp+60h] [rbp-59h]
+  char v20; // [rsp+68h] [rbp-51h]
+  int v21; // [rsp+68h] [rbp-51h]
+  _BYTE v22[4]; // [rsp+70h] [rbp-49h] BYREF
+  int v23; // [rsp+74h] [rbp-45h] BYREF
+  int v24; // [rsp+78h] [rbp-41h] BYREF
+  int v25; // [rsp+7Ch] [rbp-3Dh] BYREF
+  int v26; // [rsp+80h] [rbp-39h] BYREF
+  __int64 v27; // [rsp+88h] [rbp-31h] BYREF
+  __int64 v28; // [rsp+90h] [rbp-29h] BYREF
+  __int64 v29; // [rsp+98h] [rbp-21h] BYREF
+  int v30; // [rsp+A0h] [rbp-19h]
+  __int64 v31; // [rsp+A8h] [rbp-11h] BYREF
+  int v32; // [rsp+B0h] [rbp-9h]
+  __int64 v33; // [rsp+B8h] [rbp-1h] BYREF
+  int v34; // [rsp+C0h] [rbp+7h]
+  __int64 v35; // [rsp+D0h] [rbp+17h] BYREF
+  int v36; // [rsp+D8h] [rbp+1Fh]
+  __int64 v37; // [rsp+E0h] [rbp+27h] BYREF
+  int v38; // [rsp+E8h] [rbp+2Fh]
+  __int64 v39; // [rsp+F0h] [rbp+37h] BYREF
+  int v40; // [rsp+F8h] [rbp+3Fh]
+  char v41; // [rsp+120h] [rbp+67h] BYREF
+  char v42; // [rsp+128h] [rbp+6Fh] BYREF
+  char v43; // [rsp+138h] [rbp+7Fh] BYREF
+
+  v2 = a2[4] == 0;
+  v26 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v26);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v26);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v33);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v33);
+  }
+  v2 = a2[4] == 0;
+  v22[0] = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v22);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v22);
+  }
+  v5 = 0;
+  v25 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v25);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v25);
+  }
+  v24 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v24);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v24);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v31);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v31);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v29);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v29);
+  }
+  v43 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v43);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v43);
+  }
+  v42 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v42);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v42);
+  }
+  v23 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v23);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v23);
+  }
+  v28 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v28);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v28);
+  }
+  v27 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v27);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v27);
+  }
+  v41 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v41);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v41);
+  }
+  v6 = a2[4];
+  v7 = v22[0];
+  LOBYTE(v5) = v6 != 0;
+  v8 = v6 + v5;
+  v35 = v29;
+  v36 = v30;
+  v38 = v32;
+  v40 = v34;
+  v20 = v41;
+  v19 = v27;
+  v18 = v28;
+  v17 = v23;
+  v15 = v42;
+  v13 = v43;
+  LODWORD(v6) = v25;
+  v37 = v31;
+  v9 = v33;
+  a2[4] = v8;
+  v10 = *a1;
+  v39 = v9;
+  if ( !(*(unsigned __int8 (__fastcall **)(__int64 *, __int64, __int64 *, __int64, _DWORD, int, __int64 *, __int64 *, char, char, int, __int64, __int64, char))(v10 + 2440))(
+          a1,
+          v10,
+          &v39,
+          v7,
+          v6,
+          v24,
+          &v37,
+          &v35,
+          v13,
+          v15,
+          v17,
+          v18,
+          v19,
+          v20) )
+    return sub_7FF6F4F0F6D0(L"ServerMoveDual_Validate");
+  v12 = *a1;
+  v40 = v30;
+  v38 = v32;
+  v36 = v34;
+  LOBYTE(v21) = v41;
+  LOBYTE(v16) = v42;
+  LOBYTE(v14) = v43;
+  v39 = v29;
+  v37 = v31;
+  v35 = v33;
+  return (*(__int64 (__fastcall **)(__int64 *, __int64, __int64 *, _QWORD, int, int, __int64 *, __int64 *, int, int, int, __int64, __int64, int))(v12 + 2432))(
+           a1,
+           v12,
+           &v35,
+           v22[0],
+           v25,
+           v24,
+           &v37,
+           &v39,
+           v14,
+           v16,
+           v23,
+           v28,
+           v27,
+           v21);
+}
+
+
+======================================================================
+CharacterMovementComponent::ServerMoveDualHybridRootMotion @ RVA 0x2B1BCA0 EA 0x7FF6F653BCA0
+======================================================================
+__int64 __fastcall sub_7FF6F653BCA0(__int64 *a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  __int64 v6; // rax
+  __int64 v7; // r9
+  __int64 v8; // rdi
+  __int64 v9; // xmm0_8
+  __int64 v10; // rdx
+  __int64 v12; // rdx
+  char v13; // [rsp+40h] [rbp-79h]
+  int v14; // [rsp+40h] [rbp-79h]
+  char v15; // [rsp+48h] [rbp-71h]
+  int v16; // [rsp+48h] [rbp-71h]
+  int v17; // [rsp+50h] [rbp-69h]
+  __int64 v18; // [rsp+58h] [rbp-61h]
+  __int64 v19; // [rsp+60h] [rbp-59h]
+  char v20; // [rsp+68h] [rbp-51h]
+  int v21; // [rsp+68h] [rbp-51h]
+  _BYTE v22[4]; // [rsp+70h] [rbp-49h] BYREF
+  int v23; // [rsp+74h] [rbp-45h] BYREF
+  int v24; // [rsp+78h] [rbp-41h] BYREF
+  int v25; // [rsp+7Ch] [rbp-3Dh] BYREF
+  int v26; // [rsp+80h] [rbp-39h] BYREF
+  __int64 v27; // [rsp+88h] [rbp-31h] BYREF
+  __int64 v28; // [rsp+90h] [rbp-29h] BYREF
+  __int64 v29; // [rsp+98h] [rbp-21h] BYREF
+  int v30; // [rsp+A0h] [rbp-19h]
+  __int64 v31; // [rsp+A8h] [rbp-11h] BYREF
+  int v32; // [rsp+B0h] [rbp-9h]
+  __int64 v33; // [rsp+B8h] [rbp-1h] BYREF
+  int v34; // [rsp+C0h] [rbp+7h]
+  __int64 v35; // [rsp+D0h] [rbp+17h] BYREF
+  int v36; // [rsp+D8h] [rbp+1Fh]
+  __int64 v37; // [rsp+E0h] [rbp+27h] BYREF
+  int v38; // [rsp+E8h] [rbp+2Fh]
+  __int64 v39; // [rsp+F0h] [rbp+37h] BYREF
+  int v40; // [rsp+F8h] [rbp+3Fh]
+  char v41; // [rsp+120h] [rbp+67h] BYREF
+  char v42; // [rsp+128h] [rbp+6Fh] BYREF
+  char v43; // [rsp+138h] [rbp+7Fh] BYREF
+
+  v2 = a2[4] == 0;
+  v26 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v26);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v26);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v33);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v33);
+  }
+  v2 = a2[4] == 0;
+  v22[0] = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v22);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v22);
+  }
+  v5 = 0;
+  v25 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v25);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v25);
+  }
+  v24 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v24);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v24);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v31);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v31);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v29);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v29);
+  }
+  v43 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v43);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v43);
+  }
+  v42 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v42);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v42);
+  }
+  v23 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v23);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v23);
+  }
+  v28 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v28);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v28);
+  }
+  v27 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v27);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v27);
+  }
+  v41 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v41);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v41);
+  }
+  v6 = a2[4];
+  v7 = v22[0];
+  LOBYTE(v5) = v6 != 0;
+  v8 = v6 + v5;
+  v35 = v29;
+  v36 = v30;
+  v38 = v32;
+  v40 = v34;
+  v20 = v41;
+  v19 = v27;
+  v18 = v28;
+  v17 = v23;
+  v15 = v42;
+  v13 = v43;
+  LODWORD(v6) = v25;
+  v37 = v31;
+  v9 = v33;
+  a2[4] = v8;
+  v10 = *a1;
+  v39 = v9;
+  if ( !(*(unsigned __int8 (__fastcall **)(__int64 *, __int64, __int64 *, __int64, _DWORD, int, __int64 *, __int64 *, char, char, int, __int64, __int64, char))(v10 + 2464))(
+          a1,
+          v10,
+          &v39,
+          v7,
+          v6,
+          v24,
+          &v37,
+          &v35,
+          v13,
+          v15,
+          v17,
+          v18,
+          v19,
+          v20) )
+    return sub_7FF6F4F0F6D0(L"ServerMoveDualHybridRootMotion_Validate");
+  v12 = *a1;
+  v40 = v30;
+  v38 = v32;
+  v36 = v34;
+  LOBYTE(v21) = v41;
+  LOBYTE(v16) = v42;
+  LOBYTE(v14) = v43;
+  v39 = v29;
+  v37 = v31;
+  v35 = v33;
+  return (*(__int64 (__fastcall **)(__int64 *, __int64, __int64 *, _QWORD, int, int, __int64 *, __int64 *, int, int, int, __int64, __int64, int))(v12 + 2456))(
+           a1,
+           v12,
+           &v35,
+           v22[0],
+           v25,
+           v24,
+           &v37,
+           &v39,
+           v14,
+           v16,
+           v23,
+           v28,
+           v27,
+           v21);
+}
+
+
+======================================================================
+CharacterMovementComponent::ServerMoveOld @ RVA 0x2B1C100 EA 0x7FF6F653C100
+======================================================================
+__int64 __fastcall sub_7FF6F653C100(_QWORD *a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  __int64 v6; // rax
+  __int64 v7; // r9
+  __int64 v8; // rdi
+  __int64 v9; // rax
+  __int64 v11; // rdx
+  char v12; // [rsp+28h] [rbp-38h]
+  int v13; // [rsp+28h] [rbp-38h]
+  __int64 v14; // [rsp+30h] [rbp-30h] BYREF
+  __int64 v15; // [rsp+38h] [rbp-28h] BYREF
+  int v16; // [rsp+40h] [rbp-20h]
+  __int64 v17; // [rsp+50h] [rbp-10h] BYREF
+  int v18; // [rsp+58h] [rbp-8h]
+  char v19; // [rsp+80h] [rbp+20h] BYREF
+  int v20; // [rsp+88h] [rbp+28h] BYREF
+  __int64 v21; // [rsp+98h] [rbp+38h] BYREF
+
+  v2 = a2[4] == 0;
+  v20 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v20);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v20);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v5 = 0;
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v21 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v21);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v21);
+  }
+  v19 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  v6 = a2[4];
+  v7 = v14;
+  LOBYTE(v5) = v6 != 0;
+  v8 = v6 + v5;
+  v17 = v15;
+  v18 = v16;
+  v12 = v19;
+  v9 = v21;
+  a2[4] = v8;
+  if ( !(*(unsigned __int8 (__fastcall **)(_QWORD *, _QWORD, __int64 *, __int64, __int64, char))(*a1 + 2488LL))(
+          a1,
+          *a1,
+          &v17,
+          v7,
+          v9,
+          v12) )
+    return sub_7FF6F4F0F6D0(L"ServerMoveOld_Validate");
+  v11 = *a1;
+  v18 = v16;
+  LOBYTE(v13) = v19;
+  v17 = v15;
+  return (*(__int64 (__fastcall **)(_QWORD *, __int64, __int64 *, __int64, __int64, int))(v11 + 2480))(
+           a1,
+           v11,
+           &v17,
+           v14,
+           v21,
+           v13);
+}
+
+
+======================================================================
+CharacterMovementComponent::SetAvoidanceEnabled @ RVA 0x2B1C810 EA 0x7FF6F653C810
+======================================================================
+__int64 __fastcall sub_7FF6F653C810(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F5CCA000(a1, v5);
+}
+
+
+======================================================================
+CharacterMovementComponent::SetAvoidanceGroup @ RVA 0x2B1C8A0 EA 0x7FF6F653C8A0
+======================================================================
+__int64 __fastcall sub_7FF6F653C8A0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  unsigned int v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F5CCA090(a1, v6);
+}
+
+
+======================================================================
+CharacterMovementComponent::SetGroupsToAvoid @ RVA 0x2B1F710 EA 0x7FF6F653F710
+======================================================================
+__int64 __fastcall sub_7FF6F653F710(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  unsigned int v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F5CCAAB0(a1, v6);
+}
+
+
+======================================================================
+CharacterMovementComponent::SetGroupsToIgnore @ RVA 0x2B1F790 EA 0x7FF6F653F790
+======================================================================
+__int64 __fastcall sub_7FF6F653F790(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  unsigned int v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F5CCAAC0(a1, v6);
+}
+
+
+======================================================================
+CharacterMovementComponent::SetMovementMode @ RVA 0x2B203D0 EA 0x7FF6F65403D0
+======================================================================
+__int64 __fastcall sub_7FF6F65403D0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  __int64 v6; // r8
+  unsigned __int8 v8; // [rsp+30h] [rbp+8h] BYREF
+  unsigned __int8 v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v8 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  v2 = a2[4] == 0;
+  v9 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  v5 = v8;
+  v6 = v9;
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64, __int64, __int64))(*(_QWORD *)a1 + 1392LL))(a1, v5, v6);
+}
+
+
+======================================================================
+CharacterMovementComponent::SetNavMeshProjectionInterval @ RVA 0x2B205F0 EA 0x7FF6F65405F0
+======================================================================
+__int64 __fastcall sub_7FF6F65405F0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5CCB530(a1);
+}
+
+
+======================================================================
+CharacterMovementComponent::SetWalkableFloorAngle @ RVA 0x2B22BF0 EA 0x7FF6F6542BF0
+======================================================================
+__int64 __fastcall sub_7FF6F6542BF0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5CCC3A0(a1);
+}
+
+
+======================================================================
+CharacterMovementComponent::SetWalkableFloorZ @ RVA 0x2B22C70 EA 0x7FF6F6542C70
+======================================================================
+__int64 __fastcall sub_7FF6F6542C70(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5CCC3E0(a1);
+}
+
+
+======================================================================
+CharacterMovementComponent::UpdateMaxNavMeshProjectionIntervalAndModifier @ RVA 0x2B25010 EA 0x7FF6F6545010
+======================================================================
+__int64 __fastcall sub_7FF6F6545010(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5CD30F0(a1);
+}
+

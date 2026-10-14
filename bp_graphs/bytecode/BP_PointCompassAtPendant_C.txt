@@ -1,0 +1,148 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_5_WildRose/bp_pointcompassatpendant -> BP_PointCompassAtPendant_C
+
+=== BP_PointCompassAtPendant_C::fn_idx_1828 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fcc5ac180
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fcc5ac080
+$18: VirtualFunction call "idx:284225" (
+  $31: literal int32 669
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_PointCompassAtPendant_C::fn_idx_284225 (677 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19e586bbec0
+$10: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $19: EndFunctionParms
+)
+$20: Jump to offset 0x2a2
+$25: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $34: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc5ac100
+  $43: EndFunctionParms
+)
+$44: FinalFunction target=ChangeCompassTargetByActor@0x19e4cda4ba0 (
+  $53: StructMemberContext prop=idx:284186@0x19f81ca0880
+    Expression to struct:
+    $62: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc5ac100
+  $71: literal byte 1
+  $73: EndFunctionParms
+)
+$74: Let (Variable = Expression)
+  Variable:
+  $83: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19fcc5ac200
+  Expression:
+  $92: Context
+    ObjectExpression:
+    $93: StructMemberContext prop=idx:284186@0x19f81ca0880
+      Expression to struct:
+      $102: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc5ac100
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetTransform_ReturnValue@0x19fcc5ac200
+    ContextExpression:
+    $123: FinalFunction target=GetTransform@0x19e4cd64700 (
+      $132: EndFunctionParms
+    )
+$133: Let (Variable = Expression)
+  Variable:
+  $142: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x19fcc5ac280
+  Expression:
+  $151: CallMath target=MakeTransform@0x19e4d38a650 (
+    $160: literal vector (0,0,0)
+    $173: literal rotation (0,0,0)
+    $186: literal vector (1,1,1)
+    $199: EndFunctionParms
+  )
+$200: Let (Variable = Expression)
+  Variable:
+  $209: LocalVariable named CallFunc_MakeTransform_ReturnValue2@0x19fcc5ac300
+  Expression:
+  $218: CallMath target=MakeTransform@0x19e4d38a650 (
+    $227: literal vector (21,-11.5,43)
+    $240: literal rotation (70,-80,89)
+    $253: literal vector (1,1,1)
+    $266: EndFunctionParms
+  )
+$267: Let (Variable = Expression)
+  Variable:
+  $276: LocalVariable named CallFunc_ComposeTransforms_ReturnValue@0x19fcc5ac380
+  Expression:
+  $285: CallMath target=ComposeTransforms@0x19e4d374640 (
+    $294: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19fcc5ac200
+    $303: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x19fcc5ac280
+    $312: EndFunctionParms
+  )
+$313: Let (Variable = Expression)
+  Variable:
+  $322: LocalVariable named idx:284223@0x19fcc5ac480
+  Expression:
+  $331: CallMath target=ComposeTransforms@0x19e4d374640 (
+    $340: LocalVariable named CallFunc_MakeTransform_ReturnValue2@0x19fcc5ac300
+    $349: LocalVariable named CallFunc_ComposeTransforms_ReturnValue@0x19fcc5ac380
+    $358: EndFunctionParms
+  )
+$359: LetObj (Variable = Expression)
+  Variable:
+  $360: LocalVariable named CallFunc_SpawnPhasedItem_ReturnValue@0x19fcc5ac500
+  Expression:
+  $369: FinalFunction target=SpawnPhasedItem@0x19e4cda9200 (
+    $378: InstanceVariable named idx:284211@0x19fcc5ac700
+    $387: LocalVariable named idx:284223@0x19fcc5ac480
+    $396: True
+    $397: True
+    $398: literal text (not decoded)
+    $399: literal ansi string "Rose's Pendant was lost"
+    $424: literal ansi string "8E4ACA4F42216923BF30648BF727F7A3_FailureMessage7"
+    $474: literal ansi string ""
+    $476: EndFunctionParms
+  )
+$477: Let (Variable = Expression)
+  Variable:
+  $486: LocalVariable named K2Node_DynamicCast_AsItem_Proxy@0x19fcc5ac580
+  Expression:
+  $495: DynamicCast to ItemProxy@0x19e4c38b980 of expr:
+  $504: LocalVariable named CallFunc_SpawnPhasedItem_ReturnValue@0x19fcc5ac500
+$513: Let (Variable = Expression)
+  Variable:
+  $522: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcc5ac600
+  Expression:
+  $531: PrimitiveCast type=71
+    Argument:
+    $533: LocalVariable named K2Node_DynamicCast_AsItem_Proxy@0x19fcc5ac580
+$542: JumpIfNot -> 0x2a2, cond:
+  $547: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcc5ac600
+$556: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $565: LocalVariable named CallFunc_GetVariables_OutStruct2@0x19fcc5ac400
+  $574: EndFunctionParms
+)
+$575: LetObj (Variable = Expression)
+  Variable:
+  $576: LocalVariable named CallFunc_GetItemInfo_ReturnValue@0x19fcc5ac680
+  Expression:
+  $585: Context
+    ObjectExpression:
+    $586: LocalVariable named K2Node_DynamicCast_AsItem_Proxy@0x19fcc5ac580
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetItemInfo_ReturnValue@0x19fcc5ac680
+    ContextExpression:
+    $607: FinalFunction target=GetItemInfo@0x19e4d108840 (
+      $616: EndFunctionParms
+    )
+$617: LetObj (Variable = Expression)
+  Variable:
+  $618: StructMemberContext prop=idx:284182@0x19f81ca0700
+    Expression to struct:
+    $627: LocalVariable named CallFunc_GetVariables_OutStruct2@0x19fcc5ac400
+  Expression:
+  $636: LocalVariable named CallFunc_GetItemInfo_ReturnValue@0x19fcc5ac680
+$645: FinalFunction target=SetVariables@0x19e4cda7cc0 (
+  $654: LocalVariable named CallFunc_GetVariables_OutStruct2@0x19fcc5ac400
+  $663: EndFunctionParms
+)
+$664: Jump to offset 0xa
+$669: Jump to offset 0x19
+$674: Return expression:
+  $675: Nothing
+$676: EndOfScript

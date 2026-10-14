@@ -1,0 +1,204 @@
+// /Game/Blueprints/Prompts/PromptConditionals/bp_prompt_maidenvoyage_cookingtutorial -> BP_Prompt_MaidenVoyage_CookingTutorial_C
+
+=== BP_Prompt_MaidenVoyage_CookingTutorial_C::fn_idx_275621 (295 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named K2Node_DynamicCast_AsWieldable_Ingestible@0x19fbd849f00
+  Expression:
+  $18: InterfaceToObjCast to WieldableIngestible@0x19e4c67fa40
+  $27: StructMemberContext prop=Object@0x19e4cfc2500
+    Expression to struct:
+    $36: LocalOutVariable named EventObjectWielded@0x19fbd849e80
+$45: Let (Variable = Expression)
+  Variable:
+  $54: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fbd849f80
+  Expression:
+  $63: PrimitiveCast type=71
+    Argument:
+    $65: LocalVariable named K2Node_DynamicCast_AsWieldable_Ingestible@0x19fbd849f00
+$74: JumpIfNot -> 0x124, cond:
+  $79: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fbd849f80
+$88: LetObj (Variable = Expression)
+  Variable:
+  $89: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x19fbd84a000
+  Expression:
+  $98: Context
+    ObjectExpression:
+    $99: ObjectConst Default__GameplayStatics@0x19e4d95eb20
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectClass_ReturnValue@0x19fbd84a000
+    ContextExpression:
+    $120: FinalFunction target=GetObjectClass@0x19e4d35dd20 (
+      $129: LocalVariable named K2Node_DynamicCast_AsWieldable_Ingestible@0x19fbd849f00
+      $138: EndFunctionParms
+    )
+$139: LetBool (Variable = Expression)
+  Variable:
+  $140: LocalVariable named CallFunc_NotEqual_ClassClass_ReturnValue@0x19fbd84a080
+  Expression:
+  $149: CallMath target=NotEqual_ClassClass@0x19e4d390950 (
+    $158: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x19fbd84a000
+    $167: ObjectConst BP_fod_BananaFresh_00_a_Wieldable_C@0x19f82ab8700
+    $176: EndFunctionParms
+  )
+$177: LetBool (Variable = Expression)
+  Variable:
+  $178: LocalVariable named CallFunc_NotEqual_ClassClass_ReturnValue2@0x19fbd84a100
+  Expression:
+  $187: CallMath target=NotEqual_ClassClass@0x19e4d390950 (
+    $196: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x19fbd84a000
+    $205: ObjectConst BP_fod_BananaBurned_00_a_Wieldable_C@0x19f82ab9240
+    $214: EndFunctionParms
+  )
+$215: LetBool (Variable = Expression)
+  Variable:
+  $216: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x19fbd84a180
+  Expression:
+  $225: CallMath target=BooleanAND@0x19e4d3710f0 (
+    $234: LocalVariable named CallFunc_NotEqual_ClassClass_ReturnValue@0x19fbd84a080
+    $243: LocalVariable named CallFunc_NotEqual_ClassClass_ReturnValue2@0x19fbd84a100
+    $252: EndFunctionParms
+  )
+$253: JumpIfNot -> 0x124, cond:
+  $258: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x19fbd84a180
+$267: LetBool (Variable = Expression)
+  Variable:
+  $268: InstanceVariable named idx:275623@0x19fbd84a600
+  Expression:
+  $277: True
+$278: VirtualFunction call "Evaluate" (
+  $291: EndFunctionParms
+)
+$292: Return expression:
+  $293: Nothing
+$294: EndOfScript
+
+=== BP_Prompt_MaidenVoyage_CookingTutorial_C::fn_idx_217670 (22 bytes) ===
+$0: VirtualFunction call "idx:275617" (
+  $13: literal int32 26
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_MaidenVoyage_CookingTutorial_C::fn_idx_14104 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_CharacterDispatcher2@0x19fbd84a480
+  Expression:
+  $9: LocalOutVariable named CharacterDispatcher@0x19fbd84a200
+$18: VirtualFunction call "idx:275617" (
+  $31: literal int32 232
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_MaidenVoyage_CookingTutorial_C::fn_idx_14107 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_CharacterDispatcher@0x19fbd84a500
+  Expression:
+  $9: LocalOutVariable named CharacterDispatcher@0x19fbd84a280
+$18: VirtualFunction call "idx:275617" (
+  $31: literal int32 331
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_MaidenVoyage_CookingTutorial_C::fn_idx_275620 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event@0x19fbd84a580
+  Expression:
+  $9: LocalVariable named Event@0x19fbd84a300
+$18: VirtualFunction call "idx:275617" (
+  $31: literal int32 336
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_MaidenVoyage_CookingTutorial_C::fn_idx_275617 (363 bytes) ===
+$0: FlowStack.Push(0x168)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x19fbf432290
+$15: FinalFunction target=DismissAllPrompts@0x19e4d4b4cc0 (
+  $24: EndFunctionParms
+)
+$25: PopExecutionFlow (jump to popped addr)
+$26: JumpIfNot -> 0x29, cond:
+  $31: InstanceVariable named idx:275619@0x19fbd84aa00
+$40: PopExecutionFlow (jump to popped addr)
+$41: PopExecutionFlowIfNot, cond:
+$42: InstanceVariable named idx:275623@0x19fbd84a600
+$51: FinalFunction target=SetPromptAs@0x19e4d4b5a00 (
+  $60: InstanceVariable named idx:275622@0x19fbd84a680
+  $69: EndFunctionParms
+)
+$70: LetBool (Variable = Expression)
+  Variable:
+  $71: InstanceVariable named idx:275619@0x19fbd84aa00
+  Expression:
+  $80: True
+$81: Context
+  ObjectExpression:
+  $82: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $103: FinalFunction target=Delay@0x19e4cd86d40 (
+    $112: Self
+    $113: literal float 8
+    $118: literal struct LatentActionInfo@0x19e4cd86e80 (size 32)
+      $131: literal CodeSkipSizeType 0xf
+      $136: literal int32 1
+      $141: literal name "idx:275617"
+      $154: Self
+      $155: EndStructConst
+    $156: EndFunctionParms
+  )
+$157: PopExecutionFlow (jump to popped addr)
+$158: VirtualFunction call "GetCharacterObjectMessageDispatcher" (
+  $171: LocalVariable named CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher@0x19fbd84a380
+  $180: EndFunctionParms
+)
+$181: Context
+  ObjectExpression:
+  $182: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $203: FinalFunction target=UnregisterEventFromHandle@0x19e4d411420 (
+    $212: LocalVariable named CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher@0x19fbd84a380
+    $221: InstanceVariable named idx:275618@0x19fbd84a700
+    $230: EndFunctionParms
+  )
+$231: PopExecutionFlow (jump to popped addr)
+$232: VirtualFunction call "GetCharacterObjectMessageDispatcher" (
+  $245: LocalVariable named CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher2@0x19fbd84a400
+  $254: EndFunctionParms
+)
+$255: Context
+  ObjectExpression:
+  $256: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x35
+  RValueProperty: (null)
+  ContextExpression:
+  $277: FinalFunction target=RegisterEventFromHandle@0x19e4d410c00 (
+    $286: LocalVariable named CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher2@0x19fbd84a400
+    $295: InstanceVariable named idx:275618@0x19fbd84a700
+    $304: Self
+    $305: literal ansi string "OnHoldRawFood"
+    $320: ObjectConst EventObjectWielded@0x19e4cfc2460
+    $329: EndFunctionParms
+  )
+$330: PopExecutionFlow (jump to popped addr)
+$331: Jump to offset 0x9e
+$336: VirtualFunction call "idx:275621" (
+  $349: LocalVariable named K2Node_CustomEvent_Event@0x19fbd84a580
+  $358: EndFunctionParms
+)
+$359: PopExecutionFlow (jump to popped addr)
+$360: Return expression:
+  $361: Nothing
+$362: EndOfScript

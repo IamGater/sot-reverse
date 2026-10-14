@@ -1,0 +1,256 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_2_TheCursedRogue/bp_cursedrogue_waitforcollectorchestunlock -> BP_CursedRogue_WaitForCollectorChestUnlock_C
+
+=== BP_CursedRogue_WaitForCollectorChestUnlock_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fce7fca80
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fce7fca00
+$18: VirtualFunction call "idx:283774" (
+  $31: literal int32 137
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_CursedRogue_WaitForCollectorChestUnlock_C::fn_idx_283776 (22 bytes) ===
+$0: VirtualFunction call "idx:283774" (
+  $13: literal int32 914
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_CursedRogue_WaitForCollectorChestUnlock_C::fn_idx_283774 (1018 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19e586bfea0
+$10: Context
+  ObjectExpression:
+  $11: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x64
+  RValueProperty: (null)
+  ContextExpression:
+  $32: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $41: NoObject
+    $42: literal ansi string "Failed to find or validate a locked component!"
+    $90: False
+    $91: True
+    $92: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $105: literal float 1
+      $110: literal float 0.705469012260437
+      $115: literal float 0
+      $120: literal float 1
+      $125: EndStructConst
+    $126: literal float 10
+    $131: EndFunctionParms
+  )
+$132: Jump to offset 0x3f7
+$137: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $146: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce7fcb00
+  $155: EndFunctionParms
+)
+$156: Let (Variable = Expression)
+  Variable:
+  $165: LocalVariable named idx:283775@0x19fce7fcc00
+  Expression:
+  $174: DynamicCast to CollectorsChestItemInfo@0x19e4c6a63c0 of expr:
+  $183: StructMemberContext prop=idx:283670@0x19fce0d5780
+    Expression to struct:
+    $192: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce7fcb00
+$201: Let (Variable = Expression)
+  Variable:
+  $210: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fce7fcc80
+  Expression:
+  $219: PrimitiveCast type=71
+    Argument:
+    $221: LocalVariable named idx:283775@0x19fce7fcc00
+$230: JumpIfNot -> 0x335, cond:
+  $235: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fce7fcc80
+$244: LetObj (Variable = Expression)
+  Variable:
+  $245: LocalVariable named CallFunc_GetItem_ReturnValue@0x19fce7fcd00
+  Expression:
+  $254: Context
+    ObjectExpression:
+    $255: LocalVariable named idx:283775@0x19fce7fcc00
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetItem_ReturnValue@0x19fce7fcd00
+    ContextExpression:
+    $276: FinalFunction target=GetItem@0x19e4d10a9b0 (
+      $285: EndFunctionParms
+    )
+$286: Let (Variable = Expression)
+  Variable:
+  $295: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fce7fd000
+  Expression:
+  $304: Context
+    ObjectExpression:
+    $305: LocalVariable named CallFunc_GetItem_ReturnValue@0x19fce7fcd00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetComponentsByClass_ReturnValue@0x19fce7fd000
+    ContextExpression:
+    $326: FinalFunction target=GetComponentsByClass@0x19e4cd626c0 (
+      $335: ObjectConst LockComponent@0x19e4c409bc0
+      $344: EndFunctionParms
+    )
+$345: Let (Variable = Expression)
+  Variable:
+  $354: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19e586bfc70
+  Expression:
+  $363: Context
+    ObjectExpression:
+    $364: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19e586bfc70
+    ContextExpression:
+    $385: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $394: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fce7fd000
+      $403: EndFunctionParms
+    )
+$404: Context
+  ObjectExpression:
+  $405: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $426: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $435: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fce7fd000
+    $444: literal int32 0
+    $449: LocalVariable named CallFunc_Array_Get_Item@0x19fce7fcd80
+    $458: EndFunctionParms
+  )
+$459: LetBool (Variable = Expression)
+  Variable:
+  $460: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fce7fce00
+  Expression:
+  $469: CallMath target=Greater_IntInt@0x19e4d382770 (
+    $478: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19e586bfc70
+    $487: literal int32 0
+    $492: EndFunctionParms
+  )
+$493: LetBool (Variable = Expression)
+  Variable:
+  $494: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fce7fce80
+  Expression:
+  $503: Context
+    ObjectExpression:
+    $504: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19fce7fce80
+    ContextExpression:
+    $525: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $534: LocalVariable named CallFunc_Array_Get_Item@0x19fce7fcd80
+      $543: EndFunctionParms
+    )
+$544: LetBool (Variable = Expression)
+  Variable:
+  $545: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x19fce7fcf00
+  Expression:
+  $554: CallMath target=BooleanAND@0x19e4d3710f0 (
+    $563: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fce7fce00
+    $572: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fce7fce80
+    $581: EndFunctionParms
+  )
+$582: JumpIfNot -> 0xa, cond:
+  $587: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x19fce7fcf00
+$596: BindDelegate 'idx:283776'
+  Delegate:
+  $609: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fce7fcb80
+  Object:
+  $618: Self
+$619: LetObj (Variable = Expression)
+  Variable:
+  $620: LocalVariable named CallFunc_GetItem_ReturnValue@0x19fce7fcd00
+  Expression:
+  $629: Context
+    ObjectExpression:
+    $630: LocalVariable named idx:283775@0x19fce7fcc00
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetItem_ReturnValue@0x19fce7fcd00
+    ContextExpression:
+    $651: FinalFunction target=GetItem@0x19e4d10a9b0 (
+      $660: EndFunctionParms
+    )
+$661: Let (Variable = Expression)
+  Variable:
+  $670: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fce7fd000
+  Expression:
+  $679: Context
+    ObjectExpression:
+    $680: LocalVariable named CallFunc_GetItem_ReturnValue@0x19fce7fcd00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetComponentsByClass_ReturnValue@0x19fce7fd000
+    ContextExpression:
+    $701: FinalFunction target=GetComponentsByClass@0x19e4cd626c0 (
+      $710: ObjectConst LockComponent@0x19e4c409bc0
+      $719: EndFunctionParms
+    )
+$720: Context
+  ObjectExpression:
+  $721: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $742: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $751: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fce7fd000
+    $760: literal int32 0
+    $765: LocalVariable named CallFunc_Array_Get_Item@0x19fce7fcd80
+    $774: EndFunctionParms
+  )
+$775: AddMulticastDelegate
+$776: Context
+  ObjectExpression:
+  $777: LocalVariable named CallFunc_Array_Get_Item@0x19fce7fcd80
+  SkipBytes: 0x9
+  RValueProperty: LockOpenedDelegate@0x19e4d1ca710
+  ContextExpression:
+  $798: InstanceVariable named LockOpenedDelegate@0x19e4d1ca710
+$807: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fce7fcb80
+$816: Jump to offset 0x3f7
+$821: Context
+  ObjectExpression:
+  $822: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x42
+  RValueProperty: (null)
+  ContextExpression:
+  $843: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $852: NoObject
+    $853: literal ansi string "Cast Failed!"
+    $867: False
+    $868: True
+    $869: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $882: literal float 1
+      $887: literal float 0
+      $892: literal float 0.08386600017547607
+      $897: literal float 1
+      $902: EndStructConst
+    $903: literal float 10
+    $908: EndFunctionParms
+  )
+$909: Jump to offset 0x3f7
+$914: Context
+  ObjectExpression:
+  $915: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x45
+  RValueProperty: (null)
+  ContextExpression:
+  $936: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $945: NoObject
+    $946: literal ansi string "Chest unlocked!"
+    $963: False
+    $964: True
+    $965: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $978: literal float 0
+      $983: literal float 0.6600000262260437
+      $988: literal float 1
+      $993: literal float 1
+      $998: EndStructConst
+    $999: literal float 10
+    $1004: EndFunctionParms
+  )
+$1005: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $1014: EndFunctionParms
+)
+$1015: Return expression:
+  $1016: Nothing
+$1017: EndOfScript

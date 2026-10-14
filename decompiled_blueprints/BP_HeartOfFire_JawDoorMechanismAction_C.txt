@@ -1,0 +1,258 @@
+// /Game/Blueprints/GameObjects/Mechanisms/Actions/Doors/bp_heartoffire_jawdoormechanismaction -> BP_HeartOfFire_JawDoorMechanismAction_C
+
+=== BP_HeartOfFire_JawDoorMechanismAction_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_HeartOfFire_JawDoorMechanismAction_C::fn_idx_241125 (22 bytes) ===
+$0: VirtualFunction call "idx:241116" (
+  $13: literal int32 744
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_HeartOfFire_JawDoorMechanismAction_C::fn_idx_241126 (22 bytes) ===
+$0: VirtualFunction call "idx:241116" (
+  $13: literal int32 680
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_HeartOfFire_JawDoorMechanismAction_C::fn_idx_241130 (22 bytes) ===
+$0: VirtualFunction call "idx:241116" (
+  $13: literal int32 69
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_HeartOfFire_JawDoorMechanismAction_C::fn_idx_241131 (22 bytes) ===
+$0: VirtualFunction call "idx:241116" (
+  $13: literal int32 10
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_HeartOfFire_JawDoorMechanismAction_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "idx:241116" (
+  $13: literal int32 675
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_HeartOfFire_JawDoorMechanismAction_C::fn_idx_241113 (94 bytes) ===
+$0: LetValueOnPersistentFrame dest=idx:240869@0x19f8725c000
+  Expression:
+  $9: LocalVariable named Action@0x19f8725bb00
+$18: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_PreviousState@0x19f8725c080
+  Expression:
+  $27: LocalVariable named PreviousState@0x19f8725bb80
+$36: LetValueOnPersistentFrame dest=idx:240871@0x19f8725c100
+  Expression:
+  $45: LocalVariable named NewState@0x19f8725bc00
+$54: LetValueOnPersistentFrame dest=idx:240870@0x19f8725c180
+  Expression:
+  $63: LocalVariable named Instigator@0x19f8725bc80
+$72: VirtualFunction call "idx:241116" (
+  $85: literal int32 739
+  $90: EndFunctionParms
+)
+$91: Return expression:
+  $92: Nothing
+$93: EndOfScript
+
+=== BP_HeartOfFire_JawDoorMechanismAction_C::fn_idx_241116 (752 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19f839e0e70
+$10: Context
+  ObjectExpression:
+  $11: InstanceVariable named DynamicMaterial@0x19f8725c500
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $32: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $41: literal name "Emissive Intensity"
+    $54: InstanceVariable named idx:241132@0x19f839e0ee0
+    $63: EndFunctionParms
+  )
+$64: Jump to offset 0x2ed
+$69: Jump to offset 0x2ed
+$74: LetBool (Variable = Expression)
+  Variable:
+  $75: LocalVariable named CallFunc_IsDedicatedServer_ReturnValue@0x19f8725bd00
+  Expression:
+  $84: Context
+    ObjectExpression:
+    $85: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_IsDedicatedServer_ReturnValue@0x19f8725bd00
+    ContextExpression:
+    $106: FinalFunction target=IsDedicatedServer@0x19e4cd8dd00 (
+      $115: Self
+      $116: EndFunctionParms
+    )
+$117: JumpIfNot -> 0x88, cond:
+  $122: LocalVariable named CallFunc_IsDedicatedServer_ReturnValue@0x19f8725bd00
+$131: Jump to offset 0x2ed
+$136: LetObj (Variable = Expression)
+  Variable:
+  $137: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f8725bf00
+  Expression:
+  $146: Context
+    ObjectExpression:
+    $147: InstanceVariable named idx:241121@0x19f8725c280
+    SkipBytes: 0x14
+    RValueProperty: CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f8725bf00
+    ContextExpression:
+    $168: VirtualFunction call "CreateDynamicMaterialInstance" (
+      $181: literal int32 0
+      $186: NoObject
+      $187: EndFunctionParms
+    )
+$188: LetObj (Variable = Expression)
+  Variable:
+  $189: InstanceVariable named DynamicMaterial@0x19f8725c500
+  Expression:
+  $198: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f8725bf00
+$207: Let (Variable = Expression)
+  Variable:
+  $216: LocalVariable named CallFunc_GetActionState_ReturnValue@0x19f8725be80
+  Expression:
+  $225: Context
+    ObjectExpression:
+    $226: InterfaceContext:
+    $227: InstanceVariable named MechanismActionComponent@0x19e4d20d210
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetActionState_ReturnValue@0x19f8725be80
+    ContextExpression:
+    $248: VirtualFunction call "GetActionState" (
+      $261: EndFunctionParms
+    )
+$262: LetBool (Variable = Expression)
+  Variable:
+  $263: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x19f8725bf80
+  Expression:
+  $272: CallMath target=NotEqual_ByteByte@0x19e4d390710 (
+    $281: LocalVariable named CallFunc_GetActionState_ReturnValue@0x19f8725be80
+    $290: literal byte 0
+    $292: EndFunctionParms
+  )
+$293: JumpIfNot -> 0x165, cond:
+  $298: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x19f8725bf80
+$307: LetBool (Variable = Expression)
+  Variable:
+  $308: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x19f8725bf80
+  Expression:
+  $317: CallMath target=NotEqual_ByteByte@0x19e4d390710 (
+    $326: LocalVariable named CallFunc_GetActionState_ReturnValue@0x19f8725be80
+    $335: literal byte 1
+    $337: EndFunctionParms
+  )
+$338: JumpIfNot -> 0x19c, cond:
+  $343: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x19f8725bf80
+$352: Jump to offset 0x2ed
+$357: Context
+  ObjectExpression:
+  $358: InstanceVariable named DynamicMaterial@0x19f8725c500
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $379: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $388: literal name "Emissive Intensity"
+    $401: literal float 5
+    $406: EndFunctionParms
+  )
+$407: Jump to offset 0x2ed
+$412: Context
+  ObjectExpression:
+  $413: InstanceVariable named DynamicMaterial@0x19f8725c500
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $434: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $443: literal name "Emissive Intensity"
+    $456: literal float 0
+    $461: EndFunctionParms
+  )
+$462: Jump to offset 0x2ed
+$467: Context
+  ObjectExpression:
+  $468: InstanceVariable named Timeline@0x19f8725c480
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $489: FinalFunction target=PlayFromStart@0x19e4d34f110 (
+    $498: EndFunctionParms
+  )
+$499: Jump to offset 0x2ed
+$504: LetBool (Variable = Expression)
+  Variable:
+  $505: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x19f8725bd80
+  Expression:
+  $514: FinalFunction target=HasAuthority@0x19e4cd64b30 (
+    $523: EndFunctionParms
+  )
+$524: JumpIfNot -> 0x21f, cond:
+  $529: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x19f8725bd80
+$538: Jump to offset 0x2ed
+$543: LetBool (Variable = Expression)
+  Variable:
+  $544: LocalVariable named K2Node_SwitchEnum2_CmpSuccess@0x19f8725c200
+  Expression:
+  $553: CallMath target=NotEqual_ByteByte@0x19e4d390710 (
+    $562: LocalVariable named idx:240871@0x19f8725c100
+    $571: literal byte 0
+    $573: EndFunctionParms
+  )
+$574: JumpIfNot -> 0x1d3, cond:
+  $579: LocalVariable named K2Node_SwitchEnum2_CmpSuccess@0x19f8725c200
+$588: LetBool (Variable = Expression)
+  Variable:
+  $589: LocalVariable named K2Node_SwitchEnum2_CmpSuccess@0x19f8725c200
+  Expression:
+  $598: CallMath target=NotEqual_ByteByte@0x19e4d390710 (
+    $607: LocalVariable named idx:240871@0x19f8725c100
+    $616: literal byte 1
+    $618: EndFunctionParms
+  )
+$619: JumpIfNot -> 0x27e, cond:
+  $624: LocalVariable named K2Node_SwitchEnum2_CmpSuccess@0x19f8725c200
+$633: Jump to offset 0x2ed
+$638: Context
+  ObjectExpression:
+  $639: InstanceVariable named Timeline@0x19f8725c380
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $660: FinalFunction target=PlayFromStart@0x19e4d34f110 (
+    $669: EndFunctionParms
+  )
+$670: Jump to offset 0x2ed
+$675: Jump to offset 0x4a
+$680: Context
+  ObjectExpression:
+  $681: InstanceVariable named DynamicMaterial@0x19f8725c500
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $702: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $711: literal name "Emissive Intensity"
+    $724: InstanceVariable named idx:241127@0x19f839e0f50
+    $733: EndFunctionParms
+  )
+$734: Jump to offset 0x2ed
+$739: Jump to offset 0x1f8
+$744: Jump to offset 0x2ed
+$749: Return expression:
+  $750: Nothing
+$751: EndOfScript

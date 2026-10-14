@@ -1,0 +1,95 @@
+// Class: SwimmingCreaturePawn (5 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+SwimmingCreaturePawn::GetAIStrategy @ RVA 0x109EE40 EA 0x7FF6F4ABEE40
+======================================================================
+_QWORD *__fastcall sub_7FF6F4ABEE40(__int64 a1, __int64 a2, _QWORD *a3)
+{
+  _QWORD *result; // rax
+  char v5; // [rsp+30h] [rbp+8h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (_QWORD *)(*(__int64 (__fastcall **)(__int64, char *))(*(_QWORD *)(a1 + 1224) + 32LL))(a1 + 1224, &v5);
+  *a3 = *result;
+  return result;
+}
+
+
+======================================================================
+SwimmingCreaturePawn::GetCreatureDistanceFromWaterHeight @ RVA 0x109EE80 EA 0x7FF6F4ABEE80
+======================================================================
+void __fastcall sub_7FF6F4ABEE80(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)(a1 + 1248) + 56LL))(a1 + 1248);
+}
+
+
+======================================================================
+SwimmingCreaturePawn::Multicast_DespawnRPC @ RVA 0x10A1130 EA 0x7FF6F4AC1130
+======================================================================
+__int64 __fastcall sub_7FF6F4AC1130(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F3F06740();
+}
+
+
+======================================================================
+SwimmingCreaturePawn::OnRep_CurrentAIStrategy @ RVA 0x10A24C0 EA 0x7FF6F4AC24C0
+======================================================================
+__int64 __fastcall sub_7FF6F4AC24C0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F3F07F50(a1, v6);
+}
+
+
+======================================================================
+SwimmingCreaturePawn::SetAIStrategy @ RVA 0x10A46F0 EA 0x7FF6F4AC46F0
+======================================================================
+__int64 __fastcall sub_7FF6F4AC46F0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)(a1 + 1224) + 24LL))(a1 + 1224, v6);
+}
+

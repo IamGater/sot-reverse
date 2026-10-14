@@ -1,0 +1,47 @@
+// Class: InteractObjectActionStateId (1 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+InteractObjectActionStateId::PushCharacterIntoInteractObjectActionState @ RVA 0x3188260 EA 0x7FF6F6BA8260
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6BA8260(__int64 a1, _QWORD *a2)
+{
+  __int64 v3; // rdi
+  _BYTE *v4; // rsi
+  __int64 v5; // rax
+  _BYTE v7[32]; // [rsp+28h] [rbp-20h] BYREF
+  __int64 v8; // [rsp+58h] [rbp+10h] BYREF
+
+  sub_7FF6F5F0D290(v7);
+  v3 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  v4 = v7;
+  if ( a2[7] )
+    v4 = (_BYTE *)a2[7];
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  LOBYTE(v3) = v5 != 0;
+  a2[4] = v5 + v3;
+  sub_7FF6F6B9FAD0(v4, v8);
+  return nullsub_2363(v7);
+}
+

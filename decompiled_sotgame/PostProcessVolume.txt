@@ -1,0 +1,90 @@
+// Class: PostProcessVolume (1 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+PostProcessVolume::AddOrUpdateBlendable @ RVA 0x29055B0 EA 0x7FF6F63255B0
+======================================================================
+__int64 __fastcall sub_7FF6F63255B0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v5; // edx
+  __int64 v6; // r8
+  __int64 result; // rax
+  __int64 v8; // r10
+  __int64 v9; // rcx
+  _QWORD *v10; // rax
+  __int64 v11; // rbx
+  int v12; // edx
+  int v13; // eax
+  __int64 v14; // rcx
+  __int128 v15; // [rsp+20h] [rbp-28h] BYREF
+  __int128 v16; // [rsp+30h] [rbp-18h]
+  int v17; // [rsp+50h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v15 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  v2 = a2[4] == 0;
+  v17 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  v5 = 0;
+  v6 = v15;
+  result = a2[4] + (a2[4] != 0);
+  a2[4] = result;
+  if ( v6 )
+  {
+    if ( *(int *)(a1 + 2496) <= 0 )
+    {
+LABEL_12:
+      v11 = *(int *)(a1 + 2496);
+      v12 = *(_DWORD *)(a1 + 2500);
+      LODWORD(v16) = v17;
+      *((_QWORD *)&v16 + 1) = v6;
+      *(_DWORD *)(a1 + 2496) = v11 + 1;
+      if ( (int)v11 + 1 > v12 )
+      {
+        v13 = sub_7FF6F4DAD310((int)v11 + 1, v12, 16);
+        *(_DWORD *)(a1 + 2500) = v13;
+        v14 = *(_QWORD *)(a1 + 2488);
+        if ( v14 || v13 )
+          *(_QWORD *)(a1 + 2488) = sub_7FF6F4DFAA90(v14, 16LL * v13, 0);
+      }
+      result = *(_QWORD *)(a1 + 2488);
+      *(_OWORD *)(result + 16 * v11) = v16;
+    }
+    else
+    {
+      v8 = *(_QWORD *)(a1 + 2488);
+      v9 = 0;
+      v10 = (_QWORD *)(v8 + 8);
+      while ( *v10 != v6 )
+      {
+        ++v5;
+        ++v9;
+        v10 += 2;
+        if ( v9 >= *(int *)(a1 + 2496) )
+          goto LABEL_12;
+      }
+      *(_DWORD *)(v8 + 16LL * v5) = v17;
+      return 2LL * v5;
+    }
+  }
+  return result;
+}
+

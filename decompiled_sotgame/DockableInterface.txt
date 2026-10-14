@@ -1,0 +1,28 @@
+// Class: DockableInterface (2 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+DockableInterface::GetDockableInfo @ RVA 0x2EE5D30 EA 0x7FF6F6905D30
+======================================================================
+__int64 __fastcall sub_7FF6F6905D30(__int64 (__fastcall ***a1)(_QWORD, _BYTE *), __int64 a2, __int64 a3)
+{
+  __int64 result; // rax
+  _BYTE v5[40]; // [rsp+20h] [rbp-28h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (**a1)(a1, v5);
+  *(_OWORD *)a3 = *(_OWORD *)result;
+  *(_QWORD *)(a3 + 16) = *(_QWORD *)(result + 16);
+  return result;
+}
+
+
+======================================================================
+DockableInterface::HandleDestroy @ RVA 0x2EE6220 EA 0x7FF6F6906220
+======================================================================
+__int64 __fastcall sub_7FF6F6906220(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 24LL))(a1);
+}
+

@@ -1,0 +1,80 @@
+// Class: LiquidContainerInterface (5 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+LiquidContainerInterface::CollectLiquidAmount @ RVA 0x3C2C260 EA 0x7FF6F764C260
+======================================================================
+void __fastcall sub_7FF6F764C260(__int64 a1, _QWORD *a2, float *a3)
+{
+  bool v3; // zf
+  int v7; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = a2[4] == 0;
+  v7 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  a2[4] += a2[4] != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)a1 + 24LL))(a1);
+}
+
+
+======================================================================
+LiquidContainerInterface::GetLiquidLevel @ RVA 0x3C2C370 EA 0x7FF6F764C370
+======================================================================
+void __fastcall sub_7FF6F764C370(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)a1 + 40LL))(a1);
+}
+
+
+======================================================================
+LiquidContainerInterface::GetMaxLiquidCollectionAmount @ RVA 0x3C2C3D0 EA 0x7FF6F764C3D0
+======================================================================
+void __fastcall sub_7FF6F764C3D0(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)a1 + 32LL))(a1);
+}
+
+
+======================================================================
+LiquidContainerInterface::GetWantedLiquidLevel @ RVA 0x3C2C400 EA 0x7FF6F764C400
+======================================================================
+void __fastcall sub_7FF6F764C400(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)a1 + 48LL))(a1);
+}
+
+
+======================================================================
+LiquidContainerInterface::SetLiquidLevel @ RVA 0x3C2C430 EA 0x7FF6F764C430
+======================================================================
+__int64 __fastcall sub_7FF6F764C430(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 16LL))(a1);
+}
+

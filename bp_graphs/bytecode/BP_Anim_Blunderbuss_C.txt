@@ -1,0 +1,186 @@
+// /Game/Blueprints/GameObjects/Items/bp_anim_blunderbuss -> BP_Anim_Blunderbuss_C
+
+=== BP_Anim_Blunderbuss_C::fn_idx_216215 (22 bytes) ===
+$0: VirtualFunction call "idx:240412" (
+  $13: literal int32 101
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Anim_Blunderbuss_C::fn_idx_12014 (58 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InputId2@0x19f852ff300
+  Expression:
+  $9: LocalVariable named InputID@0x19f852ff080
+$18: LetValueOnPersistentFrame dest=K2Node_Event_ActionVisuals2@0x19f852ff380
+  Expression:
+  $27: LocalOutVariable named ActionVisuals@0x19f852ff100
+$36: VirtualFunction call "idx:240412" (
+  $49: literal int32 106
+  $54: EndFunctionParms
+)
+$55: Return expression:
+  $56: Nothing
+$57: EndOfScript
+
+=== BP_Anim_Blunderbuss_C::fn_idx_12015 (58 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InputId@0x19f852ff400
+  Expression:
+  $9: LocalVariable named InputID@0x19f852ff180
+$18: LetValueOnPersistentFrame dest=K2Node_Event_ActionVisuals@0x19f852ff500
+  Expression:
+  $27: LocalOutVariable named ActionVisuals@0x19f852ff200
+$36: VirtualFunction call "idx:240412" (
+  $49: literal int32 163
+  $54: EndFunctionParms
+)
+$55: Return expression:
+  $56: Nothing
+$57: EndOfScript
+
+=== BP_Anim_Blunderbuss_C::fn_idx_9042 (22 bytes) ===
+$0: VirtualFunction call "idx:240412" (
+  $13: literal int32 220
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Anim_Blunderbuss_C::fn_idx_216222 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event@0x19f852ff680
+  Expression:
+  $9: LocalVariable named Event@0x19f852ff280
+$18: VirtualFunction call "idx:240412" (
+  $31: literal int32 376
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Anim_Blunderbuss_C::fn_idx_9046 (22 bytes) ===
+$0: VirtualFunction call "idx:240412" (
+  $13: literal int32 392
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Anim_Blunderbuss_C::fn_idx_216216 (22 bytes) ===
+$0: VirtualFunction call "idx:240412" (
+  $13: literal int32 447
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Anim_Blunderbuss_C::fn_idx_240412 (455 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19f83f7dac0
+$10: LetBool (Variable = Expression)
+  Variable:
+  $11: InstanceVariable named bReloadWanted@0x19f852ffa80
+  Expression:
+  $20: False
+$21: Jump to offset 0x1c4
+$26: Let (Variable = Expression)
+  Variable:
+  $35: InstanceVariable named ObjectAnimationState@0x19f852ffc80
+  Expression:
+  $44: literal byte 14
+$46: Jump to offset 0x1c4
+$51: Let (Variable = Expression)
+  Variable:
+  $60: InstanceVariable named ObjectAnimationState@0x19f852ffc80
+  Expression:
+  $69: literal byte 14
+$71: Jump to offset 0x1c4
+$76: Let (Variable = Expression)
+  Variable:
+  $85: InstanceVariable named ObjectAnimationState@0x19f852ffc80
+  Expression:
+  $94: literal byte 0
+$96: Jump to offset 0x1c4
+$101: Jump to offset 0x4c
+$106: LetBool (Variable = Expression)
+  Variable:
+  $107: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue@0x19f852ff580
+  Expression:
+  $116: CallMath target=EqualEqual_ClassClass@0x19e4d37a860 (
+    $125: LocalVariable named K2Node_Event_InputId2@0x19f852ff300
+    $134: ObjectConst PrimaryItemUsePressedNotificationInputId@0x19e261dec40
+    $143: EndFunctionParms
+  )
+$144: JumpIfNot -> 0x1c4, cond:
+  $149: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue@0x19f852ff580
+$158: Jump to offset 0x33
+$163: LetBool (Variable = Expression)
+  Variable:
+  $164: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue2@0x19f852ff600
+  Expression:
+  $173: CallMath target=EqualEqual_ClassClass@0x19e4d37a860 (
+    $182: LocalVariable named K2Node_Event_InputId@0x19f852ff400
+    $191: ObjectConst PrimaryItemUsePressedNotificationInputId@0x19e261dec40
+    $200: EndFunctionParms
+  )
+$201: JumpIfNot -> 0x1c4, cond:
+  $206: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue2@0x19f852ff600
+$215: Jump to offset 0x1a
+$220: LetBool (Variable = Expression)
+  Variable:
+  $221: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue@0x19f852ff700
+  Expression:
+  $230: Context
+    ObjectExpression:
+    $231: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsHandleRegistered_ReturnValue@0x19f852ff700
+    ContextExpression:
+    $252: FinalFunction target=IsHandleRegistered@0x19e4d410550 (
+      $261: InstanceVariable named ReloadEventHandle@0x19f852ffd80
+      $270: EndFunctionParms
+    )
+$271: JumpIfNot -> 0x122, cond:
+  $276: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue@0x19f852ff700
+$285: Jump to offset 0x1c4
+$290: Context
+  ObjectExpression:
+  $291: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x3b
+  RValueProperty: (null)
+  ContextExpression:
+  $312: FinalFunction target=RegisterEvent@0x19e4d4108d0 (
+    $321: InstanceVariable named MessagingDispatcher@0x19e4d20f090
+    $330: InstanceVariable named ReloadEventHandle@0x19f852ffd80
+    $339: Self
+    $340: literal ansi string "ReloadEventDelegate"
+    $361: ObjectConst EventProjectileWeaponReload@0x19e4cebff20
+    $370: EndFunctionParms
+  )
+$371: Jump to offset 0x1c4
+$376: LetBool (Variable = Expression)
+  Variable:
+  $377: InstanceVariable named bReloadWanted@0x19f852ffa80
+  Expression:
+  $386: True
+$387: Jump to offset 0x1c4
+$392: Context
+  ObjectExpression:
+  $393: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $414: FinalFunction target=UnregisterEvent@0x19e4d411260 (
+    $423: InstanceVariable named MessagingDispatcher@0x19e4d20f090
+    $432: InstanceVariable named ReloadEventHandle@0x19f852ffd80
+    $441: EndFunctionParms
+  )
+$442: Jump to offset 0x1c4
+$447: Jump to offset 0xa
+$452: Return expression:
+  $453: Nothing
+$454: EndOfScript

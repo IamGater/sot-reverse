@@ -1,0 +1,124 @@
+// Class: TurningFunctionLib (1 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+TurningFunctionLib::TurningUpdate @ RVA 0x2EE7540 EA 0x7FF6F6907540
+======================================================================
+__int64 __fastcall sub_7FF6F6907540(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  bool v3; // zf
+  __int64 v6; // rdi
+  bool v7; // r15
+  __int64 v8; // rax
+  char *v9; // r14
+  int *v10; // rax
+  int *v11; // rsi
+  int v12; // r9d
+  char *v13; // rcx
+  __int64 v14; // rax
+  __int64 result; // rax
+  int v16; // [rsp+28h] [rbp-28h]
+  int v17; // [rsp+40h] [rbp-10h] BYREF
+  int v18; // [rsp+44h] [rbp-Ch] BYREF
+  int v19; // [rsp+48h] [rbp-8h] BYREF
+  int v20; // [rsp+4Ch] [rbp-4h] BYREF
+  char v21; // [rsp+98h] [rbp+48h] BYREF
+  char v22; // [rsp+A0h] [rbp+50h] BYREF
+  int v23; // [rsp+A8h] [rbp+58h] BYREF
+
+  v3 = a2[4] == 0;
+  v20 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v20);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v20);
+  }
+  v6 = 0;
+  v23 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v23);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v23);
+  }
+  v21 = 0;
+  v7 = v23 != 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v21);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v21);
+  }
+  v8 = a2[7];
+  v9 = &v21;
+  v19 = 0;
+  if ( v8 )
+    LODWORD(v9) = v8;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  v17 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v10 = (int *)a2[7];
+  v11 = &v17;
+  v18 = 0;
+  if ( v10 )
+    v11 = v10;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  v22 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v22);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v22);
+  }
+  v13 = &v22;
+  if ( a2[7] )
+    v13 = (char *)a2[7];
+  v14 = a2[4];
+  v16 = v18;
+  LOBYTE(v6) = v14 != 0;
+  a2[4] = v14 + v6;
+  result = sub_7FF6F68DBF20((_DWORD)v13, v7, (_DWORD)v9, v12, (__int64)v11, v16, (__int64)v13);
+  *a3 = result;
+  return result;
+}
+

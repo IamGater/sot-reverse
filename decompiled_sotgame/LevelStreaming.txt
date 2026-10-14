@@ -1,0 +1,94 @@
+// Class: LevelStreaming (5 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+LevelStreaming::CreateInstance @ RVA 0x2D269E0 EA 0x7FF6F67469E0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F67469E0(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v6; // rdi
+  __int64 v7; // rax
+  __int64 result; // rax
+  __int64 v9[2]; // [rsp+28h] [rbp-30h] BYREF
+  _BYTE v10[32]; // [rsp+38h] [rbp-20h] BYREF
+
+  v6 = 0;
+  v9[0] = 0;
+  v9[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v7 = a2[4];
+  LOBYTE(v6) = v7 != 0;
+  a2[4] = v7 + v6;
+  sub_7FF6F3C34DB0((__int64)v10, (__int64)v9);
+  result = sub_7FF6F5E8FBB0(a1, v10);
+  *a3 = result;
+  if ( v9[0] )
+    return sub_7FF6F4DED1F0(v9[0]);
+  return result;
+}
+
+
+======================================================================
+LevelStreaming::GetLevelScriptActor @ RVA 0x2D26E50 EA 0x7FF6F6746E50
+======================================================================
+__int64 __fastcall sub_7FF6F6746E50(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5E96270();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+LevelStreaming::IsLevelLoaded @ RVA 0x2D272E0 EA 0x7FF6F67472E0
+======================================================================
+__int64 __fastcall sub_7FF6F67472E0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5E9CF40();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+LevelStreaming::IsLevelVisible @ RVA 0x2D27310 EA 0x7FF6F6747310
+======================================================================
+__int64 __fastcall sub_7FF6F6747310(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5E9CF50();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+LevelStreaming::IsStreamingStatePending @ RVA 0x2D27370 EA 0x7FF6F6747370
+======================================================================
+__int64 __fastcall sub_7FF6F6747370(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5E9D940();
+  *a3 = result;
+  return result;
+}
+

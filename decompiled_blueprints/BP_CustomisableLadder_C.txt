@@ -1,0 +1,1322 @@
+// E:\unreal-projects\Athena\Content\Blueprints\GameObjects\Ladder\bp_customisableladder.uasset -> BP_CustomisableLadder_C
+
+=== BP_CustomisableLadder_C::GetDockableInfo (135 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: StructMemberContext prop=SocketName@0x212d65ac8f0
+    Expression to struct:
+    $18: LocalVariable named K2Node_MakeStruct_DockableInfo@0x213b2ff7400
+  Expression:
+  $27: literal name "None"
+$40: LetObj (Variable = Expression)
+  Variable:
+  $41: StructMemberContext prop=SceneComponent@0x212d65ac870
+    Expression to struct:
+    $50: LocalVariable named K2Node_MakeStruct_DockableInfo@0x213b2ff7400
+  Expression:
+  $59: InstanceVariable named MeshComponent@0x212d67d8210
+$68: Let (Variable = Expression)
+  Variable:
+  $77: StructMemberContext prop=ShouldOverlapsUpdateOnParentUpdate@0x212d65ac7f0
+    Expression to struct:
+    $86: LocalVariable named K2Node_MakeStruct_DockableInfo@0x213b2ff7400
+  Expression:
+  $95: literal byte 0
+$97: Let (Variable = Expression)
+  Variable:
+  $106: LocalOutVariable named ReturnValue@0x213b2ff7380
+  Expression:
+  $115: LocalVariable named K2Node_MakeStruct_DockableInfo@0x213b2ff7400
+$124: Return expression:
+  $125: LocalOutVariable named ReturnValue@0x213b2ff7380
+$134: EndOfScript
+
+=== BP_CustomisableLadder_C::Construct Ladder (4557 bytes) ===
+$0: FlowStack.Push(0x11ca)
+$5: FlowStack.Push(0x888)
+$10: FlowStack.Push(0x768)
+$15: FlowStack.Push(0x6a6)
+$20: FlowStack.Push(0x7b)
+$25: VirtualFunction call "Get Total Height Before Cap" (
+  $38: LocalVariable named CallFunc_Get_Total_Height_Before_Cap_Height@0x213b324c9b0
+  $47: EndFunctionParms
+)
+$48: Let (Variable = Expression)
+  Variable:
+  $57: LocalVariable named TotalHeightBeforeCap@0x213b324d270
+  Expression:
+  $66: LocalVariable named CallFunc_Get_Total_Height_Before_Cap_Height@0x213b324c9b0
+$75: LetBool (Variable = Expression)
+  Variable:
+  $76: LocalVariable named CallFunc_SetStaticMesh_ReturnValue@0x213b2ff7880
+  Expression:
+  $85: Context
+    ObjectExpression:
+    $86: InstanceVariable named MeshComponent@0x212d67d8210
+    SkipBytes: 0xf
+    RValueProperty: CallFunc_SetStaticMesh_ReturnValue@0x213b2ff7880
+    ContextExpression:
+    $107: VirtualFunction call "SetStaticMesh" (
+      $120: NoObject
+      $121: EndFunctionParms
+    )
+$122: PopExecutionFlow (jump to popped addr)
+$123: Let (Variable = Expression)
+  Variable:
+  $132: LocalVariable named HeightAccumulation@0x213b324d200
+  Expression:
+  $141: literal float 0
+$146: VirtualFunction call "Get Steps" (
+  $159: LocalVariable named CallFunc_Get_Steps_Num_Steps@0x213b324ca20
+  $168: EndFunctionParms
+)
+$169: Let (Variable = Expression)
+  Variable:
+  $178: LocalVariable named CallFunc_Array_Length_ReturnValue4@0x213b324ce10
+  Expression:
+  $187: Context
+    ObjectExpression:
+    $188: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Length_ReturnValue4@0x213b324ce10
+    ContextExpression:
+    $209: FinalFunction target=Array_Length@0x212d6987df0 (
+      $218: StructMemberContext prop=LadderLengthMeshes_3_2EC47B874988A47C81463B93F2A2A979@0x213b2ff7200
+        Expression to struct:
+        $227: InstanceVariable named LadderCustomisationDefinition@0x213b2ff8c80
+      $236: EndFunctionParms
+    )
+$237: Let (Variable = Expression)
+  Variable:
+  $246: LocalVariable named CallFunc_Percent_IntInt_ReturnValue@0x213b324cfd0
+  Expression:
+  $255: CallMath target=Percent_IntInt@0x212d69b25b0 (
+    $264: LocalVariable named CallFunc_Get_Steps_Num_Steps@0x213b324ca20
+    $273: LocalVariable named CallFunc_Array_Length_ReturnValue4@0x213b324ce10
+    $282: EndFunctionParms
+  )
+$283: LetBool (Variable = Expression)
+  Variable:
+  $284: LocalVariable named CallFunc_Greater_IntInt_ReturnValue3@0x213b2ff8000
+  Expression:
+  $293: CallMath target=Greater_IntInt@0x212d69a2770 (
+    $302: LocalVariable named CallFunc_Percent_IntInt_ReturnValue@0x213b324cfd0
+    $311: literal int32 0
+    $316: EndFunctionParms
+  )
+$317: JumpIfNot -> 0x374, cond:
+  $322: LocalVariable named CallFunc_Greater_IntInt_ReturnValue3@0x213b2ff8000
+$331: VirtualFunction call "Get Steps" (
+  $344: LocalVariable named CallFunc_Get_Steps_Num_Steps@0x213b324ca20
+  $353: EndFunctionParms
+)
+$354: Let (Variable = Expression)
+  Variable:
+  $363: LocalVariable named CallFunc_Array_Length_ReturnValue4@0x213b324ce10
+  Expression:
+  $372: Context
+    ObjectExpression:
+    $373: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Length_ReturnValue4@0x213b324ce10
+    ContextExpression:
+    $394: FinalFunction target=Array_Length@0x212d6987df0 (
+      $403: StructMemberContext prop=LadderLengthMeshes_3_2EC47B874988A47C81463B93F2A2A979@0x213b2ff7200
+        Expression to struct:
+        $412: InstanceVariable named LadderCustomisationDefinition@0x213b2ff8c80
+      $421: EndFunctionParms
+    )
+$422: Let (Variable = Expression)
+  Variable:
+  $431: LocalVariable named CallFunc_Percent_IntInt_ReturnValue@0x213b324cfd0
+  Expression:
+  $440: CallMath target=Percent_IntInt@0x212d69b25b0 (
+    $449: LocalVariable named CallFunc_Get_Steps_Num_Steps@0x213b324ca20
+    $458: LocalVariable named CallFunc_Array_Length_ReturnValue4@0x213b324ce10
+    $467: EndFunctionParms
+  )
+$468: Let (Variable = Expression)
+  Variable:
+  $477: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue3@0x213b324d120
+  Expression:
+  $486: CallMath target=Subtract_IntInt@0x212d69b9ad0 (
+    $495: LocalVariable named CallFunc_Percent_IntInt_ReturnValue@0x213b324cfd0
+    $504: literal int32 1
+    $509: EndFunctionParms
+  )
+$510: Let (Variable = Expression)
+  Variable:
+  $519: LocalVariable named CallFunc_Array_Add_ReturnValue4@0x213b324d190
+  Expression:
+  $528: Context
+    ObjectExpression:
+    $529: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Add_ReturnValue4@0x213b324d190
+    ContextExpression:
+    $550: FinalFunction target=Array_Add@0x212d6986810 (
+      $559: LocalVariable named MeshIndices@0x213b2ff8100
+      $568: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue3@0x213b324d120
+      $577: EndFunctionParms
+    )
+$578: Let (Variable = Expression)
+  Variable:
+  $587: LocalVariable named CallFunc_Array_Add_ReturnValue@0x213b324cd30
+  Expression:
+  $596: Context
+    ObjectExpression:
+    $597: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Add_ReturnValue@0x213b324cd30
+    ContextExpression:
+    $618: FinalFunction target=Array_Add@0x212d6986810 (
+      $627: LocalVariable named PartOffsets@0x213b2ff8080
+      $636: LocalVariable named HeightAccumulation@0x213b324d200
+      $645: EndFunctionParms
+    )
+$646: VirtualFunction call "Get Steps" (
+  $659: LocalVariable named CallFunc_Get_Steps_Num_Steps@0x213b324ca20
+  $668: EndFunctionParms
+)
+$669: Let (Variable = Expression)
+  Variable:
+  $678: LocalVariable named CallFunc_Array_Length_ReturnValue4@0x213b324ce10
+  Expression:
+  $687: Context
+    ObjectExpression:
+    $688: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Length_ReturnValue4@0x213b324ce10
+    ContextExpression:
+    $709: FinalFunction target=Array_Length@0x212d6987df0 (
+      $718: StructMemberContext prop=LadderLengthMeshes_3_2EC47B874988A47C81463B93F2A2A979@0x213b2ff7200
+        Expression to struct:
+        $727: InstanceVariable named LadderCustomisationDefinition@0x213b2ff8c80
+      $736: EndFunctionParms
+    )
+$737: Let (Variable = Expression)
+  Variable:
+  $746: LocalVariable named CallFunc_Percent_IntInt_ReturnValue@0x213b324cfd0
+  Expression:
+  $755: CallMath target=Percent_IntInt@0x212d69b25b0 (
+    $764: LocalVariable named CallFunc_Get_Steps_Num_Steps@0x213b324ca20
+    $773: LocalVariable named CallFunc_Array_Length_ReturnValue4@0x213b324ce10
+    $782: EndFunctionParms
+  )
+$783: Let (Variable = Expression)
+  Variable:
+  $792: LocalVariable named CallFunc_Multiply_IntFloat_ReturnValue2@0x213b324d0b0
+  Expression:
+  $801: CallMath target=Multiply_IntFloat@0x212d69ad3f0 (
+    $810: LocalVariable named CallFunc_Percent_IntInt_ReturnValue@0x213b324cfd0
+    $819: InstanceVariable named StepHeight@0x213b324d9e0
+    $828: EndFunctionParms
+  )
+$829: Context
+  ObjectExpression:
+  $830: ObjectConst Default__BP_MathAndTrigAnimation_C@0x213b2e7b700
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $851: VirtualFunction call "Increment Float" (
+    $864: LocalVariable named HeightAccumulation@0x213b324d200
+    $873: LocalVariable named CallFunc_Multiply_IntFloat_ReturnValue2@0x213b324d0b0
+    $882: Self
+    $883: EndFunctionParms
+  )
+$884: VirtualFunction call "Get Steps" (
+  $897: LocalVariable named CallFunc_Get_Steps_Num_Steps@0x213b324ca20
+  $906: EndFunctionParms
+)
+$907: Let (Variable = Expression)
+  Variable:
+  $916: LocalVariable named CallFunc_Array_Length_ReturnValue4@0x213b324ce10
+  Expression:
+  $925: Context
+    ObjectExpression:
+    $926: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Length_ReturnValue4@0x213b324ce10
+    ContextExpression:
+    $947: FinalFunction target=Array_Length@0x212d6987df0 (
+      $956: StructMemberContext prop=LadderLengthMeshes_3_2EC47B874988A47C81463B93F2A2A979@0x213b2ff7200
+        Expression to struct:
+        $965: InstanceVariable named LadderCustomisationDefinition@0x213b2ff8c80
+      $974: EndFunctionParms
+    )
+$975: Let (Variable = Expression)
+  Variable:
+  $984: LocalVariable named CallFunc_Divide_IntInt_ReturnValue@0x213b324d040
+  Expression:
+  $993: CallMath target=Divide_IntInt@0x212d69990c0 (
+    $1002: LocalVariable named CallFunc_Get_Steps_Num_Steps@0x213b324ca20
+    $1011: LocalVariable named CallFunc_Array_Length_ReturnValue4@0x213b324ce10
+    $1020: EndFunctionParms
+  )
+$1021: LetBool (Variable = Expression)
+  Variable:
+  $1022: LocalVariable named CallFunc_Greater_IntInt_ReturnValue2@0x213b2ff7f80
+  Expression:
+  $1031: CallMath target=Greater_IntInt@0x212d69a2770 (
+    $1040: LocalVariable named CallFunc_Divide_IntInt_ReturnValue@0x213b324d040
+    $1049: literal int32 0
+    $1054: EndFunctionParms
+  )
+$1055: JumpIfNot -> 0xd87, cond:
+  $1060: LocalVariable named CallFunc_Greater_IntInt_ReturnValue2@0x213b2ff7f80
+$1069: Let (Variable = Expression)
+  Variable:
+  $1078: LocalVariable named Temp_int_Variable@0x213b324c5c0
+  Expression:
+  $1087: literal int32 1
+$1092: VirtualFunction call "Get Steps" (
+  $1105: LocalVariable named CallFunc_Get_Steps_Num_Steps@0x213b324ca20
+  $1114: EndFunctionParms
+)
+$1115: Let (Variable = Expression)
+  Variable:
+  $1124: LocalVariable named CallFunc_Array_Length_ReturnValue4@0x213b324ce10
+  Expression:
+  $1133: Context
+    ObjectExpression:
+    $1134: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Length_ReturnValue4@0x213b324ce10
+    ContextExpression:
+    $1155: FinalFunction target=Array_Length@0x212d6987df0 (
+      $1164: StructMemberContext prop=LadderLengthMeshes_3_2EC47B874988A47C81463B93F2A2A979@0x213b2ff7200
+        Expression to struct:
+        $1173: InstanceVariable named LadderCustomisationDefinition@0x213b2ff8c80
+      $1182: EndFunctionParms
+    )
+$1183: Let (Variable = Expression)
+  Variable:
+  $1192: LocalVariable named CallFunc_Divide_IntInt_ReturnValue@0x213b324d040
+  Expression:
+  $1201: CallMath target=Divide_IntInt@0x212d69990c0 (
+    $1210: LocalVariable named CallFunc_Get_Steps_Num_Steps@0x213b324ca20
+    $1219: LocalVariable named CallFunc_Array_Length_ReturnValue4@0x213b324ce10
+    $1228: EndFunctionParms
+  )
+$1229: LetBool (Variable = Expression)
+  Variable:
+  $1230: LocalVariable named CallFunc_LessEqual_IntInt_ReturnValue2@0x213b2ff7f00
+  Expression:
+  $1239: CallMath target=LessEqual_IntInt@0x212d69a69d0 (
+    $1248: LocalVariable named Temp_int_Variable@0x213b324c5c0
+    $1257: LocalVariable named CallFunc_Divide_IntInt_ReturnValue@0x213b324d040
+    $1266: EndFunctionParms
+  )
+$1267: JumpIfNot -> 0xd87, cond:
+  $1272: LocalVariable named CallFunc_LessEqual_IntInt_ReturnValue2@0x213b2ff7f00
+$1281: FlowStack.Push(0x1180)
+$1286: Let (Variable = Expression)
+  Variable:
+  $1295: LocalVariable named CallFunc_Array_Length_ReturnValue4@0x213b324ce10
+  Expression:
+  $1304: Context
+    ObjectExpression:
+    $1305: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Length_ReturnValue4@0x213b324ce10
+    ContextExpression:
+    $1326: FinalFunction target=Array_Length@0x212d6987df0 (
+      $1335: StructMemberContext prop=LadderLengthMeshes_3_2EC47B874988A47C81463B93F2A2A979@0x213b2ff7200
+        Expression to struct:
+        $1344: InstanceVariable named LadderCustomisationDefinition@0x213b2ff8c80
+      $1353: EndFunctionParms
+    )
+$1354: Let (Variable = Expression)
+  Variable:
+  $1363: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue2@0x213b324cef0
+  Expression:
+  $1372: CallMath target=Subtract_IntInt@0x212d69b9ad0 (
+    $1381: LocalVariable named CallFunc_Array_Length_ReturnValue4@0x213b324ce10
+    $1390: literal int32 1
+    $1395: EndFunctionParms
+  )
+$1396: Let (Variable = Expression)
+  Variable:
+  $1405: LocalVariable named CallFunc_Array_Add_ReturnValue3@0x213b324cf60
+  Expression:
+  $1414: Context
+    ObjectExpression:
+    $1415: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Add_ReturnValue3@0x213b324cf60
+    ContextExpression:
+    $1436: FinalFunction target=Array_Add@0x212d6986810 (
+      $1445: LocalVariable named MeshIndices@0x213b2ff8100
+      $1454: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue2@0x213b324cef0
+      $1463: EndFunctionParms
+    )
+$1464: Let (Variable = Expression)
+  Variable:
+  $1473: LocalVariable named CallFunc_Array_Add_ReturnValue2@0x213b324cda0
+  Expression:
+  $1482: Context
+    ObjectExpression:
+    $1483: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Add_ReturnValue2@0x213b324cda0
+    ContextExpression:
+    $1504: FinalFunction target=Array_Add@0x212d6986810 (
+      $1513: LocalVariable named PartOffsets@0x213b2ff8080
+      $1522: LocalVariable named HeightAccumulation@0x213b324d200
+      $1531: EndFunctionParms
+    )
+$1532: Let (Variable = Expression)
+  Variable:
+  $1541: LocalVariable named CallFunc_Array_Length_ReturnValue4@0x213b324ce10
+  Expression:
+  $1550: Context
+    ObjectExpression:
+    $1551: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Length_ReturnValue4@0x213b324ce10
+    ContextExpression:
+    $1572: FinalFunction target=Array_Length@0x212d6987df0 (
+      $1581: StructMemberContext prop=LadderLengthMeshes_3_2EC47B874988A47C81463B93F2A2A979@0x213b2ff7200
+        Expression to struct:
+        $1590: InstanceVariable named LadderCustomisationDefinition@0x213b2ff8c80
+      $1599: EndFunctionParms
+    )
+$1600: Let (Variable = Expression)
+  Variable:
+  $1609: LocalVariable named CallFunc_Multiply_IntFloat_ReturnValue@0x213b324ce80
+  Expression:
+  $1618: CallMath target=Multiply_IntFloat@0x212d69ad3f0 (
+    $1627: LocalVariable named CallFunc_Array_Length_ReturnValue4@0x213b324ce10
+    $1636: InstanceVariable named StepHeight@0x213b324d9e0
+    $1645: EndFunctionParms
+  )
+$1646: Context
+  ObjectExpression:
+  $1647: ObjectConst Default__BP_MathAndTrigAnimation_C@0x213b2e7b700
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $1668: VirtualFunction call "Increment Float" (
+    $1681: LocalVariable named HeightAccumulation@0x213b324d200
+    $1690: LocalVariable named CallFunc_Multiply_IntFloat_ReturnValue@0x213b324ce80
+    $1699: Self
+    $1700: EndFunctionParms
+  )
+$1701: PopExecutionFlow (jump to popped addr)
+$1702: LetBool (Variable = Expression)
+  Variable:
+  $1703: LocalVariable named CallFunc_SetStaticMesh_ReturnValue4@0x213b2ff7e80
+  Expression:
+  $1712: Context
+    ObjectExpression:
+    $1713: InstanceVariable named Ladder Cap@0x213b2ff8c00
+    SkipBytes: 0x20
+    RValueProperty: CallFunc_SetStaticMesh_ReturnValue4@0x213b2ff7e80
+    ContextExpression:
+    $1734: VirtualFunction call "SetStaticMesh" (
+      $1747: StructMemberContext prop=LadderTop_6_6BF9F2424757005036BA87A9BC524EBA@0x213b2ff7180
+        Expression to struct:
+        $1756: InstanceVariable named LadderCustomisationDefinition@0x213b2ff8c80
+      $1765: EndFunctionParms
+    )
+$1766: VirtualFunction call "Get World Loc at Height Along Z" (
+  $1779: LocalVariable named TotalHeightBeforeCap@0x213b324d270
+  $1788: LocalVariable named CallFunc_Get_World_Loc_at_Height_Along_Z_Return_Value2@0x213b2ff7d00
+  $1797: EndFunctionParms
+)
+$1798: Context
+  ObjectExpression:
+  $1799: InstanceVariable named Ladder Cap@0x213b2ff8c00
+  SkipBytes: 0x1e
+  RValueProperty: (null)
+  ContextExpression:
+  $1820: FinalFunction target=K2_SetWorldLocation@0x212d6692370 (
+    $1829: LocalVariable named CallFunc_Get_World_Loc_at_Height_Along_Z_Return_Value2@0x213b2ff7d00
+    $1838: False
+    $1839: LocalVariable named CallFunc_K2_SetWorldLocation_SweepHitResult2@0x213b2ff7d80
+    $1848: True
+    $1849: EndFunctionParms
+  )
+$1850: Context
+  ObjectExpression:
+  $1851: InstanceVariable named Ladder Cap@0x213b2ff8c00
+  SkipBytes: 0x17
+  RValueProperty: (null)
+  ContextExpression:
+  $1872: FinalFunction target=SetWorldScale3D@0x212d6693ae0 (
+    $1881: literal vector (1,1,1)
+    $1894: EndFunctionParms
+  )
+$1895: PopExecutionFlow (jump to popped addr)
+$1896: Let (Variable = Expression)
+  Variable:
+  $1905: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x213b324ca90
+  Expression:
+  $1914: CallMath target=Multiply_FloatFloat@0x212d69ad1e0 (
+    $1923: LocalVariable named TotalHeightBeforeCap@0x213b324d270
+    $1932: literal float 0.5
+    $1937: EndFunctionParms
+  )
+$1938: Let (Variable = Expression)
+  Variable:
+  $1947: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213b2ff7900
+  Expression:
+  $1956: CallMath target=MakeVector@0x212d69aa910 (
+    $1965: literal float 30
+    $1970: literal float 0
+    $1975: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x213b324ca90
+    $1984: EndFunctionParms
+  )
+$1985: Let (Variable = Expression)
+  Variable:
+  $1994: InstanceVariable named Interactable Position@0x213b2ff8d80
+  Expression:
+  $2003: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213b2ff7900
+$2012: Let (Variable = Expression)
+  Variable:
+  $2021: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x213b324cb00
+  Expression:
+  $2030: CallMath target=Add_FloatFloat@0x212d698f820 (
+    $2039: LocalVariable named TotalHeightBeforeCap@0x213b324d270
+    $2048: StructMemberContext prop=BottomRungOffset_13_3DB7AE6242ED48E7DA3A9FA0B52E34B6@0x213b324c1d0
+      Expression to struct:
+      $2057: InstanceVariable named LadderCustomisationDefinition@0x213b2ff8c80
+    $2066: EndFunctionParms
+  )
+$2067: Let (Variable = Expression)
+  Variable:
+  $2076: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue2@0x213b324cb70
+  Expression:
+  $2085: CallMath target=Multiply_FloatFloat@0x212d69ad1e0 (
+    $2094: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x213b324cb00
+    $2103: literal float 0.5
+    $2108: EndFunctionParms
+  )
+$2109: Let (Variable = Expression)
+  Variable:
+  $2118: LocalVariable named CallFunc_MakeVector_ReturnValue2@0x213b2ff7980
+  Expression:
+  $2127: CallMath target=MakeVector@0x212d69aa910 (
+    $2136: literal float 25
+    $2141: literal float 32
+    $2146: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue2@0x213b324cb70
+    $2155: EndFunctionParms
+  )
+$2156: Let (Variable = Expression)
+  Variable:
+  $2165: InstanceVariable named Interactable Scale@0x213b2ff8e00
+  Expression:
+  $2174: LocalVariable named CallFunc_MakeVector_ReturnValue2@0x213b2ff7980
+$2183: PopExecutionFlow (jump to popped addr)
+$2184: LetBool (Variable = Expression)
+  Variable:
+  $2185: LocalVariable named CallFunc_IsValid_ReturnValue@0x213b2ff7700
+  Expression:
+  $2194: Context
+    ObjectExpression:
+    $2195: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x213b2ff7700
+    ContextExpression:
+    $2216: FinalFunction target=IsValid@0x212d63ae380 (
+      $2225: InstanceVariable named Material Override@0x213b2ff8d00
+      $2234: EndFunctionParms
+    )
+$2235: JumpIfNot -> 0xbde, cond:
+  $2240: LocalVariable named CallFunc_IsValid_ReturnValue@0x213b2ff7700
+$2249: Let (Variable = Expression)
+  Variable:
+  $2258: LocalVariable named Temp_int_Loop_Counter_Variable2@0x213b324c390
+  Expression:
+  $2267: literal int32 0
+$2272: Let (Variable = Expression)
+  Variable:
+  $2281: LocalVariable named Temp_int_Array_Index_Variable@0x213b324c240
+  Expression:
+  $2290: literal int32 0
+$2295: Let (Variable = Expression)
+  Variable:
+  $2304: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue2@0x213b2ff8200
+  Expression:
+  $2313: FinalFunction target=GetComponentsByClass@0x212d63826c0 (
+    $2322: ObjectConst StaticMeshComponent@0x212d5a09140
+    $2331: EndFunctionParms
+  )
+$2332: Let (Variable = Expression)
+  Variable:
+  $2341: LocalVariable named CallFunc_Array_Length_ReturnValue2@0x213b324c710
+  Expression:
+  $2350: Context
+    ObjectExpression:
+    $2351: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue2@0x213b324c710
+    ContextExpression:
+    $2372: FinalFunction target=Array_Length@0x212d6987df0 (
+      $2381: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue2@0x213b2ff8200
+      $2390: EndFunctionParms
+    )
+$2391: LetBool (Variable = Expression)
+  Variable:
+  $2392: LocalVariable named CallFunc_Less_IntInt_ReturnValue2@0x213b2ff7680
+  Expression:
+  $2401: CallMath target=Less_IntInt@0x212d69a5ed0 (
+    $2410: LocalVariable named Temp_int_Loop_Counter_Variable2@0x213b324c390
+    $2419: LocalVariable named CallFunc_Array_Length_ReturnValue2@0x213b324c710
+    $2428: EndFunctionParms
+  )
+$2429: PopExecutionFlowIfNot, cond:
+$2430: LocalVariable named CallFunc_Less_IntInt_ReturnValue2@0x213b2ff7680
+$2439: Let (Variable = Expression)
+  Variable:
+  $2448: LocalVariable named Temp_int_Array_Index_Variable@0x213b324c240
+  Expression:
+  $2457: LocalVariable named Temp_int_Loop_Counter_Variable2@0x213b324c390
+$2466: FlowStack.Push(0xb94)
+$2471: Let (Variable = Expression)
+  Variable:
+  $2480: LocalVariable named Temp_int_Variable2@0x213b324c860
+  Expression:
+  $2489: literal int32 0
+$2494: Let (Variable = Expression)
+  Variable:
+  $2503: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue2@0x213b2ff8200
+  Expression:
+  $2512: FinalFunction target=GetComponentsByClass@0x212d63826c0 (
+    $2521: ObjectConst StaticMeshComponent@0x212d5a09140
+    $2530: EndFunctionParms
+  )
+$2531: Context
+  ObjectExpression:
+  $2532: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $2553: FinalFunction target=Array_Get@0x212d69876b0 (
+    $2562: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue2@0x213b2ff8200
+    $2571: LocalVariable named Temp_int_Array_Index_Variable@0x213b324c240
+    $2580: LocalVariable named CallFunc_Array_Get_Item@0x213b2ff7e00
+    $2589: EndFunctionParms
+  )
+$2590: Let (Variable = Expression)
+  Variable:
+  $2599: LocalVariable named CallFunc_GetNumMaterials_ReturnValue@0x213b324c780
+  Expression:
+  $2608: Context
+    ObjectExpression:
+    $2609: LocalVariable named CallFunc_Array_Get_Item@0x213b2ff7e00
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetNumMaterials_ReturnValue@0x213b324c780
+    ContextExpression:
+    $2630: VirtualFunction call "GetNumMaterials" (
+      $2643: EndFunctionParms
+    )
+$2644: Let (Variable = Expression)
+  Variable:
+  $2653: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x213b324c7f0
+  Expression:
+  $2662: CallMath target=Subtract_IntInt@0x212d69b9ad0 (
+    $2671: LocalVariable named CallFunc_GetNumMaterials_ReturnValue@0x213b324c780
+    $2680: literal int32 1
+    $2685: EndFunctionParms
+  )
+$2686: LetBool (Variable = Expression)
+  Variable:
+  $2687: LocalVariable named CallFunc_LessEqual_IntInt_ReturnValue@0x213b2ff7780
+  Expression:
+  $2696: CallMath target=LessEqual_IntInt@0x212d69a69d0 (
+    $2705: LocalVariable named Temp_int_Variable2@0x213b324c860
+    $2714: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x213b324c7f0
+    $2723: EndFunctionParms
+  )
+$2724: PopExecutionFlowIfNot, cond:
+$2725: LocalVariable named CallFunc_LessEqual_IntInt_ReturnValue@0x213b2ff7780
+$2734: FlowStack.Push(0xb4a)
+$2739: Let (Variable = Expression)
+  Variable:
+  $2748: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue2@0x213b2ff8200
+  Expression:
+  $2757: FinalFunction target=GetComponentsByClass@0x212d63826c0 (
+    $2766: ObjectConst StaticMeshComponent@0x212d5a09140
+    $2775: EndFunctionParms
+  )
+$2776: Context
+  ObjectExpression:
+  $2777: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $2798: FinalFunction target=Array_Get@0x212d69876b0 (
+    $2807: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue2@0x213b2ff8200
+    $2816: LocalVariable named Temp_int_Array_Index_Variable@0x213b324c240
+    $2825: LocalVariable named CallFunc_Array_Get_Item@0x213b2ff7e00
+    $2834: EndFunctionParms
+  )
+$2835: Context
+  ObjectExpression:
+  $2836: LocalVariable named CallFunc_Array_Get_Item@0x213b2ff7e00
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $2857: VirtualFunction call "SetMaterial" (
+    $2870: LocalVariable named Temp_int_Variable2@0x213b324c860
+    $2879: InstanceVariable named Material Override@0x213b2ff8d00
+    $2888: EndFunctionParms
+  )
+$2889: PopExecutionFlow (jump to popped addr)
+$2890: Let (Variable = Expression)
+  Variable:
+  $2899: LocalVariable named CallFunc_Add_IntInt_ReturnValue5@0x213b324c8d0
+  Expression:
+  $2908: CallMath target=Add_IntInt@0x212d698fa30 (
+    $2917: LocalVariable named Temp_int_Variable2@0x213b324c860
+    $2926: literal int32 1
+    $2931: EndFunctionParms
+  )
+$2932: Let (Variable = Expression)
+  Variable:
+  $2941: LocalVariable named Temp_int_Variable2@0x213b324c860
+  Expression:
+  $2950: LocalVariable named CallFunc_Add_IntInt_ReturnValue5@0x213b324c8d0
+$2959: Jump to offset 0x9be
+$2964: Let (Variable = Expression)
+  Variable:
+  $2973: LocalVariable named CallFunc_Add_IntInt_ReturnValue3@0x213b324c4e0
+  Expression:
+  $2982: CallMath target=Add_IntInt@0x212d698fa30 (
+    $2991: LocalVariable named Temp_int_Loop_Counter_Variable2@0x213b324c390
+    $3000: literal int32 1
+    $3005: EndFunctionParms
+  )
+$3006: Let (Variable = Expression)
+  Variable:
+  $3015: LocalVariable named Temp_int_Loop_Counter_Variable2@0x213b324c390
+  Expression:
+  $3024: LocalVariable named CallFunc_Add_IntInt_ReturnValue3@0x213b324c4e0
+$3033: Jump to offset 0x8f7
+$3038: Let (Variable = Expression)
+  Variable:
+  $3047: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b324c2b0
+  Expression:
+  $3056: literal int32 0
+$3061: Let (Variable = Expression)
+  Variable:
+  $3070: LocalVariable named Temp_int_Array_Index_Variable3@0x213b324c940
+  Expression:
+  $3079: literal int32 0
+$3084: Let (Variable = Expression)
+  Variable:
+  $3093: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x213b2ff8300
+  Expression:
+  $3102: FinalFunction target=GetComponentsByClass@0x212d63826c0 (
+    $3111: ObjectConst StaticMeshComponent@0x212d5a09140
+    $3120: EndFunctionParms
+  )
+$3121: Let (Variable = Expression)
+  Variable:
+  $3130: LocalVariable named CallFunc_Array_Length_ReturnValue@0x213b324c6a0
+  Expression:
+  $3139: Context
+    ObjectExpression:
+    $3140: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x213b324c6a0
+    ContextExpression:
+    $3161: FinalFunction target=Array_Length@0x212d6987df0 (
+      $3170: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x213b2ff8300
+      $3179: EndFunctionParms
+    )
+$3180: LetBool (Variable = Expression)
+  Variable:
+  $3181: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x213b2ff7500
+  Expression:
+  $3190: CallMath target=Less_IntInt@0x212d69a5ed0 (
+    $3199: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b324c2b0
+    $3208: LocalVariable named CallFunc_Array_Length_ReturnValue@0x213b324c6a0
+    $3217: EndFunctionParms
+  )
+$3218: PopExecutionFlowIfNot, cond:
+$3219: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x213b2ff7500
+$3228: Let (Variable = Expression)
+  Variable:
+  $3237: LocalVariable named Temp_int_Array_Index_Variable3@0x213b324c940
+  Expression:
+  $3246: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b324c2b0
+$3255: FlowStack.Push(0xd3d)
+$3260: Let (Variable = Expression)
+  Variable:
+  $3269: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x213b2ff8300
+  Expression:
+  $3278: FinalFunction target=GetComponentsByClass@0x212d63826c0 (
+    $3287: ObjectConst StaticMeshComponent@0x212d5a09140
+    $3296: EndFunctionParms
+  )
+$3297: Context
+  ObjectExpression:
+  $3298: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $3319: FinalFunction target=Array_Get@0x212d69876b0 (
+    $3328: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x213b2ff8300
+    $3337: LocalVariable named Temp_int_Array_Index_Variable3@0x213b324c940
+    $3346: LocalVariable named CallFunc_Array_Get_Item2@0x213b2ff7800
+    $3355: EndFunctionParms
+  )
+$3356: Context
+  ObjectExpression:
+  $3357: LocalVariable named CallFunc_Array_Get_Item2@0x213b2ff7800
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $3378: FinalFunction target=ResetDefaultMaterials@0x212d6799ff0 (
+    $3387: EndFunctionParms
+  )
+$3388: PopExecutionFlow (jump to popped addr)
+$3389: Let (Variable = Expression)
+  Variable:
+  $3398: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x213b324c320
+  Expression:
+  $3407: CallMath target=Add_IntInt@0x212d698fa30 (
+    $3416: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b324c2b0
+    $3425: literal int32 1
+    $3430: EndFunctionParms
+  )
+$3431: Let (Variable = Expression)
+  Variable:
+  $3440: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b324c2b0
+  Expression:
+  $3449: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x213b324c320
+$3458: Jump to offset 0xc0c
+$3463: Let (Variable = Expression)
+  Variable:
+  $3472: LocalVariable named Temp_int_Loop_Counter_Variable3@0x213b324c400
+  Expression:
+  $3481: literal int32 0
+$3486: Let (Variable = Expression)
+  Variable:
+  $3495: LocalVariable named Temp_int_Array_Index_Variable2@0x213b324c550
+  Expression:
+  $3504: literal int32 0
+$3509: Let (Variable = Expression)
+  Variable:
+  $3518: LocalVariable named CallFunc_Array_Length_ReturnValue3@0x213b324ccc0
+  Expression:
+  $3527: Context
+    ObjectExpression:
+    $3528: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue3@0x213b324ccc0
+    ContextExpression:
+    $3549: FinalFunction target=Array_Length@0x212d6987df0 (
+      $3558: LocalVariable named MeshIndices@0x213b2ff8100
+      $3567: EndFunctionParms
+    )
+$3568: LetBool (Variable = Expression)
+  Variable:
+  $3569: LocalVariable named CallFunc_Less_IntInt_ReturnValue3@0x213b2ff7b80
+  Expression:
+  $3578: CallMath target=Less_IntInt@0x212d69a5ed0 (
+    $3587: LocalVariable named Temp_int_Loop_Counter_Variable3@0x213b324c400
+    $3596: LocalVariable named CallFunc_Array_Length_ReturnValue3@0x213b324ccc0
+    $3605: EndFunctionParms
+  )
+$3606: PopExecutionFlowIfNot, cond:
+$3607: LocalVariable named CallFunc_Less_IntInt_ReturnValue3@0x213b2ff7b80
+$3616: Let (Variable = Expression)
+  Variable:
+  $3625: LocalVariable named Temp_int_Array_Index_Variable2@0x213b324c550
+  Expression:
+  $3634: LocalVariable named Temp_int_Loop_Counter_Variable3@0x213b324c400
+$3643: FlowStack.Push(0x1136)
+$3648: LetBool (Variable = Expression)
+  Variable:
+  $3649: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x213b2ff7480
+  Expression:
+  $3658: CallMath target=Greater_IntInt@0x212d69a2770 (
+    $3667: LocalVariable named Temp_int_Array_Index_Variable2@0x213b324c550
+    $3676: literal int32 0
+    $3681: EndFunctionParms
+  )
+$3682: JumpIfNot -> 0x1052, cond:
+  $3687: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x213b2ff7480
+$3696: Let (Variable = Expression)
+  Variable:
+  $3705: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x213b2ff7580
+  Expression:
+  $3714: CallMath target=MakeTransform@0x212d69aa650 (
+    $3723: literal vector (0,0,0)
+    $3736: literal rotation (0,0,0)
+    $3749: literal vector (1,1,1)
+    $3762: EndFunctionParms
+  )
+$3763: LetObj (Variable = Expression)
+  Variable:
+  $3764: LocalVariable named CallFunc_AddComponent_ReturnValue@0x213b2ff7600
+  Expression:
+  $3773: FinalFunction target=AddComponent@0x212d63801e0 (
+    $3782: literal name "StaticMeshComponent"
+    $3795: False
+    $3796: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x213b2ff7580
+    $3805: Self
+    $3806: EndFunctionParms
+  )
+$3807: Context
+  ObjectExpression:
+  $3808: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $3829: FinalFunction target=Array_Get@0x212d69876b0 (
+    $3838: LocalVariable named MeshIndices@0x213b2ff8100
+    $3847: LocalVariable named Temp_int_Array_Index_Variable2@0x213b324c550
+    $3856: LocalVariable named CallFunc_Array_Get_Item4@0x213b324cc50
+    $3865: EndFunctionParms
+  )
+$3866: Context
+  ObjectExpression:
+  $3867: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x2e
+  RValueProperty: (null)
+  ContextExpression:
+  $3888: FinalFunction target=Array_Get@0x212d69876b0 (
+    $3897: StructMemberContext prop=LadderLengthMeshes_3_2EC47B874988A47C81463B93F2A2A979@0x213b2ff7200
+      Expression to struct:
+      $3906: InstanceVariable named LadderCustomisationDefinition@0x213b2ff8c80
+    $3915: LocalVariable named CallFunc_Array_Get_Item4@0x213b324cc50
+    $3924: LocalVariable named CallFunc_Array_Get_Item5@0x213b2ff7b00
+    $3933: EndFunctionParms
+  )
+$3934: LetBool (Variable = Expression)
+  Variable:
+  $3935: LocalVariable named CallFunc_SetStaticMesh_ReturnValue3@0x213b2ff7c80
+  Expression:
+  $3944: Context
+    ObjectExpression:
+    $3945: LocalVariable named CallFunc_AddComponent_ReturnValue@0x213b2ff7600
+    SkipBytes: 0x17
+    RValueProperty: CallFunc_SetStaticMesh_ReturnValue3@0x213b2ff7c80
+    ContextExpression:
+    $3966: VirtualFunction call "SetStaticMesh" (
+      $3979: LocalVariable named CallFunc_Array_Get_Item5@0x213b2ff7b00
+      $3988: EndFunctionParms
+    )
+$3989: Context
+  ObjectExpression:
+  $3990: LocalVariable named CallFunc_AddComponent_ReturnValue@0x213b2ff7600
+  SkipBytes: 0x17
+  RValueProperty: (null)
+  ContextExpression:
+  $4011: FinalFunction target=SetWorldScale3D@0x212d6693ae0 (
+    $4020: literal vector (1,1,1)
+    $4033: EndFunctionParms
+  )
+$4034: Context
+  ObjectExpression:
+  $4035: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $4056: FinalFunction target=Array_Get@0x212d69876b0 (
+    $4065: LocalVariable named PartOffsets@0x213b2ff8080
+    $4074: LocalVariable named Temp_int_Array_Index_Variable2@0x213b324c550
+    $4083: LocalVariable named CallFunc_Array_Get_Item3@0x213b324cbe0
+    $4092: EndFunctionParms
+  )
+$4093: VirtualFunction call "Get World Loc at Height Along Z" (
+  $4106: LocalVariable named CallFunc_Array_Get_Item3@0x213b324cbe0
+  $4115: LocalVariable named CallFunc_Get_World_Loc_at_Height_Along_Z_Return_Value@0x213b2ff7a00
+  $4124: EndFunctionParms
+)
+$4125: Context
+  ObjectExpression:
+  $4126: LocalVariable named CallFunc_AddComponent_ReturnValue@0x213b2ff7600
+  SkipBytes: 0x1e
+  RValueProperty: (null)
+  ContextExpression:
+  $4147: FinalFunction target=K2_SetWorldLocation@0x212d6692370 (
+    $4156: LocalVariable named CallFunc_Get_World_Loc_at_Height_Along_Z_Return_Value@0x213b2ff7a00
+    $4165: False
+    $4166: LocalVariable named CallFunc_K2_SetWorldLocation_SweepHitResult@0x213b2ff7a80
+    $4175: True
+    $4176: EndFunctionParms
+  )
+$4177: PopExecutionFlow (jump to popped addr)
+$4178: Context
+  ObjectExpression:
+  $4179: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $4200: FinalFunction target=Array_Get@0x212d69876b0 (
+    $4209: LocalVariable named MeshIndices@0x213b2ff8100
+    $4218: LocalVariable named Temp_int_Array_Index_Variable2@0x213b324c550
+    $4227: LocalVariable named CallFunc_Array_Get_Item4@0x213b324cc50
+    $4236: EndFunctionParms
+  )
+$4237: Context
+  ObjectExpression:
+  $4238: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x2e
+  RValueProperty: (null)
+  ContextExpression:
+  $4259: FinalFunction target=Array_Get@0x212d69876b0 (
+    $4268: StructMemberContext prop=LadderLengthMeshes_3_2EC47B874988A47C81463B93F2A2A979@0x213b2ff7200
+      Expression to struct:
+      $4277: InstanceVariable named LadderCustomisationDefinition@0x213b2ff8c80
+    $4286: LocalVariable named CallFunc_Array_Get_Item4@0x213b324cc50
+    $4295: LocalVariable named CallFunc_Array_Get_Item5@0x213b2ff7b00
+    $4304: EndFunctionParms
+  )
+$4305: LetBool (Variable = Expression)
+  Variable:
+  $4306: LocalVariable named CallFunc_SetStaticMesh_ReturnValue2@0x213b2ff7c00
+  Expression:
+  $4315: Context
+    ObjectExpression:
+    $4316: InstanceVariable named MeshComponent@0x212d67d8210
+    SkipBytes: 0x17
+    RValueProperty: CallFunc_SetStaticMesh_ReturnValue2@0x213b2ff7c00
+    ContextExpression:
+    $4337: VirtualFunction call "SetStaticMesh" (
+      $4350: LocalVariable named CallFunc_Array_Get_Item5@0x213b2ff7b00
+      $4359: EndFunctionParms
+    )
+$4360: Context
+  ObjectExpression:
+  $4361: InstanceVariable named MeshComponent@0x212d67d8210
+  SkipBytes: 0x17
+  RValueProperty: (null)
+  ContextExpression:
+  $4382: FinalFunction target=SetWorldScale3D@0x212d6693ae0 (
+    $4391: literal vector (1,1,1)
+    $4404: EndFunctionParms
+  )
+$4405: PopExecutionFlow (jump to popped addr)
+$4406: Let (Variable = Expression)
+  Variable:
+  $4415: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x213b324c470
+  Expression:
+  $4424: CallMath target=Add_IntInt@0x212d698fa30 (
+    $4433: LocalVariable named Temp_int_Loop_Counter_Variable3@0x213b324c400
+    $4442: literal int32 1
+    $4447: EndFunctionParms
+  )
+$4448: Let (Variable = Expression)
+  Variable:
+  $4457: LocalVariable named Temp_int_Loop_Counter_Variable3@0x213b324c400
+  Expression:
+  $4466: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x213b324c470
+$4475: Jump to offset 0xdb5
+$4480: Let (Variable = Expression)
+  Variable:
+  $4489: LocalVariable named CallFunc_Add_IntInt_ReturnValue4@0x213b324c630
+  Expression:
+  $4498: CallMath target=Add_IntInt@0x212d698fa30 (
+    $4507: LocalVariable named Temp_int_Variable@0x213b324c5c0
+    $4516: literal int32 1
+    $4521: EndFunctionParms
+  )
+$4522: Let (Variable = Expression)
+  Variable:
+  $4531: LocalVariable named Temp_int_Variable@0x213b324c5c0
+  Expression:
+  $4540: LocalVariable named CallFunc_Add_IntInt_ReturnValue4@0x213b324c630
+$4549: Jump to offset 0x444
+$4554: Return expression:
+  $4555: Nothing
+$4556: EndOfScript
+
+=== BP_CustomisableLadder_C::Get Total Height Before Cap (136 bytes) ===
+$0: VirtualFunction call "Get Steps" (
+  $13: LocalVariable named CallFunc_Get_Steps_Num_Steps@0x213b324d430
+  $22: EndFunctionParms
+)
+$23: Let (Variable = Expression)
+  Variable:
+  $32: LocalVariable named CallFunc_Conv_IntToFloat_ReturnValue@0x213b324d4a0
+  Expression:
+  $41: CallMath target=Conv_IntToFloat@0x212d6995980 (
+    $50: LocalVariable named CallFunc_Get_Steps_Num_Steps@0x213b324d430
+    $59: EndFunctionParms
+  )
+$60: Let (Variable = Expression)
+  Variable:
+  $69: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x213b324d510
+  Expression:
+  $78: CallMath target=Multiply_FloatFloat@0x212d69ad1e0 (
+    $87: InstanceVariable named StepHeight@0x213b324d9e0
+    $96: LocalVariable named CallFunc_Conv_IntToFloat_ReturnValue@0x213b324d4a0
+    $105: EndFunctionParms
+  )
+$106: Let (Variable = Expression)
+  Variable:
+  $115: LocalOutVariable named Height@0x213b324d3c0
+  Expression:
+  $124: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x213b324d510
+$133: Return expression:
+  $134: Nothing
+$135: EndOfScript
+
+=== BP_CustomisableLadder_C::Get Steps (76 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_Max_ReturnValue@0x213b324d5f0
+  Expression:
+  $18: CallMath target=Max@0x212d69ab480 (
+    $27: InstanceVariable named Steps@0x213b324d970
+    $36: InstanceVariable named Minimum Steps@0x213b324da50
+    $45: EndFunctionParms
+  )
+$46: Let (Variable = Expression)
+  Variable:
+  $55: LocalOutVariable named Num Steps@0x213b324d580
+  Expression:
+  $64: LocalVariable named CallFunc_Max_ReturnValue@0x213b324d5f0
+$73: Return expression:
+  $74: Nothing
+$75: EndOfScript
+
+=== BP_CustomisableLadder_C::GetBottomLadderRungTransform (203 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x213b324d660
+  Expression:
+  $18: CallMath target=Add_FloatFloat@0x212d698f820 (
+    $27: StructMemberContext prop=BottomRungOffset_13_3DB7AE6242ED48E7DA3A9FA0B52E34B6@0x213b324c1d0
+      Expression to struct:
+      $36: InstanceVariable named LadderCustomisationDefinition@0x213b2ff8c80
+    $45: InstanceVariable named StepHeight@0x213b324d9e0
+    $54: EndFunctionParms
+  )
+$55: Let (Variable = Expression)
+  Variable:
+  $64: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213b2ff8400
+  Expression:
+  $73: CallMath target=MakeVector@0x212d69aa910 (
+    $82: literal float 0
+    $87: literal float 0
+    $92: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x213b324d660
+    $101: EndFunctionParms
+  )
+$102: Let (Variable = Expression)
+  Variable:
+  $111: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x213b2ff8480
+  Expression:
+  $120: CallMath target=MakeTransform@0x212d69aa650 (
+    $129: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213b2ff8400
+    $138: literal rotation (0,-180,0)
+    $151: literal vector (1,1,1)
+    $164: EndFunctionParms
+  )
+$165: Let (Variable = Expression)
+  Variable:
+  $174: LocalOutVariable named ReturnValue@0x213b2ff8380
+  Expression:
+  $183: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x213b2ff8480
+$192: Return expression:
+  $193: LocalOutVariable named ReturnValue@0x213b2ff8380
+$202: EndOfScript
+
+=== BP_CustomisableLadder_C::GetTopLadderRungTransform (314 bytes) ===
+$0: VirtualFunction call "Get Total Height Before Cap" (
+  $13: LocalVariable named CallFunc_Get_Total_Height_Before_Cap_Height@0x213b324d6d0
+  $22: EndFunctionParms
+)
+$23: Let (Variable = Expression)
+  Variable:
+  $32: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x213b324d740
+  Expression:
+  $41: CallMath target=Multiply_FloatFloat@0x212d69ad1e0 (
+    $50: InstanceVariable named StepHeight@0x213b324d9e0
+    $59: literal float 2
+    $64: EndFunctionParms
+  )
+$65: Let (Variable = Expression)
+  Variable:
+  $74: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue@0x213b324d7b0
+  Expression:
+  $83: CallMath target=Subtract_FloatFloat@0x212d69b98c0 (
+    $92: LocalVariable named CallFunc_Get_Total_Height_Before_Cap_Height@0x213b324d6d0
+    $101: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x213b324d740
+    $110: EndFunctionParms
+  )
+$111: Let (Variable = Expression)
+  Variable:
+  $120: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x213b324d820
+  Expression:
+  $129: CallMath target=Add_FloatFloat@0x212d698f820 (
+    $138: StructMemberContext prop=BottomRungOffset_13_3DB7AE6242ED48E7DA3A9FA0B52E34B6@0x213b324c1d0
+      Expression to struct:
+      $147: InstanceVariable named LadderCustomisationDefinition@0x213b2ff8c80
+    $156: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue@0x213b324d7b0
+    $165: EndFunctionParms
+  )
+$166: Let (Variable = Expression)
+  Variable:
+  $175: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213b2ff8600
+  Expression:
+  $184: CallMath target=MakeVector@0x212d69aa910 (
+    $193: literal float 0
+    $198: literal float 0
+    $203: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x213b324d820
+    $212: EndFunctionParms
+  )
+$213: Let (Variable = Expression)
+  Variable:
+  $222: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x213b2ff8680
+  Expression:
+  $231: CallMath target=MakeTransform@0x212d69aa650 (
+    $240: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213b2ff8600
+    $249: literal rotation (0,-180,0)
+    $262: literal vector (1,1,1)
+    $275: EndFunctionParms
+  )
+$276: Let (Variable = Expression)
+  Variable:
+  $285: LocalOutVariable named ReturnValue@0x213b2ff8580
+  Expression:
+  $294: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x213b2ff8680
+$303: Return expression:
+  $304: LocalOutVariable named ReturnValue@0x213b2ff8580
+$313: EndOfScript
+
+=== BP_CustomisableLadder_C::Get World Loc at Height Along Z (178 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_GetActorUpVector_ReturnValue@0x213b2ff8780
+  Expression:
+  $18: FinalFunction target=GetActorUpVector@0x212d6381e00 (
+    $27: EndFunctionParms
+  )
+$28: Let (Variable = Expression)
+  Variable:
+  $37: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x213b2ff8800
+  Expression:
+  $46: FinalFunction target=K2_GetActorLocation@0x212d6386b10 (
+    $55: EndFunctionParms
+  )
+$56: Let (Variable = Expression)
+  Variable:
+  $65: LocalVariable named CallFunc_Multiply_VectorFloat_ReturnValue@0x213b2ff8880
+  Expression:
+  $74: CallMath target=Multiply_VectorFloat@0x212d69ae540 (
+    $83: LocalVariable named CallFunc_GetActorUpVector_ReturnValue@0x213b2ff8780
+    $92: LocalVariable named Relative Z@0x213b324d890
+    $101: EndFunctionParms
+  )
+$102: Let (Variable = Expression)
+  Variable:
+  $111: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x213b2ff8900
+  Expression:
+  $120: CallMath target=Add_VectorVector@0x212d6990750 (
+    $129: LocalVariable named CallFunc_Multiply_VectorFloat_ReturnValue@0x213b2ff8880
+    $138: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x213b2ff8800
+    $147: EndFunctionParms
+  )
+$148: Let (Variable = Expression)
+  Variable:
+  $157: LocalOutVariable named Return Value@0x213b2ff8700
+  Expression:
+  $166: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x213b2ff8900
+$175: Return expression:
+  $176: Nothing
+$177: EndOfScript
+
+=== BP_CustomisableLadder_C::SetupSpline (78 bytes) ===
+$0: Context
+  ObjectExpression:
+  $1: LocalVariable named Spline Component@0x213b2ff8980
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $22: FinalFunction target=ClearSplinePoints@0x212d6868340 (
+    $31: EndFunctionParms
+  )
+$32: Context
+  ObjectExpression:
+  $33: LocalVariable named Spline Component@0x213b2ff8980
+  SkipBytes: 0x15
+  RValueProperty: (null)
+  ContextExpression:
+  $54: FinalFunction target=SetSplinePoints@0x212d686f0d0 (
+    $63: LocalOutVariable named Positions@0x213b2ff8a80
+    $72: literal byte 0
+    $74: EndFunctionParms
+  )
+$75: Return expression:
+  $76: Nothing
+$77: EndOfScript
+
+=== BP_CustomisableLadder_C::UserConstructionScript (91 bytes) ===
+$0: FinalFunction target=UserConstructionScript@0x212d638c6f0 (
+  $9: EndFunctionParms
+)
+$10: VirtualFunction call "Construct Ladder" (
+  $23: EndFunctionParms
+)
+$24: VirtualFunction call "SetupSpline" (
+  $37: InstanceVariable named OnTopSplineComponent@0x212d67d8190
+  $46: InstanceVariable named OnTopSplineComponentPositions@0x213b2ff8f00
+  $55: EndFunctionParms
+)
+$56: VirtualFunction call "SetupSpline" (
+  $69: InstanceVariable named OffTopSplineComponent@0x212d67d8110
+  $78: InstanceVariable named OffTopSplineComponentPositions@0x213b2ff9080
+  $87: EndFunctionParms
+)
+$88: Return expression:
+  $89: Nothing
+$90: EndOfScript
+
+=== BP_CustomisableLadder_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_CustomisableLadder" (
+  $13: literal int32 10
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_CustomisableLadder_C::ExecuteUbergraph_BP_CustomisableLadder (160 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x213b324d900
+$10: LetBool (Variable = Expression)
+  Variable:
+  $11: LocalVariable named CallFunc_IsValid_ReturnValue@0x213b2ff8b00
+  Expression:
+  $20: Context
+    ObjectExpression:
+    $21: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x213b2ff8b00
+    ContextExpression:
+    $42: FinalFunction target=IsValid@0x212d63ae380 (
+      $51: InstanceVariable named InteractableComponent@0x213b2ff8b80
+      $60: EndFunctionParms
+    )
+$61: JumpIfNot -> 0x9d, cond:
+  $66: LocalVariable named CallFunc_IsValid_ReturnValue@0x213b2ff8b00
+$75: Context
+  ObjectExpression:
+  $76: InstanceVariable named InteractableComponent@0x213b2ff8b80
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $97: FinalFunction target=SetBoxOrigin@0x212d674e6c0 (
+    $106: InstanceVariable named Interactable Position@0x213b2ff8d80
+    $115: EndFunctionParms
+  )
+$116: Context
+  ObjectExpression:
+  $117: InstanceVariable named InteractableComponent@0x213b2ff8b80
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $138: FinalFunction target=SetBoxExtent@0x212d674e580 (
+    $147: InstanceVariable named Interactable Scale@0x213b2ff8e00
+    $156: EndFunctionParms
+  )
+$157: Return expression:
+  $158: Nothing
+$159: EndOfScript

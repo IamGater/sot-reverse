@@ -1,0 +1,92 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/AshenAge/Tale_1_TheAshenDragon/bp_theashendragonselectsidequestisland -> BP_TheAshenDragonSelectSideQuestIsland_C
+
+=== BP_TheAshenDragonSelectSideQuestIsland_C::fn_idx_1828 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fcda45f00
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fcda45e80
+$18: VirtualFunction call "idx:282003" (
+  $31: literal int32 25
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_TheAshenDragonSelectSideQuestIsland_C::fn_idx_282003 (346 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fcdbbf6c0
+$10: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $19: EndFunctionParms
+)
+$20: Jump to offset 0x157
+$25: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $34: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcda45f80
+  $43: EndFunctionParms
+)
+$44: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $53: LocalVariable named CallFunc_GetVariables_OutStruct2@0x19fcda48d80
+  $62: EndFunctionParms
+)
+$63: Let (Variable = Expression)
+  Variable:
+  $72: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fcdbbf8f0
+  Expression:
+  $81: Context
+    ObjectExpression:
+    $82: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19fcdbbf8f0
+    ContextExpression:
+    $103: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $112: StructMemberContext prop=SideQuest1_81_DEE355C84084B672BA2FC793CC00E7CC@0x19fcd6f8080
+        Expression to struct:
+        $121: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcda45f80
+      $130: EndFunctionParms
+    )
+$131: Let (Variable = Expression)
+  Variable:
+  $140: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x19fcdbbf570
+  Expression:
+  $149: CallMath target=Subtract_IntInt@0x19e4d399ad0 (
+    $158: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fcdbbf8f0
+    $167: literal int32 1
+    $172: EndFunctionParms
+  )
+$173: Let (Variable = Expression)
+  Variable:
+  $182: LocalVariable named CallFunc_RandomIntegerInRange_ReturnValue@0x19fcdbbf960
+  Expression:
+  $191: CallMath target=RandomIntegerInRange@0x19e4d394190 (
+    $200: literal int32 0
+    $205: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x19fcdbbf570
+    $214: EndFunctionParms
+  )
+$215: Context
+  ObjectExpression:
+  $216: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x2e
+  RValueProperty: (null)
+  ContextExpression:
+  $237: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $246: StructMemberContext prop=SideQuest1_81_DEE355C84084B672BA2FC793CC00E7CC@0x19fcd6f8080
+      Expression to struct:
+      $255: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcda45f80
+    $264: LocalVariable named CallFunc_RandomIntegerInRange_ReturnValue@0x19fcdbbf960
+    $273: LocalVariable named CallFunc_Array_Get_Item@0x19fcda46080
+    $282: EndFunctionParms
+  )
+$283: Let (Variable = Expression)
+  Variable:
+  $292: StructMemberContext prop=SideQuestIsland_79_520DA7904692990591874BA82275675B@0x19fcd6ff680
+    Expression to struct:
+    $301: LocalVariable named CallFunc_GetVariables_OutStruct2@0x19fcda48d80
+  Expression:
+  $310: LocalVariable named CallFunc_Array_Get_Item@0x19fcda46080
+$319: FinalFunction target=SetVariables@0x19e4cda7cc0 (
+  $328: LocalVariable named CallFunc_GetVariables_OutStruct2@0x19fcda48d80
+  $337: EndFunctionParms
+)
+$338: Jump to offset 0xa
+$343: Return expression:
+  $344: Nothing
+$345: EndOfScript

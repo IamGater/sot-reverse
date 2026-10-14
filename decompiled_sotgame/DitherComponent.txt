@@ -1,0 +1,46 @@
+// Class: DitherComponent (3 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+DitherComponent::FadeIn @ RVA 0x2FA1B00 EA 0x7FF6F69C1B00
+======================================================================
+__int64 __fastcall sub_7FF6F69C1B00(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)(a1 + 200) + 16LL))(a1 + 200);
+}
+
+
+======================================================================
+DitherComponent::FadeOut @ RVA 0x2FA1B30 EA 0x7FF6F69C1B30
+======================================================================
+__int64 __fastcall sub_7FF6F69C1B30(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)(a1 + 200) + 24LL))(a1 + 200);
+}
+
+
+======================================================================
+DitherComponent::SetCurrentTransparency @ RVA 0x2FA1BE0 EA 0x7FF6F69C1BE0
+======================================================================
+__int64 __fastcall sub_7FF6F69C1BE0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F69A8C80(a1);
+}
+

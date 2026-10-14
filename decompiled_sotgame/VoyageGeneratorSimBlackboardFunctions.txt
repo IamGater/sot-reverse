@@ -1,0 +1,352 @@
+// Class: VoyageGeneratorSimBlackboardFunctions (4 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+VoyageGeneratorSimBlackboardFunctions::CombineBlackboards @ RVA 0x109E420 EA 0x7FF6F4ABE420
+======================================================================
+// Hidden C++ exception states: #wind=6
+__int64 __fastcall sub_7FF6F4ABE420(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 *v5; // rdi
+  __int64 *v6; // r8
+  __int64 v7; // rax
+  __int64 result; // rax
+  __int64 v9[2]; // [rsp+28h] [rbp-79h] BYREF
+  __int64 v10; // [rsp+38h] [rbp-69h]
+  __int64 v11; // [rsp+40h] [rbp-61h]
+  __int64 v12; // [rsp+48h] [rbp-59h]
+  __int64 v13; // [rsp+50h] [rbp-51h]
+  _QWORD v14[2]; // [rsp+58h] [rbp-49h] BYREF
+  __int64 v15[2]; // [rsp+68h] [rbp-39h] BYREF
+  __int64 v16; // [rsp+78h] [rbp-29h]
+  __int64 v17; // [rsp+80h] [rbp-21h]
+  __int64 v18; // [rsp+88h] [rbp-19h]
+  __int64 v19; // [rsp+90h] [rbp-11h]
+  _QWORD v20[3]; // [rsp+98h] [rbp-9h] BYREF
+  __int64 v21; // [rsp+B0h] [rbp+Fh] BYREF
+  __int64 v22; // [rsp+C0h] [rbp+1Fh]
+  __int64 v23; // [rsp+D0h] [rbp+2Fh]
+  _BYTE v24[24]; // [rsp+E0h] [rbp+3Fh] BYREF
+
+  v20[2] = -2;
+  v15[0] = 0;
+  v15[1] = 0;
+  v16 = 0;
+  v17 = 0;
+  v18 = 0;
+  v19 = 0;
+  v20[0] = 0;
+  v20[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v15);
+  }
+  v5 = v15;
+  if ( a2[7] )
+    v5 = (__int64 *)a2[7];
+  v9[0] = 0;
+  v9[1] = 0;
+  v10 = 0;
+  v11 = 0;
+  v12 = 0;
+  v13 = 0;
+  v14[0] = 0;
+  v14[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (__int64 *)a2[7];
+  a2[4] += a2[4] != 0;
+  v7 = sub_7FF6F4415530(&v21, v5, v6);
+  sub_7FF6F49EF3B0(a3, v7);
+  sub_7FF6F3C358E0(v24);
+  if ( v23 )
+  {
+    sub_7FF6F4DED1F0(v23);
+    v23 = 0;
+  }
+  if ( v22 )
+  {
+    sub_7FF6F4DED1F0(v22);
+    v22 = 0;
+  }
+  if ( v21 )
+    sub_7FF6F4DED1F0(v21);
+  sub_7FF6F3C358E0(v14);
+  if ( v12 )
+  {
+    sub_7FF6F4DED1F0(v12);
+    v12 = 0;
+  }
+  if ( v10 )
+  {
+    sub_7FF6F4DED1F0(v10);
+    v10 = 0;
+  }
+  if ( v9[0] )
+  {
+    sub_7FF6F4DED1F0(v9[0]);
+    v9[0] = 0;
+  }
+  result = sub_7FF6F3C358E0(v20);
+  if ( v18 )
+  {
+    result = sub_7FF6F4DED1F0(v18);
+    v18 = 0;
+  }
+  if ( v16 )
+  {
+    result = sub_7FF6F4DED1F0(v16);
+    v16 = 0;
+  }
+  if ( v15[0] )
+    return sub_7FF6F4DED1F0(v15[0]);
+  return result;
+}
+
+
+======================================================================
+VoyageGeneratorSimBlackboardFunctions::GetValuesFromBlackboardByName @ RVA 0x10A0450 EA 0x7FF6F4AC0450
+======================================================================
+// Hidden C++ exception states: #wind=4
+__int64 __fastcall sub_7FF6F4AC0450(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 *v5; // rdi
+  __int64 v6; // rax
+  int v7; // edi
+  __int64 *v8; // rbx
+  __int64 result; // rax
+  __int64 *v10; // [rsp+28h] [rbp-58h] BYREF
+  int v11; // [rsp+30h] [rbp-50h]
+  __int64 v12[2]; // [rsp+40h] [rbp-40h] BYREF
+  __int64 v13; // [rsp+50h] [rbp-30h]
+  __int64 v14; // [rsp+58h] [rbp-28h]
+  __int64 v15; // [rsp+60h] [rbp-20h]
+  __int64 v16; // [rsp+68h] [rbp-18h]
+  _QWORD v17[2]; // [rsp+70h] [rbp-10h] BYREF
+  __int64 v18; // [rsp+A8h] [rbp+28h] BYREF
+
+  v12[0] = 0;
+  v12[1] = 0;
+  v13 = 0;
+  v14 = 0;
+  v15 = 0;
+  v16 = 0;
+  v17[0] = 0;
+  v17[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v5 = v12;
+  if ( a2[7] )
+    v5 = (__int64 *)a2[7];
+  v18 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  a2[4] += a2[4] != 0;
+  v6 = sub_7FF6F441F0A0(&v10, v5, v18);
+  sub_7FF6F3D4E330(a3, v6);
+  v7 = v11;
+  v8 = v10;
+  if ( v11 )
+  {
+    do
+    {
+      if ( *v8 )
+      {
+        sub_7FF6F4DED1F0(*v8);
+        if ( *v8 )
+          *v8 = 0;
+      }
+      v8 += 2;
+      --v7;
+    }
+    while ( v7 );
+    v8 = v10;
+  }
+  if ( v8 )
+    sub_7FF6F4DED1F0((__int64)v8);
+  result = sub_7FF6F3C358E0(v17);
+  if ( v15 )
+  {
+    result = sub_7FF6F4DED1F0(v15);
+    v15 = 0;
+  }
+  if ( v13 )
+  {
+    result = sub_7FF6F4DED1F0(v13);
+    v13 = 0;
+  }
+  if ( v12[0] )
+    return sub_7FF6F4DED1F0(v12[0]);
+  return result;
+}
+
+
+======================================================================
+VoyageGeneratorSimBlackboardFunctions::GetValuesFromBlackboardByNameInt @ RVA 0x10A05E0 EA 0x7FF6F4AC05E0
+======================================================================
+// Hidden C++ exception states: #wind=4
+__int64 __fastcall sub_7FF6F4AC05E0(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 *v5; // rsi
+  __int64 v6; // rbx
+  __int64 result; // rax
+  __int64 v8[3]; // [rsp+28h] [rbp-58h] BYREF
+  __int64 v9[2]; // [rsp+40h] [rbp-40h] BYREF
+  __int64 v10; // [rsp+50h] [rbp-30h]
+  __int64 v11; // [rsp+58h] [rbp-28h]
+  __int64 v12; // [rsp+60h] [rbp-20h]
+  __int64 v13; // [rsp+68h] [rbp-18h]
+  _QWORD v14[2]; // [rsp+70h] [rbp-10h] BYREF
+  __int64 v15; // [rsp+A8h] [rbp+28h] BYREF
+
+  v9[0] = 0;
+  v9[1] = 0;
+  v10 = 0;
+  v11 = 0;
+  v12 = 0;
+  v13 = 0;
+  v14[0] = 0;
+  v14[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v5 = v9;
+  if ( a2[7] )
+    v5 = (__int64 *)a2[7];
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  a2[4] += a2[4] != 0;
+  v6 = sub_7FF6F441F0B0(v8, v5, v15);
+  if ( a3 != v6 )
+  {
+    if ( *(_QWORD *)a3 )
+    {
+      sub_7FF6F4DED1F0(*(_QWORD *)a3);
+      if ( *(_QWORD *)a3 )
+        *(_QWORD *)a3 = 0;
+    }
+    *(_QWORD *)a3 = *(_QWORD *)v6;
+    *(_QWORD *)v6 = 0;
+    *(_DWORD *)(a3 + 8) = *(_DWORD *)(v6 + 8);
+    *(_DWORD *)(a3 + 12) = *(_DWORD *)(v6 + 12);
+    *(_QWORD *)(v6 + 8) = 0;
+  }
+  if ( v8[0] )
+    sub_7FF6F4DED1F0(v8[0]);
+  result = sub_7FF6F3C358E0(v14);
+  if ( v12 )
+  {
+    result = sub_7FF6F4DED1F0(v12);
+    v12 = 0;
+  }
+  if ( v10 )
+  {
+    result = sub_7FF6F4DED1F0(v10);
+    v10 = 0;
+  }
+  if ( v9[0] )
+    return sub_7FF6F4DED1F0(v9[0]);
+  return result;
+}
+
+
+======================================================================
+VoyageGeneratorSimBlackboardFunctions::PrintBlackboard @ RVA 0x10A3100 EA 0x7FF6F4AC3100
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F4AC3100(__int64 a1, _QWORD *a2)
+{
+  __int64 *v3; // rcx
+  __int64 result; // rax
+  __int64 v5[2]; // [rsp+30h] [rbp-48h] BYREF
+  __int64 v6; // [rsp+40h] [rbp-38h]
+  __int64 v7; // [rsp+48h] [rbp-30h]
+  __int64 v8; // [rsp+50h] [rbp-28h]
+  __int64 v9; // [rsp+58h] [rbp-20h]
+  _QWORD v10[3]; // [rsp+60h] [rbp-18h] BYREF
+
+  v5[0] = 0;
+  v5[1] = 0;
+  v6 = 0;
+  v7 = 0;
+  v8 = 0;
+  v9 = 0;
+  v10[0] = 0;
+  v10[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v5);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v5);
+  }
+  v3 = v5;
+  if ( a2[7] )
+    v3 = (__int64 *)a2[7];
+  a2[4] += a2[4] != 0;
+  nullsub_309(v3);
+  result = sub_7FF6F3C358E0(v10);
+  if ( v8 )
+  {
+    result = sub_7FF6F4DED1F0(v8);
+    v8 = 0;
+  }
+  if ( v6 )
+  {
+    result = sub_7FF6F4DED1F0(v6);
+    v6 = 0;
+  }
+  if ( v5[0] )
+    return sub_7FF6F4DED1F0(v5[0]);
+  return result;
+}
+

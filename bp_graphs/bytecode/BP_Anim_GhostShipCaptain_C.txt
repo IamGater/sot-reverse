@@ -1,0 +1,212 @@
+// /Game/Blueprints/GameObjects/NPC/bp_anim_ghostshipcaptain -> BP_Anim_GhostShipCaptain_C
+
+=== BP_Anim_GhostShipCaptain_C::fn_idx_229575 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Anim_GhostShipCaptain" (
+  $13: literal int32 10
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Anim_GhostShipCaptain_C::fn_idx_229574 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Anim_GhostShipCaptain" (
+  $13: literal int32 776
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Anim_GhostShipCaptain_C::fn_idx_9047 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_DeltaTimeX@0x19f4d163790
+  Expression:
+  $9: LocalVariable named DeltaTimeX@0x19f4d1656a0
+$18: VirtualFunction call "ExecuteUbergraph_BP_Anim_GhostShipCaptain" (
+  $31: literal int32 589
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Anim_GhostShipCaptain_C::fn_idx_229576 (784 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19f4d167ee0
+$10: LetObj (Variable = Expression)
+  Variable:
+  $11: LocalVariable named CallFunc_GetPlayerCharacter_ReturnValue2@0x19f73f5e080
+  Expression:
+  $20: Context
+    ObjectExpression:
+    $21: ObjectConst Default__GameplayStatics@0x19e4d95eb20
+    SkipBytes: 0x10
+    RValueProperty: CallFunc_GetPlayerCharacter_ReturnValue2@0x19f73f5e080
+    ContextExpression:
+    $42: FinalFunction target=GetPlayerCharacter@0x19e4d35e240 (
+      $51: Self
+      $52: literal int32 0
+      $57: EndFunctionParms
+    )
+$58: Let (Variable = Expression)
+  Variable:
+  $67: LocalVariable named CallFunc_GetSocketTransform_ReturnValue@0x19f73f5d480
+  Expression:
+  $76: Context
+    ObjectExpression:
+    $77: Context
+      ObjectExpression:
+      $78: LocalVariable named CallFunc_GetPlayerCharacter_ReturnValue2@0x19f73f5e080
+      SkipBytes: 0x9
+      RValueProperty: Mesh@0x19e4d07ced0
+      ContextExpression:
+      $99: InstanceVariable named Mesh@0x19e4d07ced0
+    SkipBytes: 0x1d
+    RValueProperty: CallFunc_GetSocketTransform_ReturnValue@0x19f73f5d480
+    ContextExpression:
+    $120: VirtualFunction call "GetSocketTransform" (
+      $133: literal name "HEAD__Skeleton"
+      $146: literal byte 0
+      $148: EndFunctionParms
+    )
+$149: CallMath target=BreakTransform@0x19e4d372df0 (
+  $158: LocalVariable named CallFunc_GetSocketTransform_ReturnValue@0x19f73f5d480
+  $167: LocalVariable named CallFunc_BreakTransform_Location@0x19f73f5de00
+  $176: LocalVariable named CallFunc_BreakTransform_Rotation@0x19f73f5cd80
+  $185: LocalVariable named CallFunc_BreakTransform_Scale@0x19f73f5b180
+  $194: EndFunctionParms
+)
+$195: Let (Variable = Expression)
+  Variable:
+  $204: StructMemberContext prop=TargetPosition@0x19e4cf7e3f0
+    Expression to struct:
+    $213: InstanceVariable named AnimGraphNode_HIKLookAt_559E08FE4278B4C88466CCBBB6544058@0x19f73f56700
+  Expression:
+  $222: LocalVariable named CallFunc_BreakTransform_Location@0x19f73f5de00
+$231: Jump to offset 0x30d
+$236: LetBool (Variable = Expression)
+  Variable:
+  $237: LocalVariable named CallFunc_Greater_FloatFloat_ReturnValue@0x19f77bd5200
+  Expression:
+  $246: CallMath target=Greater_FloatFloat@0x19e4d382550 (
+    $255: InstanceVariable named IKAlpha@0x19f4d163330
+    $264: literal float 0
+    $269: EndFunctionParms
+  )
+$270: JumpIfNot -> 0x30d, cond:
+  $275: LocalVariable named CallFunc_Greater_FloatFloat_ReturnValue@0x19f77bd5200
+$284: LetBool (Variable = Expression)
+  Variable:
+  $285: LocalVariable named CallFunc_Greater_FloatFloat_ReturnValue2@0x19f73f5a200
+  Expression:
+  $294: CallMath target=Greater_FloatFloat@0x19e4d382550 (
+    $303: InstanceVariable named IKAlpha@0x19f4d163330
+    $312: literal float 0
+    $317: EndFunctionParms
+  )
+$318: JumpIfNot -> 0x30d, cond:
+  $323: LocalVariable named CallFunc_Greater_FloatFloat_ReturnValue2@0x19f73f5a200
+$332: Let (Variable = Expression)
+  Variable:
+  $341: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue@0x19f4d169ed0
+  Expression:
+  $350: CallMath target=Subtract_FloatFloat@0x19e4d3998c0 (
+    $359: InstanceVariable named IKAlpha@0x19f4d163330
+    $368: LocalVariable named K2Node_Event_DeltaTimeX@0x19f4d163790
+    $377: EndFunctionParms
+  )
+$378: Let (Variable = Expression)
+  Variable:
+  $387: LocalVariable named CallFunc_FClamp_ReturnValue2@0x19f4d160460
+  Expression:
+  $396: CallMath target=FClamp@0x19e4d37c2a0 (
+    $405: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue@0x19f4d169ed0
+    $414: literal float 0
+    $419: literal float 1
+    $424: EndFunctionParms
+  )
+$425: Let (Variable = Expression)
+  Variable:
+  $434: InstanceVariable named IKAlpha@0x19f4d163330
+  Expression:
+  $443: LocalVariable named CallFunc_FClamp_ReturnValue2@0x19f4d160460
+$452: Jump to offset 0x30d
+$457: LetObj (Variable = Expression)
+  Variable:
+  $458: LocalVariable named CallFunc_GetPlayerCharacter_ReturnValue@0x19f77bd4f00
+  Expression:
+  $467: Context
+    ObjectExpression:
+    $468: ObjectConst Default__GameplayStatics@0x19e4d95eb20
+    SkipBytes: 0x10
+    RValueProperty: CallFunc_GetPlayerCharacter_ReturnValue@0x19f77bd4f00
+    ContextExpression:
+    $489: FinalFunction target=GetPlayerCharacter@0x19e4d35e240 (
+      $498: Self
+      $499: literal int32 0
+      $504: EndFunctionParms
+    )
+$505: LetBool (Variable = Expression)
+  Variable:
+  $506: LocalVariable named CallFunc_IsValid_ReturnValue@0x19f73f5e800
+  Expression:
+  $515: Context
+    ObjectExpression:
+    $516: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19f73f5e800
+    ContextExpression:
+    $537: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $546: LocalVariable named CallFunc_GetPlayerCharacter_ReturnValue@0x19f77bd4f00
+      $555: EndFunctionParms
+    )
+$556: LetBool (Variable = Expression)
+  Variable:
+  $557: StructMemberContext prop=bActiveValue@0x19e4cf7c700
+    Expression to struct:
+    $566: InstanceVariable named AnimGraphNode_BlendListByBool_CA8E748947CB37638D1D77AF82F419EB@0x19f73f56480
+  Expression:
+  $575: LocalVariable named CallFunc_IsValid_ReturnValue@0x19f73f5e800
+$584: Jump to offset 0x30d
+$589: JumpIfNot -> 0xec, cond:
+  $594: InstanceVariable named Active@0x19e4d1f3ac0
+$603: LetBool (Variable = Expression)
+  Variable:
+  $604: LocalVariable named CallFunc_Less_FloatFloat_ReturnValue@0x19f73f5ac00
+  Expression:
+  $613: CallMath target=Less_FloatFloat@0x19e4d385cb0 (
+    $622: InstanceVariable named IKAlpha@0x19f4d163330
+    $631: literal float 1
+    $636: EndFunctionParms
+  )
+$637: JumpIfNot -> 0x30d, cond:
+  $642: LocalVariable named CallFunc_Less_FloatFloat_ReturnValue@0x19f73f5ac00
+$651: Let (Variable = Expression)
+  Variable:
+  $660: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x19f4d163410
+  Expression:
+  $669: CallMath target=Add_FloatFloat@0x19e4d36f820 (
+    $678: InstanceVariable named IKAlpha@0x19f4d163330
+    $687: LocalVariable named K2Node_Event_DeltaTimeX@0x19f4d163790
+    $696: EndFunctionParms
+  )
+$697: Let (Variable = Expression)
+  Variable:
+  $706: LocalVariable named CallFunc_FClamp_ReturnValue@0x19f4d1635d0
+  Expression:
+  $715: CallMath target=FClamp@0x19e4d37c2a0 (
+    $724: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x19f4d163410
+    $733: literal float 0
+    $738: literal float 1
+    $743: EndFunctionParms
+  )
+$744: Let (Variable = Expression)
+  Variable:
+  $753: InstanceVariable named IKAlpha@0x19f4d163330
+  Expression:
+  $762: LocalVariable named CallFunc_FClamp_ReturnValue@0x19f4d1635d0
+$771: Jump to offset 0x30d
+$776: Jump to offset 0x1c9
+$781: Return expression:
+  $782: Nothing
+$783: EndOfScript

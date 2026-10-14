@@ -1,0 +1,370 @@
+// Class: FFTWaterComponent (12 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+FFTWaterComponent::SetAmbientColour @ RVA 0x2B1C370 EA 0x7FF6F653C370
+======================================================================
+__int64 __fastcall sub_7FF6F653C370(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  _BYTE *v5; // rdx
+  __int64 v6; // rax
+  _BYTE v8[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  v2 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v5 = v8;
+  if ( a2[7] )
+    v5 = (_BYTE *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  return sub_7FF6F5DC3C20(a1, v5);
+}
+
+
+======================================================================
+FFTWaterComponent::SetBackLitColour @ RVA 0x2B1C920 EA 0x7FF6F653C920
+======================================================================
+__int64 __fastcall sub_7FF6F653C920(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  _BYTE *v5; // rdx
+  __int64 v6; // rax
+  _BYTE v8[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  v2 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v5 = v8;
+  if ( a2[7] )
+    v5 = (_BYTE *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  return sub_7FF6F5DC4070(a1, v5);
+}
+
+
+======================================================================
+FFTWaterComponent::SetCarrierWaveParams @ RVA 0x2B1D9D0 EA 0x7FF6F653D9D0
+======================================================================
+__int64 __fastcall sub_7FF6F653D9D0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  _DWORD v6[6]; // [rsp+20h] [rbp-18h] BYREF
+  int v7; // [rsp+48h] [rbp+10h] BYREF
+  int v8; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v6[0] = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v6);
+  }
+  v2 = a2[4] == 0;
+  v8 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5DC4200(a1);
+}
+
+
+======================================================================
+FFTWaterComponent::SetFoamBrightness @ RVA 0x2B1EEA0 EA 0x7FF6F653EEA0
+======================================================================
+__int64 __fastcall sub_7FF6F653EEA0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5DC4790(a1);
+}
+
+
+======================================================================
+FFTWaterComponent::SetFoamColour @ RVA 0x2B1EF20 EA 0x7FF6F653EF20
+======================================================================
+__int64 __fastcall sub_7FF6F653EF20(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  _BYTE *v5; // rdx
+  __int64 v6; // rax
+  _BYTE v8[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  v2 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v5 = v8;
+  if ( a2[7] )
+    v5 = (_BYTE *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  return sub_7FF6F5DC4BD0(a1, v5);
+}
+
+
+======================================================================
+FFTWaterComponent::SetFoamHighlightColour @ RVA 0x2B1EFB0 EA 0x7FF6F653EFB0
+======================================================================
+__int64 __fastcall sub_7FF6F653EFB0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  _BYTE *v5; // rdx
+  __int64 v6; // rax
+  _BYTE v8[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  v2 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v5 = v8;
+  if ( a2[7] )
+    v5 = (_BYTE *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  return sub_7FF6F5DC5020(a1, v5);
+}
+
+
+======================================================================
+FFTWaterComponent::SetFresnelPower @ RVA 0x2B1F490 EA 0x7FF6F653F490
+======================================================================
+__int64 __fastcall sub_7FF6F653F490(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5DC5470(a1);
+}
+
+
+======================================================================
+FFTWaterComponent::SetMurkyRegion @ RVA 0x2B20490 EA 0x7FF6F6540490
+======================================================================
+__int64 __fastcall sub_7FF6F6540490(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  _BYTE *v5; // rdx
+  __int64 v6; // rax
+  _BYTE v8[4]; // [rsp+20h] [rbp-28h] BYREF
+  __int128 v9; // [rsp+24h] [rbp-24h]
+  __int64 v10; // [rsp+34h] [rbp-14h]
+  char v11; // [rsp+3Ch] [rbp-Ch]
+
+  v2 = 0;
+  v8[0] = 0;
+  v10 = 0;
+  v11 = 0;
+  v9 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v5 = v8;
+  if ( a2[7] )
+    v5 = (_BYTE *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  return sub_7FF6F5DC5790(a1, v5);
+}
+
+
+======================================================================
+FFTWaterComponent::SetReflectionBrightness @ RVA 0x2B20F10 EA 0x7FF6F6540F10
+======================================================================
+__int64 __fastcall sub_7FF6F6540F10(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5DC5F10(a1);
+}
+
+
+======================================================================
+FFTWaterComponent::SetShallowWaterColour @ RVA 0x2B212B0 EA 0x7FF6F65412B0
+======================================================================
+__int64 __fastcall sub_7FF6F65412B0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  _BYTE *v5; // rdx
+  __int64 v6; // rax
+  _BYTE v8[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  v2 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v5 = v8;
+  if ( a2[7] )
+    v5 = (_BYTE *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  return sub_7FF6F5DC6490(a1, v5);
+}
+
+
+======================================================================
+FFTWaterComponent::SetSpecularBrightness @ RVA 0x2B21540 EA 0x7FF6F6541540
+======================================================================
+__int64 __fastcall sub_7FF6F6541540(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5DC68E0(a1);
+}
+
+
+======================================================================
+FFTWaterComponent::SetWaterColour @ RVA 0x2B22CF0 EA 0x7FF6F6542CF0
+======================================================================
+__int64 __fastcall sub_7FF6F6542CF0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  _BYTE *v5; // rdx
+  __int64 v6; // rax
+  _BYTE v8[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  v2 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v5 = v8;
+  if ( a2[7] )
+    v5 = (_BYTE *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  return sub_7FF6F5DC70A0(a1, v5);
+}
+

@@ -1,0 +1,266 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_8_RevengeOfTheMorningstar/bp_revengeofthemorningstar_waitforgraymarrowproxy -> BP_RevengeOfTheMorningStar_WaitForGraymarrowProxy_C
+
+=== BP_RevengeOfTheMorningStar_WaitForGraymarrowProxy_C::fn_idx_1828 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fce795500
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fce795300
+$18: VirtualFunction call "idx:285025" (
+  $31: literal int32 884
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_RevengeOfTheMorningStar_WaitForGraymarrowProxy_C::fn_idx_285026 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_OtherActor@0x19fce795680
+  Expression:
+  $9: LocalVariable named OtherActor@0x19fce795380
+$18: VirtualFunction call "idx:285025" (
+  $31: literal int32 919
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_RevengeOfTheMorningStar_WaitForGraymarrowProxy_C::fn_idx_285025 (1027 bytes) ===
+$0: FlowStack.Push(0x400)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x19fceaefa40
+$15: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $24: EndFunctionParms
+)
+$25: PopExecutionFlow (jump to popped addr)
+$26: FlowStack.Push(0x173)
+$31: Let (Variable = Expression)
+  Variable:
+  $40: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fce795b80
+  Expression:
+  $49: Context
+    ObjectExpression:
+    $50: StructMemberContext prop=idx:284858@0x19fce79f400
+      Expression to struct:
+      $59: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce795580
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetComponentsByClass_ReturnValue@0x19fce795b80
+    ContextExpression:
+    $80: FinalFunction target=GetComponentsByClass@0x19e4cd626c0 (
+      $89: ObjectConst SphereComponent@0x19e4c533800
+      $98: EndFunctionParms
+    )
+$99: Context
+  ObjectExpression:
+  $100: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $121: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $130: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fce795b80
+    $139: literal int32 0
+    $144: LocalVariable named CallFunc_Array_Get_Item@0x19fce795600
+    $153: EndFunctionParms
+  )
+$154: SetArray
+  $155: LocalVariable named CallFunc_GetOverlappingActors_OverlappingActors@0x19fce795a80
+  $164: EndArray
+$165: Context
+  ObjectExpression:
+  $166: LocalVariable named CallFunc_Array_Get_Item@0x19fce795600
+  SkipBytes: 0x14
+  RValueProperty: (null)
+  ContextExpression:
+  $187: FinalFunction target=GetOverlappingActors@0x19e4d0d0870 (
+    $196: LocalVariable named CallFunc_GetOverlappingActors_OverlappingActors@0x19fce795a80
+    $205: NoObject
+    $206: EndFunctionParms
+  )
+$207: Context
+  ObjectExpression:
+  $208: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $229: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $238: LocalVariable named CallFunc_GetOverlappingActors_OverlappingActors@0x19fce795a80
+    $247: LocalVariable named Temp_int_Array_Index_Variable@0x19fceaeff10
+    $256: LocalVariable named CallFunc_Array_Get_Item2@0x19fce795780
+    $265: EndFunctionParms
+  )
+$266: SetArray
+  $267: LocalVariable named CallFunc_GetParticipants_Participants2@0x19fce795980
+  $276: EndArray
+$277: FinalFunction target=GetParticipants@0x19e4cda59a0 (
+  $286: LocalVariable named CallFunc_GetParticipants_Participants2@0x19fce795980
+  $295: EndFunctionParms
+)
+$296: LetBool (Variable = Expression)
+  Variable:
+  $297: LocalVariable named CallFunc_Array_Contains_ReturnValue2@0x19fce795880
+  Expression:
+  $306: Context
+    ObjectExpression:
+    $307: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Contains_ReturnValue2@0x19fce795880
+    ContextExpression:
+    $328: FinalFunction target=Array_Contains@0x19e4d367180 (
+      $337: LocalVariable named CallFunc_GetParticipants_Participants2@0x19fce795980
+      $346: LocalVariable named CallFunc_Array_Get_Item2@0x19fce795780
+      $355: EndFunctionParms
+    )
+$356: PopExecutionFlowIfNot, cond:
+$357: LocalVariable named CallFunc_Array_Contains_ReturnValue2@0x19fce795880
+$366: Jump to offset 0xf
+$371: Let (Variable = Expression)
+  Variable:
+  $380: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19fceaefb90
+  Expression:
+  $389: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $398: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fceaefab0
+    $407: literal int32 1
+    $412: EndFunctionParms
+  )
+$413: Let (Variable = Expression)
+  Variable:
+  $422: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fceaefab0
+  Expression:
+  $431: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19fceaefb90
+$440: Let (Variable = Expression)
+  Variable:
+  $449: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fce795b80
+  Expression:
+  $458: Context
+    ObjectExpression:
+    $459: StructMemberContext prop=idx:284858@0x19fce79f400
+      Expression to struct:
+      $468: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce795580
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetComponentsByClass_ReturnValue@0x19fce795b80
+    ContextExpression:
+    $489: FinalFunction target=GetComponentsByClass@0x19e4cd626c0 (
+      $498: ObjectConst SphereComponent@0x19e4c533800
+      $507: EndFunctionParms
+    )
+$508: Context
+  ObjectExpression:
+  $509: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $530: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $539: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fce795b80
+    $548: literal int32 0
+    $553: LocalVariable named CallFunc_Array_Get_Item@0x19fce795600
+    $562: EndFunctionParms
+  )
+$563: SetArray
+  $564: LocalVariable named CallFunc_GetOverlappingActors_OverlappingActors@0x19fce795a80
+  $573: EndArray
+$574: Context
+  ObjectExpression:
+  $575: LocalVariable named CallFunc_Array_Get_Item@0x19fce795600
+  SkipBytes: 0x14
+  RValueProperty: (null)
+  ContextExpression:
+  $596: FinalFunction target=GetOverlappingActors@0x19e4d0d0870 (
+    $605: LocalVariable named CallFunc_GetOverlappingActors_OverlappingActors@0x19fce795a80
+    $614: NoObject
+    $615: EndFunctionParms
+  )
+$616: Let (Variable = Expression)
+  Variable:
+  $625: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fceaefdc0
+  Expression:
+  $634: Context
+    ObjectExpression:
+    $635: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19fceaefdc0
+    ContextExpression:
+    $656: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $665: LocalVariable named CallFunc_GetOverlappingActors_OverlappingActors@0x19fce795a80
+      $674: EndFunctionParms
+    )
+$675: LetBool (Variable = Expression)
+  Variable:
+  $676: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19fce795800
+  Expression:
+  $685: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $694: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fceaefab0
+    $703: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fceaefdc0
+    $712: EndFunctionParms
+  )
+$713: JumpIfNot -> 0x2f7, cond:
+  $718: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19fce795800
+$727: Let (Variable = Expression)
+  Variable:
+  $736: LocalVariable named Temp_int_Array_Index_Variable@0x19fceaeff10
+  Expression:
+  $745: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fceaefab0
+$754: Jump to offset 0x1a
+$759: BindDelegate 'idx:285026'
+  Delegate:
+  $772: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fce795480
+  Object:
+  $781: Self
+$782: AddMulticastDelegate
+$783: Context
+  ObjectExpression:
+  $784: StructMemberContext prop=idx:284858@0x19fce79f400
+    Expression to struct:
+    $793: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce795580
+  SkipBytes: 0x9
+  RValueProperty: OnActorBeginOverlap@0x19e4cd6ce90
+  ContextExpression:
+  $814: InstanceVariable named OnActorBeginOverlap@0x19e4cd6ce90
+$823: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fce795480
+$832: PopExecutionFlow (jump to popped addr)
+$833: Let (Variable = Expression)
+  Variable:
+  $842: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fceaefab0
+  Expression:
+  $851: literal int32 0
+$856: Let (Variable = Expression)
+  Variable:
+  $865: LocalVariable named Temp_int_Array_Index_Variable@0x19fceaeff10
+  Expression:
+  $874: literal int32 0
+$879: Jump to offset 0x1b8
+$884: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $893: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce795580
+  $902: EndFunctionParms
+)
+$903: Jump to offset 0x341
+$908: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $917: EndFunctionParms
+)
+$918: PopExecutionFlow (jump to popped addr)
+$919: SetArray
+  $920: LocalVariable named CallFunc_GetParticipants_Participants@0x19fce795c80
+  $929: EndArray
+$930: FinalFunction target=GetParticipants@0x19e4cda59a0 (
+  $939: LocalVariable named CallFunc_GetParticipants_Participants@0x19fce795c80
+  $948: EndFunctionParms
+)
+$949: LetBool (Variable = Expression)
+  Variable:
+  $950: LocalVariable named CallFunc_Array_Contains_ReturnValue@0x19fce795700
+  Expression:
+  $959: Context
+    ObjectExpression:
+    $960: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Contains_ReturnValue@0x19fce795700
+    ContextExpression:
+    $981: FinalFunction target=Array_Contains@0x19e4d367180 (
+      $990: LocalVariable named CallFunc_GetParticipants_Participants@0x19fce795c80
+      $999: LocalVariable named K2Node_CustomEvent_OtherActor@0x19fce795680
+      $1008: EndFunctionParms
+    )
+$1009: PopExecutionFlowIfNot, cond:
+$1010: LocalVariable named CallFunc_Array_Contains_ReturnValue@0x19fce795700
+$1019: Jump to offset 0x38c
+$1024: Return expression:
+  $1025: Nothing
+$1026: EndOfScript

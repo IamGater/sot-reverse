@@ -1,0 +1,275 @@
+// Class: CoastInterface (5 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+CoastInterface::GetClosestCoastObjects @ RVA 0xCF6660 EA 0x7FF6F4716660
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F4716660(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  _BYTE *v6; // r8
+  __int64 result; // rax
+  __int64 v8; // rdi
+  _BYTE v9[16]; // [rsp+28h] [rbp-30h] BYREF
+  __int64 v10[4]; // [rsp+38h] [rbp-20h] BYREF
+
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  a2[4] += a2[4] != 0;
+  result = (*(__int64 (__fastcall **)(__int64, __int64 *, _BYTE *))(*(_QWORD *)a1 + 32LL))(a1, v10, v6);
+  v8 = result;
+  if ( a3 != result )
+  {
+    if ( *(_QWORD *)a3 )
+    {
+      sub_7FF6F4DED1F0(*(_QWORD *)a3);
+      if ( *(_QWORD *)a3 )
+        *(_QWORD *)a3 = 0;
+    }
+    *(_QWORD *)a3 = *(_QWORD *)v8;
+    *(_QWORD *)v8 = 0;
+    *(_DWORD *)(a3 + 8) = *(_DWORD *)(v8 + 8);
+    result = *(unsigned int *)(v8 + 12);
+    *(_DWORD *)(a3 + 12) = result;
+    *(_QWORD *)(v8 + 8) = 0;
+  }
+  if ( v10[0] )
+    return sub_7FF6F4DED1F0(v10[0]);
+  return result;
+}
+
+
+======================================================================
+CoastInterface::GetClosestIslandNameOfCoastlineForPointAndTolerance @ RVA 0xCF6750 EA 0x7FF6F4716750
+======================================================================
+_QWORD *__fastcall sub_7FF6F4716750(__int64 a1, _QWORD *a2, _QWORD *a3)
+{
+  __int64 v3; // rdi
+  _BYTE *v7; // rax
+  _BYTE *v8; // rsi
+  __int64 v9; // rax
+  _QWORD *result; // rax
+  _BYTE v11[56]; // [rsp+30h] [rbp-38h] BYREF
+  int v12; // [rsp+70h] [rbp+8h] BYREF
+  int v13; // [rsp+78h] [rbp+10h] BYREF
+  char v14; // [rsp+80h] [rbp+18h] BYREF
+
+  v3 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v7 = (_BYTE *)a2[7];
+  v8 = v11;
+  v13 = 0;
+  if ( v7 )
+    v8 = v7;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v12 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v9 = a2[4];
+  LOBYTE(v3) = v9 != 0;
+  a2[4] = v9 + v3;
+  result = (_QWORD *)(*(__int64 (__fastcall **)(__int64, char *, _BYTE *))(*(_QWORD *)a1 + 48LL))(a1, &v14, v8);
+  *a3 = *result;
+  return result;
+}
+
+
+======================================================================
+CoastInterface::GetClosestPointOnClosestCoast @ RVA 0xCF6880 EA 0x7FF6F4716880
+======================================================================
+__int64 __fastcall sub_7FF6F4716880(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  _BYTE *v7; // rax
+  _BYTE *v8; // rbp
+  _BYTE *v9; // rax
+  _BYTE *v10; // rsi
+  char *v11; // r9
+  __int64 v12; // rax
+  __int64 result; // rax
+  _BYTE v14[16]; // [rsp+20h] [rbp-38h] BYREF
+  _BYTE v15[40]; // [rsp+30h] [rbp-28h] BYREF
+  char v16; // [rsp+60h] [rbp+8h] BYREF
+
+  v3 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v14);
+  }
+  v7 = (_BYTE *)a2[7];
+  v8 = v14;
+  a2[7] = 0;
+  if ( v7 )
+    v8 = v7;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v15);
+  }
+  v9 = (_BYTE *)a2[7];
+  v10 = v15;
+  v16 = 0;
+  a2[7] = 0;
+  if ( v9 )
+    v10 = v9;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v11 = &v16;
+  if ( a2[7] )
+    v11 = (char *)a2[7];
+  v12 = a2[4];
+  LOBYTE(v3) = v12 != 0;
+  a2[4] = v12 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, _BYTE *, _BYTE *, char *))(*(_QWORD *)a1 + 56LL))(a1, v8, v10, v11);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+CoastInterface::RegisterCoast @ RVA 0xCFB4F0 EA 0x7FF6F471B4F0
+======================================================================
+_DWORD *__fastcall sub_7FF6F471B4F0(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r9
+  __int64 v9; // r8
+  __int64 v10; // rdi
+  _DWORD *result; // rax
+  __int64 v12; // [rsp+30h] [rbp-38h] BYREF
+  int v13; // [rsp+38h] [rbp-30h]
+  __int64 v14; // [rsp+40h] [rbp-28h] BYREF
+  int v15; // [rsp+48h] [rbp-20h]
+  char v16; // [rsp+70h] [rbp+8h] BYREF
+  __int64 v17; // [rsp+78h] [rbp+10h] BYREF
+  __int64 v18; // [rsp+80h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v18 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  v17 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v7 = a2[4];
+  v8 = v17;
+  v9 = v18;
+  LOBYTE(v3) = v7 != 0;
+  v10 = v7 + v3;
+  v14 = v12;
+  LODWORD(v7) = v13;
+  a2[4] = v10;
+  v15 = v7;
+  result = (_DWORD *)(*(__int64 (__fastcall **)(__int64, char *, __int64, __int64, __int64 *))(*(_QWORD *)a1 + 16LL))(
+                       a1,
+                       &v16,
+                       v9,
+                       v8,
+                       &v14);
+  *a3 = *result;
+  return result;
+}
+
+
+======================================================================
+CoastInterface::UnregisterCoast @ RVA 0xCFE9F0 EA 0x7FF6F471E9F0
+======================================================================
+__int64 __fastcall sub_7FF6F471E9F0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned int v7; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = -1;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 24LL))(a1, v5);
+}
+

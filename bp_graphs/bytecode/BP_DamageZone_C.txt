@@ -1,0 +1,1268 @@
+// /Game/Blueprints/GameObjects/Hull/Damage/bp_damagezone -> BP_DamageZone_C
+
+=== BP_DamageZone_C::fn_idx_219943 (128 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_IsDedicatedServer_ReturnValue@0x19f58463a00
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_IsDedicatedServer_ReturnValue@0x19f58463a00
+    ContextExpression:
+    $32: FinalFunction target=IsDedicatedServer@0x19e4cd8dd00 (
+      $41: Self
+      $42: EndFunctionParms
+    )
+$43: Let (Variable = Expression)
+  Variable:
+  $52: LocalVariable named CallFunc_SelectInt_ReturnValue@0x19f482c5b70
+  Expression:
+  $61: CallMath target=SelectInt@0x19e4d397810 (
+    $70: InstanceVariable named Rep_ServerUpdateEventCount@0x19f482c6a50
+    $79: InstanceVariable named ClientUpdateEventCount@0x19f482c6ac0
+    $88: LocalVariable named CallFunc_IsDedicatedServer_ReturnValue@0x19f58463a00
+    $97: EndFunctionParms
+  )
+$98: Let (Variable = Expression)
+  Variable:
+  $107: LocalOutVariable named NumExternalHits@0x19f482c5b00
+  Expression:
+  $116: LocalVariable named CallFunc_SelectInt_ReturnValue@0x19f482c5b70
+$125: Return expression:
+  $126: Nothing
+$127: EndOfScript
+
+=== BP_DamageZone_C::fn_idx_220119 (17 bytes) ===
+$0: VirtualFunction call "Update External Hits" (
+  $13: EndFunctionParms
+)
+$14: Return expression:
+  $15: Nothing
+$16: EndOfScript
+
+=== BP_DamageZone_C::fn_idx_220106 (294 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_IsValid_ReturnValue@0x19f58463b80
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19f58463b80
+    ContextExpression:
+    $32: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $41: InstanceVariable named HoleDecalComponent@0x19e4d16f480
+      $50: EndFunctionParms
+    )
+$51: JumpIfNot -> 0xd2, cond:
+  $56: LocalVariable named CallFunc_IsValid_ReturnValue@0x19f58463b80
+$65: LetObj (Variable = Expression)
+  Variable:
+  $66: LocalVariable named CallFunc_GetDecalMaterial_ReturnValue@0x19f58463c00
+  Expression:
+  $75: Context
+    ObjectExpression:
+    $76: InstanceVariable named HoleDecalComponent@0x19e4d16f480
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetDecalMaterial_ReturnValue@0x19f58463c00
+    ContextExpression:
+    $97: FinalFunction target=GetDecalMaterial@0x19e4d335df0 (
+      $106: EndFunctionParms
+    )
+$107: Let (Variable = Expression)
+  Variable:
+  $116: LocalVariable named K2Node_DynamicCast_AsMaterial_Instance_Dynamic@0x19f58463c80
+  Expression:
+  $125: DynamicCast to MaterialInstanceDynamic@0x19e4c58b980 of expr:
+  $134: LocalVariable named CallFunc_GetDecalMaterial_ReturnValue@0x19f58463c00
+$143: Let (Variable = Expression)
+  Variable:
+  $152: LocalVariable named K2Node_DynamicCast_bSuccess@0x19f58463d00
+  Expression:
+  $161: PrimitiveCast type=71
+    Argument:
+    $163: LocalVariable named K2Node_DynamicCast_AsMaterial_Instance_Dynamic@0x19f58463c80
+$172: JumpIfNot -> 0xe2, cond:
+  $177: LocalVariable named K2Node_DynamicCast_bSuccess@0x19f58463d00
+$186: LetObj (Variable = Expression)
+  Variable:
+  $187: LocalOutVariable named DecalMID@0x19f58463a80
+  Expression:
+  $196: LocalVariable named K2Node_DynamicCast_AsMaterial_Instance_Dynamic@0x19f58463c80
+$205: Jump to offset 0x123
+$210: LetObj (Variable = Expression)
+  Variable:
+  $211: LocalOutVariable named DecalMID@0x19f58463a80
+  Expression:
+  $220: NoObject
+$221: Jump to offset 0x123
+$226: LetObj (Variable = Expression)
+  Variable:
+  $227: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f58463b00
+  Expression:
+  $236: Context
+    ObjectExpression:
+    $237: InstanceVariable named HoleDecalComponent@0x19e4d16f480
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f58463b00
+    ContextExpression:
+    $258: VirtualFunction call "CreateDynamicMaterialInstance" (
+      $271: EndFunctionParms
+    )
+$272: LetObj (Variable = Expression)
+  Variable:
+  $273: LocalOutVariable named DecalMID@0x19f58463a80
+  Expression:
+  $282: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f58463b00
+$291: Return expression:
+  $292: Nothing
+$293: EndOfScript
+
+=== BP_DamageZone_C::fn_idx_18807 (264 bytes) ===
+$0: VirtualFunction call "CollectTaggedComponents" (
+  $13: EndFunctionParms
+)
+$14: LetBool (Variable = Expression)
+  Variable:
+  $15: LocalVariable named CallFunc_IsDedicatedServer_ReturnValue@0x19f58463d80
+  Expression:
+  $24: Context
+    ObjectExpression:
+    $25: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_IsDedicatedServer_ReturnValue@0x19f58463d80
+    ContextExpression:
+    $46: FinalFunction target=IsDedicatedServer@0x19e4cd8dd00 (
+      $55: Self
+      $56: EndFunctionParms
+    )
+$57: JumpIfNot -> 0x57, cond:
+  $62: LocalVariable named CallFunc_IsDedicatedServer_ReturnValue@0x19f58463d80
+$71: LetBool (Variable = Expression)
+  Variable:
+  $72: InstanceVariable named HasBeenInitialized@0x19f58465780
+  Expression:
+  $81: True
+$82: Jump to offset 0x105
+$87: Let (Variable = Expression)
+  Variable:
+  $96: LocalVariable named CallFunc_GetRepairableState_ReturnValue@0x19f58463e00
+  Expression:
+  $105: VirtualFunction call "GetRepairableState" (
+    $118: EndFunctionParms
+  )
+$119: LetBool (Variable = Expression)
+  Variable:
+  $120: LocalVariable named CallFunc_EqualEqual_ByteByte_ReturnValue@0x19f58463e80
+  Expression:
+  $129: CallMath target=EqualEqual_ByteByte@0x19e4d37a620 (
+    $138: LocalVariable named CallFunc_GetRepairableState_ReturnValue@0x19f58463e00
+    $147: literal byte 3
+    $149: EndFunctionParms
+  )
+$150: LetBool (Variable = Expression)
+  Variable:
+  $151: LocalVariable named CallFunc_EqualEqual_ByteByte_ReturnValue2@0x19f58463f00
+  Expression:
+  $160: CallMath target=EqualEqual_ByteByte@0x19e4d37a620 (
+    $169: LocalVariable named CallFunc_GetRepairableState_ReturnValue@0x19f58463e00
+    $178: literal byte 2
+    $180: EndFunctionParms
+  )
+$181: LetBool (Variable = Expression)
+  Variable:
+  $182: LocalVariable named CallFunc_BooleanOR_ReturnValue@0x19f58463f80
+  Expression:
+  $191: CallMath target=BooleanOR@0x19e4d3717b0 (
+    $200: LocalVariable named CallFunc_EqualEqual_ByteByte_ReturnValue2@0x19f58463f00
+    $209: LocalVariable named CallFunc_EqualEqual_ByteByte_ReturnValue@0x19f58463e80
+    $218: EndFunctionParms
+  )
+$219: VirtualFunction call "Set Repair Visibility" (
+  $232: LocalVariable named CallFunc_BooleanOR_ReturnValue@0x19f58463f80
+  $241: EndFunctionParms
+)
+$242: VirtualFunction call "Update External Hits" (
+  $255: EndFunctionParms
+)
+$256: Jump to offset 0x47
+$261: Return expression:
+  $262: Nothing
+$263: EndOfScript
+
+=== BP_DamageZone_C::fn_idx_220127 (750 bytes) ===
+$0: FlowStack.Push(0x2eb)
+$5: LetObj (Variable = Expression)
+  Variable:
+  $6: LocalVariable named CallFunc_GetOwner_ReturnValue2@0x19f58464080
+  Expression:
+  $15: FinalFunction target=GetOwner@0x19e4cd64200 (
+    $24: EndFunctionParms
+  )
+$25: LetBool (Variable = Expression)
+  Variable:
+  $26: LocalVariable named CallFunc_DoesImplementInterface_ReturnValue@0x19f58464200
+  Expression:
+  $35: Context
+    ObjectExpression:
+    $36: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_DoesImplementInterface_ReturnValue@0x19f58464200
+    ContextExpression:
+    $57: FinalFunction target=DoesImplementInterface@0x19e4cd871e0 (
+      $66: LocalVariable named CallFunc_GetOwner_ReturnValue2@0x19f58464080
+      $75: ObjectConst BP_HullInterface_C@0x19f5687c3c0
+      $84: EndFunctionParms
+    )
+$85: PopExecutionFlowIfNot, cond:
+$86: LocalVariable named CallFunc_DoesImplementInterface_ReturnValue@0x19f58464200
+$95: Let (Variable = Expression)
+  Variable:
+  $104: LocalVariable named L_BufferCount@0x19f482c5d30
+  Expression:
+  $113: literal int32 0
+$118: LetBool (Variable = Expression)
+  Variable:
+  $119: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19f58464280
+  Expression:
+  $128: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $137: LocalVariable named L_BufferCount@0x19f482c5d30
+    $146: InstanceVariable named MaxStoredHits@0x19f482c69e0
+    $155: EndFunctionParms
+  )
+$156: LetBool (Variable = Expression)
+  Variable:
+  $157: LocalVariable named CallFunc_Less_IntInt_ReturnValue2@0x19f58464300
+  Expression:
+  $166: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $175: InstanceVariable named ClientUpdateEventCount@0x19f482c6ac0
+    $184: InstanceVariable named Rep_ServerUpdateEventCount@0x19f482c6a50
+    $193: EndFunctionParms
+  )
+$194: LetBool (Variable = Expression)
+  Variable:
+  $195: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x19f58464380
+  Expression:
+  $204: CallMath target=BooleanAND@0x19e4d3710f0 (
+    $213: LocalVariable named CallFunc_Less_IntInt_ReturnValue2@0x19f58464300
+    $222: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19f58464280
+    $231: EndFunctionParms
+  )
+$232: PopExecutionFlowIfNot, cond:
+$233: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x19f58464380
+$242: FlowStack.Push(0x76)
+$247: LetObj (Variable = Expression)
+  Variable:
+  $248: LocalVariable named CallFunc_GetOwner_ReturnValue@0x19f58464000
+  Expression:
+  $257: FinalFunction target=GetOwner@0x19e4cd64200 (
+    $266: EndFunctionParms
+  )
+$267: Let (Variable = Expression)
+  Variable:
+  $276: LocalVariable named UniqueObjectNameForCooking_AsBP_Hull_Interface@0x19f58464100
+  Expression:
+  $285: ObjToInterfaceCast to BP_HullInterface_C@0x19f5687c3c0
+  $294: LocalVariable named CallFunc_GetOwner_ReturnValue@0x19f58464000
+$303: Let (Variable = Expression)
+  Variable:
+  $312: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x19f58464180
+  Expression:
+  $321: PrimitiveCast type=73
+    Argument:
+    $323: LocalVariable named UniqueObjectNameForCooking_AsBP_Hull_Interface@0x19f58464100
+$332: JumpIfNot -> 0x2db, cond:
+  $337: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x19f58464180
+$346: Let (Variable = Expression)
+  Variable:
+  $355: LocalVariable named CallFunc_Percent_IntInt_ReturnValue@0x19f482c5cc0
+  Expression:
+  $364: CallMath target=Percent_IntInt@0x19e4d3925b0 (
+    $373: InstanceVariable named ClientUpdateEventCount@0x19f482c6ac0
+    $382: InstanceVariable named MaxStoredHits@0x19f482c69e0
+    $391: EndFunctionParms
+  )
+$392: Context
+  ObjectExpression:
+  $393: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $414: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $423: InstanceVariable named Rep_ExternalHitList@0x19f58465880
+    $432: LocalVariable named CallFunc_Percent_IntInt_ReturnValue@0x19f482c5cc0
+    $441: LocalVariable named CallFunc_Array_Get_Item@0x19f58464400
+    $450: EndFunctionParms
+  )
+$451: Context
+  ObjectExpression:
+  $452: InterfaceContext:
+  $453: LocalVariable named UniqueObjectNameForCooking_AsBP_Hull_Interface@0x19f58464100
+  SkipBytes: 0x5f
+  RValueProperty: (null)
+  ContextExpression:
+  $474: VirtualFunction call "Apply Hit" (
+    $487: StructMemberContext prop=HitPosition@0x19e4d0272d0
+      Expression to struct:
+      $496: LocalVariable named CallFunc_Array_Get_Item@0x19f58464400
+    $505: StructMemberContext prop=HitNormal@0x19e4d027250
+      Expression to struct:
+      $514: LocalVariable named CallFunc_Array_Get_Item@0x19f58464400
+    $523: StructMemberContext prop=HitStrength@0x19e4d0271e0
+      Expression to struct:
+      $532: LocalVariable named CallFunc_Array_Get_Item@0x19f58464400
+    $541: StructMemberContext prop=HasDecal@0x19e4d0270f0
+      Expression to struct:
+      $550: LocalVariable named CallFunc_Array_Get_Item@0x19f58464400
+    $559: LocalVariable named CallFunc_Apply_Hit_Decal@0x19f58464480
+    $568: EndFunctionParms
+  )
+$569: VirtualFunction call "Add Deferred Decal" (
+  $582: LocalVariable named CallFunc_Apply_Hit_Decal@0x19f58464480
+  $591: EndFunctionParms
+)
+$592: Let (Variable = Expression)
+  Variable:
+  $601: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x19f482c5c50
+  Expression:
+  $610: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $619: InstanceVariable named ClientUpdateEventCount@0x19f482c6ac0
+    $628: literal int32 1
+    $633: EndFunctionParms
+  )
+$634: Let (Variable = Expression)
+  Variable:
+  $643: InstanceVariable named ClientUpdateEventCount@0x19f482c6ac0
+  Expression:
+  $652: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x19f482c5c50
+$661: Let (Variable = Expression)
+  Variable:
+  $670: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f482c5be0
+  Expression:
+  $679: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $688: LocalVariable named L_BufferCount@0x19f482c5d30
+    $697: literal int32 1
+    $702: EndFunctionParms
+  )
+$703: Let (Variable = Expression)
+  Variable:
+  $712: LocalVariable named L_BufferCount@0x19f482c5d30
+  Expression:
+  $721: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f482c5be0
+$730: PopExecutionFlow (jump to popped addr)
+$731: LetObj (Variable = Expression)
+  Variable:
+  $732: LocalVariable named CallFunc_Apply_Hit_Decal@0x19f58464480
+  Expression:
+  $741: NoObject
+$742: Jump to offset 0x239
+$747: Return expression:
+  $748: Nothing
+$749: EndOfScript
+
+=== BP_DamageZone_C::fn_idx_220097 (537 bytes) ===
+$0: FlowStack.Push(0x216)
+$5: Let (Variable = Expression)
+  Variable:
+  $14: LocalVariable named Temp_int_Variable@0x19f482c5da0
+  Expression:
+  $23: literal int32 0
+$28: Let (Variable = Expression)
+  Variable:
+  $37: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f482c5e10
+  Expression:
+  $46: Context
+    ObjectExpression:
+    $47: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19f482c5e10
+    ContextExpression:
+    $68: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $77: InstanceVariable named Rep_ExternalHitList@0x19f58465880
+      $86: EndFunctionParms
+    )
+$87: LetBool (Variable = Expression)
+  Variable:
+  $88: LocalVariable named CallFunc_LessEqual_IntInt_ReturnValue@0x19f58464580
+  Expression:
+  $97: CallMath target=LessEqual_IntInt@0x19e4d3869d0 (
+    $106: LocalVariable named Temp_int_Variable@0x19f482c5da0
+    $115: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f482c5e10
+    $124: EndFunctionParms
+  )
+$125: PopExecutionFlowIfNot, cond:
+$126: LocalVariable named CallFunc_LessEqual_IntInt_ReturnValue@0x19f58464580
+$135: FlowStack.Push(0x1cc)
+$140: Context
+  ObjectExpression:
+  $141: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $162: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $171: InstanceVariable named Rep_ExternalHitList@0x19f58465880
+    $180: LocalVariable named Temp_int_Variable@0x19f482c5da0
+    $189: LocalVariable named CallFunc_Array_Get_Item@0x19f58464500
+    $198: EndFunctionParms
+  )
+$199: Let (Variable = Expression)
+  Variable:
+  $208: StructMemberContext prop=HitPosition@0x19e4d0272d0
+    Expression to struct:
+    $217: LocalVariable named K2Node_MakeStruct_HullDamageHit@0x19f58464600
+  Expression:
+  $226: StructMemberContext prop=HitPosition@0x19e4d0272d0
+    Expression to struct:
+    $235: LocalVariable named CallFunc_Array_Get_Item@0x19f58464500
+$244: Let (Variable = Expression)
+  Variable:
+  $253: StructMemberContext prop=HitNormal@0x19e4d027250
+    Expression to struct:
+    $262: LocalVariable named K2Node_MakeStruct_HullDamageHit@0x19f58464600
+  Expression:
+  $271: StructMemberContext prop=HitNormal@0x19e4d027250
+    Expression to struct:
+    $280: LocalVariable named CallFunc_Array_Get_Item@0x19f58464500
+$289: Let (Variable = Expression)
+  Variable:
+  $298: StructMemberContext prop=HitStrength@0x19e4d0271e0
+    Expression to struct:
+    $307: LocalVariable named K2Node_MakeStruct_HullDamageHit@0x19f58464600
+  Expression:
+  $316: StructMemberContext prop=HitStrength@0x19e4d0271e0
+    Expression to struct:
+    $325: LocalVariable named CallFunc_Array_Get_Item@0x19f58464500
+$334: Let (Variable = Expression)
+  Variable:
+  $343: StructMemberContext prop=HitLevel@0x19e4d027170
+    Expression to struct:
+    $352: LocalVariable named K2Node_MakeStruct_HullDamageHit@0x19f58464600
+  Expression:
+  $361: StructMemberContext prop=HitLevel@0x19e4d027170
+    Expression to struct:
+    $370: LocalVariable named CallFunc_Array_Get_Item@0x19f58464500
+$379: LetBool (Variable = Expression)
+  Variable:
+  $380: StructMemberContext prop=HasDecal@0x19e4d0270f0
+    Expression to struct:
+    $389: LocalVariable named K2Node_MakeStruct_HullDamageHit@0x19f58464600
+  Expression:
+  $398: False
+$399: Context
+  ObjectExpression:
+  $400: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x26
+  RValueProperty: (null)
+  ContextExpression:
+  $421: FinalFunction target=Array_Set@0x19e4d3686f0 (
+    $430: InstanceVariable named Rep_ExternalHitList@0x19f58465880
+    $439: LocalVariable named Temp_int_Variable@0x19f482c5da0
+    $448: LocalVariable named K2Node_MakeStruct_HullDamageHit@0x19f58464600
+    $457: False
+    $458: EndFunctionParms
+  )
+$459: PopExecutionFlow (jump to popped addr)
+$460: Let (Variable = Expression)
+  Variable:
+  $469: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f482c5e80
+  Expression:
+  $478: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $487: LocalVariable named Temp_int_Variable@0x19f482c5da0
+    $496: literal int32 1
+    $501: EndFunctionParms
+  )
+$502: Let (Variable = Expression)
+  Variable:
+  $511: LocalVariable named Temp_int_Variable@0x19f482c5da0
+  Expression:
+  $520: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f482c5e80
+$529: Jump to offset 0x1c
+$534: Return expression:
+  $535: Nothing
+$536: EndOfScript
+
+=== BP_DamageZone_C::fn_idx_220085 (509 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_IsValid_ReturnValue@0x19f58464780
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19f58464780
+    ContextExpression:
+    $32: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $41: LocalVariable named Decal@0x19f58464700
+      $50: EndFunctionParms
+    )
+$51: JumpIfNot -> 0x1fa, cond:
+  $56: LocalVariable named CallFunc_IsValid_ReturnValue@0x19f58464780
+$65: Let (Variable = Expression)
+  Variable:
+  $74: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f482c6040
+  Expression:
+  $83: Context
+    ObjectExpression:
+    $84: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19f482c6040
+    ContextExpression:
+    $105: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $114: InstanceVariable named Deferred Decals@0x19f58465980
+      $123: EndFunctionParms
+    )
+$124: LetBool (Variable = Expression)
+  Variable:
+  $125: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19f58464880
+  Expression:
+  $134: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $143: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f482c6040
+    $152: InstanceVariable named MaxStoredHits@0x19f482c69e0
+    $161: EndFunctionParms
+  )
+$162: JumpIfNot -> 0xf9, cond:
+  $167: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19f58464880
+$176: Let (Variable = Expression)
+  Variable:
+  $185: LocalVariable named CallFunc_Array_Add_ReturnValue@0x19f482c5fd0
+  Expression:
+  $194: Context
+    ObjectExpression:
+    $195: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Add_ReturnValue@0x19f482c5fd0
+    ContextExpression:
+    $216: FinalFunction target=Array_Add@0x19e4d366810 (
+      $225: InstanceVariable named Deferred Decals@0x19f58465980
+      $234: LocalVariable named Decal@0x19f58464700
+      $243: EndFunctionParms
+    )
+$244: Jump to offset 0x1fa
+$249: Context
+  ObjectExpression:
+  $250: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $271: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $280: InstanceVariable named Deferred Decals@0x19f58465980
+    $289: InstanceVariable named ExternalDecalBufferIndex@0x19f482c6b30
+    $298: LocalVariable named CallFunc_Array_Get_Item@0x19f58464800
+    $307: EndFunctionParms
+  )
+$308: VirtualFunction call "KillDeferredDecal" (
+  $321: LocalVariable named CallFunc_Array_Get_Item@0x19f58464800
+  $330: EndFunctionParms
+)
+$331: Context
+  ObjectExpression:
+  $332: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x26
+  RValueProperty: (null)
+  ContextExpression:
+  $353: FinalFunction target=Array_Set@0x19e4d3686f0 (
+    $362: InstanceVariable named Deferred Decals@0x19f58465980
+    $371: InstanceVariable named ExternalDecalBufferIndex@0x19f482c6b30
+    $380: LocalVariable named Decal@0x19f58464700
+    $389: False
+    $390: EndFunctionParms
+  )
+$391: Let (Variable = Expression)
+  Variable:
+  $400: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f482c5ef0
+  Expression:
+  $409: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $418: InstanceVariable named ExternalDecalBufferIndex@0x19f482c6b30
+    $427: literal int32 1
+    $432: EndFunctionParms
+  )
+$433: Let (Variable = Expression)
+  Variable:
+  $442: LocalVariable named CallFunc_Percent_IntInt_ReturnValue@0x19f482c5f60
+  Expression:
+  $451: CallMath target=Percent_IntInt@0x19e4d3925b0 (
+    $460: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f482c5ef0
+    $469: InstanceVariable named MaxStoredHits@0x19f482c69e0
+    $478: EndFunctionParms
+  )
+$479: Let (Variable = Expression)
+  Variable:
+  $488: InstanceVariable named ExternalDecalBufferIndex@0x19f482c6b30
+  Expression:
+  $497: LocalVariable named CallFunc_Percent_IntInt_ReturnValue@0x19f482c5f60
+$506: Return expression:
+  $507: Nothing
+$508: EndOfScript
+
+=== BP_DamageZone_C::fn_idx_220114 (378 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_IsValid_ReturnValue@0x19f58464980
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19f58464980
+    ContextExpression:
+    $32: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $41: LocalOutVariable named Decal@0x19f58464900
+      $50: EndFunctionParms
+    )
+$51: JumpIfNot -> 0x177, cond:
+  $56: LocalVariable named CallFunc_IsValid_ReturnValue@0x19f58464980
+$65: Context
+  ObjectExpression:
+  $66: LocalOutVariable named Decal@0x19f58464900
+  SkipBytes: 0xf
+  RValueProperty: (null)
+  ContextExpression:
+  $87: FinalFunction target=SetLifeSpan@0x19e4d336070 (
+    $96: literal float 5
+    $101: EndFunctionParms
+  )
+$102: Let (Variable = Expression)
+  Variable:
+  $111: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x19f482c60b0
+  Expression:
+  $120: Context
+    ObjectExpression:
+    $121: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue@0x19f482c60b0
+    ContextExpression:
+    $142: FinalFunction target=GetGameTimeInSeconds@0x19e4cd8c800 (
+      $151: Self
+      $152: EndFunctionParms
+    )
+$153: LetObj (Variable = Expression)
+  Variable:
+  $154: LocalVariable named CallFunc_GetDecalDynamicMaterialInstance_ReturnValue@0x19f58464a00
+  Expression:
+  $163: Context
+    ObjectExpression:
+    $164: LocalOutVariable named Decal@0x19f58464900
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetDecalDynamicMaterialInstance_ReturnValue@0x19f58464a00
+    ContextExpression:
+    $185: FinalFunction target=GetDecalDynamicMaterialInstance@0x19e4d335cb0 (
+      $194: EndFunctionParms
+    )
+$195: Let (Variable = Expression)
+  Variable:
+  $204: LocalVariable named CallFunc_RandomFloatInRange_ReturnValue@0x19f482c6120
+  Expression:
+  $213: CallMath target=RandomFloatInRange@0x19e4d393930 (
+    $222: literal float 0
+    $227: literal float 1
+    $232: EndFunctionParms
+  )
+$233: Let (Variable = Expression)
+  Variable:
+  $242: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x19f482c6190
+  Expression:
+  $251: CallMath target=Add_FloatFloat@0x19e4d36f820 (
+    $260: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x19f482c60b0
+    $269: LocalVariable named CallFunc_RandomFloatInRange_ReturnValue@0x19f482c6120
+    $278: EndFunctionParms
+  )
+$279: Let (Variable = Expression)
+  Variable:
+  $288: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue2@0x19f482c6200
+  Expression:
+  $297: CallMath target=Add_FloatFloat@0x19e4d36f820 (
+    $306: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x19f482c6190
+    $315: literal float 1
+    $320: EndFunctionParms
+  )
+$321: Context
+  ObjectExpression:
+  $322: LocalVariable named CallFunc_GetDecalDynamicMaterialInstance_ReturnValue@0x19f58464a00
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $343: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $352: literal name "FadeTime"
+    $365: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue2@0x19f482c6200
+    $374: EndFunctionParms
+  )
+$375: Return expression:
+  $376: Nothing
+$377: EndOfScript
+
+=== BP_DamageZone_C::fn_idx_220120 (350 bytes) ===
+$0: FlowStack.Push(0x15b)
+$5: Let (Variable = Expression)
+  Variable:
+  $14: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f482c62e0
+  Expression:
+  $23: literal int32 0
+$28: Let (Variable = Expression)
+  Variable:
+  $37: LocalVariable named Temp_int_Array_Index_Variable@0x19f482c6270
+  Expression:
+  $46: literal int32 0
+$51: Let (Variable = Expression)
+  Variable:
+  $60: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f482c63c0
+  Expression:
+  $69: Context
+    ObjectExpression:
+    $70: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19f482c63c0
+    ContextExpression:
+    $91: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $100: InstanceVariable named Deferred Decals@0x19f58465980
+      $109: EndFunctionParms
+    )
+$110: LetBool (Variable = Expression)
+  Variable:
+  $111: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19f58464b00
+  Expression:
+  $120: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $129: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f482c62e0
+    $138: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f482c63c0
+    $147: EndFunctionParms
+  )
+$148: PopExecutionFlowIfNot, cond:
+$149: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19f58464b00
+$158: Let (Variable = Expression)
+  Variable:
+  $167: LocalVariable named Temp_int_Array_Index_Variable@0x19f482c6270
+  Expression:
+  $176: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f482c62e0
+$185: FlowStack.Push(0x111)
+$190: Context
+  ObjectExpression:
+  $191: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $212: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $221: InstanceVariable named Deferred Decals@0x19f58465980
+    $230: LocalVariable named Temp_int_Array_Index_Variable@0x19f482c6270
+    $239: LocalVariable named CallFunc_Array_Get_Item@0x19f58464a80
+    $248: EndFunctionParms
+  )
+$249: VirtualFunction call "KillDeferredDecal" (
+  $262: LocalVariable named CallFunc_Array_Get_Item@0x19f58464a80
+  $271: EndFunctionParms
+)
+$272: PopExecutionFlow (jump to popped addr)
+$273: Let (Variable = Expression)
+  Variable:
+  $282: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f482c6350
+  Expression:
+  $291: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $300: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f482c62e0
+    $309: literal int32 1
+    $314: EndFunctionParms
+  )
+$315: Let (Variable = Expression)
+  Variable:
+  $324: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f482c62e0
+  Expression:
+  $333: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f482c6350
+$342: Jump to offset 0x33
+$347: Return expression:
+  $348: Nothing
+$349: EndOfScript
+
+=== BP_DamageZone_C::fn_idx_220125 (512 bytes) ===
+$0: FlowStack.Push(0x1fd)
+$5: Let (Variable = Expression)
+  Variable:
+  $14: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f482c64a0
+  Expression:
+  $23: literal int32 0
+$28: Let (Variable = Expression)
+  Variable:
+  $37: LocalVariable named Temp_int_Array_Index_Variable@0x19f482c6430
+  Expression:
+  $46: literal int32 0
+$51: Let (Variable = Expression)
+  Variable:
+  $60: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f482c6580
+  Expression:
+  $69: Context
+    ObjectExpression:
+    $70: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19f482c6580
+    ContextExpression:
+    $91: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $100: StructMemberContext prop=DamageObjects_4_A06B18A346E5F8B48258C2901F169935@0x19f58468700
+        Expression to struct:
+        $109: InstanceVariable named RepairGroup@0x19f58465700
+      $118: EndFunctionParms
+    )
+$119: LetBool (Variable = Expression)
+  Variable:
+  $120: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19f58464d80
+  Expression:
+  $129: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $138: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f482c64a0
+    $147: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f482c6580
+    $156: EndFunctionParms
+  )
+$157: PopExecutionFlowIfNot, cond:
+$158: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19f58464d80
+$167: Let (Variable = Expression)
+  Variable:
+  $176: LocalVariable named Temp_int_Array_Index_Variable@0x19f482c6430
+  Expression:
+  $185: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f482c64a0
+$194: FlowStack.Push(0x1b3)
+$199: Context
+  ObjectExpression:
+  $200: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x2e
+  RValueProperty: (null)
+  ContextExpression:
+  $221: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $230: StructMemberContext prop=DamageObjects_4_A06B18A346E5F8B48258C2901F169935@0x19f58468700
+      Expression to struct:
+      $239: InstanceVariable named RepairGroup@0x19f58465700
+    $248: LocalVariable named Temp_int_Array_Index_Variable@0x19f482c6430
+    $257: LocalVariable named CallFunc_Array_Get_Item@0x19f58464c00
+    $266: EndFunctionParms
+  )
+$267: Let (Variable = Expression)
+  Variable:
+  $276: LocalVariable named K2Node_DynamicCast_AsScene_Component@0x19f58464c80
+  Expression:
+  $285: DynamicCast to SceneComponent@0x19e4be886c0 of expr:
+  $294: LocalVariable named CallFunc_Array_Get_Item@0x19f58464c00
+$303: Let (Variable = Expression)
+  Variable:
+  $312: LocalVariable named K2Node_DynamicCast_bSuccess@0x19f58464d00
+  Expression:
+  $321: PrimitiveCast type=71
+    Argument:
+    $323: LocalVariable named K2Node_DynamicCast_AsScene_Component@0x19f58464c80
+$332: PopExecutionFlowIfNot, cond:
+$333: LocalVariable named K2Node_DynamicCast_bSuccess@0x19f58464d00
+$342: Context
+  ObjectExpression:
+  $343: LocalVariable named K2Node_DynamicCast_AsScene_Component@0x19f58464c80
+  SkipBytes: 0x18
+  RValueProperty: (null)
+  ContextExpression:
+  $364: VirtualFunction call "SetVisibility" (
+    $377: LocalVariable named Visible@0x19f58464b80
+    $386: False
+    $387: EndFunctionParms
+  )
+$388: Context
+  ObjectExpression:
+  $389: LocalVariable named K2Node_DynamicCast_AsScene_Component@0x19f58464c80
+  SkipBytes: 0x18
+  RValueProperty: (null)
+  ContextExpression:
+  $410: VirtualFunction call "SetActive" (
+    $423: LocalVariable named Visible@0x19f58464b80
+    $432: True
+    $433: EndFunctionParms
+  )
+$434: PopExecutionFlow (jump to popped addr)
+$435: Let (Variable = Expression)
+  Variable:
+  $444: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f482c6510
+  Expression:
+  $453: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $462: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f482c64a0
+    $471: literal int32 1
+    $476: EndFunctionParms
+  )
+$477: Let (Variable = Expression)
+  Variable:
+  $486: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f482c64a0
+  Expression:
+  $495: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f482c6510
+$504: Jump to offset 0x33
+$509: Return expression:
+  $510: Nothing
+$511: EndOfScript
+
+=== BP_DamageZone_C::fn_idx_220086 (554 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named NewHIt@0x19f58465000
+  Expression:
+  $18: LocalVariable named HitData@0x19f58464e00
+$27: LetBool (Variable = Expression)
+  Variable:
+  $28: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue@0x19f58464e80
+  Expression:
+  $37: FinalFunction target=FlushNetDormancy@0x19e4cd61090 (
+    $46: EndFunctionParms
+  )
+$47: Let (Variable = Expression)
+  Variable:
+  $56: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f482c66d0
+  Expression:
+  $65: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $74: InstanceVariable named Rep_ServerUpdateEventCount@0x19f482c6a50
+    $83: literal int32 1
+    $88: EndFunctionParms
+  )
+$89: Let (Variable = Expression)
+  Variable:
+  $98: InstanceVariable named Rep_ServerUpdateEventCount@0x19f482c6a50
+  Expression:
+  $107: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f482c66d0
+$116: Let (Variable = Expression)
+  Variable:
+  $125: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f482c65f0
+  Expression:
+  $134: Context
+    ObjectExpression:
+    $135: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19f482c65f0
+    ContextExpression:
+    $156: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $165: InstanceVariable named Rep_ExternalHitList@0x19f58465880
+      $174: EndFunctionParms
+    )
+$175: LetBool (Variable = Expression)
+  Variable:
+  $176: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19f58464f80
+  Expression:
+  $185: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $194: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f482c65f0
+    $203: InstanceVariable named MaxStoredHits@0x19f482c69e0
+    $212: EndFunctionParms
+  )
+$213: JumpIfNot -> 0x165, cond:
+  $218: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19f58464f80
+$227: Let (Variable = Expression)
+  Variable:
+  $236: LocalVariable named CallFunc_Array_Add_ReturnValue@0x19f482c6660
+  Expression:
+  $245: Context
+    ObjectExpression:
+    $246: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Add_ReturnValue@0x19f482c6660
+    ContextExpression:
+    $267: FinalFunction target=Array_Add@0x19e4d366810 (
+      $276: InstanceVariable named Rep_ExternalHitList@0x19f58465880
+      $285: LocalVariable named NewHIt@0x19f58465000
+      $294: EndFunctionParms
+    )
+$295: LetBool (Variable = Expression)
+  Variable:
+  $296: LocalVariable named CallFunc_IsDedicatedServer_ReturnValue@0x19f58464f00
+  Expression:
+  $305: Context
+    ObjectExpression:
+    $306: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_IsDedicatedServer_ReturnValue@0x19f58464f00
+    ContextExpression:
+    $327: FinalFunction target=IsDedicatedServer@0x19e4cd8dd00 (
+      $336: Self
+      $337: EndFunctionParms
+    )
+$338: JumpIfNot -> 0x219, cond:
+  $343: LocalVariable named CallFunc_IsDedicatedServer_ReturnValue@0x19f58464f00
+$352: Jump to offset 0x227
+$357: Context
+  ObjectExpression:
+  $358: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x26
+  RValueProperty: (null)
+  ContextExpression:
+  $379: FinalFunction target=Array_Set@0x19e4d3686f0 (
+    $388: InstanceVariable named Rep_ExternalHitList@0x19f58465880
+    $397: InstanceVariable named ExternalHitBufferIndex@0x19f482c6970
+    $406: LocalVariable named NewHIt@0x19f58465000
+    $415: False
+    $416: EndFunctionParms
+  )
+$417: Let (Variable = Expression)
+  Variable:
+  $426: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x19f482c6740
+  Expression:
+  $435: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $444: InstanceVariable named ExternalHitBufferIndex@0x19f482c6970
+    $453: literal int32 1
+    $458: EndFunctionParms
+  )
+$459: Let (Variable = Expression)
+  Variable:
+  $468: LocalVariable named CallFunc_Percent_IntInt_ReturnValue@0x19f482c67b0
+  Expression:
+  $477: CallMath target=Percent_IntInt@0x19e4d3925b0 (
+    $486: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x19f482c6740
+    $495: InstanceVariable named MaxStoredHits@0x19f482c69e0
+    $504: EndFunctionParms
+  )
+$505: Let (Variable = Expression)
+  Variable:
+  $514: InstanceVariable named ExternalHitBufferIndex@0x19f482c6970
+  Expression:
+  $523: LocalVariable named CallFunc_Percent_IntInt_ReturnValue@0x19f482c67b0
+$532: Jump to offset 0x127
+$537: VirtualFunction call "Update External Hits" (
+  $550: EndFunctionParms
+)
+$551: Return expression:
+  $552: Nothing
+$553: EndOfScript
+
+=== BP_DamageZone_C::fn_idx_220099 (112 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_GetComponentsByTag_ReturnValue@0x19f58465180
+  Expression:
+  $18: FinalFunction target=GetComponentsByTag@0x19e4cd62900 (
+    $27: ObjectConst SceneComponent@0x19e4be886c0
+    $36: InstanceVariable named Repair Tag@0x19f482c6900
+    $45: EndFunctionParms
+  )
+$46: Let (Variable = Expression)
+  Variable:
+  $55: StructMemberContext prop=DamageObjects_4_A06B18A346E5F8B48258C2901F169935@0x19f58468700
+    Expression to struct:
+    $64: LocalVariable named K2Node_MakeStruct_BP_InternalDamageGroup@0x19f58465080
+  Expression:
+  $73: LocalVariable named CallFunc_GetComponentsByTag_ReturnValue@0x19f58465180
+$82: Let (Variable = Expression)
+  Variable:
+  $91: InstanceVariable named RepairGroup@0x19f58465700
+  Expression:
+  $100: LocalVariable named K2Node_MakeStruct_BP_InternalDamageGroup@0x19f58465080
+$109: Return expression:
+  $110: Nothing
+$111: EndOfScript
+
+=== BP_DamageZone_C::fn_idx_9202 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_DamageZone_C::fn_idx_219939 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_Hit_Data@0x19f58465380
+  Expression:
+  $9: LocalVariable named Hit Data@0x19f58465280
+$18: VirtualFunction call "ExecuteUbergraph_BP_DamageZone" (
+  $31: literal int32 172
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_DamageZone_C::fn_idx_219941 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_DamageZone" (
+  $13: literal int32 153
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_DamageZone_C::fn_idx_1881 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InRepairableState@0x19f58465400
+  Expression:
+  $9: LocalVariable named InRepairableState@0x19f58465300
+$18: VirtualFunction call "ExecuteUbergraph_BP_DamageZone" (
+  $31: literal int32 200
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_DamageZone_C::fn_idx_1856 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_DamageZone" (
+  $13: literal int32 645
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_DamageZone_C::fn_idx_1841 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_DamageZone" (
+  $13: literal int32 10
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_DamageZone_C::fn_idx_220103 (738 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19f482c6890
+$10: VirtualFunction call "GetOrCreateDecalMID" (
+  $23: LocalVariable named CallFunc_GetOrCreateDecalMID_DecalMID@0x19f58465600
+  $32: EndFunctionParms
+)
+$33: LetBool (Variable = Expression)
+  Variable:
+  $34: LocalVariable named CallFunc_IsValid_ReturnValue2@0x19f58465680
+  Expression:
+  $43: Context
+    ObjectExpression:
+    $44: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue2@0x19f58465680
+    ContextExpression:
+    $65: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $74: LocalVariable named CallFunc_GetOrCreateDecalMID_DecalMID@0x19f58465600
+      $83: EndFunctionParms
+    )
+$84: JumpIfNot -> 0x2df, cond:
+  $89: LocalVariable named CallFunc_IsValid_ReturnValue2@0x19f58465680
+$98: Context
+  ObjectExpression:
+  $99: LocalVariable named CallFunc_GetOrCreateDecalMID_DecalMID@0x19f58465600
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $120: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $129: literal name "HoleVisibility"
+    $142: literal float 0
+    $147: EndFunctionParms
+  )
+$148: Jump to offset 0x2df
+$153: VirtualFunction call "Clear Decal Flags" (
+  $166: EndFunctionParms
+)
+$167: Jump to offset 0x2df
+$172: VirtualFunction call "Add External Hit" (
+  $185: LocalVariable named K2Node_Event_Hit_Data@0x19f58465380
+  $194: EndFunctionParms
+)
+$195: Jump to offset 0x2df
+$200: LetBool (Variable = Expression)
+  Variable:
+  $201: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x19f58465480
+  Expression:
+  $210: CallMath target=NotEqual_ByteByte@0x19e4d390710 (
+    $219: LocalVariable named K2Node_Event_InRepairableState@0x19f58465400
+    $228: literal byte 0
+    $230: EndFunctionParms
+  )
+$231: JumpIfNot -> 0x181, cond:
+  $236: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x19f58465480
+$245: LetBool (Variable = Expression)
+  Variable:
+  $246: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x19f58465480
+  Expression:
+  $255: CallMath target=NotEqual_ByteByte@0x19e4d390710 (
+    $264: LocalVariable named K2Node_Event_InRepairableState@0x19f58465400
+    $273: literal byte 1
+    $275: EndFunctionParms
+  )
+$276: JumpIfNot -> 0x1a3, cond:
+  $281: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x19f58465480
+$290: LetBool (Variable = Expression)
+  Variable:
+  $291: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x19f58465480
+  Expression:
+  $300: CallMath target=NotEqual_ByteByte@0x19e4d390710 (
+    $309: LocalVariable named K2Node_Event_InRepairableState@0x19f58465400
+    $318: literal byte 2
+    $320: EndFunctionParms
+  )
+$321: JumpIfNot -> 0x1b7, cond:
+  $326: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x19f58465480
+$335: LetBool (Variable = Expression)
+  Variable:
+  $336: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x19f58465480
+  Expression:
+  $345: CallMath target=NotEqual_ByteByte@0x19e4d390710 (
+    $354: LocalVariable named K2Node_Event_InRepairableState@0x19f58465400
+    $363: literal byte 3
+    $365: EndFunctionParms
+  )
+$366: JumpIfNot -> 0x1cb, cond:
+  $371: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x19f58465480
+$380: Jump to offset 0x2df
+$385: VirtualFunction call "Set Repair Visibility" (
+  $398: False
+  $399: EndFunctionParms
+)
+$400: VirtualFunction call "RemoveDeferredDecals" (
+  $413: EndFunctionParms
+)
+$414: Jump to offset 0x2df
+$419: VirtualFunction call "Set Repair Visibility" (
+  $432: False
+  $433: EndFunctionParms
+)
+$434: Jump to offset 0x2df
+$439: VirtualFunction call "Set Repair Visibility" (
+  $452: False
+  $453: EndFunctionParms
+)
+$454: Jump to offset 0x2df
+$459: VirtualFunction call "Set Repair Visibility" (
+  $472: True
+  $473: EndFunctionParms
+)
+$474: VirtualFunction call "RemoveDeferredDecals" (
+  $487: EndFunctionParms
+)
+$488: Jump to offset 0x2df
+$493: VirtualFunction call "Initialise" (
+  $506: EndFunctionParms
+)
+$507: Jump to offset 0x2df
+$512: Context
+  ObjectExpression:
+  $513: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x6a
+  RValueProperty: (null)
+  ContextExpression:
+  $534: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $543: Self
+    $544: literal ansi string "ERROR - Damage zone has no owner inside Begin Play!""
+    $598: True
+    $599: True
+    $600: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $613: literal float 0
+      $618: literal float 0.6600000262260437
+      $623: literal float 1
+      $628: literal float 1
+      $633: EndStructConst
+    $634: literal float 2
+    $639: EndFunctionParms
+  )
+$640: Jump to offset 0x2df
+$645: LetObj (Variable = Expression)
+  Variable:
+  $646: LocalVariable named CallFunc_GetOwner_ReturnValue@0x19f58465500
+  Expression:
+  $655: FinalFunction target=GetOwner@0x19e4cd64200 (
+    $664: EndFunctionParms
+  )
+$665: LetBool (Variable = Expression)
+  Variable:
+  $666: LocalVariable named CallFunc_IsValid_ReturnValue@0x19f58465580
+  Expression:
+  $675: Context
+    ObjectExpression:
+    $676: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19f58465580
+    ContextExpression:
+    $697: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $706: LocalVariable named CallFunc_GetOwner_ReturnValue@0x19f58465500
+      $715: EndFunctionParms
+    )
+$716: JumpIfNot -> 0x200, cond:
+  $721: LocalVariable named CallFunc_IsValid_ReturnValue@0x19f58465580
+$730: Jump to offset 0x1ed
+$735: Return expression:
+  $736: Nothing
+$737: EndOfScript

@@ -1,0 +1,1448 @@
+{
+  "class": "BP_Component_Tutorial2019_C",
+  "source": "decompiled_blueprints/BP_Component_Tutorial2019_C.txt",
+  "functions": [
+    {
+      "name": "SwapMysteriousStrangerToTutorialModeOnClient",
+      "bytecode_bytes": 173,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetObj (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 48,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 107,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 170,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 172,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [],
+      "types": {
+        "CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue": "FObjectMessagingDispatcherHandle"
+      }
+    },
+    {
+      "name": "TeleportPlayerToOnboardingSpawnPoint",
+      "bytecode_bytes": 266,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "VirtualFunction call \"GetPlayerController\" (",
+          "edges": []
+        },
+        {
+          "offset": 23,
+          "opcode": "LetObj (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 65,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 101,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 130,
+          "opcode": "JumpIfNot -> 0x107, cond:",
+          "edges": [
+            {
+              "to_label": "L_107",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 144,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 203,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 263,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 265,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 0,
+          "expression": "GetPlayerController(CallFunc_GetPlayerController_Player_Controller)"
+        }
+      ],
+      "types": {
+        "CallFunc_K2_GetPawn_ReturnValue": "APawn*",
+        "K2Node_DynamicCast_AsAthena_Character": "AthenaCharacter*",
+        "K2Node_DynamicCast_bSuccess": "bool",
+        "CallFunc_GetNearestOnboardingSpawnPoint_ReturnValue": "FTeleportLocation",
+        "CallFunc_TeleportPlayerToLocationDuringSpawning_ReturnValue": "bool"
+      }
+    },
+    {
+      "name": "GetPlayerController",
+      "bytecode_bytes": 607,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetObj (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 20,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 56,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 85,
+          "opcode": "JumpIfNot -> 0x7b, cond:",
+          "edges": [
+            {
+              "to_label": "L_7B",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 99,
+          "opcode": "LetObj (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 118,
+          "opcode": "Jump to offset 0x25c",
+          "edges": []
+        },
+        {
+          "offset": 123,
+          "opcode": "LetObj (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 166,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 225,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 284,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 312,
+          "opcode": "literal ansi string \"0\"",
+          "edges": []
+        },
+        {
+          "offset": 315,
+          "opcode": "literal ansi string \"\"",
+          "edges": []
+        },
+        {
+          "offset": 317,
+          "opcode": "literal ansi string \"\"",
+          "edges": []
+        },
+        {
+          "offset": 319,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 355,
+          "opcode": "SetArray",
+          "edges": []
+        },
+        {
+          "offset": 375,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 516,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 599,
+          "opcode": "Jump to offset 0x63",
+          "edges": []
+        },
+        {
+          "offset": 604,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 606,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [],
+      "types": {
+        "K2Node_DynamicCast_AsAthena_Player_Controller": "AthenaPlayerController*",
+        "K2Node_DynamicCast_bSuccess": "bool",
+        "CallFunc_GetObjectClass_ReturnValue": "UClass*",
+        "CallFunc_GetClassDisplayName_ReturnValue": "FString",
+        "CallFunc_Conv_StringToText_ReturnValue": "FText",
+        "CallFunc_Format_ReturnValue": "FText"
+      }
+    },
+    {
+      "name": "ConvertActorIdsToActors",
+      "bytecode_bytes": 520,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "FlowStack.Push(0x205)",
+          "edges": []
+        },
+        {
+          "offset": 5,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 28,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 51,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 110,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 148,
+          "opcode": "JumpIfNot -> 0x1b6, cond:",
+          "edges": [
+            {
+              "to_label": "L_1B6",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 162,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 189,
+          "opcode": "FlowStack.Push(0x1bb)",
+          "edges": []
+        },
+        {
+          "offset": 194,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 253,
+          "opcode": "LetObj (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 304,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 340,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 369,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 437,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 438,
+          "opcode": "Jump to offset 0x205",
+          "edges": []
+        },
+        {
+          "offset": 443,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 485,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 512,
+          "opcode": "Jump to offset 0x33",
+          "edges": []
+        },
+        {
+          "offset": 517,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 519,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [],
+      "types": {
+        "CallFunc_Array_Length_ReturnValue": "int",
+        "CallFunc_Conv_AssetToObject_ReturnValue": "UObject*",
+        "UniqueObjectNameForCooking_AsActor": "AActor*",
+        "UniqueObjectNameForCooking_bSuccess": "bool",
+        "CallFunc_Array_Add_ReturnValue": "int"
+      }
+    },
+    {
+      "name": "Debug_SearchForMissingGoldHoarders",
+      "bytecode_bytes": 1227,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "FlowStack.Push(0x4c8)",
+          "edges": []
+        },
+        {
+          "offset": 5,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 47,
+          "opcode": "PopExecutionFlowIfNot, cond:",
+          "edges": []
+        },
+        {
+          "offset": 48,
+          "opcode": "LocalVariable named CallFunc_IsEditor_ReturnValue@0x2139321a680",
+          "edges": []
+        },
+        {
+          "offset": 57,
+          "opcode": "VirtualFunction call \"ConvertActorIdsToActors\" (",
+          "edges": []
+        },
+        {
+          "offset": 89,
+          "opcode": "VirtualFunction call \"ConvertActorIdsToActors\" (",
+          "edges": []
+        },
+        {
+          "offset": 121,
+          "opcode": "SetArray",
+          "edges": []
+        },
+        {
+          "offset": 132,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 183,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 206,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 229,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 288,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 326,
+          "opcode": "PopExecutionFlowIfNot, cond:",
+          "edges": []
+        },
+        {
+          "offset": 327,
+          "opcode": "LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x2139321a800",
+          "edges": []
+        },
+        {
+          "offset": 336,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 363,
+          "opcode": "FlowStack.Push(0x47e)",
+          "edges": []
+        },
+        {
+          "offset": 368,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 427,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 487,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 516,
+          "opcode": "PopExecutionFlowIfNot, cond:",
+          "edges": []
+        },
+        {
+          "offset": 517,
+          "opcode": "LocalVariable named CallFunc_Not_PreBool_ReturnValue2@0x2139321aa80",
+          "edges": []
+        },
+        {
+          "offset": 526,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 585,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 645,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 674,
+          "opcode": "PopExecutionFlowIfNot, cond:",
+          "edges": []
+        },
+        {
+          "offset": 675,
+          "opcode": "LocalVariable named CallFunc_Not_PreBool_ReturnValue@0x2139321a980",
+          "edges": []
+        },
+        {
+          "offset": 684,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 743,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 802,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 875,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 1066,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 1149,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 1150,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 1192,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 1219,
+          "opcode": "Jump to offset 0xe5",
+          "edges": []
+        },
+        {
+          "offset": 1224,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 1226,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 57,
+          "expression": "ConvertActorIdsToActors(GoldHoarders, GoldHoarderHardRefs)"
+        },
+        {
+          "offset": 89,
+          "expression": "ConvertActorIdsToActors(NPCBlacklist, NPCBlacklistHardRefs)"
+        }
+      ],
+      "types": {
+        "CallFunc_IsEditor_ReturnValue": "bool",
+        "CallFunc_Array_Length_ReturnValue": "int",
+        "CallFunc_Array_Contains_ReturnValue2": "bool",
+        "CallFunc_Array_Contains_ReturnValue": "bool",
+        "CallFunc_GetDisplayName_ReturnValue": "FString",
+        "CallFunc_Concat_StrStr_ReturnValue": "FString",
+        "CallFunc_Concat_StrStr_ReturnValue2": "FString"
+      }
+    },
+    {
+      "name": "PopulateGoldHoarderLocationsFromGoldHoarders",
+      "bytecode_bytes": 893,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "FlowStack.Push(0x37a)",
+          "edges": []
+        },
+        {
+          "offset": 5,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 46,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 69,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 92,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 151,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 189,
+          "opcode": "JumpIfNot -> 0x32b, cond:",
+          "edges": [
+            {
+              "to_label": "L_32B",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 203,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 230,
+          "opcode": "FlowStack.Push(0x330)",
+          "edges": []
+        },
+        {
+          "offset": 235,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 294,
+          "opcode": "LetObj (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 345,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 381,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 410,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 461,
+          "opcode": "PopExecutionFlowIfNot, cond:",
+          "edges": []
+        },
+        {
+          "offset": 462,
+          "opcode": "LocalVariable named CallFunc_IsValid_ReturnValue@0x2139321b080",
+          "edges": []
+        },
+        {
+          "offset": 471,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 530,
+          "opcode": "LetObj (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 581,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 617,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 646,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 696,
+          "opcode": "CallMath target=BreakTransform@0x212d6992df0 (",
+          "edges": []
+        },
+        {
+          "offset": 742,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 810,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 811,
+          "opcode": "Jump to offset 0x37a",
+          "edges": []
+        },
+        {
+          "offset": 816,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 858,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 885,
+          "opcode": "Jump to offset 0x5c",
+          "edges": []
+        },
+        {
+          "offset": 890,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 892,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [],
+      "types": {
+        "CallFunc_Array_Length_ReturnValue": "int",
+        "CallFunc_Conv_AssetToObject_ReturnValue": "UObject*",
+        "UniqueObjectNameForCooking_AsActor": "AActor*",
+        "UniqueObjectNameForCooking_bSuccess": "bool",
+        "CallFunc_Array_Add_ReturnValue": "int"
+      }
+    },
+    {
+      "name": "EnsurePurchaseVoyageSequenceCreatedAndPopulated",
+      "bytecode_bytes": 71,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "VirtualFunction call \"EnsurePurchaseVoyageSequenceObjectCreated\" (",
+          "edges": []
+        },
+        {
+          "offset": 23,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 68,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 70,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 0,
+          "expression": "EnsurePurchaseVoyageSequenceObjectCreated(CallFunc_EnsurePurchaseVoyageSequenceObjectCreated_PromptObject)"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "EnsurePurchaseVoyageSequenceObjectCreated",
+      "bytecode_bytes": 669,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 51,
+          "opcode": "JumpIfNot -> 0x59, cond:",
+          "edges": [
+            {
+              "to_label": "L_59",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 65,
+          "opcode": "LetObj (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 84,
+          "opcode": "Jump to offset 0x29a",
+          "edges": []
+        },
+        {
+          "offset": 89,
+          "opcode": "LetObj (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 140,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 176,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 205,
+          "opcode": "JumpIfNot -> 0x185, cond:",
+          "edges": [
+            {
+              "to_label": "L_185",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 219,
+          "opcode": "LetObj (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 238,
+          "opcode": "LetObj (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 286,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 322,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 351,
+          "opcode": "JumpIfNot -> 0x20f, cond:",
+          "edges": [
+            {
+              "to_label": "L_20F",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 365,
+          "opcode": "LetObj (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 384,
+          "opcode": "Jump to offset 0x29a",
+          "edges": []
+        },
+        {
+          "offset": 389,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 511,
+          "opcode": "LetObj (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 522,
+          "opcode": "Jump to offset 0x29a",
+          "edges": []
+        },
+        {
+          "offset": 527,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 661,
+          "opcode": "Jump to offset 0x1ff",
+          "edges": []
+        },
+        {
+          "offset": 666,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 668,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [],
+      "types": {
+        "CallFunc_CreateObject_ReturnValue": "UObject*",
+        "K2Node_DynamicCast_AsBP_Prompt_CTPurchase_Voyage_Sequence": "BP_Prompt_CTPurchaseVoyageSequence_C*",
+        "K2Node_DynamicCast_bSuccess2": "bool",
+        "K2Node_DynamicCast_AsAthena_Player_Controller": "AthenaPlayerController*",
+        "K2Node_DynamicCast_bSuccess": "bool"
+      }
+    },
+    {
+      "name": "OnRep_GoldHoarderLocations",
+      "bytecode_bytes": 28,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 11,
+          "opcode": "VirtualFunction call \"TrySetUpCoordinator\" (",
+          "edges": []
+        },
+        {
+          "offset": 25,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 27,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 11,
+          "expression": "TrySetUpCoordinator()"
+        }
+      ],
+      "types": {
+        "GoldHoarderOnRepPrerequiste": "bool"
+      }
+    },
+    {
+      "name": "TrySetUpCoordinator",
+      "bytecode_bytes": 22,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Component_Tutorial2019\" (",
+          "edges": []
+        },
+        {
+          "offset": 19,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 21,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 0,
+          "expression": "ExecuteUbergraph_BP_Component_Tutorial2019()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "ReceiveTutorial2019BeginPlayOnClient",
+      "bytecode_bytes": 22,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Component_Tutorial2019\" (",
+          "edges": []
+        },
+        {
+          "offset": 19,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 21,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 0,
+          "expression": "ExecuteUbergraph_BP_Component_Tutorial2019()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "ReceiveTutorial2019BeginPlayOnServer",
+      "bytecode_bytes": 22,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Component_Tutorial2019\" (",
+          "edges": []
+        },
+        {
+          "offset": 19,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 21,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 0,
+          "expression": "ExecuteUbergraph_BP_Component_Tutorial2019()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "Set Prompts Visibility",
+      "bytecode_bytes": 22,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Component_Tutorial2019\" (",
+          "edges": []
+        },
+        {
+          "offset": 19,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 21,
+          "opcode": "EndOfScript",
+          "edges": []
+        },
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_CustomEvent_IsHIdden@0x2139321bb80",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_CustomEvent_ReEvaluate@0x2139321bc00",
+          "edges": []
+        },
+        {
+          "offset": 36,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_CustomEvent_Delay_In_Seconds@0x2138e443fe0",
+          "edges": []
+        },
+        {
+          "offset": 54,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Component_Tutorial2019\" (",
+          "edges": []
+        },
+        {
+          "offset": 73,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 75,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 0,
+          "expression": "ExecuteUbergraph_BP_Component_Tutorial2019()"
+        },
+        {
+          "offset": 54,
+          "expression": "ExecuteUbergraph_BP_Component_Tutorial2019()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "ControllerOnEndPlay",
+      "bytecode_bytes": 40,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_CustomEvent_EndPlayReason@0x2139321be80",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Component_Tutorial2019\" (",
+          "edges": []
+        },
+        {
+          "offset": 37,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 39,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 18,
+          "expression": "ExecuteUbergraph_BP_Component_Tutorial2019()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "ExecuteUbergraph_BP_Component_Tutorial2019",
+      "bytecode_bytes": 1166,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "FlowStack.Push(0x48b)",
+          "edges": []
+        },
+        {
+          "offset": 5,
+          "opcode": "Computed Jump, offset by expr:",
+          "edges": []
+        },
+        {
+          "offset": 15,
+          "opcode": "VirtualFunction call \"EnsurePurchaseVoyageSequenceObjectCreated\" (",
+          "edges": []
+        },
+        {
+          "offset": 38,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 83,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 156,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 194,
+          "opcode": "PopExecutionFlowIfNot, cond:",
+          "edges": []
+        },
+        {
+          "offset": 195,
+          "opcode": "LocalVariable named CallFunc_BooleanAND_ReturnValue@0x2139321c000",
+          "edges": []
+        },
+        {
+          "offset": 204,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 240,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 241,
+          "opcode": "VirtualFunction call \"EnsurePurchaseVoyageSequenceObjectCreated\" (",
+          "edges": []
+        },
+        {
+          "offset": 264,
+          "opcode": "VirtualFunction call \"TrySetUpCoordinator\" (",
+          "edges": []
+        },
+        {
+          "offset": 278,
+          "opcode": "BindDelegate 'ControllerOnEndPlay'",
+          "edges": []
+        },
+        {
+          "offset": 301,
+          "opcode": "LetObj (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 321,
+          "opcode": "AddMulticastDelegate",
+          "edges": []
+        },
+        {
+          "offset": 322,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 353,
+          "opcode": "LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x2139321bb00",
+          "edges": []
+        },
+        {
+          "offset": 362,
+          "opcode": "VirtualFunction call \"SwapMysteriousStrangerToTutorialModeOnClient\" (",
+          "edges": []
+        },
+        {
+          "offset": 376,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 377,
+          "opcode": "VirtualFunction call \"PopulateGoldHoarderLocationsFromGoldHoarders\" (",
+          "edges": []
+        },
+        {
+          "offset": 391,
+          "opcode": "VirtualFunction call \"Debug_SearchForMissingGoldHoarders\" (",
+          "edges": []
+        },
+        {
+          "offset": 405,
+          "opcode": "VirtualFunction call \"TeleportPlayerToOnboardingSpawnPoint\" (",
+          "edges": []
+        },
+        {
+          "offset": 419,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 420,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 456,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 457,
+          "opcode": "PopExecutionFlowIfNot, cond:",
+          "edges": []
+        },
+        {
+          "offset": 458,
+          "opcode": "InstanceVariable named GoldHoarderOnRepPrerequiste@0x2139321c380",
+          "edges": []
+        },
+        {
+          "offset": 467,
+          "opcode": "VirtualFunction call \"GetPlayerController\" (",
+          "edges": []
+        },
+        {
+          "offset": 490,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 532,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 568,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 613,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 658,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 659,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 693,
+          "opcode": "JumpIfNot -> 0x2c8, cond:",
+          "edges": [
+            {
+              "to_label": "L_2C8",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 707,
+          "opcode": "Jump to offset 0xf",
+          "edges": []
+        },
+        {
+          "offset": 712,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 792,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 793,
+          "opcode": "Jump to offset 0x1c9",
+          "edges": []
+        },
+        {
+          "offset": 798,
+          "opcode": "FlowStack.Push(0x3a5)",
+          "edges": []
+        },
+        {
+          "offset": 803,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 854,
+          "opcode": "PopExecutionFlowIfNot, cond:",
+          "edges": []
+        },
+        {
+          "offset": 855,
+          "opcode": "LocalVariable named CallFunc_IsValid_ReturnValue2@0x2139321c280",
+          "edges": []
+        },
+        {
+          "offset": 864,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 900,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 932,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 933,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 984,
+          "opcode": "PopExecutionFlowIfNot, cond:",
+          "edges": []
+        },
+        {
+          "offset": 985,
+          "opcode": "LocalVariable named CallFunc_IsHandleRegistered_ReturnValue@0x2139321c200",
+          "edges": []
+        },
+        {
+          "offset": 994,
+          "opcode": "VirtualFunction call \"GetPlayerController\" (",
+          "edges": []
+        },
+        {
+          "offset": 1017,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 1053,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 1112,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 1162,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 1163,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 1165,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 15,
+          "expression": "EnsurePurchaseVoyageSequenceObjectCreated(CallFunc_EnsurePurchaseVoyageSequenceObjectCreated_PromptObject2)"
+        },
+        {
+          "offset": 241,
+          "expression": "EnsurePurchaseVoyageSequenceObjectCreated(CallFunc_EnsurePurchaseVoyageSequenceObjectCreated_PromptObject)"
+        },
+        {
+          "offset": 264,
+          "expression": "TrySetUpCoordinator()"
+        },
+        {
+          "offset": 362,
+          "expression": "SwapMysteriousStrangerToTutorialModeOnClient()"
+        },
+        {
+          "offset": 377,
+          "expression": "PopulateGoldHoarderLocationsFromGoldHoarders()"
+        },
+        {
+          "offset": 391,
+          "expression": "Debug_SearchForMissingGoldHoarders()"
+        },
+        {
+          "offset": 405,
+          "expression": "TeleportPlayerToOnboardingSpawnPoint()"
+        },
+        {
+          "offset": 467,
+          "expression": "GetPlayerController(CallFunc_GetPlayerController_Player_Controller)"
+        },
+        {
+          "offset": 994,
+          "expression": "GetPlayerController(CallFunc_GetPlayerController_Player_Controller2)"
+        }
+      ],
+      "types": {
+        "CallFunc_IsHandleRegistered_ReturnValue": "bool",
+        "CallFunc_GetObjectMessagingDispatcher_ObjectMessagingDispatcher_CastInput": "TScriptInterface<UObjectMessagingDispatcherInterface>",
+        "CallFunc_GetObjectMessagingDispatcher_ReturnValue": "FObjectMessagingDispatcherHandle"
+      }
+    }
+  ]
+}

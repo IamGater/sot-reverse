@@ -1,0 +1,169 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Generic/bp_spawnphasedactor -> BP_SpawnPhasedActor_C
+
+=== BP_SpawnPhasedActor_C::fn_idx_279033 (191 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x19fcbb46a00
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__GameplayStatics@0x19e4d95eb20
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetObjectClass_ReturnValue@0x19fcbb46a00
+    ContextExpression:
+    $32: FinalFunction target=GetObjectClass@0x19e4d35dd20 (
+      $41: Self
+      $42: EndFunctionParms
+    )
+$43: Let (Variable = Expression)
+  Variable:
+  $52: LocalVariable named CallFunc_GetClassDisplayName_ReturnValue@0x19fcdbb9530
+  Expression:
+  $61: Context
+    ObjectExpression:
+    $62: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetClassDisplayName_ReturnValue@0x19fcdbb9530
+    ContextExpression:
+    $83: FinalFunction target=GetClassDisplayName@0x19e4cd8bf90 (
+      $92: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x19fcbb46a00
+      $101: EndFunctionParms
+    )
+$102: Let (Variable = Expression)
+  Variable:
+  $111: LocalVariable named CallFunc_Conv_StringToText_ReturnValue@0x19fcdbb9b50
+  Expression:
+  $120: Context
+    ObjectExpression:
+    $121: ObjectConst Default__KismetTextLibrary@0x19e4d95ed30
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Conv_StringToText_ReturnValue@0x19fcdbb9b50
+    ContextExpression:
+    $142: FinalFunction target=Conv_StringToText@0x19e4d3a9840 (
+      $151: LocalVariable named CallFunc_GetClassDisplayName_ReturnValue@0x19fcdbb9530
+      $160: EndFunctionParms
+    )
+$161: Let (Variable = Expression)
+  Variable:
+  $170: LocalOutVariable named Name@0x19fcdbb8d50
+  Expression:
+  $179: LocalVariable named CallFunc_Conv_StringToText_ReturnValue@0x19fcdbb9b50
+$188: Return expression:
+  $189: Nothing
+$190: EndOfScript
+
+=== BP_SpawnPhasedActor_C::OnBeginCustom (535 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fcbb46c00
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19fcbb46c00
+    ContextExpression:
+    $32: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $41: LocalVariable named idx:282646@0x19fcbb46a80
+      $50: EndFunctionParms
+    )
+$51: JumpIfNot -> 0xbf, cond:
+  $56: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fcbb46c00
+$65: Let (Variable = Expression)
+  Variable:
+  $74: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19fcbb46d00
+  Expression:
+  $83: Context
+    ObjectExpression:
+    $84: LocalVariable named idx:282646@0x19fcbb46a80
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetTransform_ReturnValue@0x19fcbb46d00
+    ContextExpression:
+    $105: FinalFunction target=GetTransform@0x19e4cd64700 (
+      $114: EndFunctionParms
+    )
+$115: LetObj (Variable = Expression)
+  Variable:
+  $116: LocalVariable named CallFunc_SpawnPhasedActor_ReturnValue@0x19fcbb46d80
+  Expression:
+  $125: FinalFunction target=SpawnPhasedActor@0x19e4cda8ba0 (
+    $134: LocalVariable named ActorClass@0x19fcbb46b00
+    $143: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19fcbb46d00
+    $152: NoObject
+    $153: literal name "None"
+    $166: EndFunctionParms
+  )
+$167: LetObj (Variable = Expression)
+  Variable:
+  $168: LocalOutVariable named Actor@0x19fcbb46b80
+  Expression:
+  $177: LocalVariable named CallFunc_SpawnPhasedActor_ReturnValue@0x19fcbb46d80
+$186: Jump to offset 0x214
+$191: VirtualFunction call "GetClassName" (
+  $204: LocalVariable named idx:282644@0x19fcdbba250
+  $213: EndFunctionParms
+)
+$214: Let (Variable = Expression)
+  Variable:
+  $223: StructMemberContext prop=ArgumentName@0x19e4cf5f720
+    Expression to struct:
+    $232: LocalVariable named UniqueObjectNameForCooking_FormatTextArgument@0x19fcbb46c80
+  Expression:
+  $241: literal text (not decoded)
+$242: literal ansi string "0"
+$245: literal ansi string ""
+$247: literal ansi string ""
+$249: Let (Variable = Expression)
+  Variable:
+  $258: StructMemberContext prop=TextValue@0x19e4cf5f6b0
+    Expression to struct:
+    $267: LocalVariable named UniqueObjectNameForCooking_FormatTextArgument@0x19fcbb46c80
+  Expression:
+  $276: LocalVariable named idx:282644@0x19fcdbba250
+$285: SetArray
+  $286: LocalVariable named UniqueObjectNameForCooking_Array@0x19fcbb46e80
+  $295: LocalVariable named UniqueObjectNameForCooking_FormatTextArgument@0x19fcbb46c80
+  $304: EndArray
+$305: Let (Variable = Expression)
+  Variable:
+  $314: LocalVariable named CallFunc_Format_ReturnValue@0x19fcdbb9fb0
+  Expression:
+  $323: Context
+    ObjectExpression:
+    $324: ObjectConst Default__KismetTextLibrary@0x19e4d95ed30
+    SkipBytes: 0x68
+    RValueProperty: CallFunc_Format_ReturnValue@0x19fcdbb9fb0
+    ContextExpression:
+    $345: FinalFunction target=Format@0x19e4d3aa250 (
+      $354: literal text (not decoded)
+      $355: literal ansi string "Given location actor is Null!
+
+in: {0}"
+      $395: literal ansi string "2464BEFB4E47828437B8FEBA6BD32FE1_Format0"
+      $437: literal ansi string ""
+      $439: LocalVariable named UniqueObjectNameForCooking_Array@0x19fcbb46e80
+      $448: EndFunctionParms
+    )
+$449: Context
+  ObjectExpression:
+  $450: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x3d
+  RValueProperty: (null)
+  ContextExpression:
+  $471: FinalFunction target=PrintText@0x19e4cd97190 (
+    $480: NoObject
+    $481: LocalVariable named CallFunc_Format_ReturnValue@0x19fcdbb9fb0
+    $490: True
+    $491: True
+    $492: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $505: literal float 1
+      $510: literal float 0
+      $515: literal float 0.016899000853300095
+      $520: literal float 1
+      $525: EndStructConst
+    $526: literal float 20
+    $531: EndFunctionParms
+  )
+$532: Return expression:
+  $533: Nothing
+$534: EndOfScript

@@ -1,0 +1,88 @@
+// Class: BoxComponent (3 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+BoxComponent::GetScaledBoxExtent @ RVA 0x2B173C0 EA 0x7FF6F65373C0
+======================================================================
+__int64 __fastcall sub_7FF6F65373C0(__m128 *a1, __int64 a2, __int64 a3)
+{
+  __m128 v3; // xmm2
+  __m128 v4; // xmm0
+  __m128 v5; // xmm1
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v3 = a1[22];
+  v4 = v3;
+  v4.m128_f32[0] = v3.m128_f32[0] * a1[89].m128_f32[0];
+  v5 = _mm_shuffle_ps(v3, v3, 85);
+  v5.m128_f32[0] = v5.m128_f32[0] * a1[89].m128_f32[1];
+  v3.m128_f32[0] = _mm_shuffle_ps(v3, v3, 170).m128_f32[0] * a1[89].m128_f32[2];
+  *(_QWORD *)a3 = _mm_unpacklo_ps(v4, v5).m128_u64[0];
+  *(_DWORD *)(a3 + 8) = v3.m128_i32[0];
+  return v3.m128_u32[0];
+}
+
+
+======================================================================
+BoxComponent::GetUnscaledBoxExtent @ RVA 0x2B17DE0 EA 0x7FF6F6537DE0
+======================================================================
+__int64 __fastcall sub_7FF6F6537DE0(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = *(unsigned int *)(a1 + 1432);
+  *(_QWORD *)a3 = *(_QWORD *)(a1 + 1424);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+BoxComponent::SetBoxExtent @ RVA 0x2B1D5C0 EA 0x7FF6F653D5C0
+======================================================================
+__int64 __fastcall sub_7FF6F653D5C0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // r8
+  __int64 v6; // rax
+  __int64 v7; // rdi
+  bool v8; // zf
+  __int64 v10; // [rsp+20h] [rbp-28h] BYREF
+  int v11; // [rsp+28h] [rbp-20h]
+  __int64 v12; // [rsp+30h] [rbp-18h] BYREF
+  int v13; // [rsp+38h] [rbp-10h]
+  int v14; // [rsp+58h] [rbp+10h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v4 = 0;
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v6 = a2[4];
+  v12 = v10;
+  LOBYTE(v4) = v6 != 0;
+  v7 = v6 + v4;
+  LODWORD(v6) = v11;
+  v8 = v14 == 0;
+  a2[4] = v7;
+  LOBYTE(v5) = !v8;
+  v13 = v6;
+  return sub_7FF6F5CCA250(a1, &v12, v5);
+}
+

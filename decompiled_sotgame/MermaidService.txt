@@ -1,0 +1,130 @@
+// Class: MermaidService (4 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+MermaidService::GetNumActiveMermaids @ RVA 0xEC48B0 EA 0x7FF6F48E48B0
+======================================================================
+__int64 __fastcall sub_7FF6F48E48B0(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F4185DF0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+MermaidService::GetParams @ RVA 0xEC49D0 EA 0x7FF6F48E49D0
+======================================================================
+__int64 __fastcall sub_7FF6F48E49D0(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rax
+  __int64 result; // rax
+  _BYTE v6[152]; // [rsp+20h] [rbp-98h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = sub_7FF6F4185E40(a1, v6);
+  *(_DWORD *)a3 = *(_DWORD *)v4;
+  *(_DWORD *)(a3 + 4) = *(_DWORD *)(v4 + 4);
+  *(_DWORD *)(a3 + 8) = *(_DWORD *)(v4 + 8);
+  *(_DWORD *)(a3 + 12) = *(_DWORD *)(v4 + 12);
+  *(_DWORD *)(a3 + 16) = *(_DWORD *)(v4 + 16);
+  *(_DWORD *)(a3 + 20) = *(_DWORD *)(v4 + 20);
+  *(_DWORD *)(a3 + 24) = *(_DWORD *)(v4 + 24);
+  *(_DWORD *)(a3 + 28) = *(_DWORD *)(v4 + 28);
+  *(_DWORD *)(a3 + 32) = *(_DWORD *)(v4 + 32);
+  *(_DWORD *)(a3 + 36) = *(_DWORD *)(v4 + 36);
+  *(_DWORD *)(a3 + 40) = *(_DWORD *)(v4 + 40);
+  *(_DWORD *)(a3 + 44) = *(_DWORD *)(v4 + 44);
+  *(_DWORD *)(a3 + 48) = *(_DWORD *)(v4 + 48);
+  *(_DWORD *)(a3 + 52) = *(_DWORD *)(v4 + 52);
+  *(_DWORD *)(a3 + 56) = *(_DWORD *)(v4 + 56);
+  *(_DWORD *)(a3 + 60) = *(_DWORD *)(v4 + 60);
+  *(_DWORD *)(a3 + 64) = *(_DWORD *)(v4 + 64);
+  *(_DWORD *)(a3 + 68) = *(_DWORD *)(v4 + 68);
+  *(_DWORD *)(a3 + 72) = *(_DWORD *)(v4 + 72);
+  *(_DWORD *)(a3 + 76) = *(_DWORD *)(v4 + 76);
+  *(_DWORD *)(a3 + 80) = *(_DWORD *)(v4 + 80);
+  *(_DWORD *)(a3 + 84) = *(_DWORD *)(v4 + 84);
+  *(_DWORD *)(a3 + 88) = *(_DWORD *)(v4 + 88);
+  *(_DWORD *)(a3 + 92) = *(_DWORD *)(v4 + 92);
+  *(_BYTE *)(a3 + 96) = *(_BYTE *)(v4 + 96);
+  *(_DWORD *)(a3 + 100) = *(_DWORD *)(v4 + 100);
+  *(_DWORD *)(a3 + 104) = *(_DWORD *)(v4 + 104);
+  *(_DWORD *)(a3 + 108) = *(_DWORD *)(v4 + 108);
+  *(_DWORD *)(a3 + 112) = *(_DWORD *)(v4 + 112);
+  *(_DWORD *)(a3 + 116) = *(_DWORD *)(v4 + 116);
+  *(_DWORD *)(a3 + 120) = *(_DWORD *)(v4 + 120);
+  *(_DWORD *)(a3 + 124) = *(_DWORD *)(v4 + 124);
+  *(_DWORD *)(a3 + 128) = *(_DWORD *)(v4 + 128);
+  result = *(unsigned int *)(v4 + 132);
+  *(_DWORD *)(a3 + 132) = result;
+  return result;
+}
+
+
+======================================================================
+MermaidService::IsMermaidActive @ RVA 0xEC57F0 EA 0x7FF6F48E57F0
+======================================================================
+__int64 __fastcall sub_7FF6F48E57F0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = sub_7FF6F4187F40(a1, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+MermaidService::SetParams @ RVA 0xECB2E0 EA 0x7FF6F48EB2E0
+======================================================================
+__int64 __fastcall sub_7FF6F48EB2E0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  _BYTE *v5; // rdx
+  __int64 v6; // rax
+  _BYTE v8[144]; // [rsp+20h] [rbp-98h] BYREF
+
+  sub_7FF6F4433890(v8);
+  v4 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v5 = v8;
+  if ( a2[7] )
+    v5 = (_BYTE *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v4) = v6 != 0;
+  a2[4] = v6 + v4;
+  return sub_7FF6F4191950(a1, v5);
+}
+

@@ -1,0 +1,86 @@
+// Class: HideInObjectActionStateId (2 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+HideInObjectActionStateId::PopCharacterOutOfHideInObjectActionState @ RVA 0x36AC170 EA 0x7FF6F70CC170
+======================================================================
+__int64 __fastcall sub_7FF6F70CC170(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  __int64 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v7 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v5 = v7;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return sub_7FF6F70CADE0(v5);
+}
+
+
+======================================================================
+HideInObjectActionStateId::PushCharacterIntoHideInObjectActionState @ RVA 0x36AC1E0 EA 0x7FF6F70CC1E0
+======================================================================
+__int64 __fastcall sub_7FF6F70CC1E0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // r8
+  __int64 v6; // rdx
+  __int64 v7; // rcx
+  _QWORD v9[3]; // [rsp+20h] [rbp-18h] BYREF
+  __int64 v10; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v9[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v4 = a2[4];
+  v5 = v10;
+  v6 = v11;
+  v7 = v9[0];
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return sub_7FF6F70CAF80(v7, v6, v5);
+}
+

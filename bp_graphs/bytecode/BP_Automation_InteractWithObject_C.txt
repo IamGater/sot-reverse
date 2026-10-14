@@ -1,0 +1,105 @@
+// /Game/Tests/Blueprints/TallTales/BlueprintSteps/Generic/bp_automation_interactwithobject -> BP_Automation_InteractWithObject_C
+
+=== BP_Automation_InteractWithObject_C::fn_idx_1698 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=idx:286121@0x19fd11e6e80
+  Expression:
+  $9: LocalVariable named idx:286123@0x19fd11e6e00
+$18: VirtualFunction call "idx:286120" (
+  $31: literal int32 120
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Automation_InteractWithObject_C::fn_idx_286120 (403 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fceae0310
+$10: Context
+  ObjectExpression:
+  $11: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x53
+  RValueProperty: (null)
+  ContextExpression:
+  $32: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $41: NoObject
+    $42: literal ansi string "Couldn't Interact with object"
+    $73: True
+    $74: True
+    $75: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $88: literal float 0
+      $93: literal float 0.6600000262260437
+      $98: literal float 1
+      $103: literal float 1
+      $108: EndStructConst
+    $109: literal float 2
+    $114: EndFunctionParms
+  )
+$115: Jump to offset 0x190
+$120: LetObj (Variable = Expression)
+  Variable:
+  $121: LocalVariable named CallFunc_GetService_ReturnValue@0x19fd11e7000
+  Expression:
+  $130: FinalFunction target=GetService@0x19e4cda5b60 (
+    $139: ObjectConst (null)
+    $148: EndFunctionParms
+  )
+$149: Let (Variable = Expression)
+  Variable:
+  $158: LocalVariable named idx:286073@0x19fd11e7080
+  Expression:
+  $167: DynamicCast to (null) of expr:
+  $176: LocalVariable named CallFunc_GetService_ReturnValue@0x19fd11e7000
+$185: Let (Variable = Expression)
+  Variable:
+  $194: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fd11e7200
+  Expression:
+  $203: PrimitiveCast type=71
+    Argument:
+    $205: LocalVariable named idx:286073@0x19fd11e7080
+$214: JumpIfNot -> 0xa, cond:
+  $219: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fd11e7200
+$228: LetObj (Variable = Expression)
+  Variable:
+  $229: LocalVariable named idx:286069@0x19fd11e7280
+  Expression:
+  $238: Context
+    ObjectExpression:
+    $239: LocalVariable named idx:286073@0x19fd11e7080
+    SkipBytes: 0xa
+    RValueProperty: idx:286069@0x19fd11e7280
+    ContextExpression:
+    $260: FinalFunction target=(null) (
+      $269: EndFunctionParms
+    )
+$270: Let (Variable = Expression)
+  Variable:
+  $279: LocalVariable named idx:286122@0x19fd11e6f00
+  Expression:
+  $288: DynamicCast to InteractableObject@0x19e4be832c0 of expr:
+  $297: LocalVariable named idx:286121@0x19fd11e6e80
+$306: Let (Variable = Expression)
+  Variable:
+  $315: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fd11e6f80
+  Expression:
+  $324: PrimitiveCast type=71
+    Argument:
+    $326: LocalVariable named idx:286122@0x19fd11e6f00
+$335: JumpIfNot -> 0xa, cond:
+  $340: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fd11e6f80
+$349: Context
+  ObjectExpression:
+  $350: LocalVariable named idx:286122@0x19fd11e6f00
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $371: FinalFunction target=ServerInteract@0x19e4d089e30 (
+    $380: LocalVariable named idx:286069@0x19fd11e7280
+    $389: EndFunctionParms
+  )
+$390: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $399: EndFunctionParms
+)
+$400: Return expression:
+  $401: Nothing
+$402: EndOfScript

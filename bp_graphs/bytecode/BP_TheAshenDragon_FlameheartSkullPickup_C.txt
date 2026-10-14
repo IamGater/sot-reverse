@@ -1,0 +1,68 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/AshenAge/Tale_1_TheAshenDragon/bp_theashendragon_flameheartskullpickup -> BP_TheAshenDragon_FlameheartSkullPickup_C
+
+=== BP_TheAshenDragon_FlameheartSkullPickup_C::fn_idx_1828 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=idx:281466@0x19fcd6faf00
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fcd6faa80
+$18: VirtualFunction call "idx:281696" (
+  $31: literal int32 25
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_TheAshenDragon_FlameheartSkullPickup_C::fn_idx_281698 (22 bytes) ===
+$0: VirtualFunction call "idx:281696" (
+  $13: literal int32 10
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_TheAshenDragon_FlameheartSkullPickup_C::fn_idx_281696 (199 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fd1851110
+$10: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $19: EndFunctionParms
+)
+$20: Jump to offset 0xc4
+$25: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $34: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcd6fae00
+  $43: EndFunctionParms
+)
+$44: Let (Variable = Expression)
+  Variable:
+  $53: LocalVariable named idx:281697@0x19fcd6faf80
+  Expression:
+  $62: DynamicCast to ItemInfo@0x19e4c38a640 of expr:
+  $71: StructMemberContext prop=idx:281566@0x19fcd6ff600
+    Expression to struct:
+    $80: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcd6fae00
+$89: Let (Variable = Expression)
+  Variable:
+  $98: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcd6fae80
+  Expression:
+  $107: PrimitiveCast type=71
+    Argument:
+    $109: LocalVariable named idx:281697@0x19fcd6faf80
+$118: JumpIfNot -> 0xc4, cond:
+  $123: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcd6fae80
+$132: BindDelegate 'idx:281698'
+  Delegate:
+  $145: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fcd6fab00
+  Object:
+  $154: Self
+$155: AddMulticastDelegate
+$156: Context
+  ObjectExpression:
+  $157: LocalVariable named idx:281697@0x19fcd6faf80
+  SkipBytes: 0x9
+  RValueProperty: OnItemPickedUpDelegate@0x19e4d10b7b0
+  ContextExpression:
+  $178: InstanceVariable named OnItemPickedUpDelegate@0x19e4d10b7b0
+$187: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fcd6fab00
+$196: Return expression:
+  $197: Nothing
+$198: EndOfScript

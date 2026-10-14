@@ -1,0 +1,93 @@
+// /Game/Blueprints/GameObjects/Ladder/bp_largeshipladdermainmast -> BP_LargeShipLadderMainMast_C
+
+=== BP_LargeShipLadderMainMast_C::GetDockableInfo (135 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: StructMemberContext prop=SocketName@0x19e4cf8c8f0
+    Expression to struct:
+    $18: LocalVariable named K2Node_MakeStruct_DockableInfo@0x19f5b85ae00
+  Expression:
+  $27: literal name "None"
+$40: LetObj (Variable = Expression)
+  Variable:
+  $41: StructMemberContext prop=SceneComponent@0x19e4cf8c870
+    Expression to struct:
+    $50: LocalVariable named K2Node_MakeStruct_DockableInfo@0x19f5b85ae00
+  Expression:
+  $59: InstanceVariable named MeshComponent@0x19e4d1b8210
+$68: Let (Variable = Expression)
+  Variable:
+  $77: StructMemberContext prop=ShouldOverlapsUpdateOnParentUpdate@0x19e4cf8c7f0
+    Expression to struct:
+    $86: LocalVariable named K2Node_MakeStruct_DockableInfo@0x19f5b85ae00
+  Expression:
+  $95: literal byte 0
+$97: Let (Variable = Expression)
+  Variable:
+  $106: LocalOutVariable named ReturnValue@0x19f5b85ad80
+  Expression:
+  $115: LocalVariable named K2Node_MakeStruct_DockableInfo@0x19f5b85ae00
+$124: Return expression:
+  $125: LocalOutVariable named ReturnValue@0x19f5b85ad80
+$134: EndOfScript
+
+=== BP_LargeShipLadderMainMast_C::CallFunc_LinePlaneIntersection_OriginNormal_Intersection (78 bytes) ===
+$0: Context
+  ObjectExpression:
+  $1: LocalVariable named Spline@0x19f5b85ae80
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $22: FinalFunction target=ClearSplinePoints@0x19e4d248340 (
+    $31: EndFunctionParms
+  )
+$32: Context
+  ObjectExpression:
+  $33: LocalVariable named Spline@0x19f5b85ae80
+  SkipBytes: 0x15
+  RValueProperty: (null)
+  ContextExpression:
+  $54: FinalFunction target=SetSplinePoints@0x19e4d24f0d0 (
+    $63: LocalOutVariable named Positions@0x19f5b85af80
+    $72: literal byte 0
+    $74: EndFunctionParms
+  )
+$75: Return expression:
+  $76: Nothing
+$77: EndOfScript
+
+=== BP_LargeShipLadderMainMast_C::CanInteract (59 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_CanInteract_ReturnValue@0x19f5b85b100
+  Expression:
+  $10: FinalFunction target=CanInteract@0x19e4d446710 (
+    $19: LocalVariable named InInteractor@0x19f5b85b000
+    $28: EndFunctionParms
+  )
+$29: LetBool (Variable = Expression)
+  Variable:
+  $30: LocalOutVariable named ReturnValue@0x19f5b85b080
+  Expression:
+  $39: LocalVariable named CallFunc_CanInteract_ReturnValue@0x19f5b85b100
+$48: Return expression:
+  $49: LocalOutVariable named ReturnValue@0x19f5b85b080
+$58: EndOfScript
+
+=== BP_LargeShipLadderMainMast_C::UserConstructionScript (77 bytes) ===
+$0: FinalFunction target=UserConstructionScript@0x19e4cd6c6f0 (
+  $9: EndFunctionParms
+)
+$10: VirtualFunction call "Setup Spline" (
+  $23: InstanceVariable named OffTopSplineComponent@0x19e4d1b8110
+  $32: InstanceVariable named OffTopSplinePositions@0x19f5b85b280
+  $41: EndFunctionParms
+)
+$42: VirtualFunction call "Setup Spline" (
+  $55: InstanceVariable named OnTopSplineComponent@0x19e4d1b8190
+  $64: InstanceVariable named OnTopSplinePositions@0x19f5b85b400
+  $73: EndFunctionParms
+)
+$74: Return expression:
+  $75: Nothing
+$76: EndOfScript

@@ -1,0 +1,139 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/AshenAge/Tale_1_TheAshenDragon/bp_theashendragon_setup_sinkingshipscene -> BP_TheAshenDragon_Setup_SinkingShipScene_C
+
+=== BP_TheAshenDragon_Setup_SinkingShipScene_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fcda4df80
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fcda4dd00
+$18: VirtualFunction call "idx:281911" (
+  $31: literal int32 485
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_TheAshenDragon_Setup_SinkingShipScene_C::fn_idx_281467 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Actor@0x19fcda4de00
+  Expression:
+  $9: LocalVariable named Actor@0x19fcda4dd80
+$18: VirtualFunction call "idx:281911" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_TheAshenDragon_Setup_SinkingShipScene_C::fn_idx_281911 (493 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fd18502a0
+$10: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $19: LocalVariable named idx:281863@0x19fcda4e280
+  $28: EndFunctionParms
+)
+$29: LetObj (Variable = Expression)
+  Variable:
+  $30: StructMemberContext prop=AshenDragonScene_64_D7A684B846671DB49B166285C0387F59@0x19fcd6ff100
+    Expression to struct:
+    $39: LocalVariable named idx:281863@0x19fcda4e280
+  Expression:
+  $48: LocalVariable named K2Node_CustomEvent_Actor@0x19fcda4de00
+$57: FinalFunction target=SetVariables@0x19e4cda7cc0 (
+  $66: LocalVariable named idx:281863@0x19fcda4e280
+  $75: EndFunctionParms
+)
+$76: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $85: EndFunctionParms
+)
+$86: Jump to offset 0x1ea
+$91: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $100: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcda4df00
+  $109: EndFunctionParms
+)
+$110: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $119: LocalVariable named CallFunc_GetVariables_OutStruct2@0x19fcda4e000
+  $128: EndFunctionParms
+)
+$129: LetObj (Variable = Expression)
+  Variable:
+  $130: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue@0x19fcda4e080
+  Expression:
+  $139: Context
+    ObjectExpression:
+    $140: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x25
+    RValueProperty: CallFunc_Conv_AssetToObject_ReturnValue@0x19fcda4e080
+    ContextExpression:
+    $161: FinalFunction target=Conv_AssetToObject@0x19e4cd86800 (
+      $170: StructMemberContext prop=TheSinkingShipSceneLocation_24_A279A05F4273A78747AD50BC59C8687A@0x19fcd2f0d00
+        Expression to struct:
+        $179: StructMemberContext prop=SinkingPirateShipIsland_19_749325E342AFCFACFDFCB49C3B9FE350@0x19fcd6ff300
+          Expression to struct:
+          $188: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcda4df00
+      $197: EndFunctionParms
+    )
+$198: Let (Variable = Expression)
+  Variable:
+  $207: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19fcda4e100
+  Expression:
+  $216: DynamicCast to Actor@0x19e261ddc80 of expr:
+  $225: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue@0x19fcda4e080
+$234: Let (Variable = Expression)
+  Variable:
+  $243: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x19fcda4e180
+  Expression:
+  $252: PrimitiveCast type=71
+    Argument:
+    $254: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19fcda4e100
+$263: LetObj (Variable = Expression)
+  Variable:
+  $264: StructMemberContext prop=ResolvedSinkingShipScene_2_D7E349DA4C2760443AC101B8078194B8@0x19fcd6fa200
+    Expression to struct:
+    $273: LocalVariable named CallFunc_GetVariables_OutStruct2@0x19fcda4e000
+  Expression:
+  $282: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19fcda4e100
+$291: FinalFunction target=SetVariables@0x19e4cda7cc0 (
+  $300: LocalVariable named CallFunc_GetVariables_OutStruct2@0x19fcda4e000
+  $309: EndFunctionParms
+)
+$310: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $319: LocalVariable named idx:281862@0x19fcda4e200
+  $328: EndFunctionParms
+)
+$329: BindDelegate 'Spawned'
+  Delegate:
+  $342: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fcda4de80
+  Object:
+  $351: Self
+$352: Let (Variable = Expression)
+  Variable:
+  $361: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19fcda4e300
+  Expression:
+  $370: Context
+    ObjectExpression:
+    $371: StructMemberContext prop=ResolvedSinkingShipScene_2_D7E349DA4C2760443AC101B8078194B8@0x19fcd6fa200
+      Expression to struct:
+      $380: LocalVariable named idx:281862@0x19fcda4e200
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetTransform_ReturnValue@0x19fcda4e300
+    ContextExpression:
+    $401: FinalFunction target=GetTransform@0x19e4cd64700 (
+      $410: EndFunctionParms
+    )
+$411: FinalFunction target=SpawnPhasedActorAsync@0x19e4cda8ed0 (
+  $420: StructMemberContext prop=TheSinkingShipScene_75_BC2A0681452D3E66F41094A684439039@0x19fcd2f0d80
+    Expression to struct:
+    $429: StructMemberContext prop=SinkingPirateShipIsland_19_749325E342AFCFACFDFCB49C3B9FE350@0x19fcd6ff300
+      Expression to struct:
+      $438: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcda4df00
+  $447: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19fcda4e300
+  $456: NoObject
+  $457: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fcda4de80
+  $466: literal name "None"
+  $479: EndFunctionParms
+)
+$480: Jump to offset 0x1ea
+$485: Jump to offset 0x5b
+$490: Return expression:
+  $491: Nothing
+$492: EndOfScript

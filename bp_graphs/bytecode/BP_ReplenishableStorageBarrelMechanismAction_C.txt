@@ -1,0 +1,65 @@
+// /Game/Blueprints/GameObjects/Mechanisms/Actions/Barrels/bp_replenishablestoragebarrelmechanismaction -> BP_ReplenishableStorageBarrelMechanismAction_C
+
+=== BP_ReplenishableStorageBarrelMechanismAction_C::fn_idx_9202 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_ReplenishableStorageBarrelMechanismAction_C::fn_idx_240865 (94 bytes) ===
+$0: LetValueOnPersistentFrame dest=idx:240869@0x19f86949580
+  Expression:
+  $9: LocalVariable named Action@0x19f86949300
+$18: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_PreviousState@0x19f86949600
+  Expression:
+  $27: LocalVariable named PreviousState@0x19f86949380
+$36: LetValueOnPersistentFrame dest=idx:240871@0x19f86949680
+  Expression:
+  $45: LocalVariable named NewState@0x19f86949400
+$54: LetValueOnPersistentFrame dest=idx:240870@0x19f86949700
+  Expression:
+  $63: LocalVariable named Instigator@0x19f86949480
+$72: VirtualFunction call "idx:240868" (
+  $85: literal int32 51
+  $90: EndFunctionParms
+)
+$91: Return expression:
+  $92: Nothing
+$93: EndOfScript
+
+=== BP_ReplenishableStorageBarrelMechanismAction_C::fn_idx_240868 (138 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19f839e90d0
+$10: Context
+  ObjectExpression:
+  $11: InstanceVariable named Replenishable@0x19f86949880
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $32: VirtualFunction call "RefreshFromSpawner" (
+    $45: EndFunctionParms
+  )
+$46: Jump to offset 0x87
+$51: LetBool (Variable = Expression)
+  Variable:
+  $52: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x19f86949500
+  Expression:
+  $61: FinalFunction target=HasAuthority@0x19e4cd64b30 (
+    $70: EndFunctionParms
+  )
+$71: JumpIfNot -> 0x87, cond:
+  $76: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x19f86949500
+$85: LetBool (Variable = Expression)
+  Variable:
+  $86: LocalVariable named CallFunc_EqualEqual_ByteByte_ReturnValue@0x19f86949780
+  Expression:
+  $95: CallMath target=EqualEqual_ByteByte@0x19e4d37a620 (
+    $104: LocalVariable named idx:240871@0x19f86949680
+    $113: literal byte 0
+    $115: EndFunctionParms
+  )
+$116: JumpIfNot -> 0x87, cond:
+  $121: LocalVariable named CallFunc_EqualEqual_ByteByte_ReturnValue@0x19f86949780
+$130: Jump to offset 0xa
+$135: Return expression:
+  $136: Nothing
+$137: EndOfScript

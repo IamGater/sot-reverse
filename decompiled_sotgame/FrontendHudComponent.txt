@@ -1,0 +1,43 @@
+// Class: FrontendHudComponent (2 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+FrontendHudComponent::OnReadyForBindings @ RVA 0xCF9B40 EA 0x7FF6F4719B40
+======================================================================
+__int64 __fastcall sub_7FF6F4719B40(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 968LL))(a1);
+}
+
+
+======================================================================
+FrontendHudComponent::SetFrontendMessagingDispatcher @ RVA 0xCFCC80 EA 0x7FF6F471CC80
+======================================================================
+__int64 __fastcall sub_7FF6F471CC80(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  __int128 v7; // [rsp+20h] [rbp-28h] BYREF
+  _QWORD v8[3]; // [rsp+30h] [rbp-18h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = 0;
+  a2[4] += a2[4] != 0;
+  v8[0] = v7;
+  if ( (_QWORD)v7 )
+    v5 = *((_QWORD *)&v7 + 1);
+  v8[1] = v5;
+  return sub_7FF6F43591B0(a1, v8);
+}
+

@@ -1,0 +1,715 @@
+// Class: AthenaPlayerCharacter (36 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+AthenaPlayerCharacter::AllAnimationsLoaded @ RVA 0xB093F0 EA 0x7FF6F45293F0
+======================================================================
+__int64 __fastcall sub_7FF6F45293F0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 2264LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaPlayerCharacter::ClientAddPlayerAsFriend @ RVA 0xB09C50 EA 0x7FF6F4529C50
+======================================================================
+__int64 __fastcall sub_7FF6F4529C50(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2472LL))(a1, v6);
+}
+
+
+======================================================================
+AthenaPlayerCharacter::GetClothingLoadoutComponent @ RVA 0xB0B080 EA 0x7FF6F452B080
+======================================================================
+__int64 __fastcall sub_7FF6F452B080(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E5E990();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaPlayerCharacter::GetCurrentShipRegion @ RVA 0xB0B430 EA 0x7FF6F452B430
+======================================================================
+__int64 __fastcall sub_7FF6F452B430(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)(a1 + 1776) + 24LL))(a1 + 1776);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaPlayerCharacter::GetEmergentVoyageParticipantComponent @ RVA 0xB0B510 EA 0x7FF6F452B510
+======================================================================
+__int64 __fastcall sub_7FF6F452B510(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E5EF30();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaPlayerCharacter::GetEmotesRadialComponent @ RVA 0xB0B540 EA 0x7FF6F452B540
+======================================================================
+__int64 __fastcall sub_7FF6F452B540(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E5EF40();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaPlayerCharacter::GetFirstPersonMeshOffset @ RVA 0xB0B610 EA 0x7FF6F452B610
+======================================================================
+__int64 __fastcall sub_7FF6F452B610(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rax
+  __int64 result; // rax
+  _BYTE v6[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = sub_7FF6F3E5FA60(a1, v6);
+  *(_QWORD *)a3 = *(_QWORD *)v4;
+  result = *(unsigned int *)(v4 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+AthenaPlayerCharacter::GetFocusedInteractable @ RVA 0xB0B700 EA 0x7FF6F452B700
+======================================================================
+__int64 __fastcall sub_7FF6F452B700(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)(a1 + 1688) + 40LL))(a1 + 1688);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaPlayerCharacter::GetIsDigitallyWalking @ RVA 0xB0BDC0 EA 0x7FF6F452BDC0
+======================================================================
+__int64 __fastcall sub_7FF6F452BDC0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 2480LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaPlayerCharacter::GetIsSprinting @ RVA 0xB0BE90 EA 0x7FF6F452BE90
+======================================================================
+__int64 __fastcall sub_7FF6F452BE90(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)(a1 + 2944) + 144LL))(a1 + 2944);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaPlayerCharacter::GetLocalPlayerWorldRegionName @ RVA 0xB0D350 EA 0x7FF6F452D350
+======================================================================
+_QWORD *__fastcall sub_7FF6F452D350(__int64 a1, __int64 a2, _QWORD *a3)
+{
+  _QWORD *result; // rax
+  char v5; // [rsp+38h] [rbp+10h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (_QWORD *)sub_7FF6F3E61010(a1, &v5);
+  *a3 = *result;
+  return result;
+}
+
+
+======================================================================
+AthenaPlayerCharacter::GetPawnViewLocation @ RVA 0xB0D790 EA 0x7FF6F452D790
+======================================================================
+__int64 __fastcall sub_7FF6F452D790(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rax
+  __int64 result; // rax
+  _BYTE v6[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = (*(__int64 (__fastcall **)(__int64, _BYTE *))(*(_QWORD *)a1 + 1712LL))(a1, v6);
+  *(_QWORD *)a3 = *(_QWORD *)v4;
+  result = *(unsigned int *)(v4 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+AthenaPlayerCharacter::GetPetLoadoutComponent @ RVA 0xB0D7D0 EA 0x7FF6F452D7D0
+======================================================================
+__int64 __fastcall sub_7FF6F452D7D0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E61ED0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaPlayerCharacter::GetPrimaryVoyageParticipantComponent @ RVA 0xB0D910 EA 0x7FF6F452D910
+======================================================================
+__int64 __fastcall sub_7FF6F452D910(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E62240();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaPlayerCharacter::GetTaleVoyageParticipantComponent @ RVA 0xB0DAD0 EA 0x7FF6F452DAD0
+======================================================================
+__int64 __fastcall sub_7FF6F452DAD0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E62D70();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaPlayerCharacter::HasFinishedSpawning @ RVA 0xB0E390 EA 0x7FF6F452E390
+======================================================================
+__int64 __fastcall sub_7FF6F452E390(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)(a1 + 2984) + 16LL))(a1 + 2984);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaPlayerCharacter::HasMeshSet @ RVA 0xB0E3D0 EA 0x7FF6F452E3D0
+======================================================================
+__int64 __fastcall sub_7FF6F452E3D0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 2504LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaPlayerCharacter::IsInteractionValid @ RVA 0xB0E9A0 EA 0x7FF6F452E9A0
+======================================================================
+__int64 __fastcall sub_7FF6F452E9A0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 result; // rax
+  __int64 v10; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)(a1 + 1688) + 32LL))(a1 + 1688, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaPlayerCharacter::IsSprintEnabled @ RVA 0xB0EAD0 EA 0x7FF6F452EAD0
+======================================================================
+__int64 __fastcall sub_7FF6F452EAD0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E65D20();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaPlayerCharacter::Multicast_OnKrakenTentacleDeath @ RVA 0xB0F510 EA 0x7FF6F452F510
+======================================================================
+__int64 __fastcall sub_7FF6F452F510(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  unsigned int v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2464LL))(a1, v6);
+}
+
+
+======================================================================
+AthenaPlayerCharacter::OnImpactDamageEventReceived @ RVA 0xB0F990 EA 0x7FF6F452F990
+======================================================================
+__int64 __fastcall sub_7FF6F452F990(__int64 a1, _QWORD *a2)
+{
+  __int64 v3; // rdi
+  __int64 v5; // rax
+  _QWORD *v6; // rdx
+  __int64 v7; // rax
+  _QWORD v9[6]; // [rsp+20h] [rbp-68h] BYREF
+  int v10; // [rsp+50h] [rbp-38h]
+  __int64 v11; // [rsp+54h] [rbp-34h]
+  int v12; // [rsp+5Ch] [rbp-2Ch]
+  __int64 v13; // [rsp+60h] [rbp-28h]
+  int v14; // [rsp+68h] [rbp-20h]
+  int v15; // [rsp+6Ch] [rbp-1Ch]
+  int v16; // [rsp+70h] [rbp-18h]
+  __int16 v17; // [rsp+74h] [rbp-14h]
+
+  v3 = 0;
+  v9[0] = 0;
+  v9[1] = 0;
+  v5 = sub_7FF6F6A9BDB0(L"/Script/Athena");
+  v9[5] = *((_QWORD *)&xmmword_7FF6FA4F60F8 + 1);
+  v11 = *((_QWORD *)&xmmword_7FF6FA4F60F8 + 1);
+  v13 = *((_QWORD *)&xmmword_7FF6FA4F60F8 + 1);
+  v9[2] = v5;
+  v15 = 0;
+  v9[3] = 0;
+  v9[4] = 0;
+  v10 = qword_7FF6FA4F6108;
+  v12 = qword_7FF6FA4F6108;
+  v14 = qword_7FF6FA4F6108;
+  v16 = 1;
+  v17 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  return sub_7FF6F3E66B10(a1, v6);
+}
+
+
+======================================================================
+AthenaPlayerCharacter::OnMeshSet @ RVA 0x152AB10 EA 0x7FF6F4F4AB10
+======================================================================
+  (RVA 0x152AB10 shared with another function already decompiled above/elsewhere - likely a generic Blueprint/K2 bytecode executor, not unique native code)
+unsigned __int8 *__fastcall sub_7FF6F4F4AB10(_QWORD *a1, _QWORD *a2, void *a3)
+{
+  unsigned __int8 *result; // rax
+  char v7; // bp
+  _BYTE *i; // rax
+  unsigned __int8 *v9; // rax
+  int v10; // ecx
+  unsigned __int8 *v11; // rcx
+  __int64 v12; // rax
+  unsigned __int8 *v13; // rbx
+  char v14[64]; // [rsp+30h] [rbp-68h] BYREF
+
+  result = (unsigned __int8 *)a1[2];
+  if ( *((int *)result + 49) >= 0 )
+  {
+    v7 = (*(__int64 (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD))(*a1 + 480LL))(a1, a2[2], a2[5], 0);
+    if ( (v7 & 1) != 0 )
+      (*(void (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD, _QWORD))(*a1 + 488LL))(a1, a2[2], a2[5], a2[15], 0);
+    if ( (v7 & 2) != 0 )
+    {
+      for ( i = (_BYTE *)a2[4]; *i != 4; i = (_BYTE *)a2[4] )
+      {
+        v9 = (unsigned __int8 *)a2[4];
+        v10 = *v9;
+        a2[4] = v9 + 1;
+        ((void (__fastcall *)(_QWORD, _QWORD *, char *))funcs_7FF6F4F44D4F[v10])(a2[3], a2, v14);
+      }
+      result = i + 1;
+      a2[4] = result;
+      v11 = result + 1;
+      if ( *result == 11 )
+      {
+        a2[4] = v11;
+      }
+      else
+      {
+        v12 = *result;
+        a2[4] = v11;
+        return (unsigned __int8 *)((__int64 (__fastcall *)(_QWORD, _QWORD *, void *))funcs_7FF6F4F44D4F[v12])(
+                                    a2[3],
+                                    a2,
+                                    a3);
+      }
+    }
+    else
+    {
+      result = (unsigned __int8 *)sub_7FF6F4F072B0(a2[2]);
+      v13 = result;
+      if ( result )
+      {
+        if ( (*((_QWORD *)result + 7) & 0x1000000000LL) == 0 )
+          (*(void (__fastcall **)(unsigned __int8 *, void *))(*(_QWORD *)result + 688LL))(result, a3);
+        return (unsigned __int8 *)memset(a3, 0, *((_DWORD *)v13 + 12) * *((_DWORD *)v13 + 13));
+      }
+    }
+  }
+  else if ( !byte_7FF6FA4F64EF )
+  {
+    ++dword_7FF6FA525F48;
+  }
+  return result;
+}
+
+
+======================================================================
+AthenaPlayerCharacter::OnRep_AutoFloatInWater @ RVA 0xB0FB80 EA 0x7FF6F452FB80
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+AthenaPlayerCharacter::OnRep_OverrideAnimationEntry @ RVA 0xB0FF60 EA 0x7FF6F452FF60
+======================================================================
+__int64 __fastcall sub_7FF6F452FF60(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return nullsub_6114();
+}
+
+
+======================================================================
+AthenaPlayerCharacter::OnRep_OverridePirateDescSeed @ RVA 0xB0FF80 EA 0x7FF6F452FF80
+======================================================================
+__int64 __fastcall sub_7FF6F452FF80(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return nullsub_6115();
+}
+
+
+======================================================================
+AthenaPlayerCharacter::OnRep_ReplicatedIsInvulnerable @ RVA 0xB100E0 EA 0x7FF6F45300E0
+======================================================================
+__int64 __fastcall sub_7FF6F45300E0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F3E67230();
+}
+
+
+======================================================================
+AthenaPlayerCharacter::OnRep_ReplicatedIsSprinting @ RVA 0xB10100 EA 0x7FF6F4530100
+======================================================================
+void __fastcall sub_7FF6F4530100(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F3E67350LL);
+}
+
+
+======================================================================
+AthenaPlayerCharacter::OnWieldedItem @ RVA 0xB10360 EA 0x7FF6F4530360
+======================================================================
+__int64 __fastcall sub_7FF6F4530360(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)(a1 + 2944) + 96LL))(a1 + 2944);
+}
+
+
+======================================================================
+AthenaPlayerCharacter::ServerSetAutoFloatInWater @ RVA 0xB10C60 EA 0x7FF6F4530C60
+======================================================================
+__int64 __fastcall sub_7FF6F4530C60(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  bool v6; // bp
+  _BOOL8 v7; // rdx
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v5 = a2[4];
+  v6 = v9 != 0;
+  v7 = v9 != 0;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  if ( (unsigned __int8)sub_7FF6F3E70CE0(a1, v7) )
+    return sub_7FF6F3E70CC0(a1, v6);
+  else
+    return sub_7FF6F4F0F6D0(L"ServerSetAutoFloatInWater_Validate");
+}
+
+
+======================================================================
+AthenaPlayerCharacter::ServerWantsSprint @ RVA 0xB10D10 EA 0x7FF6F4530D10
+======================================================================
+__int64 __fastcall sub_7FF6F4530D10(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  bool v6; // bp
+  _BOOL8 v7; // rdx
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v5 = a2[4];
+  v6 = v9 != 0;
+  v7 = v9 != 0;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  if ( (unsigned __int8)sub_7FF6F3E70D00(a1, v7) )
+    return sub_7FF6F3E70CF0(a1, v6);
+  else
+    return sub_7FF6F4F0F6D0(L"ServerWantsSprint_Validate");
+}
+
+
+======================================================================
+AthenaPlayerCharacter::SprintActivate @ RVA 0xB127D0 EA 0x7FF6F45327D0
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+AthenaPlayerCharacter::TattooGlow @ RVA 0xB12BD0 EA 0x7FF6F4532BD0
+======================================================================
+__int64 __fastcall sub_7FF6F4532BD0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F3E74F70();
+}
+
+
+======================================================================
+AthenaPlayerCharacter::TattooGlowClient @ RVA 0xB12BF0 EA 0x7FF6F4532BF0
+======================================================================
+__int64 __fastcall sub_7FF6F4532BF0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 2456LL))(a1);
+}
+
+
+======================================================================
+AthenaPlayerCharacter::TriggerTattooGlow @ RVA 0x152AB10 EA 0x7FF6F4F4AB10
+======================================================================
+  (RVA 0x152AB10 shared with another function already decompiled above/elsewhere - likely a generic Blueprint/K2 bytecode executor, not unique native code)
+unsigned __int8 *__fastcall sub_7FF6F4F4AB10(_QWORD *a1, _QWORD *a2, void *a3)
+{
+  unsigned __int8 *result; // rax
+  char v7; // bp
+  _BYTE *i; // rax
+  unsigned __int8 *v9; // rax
+  int v10; // ecx
+  unsigned __int8 *v11; // rcx
+  __int64 v12; // rax
+  unsigned __int8 *v13; // rbx
+  char v14[64]; // [rsp+30h] [rbp-68h] BYREF
+
+  result = (unsigned __int8 *)a1[2];
+  if ( *((int *)result + 49) >= 0 )
+  {
+    v7 = (*(__int64 (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD))(*a1 + 480LL))(a1, a2[2], a2[5], 0);
+    if ( (v7 & 1) != 0 )
+      (*(void (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD, _QWORD))(*a1 + 488LL))(a1, a2[2], a2[5], a2[15], 0);
+    if ( (v7 & 2) != 0 )
+    {
+      for ( i = (_BYTE *)a2[4]; *i != 4; i = (_BYTE *)a2[4] )
+      {
+        v9 = (unsigned __int8 *)a2[4];
+        v10 = *v9;
+        a2[4] = v9 + 1;
+        ((void (__fastcall *)(_QWORD, _QWORD *, char *))funcs_7FF6F4F44D4F[v10])(a2[3], a2, v14);
+      }
+      result = i + 1;
+      a2[4] = result;
+      v11 = result + 1;
+      if ( *result == 11 )
+      {
+        a2[4] = v11;
+      }
+      else
+      {
+        v12 = *result;
+        a2[4] = v11;
+        return (unsigned __int8 *)((__int64 (__fastcall *)(_QWORD, _QWORD *, void *))funcs_7FF6F4F44D4F[v12])(
+                                    a2[3],
+                                    a2,
+                                    a3);
+      }
+    }
+    else
+    {
+      result = (unsigned __int8 *)sub_7FF6F4F072B0(a2[2]);
+      v13 = result;
+      if ( result )
+      {
+        if ( (*((_QWORD *)result + 7) & 0x1000000000LL) == 0 )
+          (*(void (__fastcall **)(unsigned __int8 *, void *))(*(_QWORD *)result + 688LL))(result, a3);
+        return (unsigned __int8 *)memset(a3, 0, *((_DWORD *)v13 + 12) * *((_DWORD *)v13 + 13));
+      }
+    }
+  }
+  else if ( !byte_7FF6FA4F64EF )
+  {
+    ++dword_7FF6FA525F48;
+  }
+  return result;
+}
+
+
+======================================================================
+AthenaPlayerCharacter::UseItem @ RVA 0xB14070 EA 0x7FF6F4534070
+======================================================================
+__int64 __fastcall sub_7FF6F4534070(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 result; // rax
+  __int64 v10; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)(a1 + 1864) + 16LL))(a1 + 1864, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaPlayerCharacter::WalkActivate @ RVA 0xB14A30 EA 0x7FF6F4534A30
+======================================================================
+  *** no function recognized at this EA ***

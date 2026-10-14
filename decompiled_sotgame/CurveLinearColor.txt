@@ -1,0 +1,30 @@
+// Class: CurveLinearColor (1 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+CurveLinearColor::GetLinearColorValue @ RVA 0x2C32B90 EA 0x7FF6F6652B90
+======================================================================
+_OWORD *__fastcall sub_7FF6F6652B90(__int64 a1, _QWORD *a2, _OWORD *a3)
+{
+  bool v3; // zf
+  _OWORD *result; // rax
+  _BYTE v8[24]; // [rsp+20h] [rbp-18h] BYREF
+  int v9; // [rsp+40h] [rbp+8h] BYREF
+
+  v3 = a2[4] == 0;
+  v9 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  a2[4] += a2[4] != 0;
+  result = (_OWORD *)(*(__int64 (__fastcall **)(__int64, _BYTE *))(*(_QWORD *)(a1 + 40) + 64LL))(a1 + 40, v8);
+  *a3 = *result;
+  return result;
+}
+

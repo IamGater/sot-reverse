@@ -1,0 +1,222 @@
+// Class: SkyLightComponent (8 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+SkyLightComponent::RecaptureSky @ RVA 0x2B1AF80 EA 0x7FF6F653AF80
+======================================================================
+__int64 __fastcall sub_7FF6F653AF80(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F5D3AF40();
+}
+
+
+======================================================================
+SkyLightComponent::SetCubemap @ RVA 0x2B1DD60 EA 0x7FF6F653DD60
+======================================================================
+__int64 __fastcall sub_7FF6F653DD60(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F5D3D950(a1, v6);
+}
+
+
+======================================================================
+SkyLightComponent::SetCubemapBlend @ RVA 0x2B1DDE0 EA 0x7FF6F653DDE0
+======================================================================
+__int64 __fastcall sub_7FF6F653DDE0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // r8
+  __int64 v7; // rdx
+  _QWORD v9[3]; // [rsp+20h] [rbp-18h] BYREF
+  int v10; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v9[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v5 = a2[4];
+  v6 = v11;
+  v7 = v9[0];
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F5D3D9B0(a1, v7, v6);
+}
+
+
+======================================================================
+SkyLightComponent::SetIndirectLightingIntensity @ RVA 0x2B1F910 EA 0x7FF6F653F910
+======================================================================
+__int64 __fastcall sub_7FF6F653F910(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5D3DF90(a1);
+}
+
+
+======================================================================
+SkyLightComponent::SetIntensity @ RVA 0x2B1FBD0 EA 0x7FF6F653FBD0
+======================================================================
+__int64 __fastcall sub_7FF6F653FBD0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5D3E0D0(a1);
+}
+
+
+======================================================================
+SkyLightComponent::SetLightColor @ RVA 0x2B1FED0 EA 0x7FF6F653FED0
+======================================================================
+__int64 __fastcall sub_7FF6F653FED0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rax
+  __int128 v6; // [rsp+20h] [rbp-28h] BYREF
+  __int128 v7; // [rsp+30h] [rbp-18h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  v4 = a2[4];
+  v7 = v6;
+  a2[4] = v4 + (v4 != 0);
+  return sub_7FF6F5D3E140(a1, &v7);
+}
+
+
+======================================================================
+SkyLightComponent::SetMinOcclusion @ RVA 0x2B20280 EA 0x7FF6F6540280
+======================================================================
+__int64 __fastcall sub_7FF6F6540280(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5D3EA90(a1);
+}
+
+
+======================================================================
+SkyLightComponent::SetOcclusionTint @ RVA 0x2B20880 EA 0x7FF6F6540880
+======================================================================
+__int64 __fastcall sub_7FF6F6540880(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  char *v5; // rdx
+  __int64 v6; // rax
+  char v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = &v8;
+  if ( a2[7] )
+    v5 = (char *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  return sub_7FF6F5D3ECB0(a1, v5);
+}
+

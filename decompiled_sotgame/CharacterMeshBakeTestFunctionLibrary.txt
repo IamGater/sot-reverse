@@ -1,0 +1,187 @@
+// Class: CharacterMeshBakeTestFunctionLibrary (4 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+CharacterMeshBakeTestFunctionLibrary::AreMeshesEquivalentByMeshPatchCriteria @ RVA 0x1379B50 EA 0x7FF6F4D99B50
+======================================================================
+__int64 __fastcall sub_7FF6F4D99B50(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  v8 = v11;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F4CFFDF0(v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+CharacterMeshBakeTestFunctionLibrary::BakeCharacterMeshFromClassDefault @ RVA 0x1379D80 EA 0x7FF6F4D99D80
+======================================================================
+__int64 __fastcall sub_7FF6F4D99D80(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  __int64 result; // rax
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  v7 = v9;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F4D00670(v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+CharacterMeshBakeTestFunctionLibrary::BlendMeshWithMeshPatchAssets @ RVA 0x1379FA0 EA 0x7FF6F4D99FA0
+======================================================================
+// Hidden C++ exception states: #wind=4
+__int64 __fastcall sub_7FF6F4D99FA0(__int64 a1, _QWORD *a2)
+{
+  __int64 *v3; // rsi
+  __int64 *v4; // rdi
+  __int64 *v5; // rdx
+  __int64 result; // rax
+  _QWORD v7[2]; // [rsp+30h] [rbp-30h] BYREF
+  __int64 v8[2]; // [rsp+40h] [rbp-20h] BYREF
+  __int64 v9[2]; // [rsp+50h] [rbp-10h] BYREF
+  int v10; // [rsp+88h] [rbp+28h] BYREF
+  __int64 v11; // [rsp+98h] [rbp+38h] BYREF
+
+  v7[1] = -2;
+  v7[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v9[0] = 0;
+  v9[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v3 = v9;
+  if ( a2[7] )
+    v3 = (__int64 *)a2[7];
+  v8[0] = 0;
+  v8[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v4 = v8;
+  if ( a2[7] )
+    v4 = (__int64 *)a2[7];
+  v11 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v5 = &v11;
+  if ( a2[7] )
+    v5 = (__int64 *)a2[7];
+  a2[4] += a2[4] != 0;
+  result = nullsub_1738(v7[0], v5, v3, v4, v5);
+  if ( v8[0] )
+  {
+    result = sub_7FF6F4DED1F0(v8[0]);
+    v8[0] = 0;
+  }
+  if ( v9[0] )
+    return sub_7FF6F4DED1F0(v9[0]);
+  return result;
+}
+
+
+======================================================================
+CharacterMeshBakeTestFunctionLibrary::MakeCharacterMeshSpecification @ RVA 0x137C2A0 EA 0x7FF6F4D9C2A0
+======================================================================
+__int64 __fastcall sub_7FF6F4D9C2A0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F4D38950();
+  *a3 = result;
+  return result;
+}
+

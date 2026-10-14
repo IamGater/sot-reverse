@@ -1,0 +1,310 @@
+// /Game/Prototype/Blueprints/GameObjects/AshenWinds/bp_prototype_firesphere -> BP_Prototype_FireSphere_C
+
+=== BP_Prototype_FireSphere_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_Prototype_FireSphere_C::fn_idx_285706 (22 bytes) ===
+$0: VirtualFunction call "idx:285702" (
+  $13: literal int32 1011
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prototype_FireSphere_C::fn_idx_285707 (22 bytes) ===
+$0: VirtualFunction call "idx:285702" (
+  $13: literal int32 47
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prototype_FireSphere_C::Enable (58 bytes) ===
+$0: LetValueOnPersistentFrame dest=idx:285704@0x19fd09cc880
+  Expression:
+  $9: LocalVariable named Origin@0x19fd09cc400
+$18: LetValueOnPersistentFrame dest=idx:285703@0x19fd09cc900
+  Expression:
+  $27: LocalVariable named Direction@0x19fd09cc480
+$36: VirtualFunction call "idx:285702" (
+  $49: literal int32 730
+  $54: EndFunctionParms
+)
+$55: Return expression:
+  $56: Nothing
+$57: EndOfScript
+
+=== BP_Prototype_FireSphere_C::AreAllTutorialsOnState (22 bytes) ===
+$0: VirtualFunction call "idx:285702" (
+  $13: literal int32 875
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prototype_FireSphere_C::fn_idx_285698 (112 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_OtherActor@0x19fd09cca80
+  Expression:
+  $9: LocalVariable named OtherActor@0x19fd09cc500
+$18: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_OtherComp@0x19fd09ccb00
+  Expression:
+  $27: LocalVariable named OtherComp@0x19e585a9e00
+$36: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_OtherBodyIndex@0x19fceae69e0
+  Expression:
+  $45: LocalVariable named OtherBodyIndex@0x19fceae6900
+$54: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_bFromSweep@0x19fd09ccb80
+  Expression:
+  $63: LocalVariable named bFromSweep@0x19fd09cc580
+$72: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_SweepResult@0x19fd09ccc00
+  Expression:
+  $81: LocalOutVariable named SweepResult@0x19fd09cc600
+$90: VirtualFunction call "idx:285702" (
+  $103: literal int32 973
+  $108: EndFunctionParms
+)
+$109: Return expression:
+  $110: Nothing
+$111: EndOfScript
+
+=== BP_Prototype_FireSphere_C::fn_idx_285702 (1019 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fceae6970
+$10: Context
+  ObjectExpression:
+  $11: InstanceVariable named Velocity@0x19fd09cd680
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $32: FinalFunction target=PlayFromStart@0x19e4d34f110 (
+    $41: EndFunctionParms
+  )
+$42: Jump to offset 0x3f8
+$47: Let (Variable = Expression)
+  Variable:
+  $56: LocalVariable named CallFunc_Multiply_VectorFloat_ReturnValue@0x19fd09ccd00
+  Expression:
+  $65: CallMath target=Multiply_VectorFloat@0x19e4d38e540 (
+    $74: InstanceVariable named Direction@0x19fd09cd780
+    $83: InstanceVariable named Distance@0x19fceae6ac0
+    $92: EndFunctionParms
+  )
+$93: Let (Variable = Expression)
+  Variable:
+  $102: LocalVariable named CallFunc_Multiply_VectorFloat_ReturnValue2@0x19fd09cce80
+  Expression:
+  $111: CallMath target=Multiply_VectorFloat@0x19e4d38e540 (
+    $120: LocalVariable named CallFunc_Multiply_VectorFloat_ReturnValue@0x19fd09ccd00
+    $129: InstanceVariable named idx:285708@0x19fceae6a50
+    $138: EndFunctionParms
+  )
+$139: Let (Variable = Expression)
+  Variable:
+  $148: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x19fd09ccf80
+  Expression:
+  $157: CallMath target=Add_VectorVector@0x19e4d370750 (
+    $166: InstanceVariable named Origin@0x19fd09cd800
+    $175: LocalVariable named CallFunc_Multiply_VectorFloat_ReturnValue2@0x19fd09cce80
+    $184: EndFunctionParms
+  )
+$185: LetBool (Variable = Expression)
+  Variable:
+  $186: LocalVariable named idx:285699@0x19fd09cd080
+  Expression:
+  $195: FinalFunction target=K2_SetActorLocation@0x19e4cd67210 (
+    $204: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x19fd09ccf80
+    $213: False
+    $214: LocalVariable named idx:285700@0x19fd09cd000
+    $223: False
+    $224: EndFunctionParms
+  )
+$225: Jump to offset 0x3f8
+$230: Let (Variable = Expression)
+  Variable:
+  $239: LocalVariable named CallFunc_MakeRotFromX_ReturnValue@0x19fd09cc700
+  Expression:
+  $248: CallMath target=MakeRotFromX@0x19e4d389020 (
+    $257: InstanceVariable named Direction@0x19fd09cd780
+    $266: EndFunctionParms
+  )
+$267: LetBool (Variable = Expression)
+  Variable:
+  $268: LocalVariable named CallFunc_SetActorRotation_ReturnValue@0x19fd09cc800
+  Expression:
+  $277: FinalFunction target=SetActorRotation@0x19e4cd6b730 (
+    $286: LocalVariable named CallFunc_MakeRotFromX_ReturnValue@0x19fd09cc700
+    $295: EndFunctionParms
+  )
+$296: Jump to offset 0xa
+$301: LetBool (Variable = Expression)
+  Variable:
+  $302: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x19fd09cc780
+  Expression:
+  $311: FinalFunction target=HasAuthority@0x19e4cd64b30 (
+    $320: EndFunctionParms
+  )
+$321: JumpIfNot -> 0x3f8, cond:
+  $326: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x19fd09cc780
+$335: Let (Variable = Expression)
+  Variable:
+  $344: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fd09cd300
+  Expression:
+  $353: Context
+    ObjectExpression:
+    $354: LocalVariable named K2Node_ComponentBoundEvent_OtherActor@0x19fd09cca80
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetComponentsByClass_ReturnValue@0x19fd09cd300
+    ContextExpression:
+    $375: FinalFunction target=GetComponentsByClass@0x19e4cd626c0 (
+      $384: ObjectConst HealthComponent@0x19e4c3cc080
+      $393: EndFunctionParms
+    )
+$394: Context
+  ObjectExpression:
+  $395: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $416: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $425: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fd09cd300
+    $434: literal int32 0
+    $439: LocalVariable named CallFunc_Array_Get_Item@0x19fd09ccc80
+    $448: EndFunctionParms
+  )
+$449: Let (Variable = Expression)
+  Variable:
+  $458: StructMemberContext prop=Amount@0x19e4ce0f540
+    Expression to struct:
+    $467: LocalVariable named K2Node_MakeStruct_DamageInstance@0x19fd09ccf00
+  Expression:
+  $476: literal float 2
+$481: Let (Variable = Expression)
+  Variable:
+  $490: StructMemberContext prop=Reason@0x19e4ce0f4c0
+    Expression to struct:
+    $499: LocalVariable named K2Node_MakeStruct_DamageInstance@0x19fd09ccf00
+  Expression:
+  $508: literal byte 20
+$510: Context
+  ObjectExpression:
+  $511: LocalVariable named CallFunc_Array_Get_Item@0x19fd09ccc80
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $532: FinalFunction target=TakeDamage@0x19e4d18fec0 (
+    $541: LocalVariable named K2Node_MakeStruct_DamageInstance@0x19fd09ccf00
+    $550: EndFunctionParms
+  )
+$551: Let (Variable = Expression)
+  Variable:
+  $560: StructMemberContext prop=Intensity@0x19e4ce1ff70
+    Expression to struct:
+    $569: LocalVariable named K2Node_MakeStruct_StatusDescriptor@0x19fd09cc680
+  Expression:
+  $578: literal float 1
+$583: SetArray
+  $584: LocalVariable named K2Node_MakeArray_Array@0x19fd09cd200
+  $593: ObjectConst IgniteStatus@0x19e4c65bb40
+  $602: EndArray
+$603: Let (Variable = Expression)
+  Variable:
+  $612: StructMemberContext prop=Type@0x19e4ce1ffe0
+    Expression to struct:
+    $621: LocalVariable named K2Node_MakeStruct_Status@0x19fd09cd100
+  Expression:
+  $630: LocalVariable named K2Node_MakeArray_Array@0x19fd09cd200
+$639: Let (Variable = Expression)
+  Variable:
+  $648: StructMemberContext prop=Descriptor@0x19e4ce1fe50
+    Expression to struct:
+    $657: LocalVariable named K2Node_MakeStruct_Status@0x19fd09cd100
+  Expression:
+  $666: LocalVariable named K2Node_MakeStruct_StatusDescriptor@0x19fd09cc680
+$675: Context
+  ObjectExpression:
+  $676: ObjectConst Default__StatusEffectHelperFunctionLibrary@0x19e4da17960
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $697: FinalFunction target=ApplyOneShotStatus@0x19e4d45a970 (
+    $706: LocalVariable named K2Node_ComponentBoundEvent_OtherActor@0x19fd09cca80
+    $715: LocalVariable named K2Node_MakeStruct_Status@0x19fd09cd100
+    $724: EndFunctionParms
+  )
+$725: Jump to offset 0x3f8
+$730: Let (Variable = Expression)
+  Variable:
+  $739: InstanceVariable named Origin@0x19fd09cd800
+  Expression:
+  $748: LocalVariable named idx:285704@0x19fd09cc880
+$757: Let (Variable = Expression)
+  Variable:
+  $766: LocalVariable named CallFunc_Normal_ReturnValue@0x19fd09cca00
+  Expression:
+  $775: CallMath target=Normal@0x19e4d38f930 (
+    $784: LocalVariable named idx:285703@0x19fd09cc900
+    $793: EndFunctionParms
+  )
+$794: Let (Variable = Expression)
+  Variable:
+  $803: InstanceVariable named Direction@0x19fd09cd780
+  Expression:
+  $812: LocalVariable named CallFunc_Normal_ReturnValue@0x19fd09cca00
+$821: LetBool (Variable = Expression)
+  Variable:
+  $822: InstanceVariable named Enabled@0x19fd09cd700
+  Expression:
+  $831: True
+$832: Context
+  ObjectExpression:
+  $833: InstanceVariable named Sphere@0x19fd09cd480
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $854: VirtualFunction call "SetCollisionEnabled" (
+    $867: literal byte 3
+    $869: EndFunctionParms
+  )
+$870: Jump to offset 0xe6
+$875: LetBool (Variable = Expression)
+  Variable:
+  $876: InstanceVariable named Enabled@0x19fd09cd700
+  Expression:
+  $885: False
+$886: Context
+  ObjectExpression:
+  $887: InstanceVariable named Sphere@0x19fd09cd480
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $908: VirtualFunction call "SetCollisionEnabled" (
+    $921: literal byte 0
+    $923: EndFunctionParms
+  )
+$924: LetBool (Variable = Expression)
+  Variable:
+  $925: LocalVariable named CallFunc_K2_SetActorLocation_ReturnValue@0x19fd09cce00
+  Expression:
+  $934: FinalFunction target=K2_SetActorLocation@0x19e4cd67210 (
+    $943: literal vector (0,0,-400)
+    $956: False
+    $957: LocalVariable named CallFunc_K2_SetActorLocation_SweepHitResult@0x19fd09ccd80
+    $966: False
+    $967: EndFunctionParms
+  )
+$968: Jump to offset 0x3f8
+$973: JumpIfNot -> 0x3f8, cond:
+  $978: InstanceVariable named Enabled@0x19fd09cd700
+$987: Jump to offset 0x12d
+$992: VirtualFunction call "Disable" (
+  $1005: EndFunctionParms
+)
+$1006: Jump to offset 0x3f8
+$1011: Jump to offset 0x3e0
+$1016: Return expression:
+  $1017: Nothing
+$1018: EndOfScript

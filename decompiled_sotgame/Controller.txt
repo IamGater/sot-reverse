@@ -1,0 +1,477 @@
+// Class: Controller (18 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+Controller::CastToPlayerController @ RVA 0x2905EB0 EA 0x7FF6F6325EB0
+======================================================================
+__int64 __fastcall sub_7FF6F6325EB0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5D4E210();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+Controller::ClientSetLocation @ RVA 0x29079E0 EA 0x7FF6F63279E0
+======================================================================
+__int64 __fastcall sub_7FF6F63279E0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  __int64 v7; // [rsp+20h] [rbp-48h] BYREF
+  int v8; // [rsp+28h] [rbp-40h]
+  __int64 v9; // [rsp+30h] [rbp-38h] BYREF
+  int v10; // [rsp+38h] [rbp-30h]
+  __int64 v11; // [rsp+40h] [rbp-28h] BYREF
+  int v12; // [rsp+48h] [rbp-20h]
+  __int64 v13; // [rsp+50h] [rbp-18h] BYREF
+  int v14; // [rsp+58h] [rbp-10h]
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v11 = v7;
+  v13 = v9;
+  v5 = v4 + (v4 != 0);
+  v12 = v8;
+  LODWORD(v4) = v10;
+  a2[4] = v5;
+  v14 = v4;
+  return (*(__int64 (__fastcall **)(__int64, __int64 *, __int64 *))(*(_QWORD *)a1 + 1552LL))(a1, &v13, &v11);
+}
+
+
+======================================================================
+Controller::ClientSetRotation @ RVA 0x2907AC0 EA 0x7FF6F6327AC0
+======================================================================
+__int64 __fastcall sub_7FF6F6327AC0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // r8
+  __int64 v6; // rax
+  __int64 v7; // rdi
+  bool v8; // zf
+  __int64 v10; // [rsp+20h] [rbp-28h] BYREF
+  int v11; // [rsp+28h] [rbp-20h]
+  __int64 v12; // [rsp+30h] [rbp-18h] BYREF
+  int v13; // [rsp+38h] [rbp-10h]
+  int v14; // [rsp+50h] [rbp+8h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v4 = 0;
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v6 = a2[4];
+  v12 = v10;
+  LOBYTE(v4) = v6 != 0;
+  v7 = v6 + v4;
+  LODWORD(v6) = v11;
+  v8 = v14 == 0;
+  a2[4] = v7;
+  v13 = v6;
+  LOBYTE(v5) = !v8;
+  return (*(__int64 (__fastcall **)(__int64, __int64 *, __int64))(*(_QWORD *)a1 + 1544LL))(a1, &v12, v5);
+}
+
+
+======================================================================
+Controller::GetControlRotation @ RVA 0x290A0C0 EA 0x7FF6F632A0C0
+======================================================================
+__int64 __fastcall sub_7FF6F632A0C0(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rax
+  __int64 result; // rax
+  _BYTE v6[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = (*(__int64 (__fastcall **)(__int64, _BYTE *))(*(_QWORD *)a1 + 1560LL))(a1, v6);
+  *(_QWORD *)a3 = *(_QWORD *)v4;
+  result = *(unsigned int *)(v4 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+Controller::GetDesiredRotation @ RVA 0x290A620 EA 0x7FF6F632A620
+======================================================================
+__int64 __fastcall sub_7FF6F632A620(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rax
+  __int64 result; // rax
+  _BYTE v6[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = (*(__int64 (__fastcall **)(__int64, _BYTE *))(*(_QWORD *)a1 + 1664LL))(a1, v6);
+  *(_QWORD *)a3 = *(_QWORD *)v4;
+  result = *(unsigned int *)(v4 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+Controller::GetViewTarget @ RVA 0x290CDE0 EA 0x7FF6F632CDE0
+======================================================================
+__int64 __fastcall sub_7FF6F632CDE0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1656LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+Controller::IsLocalController @ RVA 0x290D300 EA 0x7FF6F632D300
+======================================================================
+__int64 __fastcall sub_7FF6F632D300(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1680LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+Controller::IsLocalPlayerController @ RVA 0x290D330 EA 0x7FF6F632D330
+======================================================================
+__int64 __fastcall sub_7FF6F632D330(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1672LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+Controller::K2_GetPawn @ RVA 0x290F500 EA 0x7FF6F632F500
+======================================================================
+__int64 __fastcall sub_7FF6F632F500(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5D5BFC0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+Controller::LineOfSightTo @ RVA 0x2911040 EA 0x7FF6F6331040
+======================================================================
+__int64 __fastcall sub_7FF6F6331040(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // r9
+  __int64 v8; // rax
+  __int64 v9; // rdx
+  __int64 v10; // rdi
+  __int64 result; // rax
+  __int64 v12; // [rsp+20h] [rbp-38h] BYREF
+  int v13; // [rsp+28h] [rbp-30h]
+  __int64 v14; // [rsp+30h] [rbp-28h] BYREF
+  int v15; // [rsp+38h] [rbp-20h]
+  int v16; // [rsp+60h] [rbp+8h] BYREF
+  __int64 v17; // [rsp+68h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v17 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v8 = a2[4];
+  v9 = v17;
+  LOBYTE(v7) = v16 != 0;
+  v14 = v12;
+  LOBYTE(v3) = v8 != 0;
+  v10 = v8 + v3;
+  LODWORD(v8) = v13;
+  a2[4] = v10;
+  v15 = v8;
+  result = (*(__int64 (__fastcall **)(__int64, __int64, __int64 *, __int64))(*(_QWORD *)a1 + 1624LL))(a1, v9, &v14, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+Controller::OnRep_Pawn @ RVA 0x2911490 EA 0x7FF6F6331490
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+Controller::OnRep_PlayerState @ RVA 0x29114B0 EA 0x7FF6F63314B0
+======================================================================
+__int64 __fastcall sub_7FF6F63314B0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1640LL))(a1);
+}
+
+
+======================================================================
+Controller::Possess @ RVA 0x2911F40 EA 0x7FF6F6331F40
+======================================================================
+__int64 __fastcall sub_7FF6F6331F40(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1696LL))(a1, v6);
+}
+
+
+======================================================================
+Controller::ReceiveInstigatedAnyDamage @ RVA 0x152AB10 EA 0x7FF6F4F4AB10
+======================================================================
+  (RVA 0x152AB10 shared with another function already decompiled above/elsewhere - likely a generic Blueprint/K2 bytecode executor, not unique native code)
+unsigned __int8 *__fastcall sub_7FF6F4F4AB10(_QWORD *a1, _QWORD *a2, void *a3)
+{
+  unsigned __int8 *result; // rax
+  char v7; // bp
+  _BYTE *i; // rax
+  unsigned __int8 *v9; // rax
+  int v10; // ecx
+  unsigned __int8 *v11; // rcx
+  __int64 v12; // rax
+  unsigned __int8 *v13; // rbx
+  char v14[64]; // [rsp+30h] [rbp-68h] BYREF
+
+  result = (unsigned __int8 *)a1[2];
+  if ( *((int *)result + 49) >= 0 )
+  {
+    v7 = (*(__int64 (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD))(*a1 + 480LL))(a1, a2[2], a2[5], 0);
+    if ( (v7 & 1) != 0 )
+      (*(void (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD, _QWORD))(*a1 + 488LL))(a1, a2[2], a2[5], a2[15], 0);
+    if ( (v7 & 2) != 0 )
+    {
+      for ( i = (_BYTE *)a2[4]; *i != 4; i = (_BYTE *)a2[4] )
+      {
+        v9 = (unsigned __int8 *)a2[4];
+        v10 = *v9;
+        a2[4] = v9 + 1;
+        ((void (__fastcall *)(_QWORD, _QWORD *, char *))funcs_7FF6F4F44D4F[v10])(a2[3], a2, v14);
+      }
+      result = i + 1;
+      a2[4] = result;
+      v11 = result + 1;
+      if ( *result == 11 )
+      {
+        a2[4] = v11;
+      }
+      else
+      {
+        v12 = *result;
+        a2[4] = v11;
+        return (unsigned __int8 *)((__int64 (__fastcall *)(_QWORD, _QWORD *, void *))funcs_7FF6F4F44D4F[v12])(
+                                    a2[3],
+                                    a2,
+                                    a3);
+      }
+    }
+    else
+    {
+      result = (unsigned __int8 *)sub_7FF6F4F072B0(a2[2]);
+      v13 = result;
+      if ( result )
+      {
+        if ( (*((_QWORD *)result + 7) & 0x1000000000LL) == 0 )
+          (*(void (__fastcall **)(unsigned __int8 *, void *))(*(_QWORD *)result + 688LL))(result, a3);
+        return (unsigned __int8 *)memset(a3, 0, *((_DWORD *)v13 + 12) * *((_DWORD *)v13 + 13));
+      }
+    }
+  }
+  else if ( !byte_7FF6FA4F64EF )
+  {
+    ++dword_7FF6FA525F48;
+  }
+  return result;
+}
+
+
+======================================================================
+Controller::SetControlRotation @ RVA 0x2913FE0 EA 0x7FF6F6333FE0
+======================================================================
+__int64 __fastcall sub_7FF6F6333FE0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  _BYTE *v5; // rdx
+  __int64 v6; // rax
+  _BYTE v8[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  v2 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v5 = v8;
+  if ( a2[7] )
+    v5 = (_BYTE *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  return (*(__int64 (__fastcall **)(__int64, _BYTE *))(*(_QWORD *)a1 + 1568LL))(a1, v5);
+}
+
+
+======================================================================
+Controller::SetInitialLocationAndRotation @ RVA 0x2914600 EA 0x7FF6F6334600
+======================================================================
+__int64 __fastcall sub_7FF6F6334600(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  _BYTE *v5; // rax
+  _BYTE *v6; // rsi
+  _BYTE *v7; // r8
+  __int64 v8; // rax
+  _BYTE v10[16]; // [rsp+20h] [rbp-28h] BYREF
+  _BYTE v11[24]; // [rsp+30h] [rbp-18h] BYREF
+
+  v2 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v5 = (_BYTE *)a2[7];
+  v6 = v10;
+  a2[7] = 0;
+  if ( v5 )
+    v6 = v5;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v7 = v11;
+  if ( a2[7] )
+    v7 = (_BYTE *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v2) = v8 != 0;
+  a2[4] = v8 + v2;
+  return (*(__int64 (__fastcall **)(__int64, _BYTE *, _BYTE *))(*(_QWORD *)a1 + 1576LL))(a1, v6, v7);
+}
+
+
+======================================================================
+Controller::StopMovement @ RVA 0x2915D30 EA 0x7FF6F6335D30
+======================================================================
+__int64 __fastcall sub_7FF6F6335D30(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1784LL))(a1);
+}
+
+
+======================================================================
+Controller::UnPossess @ RVA 0x2915F60 EA 0x7FF6F6335F60
+======================================================================
+__int64 __fastcall sub_7FF6F6335F60(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1704LL))(a1);
+}
+

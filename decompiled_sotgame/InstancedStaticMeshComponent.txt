@@ -1,0 +1,456 @@
+// Class: InstancedStaticMeshComponent (11 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+InstancedStaticMeshComponent::AddInstance @ RVA 0x2B0F6C0 EA 0x7FF6F652F6C0
+======================================================================
+__int64 __fastcall sub_7FF6F652F6C0(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v3; // rdi
+  _OWORD *v7; // rdx
+  __int64 v8; // rax
+  __int64 result; // rax
+  _OWORD v10[3]; // [rsp+20h] [rbp-58h] BYREF
+
+  v10[1] = 0;
+  v3 = 0;
+  v10[0] = _mm_shuffle_ps((__m128)0LL, _mm_movehl_ps((__m128)xmmword_7FF6FA5E7D10, (__m128)0LL), 196);
+  v10[2] = _mm_and_ps((__m128)xmmword_7FF6FA5E7D10, (__m128)xmmword_7FF6FA5E7D20);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v7 = v10;
+  if ( a2[7] )
+    v7 = (_OWORD *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, _OWORD *))(*(_QWORD *)a1 + 2104LL))(a1, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+InstancedStaticMeshComponent::AddInstances @ RVA 0x2B0F960 EA 0x7FF6F652F960
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F652F960(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 *v5; // rdx
+  __int64 v6; // rax
+  __int64 result; // rax
+  __int64 v8[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  v4 = 0;
+  v8[0] = 0;
+  v8[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v5 = v8;
+  if ( a2[7] )
+    v5 = (__int64 *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v4) = v6 != 0;
+  a2[4] = v6 + v4;
+  result = sub_7FF6F5E1A980(a1, v5);
+  if ( v8[0] )
+    return sub_7FF6F4DED1F0(v8[0]);
+  return result;
+}
+
+
+======================================================================
+InstancedStaticMeshComponent::AddInstanceWorldSpace @ RVA 0x2B0F880 EA 0x7FF6F652F880
+======================================================================
+__int64 __fastcall sub_7FF6F652F880(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v3; // rdi
+  _OWORD *v7; // rdx
+  __int64 v8; // rax
+  __int64 result; // rax
+  _OWORD v10[3]; // [rsp+20h] [rbp-58h] BYREF
+
+  v10[1] = 0;
+  v3 = 0;
+  v10[0] = _mm_shuffle_ps((__m128)0LL, _mm_movehl_ps((__m128)xmmword_7FF6FA5E7D10, (__m128)0LL), 196);
+  v10[2] = _mm_and_ps((__m128)xmmword_7FF6FA5E7D10, (__m128)xmmword_7FF6FA5E7D20);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v7 = v10;
+  if ( a2[7] )
+    v7 = (_OWORD *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = sub_7FF6F5E1A920(a1, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+InstancedStaticMeshComponent::ClearInstances @ RVA 0x2B12310 EA 0x7FF6F6532310
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+InstancedStaticMeshComponent::EnableGPUVisibility @ RVA 0x2B13460 EA 0x7FF6F6533460
+======================================================================
+bool __fastcall sub_7FF6F6533460(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  bool v6; // zf
+  int v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  LOBYTE(v2) = v5 != 0;
+  v6 = v8 == 0;
+  a2[4] = v5 + v2;
+  *(_BYTE *)(a1 + 1132) = !v6;
+  return !v6;
+}
+
+
+======================================================================
+InstancedStaticMeshComponent::GetInstanceCount @ RVA 0x2B15A20 EA 0x7FF6F6535A20
+======================================================================
+__int64 __fastcall sub_7FF6F6535A20(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5E32FE0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+InstancedStaticMeshComponent::GetInstancesOverlappingSphere @ RVA 0x2B15F40 EA 0x7FF6F6535F40
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6535F40(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  _BYTE *v6; // rsi
+  __int64 result; // rax
+  __int64 v8; // rbx
+  _BYTE v9[16]; // [rsp+38h] [rbp-40h] BYREF
+  __int64 v10[3]; // [rsp+48h] [rbp-30h] BYREF
+  int v11; // [rsp+80h] [rbp+8h] BYREF
+  int v12; // [rsp+88h] [rbp+10h] BYREF
+
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  a2[4] += a2[4] != 0;
+  result = (*(__int64 (__fastcall **)(__int64, __int64 *, _BYTE *))(*(_QWORD *)a1 + 2136LL))(a1, v10, v6);
+  v8 = result;
+  if ( a3 != result )
+  {
+    if ( *(_QWORD *)a3 )
+    {
+      sub_7FF6F4DED1F0(*(_QWORD *)a3);
+      if ( *(_QWORD *)a3 )
+        *(_QWORD *)a3 = 0;
+    }
+    *(_QWORD *)a3 = *(_QWORD *)v8;
+    *(_QWORD *)v8 = 0;
+    *(_DWORD *)(a3 + 8) = *(_DWORD *)(v8 + 8);
+    result = *(unsigned int *)(v8 + 12);
+    *(_DWORD *)(a3 + 12) = result;
+    *(_QWORD *)(v8 + 8) = 0;
+  }
+  if ( v10[0] )
+    return sub_7FF6F4DED1F0(v10[0]);
+  return result;
+}
+
+
+======================================================================
+InstancedStaticMeshComponent::GetInstanceTransform @ RVA 0x2B15BA0 EA 0x7FF6F6535BA0
+======================================================================
+__int64 __fastcall sub_7FF6F6535BA0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  _OWORD *v7; // rax
+  _OWORD *v8; // rsi
+  __int64 v9; // r9
+  __int64 v10; // rax
+  __int64 v11; // rdx
+  __int64 result; // rax
+  int v13; // [rsp+20h] [rbp-78h] BYREF
+  _DWORD v14[3]; // [rsp+24h] [rbp-74h] BYREF
+  _OWORD v15[3]; // [rsp+30h] [rbp-68h] BYREF
+
+  v3 = 0;
+  v14[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v14);
+  }
+  v15[0] = _mm_shuffle_ps((__m128)0LL, _mm_movehl_ps((__m128)xmmword_7FF6FA5E7D10, (__m128)0LL), 196);
+  v15[1] = 0;
+  v15[2] = _mm_and_ps((__m128)xmmword_7FF6FA5E7D10, (__m128)xmmword_7FF6FA5E7D20);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v15);
+  }
+  v7 = (_OWORD *)a2[7];
+  v8 = v15;
+  v13 = 0;
+  if ( v7 )
+    v8 = v7;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v10 = a2[4];
+  v11 = v14[0];
+  LOBYTE(v9) = v13 != 0;
+  LOBYTE(v3) = v10 != 0;
+  a2[4] = v10 + v3;
+  result = sub_7FF6F5E32FF0(a1, v11, v8, v9);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+InstancedStaticMeshComponent::RemoveInstance @ RVA 0x2B1B090 EA 0x7FF6F653B090
+======================================================================
+__int64 __fastcall sub_7FF6F653B090(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 result; // rax
+  unsigned int v10; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2120LL))(a1, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+InstancedStaticMeshComponent::SetCullDistances @ RVA 0x2B1DEF0 EA 0x7FF6F653DEF0
+======================================================================
+__int64 __fastcall sub_7FF6F653DEF0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // r8
+  __int64 v7; // rdx
+  unsigned int v9; // [rsp+38h] [rbp+10h] BYREF
+  unsigned int v10; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v5 = a2[4];
+  v6 = v9;
+  v7 = v10;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F5E43DB0(a1, v7, v6);
+}
+
+
+======================================================================
+InstancedStaticMeshComponent::UpdateInstanceTransform @ RVA 0x2B24E50 EA 0x7FF6F6544E50
+======================================================================
+__int64 __fastcall sub_7FF6F6544E50(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  _OWORD *v7; // rax
+  _OWORD *v8; // rsi
+  bool v9; // bp
+  __int64 v10; // rax
+  __int64 v11; // rdx
+  __int64 result; // rax
+  bool v13; // [rsp+20h] [rbp-88h]
+  int v14; // [rsp+30h] [rbp-78h] BYREF
+  int v15; // [rsp+34h] [rbp-74h] BYREF
+  unsigned int v16; // [rsp+38h] [rbp-70h] BYREF
+  _OWORD v17[3]; // [rsp+40h] [rbp-68h] BYREF
+
+  v3 = 0;
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v17[0] = _mm_shuffle_ps((__m128)0LL, _mm_movehl_ps((__m128)xmmword_7FF6FA5E7D10, (__m128)0LL), 196);
+  v17[1] = 0;
+  v17[2] = _mm_and_ps((__m128)xmmword_7FF6FA5E7D10, (__m128)xmmword_7FF6FA5E7D20);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v17);
+  }
+  v7 = (_OWORD *)a2[7];
+  v8 = v17;
+  v14 = 0;
+  if ( v7 )
+    v8 = v7;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v15 = 0;
+  v9 = v14 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v10 = a2[4];
+  v13 = v15 != 0;
+  v11 = v16;
+  LOBYTE(v3) = v10 != 0;
+  a2[4] = v10 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, __int64, _OWORD *, bool, bool))(*(_QWORD *)a1 + 2112LL))(
+             a1,
+             v11,
+             v8,
+             v9,
+             v13);
+  *a3 = result;
+  return result;
+}
+

@@ -1,0 +1,348 @@
+// E:\unreal-projects\Athena\Content\Blueprints\Environment\Shipwrecks\bp_shipwreck_01_a.uasset -> BP_Shipwreck_01_a_C
+
+=== BP_Shipwreck_01_a_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_Shipwreck_01_a_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Shipwreck_01_a" (
+  $13: literal int32 533
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Shipwreck_01_a_C::ReceiveEndPlay (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_EndPlayReason@0x213b09b3b00
+  Expression:
+  $9: LocalVariable named EndPlayReason@0x213b09b3800
+$18: VirtualFunction call "ExecuteUbergraph_BP_Shipwreck_01_a" (
+  $31: literal int32 1333
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Shipwreck_01_a_C::OnResetTo (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Shipwreck_01_a" (
+  $13: literal int32 1338
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Shipwreck_01_a_C::ExecuteUbergraph_BP_Shipwreck_01_a (1346 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x212a994b910
+$10: LetBool (Variable = Expression)
+  Variable:
+  $11: LocalVariable named CallFunc_IsServer_ReturnValue@0x213b09b3880
+  Expression:
+  $20: Context
+    ObjectExpression:
+    $21: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_IsServer_ReturnValue@0x213b09b3880
+    ContextExpression:
+    $42: FinalFunction target=IsServer@0x212d63ae1c0 (
+      $51: Self
+      $52: EndFunctionParms
+    )
+$53: JumpIfNot -> 0x53f, cond:
+  $58: LocalVariable named CallFunc_IsServer_ReturnValue@0x213b09b3880
+$67: LetBool (Variable = Expression)
+  Variable:
+  $68: LocalVariable named CallFunc_IsValid_ReturnValue2@0x213b09b2780
+  Expression:
+  $77: Context
+    ObjectExpression:
+    $78: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue2@0x213b09b2780
+    ContextExpression:
+    $99: FinalFunction target=IsValid@0x212d63ae380 (
+      $108: InstanceVariable named Seagulls@0x213773bdb80
+      $117: EndFunctionParms
+    )
+$118: JumpIfNot -> 0x53f, cond:
+  $123: LocalVariable named CallFunc_IsValid_ReturnValue2@0x213b09b2780
+$132: LetObj (Variable = Expression)
+  Variable:
+  $133: LocalVariable named CallFunc_K2_GetRootComponent_ReturnValue@0x213b09b3a00
+  Expression:
+  $142: FinalFunction target=K2_GetRootComponent@0x212d6386d90 (
+    $151: EndFunctionParms
+  )
+$152: Let (Variable = Expression)
+  Variable:
+  $161: LocalVariable named CallFunc_K2_GetComponentLocation_ReturnValue@0x213b09b3a80
+  Expression:
+  $170: Context
+    ObjectExpression:
+    $171: LocalVariable named CallFunc_K2_GetRootComponent_ReturnValue@0x213b09b3a00
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetComponentLocation_ReturnValue@0x213b09b3a80
+    ContextExpression:
+    $192: FinalFunction target=K2_GetComponentLocation@0x212d66912f0 (
+      $201: EndFunctionParms
+    )
+$202: CallMath target=BreakVector@0x212d69930b0 (
+  $211: LocalVariable named CallFunc_K2_GetComponentLocation_ReturnValue@0x213b09b3a80
+  $220: LocalVariable named CallFunc_BreakVector_X@0x212a994b210
+  $229: LocalVariable named CallFunc_BreakVector_Y@0x212a994b830
+  $238: LocalVariable named CallFunc_BreakVector_Z@0x212a994ad40
+  $247: EndFunctionParms
+)
+$248: Let (Variable = Expression)
+  Variable:
+  $257: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213b09b3b80
+  Expression:
+  $266: CallMath target=MakeVector@0x212d69aa910 (
+    $275: LocalVariable named CallFunc_BreakVector_X@0x212a994b210
+    $284: LocalVariable named CallFunc_BreakVector_Y@0x212a994b830
+    $293: InstanceVariable named SeagulHeight@0x212815b2140
+    $302: EndFunctionParms
+  )
+$303: LetBool (Variable = Expression)
+  Variable:
+  $304: LocalVariable named CallFunc_K2_SetActorLocation_ReturnValue@0x213b09b2500
+  Expression:
+  $313: Context
+    ObjectExpression:
+    $314: InstanceVariable named Seagulls@0x213773bdb80
+    SkipBytes: 0x1e
+    RValueProperty: CallFunc_K2_SetActorLocation_ReturnValue@0x213b09b2500
+    ContextExpression:
+    $335: FinalFunction target=K2_SetActorLocation@0x212d6387210 (
+      $344: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213b09b3b80
+      $353: False
+      $354: LocalVariable named CallFunc_K2_SetActorLocation_SweepHitResult@0x213b09b3c00
+      $363: True
+      $364: EndFunctionParms
+    )
+$365: Jump to offset 0x53f
+$370: LetBool (Variable = Expression)
+  Variable:
+  $371: LocalVariable named CallFunc_IsServer_ReturnValue2@0x213b09b3980
+  Expression:
+  $380: Context
+    ObjectExpression:
+    $381: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_IsServer_ReturnValue2@0x213b09b3980
+    ContextExpression:
+    $402: FinalFunction target=IsServer@0x212d63ae1c0 (
+      $411: Self
+      $412: EndFunctionParms
+    )
+$413: JumpIfNot -> 0x53f, cond:
+  $418: LocalVariable named CallFunc_IsServer_ReturnValue2@0x213b09b3980
+$427: LetBool (Variable = Expression)
+  Variable:
+  $428: LocalVariable named CallFunc_IsValid_ReturnValue@0x213b09b2600
+  Expression:
+  $437: Context
+    ObjectExpression:
+    $438: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x213b09b2600
+    ContextExpression:
+    $459: FinalFunction target=IsValid@0x212d63ae380 (
+      $468: InstanceVariable named Seagulls@0x213773bdb80
+      $477: EndFunctionParms
+    )
+$478: JumpIfNot -> 0x53f, cond:
+  $483: LocalVariable named CallFunc_IsValid_ReturnValue@0x213b09b2600
+$492: Context
+  ObjectExpression:
+  $493: InstanceVariable named Seagulls@0x213773bdb80
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $514: VirtualFunction call "K2_DestroyActor" (
+    $527: EndFunctionParms
+  )
+$528: Jump to offset 0x53f
+$533: SetArray
+  $534: LocalVariable named K2Node_MakeArray_Array@0x213b09b2980
+  $543: InstanceVariable named WwiseEmitter4@0x2137ee07c00
+  $552: InstanceVariable named WwiseEmitter5@0x2137ee07500
+  $561: InstanceVariable named WwiseEmitter7@0x2137ee07580
+  $570: InstanceVariable named WwiseEmitter8@0x2137ee07d00
+  $579: InstanceVariable named WwiseEmitter9@0x2137ee06d00
+  $588: InstanceVariable named WwiseEmitter1@0x2137ee06880
+  $597: InstanceVariable named WwiseEmitter3@0x2137ee0fe00
+  $606: InstanceVariable named WwiseEmitter10@0x2137ee05e00
+  $615: EndArray
+$616: Let (Variable = Expression)
+  Variable:
+  $625: LocalVariable named CallFunc_WwiseEmitterComponentPostEventOnAll_ReturnValue@0x213b09b2880
+  Expression:
+  $634: Context
+    ObjectExpression:
+    $635: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x212d7001550
+    SkipBytes: 0x38
+    RValueProperty: CallFunc_WwiseEmitterComponentPostEventOnAll_ReturnValue@0x213b09b2880
+    ContextExpression:
+    $656: FinalFunction target=WwiseEmitterComponentPostEventOnAll@0x212d6a1e030 (
+      $665: LocalVariable named K2Node_MakeArray_Array@0x213b09b2980
+      $674: ObjectConst Play_sfx_underwater_shipwreck_creak@0x213b15d00f0
+      $683: literal byte 2
+      $685: literal name "None"
+      $698: literal name "None"
+      $711: EndFunctionParms
+    )
+$712: LetBool (Variable = Expression)
+  Variable:
+  $713: LocalVariable named CallFunc_IsServer_ReturnValue3@0x213b09b2800
+  Expression:
+  $722: Context
+    ObjectExpression:
+    $723: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_IsServer_ReturnValue3@0x213b09b2800
+    ContextExpression:
+    $744: FinalFunction target=IsServer@0x212d63ae1c0 (
+      $753: Self
+      $754: EndFunctionParms
+    )
+$755: JumpIfNot -> 0x53f, cond:
+  $760: LocalVariable named CallFunc_IsServer_ReturnValue3@0x213b09b2800
+$769: LetObj (Variable = Expression)
+  Variable:
+  $770: LocalVariable named CallFunc_K2_GetRootComponent_ReturnValue@0x213b09b3a00
+  Expression:
+  $779: FinalFunction target=K2_GetRootComponent@0x212d6386d90 (
+    $788: EndFunctionParms
+  )
+$789: Let (Variable = Expression)
+  Variable:
+  $798: LocalVariable named CallFunc_K2_GetComponentLocation_ReturnValue@0x213b09b3a80
+  Expression:
+  $807: Context
+    ObjectExpression:
+    $808: LocalVariable named CallFunc_K2_GetRootComponent_ReturnValue@0x213b09b3a00
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetComponentLocation_ReturnValue@0x213b09b3a80
+    ContextExpression:
+    $829: FinalFunction target=K2_GetComponentLocation@0x212d66912f0 (
+      $838: EndFunctionParms
+    )
+$839: CallMath target=BreakVector@0x212d69930b0 (
+  $848: LocalVariable named CallFunc_K2_GetComponentLocation_ReturnValue@0x213b09b3a80
+  $857: LocalVariable named CallFunc_BreakVector_X@0x212a994b210
+  $866: LocalVariable named CallFunc_BreakVector_Y@0x212a994b830
+  $875: LocalVariable named CallFunc_BreakVector_Z@0x212a994ad40
+  $884: EndFunctionParms
+)
+$885: Let (Variable = Expression)
+  Variable:
+  $894: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213b09b3b80
+  Expression:
+  $903: CallMath target=MakeVector@0x212d69aa910 (
+    $912: LocalVariable named CallFunc_BreakVector_X@0x212a994b210
+    $921: LocalVariable named CallFunc_BreakVector_Y@0x212a994b830
+    $930: InstanceVariable named SeagulHeight@0x212815b2140
+    $939: EndFunctionParms
+  )
+$940: Let (Variable = Expression)
+  Variable:
+  $949: LocalVariable named CallFunc_Conv_VectorToTransform_ReturnValue@0x213b09b2580
+  Expression:
+  $958: CallMath target=Conv_VectorToTransform@0x212d6996610 (
+    $967: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213b09b3b80
+    $976: EndFunctionParms
+  )
+$977: LetObj (Variable = Expression)
+  Variable:
+  $978: LocalVariable named CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue@0x213b09b2680
+  Expression:
+  $987: Context
+    ObjectExpression:
+    $988: ObjectConst Default__GameplayStatics@0x212d6f7eb20
+    SkipBytes: 0x20
+    RValueProperty: CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue@0x213b09b2680
+    ContextExpression:
+    $1009: FinalFunction target=BeginDeferredActorSpawnFromClass@0x212d6979260 (
+      $1018: Self
+      $1019: ObjectConst BP_Seagull01_32POI_Circling_Shipwreck_C@0x213917bd380
+      $1028: LocalVariable named CallFunc_Conv_VectorToTransform_ReturnValue@0x213b09b2580
+      $1037: literal byte 1
+      $1039: NoObject
+      $1040: EndFunctionParms
+    )
+$1041: LetObj (Variable = Expression)
+  Variable:
+  $1042: LocalVariable named CallFunc_K2_GetRootComponent_ReturnValue@0x213b09b3a00
+  Expression:
+  $1051: FinalFunction target=K2_GetRootComponent@0x212d6386d90 (
+    $1060: EndFunctionParms
+  )
+$1061: Let (Variable = Expression)
+  Variable:
+  $1070: LocalVariable named CallFunc_K2_GetComponentLocation_ReturnValue@0x213b09b3a80
+  Expression:
+  $1079: Context
+    ObjectExpression:
+    $1080: LocalVariable named CallFunc_K2_GetRootComponent_ReturnValue@0x213b09b3a00
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetComponentLocation_ReturnValue@0x213b09b3a80
+    ContextExpression:
+    $1101: FinalFunction target=K2_GetComponentLocation@0x212d66912f0 (
+      $1110: EndFunctionParms
+    )
+$1111: CallMath target=BreakVector@0x212d69930b0 (
+  $1120: LocalVariable named CallFunc_K2_GetComponentLocation_ReturnValue@0x213b09b3a80
+  $1129: LocalVariable named CallFunc_BreakVector_X@0x212a994b210
+  $1138: LocalVariable named CallFunc_BreakVector_Y@0x212a994b830
+  $1147: LocalVariable named CallFunc_BreakVector_Z@0x212a994ad40
+  $1156: EndFunctionParms
+)
+$1157: Let (Variable = Expression)
+  Variable:
+  $1166: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213b09b3b80
+  Expression:
+  $1175: CallMath target=MakeVector@0x212d69aa910 (
+    $1184: LocalVariable named CallFunc_BreakVector_X@0x212a994b210
+    $1193: LocalVariable named CallFunc_BreakVector_Y@0x212a994b830
+    $1202: InstanceVariable named SeagulHeight@0x212815b2140
+    $1211: EndFunctionParms
+  )
+$1212: Let (Variable = Expression)
+  Variable:
+  $1221: LocalVariable named CallFunc_Conv_VectorToTransform_ReturnValue@0x213b09b2580
+  Expression:
+  $1230: CallMath target=Conv_VectorToTransform@0x212d6996610 (
+    $1239: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213b09b3b80
+    $1248: EndFunctionParms
+  )
+$1249: LetObj (Variable = Expression)
+  Variable:
+  $1250: LocalVariable named CallFunc_FinishSpawningActor_ReturnValue@0x213b09b2700
+  Expression:
+  $1259: Context
+    ObjectExpression:
+    $1260: ObjectConst Default__GameplayStatics@0x212d6f7eb20
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_FinishSpawningActor_ReturnValue@0x213b09b2700
+    ContextExpression:
+    $1281: FinalFunction target=FinishSpawningActor@0x212d697bd20 (
+      $1290: LocalVariable named CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue@0x213b09b2680
+      $1299: LocalVariable named CallFunc_Conv_VectorToTransform_ReturnValue@0x213b09b2580
+      $1308: EndFunctionParms
+    )
+$1309: LetObj (Variable = Expression)
+  Variable:
+  $1310: InstanceVariable named Seagulls@0x213773bdb80
+  Expression:
+  $1319: LocalVariable named CallFunc_FinishSpawningActor_ReturnValue@0x213b09b2700
+$1328: Jump to offset 0x53f
+$1333: Jump to offset 0x172
+$1338: Jump to offset 0xa
+$1343: Return expression:
+  $1344: Nothing
+$1345: EndOfScript

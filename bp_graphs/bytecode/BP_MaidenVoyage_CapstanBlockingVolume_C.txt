@@ -1,0 +1,106 @@
+// /Game/Blueprints/TallTales/Actors/MaidenVoyage/bp_maidenvoyage_capstanblockingvolume -> BP_MaidenVoyage_CapstanBlockingVolume_C
+
+=== BP_MaidenVoyage_CapstanBlockingVolume_C::fn_idx_18807 (30 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: InstanceVariable named idx:279203@0x19fd074bd00
+  Expression:
+  $18: LocalOutVariable named QuestParticipants@0x19fd074b380
+$27: Return expression:
+  $28: Nothing
+$29: EndOfScript
+
+=== BP_MaidenVoyage_CapstanBlockingVolume_C::fn_idx_278734 (152 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fd074b600
+  Expression:
+  $18: DynamicCast to AthenaPlayerCharacter@0x19e4be85b00 of expr:
+  $27: LocalVariable named Actor@0x19fd074b400
+$36: Let (Variable = Expression)
+  Variable:
+  $45: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fd074b680
+  Expression:
+  $54: PrimitiveCast type=71
+    Argument:
+    $56: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fd074b600
+$65: JumpIfNot -> 0x85, cond:
+  $70: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fd074b680
+$79: LetBool (Variable = Expression)
+  Variable:
+  $80: InstanceVariable named CastSuccessful@0x19fd074c000
+  Expression:
+  $89: True
+$90: LetBool (Variable = Expression)
+  Variable:
+  $91: LocalOutVariable named Successful@0x19fd074b480
+  Expression:
+  $100: InstanceVariable named CastSuccessful@0x19fd074c000
+$109: LetObj (Variable = Expression)
+  Variable:
+  $110: LocalOutVariable named AthenaPlayerCharacter@0x19fd074b580
+  Expression:
+  $119: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fd074b600
+$128: Jump to offset 0x95
+$133: LetBool (Variable = Expression)
+  Variable:
+  $134: InstanceVariable named CastSuccessful@0x19fd074c000
+  Expression:
+  $143: False
+$144: Jump to offset 0x5a
+$149: Return expression:
+  $150: Nothing
+$151: EndOfScript
+
+=== BP_MaidenVoyage_CapstanBlockingVolume_C::fn_idx_9202 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_MaidenVoyage_CapstanBlockingVolume_C::fn_idx_279197 (112 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_OtherActor@0x19fd074b980
+  Expression:
+  $9: LocalVariable named OtherActor@0x19fd074b700
+$18: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_OtherComp@0x19fd074ba80
+  Expression:
+  $27: LocalVariable named OtherComp@0x19fd074b780
+$36: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_OtherBodyIndex@0x19fcde426f0
+  Expression:
+  $45: LocalVariable named OtherBodyIndex@0x19fcde46d60
+$54: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_bFromSweep@0x19fd074c400
+  Expression:
+  $63: LocalVariable named bFromSweep@0x19fd074b800
+$72: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_SweepResult@0x19fd074c300
+  Expression:
+  $81: LocalOutVariable named SweepResult@0x19fd074b880
+$90: VirtualFunction call "idx:279200" (
+  $103: literal int32 10
+  $108: EndFunctionParms
+)
+$109: Return expression:
+  $110: Nothing
+$111: EndOfScript
+
+=== BP_MaidenVoyage_CapstanBlockingVolume_C::fn_idx_279200 (87 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fcde49450
+$10: VirtualFunction call "CastToAthenaPlayerCharacter" (
+  $23: LocalVariable named K2Node_ComponentBoundEvent_OtherActor@0x19fd074b980
+  $32: LocalVariable named CallFunc_CastToAthenaPlayerCharacter_Successful@0x19fd074c200
+  $41: LocalVariable named CallFunc_CastToAthenaPlayerCharacter_AthenaPlayerCharacter@0x19fd074c100
+  $50: EndFunctionParms
+)
+$51: JumpIfNot -> 0x54, cond:
+  $56: LocalVariable named CallFunc_CastToAthenaPlayerCharacter_Successful@0x19fd074c200
+$65: CallMulticastDelegate target=idx:279202@0x19fd0653180 delegate:
+  $74: InstanceVariable named idx:279201@0x19fd074bf00
+  Params:
+  $83: EndFunctionParms
+$84: Return expression:
+  $85: Nothing
+$86: EndOfScript
+
+=== BP_MaidenVoyage_CapstanBlockingVolume_C::fn_idx_279202 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript

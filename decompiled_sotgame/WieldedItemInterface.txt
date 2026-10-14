@@ -1,0 +1,182 @@
+// Class: WieldedItemInterface (7 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+WieldedItemInterface::GetWieldedItem @ RVA 0x324A510 EA 0x7FF6F6C6A510
+======================================================================
+__int64 __fastcall sub_7FF6F6C6A510(__int64 a1, __int64 a2, _QWORD *a3)
+{
+  _QWORD *v4; // rax
+  __int64 result; // rax
+  _BYTE v6[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = (_QWORD *)(*(__int64 (__fastcall **)(__int64, _BYTE *))(*(_QWORD *)a1 + 24LL))(a1, v6);
+  *a3 = *v4;
+  result = v4[1];
+  a3[1] = result;
+  return result;
+}
+
+
+======================================================================
+WieldedItemInterface::GetWieldedItemIfNotStashed @ RVA 0x324A5B0 EA 0x7FF6F6C6A5B0
+======================================================================
+__int64 __fastcall sub_7FF6F6C6A5B0(__int64 a1, __int64 a2, _QWORD *a3)
+{
+  _QWORD *v4; // rax
+  __int64 result; // rax
+  _BYTE v6[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = (_QWORD *)(*(__int64 (__fastcall **)(__int64, _BYTE *))(*(_QWORD *)a1 + 32LL))(a1, v6);
+  *a3 = *v4;
+  result = v4[1];
+  a3[1] = result;
+  return result;
+}
+
+
+======================================================================
+WieldedItemInterface::ShouldDropLargeItemOnDestroy @ RVA 0x324BF50 EA 0x7FF6F6C6BF50
+======================================================================
+__int64 __fastcall sub_7FF6F6C6BF50(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 80LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+WieldedItemInterface::SlowStashItem @ RVA 0x324BF80 EA 0x7FF6F6C6BF80
+======================================================================
+__int64 __fastcall sub_7FF6F6C6BF80(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 64LL))(a1, v5);
+}
+
+
+======================================================================
+WieldedItemInterface::StashItem @ RVA 0x324C710 EA 0x7FF6F6C6C710
+======================================================================
+__int64 __fastcall sub_7FF6F6C6C710(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 40LL))(a1, v5);
+}
+
+
+======================================================================
+WieldedItemInterface::UnstashItem @ RVA 0x324CB30 EA 0x7FF6F6C6CB30
+======================================================================
+__int64 __fastcall sub_7FF6F6C6CB30(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 72LL))(a1, v5);
+}
+
+
+======================================================================
+WieldedItemInterface::WieldItem @ RVA 0x324CC30 EA 0x7FF6F6C6CC30
+======================================================================
+__int64 __fastcall sub_7FF6F6C6CC30(__int64 *a1, _QWORD *a2, _BYTE *a3)
+{
+  bool v3; // zf
+  __int64 v7; // rdi
+  __int64 v8; // r8
+  __int64 v9; // rax
+  __int64 v10; // rax
+  __int64 result; // rax
+  __int128 v12; // [rsp+20h] [rbp-28h] BYREF
+  _QWORD v13[3]; // [rsp+30h] [rbp-18h] BYREF
+  int v14; // [rsp+50h] [rbp+8h] BYREF
+
+  v3 = a2[4] == 0;
+  v12 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  v7 = 0;
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  LOBYTE(v8) = v14 != 0;
+  v9 = v12;
+  v3 = (_QWORD)v12 == 0;
+  a2[4] += a2[4] != 0;
+  v13[0] = v9;
+  if ( !v3 )
+    v7 = *((_QWORD *)&v12 + 1);
+  v10 = *a1;
+  v13[1] = v7;
+  result = (*(__int64 (__fastcall **)(__int64 *, _QWORD *, __int64))(v10 + 16))(a1, v13, v8);
+  *a3 = result;
+  return result;
+}
+

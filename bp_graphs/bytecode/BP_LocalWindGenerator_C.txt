@@ -1,0 +1,260 @@
+// /Game/Blueprints/LandmarkReactions/bp_localwindgenerator -> BP_LocalWindGenerator_C
+
+=== BP_LocalWindGenerator_C::fn_idx_2005 (33 bytes) ===
+$0: FinalFunction target=SetActorTickEnabled@0x19e4cd6ba30 (
+  $9: False
+  $10: EndFunctionParms
+)
+$11: LetBool (Variable = Expression)
+  Variable:
+  $12: LocalOutVariable named ReturnValue@0x19fbd84fb00
+  Expression:
+  $21: True
+$22: Return expression:
+  $23: LocalOutVariable named ReturnValue@0x19fbd84fb00
+$32: EndOfScript
+
+=== BP_LocalWindGenerator_C::fn_idx_275533 (935 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x19fbf432c30
+  Expression:
+  $18: CallMath target=Add_FloatFloat@0x19e4d36f820 (
+    $27: LocalVariable named idx:275543@0x19fbf432ae0
+    $36: InstanceVariable named CurrentTime@0x19fbf4338e0
+    $45: EndFunctionParms
+  )
+$46: Let (Variable = Expression)
+  Variable:
+  $55: InstanceVariable named CurrentTime@0x19fbf4338e0
+  Expression:
+  $64: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x19fbf432c30
+$73: Let (Variable = Expression)
+  Variable:
+  $82: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue@0x19fbf432bc0
+  Expression:
+  $91: CallMath target=Divide_FloatFloat@0x19e4d378eb0 (
+    $100: InstanceVariable named CurrentTime@0x19fbf4338e0
+    $109: InstanceVariable named Duration@0x19fbf433f70
+    $118: EndFunctionParms
+  )
+$119: LetBool (Variable = Expression)
+  Variable:
+  $120: LocalVariable named CallFunc_LessEqual_FloatFloat_ReturnValue@0x19fbd84fc00
+  Expression:
+  $129: CallMath target=LessEqual_FloatFloat@0x19e4d3867b0 (
+    $138: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue@0x19fbf432bc0
+    $147: literal float 1
+    $152: EndFunctionParms
+  )
+$153: JumpIfNot -> 0x29d, cond:
+  $158: LocalVariable named CallFunc_LessEqual_FloatFloat_ReturnValue@0x19fbd84fc00
+$167: Let (Variable = Expression)
+  Variable:
+  $176: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x19fbf432b50
+  Expression:
+  $185: CallMath target=Multiply_FloatFloat@0x19e4d38d1e0 (
+    $194: InstanceVariable named Radius@0x19fbf434c90
+    $203: InstanceVariable named Radius@0x19fbf434c90
+    $212: EndFunctionParms
+  )
+$213: Let (Variable = Expression)
+  Variable:
+  $222: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x19fbd84fc80
+  Expression:
+  $231: FinalFunction target=K2_GetActorLocation@0x19e4cd66b10 (
+    $240: EndFunctionParms
+  )
+$241: CallMath target=BreakVector@0x19e4d3730b0 (
+  $250: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x19fbd84fc80
+  $259: LocalVariable named CallFunc_BreakVector_X@0x19fbf432d10
+  $268: LocalVariable named CallFunc_BreakVector_Y@0x19fbf432d80
+  $277: LocalVariable named CallFunc_BreakVector_Z@0x19fbf432df0
+  $286: EndFunctionParms
+)
+$287: Let (Variable = Expression)
+  Variable:
+  $296: StructMemberContext prop=idx:6476@0x19e4cd589b0
+    Expression to struct:
+    $305: LocalVariable named K2Node_MakeStruct_LinearColor2@0x19fbd84fd00
+  Expression:
+  $314: LocalVariable named CallFunc_BreakVector_X@0x19fbf432d10
+$323: Let (Variable = Expression)
+  Variable:
+  $332: StructMemberContext prop=idx:6465@0x19e4cd58940
+    Expression to struct:
+    $341: LocalVariable named K2Node_MakeStruct_LinearColor2@0x19fbd84fd00
+  Expression:
+  $350: LocalVariable named CallFunc_BreakVector_Y@0x19fbf432d80
+$359: Let (Variable = Expression)
+  Variable:
+  $368: StructMemberContext prop=idx:6460@0x19e4cd588d0
+    Expression to struct:
+    $377: LocalVariable named K2Node_MakeStruct_LinearColor2@0x19fbd84fd00
+  Expression:
+  $386: LocalVariable named CallFunc_BreakVector_Z@0x19fbf432df0
+$395: Let (Variable = Expression)
+  Variable:
+  $404: StructMemberContext prop=idx:6459@0x19e4cd58860
+    Expression to struct:
+    $413: LocalVariable named K2Node_MakeStruct_LinearColor2@0x19fbd84fd00
+  Expression:
+  $422: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x19fbf432b50
+$431: Context
+  ObjectExpression:
+  $432: ObjectConst Default__KismetMaterialLibrary@0x19e4d95ec40
+  SkipBytes: 0x2a
+  RValueProperty: (null)
+  ContextExpression:
+  $453: FinalFunction target=SetVectorParameterValue@0x19e4d36ec10 (
+    $462: Self
+    $463: ObjectConst MP_atmospheric_parameters@0x19e696b46e0
+    $472: literal name "LocalStormWind"
+    $485: LocalVariable named K2Node_MakeStruct_LinearColor2@0x19fbd84fd00
+    $494: EndFunctionParms
+  )
+$495: Let (Variable = Expression)
+  Variable:
+  $504: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue@0x19fbf432bc0
+  Expression:
+  $513: CallMath target=Divide_FloatFloat@0x19e4d378eb0 (
+    $522: InstanceVariable named CurrentTime@0x19fbf4338e0
+    $531: InstanceVariable named Duration@0x19fbf433f70
+    $540: EndFunctionParms
+  )
+$541: Let (Variable = Expression)
+  Variable:
+  $550: LocalVariable named CallFunc_GetFloatValue_ReturnValue@0x19fbf432ca0
+  Expression:
+  $559: Context
+    ObjectExpression:
+    $560: InstanceVariable named idx:275539@0x19fbd84ff00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetFloatValue_ReturnValue@0x19fbf432ca0
+    ContextExpression:
+    $581: FinalFunction target=GetFloatValue@0x19e4d30dbb0 (
+      $590: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue@0x19fbf432bc0
+      $599: EndFunctionParms
+    )
+$600: Context
+  ObjectExpression:
+  $601: ObjectConst Default__KismetMaterialLibrary@0x19e4d95ec40
+  SkipBytes: 0x2a
+  RValueProperty: (null)
+  ContextExpression:
+  $622: FinalFunction target=SetScalarParameterValue@0x19e4d36e970 (
+    $631: Self
+    $632: ObjectConst MP_atmospheric_parameters@0x19e696b46e0
+    $641: literal name "LocalStormWindStrength"
+    $654: LocalVariable named CallFunc_GetFloatValue_ReturnValue@0x19fbf432ca0
+    $663: EndFunctionParms
+  )
+$664: Jump to offset 0x3a4
+$669: FinalFunction target=SetActorTickEnabled@0x19e4cd6ba30 (
+  $678: False
+  $679: EndFunctionParms
+)
+$680: Let (Variable = Expression)
+  Variable:
+  $689: StructMemberContext prop=idx:6476@0x19e4cd589b0
+    Expression to struct:
+    $698: LocalVariable named K2Node_MakeStruct_LinearColor@0x19fbd84fb80
+  Expression:
+  $707: literal float 0
+$712: Let (Variable = Expression)
+  Variable:
+  $721: StructMemberContext prop=idx:6465@0x19e4cd58940
+    Expression to struct:
+    $730: LocalVariable named K2Node_MakeStruct_LinearColor@0x19fbd84fb80
+  Expression:
+  $739: literal float 0
+$744: Let (Variable = Expression)
+  Variable:
+  $753: StructMemberContext prop=idx:6460@0x19e4cd588d0
+    Expression to struct:
+    $762: LocalVariable named K2Node_MakeStruct_LinearColor@0x19fbd84fb80
+  Expression:
+  $771: literal float 0
+$776: Let (Variable = Expression)
+  Variable:
+  $785: StructMemberContext prop=idx:6459@0x19e4cd58860
+    Expression to struct:
+    $794: LocalVariable named K2Node_MakeStruct_LinearColor@0x19fbd84fb80
+  Expression:
+  $803: literal float 0
+$808: Context
+  ObjectExpression:
+  $809: ObjectConst Default__KismetMaterialLibrary@0x19e4d95ec40
+  SkipBytes: 0x2a
+  RValueProperty: (null)
+  ContextExpression:
+  $830: FinalFunction target=SetVectorParameterValue@0x19e4d36ec10 (
+    $839: Self
+    $840: ObjectConst MP_atmospheric_parameters@0x19e696b46e0
+    $849: literal name "LocalStormWind"
+    $862: LocalVariable named K2Node_MakeStruct_LinearColor@0x19fbd84fb80
+    $871: EndFunctionParms
+  )
+$872: Context
+  ObjectExpression:
+  $873: ObjectConst Default__KismetMaterialLibrary@0x19e4d95ec40
+  SkipBytes: 0x26
+  RValueProperty: (null)
+  ContextExpression:
+  $894: FinalFunction target=SetScalarParameterValue@0x19e4d36e970 (
+    $903: Self
+    $904: ObjectConst MP_atmospheric_parameters@0x19e696b46e0
+    $913: literal name "LocalStormWindStrength"
+    $926: literal float 0
+    $931: EndFunctionParms
+  )
+$932: Return expression:
+  $933: Nothing
+$934: EndOfScript
+
+=== BP_LocalWindGenerator_C::fn_idx_2004 (56 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: InstanceVariable named CurrentTime@0x19fbf4338e0
+  Expression:
+  $18: literal float 0
+$23: FinalFunction target=SetActorTickEnabled@0x19e4cd6ba30 (
+  $32: True
+  $33: EndFunctionParms
+)
+$34: LetBool (Variable = Expression)
+  Variable:
+  $35: LocalOutVariable named ReturnValue@0x19fbd84fd80
+  Expression:
+  $44: True
+$45: Return expression:
+  $46: LocalOutVariable named ReturnValue@0x19fbd84fd80
+$55: EndOfScript
+
+=== BP_LocalWindGenerator_C::fn_idx_9202 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_LocalWindGenerator_C::fn_idx_8396 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_DeltaSeconds@0x19fbf432f40
+  Expression:
+  $9: LocalVariable named DeltaSeconds@0x19fbf432e60
+$18: VirtualFunction call "idx:275544" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_LocalWindGenerator_C::fn_idx_275544 (36 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fbf432ed0
+$10: VirtualFunction call "idx:275533" (
+  $23: LocalVariable named K2Node_Event_DeltaSeconds@0x19fbf432f40
+  $32: EndFunctionParms
+)
+$33: Return expression:
+  $34: Nothing
+$35: EndOfScript

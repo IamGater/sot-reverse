@@ -1,0 +1,408 @@
+// E:\unreal-projects\Athena\Content\Blueprints\Prompts\PromptConditionals\bp_prompt_recurringpromptwithexclusionzones.uasset -> BP_Prompt_RecurringPromptWithExclusionZones_C
+
+=== BP_Prompt_RecurringPromptWithExclusionZones_C::OnPlayerExitedExclusionZoneFunc (28 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: InstanceVariable named State_CanShowPrompt@0x2139c822500
+  Expression:
+  $10: True
+$11: VirtualFunction call "Evaluate" (
+  $24: EndFunctionParms
+)
+$25: Return expression:
+  $26: Nothing
+$27: EndOfScript
+
+=== BP_Prompt_RecurringPromptWithExclusionZones_C::OnPlayerEnteredExclusionZoneFunc (28 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: InstanceVariable named State_CanShowPrompt@0x2139c822500
+  Expression:
+  $10: False
+$11: VirtualFunction call "Evaluate" (
+  $24: EndFunctionParms
+)
+$25: Return expression:
+  $26: Nothing
+$27: EndOfScript
+
+=== BP_Prompt_RecurringPromptWithExclusionZones_C::PostInitialize (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Prompt_RecurringPromptWithExclusionZones" (
+  $13: literal int32 601
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_RecurringPromptWithExclusionZones_C::Evaluate (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Prompt_RecurringPromptWithExclusionZones" (
+  $13: literal int32 1248
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_RecurringPromptWithExclusionZones_C::UninitializeImplementable (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Prompt_RecurringPromptWithExclusionZones" (
+  $13: literal int32 1375
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_RecurringPromptWithExclusionZones_C::OnPlayerExitedExclusionZone (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Prompt_RecurringPromptWithExclusionZones" (
+  $13: literal int32 1410
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_RecurringPromptWithExclusionZones_C::OnPlayerEnteredExclusionZone (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Prompt_RecurringPromptWithExclusionZones" (
+  $13: literal int32 1415
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_RecurringPromptWithExclusionZones_C::ExecuteUbergraph_BP_Prompt_RecurringPromptWithExclusionZones (1423 bytes) ===
+$0: FlowStack.Push(0x58c)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x2137f36b210
+$15: LetBool (Variable = Expression)
+  Variable:
+  $16: InstanceVariable named State_ShowPrompt@0x2139c823580
+  Expression:
+  $25: False
+$26: VirtualFunction call "Evaluate" (
+  $39: EndFunctionParms
+)
+$40: Context
+  ObjectExpression:
+  $41: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+  SkipBytes: 0x3a
+  RValueProperty: (null)
+  ContextExpression:
+  $62: FinalFunction target=Delay@0x212d63a6d40 (
+    $71: Self
+    $72: InstanceVariable named Delay@0x213794cab10
+    $81: literal struct LatentActionInfo@0x212d63a6e80 (size 32)
+      $94: literal CodeSkipSizeType 0x79
+      $99: literal int32 2
+      $104: literal name "ExecuteUbergraph_BP_Prompt_RecurringPromptWithExclusionZones"
+      $117: Self
+      $118: EndStructConst
+    $119: EndFunctionParms
+  )
+$120: PopExecutionFlow (jump to popped addr)
+$121: LetBool (Variable = Expression)
+  Variable:
+  $122: InstanceVariable named State_ShowPrompt@0x2139c823580
+  Expression:
+  $131: True
+$132: VirtualFunction call "Evaluate" (
+  $145: EndFunctionParms
+)
+$146: Context
+  ObjectExpression:
+  $147: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+  SkipBytes: 0x3a
+  RValueProperty: (null)
+  ContextExpression:
+  $168: FinalFunction target=Delay@0x212d63a6d40 (
+    $177: Self
+    $178: InstanceVariable named ShowDuration@0x212a994cb70
+    $187: literal struct LatentActionInfo@0x212d63a6e80 (size 32)
+      $200: literal CodeSkipSizeType 0xf
+      $205: literal int32 1
+      $210: literal name "ExecuteUbergraph_BP_Prompt_RecurringPromptWithExclusionZones"
+      $223: Self
+      $224: EndStructConst
+    $225: EndFunctionParms
+  )
+$226: PopExecutionFlow (jump to popped addr)
+$227: Let (Variable = Expression)
+  Variable:
+  $236: LocalVariable named Temp_int_Array_Index_Variable@0x2137f36b2f0
+  Expression:
+  $245: literal int32 0
+$250: Let (Variable = Expression)
+  Variable:
+  $259: LocalVariable named CallFunc_Array_Length_ReturnValue2@0x2139380f180
+  Expression:
+  $268: Context
+    ObjectExpression:
+    $269: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue2@0x2139380f180
+    ContextExpression:
+    $290: FinalFunction target=Array_Length@0x212d6987df0 (
+      $299: InstanceVariable named ExclusionOverlapActors@0x2139c820a00
+      $308: EndFunctionParms
+    )
+$309: LetBool (Variable = Expression)
+  Variable:
+  $310: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x2139c821a00
+  Expression:
+  $319: CallMath target=Less_IntInt@0x212d69a5ed0 (
+    $328: LocalVariable named Temp_int_Loop_Counter_Variable@0x2137f36b7c0
+    $337: LocalVariable named CallFunc_Array_Length_ReturnValue2@0x2139380f180
+    $346: EndFunctionParms
+  )
+$347: JumpIfNot -> 0x1e5, cond:
+  $352: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x2139c821a00
+$361: Let (Variable = Expression)
+  Variable:
+  $370: LocalVariable named Temp_int_Array_Index_Variable@0x2137f36b2f0
+  Expression:
+  $379: LocalVariable named Temp_int_Loop_Counter_Variable@0x2137f36b7c0
+$388: FlowStack.Push(0x20f)
+$393: Context
+  ObjectExpression:
+  $394: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $415: FinalFunction target=Array_Get@0x212d69876b0 (
+    $424: InstanceVariable named ExclusionOverlapActors@0x2139c820a00
+    $433: LocalVariable named Temp_int_Array_Index_Variable@0x2137f36b2f0
+    $442: LocalVariable named CallFunc_Array_Get_Item2@0x2139c821980
+    $451: EndFunctionParms
+  )
+$452: Context
+  ObjectExpression:
+  $453: LocalVariable named CallFunc_Array_Get_Item2@0x2139c821980
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $474: FinalFunction target=ClearDelegatesAndDestroy@0x212d6a9c0b0 (
+    $483: EndFunctionParms
+  )
+$484: PopExecutionFlow (jump to popped addr)
+$485: Context
+  ObjectExpression:
+  $486: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $507: FinalFunction target=Array_Clear@0x212d6986fd0 (
+    $516: InstanceVariable named ExclusionOverlapActors@0x2139c820a00
+    $525: EndFunctionParms
+  )
+$526: PopExecutionFlow (jump to popped addr)
+$527: Let (Variable = Expression)
+  Variable:
+  $536: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x2139380fb90
+  Expression:
+  $545: CallMath target=Add_IntInt@0x212d698fa30 (
+    $554: LocalVariable named Temp_int_Loop_Counter_Variable@0x2137f36b7c0
+    $563: literal int32 1
+    $568: EndFunctionParms
+  )
+$569: Let (Variable = Expression)
+  Variable:
+  $578: LocalVariable named Temp_int_Loop_Counter_Variable@0x2137f36b7c0
+  Expression:
+  $587: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x2139380fb90
+$596: Jump to offset 0xfa
+$601: Let (Variable = Expression)
+  Variable:
+  $610: LocalVariable named Temp_int_Loop_Counter_Variable2@0x2139380f420
+  Expression:
+  $619: literal int32 0
+$624: Let (Variable = Expression)
+  Variable:
+  $633: LocalVariable named Temp_int_Array_Index_Variable2@0x2139380f260
+  Expression:
+  $642: literal int32 0
+$647: Let (Variable = Expression)
+  Variable:
+  $656: LocalVariable named CallFunc_Array_Length_ReturnValue@0x2137f36b280
+  Expression:
+  $665: Context
+    ObjectExpression:
+    $666: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x2137f36b280
+    ContextExpression:
+    $687: FinalFunction target=Array_Length@0x212d6987df0 (
+      $696: InstanceVariable named ExclusionPoints@0x2139c821c00
+      $705: EndFunctionParms
+    )
+$706: LetBool (Variable = Expression)
+  Variable:
+  $707: LocalVariable named CallFunc_Less_IntInt_ReturnValue2@0x2139c821480
+  Expression:
+  $716: CallMath target=Less_IntInt@0x212d69a5ed0 (
+    $725: LocalVariable named Temp_int_Loop_Counter_Variable2@0x2139380f420
+    $734: LocalVariable named CallFunc_Array_Length_ReturnValue@0x2137f36b280
+    $743: EndFunctionParms
+  )
+$744: JumpIfNot -> 0x79, cond:
+  $749: LocalVariable named CallFunc_Less_IntInt_ReturnValue2@0x2139c821480
+$758: Let (Variable = Expression)
+  Variable:
+  $767: LocalVariable named Temp_int_Array_Index_Variable2@0x2139380f260
+  Expression:
+  $776: LocalVariable named Temp_int_Loop_Counter_Variable2@0x2139380f420
+$785: FlowStack.Push(0x496)
+$790: Context
+  ObjectExpression:
+  $791: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $812: FinalFunction target=Array_Get@0x212d69876b0 (
+    $821: InstanceVariable named ExclusionPoints@0x2139c821c00
+    $830: LocalVariable named Temp_int_Array_Index_Variable2@0x2139380f260
+    $839: LocalVariable named CallFunc_Array_Get_Item@0x21393cf1680
+    $848: EndFunctionParms
+  )
+$849: LetObj (Variable = Expression)
+  Variable:
+  $850: LocalVariable named CallFunc_CreateOverlapTriggerActor_ReturnValue@0x2139c821000
+  Expression:
+  $859: Context
+    ObjectExpression:
+    $860: ObjectConst Default__OverlapTriggerActor@0x212d706b3d0
+    SkipBytes: 0x1d
+    RValueProperty: CallFunc_CreateOverlapTriggerActor_ReturnValue@0x2139c821000
+    ContextExpression:
+    $881: FinalFunction target=CreateOverlapTriggerActor@0x212d6a9c170 (
+      $890: Self
+      $891: LocalVariable named CallFunc_Array_Get_Item@0x21393cf1680
+      $900: InstanceVariable named ExclusionRadius@0x213794ca9c0
+      $909: EndFunctionParms
+    )
+$910: Let (Variable = Expression)
+  Variable:
+  $919: LocalVariable named CallFunc_Array_Add_ReturnValue@0x2139380f340
+  Expression:
+  $928: Context
+    ObjectExpression:
+    $929: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Add_ReturnValue@0x2139380f340
+    ContextExpression:
+    $950: FinalFunction target=Array_Add@0x212d6986810 (
+      $959: InstanceVariable named ExclusionOverlapActors@0x2139c820a00
+      $968: LocalVariable named CallFunc_CreateOverlapTriggerActor_ReturnValue@0x2139c821000
+      $977: EndFunctionParms
+    )
+$978: BindDelegate 'OnPlayerExitedExclusionZone'
+  Delegate:
+  $991: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x21393cf2880
+  Object:
+  $1000: Self
+$1001: BindDelegate 'OnPlayerEnteredExclusionZone'
+  Delegate:
+  $1014: LocalVariable named UniqueObjectNameForCooking_OutputDelegate2@0x21393cf0b00
+  Object:
+  $1023: Self
+$1024: LetObj (Variable = Expression)
+  Variable:
+  $1025: LocalVariable named CallFunc_GetPlayerController_ReturnValue@0x2139c821200
+  Expression:
+  $1034: Context
+    ObjectExpression:
+    $1035: ObjectConst Default__GameplayStatics@0x212d6f7eb20
+    SkipBytes: 0x10
+    RValueProperty: CallFunc_GetPlayerController_ReturnValue@0x2139c821200
+    ContextExpression:
+    $1056: FinalFunction target=GetPlayerController@0x212d697e470 (
+      $1065: Self
+      $1066: literal int32 0
+      $1071: EndFunctionParms
+    )
+$1072: LetObj (Variable = Expression)
+  Variable:
+  $1073: LocalVariable named CallFunc_K2_GetPawn_ReturnValue@0x2139c821280
+  Expression:
+  $1082: Context
+    ObjectExpression:
+    $1083: LocalVariable named CallFunc_GetPlayerController_ReturnValue@0x2139c821200
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetPawn_ReturnValue@0x2139c821280
+    ContextExpression:
+    $1104: FinalFunction target=K2_GetPawn@0x212d670f6a0 (
+      $1113: EndFunctionParms
+    )
+$1114: Context
+  ObjectExpression:
+  $1115: LocalVariable named CallFunc_CreateOverlapTriggerActor_ReturnValue@0x2139c821000
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $1136: FinalFunction target=SetDelegatesForActor@0x212d6a9c720 (
+    $1145: LocalVariable named CallFunc_K2_GetPawn_ReturnValue@0x2139c821280
+    $1154: LocalVariable named UniqueObjectNameForCooking_OutputDelegate2@0x21393cf0b00
+    $1163: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x21393cf2880
+    $1172: EndFunctionParms
+  )
+$1173: PopExecutionFlow (jump to popped addr)
+$1174: Let (Variable = Expression)
+  Variable:
+  $1183: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x212a994b600
+  Expression:
+  $1192: CallMath target=Add_IntInt@0x212d698fa30 (
+    $1201: LocalVariable named Temp_int_Loop_Counter_Variable2@0x2139380f420
+    $1210: literal int32 1
+    $1215: EndFunctionParms
+  )
+$1216: Let (Variable = Expression)
+  Variable:
+  $1225: LocalVariable named Temp_int_Loop_Counter_Variable2@0x2139380f420
+  Expression:
+  $1234: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x212a994b600
+$1243: Jump to offset 0x287
+$1248: LetBool (Variable = Expression)
+  Variable:
+  $1249: LocalVariable named CallFunc_Not_PreBool_ReturnValue@0x21393cf1a00
+  Expression:
+  $1258: CallMath target=Not_PreBool@0x212d69b0310 (
+    $1267: InstanceVariable named State_CanShowPrompt@0x2139c822500
+    $1276: EndFunctionParms
+  )
+$1277: JumpIfNot -> 0x516, cond:
+  $1282: LocalVariable named CallFunc_Not_PreBool_ReturnValue@0x21393cf1a00
+$1291: FinalFunction target=DismissAllPrompts@0x212d6ad4cc0 (
+  $1300: EndFunctionParms
+)
+$1301: PopExecutionFlow (jump to popped addr)
+$1302: JumpIfNot -> 0x538, cond:
+  $1307: InstanceVariable named State_ShowPrompt@0x2139c823580
+$1316: FinalFunction target=SetPromptAs@0x212d6ad5a00 (
+  $1325: InstanceVariable named Prompt@0x2139c822f80
+  $1334: EndFunctionParms
+)
+$1335: PopExecutionFlow (jump to popped addr)
+$1336: FinalFunction target=DismissAllPrompts@0x212d6ad4cc0 (
+  $1345: EndFunctionParms
+)
+$1346: PopExecutionFlow (jump to popped addr)
+$1347: Let (Variable = Expression)
+  Variable:
+  $1356: LocalVariable named Temp_int_Loop_Counter_Variable@0x2137f36b7c0
+  Expression:
+  $1365: literal int32 0
+$1370: Jump to offset 0xe3
+$1375: Jump to offset 0x543
+$1380: VirtualFunction call "OnPlayerExitedExclusionZoneFunc" (
+  $1393: EndFunctionParms
+)
+$1394: PopExecutionFlow (jump to popped addr)
+$1395: VirtualFunction call "OnPlayerEnteredExclusionZoneFunc" (
+  $1408: EndFunctionParms
+)
+$1409: PopExecutionFlow (jump to popped addr)
+$1410: Jump to offset 0x564
+$1415: Jump to offset 0x573
+$1420: Return expression:
+  $1421: Nothing
+$1422: EndOfScript

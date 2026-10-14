@@ -1,0 +1,4320 @@
+// E:\unreal-projects\Athena\Content\Blueprints\Environment\Placement\bp_placement_functions.uasset -> BP_Placement_Functions_C
+
+=== BP_Placement_Functions_C::GenerateRadialXYPositionsAroundPoint (594 bytes) ===
+$0: FlowStack.Push(0x24f)
+$5: Let (Variable = Expression)
+  Variable:
+  $14: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213bd284200
+  Expression:
+  $23: CallMath target=MakeVector@0x212d69aa910 (
+    $32: LocalVariable named Radius@0x213b4736970
+    $41: literal float 0
+    $46: literal float 0
+    $51: EndFunctionParms
+  )
+$52: Let (Variable = Expression)
+  Variable:
+  $61: LocalVariable named RotationVector@0x213bd284400
+  Expression:
+  $70: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213bd284200
+$79: Let (Variable = Expression)
+  Variable:
+  $88: LocalVariable named CallFunc_Conv_IntToFloat_ReturnValue@0x213b4736a50
+  Expression:
+  $97: CallMath target=Conv_IntToFloat@0x212d6995980 (
+    $106: LocalVariable named Segments@0x213b47369e0
+    $115: EndFunctionParms
+  )
+$116: Let (Variable = Expression)
+  Variable:
+  $125: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue@0x213b4736ac0
+  Expression:
+  $134: CallMath target=Divide_FloatFloat@0x212d6998eb0 (
+    $143: literal float 360
+    $148: LocalVariable named CallFunc_Conv_IntToFloat_ReturnValue@0x213b4736a50
+    $157: EndFunctionParms
+  )
+$158: Let (Variable = Expression)
+  Variable:
+  $167: LocalVariable named AngleStep@0x213b4736cf0
+  Expression:
+  $176: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue@0x213b4736ac0
+$185: Let (Variable = Expression)
+  Variable:
+  $194: LocalVariable named Temp_int_Variable@0x213b4736b30
+  Expression:
+  $203: literal int32 0
+$208: LetBool (Variable = Expression)
+  Variable:
+  $209: LocalVariable named CallFunc_LessEqual_IntInt_ReturnValue@0x213bd284380
+  Expression:
+  $218: CallMath target=LessEqual_IntInt@0x212d69a69d0 (
+    $227: LocalVariable named Temp_int_Variable@0x213b4736b30
+    $236: LocalVariable named Segments@0x213b47369e0
+    $245: EndFunctionParms
+  )
+$246: JumpIfNot -> 0x1e5, cond:
+  $251: LocalVariable named CallFunc_LessEqual_IntInt_ReturnValue@0x213bd284380
+$260: FlowStack.Push(0x205)
+$265: Let (Variable = Expression)
+  Variable:
+  $274: LocalVariable named CallFunc_Multiply_IntFloat_ReturnValue@0x213b4736c10
+  Expression:
+  $283: CallMath target=Multiply_IntFloat@0x212d69ad3f0 (
+    $292: LocalVariable named Temp_int_Variable@0x213b4736b30
+    $301: LocalVariable named AngleStep@0x213b4736cf0
+    $310: EndFunctionParms
+  )
+$311: Let (Variable = Expression)
+  Variable:
+  $320: LocalVariable named CallFunc_RotateAngleAxis_ReturnValue@0x213bd284280
+  Expression:
+  $329: CallMath target=RotateAngleAxis@0x212d69b6840 (
+    $338: LocalVariable named RotationVector@0x213bd284400
+    $347: LocalVariable named CallFunc_Multiply_IntFloat_ReturnValue@0x213b4736c10
+    $356: literal vector (0,0,1)
+    $369: EndFunctionParms
+  )
+$370: Let (Variable = Expression)
+  Variable:
+  $379: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x213bd284300
+  Expression:
+  $388: CallMath target=Add_VectorVector@0x212d6990750 (
+    $397: LocalVariable named Centre@0x213bd284100
+    $406: LocalVariable named CallFunc_RotateAngleAxis_ReturnValue@0x213bd284280
+    $415: EndFunctionParms
+  )
+$416: Let (Variable = Expression)
+  Variable:
+  $425: LocalVariable named CallFunc_Array_Add_ReturnValue@0x213b4736c80
+  Expression:
+  $434: Context
+    ObjectExpression:
+    $435: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Add_ReturnValue@0x213b4736c80
+    ContextExpression:
+    $456: FinalFunction target=Array_Add@0x212d6986810 (
+      $465: LocalVariable named RadialPositions@0x213bd284500
+      $474: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x213bd284300
+      $483: EndFunctionParms
+    )
+$484: PopExecutionFlow (jump to popped addr)
+$485: Let (Variable = Expression)
+  Variable:
+  $494: LocalOutVariable named Positions@0x213bd284600
+  Expression:
+  $503: LocalVariable named RadialPositions@0x213bd284500
+$512: Jump to offset 0x24f
+$517: Let (Variable = Expression)
+  Variable:
+  $526: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x213b4736ba0
+  Expression:
+  $535: CallMath target=Add_IntInt@0x212d698fa30 (
+    $544: LocalVariable named Temp_int_Variable@0x213b4736b30
+    $553: literal int32 1
+    $558: EndFunctionParms
+  )
+$559: Let (Variable = Expression)
+  Variable:
+  $568: LocalVariable named Temp_int_Variable@0x213b4736b30
+  Expression:
+  $577: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x213b4736ba0
+$586: Jump to offset 0xd0
+$591: Return expression:
+  $592: Nothing
+$593: EndOfScript
+
+=== BP_Placement_Functions_C::Get First Valid Hit (921 bytes) ===
+$0: FlowStack.Push(0x396)
+$5: LetBool (Variable = Expression)
+  Variable:
+  $6: LocalVariable named Temp_bool_True_if_break_was_hit_Variable@0x213bd284800
+  Expression:
+  $15: False
+$16: Let (Variable = Expression)
+  Variable:
+  $25: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b4736f90
+  Expression:
+  $34: literal int32 0
+$39: Let (Variable = Expression)
+  Variable:
+  $48: LocalVariable named Temp_int_Array_Index_Variable@0x213b4736dd0
+  Expression:
+  $57: literal int32 0
+$62: Let (Variable = Expression)
+  Variable:
+  $71: LocalVariable named CallFunc_Array_Length_ReturnValue@0x213b4736d60
+  Expression:
+  $80: Context
+    ObjectExpression:
+    $81: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x213b4736d60
+    ContextExpression:
+    $102: FinalFunction target=Array_Length@0x212d6987df0 (
+      $111: LocalOutVariable named Hits@0x213bd285380
+      $120: EndFunctionParms
+    )
+$121: LetBool (Variable = Expression)
+  Variable:
+  $122: LocalVariable named CallFunc_Not_PreBool_ReturnValue@0x213bd284f00
+  Expression:
+  $131: CallMath target=Not_PreBool@0x212d69b0310 (
+    $140: LocalVariable named Temp_bool_True_if_break_was_hit_Variable@0x213bd284800
+    $149: EndFunctionParms
+  )
+$150: LetBool (Variable = Expression)
+  Variable:
+  $151: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x213bd285100
+  Expression:
+  $160: CallMath target=Less_IntInt@0x212d69a5ed0 (
+    $169: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b4736f90
+    $178: LocalVariable named CallFunc_Array_Length_ReturnValue@0x213b4736d60
+    $187: EndFunctionParms
+  )
+$188: LetBool (Variable = Expression)
+  Variable:
+  $189: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x213bd285180
+  Expression:
+  $198: CallMath target=BooleanAND@0x212d69910f0 (
+    $207: LocalVariable named CallFunc_Not_PreBool_ReturnValue@0x213bd284f00
+    $216: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x213bd285100
+    $225: EndFunctionParms
+  )
+$226: JumpIfNot -> 0x2ac, cond:
+  $231: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x213bd285180
+$240: Let (Variable = Expression)
+  Variable:
+  $249: LocalVariable named Temp_int_Array_Index_Variable@0x213b4736dd0
+  Expression:
+  $258: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b4736f90
+$267: FlowStack.Push(0x2df)
+$272: Context
+  ObjectExpression:
+  $273: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $294: FinalFunction target=Array_Get@0x212d69876b0 (
+    $303: LocalOutVariable named Hits@0x213bd285380
+    $312: LocalVariable named Temp_int_Array_Index_Variable@0x213b4736dd0
+    $321: LocalVariable named CallFunc_Array_Get_Item@0x213bd284880
+    $330: EndFunctionParms
+  )
+$331: Context
+  ObjectExpression:
+  $332: ObjectConst Default__GameplayStatics@0x212d6f7eb20
+  SkipBytes: 0x91
+  RValueProperty: (null)
+  ContextExpression:
+  $353: FinalFunction target=BreakHitResult@0x212d697a330 (
+    $362: LocalVariable named CallFunc_Array_Get_Item@0x213bd284880
+    $371: LocalVariable named CallFunc_BreakHitResult_bBlockingHit@0x213bd284900
+    $380: LocalVariable named CallFunc_BreakHitResult_bInitialOverlap@0x213bd284980
+    $389: LocalVariable named CallFunc_BreakHitResult_Time@0x213b4736e40
+    $398: LocalVariable named CallFunc_BreakHitResult_Location@0x213bd284a00
+    $407: LocalVariable named CallFunc_BreakHitResult_ImpactPoint@0x213bd284a80
+    $416: LocalVariable named CallFunc_BreakHitResult_Normal@0x213bd284b00
+    $425: LocalVariable named CallFunc_BreakHitResult_ImpactNormal@0x213bd284b80
+    $434: LocalVariable named CallFunc_BreakHitResult_PhysMat@0x213bd284c80
+    $443: LocalVariable named CallFunc_BreakHitResult_HitActor@0x213bd284d00
+    $452: LocalVariable named CallFunc_BreakHitResult_HitComponent@0x213bd284d80
+    $461: LocalVariable named CallFunc_BreakHitResult_HitBoneName@0x213b4736eb0
+    $470: LocalVariable named CallFunc_BreakHitResult_HitItem@0x213b4736f20
+    $479: LocalVariable named CallFunc_BreakHitResult_TraceStart@0x213bd284e00
+    $488: LocalVariable named CallFunc_BreakHitResult_TraceEnd@0x213bd284e80
+    $497: EndFunctionParms
+  )
+$498: LetBool (Variable = Expression)
+  Variable:
+  $499: LocalVariable named CallFunc_Not_PreBool_ReturnValue2@0x213bd284f80
+  Expression:
+  $508: CallMath target=Not_PreBool@0x212d69b0310 (
+    $517: Context
+      ObjectExpression:
+      $518: LocalVariable named CallFunc_BreakHitResult_HitComponent@0x213bd284d80
+      SkipBytes: 0x9
+      RValueProperty: bVisible@0x212d66949c0
+      ContextExpression:
+      $539: InstanceVariable named bVisible@0x212d66949c0
+    $548: EndFunctionParms
+  )
+$549: LetBool (Variable = Expression)
+  Variable:
+  $550: LocalVariable named CallFunc_BooleanOR_ReturnValue@0x213bd285000
+  Expression:
+  $559: CallMath target=BooleanOR@0x212d69917b0 (
+    $568: Context
+      ObjectExpression:
+      $569: LocalVariable named CallFunc_BreakHitResult_HitActor@0x213bd284d00
+      SkipBytes: 0x9
+      RValueProperty: bHidden@0x212d638f860
+      ContextExpression:
+      $590: InstanceVariable named bHidden@0x212d638f860
+    $599: LocalVariable named CallFunc_Not_PreBool_ReturnValue2@0x213bd284f80
+    $608: EndFunctionParms
+  )
+$609: LetBool (Variable = Expression)
+  Variable:
+  $610: LocalVariable named CallFunc_BooleanOR_ReturnValue2@0x213bd285080
+  Expression:
+  $619: CallMath target=BooleanOR@0x212d69917b0 (
+    $628: LocalVariable named CallFunc_BooleanOR_ReturnValue@0x213bd285000
+    $637: Context
+      ObjectExpression:
+      $638: LocalVariable named CallFunc_BreakHitResult_HitComponent@0x213bd284d80
+      SkipBytes: 0x9
+      RValueProperty: bHiddenInGame@0x212d6694940
+      ContextExpression:
+      $659: InstanceVariable named bHiddenInGame@0x212d6694940
+    $668: EndFunctionParms
+  )
+$669: JumpIfNot -> 0x329, cond:
+  $674: LocalVariable named CallFunc_BooleanOR_ReturnValue2@0x213bd285080
+$683: PopExecutionFlow (jump to popped addr)
+$684: LetBool (Variable = Expression)
+  Variable:
+  $685: LocalOutVariable named Is Valid Hit@0x213bd284700
+  Expression:
+  $694: LocalVariable named Valid Hit@0x213bd285200
+$703: Let (Variable = Expression)
+  Variable:
+  $712: LocalOutVariable named Hit@0x213bd284780
+  Expression:
+  $721: LocalVariable named OutputHit@0x213bd285280
+$730: Jump to offset 0x396
+$735: Let (Variable = Expression)
+  Variable:
+  $744: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x213b4737000
+  Expression:
+  $753: CallMath target=Add_IntInt@0x212d698fa30 (
+    $762: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b4736f90
+    $771: literal int32 1
+    $776: EndFunctionParms
+  )
+$777: Let (Variable = Expression)
+  Variable:
+  $786: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b4736f90
+  Expression:
+  $795: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x213b4737000
+$804: Jump to offset 0x3e
+$809: Context
+  ObjectExpression:
+  $810: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $831: FinalFunction target=Array_Get@0x212d69876b0 (
+    $840: LocalOutVariable named Hits@0x213bd285380
+    $849: LocalVariable named Temp_int_Array_Index_Variable@0x213b4736dd0
+    $858: LocalVariable named CallFunc_Array_Get_Item@0x213bd284880
+    $867: EndFunctionParms
+  )
+$868: Let (Variable = Expression)
+  Variable:
+  $877: LocalVariable named OutputHit@0x213bd285280
+  Expression:
+  $886: LocalVariable named CallFunc_Array_Get_Item@0x213bd284880
+$895: LetBool (Variable = Expression)
+  Variable:
+  $896: LocalVariable named Valid Hit@0x213bd285200
+  Expression:
+  $905: True
+$906: LetBool (Variable = Expression)
+  Variable:
+  $907: LocalVariable named Temp_bool_True_if_break_was_hit_Variable@0x213bd284800
+  Expression:
+  $916: True
+$917: PopExecutionFlow (jump to popped addr)
+$918: Return expression:
+  $919: Nothing
+$920: EndOfScript
+
+=== BP_Placement_Functions_C::Generate Random Rotated Box Raycast (1174 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_Multiply_VectorFloat_ReturnValue@0x213bd285780
+  Expression:
+  $18: CallMath target=Multiply_VectorFloat@0x212d69ae540 (
+    $27: LocalVariable named Extent@0x213bd285500
+    $36: literal float 0.8999999761581421
+    $41: EndFunctionParms
+  )
+$42: CallMath target=BreakVector@0x212d69930b0 (
+  $51: LocalVariable named CallFunc_Multiply_VectorFloat_ReturnValue@0x213bd285780
+  $60: LocalVariable named CallFunc_BreakVector_X@0x213b4737070
+  $69: LocalVariable named CallFunc_BreakVector_Y@0x213b47370e0
+  $78: LocalVariable named CallFunc_BreakVector_Z@0x213b4737150
+  $87: EndFunctionParms
+)
+$88: Let (Variable = Expression)
+  Variable:
+  $97: LocalVariable named CallFunc_RandomFloatFromStream_ReturnValue@0x213b4737230
+  Expression:
+  $106: CallMath target=RandomFloatFromStream@0x212d69b3780 (
+    $115: LocalOutVariable named Random@0x213bd285400
+    $124: EndFunctionParms
+  )
+$125: Let (Variable = Expression)
+  Variable:
+  $134: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue@0x213b47372a0
+  Expression:
+  $143: CallMath target=Subtract_FloatFloat@0x212d69b98c0 (
+    $152: LocalVariable named CallFunc_RandomFloatFromStream_ReturnValue@0x213b4737230
+    $161: literal float 0.5
+    $166: EndFunctionParms
+  )
+$167: Let (Variable = Expression)
+  Variable:
+  $176: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x213b4737310
+  Expression:
+  $185: CallMath target=Multiply_FloatFloat@0x212d69ad1e0 (
+    $194: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue@0x213b47372a0
+    $203: literal float 2
+    $208: EndFunctionParms
+  )
+$209: Let (Variable = Expression)
+  Variable:
+  $218: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue2@0x213b4737380
+  Expression:
+  $227: CallMath target=Multiply_FloatFloat@0x212d69ad1e0 (
+    $236: LocalVariable named CallFunc_BreakVector_Y@0x213b47370e0
+    $245: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x213b4737310
+    $254: EndFunctionParms
+  )
+$255: Let (Variable = Expression)
+  Variable:
+  $264: LocalVariable named CallFunc_RandomFloatFromStream_ReturnValue2@0x213b47373f0
+  Expression:
+  $273: CallMath target=RandomFloatFromStream@0x212d69b3780 (
+    $282: LocalOutVariable named Random@0x213bd285400
+    $291: EndFunctionParms
+  )
+$292: Let (Variable = Expression)
+  Variable:
+  $301: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue2@0x213b4737460
+  Expression:
+  $310: CallMath target=Subtract_FloatFloat@0x212d69b98c0 (
+    $319: LocalVariable named CallFunc_RandomFloatFromStream_ReturnValue2@0x213b47373f0
+    $328: literal float 0.5
+    $333: EndFunctionParms
+  )
+$334: Let (Variable = Expression)
+  Variable:
+  $343: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue3@0x213b47374d0
+  Expression:
+  $352: CallMath target=Multiply_FloatFloat@0x212d69ad1e0 (
+    $361: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue2@0x213b4737460
+    $370: literal float 2
+    $375: EndFunctionParms
+  )
+$376: Let (Variable = Expression)
+  Variable:
+  $385: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue4@0x213b4737540
+  Expression:
+  $394: CallMath target=Multiply_FloatFloat@0x212d69ad1e0 (
+    $403: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue3@0x213b47374d0
+    $412: LocalVariable named CallFunc_BreakVector_X@0x213b4737070
+    $421: EndFunctionParms
+  )
+$422: Let (Variable = Expression)
+  Variable:
+  $431: LocalVariable named CallFunc_MakeVector_ReturnValue2@0x213bd285c80
+  Expression:
+  $440: CallMath target=MakeVector@0x212d69aa910 (
+    $449: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue4@0x213b4737540
+    $458: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue2@0x213b4737380
+    $467: literal float 0
+    $472: EndFunctionParms
+  )
+$473: Let (Variable = Expression)
+  Variable:
+  $482: LocalVariable named CallFunc_Add_VectorVector_ReturnValue2@0x213bd285d00
+  Expression:
+  $491: CallMath target=Add_VectorVector@0x212d6990750 (
+    $500: LocalVariable named Centre@0x213bd285480
+    $509: LocalVariable named CallFunc_MakeVector_ReturnValue2@0x213bd285c80
+    $518: EndFunctionParms
+  )
+$519: Let (Variable = Expression)
+  Variable:
+  $528: LocalVariable named Centre Point@0x213bd285d80
+  Expression:
+  $537: LocalVariable named CallFunc_Add_VectorVector_ReturnValue2@0x213bd285d00
+$546: Let (Variable = Expression)
+  Variable:
+  $555: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x213bd285700
+  Expression:
+  $564: CallMath target=MakeTransform@0x212d69aa650 (
+    $573: LocalVariable named Centre@0x213bd285480
+    $582: LocalVariable named Rotation@0x2136e0d2280
+    $591: literal vector (1,1,1)
+    $604: EndFunctionParms
+  )
+$605: Let (Variable = Expression)
+  Variable:
+  $614: LocalVariable named CallFunc_Multiply_VectorFloat_ReturnValue@0x213bd285780
+  Expression:
+  $623: CallMath target=Multiply_VectorFloat@0x212d69ae540 (
+    $632: LocalVariable named Extent@0x213bd285500
+    $641: literal float 0.8999999761581421
+    $646: EndFunctionParms
+  )
+$647: Let (Variable = Expression)
+  Variable:
+  $656: LocalVariable named CallFunc_Multiply_VectorFloat_ReturnValue2@0x213bd285800
+  Expression:
+  $665: CallMath target=Multiply_VectorFloat@0x212d69ae540 (
+    $674: LocalVariable named Centre@0x213bd285480
+    $683: literal float -1
+    $688: EndFunctionParms
+  )
+$689: CallMath target=BreakVector@0x212d69930b0 (
+  $698: LocalVariable named CallFunc_Multiply_VectorFloat_ReturnValue@0x213bd285780
+  $707: LocalVariable named CallFunc_BreakVector_X@0x213b4737070
+  $716: LocalVariable named CallFunc_BreakVector_Y@0x213b47370e0
+  $725: LocalVariable named CallFunc_BreakVector_Z@0x213b4737150
+  $734: EndFunctionParms
+)
+$735: Let (Variable = Expression)
+  Variable:
+  $744: LocalVariable named CallFunc_MakeTransform_ReturnValue2@0x213bd285880
+  Expression:
+  $753: CallMath target=MakeTransform@0x212d69aa650 (
+    $762: LocalVariable named CallFunc_Multiply_VectorFloat_ReturnValue2@0x213bd285800
+    $771: literal rotation (0,0,0)
+    $784: literal vector (1,1,1)
+    $797: EndFunctionParms
+  )
+$798: Let (Variable = Expression)
+  Variable:
+  $807: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue@0x213b47371c0
+  Expression:
+  $816: CallMath target=Divide_FloatFloat@0x212d6998eb0 (
+    $825: LocalVariable named CallFunc_BreakVector_Z@0x213b4737150
+    $834: literal float 2
+    $839: EndFunctionParms
+  )
+$840: Let (Variable = Expression)
+  Variable:
+  $849: LocalVariable named CallFunc_ComposeTransforms_ReturnValue@0x213bd285980
+  Expression:
+  $858: CallMath target=ComposeTransforms@0x212d6994640 (
+    $867: LocalVariable named CallFunc_MakeTransform_ReturnValue2@0x213bd285880
+    $876: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x213bd285700
+    $885: EndFunctionParms
+  )
+$886: Let (Variable = Expression)
+  Variable:
+  $895: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213bd285a00
+  Expression:
+  $904: CallMath target=MakeVector@0x212d69aa910 (
+    $913: literal float 0
+    $918: literal float 0
+    $923: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue@0x213b47371c0
+    $932: EndFunctionParms
+  )
+$933: Let (Variable = Expression)
+  Variable:
+  $942: LocalVariable named CallFunc_Subtract_VectorVector_ReturnValue@0x213bd285a80
+  Expression:
+  $951: CallMath target=Subtract_VectorVector@0x212d69ba7f0 (
+    $960: LocalVariable named Centre Point@0x213bd285d80
+    $969: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213bd285a00
+    $978: EndFunctionParms
+  )
+$979: Let (Variable = Expression)
+  Variable:
+  $988: LocalVariable named CallFunc_TransformLocation_ReturnValue@0x213bd285b00
+  Expression:
+  $997: CallMath target=TransformLocation@0x212d69bc150 (
+    $1006: LocalVariable named CallFunc_ComposeTransforms_ReturnValue@0x213bd285980
+    $1015: LocalVariable named CallFunc_Subtract_VectorVector_ReturnValue@0x213bd285a80
+    $1024: EndFunctionParms
+  )
+$1025: Let (Variable = Expression)
+  Variable:
+  $1034: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x213bd285b80
+  Expression:
+  $1043: CallMath target=Add_VectorVector@0x212d6990750 (
+    $1052: LocalVariable named Centre Point@0x213bd285d80
+    $1061: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213bd285a00
+    $1070: EndFunctionParms
+  )
+$1071: Let (Variable = Expression)
+  Variable:
+  $1080: LocalVariable named CallFunc_TransformLocation_ReturnValue2@0x213bd285c00
+  Expression:
+  $1089: CallMath target=TransformLocation@0x212d69bc150 (
+    $1098: LocalVariable named CallFunc_ComposeTransforms_ReturnValue@0x213bd285980
+    $1107: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x213bd285b80
+    $1116: EndFunctionParms
+  )
+$1117: Let (Variable = Expression)
+  Variable:
+  $1126: LocalOutVariable named Raycast Start@0x213bd285600
+  Expression:
+  $1135: LocalVariable named CallFunc_TransformLocation_ReturnValue2@0x213bd285c00
+$1144: Let (Variable = Expression)
+  Variable:
+  $1153: LocalOutVariable named Raycast End@0x213bd285680
+  Expression:
+  $1162: LocalVariable named CallFunc_TransformLocation_ReturnValue@0x213bd285b00
+$1171: Return expression:
+  $1172: Nothing
+$1173: EndOfScript
+
+=== BP_Placement_Functions_C::Detonate Charge (875 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named Spawn In@0x213bd286300
+  Expression:
+  $10: LocalVariable named Spawn@0x213bd285e00
+$19: Let (Variable = Expression)
+  Variable:
+  $28: LocalVariable named Position In@0x213bd286280
+  Expression:
+  $37: LocalVariable named Position@0x213bd285e80
+$46: Let (Variable = Expression)
+  Variable:
+  $55: LocalVariable named Radius In@0x213b4737a80
+  Expression:
+  $64: LocalVariable named Radius@0x213b4737620
+$73: Let (Variable = Expression)
+  Variable:
+  $82: LocalVariable named Radius Overlap In@0x213b4737a10
+  Expression:
+  $91: LocalVariable named Radius Overlap@0x213b4737690
+$100: Let (Variable = Expression)
+  Variable:
+  $109: LocalVariable named Seed In@0x213b47379a0
+  Expression:
+  $118: LocalVariable named Seed@0x213b4737700
+$127: Let (Variable = Expression)
+  Variable:
+  $136: LocalVariable named Blast Radii In@0x213bd286400
+  Expression:
+  $145: LocalOutVariable named Blast Radii@0x213bd286680
+$154: VirtualFunction call "Set Spawn Properties" (
+  $167: LocalVariable named Spawn In@0x213bd286300
+  $176: LocalVariable named Seed In@0x213b47379a0
+  $185: LocalVariable named Radius In@0x213b4737a80
+  $194: LocalVariable named __WorldContext@0x213bd285f00
+  $203: LocalVariable named CallFunc_Set_Spawn_Properties_Cast_Success@0x213bd286200
+  $212: EndFunctionParms
+)
+$213: JumpIfNot -> 0x2f1, cond:
+  $218: LocalVariable named CallFunc_Set_Spawn_Properties_Cast_Success@0x213bd286200
+$227: CallMath target=BreakVector@0x212d69930b0 (
+  $236: LocalVariable named Position In@0x213bd286280
+  $245: LocalVariable named CallFunc_BreakVector_X@0x213b4737770
+  $254: LocalVariable named CallFunc_BreakVector_Y@0x213b47377e0
+  $263: LocalVariable named CallFunc_BreakVector_Z@0x213b4737850
+  $272: EndFunctionParms
+)
+$273: Let (Variable = Expression)
+  Variable:
+  $282: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x213b47378c0
+  Expression:
+  $291: CallMath target=Multiply_FloatFloat@0x212d69ad1e0 (
+    $300: LocalVariable named Radius In@0x213b4737a80
+    $309: LocalVariable named Radius Overlap In@0x213b4737a10
+    $318: EndFunctionParms
+  )
+$319: Let (Variable = Expression)
+  Variable:
+  $328: StructMemberContext prop=idx:6476@0x212d63789b0
+    Expression to struct:
+    $337: LocalVariable named K2Node_MakeStruct_LinearColor@0x213bd286180
+  Expression:
+  $346: LocalVariable named CallFunc_BreakVector_X@0x213b4737770
+$355: Let (Variable = Expression)
+  Variable:
+  $364: StructMemberContext prop=idx:6465@0x212d6378940
+    Expression to struct:
+    $373: LocalVariable named K2Node_MakeStruct_LinearColor@0x213bd286180
+  Expression:
+  $382: LocalVariable named CallFunc_BreakVector_Y@0x213b47377e0
+$391: Let (Variable = Expression)
+  Variable:
+  $400: StructMemberContext prop=idx:6460@0x212d63788d0
+    Expression to struct:
+    $409: LocalVariable named K2Node_MakeStruct_LinearColor@0x213bd286180
+  Expression:
+  $418: LocalVariable named CallFunc_BreakVector_Z@0x213b4737850
+$427: Let (Variable = Expression)
+  Variable:
+  $436: StructMemberContext prop=idx:6459@0x212d6378860
+    Expression to struct:
+    $445: LocalVariable named K2Node_MakeStruct_LinearColor@0x213bd286180
+  Expression:
+  $454: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x213b47378c0
+$463: Let (Variable = Expression)
+  Variable:
+  $472: LocalVariable named CallFunc_Array_Add_ReturnValue@0x213b4737930
+  Expression:
+  $481: Context
+    ObjectExpression:
+    $482: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Add_ReturnValue@0x213b4737930
+    ContextExpression:
+    $503: FinalFunction target=Array_Add@0x212d6986810 (
+      $512: LocalVariable named Blast Radii In@0x213bd286400
+      $521: LocalVariable named K2Node_MakeStruct_LinearColor@0x213bd286180
+      $530: EndFunctionParms
+    )
+$531: LetBool (Variable = Expression)
+  Variable:
+  $532: LocalVariable named CallFunc_DoesImplementInterface_ReturnValue@0x213bd286100
+  Expression:
+  $541: Context
+    ObjectExpression:
+    $542: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_DoesImplementInterface_ReturnValue@0x213bd286100
+    ContextExpression:
+    $563: FinalFunction target=DoesImplementInterface@0x212d63a71e0 (
+      $572: LocalVariable named Spawn In@0x213bd286300
+      $581: ObjectConst Interface_Bomb_C@0x213b3275a00
+      $590: EndFunctionParms
+    )
+$591: JumpIfNot -> 0x31a, cond:
+  $596: LocalVariable named CallFunc_DoesImplementInterface_ReturnValue@0x213bd286100
+$605: Let (Variable = Expression)
+  Variable:
+  $614: LocalVariable named UniqueObjectNameForCooking_AsInterface_Bomb@0x213bd285f80
+  Expression:
+  $623: ObjToInterfaceCast to Interface_Bomb_C@0x213b3275a00
+  $632: LocalVariable named Spawn In@0x213bd286300
+$641: Let (Variable = Expression)
+  Variable:
+  $650: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x213bd286080
+  Expression:
+  $659: PrimitiveCast type=73
+    Argument:
+    $661: LocalVariable named UniqueObjectNameForCooking_AsInterface_Bomb@0x213bd285f80
+$670: JumpIfNot -> 0x2d1, cond:
+  $675: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x213bd286080
+$684: Context
+  ObjectExpression:
+  $685: InterfaceContext:
+  $686: LocalVariable named UniqueObjectNameForCooking_AsInterface_Bomb@0x213bd285f80
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $707: VirtualFunction call "Interface Trigger" (
+    $720: EndFunctionParms
+  )
+$721: Let (Variable = Expression)
+  Variable:
+  $730: LocalOutVariable named Blast Radii Out@0x213bd286580
+  Expression:
+  $739: LocalVariable named Blast Radii In@0x213bd286400
+$748: Jump to offset 0x368
+$753: Context
+  ObjectExpression:
+  $754: LocalVariable named Spawn In@0x213bd286300
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $775: VirtualFunction call "K2_DestroyActor" (
+    $788: EndFunctionParms
+  )
+$789: Jump to offset 0x2d1
+$794: SetArray
+  $795: LocalVariable named K2Node_MakeArray_Array@0x213bd286480
+  $804: literal name "Placement"
+  $817: EndArray
+$818: Let (Variable = Expression)
+  Variable:
+  $827: Context
+    ObjectExpression:
+    $828: LocalVariable named Spawn In@0x213bd286300
+    SkipBytes: 0x9
+    RValueProperty: Tags@0x212d638d060
+    ContextExpression:
+    $849: InstanceVariable named Tags@0x212d638d060
+  Expression:
+  $858: LocalVariable named K2Node_MakeArray_Array@0x213bd286480
+$867: Jump to offset 0x2d1
+$872: Return expression:
+  $873: Nothing
+$874: EndOfScript
+
+=== BP_Placement_Functions_C::Does A Delete B (851 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named idx:6459@0x213b4737cb0
+  Expression:
+  $18: LocalVariable named A String@0x213b4737b60
+$27: Let (Variable = Expression)
+  Variable:
+  $36: LocalVariable named idx:6460@0x213b4737c40
+  Expression:
+  $45: LocalVariable named B String@0x213b4737bd0
+$54: LetBool (Variable = Expression)
+  Variable:
+  $55: LocalVariable named CallFunc_NotEqual_StrStr_ReturnValue@0x213bd286880
+  Expression:
+  $64: Context
+    ObjectExpression:
+    $65: ObjectConst Default__KismetStringLibrary@0x212d6f7ecd0
+    SkipBytes: 0x1e
+    RValueProperty: CallFunc_NotEqual_StrStr_ReturnValue@0x213bd286880
+    ContextExpression:
+    $86: FinalFunction target=NotEqual_StrStr@0x212d69c5560 (
+      $95: LocalVariable named idx:6460@0x213b4737c40
+      $104: literal ansi string "Important"
+      $115: EndFunctionParms
+    )
+$116: LetBool (Variable = Expression)
+  Variable:
+  $117: LocalVariable named CallFunc_EqualEqual_StriStri_ReturnValue@0x213bd286900
+  Expression:
+  $126: Context
+    ObjectExpression:
+    $127: ObjectConst Default__KismetStringLibrary@0x212d6f7ecd0
+    SkipBytes: 0x1f
+    RValueProperty: CallFunc_EqualEqual_StriStri_ReturnValue@0x213bd286900
+    ContextExpression:
+    $148: FinalFunction target=EqualEqual_StriStri@0x212d69c33a0 (
+      $157: LocalVariable named idx:6460@0x213b4737c40
+      $166: literal ansi string "Small Rock"
+      $178: EndFunctionParms
+    )
+$179: LetBool (Variable = Expression)
+  Variable:
+  $180: LocalVariable named CallFunc_EqualEqual_StriStri_ReturnValue2@0x213bd286980
+  Expression:
+  $189: Context
+    ObjectExpression:
+    $190: ObjectConst Default__KismetStringLibrary@0x212d6f7ecd0
+    SkipBytes: 0x19
+    RValueProperty: CallFunc_EqualEqual_StriStri_ReturnValue2@0x213bd286980
+    ContextExpression:
+    $211: FinalFunction target=EqualEqual_StriStri@0x212d69c33a0 (
+      $220: LocalVariable named idx:6459@0x213b4737cb0
+      $229: literal ansi string "Tree"
+      $235: EndFunctionParms
+    )
+$236: LetBool (Variable = Expression)
+  Variable:
+  $237: LocalVariable named CallFunc_BooleanOR_ReturnValue@0x213bd286a00
+  Expression:
+  $246: CallMath target=BooleanOR@0x212d69917b0 (
+    $255: LocalVariable named CallFunc_EqualEqual_StriStri_ReturnValue@0x213bd286900
+    $264: False
+    $265: EndFunctionParms
+  )
+$266: LetBool (Variable = Expression)
+  Variable:
+  $267: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x213bd286a80
+  Expression:
+  $276: CallMath target=BooleanAND@0x212d69910f0 (
+    $285: LocalVariable named CallFunc_EqualEqual_StriStri_ReturnValue2@0x213bd286980
+    $294: LocalVariable named CallFunc_BooleanOR_ReturnValue@0x213bd286a00
+    $303: EndFunctionParms
+  )
+$304: LetBool (Variable = Expression)
+  Variable:
+  $305: LocalVariable named CallFunc_EqualEqual_StriStri_ReturnValue3@0x213bd286b00
+  Expression:
+  $314: Context
+    ObjectExpression:
+    $315: ObjectConst Default__KismetStringLibrary@0x212d6f7ecd0
+    SkipBytes: 0x1a
+    RValueProperty: CallFunc_EqualEqual_StriStri_ReturnValue3@0x213bd286b00
+    ContextExpression:
+    $336: FinalFunction target=EqualEqual_StriStri@0x212d69c33a0 (
+      $345: LocalVariable named idx:6460@0x213b4737c40
+      $354: literal ansi string "Grass"
+      $361: EndFunctionParms
+    )
+$362: LetBool (Variable = Expression)
+  Variable:
+  $363: LocalVariable named CallFunc_EqualEqual_StriStri_ReturnValue4@0x213bd286b80
+  Expression:
+  $372: Context
+    ObjectExpression:
+    $373: ObjectConst Default__KismetStringLibrary@0x212d6f7ecd0
+    SkipBytes: 0x19
+    RValueProperty: CallFunc_EqualEqual_StriStri_ReturnValue4@0x213bd286b80
+    ContextExpression:
+    $394: FinalFunction target=EqualEqual_StriStri@0x212d69c33a0 (
+      $403: LocalVariable named idx:6460@0x213b4737c40
+      $412: literal ansi string "Bush"
+      $418: EndFunctionParms
+    )
+$419: LetBool (Variable = Expression)
+  Variable:
+  $420: LocalVariable named CallFunc_EqualEqual_StriStri_ReturnValue5@0x213bd286c00
+  Expression:
+  $429: Context
+    ObjectExpression:
+    $430: ObjectConst Default__KismetStringLibrary@0x212d6f7ecd0
+    SkipBytes: 0x19
+    RValueProperty: CallFunc_EqualEqual_StriStri_ReturnValue5@0x213bd286c00
+    ContextExpression:
+    $451: FinalFunction target=EqualEqual_StriStri@0x212d69c33a0 (
+      $460: LocalVariable named idx:6460@0x213b4737c40
+      $469: literal ansi string "Tree"
+      $475: EndFunctionParms
+    )
+$476: LetBool (Variable = Expression)
+  Variable:
+  $477: LocalVariable named CallFunc_BooleanOR_ReturnValue2@0x213bd286c80
+  Expression:
+  $486: CallMath target=BooleanOR@0x212d69917b0 (
+    $495: LocalVariable named CallFunc_EqualEqual_StriStri_ReturnValue5@0x213bd286c00
+    $504: LocalVariable named CallFunc_EqualEqual_StriStri_ReturnValue4@0x213bd286b80
+    $513: EndFunctionParms
+  )
+$514: LetBool (Variable = Expression)
+  Variable:
+  $515: LocalVariable named CallFunc_EqualEqual_StriStri_ReturnValue6@0x213bd286d00
+  Expression:
+  $524: Context
+    ObjectExpression:
+    $525: ObjectConst Default__KismetStringLibrary@0x212d6f7ecd0
+    SkipBytes: 0x1e
+    RValueProperty: CallFunc_EqualEqual_StriStri_ReturnValue6@0x213bd286d00
+    ContextExpression:
+    $546: FinalFunction target=EqualEqual_StriStri@0x212d69c33a0 (
+      $555: LocalVariable named idx:6459@0x213b4737cb0
+      $564: literal ansi string "Important"
+      $575: EndFunctionParms
+    )
+$576: LetBool (Variable = Expression)
+  Variable:
+  $577: LocalVariable named CallFunc_BooleanOR_ReturnValue3@0x213bd286d80
+  Expression:
+  $586: CallMath target=BooleanOR@0x212d69917b0 (
+    $595: LocalVariable named CallFunc_BooleanOR_ReturnValue2@0x213bd286c80
+    $604: LocalVariable named CallFunc_EqualEqual_StriStri_ReturnValue3@0x213bd286b00
+    $613: EndFunctionParms
+  )
+$614: LetBool (Variable = Expression)
+  Variable:
+  $615: LocalVariable named CallFunc_BooleanAND_ReturnValue2@0x213bd286e00
+  Expression:
+  $624: CallMath target=BooleanAND@0x212d69910f0 (
+    $633: LocalVariable named CallFunc_EqualEqual_StriStri_ReturnValue6@0x213bd286d00
+    $642: LocalVariable named CallFunc_NotEqual_StrStr_ReturnValue@0x213bd286880
+    $651: EndFunctionParms
+  )
+$652: LetBool (Variable = Expression)
+  Variable:
+  $653: LocalVariable named CallFunc_EqualEqual_StriStri_ReturnValue7@0x213bd286e80
+  Expression:
+  $662: Context
+    ObjectExpression:
+    $663: ObjectConst Default__KismetStringLibrary@0x212d6f7ecd0
+    SkipBytes: 0x1f
+    RValueProperty: CallFunc_EqualEqual_StriStri_ReturnValue7@0x213bd286e80
+    ContextExpression:
+    $684: FinalFunction target=EqualEqual_StriStri@0x212d69c33a0 (
+      $693: LocalVariable named idx:6459@0x213b4737cb0
+      $702: literal ansi string "Large Rock"
+      $714: EndFunctionParms
+    )
+$715: LetBool (Variable = Expression)
+  Variable:
+  $716: LocalVariable named CallFunc_BooleanAND_ReturnValue3@0x213bd286f00
+  Expression:
+  $725: CallMath target=BooleanAND@0x212d69910f0 (
+    $734: LocalVariable named CallFunc_EqualEqual_StriStri_ReturnValue7@0x213bd286e80
+    $743: LocalVariable named CallFunc_BooleanOR_ReturnValue3@0x213bd286d80
+    $752: EndFunctionParms
+  )
+$753: LetBool (Variable = Expression)
+  Variable:
+  $754: LocalVariable named CallFunc_BooleanOR_ReturnValue4@0x213bd286f80
+  Expression:
+  $763: CallMath target=BooleanOR@0x212d69917b0 (
+    $772: LocalVariable named CallFunc_BooleanAND_ReturnValue3@0x213bd286f00
+    $781: LocalVariable named CallFunc_BooleanAND_ReturnValue2@0x213bd286e00
+    $790: EndFunctionParms
+  )
+$791: LetBool (Variable = Expression)
+  Variable:
+  $792: LocalVariable named CallFunc_BooleanOR_ReturnValue5@0x213bd287000
+  Expression:
+  $801: CallMath target=BooleanOR@0x212d69917b0 (
+    $810: LocalVariable named CallFunc_BooleanOR_ReturnValue4@0x213bd286f80
+    $819: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x213bd286a80
+    $828: EndFunctionParms
+  )
+$829: LetBool (Variable = Expression)
+  Variable:
+  $830: LocalOutVariable named Return@0x213bd286780
+  Expression:
+  $839: LocalVariable named CallFunc_BooleanOR_ReturnValue5@0x213bd287000
+$848: Return expression:
+  $849: Nothing
+$850: EndOfScript
+
+=== BP_Placement_Functions_C::Get Actor Placement Asset Type (959 bytes) ===
+$0: FlowStack.Push(0x3bc)
+$5: LetBool (Variable = Expression)
+  Variable:
+  $6: LocalVariable named CallFunc_IsValid_ReturnValue@0x213bd287300
+  Expression:
+  $15: Context
+    ObjectExpression:
+    $16: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x213bd287300
+    ContextExpression:
+    $37: FinalFunction target=IsValid@0x212d63ae380 (
+      $46: LocalVariable named Input Actor@0x213bd287100
+      $55: EndFunctionParms
+    )
+$56: PopExecutionFlowIfNot, cond:
+$57: LocalVariable named CallFunc_IsValid_ReturnValue@0x213bd287300
+$66: LetBool (Variable = Expression)
+  Variable:
+  $67: LocalVariable named Found Tag@0x213bd287600
+  Expression:
+  $76: False
+$77: LetBool (Variable = Expression)
+  Variable:
+  $78: LocalVariable named Temp_bool_True_if_break_was_hit_Variable@0x213bd287380
+  Expression:
+  $87: False
+$88: Let (Variable = Expression)
+  Variable:
+  $97: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b4737f50
+  Expression:
+  $106: literal int32 0
+$111: Let (Variable = Expression)
+  Variable:
+  $120: LocalVariable named Temp_int_Array_Index_Variable@0x213b4737e00
+  Expression:
+  $129: literal int32 0
+$134: Let (Variable = Expression)
+  Variable:
+  $143: LocalVariable named CallFunc_Array_Length_ReturnValue@0x213b4737d90
+  Expression:
+  $152: Context
+    ObjectExpression:
+    $153: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x29
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x213b4737d90
+    ContextExpression:
+    $174: FinalFunction target=Array_Length@0x212d6987df0 (
+      $183: Context
+        ObjectExpression:
+        $184: LocalVariable named Input Actor@0x213bd287100
+        SkipBytes: 0x9
+        RValueProperty: Tags@0x212d638d060
+        ContextExpression:
+        $205: InstanceVariable named Tags@0x212d638d060
+      $214: EndFunctionParms
+    )
+$215: LetBool (Variable = Expression)
+  Variable:
+  $216: LocalVariable named CallFunc_Not_PreBool_ReturnValue@0x213bd287400
+  Expression:
+  $225: CallMath target=Not_PreBool@0x212d69b0310 (
+    $234: LocalVariable named Temp_bool_True_if_break_was_hit_Variable@0x213bd287380
+    $243: EndFunctionParms
+  )
+$244: LetBool (Variable = Expression)
+  Variable:
+  $245: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x213bd287480
+  Expression:
+  $254: CallMath target=Less_IntInt@0x212d69a5ed0 (
+    $263: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b4737f50
+    $272: LocalVariable named CallFunc_Array_Length_ReturnValue@0x213b4737d90
+    $281: EndFunctionParms
+  )
+$282: LetBool (Variable = Expression)
+  Variable:
+  $283: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x213bd287500
+  Expression:
+  $292: CallMath target=BooleanAND@0x212d69910f0 (
+    $301: LocalVariable named CallFunc_Not_PreBool_ReturnValue@0x213bd287400
+    $310: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x213bd287480
+    $319: EndFunctionParms
+  )
+$320: JumpIfNot -> 0x33f, cond:
+  $325: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x213bd287500
+$334: Let (Variable = Expression)
+  Variable:
+  $343: LocalVariable named Temp_int_Array_Index_Variable@0x213b4737e00
+  Expression:
+  $352: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b4737f50
+$361: FlowStack.Push(0x372)
+$366: Context
+  ObjectExpression:
+  $367: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x3b
+  RValueProperty: (null)
+  ContextExpression:
+  $388: FinalFunction target=Array_Get@0x212d69876b0 (
+    $397: Context
+      ObjectExpression:
+      $398: LocalVariable named Input Actor@0x213bd287100
+      SkipBytes: 0x9
+      RValueProperty: Tags@0x212d638d060
+      ContextExpression:
+      $419: InstanceVariable named Tags@0x212d638d060
+    $428: LocalVariable named Temp_int_Array_Index_Variable@0x213b4737e00
+    $437: LocalVariable named CallFunc_Array_Get_Item@0x213b4737e70
+    $446: EndFunctionParms
+  )
+$447: Let (Variable = Expression)
+  Variable:
+  $456: LocalVariable named CallFunc_Conv_NameToString_ReturnValue@0x213b4737ee0
+  Expression:
+  $465: Context
+    ObjectExpression:
+    $466: ObjectConst Default__KismetStringLibrary@0x212d6f7ecd0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Conv_NameToString_ReturnValue@0x213b4737ee0
+    ContextExpression:
+    $487: FinalFunction target=Conv_NameToString@0x212d69c1f80 (
+      $496: LocalVariable named CallFunc_Array_Get_Item@0x213b4737e70
+      $505: EndFunctionParms
+    )
+$506: SetArray
+  $507: LocalVariable named K2Node_MakeArray_Array@0x213bd287680
+  $516: literal ansi string "Grass"
+  $523: literal ansi string "Bush"
+  $529: literal ansi string "Tree"
+  $535: literal ansi string "Small Rock"
+  $547: literal ansi string "Large Rock"
+  $559: literal ansi string "Important"
+  $570: EndArray
+$571: LetBool (Variable = Expression)
+  Variable:
+  $572: LocalVariable named CallFunc_Array_Contains_ReturnValue@0x213bd287580
+  Expression:
+  $581: Context
+    ObjectExpression:
+    $582: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Contains_ReturnValue@0x213bd287580
+    ContextExpression:
+    $603: FinalFunction target=Array_Contains@0x212d6987180 (
+      $612: LocalVariable named K2Node_MakeArray_Array@0x213bd287680
+      $621: LocalVariable named CallFunc_Conv_NameToString_ReturnValue@0x213b4737ee0
+      $630: EndFunctionParms
+    )
+$631: PopExecutionFlowIfNot, cond:
+$632: LocalVariable named CallFunc_Array_Contains_ReturnValue@0x213bd287580
+$641: LetBool (Variable = Expression)
+  Variable:
+  $642: LocalVariable named Found Tag@0x213bd287600
+  Expression:
+  $651: True
+$652: Context
+  ObjectExpression:
+  $653: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x3b
+  RValueProperty: (null)
+  ContextExpression:
+  $674: FinalFunction target=Array_Get@0x212d69876b0 (
+    $683: Context
+      ObjectExpression:
+      $684: LocalVariable named Input Actor@0x213bd287100
+      SkipBytes: 0x9
+      RValueProperty: Tags@0x212d638d060
+      ContextExpression:
+      $705: InstanceVariable named Tags@0x212d638d060
+    $714: LocalVariable named Temp_int_Array_Index_Variable@0x213b4737e00
+    $723: LocalVariable named CallFunc_Array_Get_Item@0x213b4737e70
+    $732: EndFunctionParms
+  )
+$733: Let (Variable = Expression)
+  Variable:
+  $742: LocalVariable named CallFunc_Conv_NameToString_ReturnValue@0x213b4737ee0
+  Expression:
+  $751: Context
+    ObjectExpression:
+    $752: ObjectConst Default__KismetStringLibrary@0x212d6f7ecd0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Conv_NameToString_ReturnValue@0x213b4737ee0
+    ContextExpression:
+    $773: FinalFunction target=Conv_NameToString@0x212d69c1f80 (
+      $782: LocalVariable named CallFunc_Array_Get_Item@0x213b4737e70
+      $791: EndFunctionParms
+    )
+$792: Let (Variable = Expression)
+  Variable:
+  $801: LocalVariable named Placement Asset Tag@0x213b4738030
+  Expression:
+  $810: LocalVariable named CallFunc_Conv_NameToString_ReturnValue@0x213b4737ee0
+$819: LetBool (Variable = Expression)
+  Variable:
+  $820: LocalVariable named Temp_bool_True_if_break_was_hit_Variable@0x213bd287380
+  Expression:
+  $829: True
+$830: PopExecutionFlow (jump to popped addr)
+$831: LetBool (Variable = Expression)
+  Variable:
+  $832: LocalOutVariable named Returning Tag@0x213bd287280
+  Expression:
+  $841: LocalVariable named Found Tag@0x213bd287600
+$850: Let (Variable = Expression)
+  Variable:
+  $859: LocalOutVariable named Asset Tag@0x213b4737d20
+  Expression:
+  $868: LocalVariable named Placement Asset Tag@0x213b4738030
+$877: Jump to offset 0x3bc
+$882: Let (Variable = Expression)
+  Variable:
+  $891: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x213b4737fc0
+  Expression:
+  $900: CallMath target=Add_IntInt@0x212d698fa30 (
+    $909: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b4737f50
+    $918: literal int32 1
+    $923: EndFunctionParms
+  )
+$924: Let (Variable = Expression)
+  Variable:
+  $933: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b4737f50
+  Expression:
+  $942: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x213b4737fc0
+$951: Jump to offset 0x86
+$956: Return expression:
+  $957: Nothing
+$958: EndOfScript
+
+=== BP_Placement_Functions_C::Check Actor Overlap (1745 bytes) ===
+$0: FlowStack.Push(0x6ce)
+$5: LetObj (Variable = Expression)
+  Variable:
+  $6: LocalVariable named In Actor@0x213bd288280
+  Expression:
+  $15: LocalVariable named Input Actor@0x213bd287700
+$24: LetBool (Variable = Expression)
+  Variable:
+  $25: LocalVariable named Out Delete@0x213bd288200
+  Expression:
+  $34: False
+$35: VirtualFunction call "Get Actor Placement Asset Type" (
+  $48: LocalVariable named In Actor@0x213bd288280
+  $57: LocalVariable named __WorldContext@0x213bd287780
+  $66: LocalVariable named CallFunc_Get_Actor_Placement_Asset_Type_Returning_Tag@0x213bd287b80
+  $75: LocalVariable named CallFunc_Get_Actor_Placement_Asset_Type_Asset_Tag@0x213b47382d0
+  $84: EndFunctionParms
+)
+$85: PopExecutionFlowIfNot, cond:
+$86: LocalVariable named CallFunc_Get_Actor_Placement_Asset_Type_Returning_Tag@0x213bd287b80
+$95: Let (Variable = Expression)
+  Variable:
+  $104: LocalVariable named Actor Tag@0x213b4738650
+  Expression:
+  $113: LocalVariable named CallFunc_Get_Actor_Placement_Asset_Type_Asset_Tag@0x213b47382d0
+$122: LetBool (Variable = Expression)
+  Variable:
+  $123: LocalVariable named Temp_bool_True_if_break_was_hit_Variable@0x213bd287880
+  Expression:
+  $132: False
+$133: Let (Variable = Expression)
+  Variable:
+  $142: LocalVariable named Temp_int_Loop_Counter_Variable2@0x213b4738340
+  Expression:
+  $151: literal int32 0
+$156: Let (Variable = Expression)
+  Variable:
+  $165: LocalVariable named Temp_int_Array_Index_Variable@0x213b4738110
+  Expression:
+  $174: literal int32 0
+$179: LetBool (Variable = Expression)
+  Variable:
+  $180: LocalVariable named CallFunc_Not_PreBool_ReturnValue@0x213bd287900
+  Expression:
+  $189: CallMath target=Not_PreBool@0x212d69b0310 (
+    $198: LocalVariable named Temp_bool_True_if_break_was_hit_Variable@0x213bd287880
+    $207: EndFunctionParms
+  )
+$208: Let (Variable = Expression)
+  Variable:
+  $217: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x213bd288580
+  Expression:
+  $226: Context
+    ObjectExpression:
+    $227: LocalVariable named In Actor@0x213bd288280
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetComponentsByClass_ReturnValue@0x213bd288580
+    ContextExpression:
+    $248: FinalFunction target=GetComponentsByClass@0x212d63826c0 (
+      $257: ObjectConst StaticMeshComponent@0x212d5a09140
+      $266: EndFunctionParms
+    )
+$267: Let (Variable = Expression)
+  Variable:
+  $276: LocalVariable named CallFunc_Array_Length_ReturnValue@0x213b4738420
+  Expression:
+  $285: Context
+    ObjectExpression:
+    $286: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x213b4738420
+    ContextExpression:
+    $307: FinalFunction target=Array_Length@0x212d6987df0 (
+      $316: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x213bd288580
+      $325: EndFunctionParms
+    )
+$326: LetBool (Variable = Expression)
+  Variable:
+  $327: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x213bd287e00
+  Expression:
+  $336: CallMath target=Less_IntInt@0x212d69a5ed0 (
+    $345: LocalVariable named Temp_int_Loop_Counter_Variable2@0x213b4738340
+    $354: LocalVariable named CallFunc_Array_Length_ReturnValue@0x213b4738420
+    $363: EndFunctionParms
+  )
+$364: LetBool (Variable = Expression)
+  Variable:
+  $365: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x213bd287f80
+  Expression:
+  $374: CallMath target=BooleanAND@0x212d69910f0 (
+    $383: LocalVariable named CallFunc_Not_PreBool_ReturnValue@0x213bd287900
+    $392: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x213bd287e00
+    $401: EndFunctionParms
+  )
+$402: JumpIfNot -> 0x1da, cond:
+  $407: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x213bd287f80
+$416: Let (Variable = Expression)
+  Variable:
+  $425: LocalVariable named Temp_int_Array_Index_Variable@0x213b4738110
+  Expression:
+  $434: LocalVariable named Temp_int_Loop_Counter_Variable2@0x213b4738340
+$443: FlowStack.Push(0x20d)
+$448: JumpIfNot -> 0x257, cond:
+  $453: LocalVariable named Out Delete@0x213bd288200
+$462: LetBool (Variable = Expression)
+  Variable:
+  $463: LocalVariable named Temp_bool_True_if_break_was_hit_Variable@0x213bd287880
+  Expression:
+  $472: True
+$473: PopExecutionFlow (jump to popped addr)
+$474: LetBool (Variable = Expression)
+  Variable:
+  $475: LocalOutVariable named Delete Actor@0x213bd287800
+  Expression:
+  $484: LocalVariable named Out Delete@0x213bd288200
+$493: Let (Variable = Expression)
+  Variable:
+  $502: LocalOutVariable named Overlaps to Delete@0x213bd288880
+  Expression:
+  $511: LocalVariable named Delete Overlaps@0x213bd288380
+$520: Jump to offset 0x6ce
+$525: Let (Variable = Expression)
+  Variable:
+  $534: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x213b47383b0
+  Expression:
+  $543: CallMath target=Add_IntInt@0x212d698fa30 (
+    $552: LocalVariable named Temp_int_Loop_Counter_Variable2@0x213b4738340
+    $561: literal int32 1
+    $566: EndFunctionParms
+  )
+$567: Let (Variable = Expression)
+  Variable:
+  $576: LocalVariable named Temp_int_Loop_Counter_Variable2@0x213b4738340
+  Expression:
+  $585: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x213b47383b0
+$594: Jump to offset 0xb3
+$599: Let (Variable = Expression)
+  Variable:
+  $608: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x213bd288580
+  Expression:
+  $617: Context
+    ObjectExpression:
+    $618: LocalVariable named In Actor@0x213bd288280
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetComponentsByClass_ReturnValue@0x213bd288580
+    ContextExpression:
+    $639: FinalFunction target=GetComponentsByClass@0x212d63826c0 (
+      $648: ObjectConst StaticMeshComponent@0x212d5a09140
+      $657: EndFunctionParms
+    )
+$658: Context
+  ObjectExpression:
+  $659: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $680: FinalFunction target=Array_Get@0x212d69876b0 (
+    $689: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x213bd288580
+    $698: LocalVariable named Temp_int_Array_Index_Variable@0x213b4738110
+    $707: LocalVariable named CallFunc_Array_Get_Item@0x213bd287c80
+    $716: EndFunctionParms
+  )
+$717: Let (Variable = Expression)
+  Variable:
+  $726: LocalVariable named K2Node_DynamicCast_AsStatic_Mesh_Component@0x213bd287d00
+  Expression:
+  $735: DynamicCast to StaticMeshComponent@0x212d5a09140 of expr:
+  $744: LocalVariable named CallFunc_Array_Get_Item@0x213bd287c80
+$753: Let (Variable = Expression)
+  Variable:
+  $762: LocalVariable named K2Node_DynamicCast_bSuccess@0x213bd287d80
+  Expression:
+  $771: PrimitiveCast type=71
+    Argument:
+    $773: LocalVariable named K2Node_DynamicCast_AsStatic_Mesh_Component@0x213bd287d00
+$782: PopExecutionFlowIfNot, cond:
+$783: LocalVariable named K2Node_DynamicCast_bSuccess@0x213bd287d80
+$792: SetArray
+  $793: LocalVariable named K2Node_MakeArray_Array@0x213bd288780
+  $802: LocalVariable named Input Actor@0x213bd287700
+  $811: EndArray
+$812: SetArray
+  $813: LocalVariable named K2Node_MakeArray_Array2@0x213bd288680
+  $822: literal byte 1
+  $824: literal byte 0
+  $826: EndArray
+$827: Let (Variable = Expression)
+  Variable:
+  $836: LocalVariable named CallFunc_GetTransform_ReturnValue@0x213bd287c00
+  Expression:
+  $845: Context
+    ObjectExpression:
+    $846: LocalVariable named In Actor@0x213bd288280
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetTransform_ReturnValue@0x213bd287c00
+    ContextExpression:
+    $867: FinalFunction target=GetTransform@0x212d6384700 (
+      $876: EndFunctionParms
+    )
+$877: SetArray
+  $878: LocalVariable named CallFunc_ComponentOverlapActors_NEW_OutActors@0x213bd288480
+  $887: EndArray
+$888: LetBool (Variable = Expression)
+  Variable:
+  $889: LocalVariable named CallFunc_ComponentOverlapActors_NEW_ReturnValue@0x213bd287e80
+  Expression:
+  $898: Context
+    ObjectExpression:
+    $899: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x40
+    RValueProperty: CallFunc_ComponentOverlapActors_NEW_ReturnValue@0x213bd287e80
+    ContextExpression:
+    $920: FinalFunction target=ComponentOverlapActors_NEW@0x212d63a5340 (
+      $929: LocalVariable named K2Node_DynamicCast_AsStatic_Mesh_Component@0x213bd287d00
+      $938: LocalVariable named CallFunc_GetTransform_ReturnValue@0x213bd287c00
+      $947: LocalVariable named K2Node_MakeArray_Array2@0x213bd288680
+      $956: ObjectConst Actor@0x212af7adc80
+      $965: LocalVariable named K2Node_MakeArray_Array@0x213bd288780
+      $974: LocalVariable named CallFunc_ComponentOverlapActors_NEW_OutActors@0x213bd288480
+      $983: EndFunctionParms
+    )
+$984: LetBool (Variable = Expression)
+  Variable:
+  $985: LocalVariable named Temp_bool_True_if_break_was_hit_Variable2@0x213bd287980
+  Expression:
+  $994: False
+$995: Let (Variable = Expression)
+  Variable:
+  $1004: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b4738180
+  Expression:
+  $1013: literal int32 0
+$1018: Let (Variable = Expression)
+  Variable:
+  $1027: LocalVariable named Temp_int_Array_Index_Variable2@0x213b4738260
+  Expression:
+  $1036: literal int32 0
+$1041: LetBool (Variable = Expression)
+  Variable:
+  $1042: LocalVariable named CallFunc_Not_PreBool_ReturnValue2@0x213bd287a00
+  Expression:
+  $1051: CallMath target=Not_PreBool@0x212d69b0310 (
+    $1060: LocalVariable named Temp_bool_True_if_break_was_hit_Variable2@0x213bd287980
+    $1069: EndFunctionParms
+  )
+$1070: Let (Variable = Expression)
+  Variable:
+  $1079: LocalVariable named CallFunc_Array_Length_ReturnValue2@0x213b4738490
+  Expression:
+  $1088: Context
+    ObjectExpression:
+    $1089: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue2@0x213b4738490
+    ContextExpression:
+    $1110: FinalFunction target=Array_Length@0x212d6987df0 (
+      $1119: LocalVariable named CallFunc_ComponentOverlapActors_NEW_OutActors@0x213bd288480
+      $1128: EndFunctionParms
+    )
+$1129: LetBool (Variable = Expression)
+  Variable:
+  $1130: LocalVariable named CallFunc_Less_IntInt_ReturnValue2@0x213bd288000
+  Expression:
+  $1139: CallMath target=Less_IntInt@0x212d69a5ed0 (
+    $1148: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b4738180
+    $1157: LocalVariable named CallFunc_Array_Length_ReturnValue2@0x213b4738490
+    $1166: EndFunctionParms
+  )
+$1167: LetBool (Variable = Expression)
+  Variable:
+  $1168: LocalVariable named CallFunc_BooleanAND_ReturnValue2@0x213bd288100
+  Expression:
+  $1177: CallMath target=BooleanAND@0x212d69910f0 (
+    $1186: LocalVariable named CallFunc_Not_PreBool_ReturnValue2@0x213bd287a00
+    $1195: LocalVariable named CallFunc_Less_IntInt_ReturnValue2@0x213bd288000
+    $1204: EndFunctionParms
+  )
+$1205: PopExecutionFlowIfNot, cond:
+$1206: LocalVariable named CallFunc_BooleanAND_ReturnValue2@0x213bd288100
+$1215: Let (Variable = Expression)
+  Variable:
+  $1224: LocalVariable named Temp_int_Array_Index_Variable2@0x213b4738260
+  Expression:
+  $1233: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b4738180
+$1242: FlowStack.Push(0x684)
+$1247: Context
+  ObjectExpression:
+  $1248: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $1269: FinalFunction target=Array_Get@0x212d69876b0 (
+    $1278: LocalVariable named CallFunc_ComponentOverlapActors_NEW_OutActors@0x213bd288480
+    $1287: LocalVariable named Temp_int_Array_Index_Variable2@0x213b4738260
+    $1296: LocalVariable named CallFunc_Array_Get_Item2@0x213bd288080
+    $1305: EndFunctionParms
+  )
+$1306: VirtualFunction call "Get Actor Placement Asset Type" (
+  $1319: LocalVariable named CallFunc_Array_Get_Item2@0x213bd288080
+  $1328: LocalVariable named __WorldContext@0x213bd287780
+  $1337: LocalVariable named CallFunc_Get_Actor_Placement_Asset_Type_Returning_Tag2@0x213bd288180
+  $1346: LocalVariable named CallFunc_Get_Actor_Placement_Asset_Type_Asset_Tag2@0x213b4738570
+  $1355: EndFunctionParms
+)
+$1356: PopExecutionFlowIfNot, cond:
+$1357: LocalVariable named CallFunc_Get_Actor_Placement_Asset_Type_Returning_Tag2@0x213bd288180
+$1366: Let (Variable = Expression)
+  Variable:
+  $1375: LocalVariable named Overlap Tag@0x213b47385e0
+  Expression:
+  $1384: LocalVariable named CallFunc_Get_Actor_Placement_Asset_Type_Asset_Tag2@0x213b4738570
+$1393: VirtualFunction call "Does A Delete B" (
+  $1406: LocalVariable named Overlap Tag@0x213b47385e0
+  $1415: LocalVariable named Actor Tag@0x213b4738650
+  $1424: LocalVariable named __WorldContext@0x213bd287780
+  $1433: LocalVariable named CallFunc_Does_A_Delete_B_Return2@0x213bd287b00
+  $1442: EndFunctionParms
+)
+$1443: JumpIfNot -> 0x5c8, cond:
+  $1448: LocalVariable named CallFunc_Does_A_Delete_B_Return2@0x213bd287b00
+$1457: LetBool (Variable = Expression)
+  Variable:
+  $1458: LocalVariable named Out Delete@0x213bd288200
+  Expression:
+  $1467: True
+$1468: LetBool (Variable = Expression)
+  Variable:
+  $1469: LocalVariable named Temp_bool_True_if_break_was_hit_Variable2@0x213bd287980
+  Expression:
+  $1478: True
+$1479: PopExecutionFlow (jump to popped addr)
+$1480: VirtualFunction call "Does A Delete B" (
+  $1493: LocalVariable named Actor Tag@0x213b4738650
+  $1502: LocalVariable named Overlap Tag@0x213b47385e0
+  $1511: LocalVariable named __WorldContext@0x213bd287780
+  $1520: LocalVariable named CallFunc_Does_A_Delete_B_Return@0x213bd287a80
+  $1529: EndFunctionParms
+)
+$1530: PopExecutionFlowIfNot, cond:
+$1531: LocalVariable named CallFunc_Does_A_Delete_B_Return@0x213bd287a80
+$1540: Context
+  ObjectExpression:
+  $1541: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $1562: FinalFunction target=Array_Get@0x212d69876b0 (
+    $1571: LocalVariable named CallFunc_ComponentOverlapActors_NEW_OutActors@0x213bd288480
+    $1580: LocalVariable named Temp_int_Array_Index_Variable2@0x213b4738260
+    $1589: LocalVariable named CallFunc_Array_Get_Item2@0x213bd288080
+    $1598: EndFunctionParms
+  )
+$1599: Let (Variable = Expression)
+  Variable:
+  $1608: LocalVariable named CallFunc_Array_Add_ReturnValue@0x213b4738500
+  Expression:
+  $1617: Context
+    ObjectExpression:
+    $1618: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Add_ReturnValue@0x213b4738500
+    ContextExpression:
+    $1639: FinalFunction target=Array_Add@0x212d6986810 (
+      $1648: LocalVariable named Delete Overlaps@0x213bd288380
+      $1657: LocalVariable named CallFunc_Array_Get_Item2@0x213bd288080
+      $1666: EndFunctionParms
+    )
+$1667: PopExecutionFlow (jump to popped addr)
+$1668: Let (Variable = Expression)
+  Variable:
+  $1677: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x213b47381f0
+  Expression:
+  $1686: CallMath target=Add_IntInt@0x212d698fa30 (
+    $1695: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b4738180
+    $1704: literal int32 1
+    $1709: EndFunctionParms
+  )
+$1710: Let (Variable = Expression)
+  Variable:
+  $1719: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b4738180
+  Expression:
+  $1728: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x213b47381f0
+$1737: Jump to offset 0x411
+$1742: Return expression:
+  $1743: Nothing
+$1744: EndOfScript
+
+=== BP_Placement_Functions_C::Get Mesh Instance Transform (793 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named Location In@0x213bd289100
+  Expression:
+  $18: LocalVariable named Location@0x213bd288a00
+$27: Let (Variable = Expression)
+  Variable:
+  $36: LocalVariable named Normal In@0x213bd289080
+  Expression:
+  $45: LocalVariable named Normal@0x213bd288a80
+$54: Let (Variable = Expression)
+  Variable:
+  $63: LocalVariable named CallFunc_RandomFloatFromStream_ReturnValue@0x213b47386c0
+  Expression:
+  $72: CallMath target=RandomFloatFromStream@0x212d69b3780 (
+    $81: LocalOutVariable named Random@0x213bd288980
+    $90: EndFunctionParms
+  )
+$91: CallMath target=BreakVector2D@0x212d6993340 (
+  $100: StructMemberContext prop=ScaleRange_24_38A1B6C243AC344CC43846AE7098057E@0x213bd283c80
+    Expression to struct:
+    $109: LocalVariable named Selected Mesh@0x213bd288900
+  $118: LocalVariable named CallFunc_BreakVector2D_X@0x213b4738810
+  $127: LocalVariable named CallFunc_BreakVector2D_Y@0x213b4738880
+  $136: EndFunctionParms
+)
+$137: Let (Variable = Expression)
+  Variable:
+  $146: LocalVariable named CallFunc_MapRangeUnclamped_ReturnValue@0x213b47388f0
+  Expression:
+  $155: CallMath target=MapRangeUnclamped@0x212d69ab120 (
+    $164: LocalVariable named CallFunc_RandomFloatFromStream_ReturnValue@0x213b47386c0
+    $173: literal float 0
+    $178: literal float 1
+    $183: LocalVariable named CallFunc_BreakVector2D_X@0x213b4738810
+    $192: LocalVariable named CallFunc_BreakVector2D_Y@0x213b4738880
+    $201: EndFunctionParms
+  )
+$202: Let (Variable = Expression)
+  Variable:
+  $211: LocalVariable named Scale@0x213b47389d0
+  Expression:
+  $220: LocalVariable named CallFunc_MapRangeUnclamped_ReturnValue@0x213b47388f0
+$229: Let (Variable = Expression)
+  Variable:
+  $238: LocalVariable named CallFunc_MakeRotFromZ_ReturnValue@0x213bd288c80
+  Expression:
+  $247: CallMath target=MakeRotFromZ@0x212d69a9ca0 (
+    $256: LocalVariable named Normal In@0x213bd289080
+    $265: EndFunctionParms
+  )
+$266: Let (Variable = Expression)
+  Variable:
+  $275: LocalVariable named CallFunc_RandomFloatFromStream_ReturnValue2@0x213b4738730
+  Expression:
+  $284: CallMath target=RandomFloatFromStream@0x212d69b3780 (
+    $293: LocalOutVariable named Random@0x213bd288980
+    $302: EndFunctionParms
+  )
+$303: Let (Variable = Expression)
+  Variable:
+  $312: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x213b47387a0
+  Expression:
+  $321: CallMath target=Multiply_FloatFloat@0x212d69ad1e0 (
+    $330: LocalVariable named CallFunc_RandomFloatFromStream_ReturnValue2@0x213b4738730
+    $339: literal float 360
+    $344: EndFunctionParms
+  )
+$345: Let (Variable = Expression)
+  Variable:
+  $354: LocalVariable named CallFunc_SelectRotator_ReturnValue@0x213bd288d00
+  Expression:
+  $363: CallMath target=SelectRotator@0x212d69b7d60 (
+    $372: LocalVariable named CallFunc_MakeRotFromZ_ReturnValue@0x213bd288c80
+    $381: literal rotation (0,0,0)
+    $394: StructMemberContext prop=AlignToSurface_26_C7572FE34B448D93F9CCFA9294397210@0x213bd283c00
+      Expression to struct:
+      $403: LocalVariable named Selected Mesh@0x213bd288900
+    $412: EndFunctionParms
+  )
+$413: Let (Variable = Expression)
+  Variable:
+  $422: LocalVariable named CallFunc_MakeRotator_ReturnValue@0x213bd288d80
+  Expression:
+  $431: CallMath target=MakeRotator@0x212d69a8d90 (
+    $440: literal float 0
+    $445: literal float 0
+    $450: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x213b47387a0
+    $459: EndFunctionParms
+  )
+$460: Let (Variable = Expression)
+  Variable:
+  $469: LocalVariable named CallFunc_ComposeRotators_ReturnValue@0x213bd288e00
+  Expression:
+  $478: CallMath target=ComposeRotators@0x212d6994400 (
+    $487: LocalVariable named CallFunc_MakeRotator_ReturnValue@0x213bd288d80
+    $496: LocalVariable named CallFunc_SelectRotator_ReturnValue@0x213bd288d00
+    $505: EndFunctionParms
+  )
+$506: Let (Variable = Expression)
+  Variable:
+  $515: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue2@0x213b4738960
+  Expression:
+  $524: CallMath target=Multiply_FloatFloat@0x212d69ad1e0 (
+    $533: StructMemberContext prop=SinkDepth_30_33CCF791430745D7F68E33949E9163CB@0x213b47367b0
+      Expression to struct:
+      $542: LocalVariable named Selected Mesh@0x213bd288900
+    $551: LocalVariable named Scale@0x213b47389d0
+    $560: EndFunctionParms
+  )
+$561: Let (Variable = Expression)
+  Variable:
+  $570: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213bd288e80
+  Expression:
+  $579: CallMath target=MakeVector@0x212d69aa910 (
+    $588: LocalVariable named Scale@0x213b47389d0
+    $597: LocalVariable named Scale@0x213b47389d0
+    $606: LocalVariable named Scale@0x213b47389d0
+    $615: EndFunctionParms
+  )
+$616: Let (Variable = Expression)
+  Variable:
+  $625: LocalVariable named CallFunc_Multiply_VectorFloat_ReturnValue@0x213bd288f00
+  Expression:
+  $634: CallMath target=Multiply_VectorFloat@0x212d69ae540 (
+    $643: LocalVariable named Normal In@0x213bd289080
+    $652: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue2@0x213b4738960
+    $661: EndFunctionParms
+  )
+$662: Let (Variable = Expression)
+  Variable:
+  $671: LocalVariable named CallFunc_Subtract_VectorVector_ReturnValue@0x213bd288f80
+  Expression:
+  $680: CallMath target=Subtract_VectorVector@0x212d69ba7f0 (
+    $689: LocalVariable named Location In@0x213bd289100
+    $698: LocalVariable named CallFunc_Multiply_VectorFloat_ReturnValue@0x213bd288f00
+    $707: EndFunctionParms
+  )
+$708: Let (Variable = Expression)
+  Variable:
+  $717: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x213bd289000
+  Expression:
+  $726: CallMath target=MakeTransform@0x212d69aa650 (
+    $735: LocalVariable named CallFunc_Subtract_VectorVector_ReturnValue@0x213bd288f80
+    $744: LocalVariable named CallFunc_ComposeRotators_ReturnValue@0x213bd288e00
+    $753: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213bd288e80
+    $762: EndFunctionParms
+  )
+$763: Let (Variable = Expression)
+  Variable:
+  $772: LocalOutVariable named Transform@0x213bd288b80
+  Expression:
+  $781: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x213bd289000
+$790: Return expression:
+  $791: Nothing
+$792: EndOfScript
+
+=== BP_Placement_Functions_C::Normalise Mesh Probabilities (1260 bytes) ===
+$0: FlowStack.Push(0x4e9)
+$5: Let (Variable = Expression)
+  Variable:
+  $14: LocalVariable named Temp_int_Loop_Counter_Variable3@0x213b4738d50
+  Expression:
+  $23: literal int32 0
+$28: Let (Variable = Expression)
+  Variable:
+  $37: LocalVariable named Temp_int_Array_Index_Variable3@0x213b4738e30
+  Expression:
+  $46: literal int32 0
+$51: Let (Variable = Expression)
+  Variable:
+  $60: LocalVariable named CallFunc_Array_Length_ReturnValue@0x213b4738a40
+  Expression:
+  $69: Context
+    ObjectExpression:
+    $70: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x213b4738a40
+    ContextExpression:
+    $91: FinalFunction target=Array_Length@0x212d6987df0 (
+      $100: LocalOutVariable named Charges@0x213bd289680
+      $109: EndFunctionParms
+    )
+$110: LetBool (Variable = Expression)
+  Variable:
+  $111: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x213bd289280
+  Expression:
+  $120: CallMath target=Less_IntInt@0x212d69a5ed0 (
+    $129: LocalVariable named Temp_int_Loop_Counter_Variable3@0x213b4738d50
+    $138: LocalVariable named CallFunc_Array_Length_ReturnValue@0x213b4738a40
+    $147: EndFunctionParms
+  )
+$148: JumpIfNot -> 0x14b, cond:
+  $153: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x213bd289280
+$162: Let (Variable = Expression)
+  Variable:
+  $171: LocalVariable named Temp_int_Array_Index_Variable3@0x213b4738e30
+  Expression:
+  $180: LocalVariable named Temp_int_Loop_Counter_Variable3@0x213b4738d50
+$189: FlowStack.Push(0x455)
+$194: Context
+  ObjectExpression:
+  $195: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $216: FinalFunction target=Array_Get@0x212d69876b0 (
+    $225: LocalOutVariable named Charges@0x213bd289680
+    $234: LocalVariable named Temp_int_Array_Index_Variable3@0x213b4738e30
+    $243: LocalVariable named CallFunc_Array_Get_Item@0x213bd289300
+    $252: EndFunctionParms
+  )
+$253: Let (Variable = Expression)
+  Variable:
+  $262: LocalVariable named CallFunc_Array_Add_ReturnValue@0x213b4738f10
+  Expression:
+  $271: Context
+    ObjectExpression:
+    $272: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x25
+    RValueProperty: CallFunc_Array_Add_ReturnValue@0x213b4738f10
+    ContextExpression:
+    $293: FinalFunction target=Array_Add@0x212d6986810 (
+      $302: LocalVariable named Local Charges@0x213bd289500
+      $311: StructMemberContext prop=SpawnWeight_19_0B05BBF2449133E0187C478432462F27@0x213b4736820
+        Expression to struct:
+        $320: LocalVariable named CallFunc_Array_Get_Item@0x213bd289300
+      $329: EndFunctionParms
+    )
+$330: PopExecutionFlow (jump to popped addr)
+$331: Let (Variable = Expression)
+  Variable:
+  $340: LocalVariable named Probability Sum@0x213b4739220
+  Expression:
+  $349: literal float 0
+$354: Let (Variable = Expression)
+  Variable:
+  $363: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b4738b20
+  Expression:
+  $372: literal int32 0
+$377: Let (Variable = Expression)
+  Variable:
+  $386: LocalVariable named Temp_int_Array_Index_Variable@0x213b4738ab0
+  Expression:
+  $395: literal int32 0
+$400: Let (Variable = Expression)
+  Variable:
+  $409: LocalVariable named CallFunc_Array_Length_ReturnValue3@0x213b4739060
+  Expression:
+  $418: Context
+    ObjectExpression:
+    $419: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue3@0x213b4739060
+    ContextExpression:
+    $440: FinalFunction target=Array_Length@0x212d6987df0 (
+      $449: LocalVariable named Local Charges@0x213bd289500
+      $458: EndFunctionParms
+    )
+$459: LetBool (Variable = Expression)
+  Variable:
+  $460: LocalVariable named CallFunc_Less_IntInt_ReturnValue3@0x213bd289480
+  Expression:
+  $469: CallMath target=Less_IntInt@0x212d69a5ed0 (
+    $478: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b4738b20
+    $487: LocalVariable named CallFunc_Array_Length_ReturnValue3@0x213b4739060
+    $496: EndFunctionParms
+  )
+$497: JumpIfNot -> 0x2a4, cond:
+  $502: LocalVariable named CallFunc_Less_IntInt_ReturnValue3@0x213bd289480
+$511: Let (Variable = Expression)
+  Variable:
+  $520: LocalVariable named Temp_int_Array_Index_Variable@0x213b4738ab0
+  Expression:
+  $529: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b4738b20
+$538: FlowStack.Push(0x49f)
+$543: Context
+  ObjectExpression:
+  $544: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $565: FinalFunction target=Array_Get@0x212d69876b0 (
+    $574: LocalVariable named Local Charges@0x213bd289500
+    $583: LocalVariable named Temp_int_Array_Index_Variable@0x213b4738ab0
+    $592: LocalVariable named CallFunc_Array_Get_Item3@0x213b4738ff0
+    $601: EndFunctionParms
+  )
+$602: Let (Variable = Expression)
+  Variable:
+  $611: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x213b47391b0
+  Expression:
+  $620: CallMath target=Add_FloatFloat@0x212d698f820 (
+    $629: LocalVariable named Probability Sum@0x213b4739220
+    $638: LocalVariable named CallFunc_Array_Get_Item3@0x213b4738ff0
+    $647: EndFunctionParms
+  )
+$648: Let (Variable = Expression)
+  Variable:
+  $657: LocalVariable named Probability Sum@0x213b4739220
+  Expression:
+  $666: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x213b47391b0
+$675: PopExecutionFlow (jump to popped addr)
+$676: Let (Variable = Expression)
+  Variable:
+  $685: LocalVariable named Temp_int_Loop_Counter_Variable2@0x213b4738c00
+  Expression:
+  $694: literal int32 0
+$699: Let (Variable = Expression)
+  Variable:
+  $708: LocalVariable named Temp_int_Array_Index_Variable2@0x213b4738c70
+  Expression:
+  $717: literal int32 0
+$722: Let (Variable = Expression)
+  Variable:
+  $731: LocalVariable named CallFunc_Array_Length_ReturnValue2@0x213b4738f80
+  Expression:
+  $740: Context
+    ObjectExpression:
+    $741: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue2@0x213b4738f80
+    ContextExpression:
+    $762: FinalFunction target=Array_Length@0x212d6987df0 (
+      $771: LocalVariable named Local Charges@0x213bd289500
+      $780: EndFunctionParms
+    )
+$781: LetBool (Variable = Expression)
+  Variable:
+  $782: LocalVariable named CallFunc_Less_IntInt_ReturnValue2@0x213bd289380
+  Expression:
+  $791: CallMath target=Less_IntInt@0x212d69a5ed0 (
+    $800: LocalVariable named Temp_int_Loop_Counter_Variable2@0x213b4738c00
+    $809: LocalVariable named CallFunc_Array_Length_ReturnValue2@0x213b4738f80
+    $818: EndFunctionParms
+  )
+$819: PopExecutionFlowIfNot, cond:
+$820: LocalVariable named CallFunc_Less_IntInt_ReturnValue2@0x213bd289380
+$829: Let (Variable = Expression)
+  Variable:
+  $838: LocalVariable named Temp_int_Array_Index_Variable2@0x213b4738c70
+  Expression:
+  $847: LocalVariable named Temp_int_Loop_Counter_Variable2@0x213b4738c00
+$856: FlowStack.Push(0x40b)
+$861: Context
+  ObjectExpression:
+  $862: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $883: FinalFunction target=Array_Get@0x212d69876b0 (
+    $892: LocalVariable named Local Charges@0x213bd289500
+    $901: LocalVariable named Temp_int_Array_Index_Variable2@0x213b4738c70
+    $910: LocalVariable named CallFunc_Array_Get_Item2@0x213b4738ea0
+    $919: EndFunctionParms
+  )
+$920: Let (Variable = Expression)
+  Variable:
+  $929: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue@0x213b47390d0
+  Expression:
+  $938: CallMath target=Divide_FloatFloat@0x212d6998eb0 (
+    $947: LocalVariable named CallFunc_Array_Get_Item2@0x213b4738ea0
+    $956: LocalVariable named Probability Sum@0x213b4739220
+    $965: EndFunctionParms
+  )
+$966: Let (Variable = Expression)
+  Variable:
+  $975: LocalVariable named CallFunc_Array_Add_ReturnValue2@0x213b4739140
+  Expression:
+  $984: Context
+    ObjectExpression:
+    $985: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Add_ReturnValue2@0x213b4739140
+    ContextExpression:
+    $1006: FinalFunction target=Array_Add@0x212d6986810 (
+      $1015: LocalOutVariable named Charge Probabilities@0x213bd289580
+      $1024: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue@0x213b47390d0
+      $1033: EndFunctionParms
+    )
+$1034: PopExecutionFlow (jump to popped addr)
+$1035: Let (Variable = Expression)
+  Variable:
+  $1044: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x213b4738ce0
+  Expression:
+  $1053: CallMath target=Add_IntInt@0x212d698fa30 (
+    $1062: LocalVariable named Temp_int_Loop_Counter_Variable2@0x213b4738c00
+    $1071: literal int32 1
+    $1076: EndFunctionParms
+  )
+$1077: Let (Variable = Expression)
+  Variable:
+  $1086: LocalVariable named Temp_int_Loop_Counter_Variable2@0x213b4738c00
+  Expression:
+  $1095: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x213b4738ce0
+$1104: Jump to offset 0x2d2
+$1109: Let (Variable = Expression)
+  Variable:
+  $1118: LocalVariable named CallFunc_Add_IntInt_ReturnValue3@0x213b4738dc0
+  Expression:
+  $1127: CallMath target=Add_IntInt@0x212d698fa30 (
+    $1136: LocalVariable named Temp_int_Loop_Counter_Variable3@0x213b4738d50
+    $1145: literal int32 1
+    $1150: EndFunctionParms
+  )
+$1151: Let (Variable = Expression)
+  Variable:
+  $1160: LocalVariable named Temp_int_Loop_Counter_Variable3@0x213b4738d50
+  Expression:
+  $1169: LocalVariable named CallFunc_Add_IntInt_ReturnValue3@0x213b4738dc0
+$1178: Jump to offset 0x33
+$1183: Let (Variable = Expression)
+  Variable:
+  $1192: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x213b4738b90
+  Expression:
+  $1201: CallMath target=Add_IntInt@0x212d698fa30 (
+    $1210: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b4738b20
+    $1219: literal int32 1
+    $1224: EndFunctionParms
+  )
+$1225: Let (Variable = Expression)
+  Variable:
+  $1234: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b4738b20
+  Expression:
+  $1243: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x213b4738b90
+$1252: Jump to offset 0x190
+$1257: Return expression:
+  $1258: Nothing
+$1259: EndOfScript
+
+=== BP_Placement_Functions_C::Set Mesh (2374 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named Meshes In@0x213bd28ad00
+  Expression:
+  $18: LocalOutVariable named Meshes@0x213bd28b680
+$27: Let (Variable = Expression)
+  Variable:
+  $36: LocalVariable named Mesh Probabilities In@0x213bd28ad80
+  Expression:
+  $45: LocalOutVariable named Mesh Probabilities@0x213bd28b500
+$54: Let (Variable = Expression)
+  Variable:
+  $63: LocalVariable named Generator Radius In@0x213b4739d10
+  Expression:
+  $72: LocalVariable named Generator Radius@0x213b4739370
+$81: Let (Variable = Expression)
+  Variable:
+  $90: LocalVariable named Spawn Clustering In@0x213b4739ca0
+  Expression:
+  $99: LocalVariable named Spawn Clustering@0x213b47393e0
+$108: Let (Variable = Expression)
+  Variable:
+  $117: LocalVariable named Spawn Radius Multiplier In@0x213b4739b50
+  Expression:
+  $126: LocalVariable named Spawn Radius Multiplier@0x213b4739450
+$135: Let (Variable = Expression)
+  Variable:
+  $144: LocalVariable named Physical Materials In@0x213bd28ae80
+  Expression:
+  $153: LocalOutVariable named Physical Materials@0x213bd28b480
+$162: Let (Variable = Expression)
+  Variable:
+  $171: LocalVariable named Mesh Radii In@0x213bd28af80
+  Expression:
+  $180: LocalOutVariable named Mesh Radii@0x213bd28b380
+$189: LetObj (Variable = Expression)
+  Variable:
+  $190: LocalVariable named Actor In@0x213bd28ac00
+  Expression:
+  $199: LocalVariable named Actor@0x213bd289780
+$208: Let (Variable = Expression)
+  Variable:
+  $217: LocalVariable named Position Out@0x213bd28ab00
+  Expression:
+  $226: literal vector (0,0,0)
+$239: LetBool (Variable = Expression)
+  Variable:
+  $240: LocalVariable named Permission Out@0x213bd28a900
+  Expression:
+  $249: False
+$250: Let (Variable = Expression)
+  Variable:
+  $259: LocalVariable named CallFunc_RandomFloatFromStream_ReturnValue2@0x213b4739610
+  Expression:
+  $268: CallMath target=RandomFloatFromStream@0x212d69b3780 (
+    $277: LocalOutVariable named Random@0x213bd289700
+    $286: EndFunctionParms
+  )
+$287: VirtualFunction call "Calculate Index from Probabilities" (
+  $300: LocalVariable named CallFunc_RandomFloatFromStream_ReturnValue2@0x213b4739610
+  $309: LocalVariable named Mesh Probabilities In@0x213bd28ad80
+  $318: LocalVariable named __WorldContext@0x213bd289800
+  $327: LocalVariable named CallFunc_Calculate_Index_from_Probabilities_Index@0x213b4739990
+  $336: EndFunctionParms
+)
+$337: Let (Variable = Expression)
+  Variable:
+  $346: LocalVariable named Mesh Index Out@0x213b4739c30
+  Expression:
+  $355: LocalVariable named CallFunc_Calculate_Index_from_Probabilities_Index@0x213b4739990
+$364: Context
+  ObjectExpression:
+  $365: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $386: FinalFunction target=Array_Get@0x212d69876b0 (
+    $395: LocalVariable named Meshes In@0x213bd28ad00
+    $404: LocalVariable named Mesh Index Out@0x213b4739c30
+    $413: LocalVariable named CallFunc_Array_Get_Item@0x213bd289e00
+    $422: EndFunctionParms
+  )
+$423: Let (Variable = Expression)
+  Variable:
+  $432: LocalVariable named Selected Mesh@0x213bd28ab80
+  Expression:
+  $441: LocalVariable named CallFunc_Array_Get_Item@0x213bd289e00
+$450: Let (Variable = Expression)
+  Variable:
+  $459: LocalVariable named CallFunc_GetTransform_ReturnValue@0x213bd289d80
+  Expression:
+  $468: Context
+    ObjectExpression:
+    $469: LocalVariable named Actor In@0x213bd28ac00
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetTransform_ReturnValue@0x213bd289d80
+    ContextExpression:
+    $490: FinalFunction target=GetTransform@0x212d6384700 (
+      $499: EndFunctionParms
+    )
+$500: Let (Variable = Expression)
+  Variable:
+  $509: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x213bd289f00
+  Expression:
+  $518: Context
+    ObjectExpression:
+    $519: LocalVariable named Actor In@0x213bd28ac00
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetActorLocation_ReturnValue@0x213bd289f00
+    ContextExpression:
+    $540: FinalFunction target=K2_GetActorLocation@0x212d6386b10 (
+      $549: EndFunctionParms
+    )
+$550: VirtualFunction call "Generate Random Radial Raycast" (
+  $563: LocalOutVariable named Random@0x213bd289700
+  $572: LocalVariable named Generator Radius In@0x213b4739d10
+  $581: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x213bd289f00
+  $590: LocalVariable named Spawn Clustering In@0x213b4739ca0
+  $599: LocalVariable named Spawn Radius Multiplier In@0x213b4739b50
+  $608: LocalVariable named CallFunc_GetTransform_ReturnValue@0x213bd289d80
+  $617: LocalVariable named __WorldContext@0x213bd289800
+  $626: LocalVariable named CallFunc_Generate_Random_Radial_Raycast_Raycast_Start@0x213bd28a680
+  $635: LocalVariable named CallFunc_Generate_Random_Radial_Raycast_Raycast_End@0x213bd28a700
+  $644: EndFunctionParms
+)
+$645: Let (Variable = Expression)
+  Variable:
+  $654: LocalVariable named Raycast Start@0x213bd28aa80
+  Expression:
+  $663: LocalVariable named CallFunc_Generate_Random_Radial_Raycast_Raycast_Start@0x213bd28a680
+$672: Let (Variable = Expression)
+  Variable:
+  $681: LocalVariable named Raycast End@0x213bd28aa00
+  Expression:
+  $690: LocalVariable named CallFunc_Generate_Random_Radial_Raycast_Raycast_End@0x213bd28a700
+$699: SetArray
+  $700: LocalVariable named K2Node_MakeArray_Array@0x213bd28b280
+  $709: EndArray
+$710: SetArray
+  $711: LocalVariable named K2Node_MakeArray_Array2@0x213bd28b180
+  $720: literal byte 0
+  $722: EndArray
+$723: SetArray
+  $724: LocalVariable named CallFunc_LineTraceMultiForObjects_OutHits@0x213bd28b080
+  $733: EndArray
+$734: LetBool (Variable = Expression)
+  Variable:
+  $735: LocalVariable named CallFunc_LineTraceMultiForObjects_ReturnValue@0x213bd289e80
+  Expression:
+  $744: Context
+    ObjectExpression:
+    $745: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x44
+    RValueProperty: CallFunc_LineTraceMultiForObjects_ReturnValue@0x213bd289e80
+    ContextExpression:
+    $766: FinalFunction target=LineTraceMultiForObjects@0x212d63b3400 (
+      $775: LocalVariable named __WorldContext@0x213bd289800
+      $784: LocalVariable named Raycast Start@0x213bd28aa80
+      $793: LocalVariable named Raycast End@0x213bd28aa00
+      $802: LocalVariable named K2Node_MakeArray_Array2@0x213bd28b180
+      $811: False
+      $812: LocalVariable named K2Node_MakeArray_Array@0x213bd28b280
+      $821: literal byte 0
+      $823: LocalVariable named CallFunc_LineTraceMultiForObjects_OutHits@0x213bd28b080
+      $832: True
+      $833: EndFunctionParms
+    )
+$834: JumpIfNot -> 0x8c4, cond:
+  $839: LocalVariable named CallFunc_LineTraceMultiForObjects_ReturnValue@0x213bd289e80
+$848: VirtualFunction call "Get First Valid Hit" (
+  $861: LocalVariable named CallFunc_LineTraceMultiForObjects_OutHits@0x213bd28b080
+  $870: LocalVariable named __WorldContext@0x213bd289800
+  $879: LocalVariable named CallFunc_Get_First_Valid_Hit_Is_Valid_Hit@0x213bd289f80
+  $888: LocalVariable named CallFunc_Get_First_Valid_Hit_Hit@0x213bd28a000
+  $897: EndFunctionParms
+)
+$898: JumpIfNot -> 0x8c4, cond:
+  $903: LocalVariable named CallFunc_Get_First_Valid_Hit_Is_Valid_Hit@0x213bd289f80
+$912: Context
+  ObjectExpression:
+  $913: ObjectConst Default__GameplayStatics@0x212d6f7eb20
+  SkipBytes: 0x91
+  RValueProperty: (null)
+  ContextExpression:
+  $934: FinalFunction target=BreakHitResult@0x212d697a330 (
+    $943: LocalVariable named CallFunc_Get_First_Valid_Hit_Hit@0x213bd28a000
+    $952: LocalVariable named CallFunc_BreakHitResult_bBlockingHit@0x213bd28a080
+    $961: LocalVariable named CallFunc_BreakHitResult_bInitialOverlap@0x213bd28a100
+    $970: LocalVariable named CallFunc_BreakHitResult_Time@0x213b4739a00
+    $979: LocalVariable named CallFunc_BreakHitResult_Location@0x213bd28a180
+    $988: LocalVariable named CallFunc_BreakHitResult_ImpactPoint@0x213bd28a200
+    $997: LocalVariable named CallFunc_BreakHitResult_Normal@0x213bd28a280
+    $1006: LocalVariable named CallFunc_BreakHitResult_ImpactNormal@0x213bd28a300
+    $1015: LocalVariable named CallFunc_BreakHitResult_PhysMat@0x213bd28a380
+    $1024: LocalVariable named CallFunc_BreakHitResult_HitActor@0x213bd28a400
+    $1033: LocalVariable named CallFunc_BreakHitResult_HitComponent@0x213bd28a480
+    $1042: LocalVariable named CallFunc_BreakHitResult_HitBoneName@0x213b4739a70
+    $1051: LocalVariable named CallFunc_BreakHitResult_HitItem@0x213b4739ae0
+    $1060: LocalVariable named CallFunc_BreakHitResult_TraceStart@0x213bd28a500
+    $1069: LocalVariable named CallFunc_BreakHitResult_TraceEnd@0x213bd28a580
+    $1078: EndFunctionParms
+  )
+$1079: Let (Variable = Expression)
+  Variable:
+  $1088: LocalVariable named Position Out@0x213bd28ab00
+  Expression:
+  $1097: LocalVariable named CallFunc_BreakHitResult_ImpactPoint@0x213bd28a200
+$1106: Context
+  ObjectExpression:
+  $1107: ObjectConst Default__GameplayStatics@0x212d6f7eb20
+  SkipBytes: 0x91
+  RValueProperty: (null)
+  ContextExpression:
+  $1128: FinalFunction target=BreakHitResult@0x212d697a330 (
+    $1137: LocalVariable named CallFunc_Get_First_Valid_Hit_Hit@0x213bd28a000
+    $1146: LocalVariable named CallFunc_BreakHitResult_bBlockingHit@0x213bd28a080
+    $1155: LocalVariable named CallFunc_BreakHitResult_bInitialOverlap@0x213bd28a100
+    $1164: LocalVariable named CallFunc_BreakHitResult_Time@0x213b4739a00
+    $1173: LocalVariable named CallFunc_BreakHitResult_Location@0x213bd28a180
+    $1182: LocalVariable named CallFunc_BreakHitResult_ImpactPoint@0x213bd28a200
+    $1191: LocalVariable named CallFunc_BreakHitResult_Normal@0x213bd28a280
+    $1200: LocalVariable named CallFunc_BreakHitResult_ImpactNormal@0x213bd28a300
+    $1209: LocalVariable named CallFunc_BreakHitResult_PhysMat@0x213bd28a380
+    $1218: LocalVariable named CallFunc_BreakHitResult_HitActor@0x213bd28a400
+    $1227: LocalVariable named CallFunc_BreakHitResult_HitComponent@0x213bd28a480
+    $1236: LocalVariable named CallFunc_BreakHitResult_HitBoneName@0x213b4739a70
+    $1245: LocalVariable named CallFunc_BreakHitResult_HitItem@0x213b4739ae0
+    $1254: LocalVariable named CallFunc_BreakHitResult_TraceStart@0x213bd28a500
+    $1263: LocalVariable named CallFunc_BreakHitResult_TraceEnd@0x213bd28a580
+    $1272: EndFunctionParms
+  )
+$1273: Let (Variable = Expression)
+  Variable:
+  $1282: LocalVariable named Normal Out@0x213bd28a800
+  Expression:
+  $1291: LocalVariable named CallFunc_BreakHitResult_ImpactNormal@0x213bd28a300
+$1300: VirtualFunction call "Get Mesh Instance Transform" (
+  $1313: LocalVariable named Selected Mesh@0x213bd28ab80
+  $1322: LocalOutVariable named Random@0x213bd289700
+  $1331: LocalVariable named Position Out@0x213bd28ab00
+  $1340: LocalVariable named Normal Out@0x213bd28a800
+  $1349: LocalVariable named __WorldContext@0x213bd289800
+  $1358: LocalVariable named CallFunc_Get_Mesh_Instance_Transform_Transform@0x213bd28a980
+  $1367: EndFunctionParms
+)
+$1368: Let (Variable = Expression)
+  Variable:
+  $1377: LocalVariable named Transform Out@0x213bd28a780
+  Expression:
+  $1386: LocalVariable named CallFunc_Get_Mesh_Instance_Transform_Transform@0x213bd28a980
+$1395: Let (Variable = Expression)
+  Variable:
+  $1404: LocalVariable named CallFunc_RandomFloatFromStream_ReturnValue@0x213b47395a0
+  Expression:
+  $1413: CallMath target=RandomFloatFromStream@0x212d69b3780 (
+    $1422: LocalOutVariable named Random@0x213bd289700
+    $1431: EndFunctionParms
+  )
+$1432: CallMath target=BreakTransform@0x212d6992df0 (
+  $1441: LocalVariable named Transform Out@0x213bd28a780
+  $1450: LocalVariable named CallFunc_BreakTransform_Location@0x213bd289a00
+  $1459: LocalVariable named CallFunc_BreakTransform_Rotation@0x213bd289a80
+  $1468: LocalVariable named CallFunc_BreakTransform_Scale@0x213bd289b00
+  $1477: EndFunctionParms
+)
+$1478: CallMath target=BreakVector@0x212d69930b0 (
+  $1487: LocalVariable named CallFunc_BreakTransform_Scale@0x213bd289b00
+  $1496: LocalVariable named CallFunc_BreakVector_X@0x213b4739680
+  $1505: LocalVariable named CallFunc_BreakVector_Y@0x213b47396f0
+  $1514: LocalVariable named CallFunc_BreakVector_Z@0x213b4739760
+  $1523: EndFunctionParms
+)
+$1524: CallMath target=BreakVector2D@0x212d6993340 (
+  $1533: StructMemberContext prop=RadiusRange_21_766F5E1545643AF109A1C48B8CD8A81B@0x213bd283e80
+    Expression to struct:
+    $1542: LocalVariable named Selected Mesh@0x213bd28ab80
+  $1551: LocalVariable named CallFunc_BreakVector2D_X@0x213b47397d0
+  $1560: LocalVariable named CallFunc_BreakVector2D_Y@0x213b4739840
+  $1569: EndFunctionParms
+)
+$1570: Let (Variable = Expression)
+  Variable:
+  $1579: LocalVariable named CallFunc_MapRangeUnclamped_ReturnValue@0x213b47398b0
+  Expression:
+  $1588: CallMath target=MapRangeUnclamped@0x212d69ab120 (
+    $1597: LocalVariable named CallFunc_RandomFloatFromStream_ReturnValue@0x213b47395a0
+    $1606: literal float 0
+    $1611: literal float 1
+    $1616: LocalVariable named CallFunc_BreakVector2D_X@0x213b47397d0
+    $1625: LocalVariable named CallFunc_BreakVector2D_Y@0x213b4739840
+    $1634: EndFunctionParms
+  )
+$1635: Let (Variable = Expression)
+  Variable:
+  $1644: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x213b4739920
+  Expression:
+  $1653: CallMath target=Multiply_FloatFloat@0x212d69ad1e0 (
+    $1662: LocalVariable named CallFunc_BreakVector_X@0x213b4739680
+    $1671: LocalVariable named CallFunc_MapRangeUnclamped_ReturnValue@0x213b47398b0
+    $1680: EndFunctionParms
+  )
+$1681: Let (Variable = Expression)
+  Variable:
+  $1690: LocalVariable named Radius Out@0x213b4739bc0
+  Expression:
+  $1699: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x213b4739920
+$1708: Context
+  ObjectExpression:
+  $1709: ObjectConst Default__GameplayStatics@0x212d6f7eb20
+  SkipBytes: 0x91
+  RValueProperty: (null)
+  ContextExpression:
+  $1730: FinalFunction target=BreakHitResult@0x212d697a330 (
+    $1739: LocalVariable named CallFunc_Get_First_Valid_Hit_Hit@0x213bd28a000
+    $1748: LocalVariable named CallFunc_BreakHitResult_bBlockingHit@0x213bd28a080
+    $1757: LocalVariable named CallFunc_BreakHitResult_bInitialOverlap@0x213bd28a100
+    $1766: LocalVariable named CallFunc_BreakHitResult_Time@0x213b4739a00
+    $1775: LocalVariable named CallFunc_BreakHitResult_Location@0x213bd28a180
+    $1784: LocalVariable named CallFunc_BreakHitResult_ImpactPoint@0x213bd28a200
+    $1793: LocalVariable named CallFunc_BreakHitResult_Normal@0x213bd28a280
+    $1802: LocalVariable named CallFunc_BreakHitResult_ImpactNormal@0x213bd28a300
+    $1811: LocalVariable named CallFunc_BreakHitResult_PhysMat@0x213bd28a380
+    $1820: LocalVariable named CallFunc_BreakHitResult_HitActor@0x213bd28a400
+    $1829: LocalVariable named CallFunc_BreakHitResult_HitComponent@0x213bd28a480
+    $1838: LocalVariable named CallFunc_BreakHitResult_HitBoneName@0x213b4739a70
+    $1847: LocalVariable named CallFunc_BreakHitResult_HitItem@0x213b4739ae0
+    $1856: LocalVariable named CallFunc_BreakHitResult_TraceStart@0x213bd28a500
+    $1865: LocalVariable named CallFunc_BreakHitResult_TraceEnd@0x213bd28a580
+    $1874: EndFunctionParms
+  )
+$1875: VirtualFunction call "Check Surface Materials" (
+  $1888: LocalVariable named Physical Materials In@0x213bd28ae80
+  $1897: LocalVariable named CallFunc_BreakHitResult_PhysMat@0x213bd28a380
+  $1906: LocalVariable named __WorldContext@0x213bd289800
+  $1915: LocalVariable named CallFunc_Check_Surface_Materials_Placement_Permission@0x213bd28a600
+  $1924: EndFunctionParms
+)
+$1925: JumpIfNot -> 0x8c4, cond:
+  $1930: LocalVariable named CallFunc_Check_Surface_Materials_Placement_Permission@0x213bd28a600
+$1939: VirtualFunction call "Check Height" (
+  $1952: LocalVariable named Position Out@0x213bd28ab00
+  $1961: StructMemberContext prop=HeightRange_13_636ED5A34C3BA5D1D7AF0C8C9DCF2C3F@0x213bd283d80
+    Expression to struct:
+    $1970: LocalVariable named Selected Mesh@0x213bd28ab80
+  $1979: LocalVariable named __WorldContext@0x213bd289800
+  $1988: LocalVariable named CallFunc_Check_Height_Placement_Permission@0x213bd289c00
+  $1997: EndFunctionParms
+)
+$1998: JumpIfNot -> 0x8c4, cond:
+  $2003: LocalVariable named CallFunc_Check_Height_Placement_Permission@0x213bd289c00
+$2012: VirtualFunction call "Check Slope" (
+  $2025: LocalVariable named Normal Out@0x213bd28a800
+  $2034: StructMemberContext prop=SlopeRange_16_50192CC54A727B5D84B1CFB25DEE7264@0x213bd283d00
+    Expression to struct:
+    $2043: LocalVariable named Selected Mesh@0x213bd28ab80
+  $2052: LocalVariable named __WorldContext@0x213bd289800
+  $2061: LocalVariable named CallFunc_Check_Slope_Placement_Permission@0x213bd289b80
+  $2070: EndFunctionParms
+)
+$2071: JumpIfNot -> 0x8c4, cond:
+  $2076: LocalVariable named CallFunc_Check_Slope_Placement_Permission@0x213bd289b80
+$2085: LetBool (Variable = Expression)
+  Variable:
+  $2086: LocalVariable named CallFunc_Greater_FloatFloat_ReturnValue@0x213bd289c80
+  Expression:
+  $2095: CallMath target=Greater_FloatFloat@0x212d69a2550 (
+    $2104: StructMemberContext prop=RadiusOverlap_10_3A052E52449C395FA85BB99D6EB0A126@0x213b4736890
+      Expression to struct:
+      $2113: LocalVariable named Selected Mesh@0x213bd28ab80
+    $2122: literal float 0
+    $2127: EndFunctionParms
+  )
+$2128: JumpIfNot -> 0x8b9, cond:
+  $2133: LocalVariable named CallFunc_Greater_FloatFloat_ReturnValue@0x213bd289c80
+$2142: VirtualFunction call "Check Radius Overlap" (
+  $2155: LocalVariable named Position Out@0x213bd28ab00
+  $2164: LocalVariable named Radius Out@0x213b4739bc0
+  $2173: StructMemberContext prop=RadiusOverlap_10_3A052E52449C395FA85BB99D6EB0A126@0x213b4736890
+    Expression to struct:
+    $2182: LocalVariable named Selected Mesh@0x213bd28ab80
+  $2191: LocalVariable named Mesh Radii In@0x213bd28af80
+  $2200: LocalVariable named __WorldContext@0x213bd289800
+  $2209: LocalVariable named CallFunc_Check_Radius_Overlap_Placement_Permission@0x213bd289d00
+  $2218: EndFunctionParms
+)
+$2219: JumpIfNot -> 0x8c4, cond:
+  $2224: LocalVariable named CallFunc_Check_Radius_Overlap_Placement_Permission@0x213bd289d00
+$2233: LetBool (Variable = Expression)
+  Variable:
+  $2234: LocalVariable named Permission Out@0x213bd28a900
+  Expression:
+  $2243: True
+$2244: LetBool (Variable = Expression)
+  Variable:
+  $2245: LocalOutVariable named Spawn Permission@0x213bd289880
+  Expression:
+  $2254: LocalVariable named Permission Out@0x213bd28a900
+$2263: Let (Variable = Expression)
+  Variable:
+  $2272: LocalOutVariable named Transform@0x213bd289900
+  Expression:
+  $2281: LocalVariable named Transform Out@0x213bd28a780
+$2290: Let (Variable = Expression)
+  Variable:
+  $2299: LocalOutVariable named Radius@0x213b47394c0
+  Expression:
+  $2308: LocalVariable named Radius Out@0x213b4739bc0
+$2317: Let (Variable = Expression)
+  Variable:
+  $2326: LocalOutVariable named Mesh Index@0x213b4739530
+  Expression:
+  $2335: LocalVariable named Mesh Index Out@0x213b4739c30
+$2344: Let (Variable = Expression)
+  Variable:
+  $2353: LocalOutVariable named Mesh@0x213bd289980
+  Expression:
+  $2362: LocalVariable named Selected Mesh@0x213bd28ab80
+$2371: Return expression:
+  $2372: Nothing
+$2373: EndOfScript
+
+=== BP_Placement_Functions_C::Set Charge (2281 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named Charges In@0x213bd28cd00
+  Expression:
+  $18: LocalOutVariable named Charges@0x213bd28d500
+$27: Let (Variable = Expression)
+  Variable:
+  $36: LocalVariable named Charge Probabilities In@0x213bd28cd80
+  Expression:
+  $45: LocalOutVariable named Charge Probabilities@0x213bd28d400
+$54: Let (Variable = Expression)
+  Variable:
+  $63: LocalVariable named Generator Radius In@0x213b473a480
+  Expression:
+  $72: LocalVariable named Generator Radius@0x213b4739e60
+$81: Let (Variable = Expression)
+  Variable:
+  $90: LocalVariable named Spawn Clustering In@0x213b473a410
+  Expression:
+  $99: LocalVariable named Spawn Clustering@0x213b4739ed0
+$108: LetBool (Variable = Expression)
+  Variable:
+  $109: LocalVariable named Box Distribution In@0x213bd28cb80
+  Expression:
+  $118: LocalVariable named Box Distribution@0x213bd28b700
+$127: Let (Variable = Expression)
+  Variable:
+  $136: LocalVariable named Physical Materials In@0x213bd28ce80
+  Expression:
+  $145: LocalOutVariable named Physical Materials@0x213bd28d380
+$154: Let (Variable = Expression)
+  Variable:
+  $163: LocalVariable named Blast Radii In@0x213bd28cf80
+  Expression:
+  $172: LocalOutVariable named Blast Radii@0x213bd28d280
+$181: LetObj (Variable = Expression)
+  Variable:
+  $182: LocalVariable named Actor In@0x213bd28ca80
+  Expression:
+  $191: LocalVariable named Actor@0x213bd28b800
+$200: Let (Variable = Expression)
+  Variable:
+  $209: LocalVariable named Position Out@0x213bd28c980
+  Expression:
+  $218: literal vector (0,0,0)
+$231: LetBool (Variable = Expression)
+  Variable:
+  $232: LocalVariable named Permission Out@0x213bd28ca00
+  Expression:
+  $241: False
+$242: Let (Variable = Expression)
+  Variable:
+  $251: LocalVariable named CallFunc_RandomFloatFromStream_ReturnValue2@0x213b473a020
+  Expression:
+  $260: CallMath target=RandomFloatFromStream@0x212d69b3780 (
+    $269: LocalOutVariable named Random@0x213bd28b780
+    $278: EndFunctionParms
+  )
+$279: VirtualFunction call "Calculate Index from Probabilities" (
+  $292: LocalVariable named CallFunc_RandomFloatFromStream_ReturnValue2@0x213b473a020
+  $301: LocalVariable named Charge Probabilities In@0x213bd28cd80
+  $310: LocalVariable named __WorldContext@0x213bd28b880
+  $319: LocalVariable named CallFunc_Calculate_Index_from_Probabilities_Index@0x213b473a090
+  $328: EndFunctionParms
+)
+$329: Context
+  ObjectExpression:
+  $330: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $351: FinalFunction target=Array_Get@0x212d69876b0 (
+    $360: LocalVariable named Charges In@0x213bd28cd00
+    $369: LocalVariable named CallFunc_Calculate_Index_from_Probabilities_Index@0x213b473a090
+    $378: LocalVariable named CallFunc_Array_Get_Item@0x213bd28bc80
+    $387: EndFunctionParms
+  )
+$388: Let (Variable = Expression)
+  Variable:
+  $397: LocalVariable named Selected Charge@0x213bd28cc00
+  Expression:
+  $406: LocalVariable named CallFunc_Array_Get_Item@0x213bd28bc80
+$415: JumpIfNot -> 0x7fd, cond:
+  $420: LocalVariable named Box Distribution In@0x213bd28cb80
+$429: Context
+  ObjectExpression:
+  $430: LocalVariable named Actor In@0x213bd28ca80
+  SkipBytes: 0x1d
+  RValueProperty: (null)
+  ContextExpression:
+  $451: FinalFunction target=GetActorBounds@0x212d6381290 (
+    $460: False
+    $461: LocalVariable named CallFunc_GetActorBounds_Origin@0x213bd28bc00
+    $470: LocalVariable named CallFunc_GetActorBounds_BoxExtent@0x213bd28c900
+    $479: EndFunctionParms
+  )
+$480: VirtualFunction call "Generate Random Box Raycast" (
+  $493: LocalOutVariable named Random@0x213bd28b780
+  $502: LocalVariable named CallFunc_GetActorBounds_Origin@0x213bd28bc00
+  $511: LocalVariable named CallFunc_GetActorBounds_BoxExtent@0x213bd28c900
+  $520: LocalVariable named __WorldContext@0x213bd28b880
+  $529: LocalVariable named CallFunc_Generate_Random_Box_Raycast_Raycast_Start@0x213bd28bd00
+  $538: LocalVariable named CallFunc_Generate_Random_Box_Raycast_Raycast_End@0x213bd28bd80
+  $547: EndFunctionParms
+)
+$548: Let (Variable = Expression)
+  Variable:
+  $557: LocalVariable named Raycast Start@0x213bd28c800
+  Expression:
+  $566: LocalVariable named CallFunc_Generate_Random_Box_Raycast_Raycast_Start@0x213bd28bd00
+$575: Let (Variable = Expression)
+  Variable:
+  $584: LocalVariable named Raycast End@0x213bd28c780
+  Expression:
+  $593: LocalVariable named CallFunc_Generate_Random_Box_Raycast_Raycast_End@0x213bd28bd80
+$602: SetArray
+  $603: LocalVariable named K2Node_MakeArray_Array@0x213bd28d180
+  $612: EndArray
+$613: SetArray
+  $614: LocalVariable named K2Node_MakeArray_Array2@0x213bd28d080
+  $623: literal byte 0
+  $625: EndArray
+$626: LetBool (Variable = Expression)
+  Variable:
+  $627: LocalVariable named CallFunc_LineTraceSingleForObjects_ReturnValue@0x213bd28c080
+  Expression:
+  $636: Context
+    ObjectExpression:
+    $637: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x44
+    RValueProperty: CallFunc_LineTraceSingleForObjects_ReturnValue@0x213bd28c080
+    ContextExpression:
+    $658: FinalFunction target=LineTraceSingleForObjects@0x212d63b4e80 (
+      $667: LocalVariable named __WorldContext@0x213bd28b880
+      $676: LocalVariable named Raycast Start@0x213bd28c800
+      $685: LocalVariable named Raycast End@0x213bd28c780
+      $694: LocalVariable named K2Node_MakeArray_Array2@0x213bd28d080
+      $703: False
+      $704: LocalVariable named K2Node_MakeArray_Array@0x213bd28d180
+      $713: literal byte 0
+      $715: LocalVariable named CallFunc_LineTraceSingleForObjects_OutHit@0x213bd28c000
+      $724: True
+      $725: EndFunctionParms
+    )
+$726: JumpIfNot -> 0x794, cond:
+  $731: LocalVariable named CallFunc_LineTraceSingleForObjects_ReturnValue@0x213bd28c080
+$740: Context
+  ObjectExpression:
+  $741: ObjectConst Default__GameplayStatics@0x212d6f7eb20
+  SkipBytes: 0x91
+  RValueProperty: (null)
+  ContextExpression:
+  $762: FinalFunction target=BreakHitResult@0x212d697a330 (
+    $771: LocalVariable named CallFunc_LineTraceSingleForObjects_OutHit@0x213bd28c000
+    $780: LocalVariable named CallFunc_BreakHitResult_bBlockingHit@0x213bd28c100
+    $789: LocalVariable named CallFunc_BreakHitResult_bInitialOverlap@0x213bd28c180
+    $798: LocalVariable named CallFunc_BreakHitResult_Time@0x213b473a250
+    $807: LocalVariable named CallFunc_BreakHitResult_Location@0x213bd28c200
+    $816: LocalVariable named CallFunc_BreakHitResult_ImpactPoint@0x213bd28c280
+    $825: LocalVariable named CallFunc_BreakHitResult_Normal@0x213bd28c300
+    $834: LocalVariable named CallFunc_BreakHitResult_ImpactNormal@0x213bd28c380
+    $843: LocalVariable named CallFunc_BreakHitResult_PhysMat@0x213bd28c400
+    $852: LocalVariable named CallFunc_BreakHitResult_HitActor@0x213bd28c480
+    $861: LocalVariable named CallFunc_BreakHitResult_HitComponent@0x213bd28c500
+    $870: LocalVariable named CallFunc_BreakHitResult_HitBoneName@0x213b473a2c0
+    $879: LocalVariable named CallFunc_BreakHitResult_HitItem@0x213b473a330
+    $888: LocalVariable named CallFunc_BreakHitResult_TraceStart@0x213bd28c580
+    $897: LocalVariable named CallFunc_BreakHitResult_TraceEnd@0x213bd28c600
+    $906: EndFunctionParms
+  )
+$907: Let (Variable = Expression)
+  Variable:
+  $916: LocalVariable named Normal Out@0x213bd28c880
+  Expression:
+  $925: LocalVariable named CallFunc_BreakHitResult_ImpactNormal@0x213bd28c380
+$934: Let (Variable = Expression)
+  Variable:
+  $943: LocalVariable named CallFunc_Multiply_VectorFloat_ReturnValue@0x213bd28ba80
+  Expression:
+  $952: CallMath target=Multiply_VectorFloat@0x212d69ae540 (
+    $961: LocalVariable named Normal Out@0x213bd28c880
+    $970: StructMemberContext prop=SinkDepth_24_8BED1B77489B57462ABCA087083A205C@0x213b47365f0
+      Expression to struct:
+      $979: LocalVariable named Selected Charge@0x213bd28cc00
+    $988: EndFunctionParms
+  )
+$989: Context
+  ObjectExpression:
+  $990: ObjectConst Default__GameplayStatics@0x212d6f7eb20
+  SkipBytes: 0x91
+  RValueProperty: (null)
+  ContextExpression:
+  $1011: FinalFunction target=BreakHitResult@0x212d697a330 (
+    $1020: LocalVariable named CallFunc_LineTraceSingleForObjects_OutHit@0x213bd28c000
+    $1029: LocalVariable named CallFunc_BreakHitResult_bBlockingHit@0x213bd28c100
+    $1038: LocalVariable named CallFunc_BreakHitResult_bInitialOverlap@0x213bd28c180
+    $1047: LocalVariable named CallFunc_BreakHitResult_Time@0x213b473a250
+    $1056: LocalVariable named CallFunc_BreakHitResult_Location@0x213bd28c200
+    $1065: LocalVariable named CallFunc_BreakHitResult_ImpactPoint@0x213bd28c280
+    $1074: LocalVariable named CallFunc_BreakHitResult_Normal@0x213bd28c300
+    $1083: LocalVariable named CallFunc_BreakHitResult_ImpactNormal@0x213bd28c380
+    $1092: LocalVariable named CallFunc_BreakHitResult_PhysMat@0x213bd28c400
+    $1101: LocalVariable named CallFunc_BreakHitResult_HitActor@0x213bd28c480
+    $1110: LocalVariable named CallFunc_BreakHitResult_HitComponent@0x213bd28c500
+    $1119: LocalVariable named CallFunc_BreakHitResult_HitBoneName@0x213b473a2c0
+    $1128: LocalVariable named CallFunc_BreakHitResult_HitItem@0x213b473a330
+    $1137: LocalVariable named CallFunc_BreakHitResult_TraceStart@0x213bd28c580
+    $1146: LocalVariable named CallFunc_BreakHitResult_TraceEnd@0x213bd28c600
+    $1155: EndFunctionParms
+  )
+$1156: Let (Variable = Expression)
+  Variable:
+  $1165: LocalVariable named CallFunc_Subtract_VectorVector_ReturnValue@0x213bd28c700
+  Expression:
+  $1174: CallMath target=Subtract_VectorVector@0x212d69ba7f0 (
+    $1183: LocalVariable named CallFunc_BreakHitResult_ImpactPoint@0x213bd28c280
+    $1192: LocalVariable named CallFunc_Multiply_VectorFloat_ReturnValue@0x213bd28ba80
+    $1201: EndFunctionParms
+  )
+$1202: Let (Variable = Expression)
+  Variable:
+  $1211: LocalVariable named Position Out@0x213bd28c980
+  Expression:
+  $1220: LocalVariable named CallFunc_Subtract_VectorVector_ReturnValue@0x213bd28c700
+$1229: Let (Variable = Expression)
+  Variable:
+  $1238: LocalVariable named CallFunc_RandomFloatFromStream_ReturnValue@0x213b4739fb0
+  Expression:
+  $1247: CallMath target=RandomFloatFromStream@0x212d69b3780 (
+    $1256: LocalOutVariable named Random@0x213bd28b780
+    $1265: EndFunctionParms
+  )
+$1266: CallMath target=BreakVector2D@0x212d6993340 (
+  $1275: StructMemberContext prop=RadiusRange_20_766F5E1545643AF109A1C48B8CD8A81B@0x213bd283980
+    Expression to struct:
+    $1284: LocalVariable named Selected Charge@0x213bd28cc00
+  $1293: LocalVariable named CallFunc_BreakVector2D_X@0x213b473a100
+  $1302: LocalVariable named CallFunc_BreakVector2D_Y@0x213b473a170
+  $1311: EndFunctionParms
+)
+$1312: Let (Variable = Expression)
+  Variable:
+  $1321: LocalVariable named CallFunc_MapRangeUnclamped_ReturnValue@0x213b473a1e0
+  Expression:
+  $1330: CallMath target=MapRangeUnclamped@0x212d69ab120 (
+    $1339: LocalVariable named CallFunc_RandomFloatFromStream_ReturnValue@0x213b4739fb0
+    $1348: literal float 0
+    $1353: literal float 1
+    $1358: LocalVariable named CallFunc_BreakVector2D_X@0x213b473a100
+    $1367: LocalVariable named CallFunc_BreakVector2D_Y@0x213b473a170
+    $1376: EndFunctionParms
+  )
+$1377: Let (Variable = Expression)
+  Variable:
+  $1386: LocalVariable named Radius Out@0x213b473a3a0
+  Expression:
+  $1395: LocalVariable named CallFunc_MapRangeUnclamped_ReturnValue@0x213b473a1e0
+$1404: Context
+  ObjectExpression:
+  $1405: ObjectConst Default__GameplayStatics@0x212d6f7eb20
+  SkipBytes: 0x91
+  RValueProperty: (null)
+  ContextExpression:
+  $1426: FinalFunction target=BreakHitResult@0x212d697a330 (
+    $1435: LocalVariable named CallFunc_LineTraceSingleForObjects_OutHit@0x213bd28c000
+    $1444: LocalVariable named CallFunc_BreakHitResult_bBlockingHit@0x213bd28c100
+    $1453: LocalVariable named CallFunc_BreakHitResult_bInitialOverlap@0x213bd28c180
+    $1462: LocalVariable named CallFunc_BreakHitResult_Time@0x213b473a250
+    $1471: LocalVariable named CallFunc_BreakHitResult_Location@0x213bd28c200
+    $1480: LocalVariable named CallFunc_BreakHitResult_ImpactPoint@0x213bd28c280
+    $1489: LocalVariable named CallFunc_BreakHitResult_Normal@0x213bd28c300
+    $1498: LocalVariable named CallFunc_BreakHitResult_ImpactNormal@0x213bd28c380
+    $1507: LocalVariable named CallFunc_BreakHitResult_PhysMat@0x213bd28c400
+    $1516: LocalVariable named CallFunc_BreakHitResult_HitActor@0x213bd28c480
+    $1525: LocalVariable named CallFunc_BreakHitResult_HitComponent@0x213bd28c500
+    $1534: LocalVariable named CallFunc_BreakHitResult_HitBoneName@0x213b473a2c0
+    $1543: LocalVariable named CallFunc_BreakHitResult_HitItem@0x213b473a330
+    $1552: LocalVariable named CallFunc_BreakHitResult_TraceStart@0x213bd28c580
+    $1561: LocalVariable named CallFunc_BreakHitResult_TraceEnd@0x213bd28c600
+    $1570: EndFunctionParms
+  )
+$1571: VirtualFunction call "Check Surface Materials" (
+  $1584: LocalVariable named Physical Materials In@0x213bd28ce80
+  $1593: LocalVariable named CallFunc_BreakHitResult_PhysMat@0x213bd28c400
+  $1602: LocalVariable named __WorldContext@0x213bd28b880
+  $1611: LocalVariable named CallFunc_Check_Surface_Materials_Placement_Permission@0x213bd28c680
+  $1620: EndFunctionParms
+)
+$1621: JumpIfNot -> 0x794, cond:
+  $1626: LocalVariable named CallFunc_Check_Surface_Materials_Placement_Permission@0x213bd28c680
+$1635: VirtualFunction call "Check Height" (
+  $1648: LocalVariable named Position Out@0x213bd28c980
+  $1657: StructMemberContext prop=HeightRange_13_636ED5A34C3BA5D1D7AF0C8C9DCF2C3F@0x213bd283880
+    Expression to struct:
+    $1666: LocalVariable named Selected Charge@0x213bd28cc00
+  $1675: LocalVariable named __WorldContext@0x213bd28b880
+  $1684: LocalVariable named CallFunc_Check_Height_Placement_Permission@0x213bd28bf80
+  $1693: EndFunctionParms
+)
+$1694: JumpIfNot -> 0x794, cond:
+  $1699: LocalVariable named CallFunc_Check_Height_Placement_Permission@0x213bd28bf80
+$1708: VirtualFunction call "Check Slope" (
+  $1721: LocalVariable named Normal Out@0x213bd28c880
+  $1730: StructMemberContext prop=SlopeRange_16_50192CC54A727B5D84B1CFB25DEE7264@0x213bd283800
+    Expression to struct:
+    $1739: LocalVariable named Selected Charge@0x213bd28cc00
+  $1748: LocalVariable named __WorldContext@0x213bd28b880
+  $1757: LocalVariable named CallFunc_Check_Slope_Placement_Permission@0x213bd28bf00
+  $1766: EndFunctionParms
+)
+$1767: JumpIfNot -> 0x794, cond:
+  $1772: LocalVariable named CallFunc_Check_Slope_Placement_Permission@0x213bd28bf00
+$1781: LetBool (Variable = Expression)
+  Variable:
+  $1782: LocalVariable named CallFunc_Greater_FloatFloat_ReturnValue@0x213bd28bb00
+  Expression:
+  $1791: CallMath target=Greater_FloatFloat@0x212d69a2550 (
+    $1800: StructMemberContext prop=RadiusOverlap_10_3A052E52449C395FA85BB99D6EB0A126@0x213b47366d0
+      Expression to struct:
+      $1809: LocalVariable named Selected Charge@0x213bd28cc00
+    $1818: literal float 0
+    $1823: EndFunctionParms
+  )
+$1824: JumpIfNot -> 0x789, cond:
+  $1829: LocalVariable named CallFunc_Greater_FloatFloat_ReturnValue@0x213bd28bb00
+$1838: VirtualFunction call "Check Radius Overlap" (
+  $1851: LocalVariable named Position Out@0x213bd28c980
+  $1860: LocalVariable named Radius Out@0x213b473a3a0
+  $1869: StructMemberContext prop=RadiusOverlap_10_3A052E52449C395FA85BB99D6EB0A126@0x213b47366d0
+    Expression to struct:
+    $1878: LocalVariable named Selected Charge@0x213bd28cc00
+  $1887: LocalVariable named Blast Radii In@0x213bd28cf80
+  $1896: LocalVariable named __WorldContext@0x213bd28b880
+  $1905: LocalVariable named CallFunc_Check_Radius_Overlap_Placement_Permission@0x213bd28bb80
+  $1914: EndFunctionParms
+)
+$1915: JumpIfNot -> 0x794, cond:
+  $1920: LocalVariable named CallFunc_Check_Radius_Overlap_Placement_Permission@0x213bd28bb80
+$1929: LetBool (Variable = Expression)
+  Variable:
+  $1930: LocalVariable named Permission Out@0x213bd28ca00
+  Expression:
+  $1939: True
+$1940: LetBool (Variable = Expression)
+  Variable:
+  $1941: LocalOutVariable named Spawn Permission@0x213bd28b900
+  Expression:
+  $1950: LocalVariable named Permission Out@0x213bd28ca00
+$1959: Let (Variable = Expression)
+  Variable:
+  $1968: LocalOutVariable named Position@0x213bd28b980
+  Expression:
+  $1977: LocalVariable named Position Out@0x213bd28c980
+$1986: Let (Variable = Expression)
+  Variable:
+  $1995: LocalOutVariable named Radius@0x213b4739f40
+  Expression:
+  $2004: LocalVariable named Radius Out@0x213b473a3a0
+$2013: Let (Variable = Expression)
+  Variable:
+  $2022: LocalOutVariable named Charge@0x213bd28ba00
+  Expression:
+  $2031: LocalVariable named Selected Charge@0x213bd28cc00
+$2040: Jump to offset 0x8e6
+$2045: Context
+  ObjectExpression:
+  $2046: LocalVariable named Actor In@0x213bd28ca80
+  SkipBytes: 0x1d
+  RValueProperty: (null)
+  ContextExpression:
+  $2067: FinalFunction target=GetActorBounds@0x212d6381290 (
+    $2076: False
+    $2077: LocalVariable named CallFunc_GetActorBounds_Origin@0x213bd28bc00
+    $2086: LocalVariable named CallFunc_GetActorBounds_BoxExtent@0x213bd28c900
+    $2095: EndFunctionParms
+  )
+$2096: VirtualFunction call "Generate Random Radial Raycast" (
+  $2109: LocalOutVariable named Random@0x213bd28b780
+  $2118: LocalVariable named Generator Radius In@0x213b473a480
+  $2127: LocalVariable named CallFunc_GetActorBounds_Origin@0x213bd28bc00
+  $2136: LocalVariable named Spawn Clustering In@0x213b473a410
+  $2145: literal float 1
+  $2150: literal transform R(0,0,0,1) T(0,0,0) S(1,1,1)
+  $2191: LocalVariable named __WorldContext@0x213bd28b880
+  $2200: LocalVariable named CallFunc_Generate_Random_Radial_Raycast_Raycast_Start@0x213bd28be00
+  $2209: LocalVariable named CallFunc_Generate_Random_Radial_Raycast_Raycast_End@0x213bd28be80
+  $2218: EndFunctionParms
+)
+$2219: Let (Variable = Expression)
+  Variable:
+  $2228: LocalVariable named Raycast Start@0x213bd28c800
+  Expression:
+  $2237: LocalVariable named CallFunc_Generate_Random_Radial_Raycast_Raycast_Start@0x213bd28be00
+$2246: Let (Variable = Expression)
+  Variable:
+  $2255: LocalVariable named Raycast End@0x213bd28c780
+  Expression:
+  $2264: LocalVariable named CallFunc_Generate_Random_Radial_Raycast_Raycast_End@0x213bd28be80
+$2273: Jump to offset 0x25a
+$2278: Return expression:
+  $2279: Nothing
+$2280: EndOfScript
+
+=== BP_Placement_Functions_C::Check Surface Materials (427 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_Array_Length_ReturnValue@0x213b473a6b0
+  Expression:
+  $18: Context
+    ObjectExpression:
+    $19: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x213b473a6b0
+    ContextExpression:
+    $40: FinalFunction target=Array_Length@0x212d6987df0 (
+      $49: LocalOutVariable named Physical Materials@0x213bd28d980
+      $58: EndFunctionParms
+    )
+$59: LetBool (Variable = Expression)
+  Variable:
+  $60: LocalVariable named CallFunc_EqualEqual_IntInt_ReturnValue@0x213bd28d800
+  Expression:
+  $69: CallMath target=EqualEqual_IntInt@0x212d699af00 (
+    $78: LocalVariable named CallFunc_Array_Length_ReturnValue@0x213b473a6b0
+    $87: literal int32 0
+    $92: EndFunctionParms
+  )
+$93: JumpIfNot -> 0x154, cond:
+  $98: LocalVariable named CallFunc_EqualEqual_IntInt_ReturnValue@0x213bd28d800
+$107: Let (Variable = Expression)
+  Variable:
+  $116: LocalVariable named CallFunc_GetDisplayName_ReturnValue@0x213b473a5d0
+  Expression:
+  $125: Context
+    ObjectExpression:
+    $126: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetDisplayName_ReturnValue@0x213b473a5d0
+    ContextExpression:
+    $147: FinalFunction target=GetDisplayName@0x212d63ac3f0 (
+      $156: LocalVariable named Placement Material@0x213bd28d580
+      $165: EndFunctionParms
+    )
+$166: Let (Variable = Expression)
+  Variable:
+  $175: LocalVariable named CallFunc_GetSubstring_ReturnValue@0x213b473a640
+  Expression:
+  $184: Context
+    ObjectExpression:
+    $185: ObjectConst Default__KismetStringLibrary@0x212d6f7ecd0
+    SkipBytes: 0x1d
+    RValueProperty: CallFunc_GetSubstring_ReturnValue@0x213b473a640
+    ContextExpression:
+    $206: FinalFunction target=GetSubstring@0x212d69c3f90 (
+      $215: LocalVariable named CallFunc_GetDisplayName_ReturnValue@0x213b473a5d0
+      $224: literal int32 0
+      $229: literal int32 9
+      $234: EndFunctionParms
+    )
+$235: LetBool (Variable = Expression)
+  Variable:
+  $236: LocalVariable named CallFunc_EqualEqual_StrStr_ReturnValue@0x213bd28d780
+  Expression:
+  $245: Context
+    ObjectExpression:
+    $246: ObjectConst Default__KismetStringLibrary@0x212d6f7ecd0
+    SkipBytes: 0x1e
+    RValueProperty: CallFunc_EqualEqual_StrStr_ReturnValue@0x213bd28d780
+    ContextExpression:
+    $267: FinalFunction target=EqualEqual_StrStr@0x212d69c35c0 (
+      $276: LocalVariable named CallFunc_GetSubstring_ReturnValue@0x213b473a640
+      $285: literal ansi string "PM_Ground"
+      $296: EndFunctionParms
+    )
+$297: LetBool (Variable = Expression)
+  Variable:
+  $298: LocalVariable named Output@0x213bd28d880
+  Expression:
+  $307: LocalVariable named CallFunc_EqualEqual_StrStr_ReturnValue@0x213bd28d780
+$316: LetBool (Variable = Expression)
+  Variable:
+  $317: LocalOutVariable named Placement Permission@0x213bd28d680
+  Expression:
+  $326: LocalVariable named Output@0x213bd28d880
+$335: Jump to offset 0x1a8
+$340: LetBool (Variable = Expression)
+  Variable:
+  $341: LocalVariable named CallFunc_Array_Contains_ReturnValue@0x213bd28d700
+  Expression:
+  $350: Context
+    ObjectExpression:
+    $351: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Contains_ReturnValue@0x213bd28d700
+    ContextExpression:
+    $372: FinalFunction target=Array_Contains@0x212d6987180 (
+      $381: LocalOutVariable named Physical Materials@0x213bd28d980
+      $390: LocalVariable named Placement Material@0x213bd28d580
+      $399: EndFunctionParms
+    )
+$400: LetBool (Variable = Expression)
+  Variable:
+  $401: LocalVariable named Output@0x213bd28d880
+  Expression:
+  $410: LocalVariable named CallFunc_Array_Contains_ReturnValue@0x213bd28d700
+$419: Jump to offset 0x13c
+$424: Return expression:
+  $425: Nothing
+$426: EndOfScript
+
+=== BP_Placement_Functions_C::Check Slope (158 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_Dot_VectorVector_ReturnValue@0x213b473a720
+  Expression:
+  $18: CallMath target=Dot_VectorVector@0x212d6999ba0 (
+    $27: LocalVariable named Normal@0x213bd28da00
+    $36: literal vector (0,0,1)
+    $49: EndFunctionParms
+  )
+$50: CallMath target=BreakVector2D@0x212d6993340 (
+  $59: LocalVariable named Slope Range@0x213bd28da80
+  $68: LocalVariable named CallFunc_BreakVector2D_X@0x213b473a790
+  $77: LocalVariable named CallFunc_BreakVector2D_Y@0x213b473a800
+  $86: EndFunctionParms
+)
+$87: LetBool (Variable = Expression)
+  Variable:
+  $88: LocalVariable named CallFunc_InRange_FloatFloat_ReturnValue@0x213bd28dc00
+  Expression:
+  $97: CallMath target=InRange_FloatFloat@0x212d69a41f0 (
+    $106: LocalVariable named CallFunc_Dot_VectorVector_ReturnValue@0x213b473a720
+    $115: LocalVariable named CallFunc_BreakVector2D_X@0x213b473a790
+    $124: LocalVariable named CallFunc_BreakVector2D_Y@0x213b473a800
+    $133: True
+    $134: True
+    $135: EndFunctionParms
+  )
+$136: LetBool (Variable = Expression)
+  Variable:
+  $137: LocalOutVariable named Placement Permission@0x213bd28db80
+  Expression:
+  $146: LocalVariable named CallFunc_InRange_FloatFloat_ReturnValue@0x213bd28dc00
+$155: Return expression:
+  $156: Nothing
+$157: EndOfScript
+
+=== BP_Placement_Functions_C::Check Height (154 bytes) ===
+$0: CallMath target=BreakVector@0x212d69930b0 (
+  $9: LocalVariable named Position@0x213bd28dc80
+  $18: LocalVariable named CallFunc_BreakVector_X@0x213b473a870
+  $27: LocalVariable named CallFunc_BreakVector_Y@0x213b473a8e0
+  $36: LocalVariable named CallFunc_BreakVector_Z@0x213b473a950
+  $45: EndFunctionParms
+)
+$46: CallMath target=BreakVector2D@0x212d6993340 (
+  $55: LocalVariable named Height Range@0x213bd28dd00
+  $64: LocalVariable named CallFunc_BreakVector2D_X@0x213b473a9c0
+  $73: LocalVariable named CallFunc_BreakVector2D_Y@0x213b0ac0f50
+  $82: EndFunctionParms
+)
+$83: LetBool (Variable = Expression)
+  Variable:
+  $84: LocalVariable named CallFunc_InRange_FloatFloat_ReturnValue@0x213bd28de80
+  Expression:
+  $93: CallMath target=InRange_FloatFloat@0x212d69a41f0 (
+    $102: LocalVariable named CallFunc_BreakVector_Z@0x213b473a950
+    $111: LocalVariable named CallFunc_BreakVector2D_X@0x213b473a9c0
+    $120: LocalVariable named CallFunc_BreakVector2D_Y@0x213b0ac0f50
+    $129: True
+    $130: True
+    $131: EndFunctionParms
+  )
+$132: LetBool (Variable = Expression)
+  Variable:
+  $133: LocalOutVariable named Placement Permission@0x213bd28de00
+  Expression:
+  $142: LocalVariable named CallFunc_InRange_FloatFloat_ReturnValue@0x213bd28de80
+$151: Return expression:
+  $152: Nothing
+$153: EndOfScript
+
+=== BP_Placement_Functions_C::Check Radius Overlap (709 bytes) ===
+$0: FlowStack.Push(0x2c2)
+$5: LetBool (Variable = Expression)
+  Variable:
+  $6: LocalVariable named Permit@0x213bd28e380
+  Expression:
+  $15: True
+$16: Let (Variable = Expression)
+  Variable:
+  $25: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b0ac0d20
+  Expression:
+  $34: literal int32 0
+$39: Let (Variable = Expression)
+  Variable:
+  $48: LocalVariable named Temp_int_Array_Index_Variable@0x213b0ac0e00
+  Expression:
+  $57: literal int32 0
+$62: Let (Variable = Expression)
+  Variable:
+  $71: LocalVariable named CallFunc_Array_Length_ReturnValue@0x213b0ac0a10
+  Expression:
+  $80: Context
+    ObjectExpression:
+    $81: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x213b0ac0a10
+    ContextExpression:
+    $102: FinalFunction target=Array_Length@0x212d6987df0 (
+      $111: LocalOutVariable named Blast Radii@0x213bd28e480
+      $120: EndFunctionParms
+    )
+$121: LetBool (Variable = Expression)
+  Variable:
+  $122: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x213bd28e180
+  Expression:
+  $131: CallMath target=Less_IntInt@0x212d69a5ed0 (
+    $140: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b0ac0d20
+    $149: LocalVariable named CallFunc_Array_Length_ReturnValue@0x213b0ac0a10
+    $158: EndFunctionParms
+  )
+$159: JumpIfNot -> 0x260, cond:
+  $164: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x213bd28e180
+$173: Let (Variable = Expression)
+  Variable:
+  $182: LocalVariable named Temp_int_Array_Index_Variable@0x213b0ac0e00
+  Expression:
+  $191: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b0ac0d20
+$200: FlowStack.Push(0x278)
+$205: Let (Variable = Expression)
+  Variable:
+  $214: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x213b0ac0000
+  Expression:
+  $223: CallMath target=Multiply_FloatFloat@0x212d69ad1e0 (
+    $232: LocalVariable named Radius@0x213b0ac0ee0
+    $241: LocalVariable named Radius Overlap@0x213b0ac0e70
+    $250: EndFunctionParms
+  )
+$251: Context
+  ObjectExpression:
+  $252: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $273: FinalFunction target=Array_Get@0x212d69876b0 (
+    $282: LocalOutVariable named Blast Radii@0x213bd28e480
+    $291: LocalVariable named Temp_int_Array_Index_Variable@0x213b0ac0e00
+    $300: LocalVariable named CallFunc_Array_Get_Item@0x213bd28e100
+    $309: EndFunctionParms
+  )
+$310: CallMath target=BreakColor@0x212d6991c30 (
+  $319: LocalVariable named CallFunc_Array_Get_Item@0x213bd28e100
+  $328: LocalVariable named CallFunc_BreakColor_R@0x213b0ac0d90
+  $337: LocalVariable named CallFunc_BreakColor_G@0x213b257ff80
+  $346: LocalVariable named CallFunc_BreakColor_B@0x213b257fdc0
+  $355: LocalVariable named CallFunc_BreakColor_A@0x213b257fd50
+  $364: EndFunctionParms
+)
+$365: Let (Variable = Expression)
+  Variable:
+  $374: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x213b257fce0
+  Expression:
+  $383: CallMath target=Add_FloatFloat@0x212d698f820 (
+    $392: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x213b0ac0000
+    $401: LocalVariable named CallFunc_BreakColor_A@0x213b257fd50
+    $410: EndFunctionParms
+  )
+$411: Let (Variable = Expression)
+  Variable:
+  $420: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213bd28e200
+  Expression:
+  $429: CallMath target=MakeVector@0x212d69aa910 (
+    $438: LocalVariable named CallFunc_BreakColor_R@0x213b0ac0d90
+    $447: LocalVariable named CallFunc_BreakColor_G@0x213b257ff80
+    $456: LocalVariable named CallFunc_BreakColor_B@0x213b257fdc0
+    $465: EndFunctionParms
+  )
+$466: Let (Variable = Expression)
+  Variable:
+  $475: LocalVariable named CallFunc_Subtract_VectorVector_ReturnValue@0x213bd28e280
+  Expression:
+  $484: CallMath target=Subtract_VectorVector@0x212d69ba7f0 (
+    $493: LocalVariable named Position@0x213bd28df00
+    $502: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213bd28e200
+    $511: EndFunctionParms
+  )
+$512: Let (Variable = Expression)
+  Variable:
+  $521: LocalVariable named CallFunc_VSize_ReturnValue@0x213b257e380
+  Expression:
+  $530: CallMath target=VSize@0x212d69bd810 (
+    $539: LocalVariable named CallFunc_Subtract_VectorVector_ReturnValue@0x213bd28e280
+    $548: EndFunctionParms
+  )
+$549: LetBool (Variable = Expression)
+  Variable:
+  $550: LocalVariable named CallFunc_Greater_FloatFloat_ReturnValue@0x213bd28e300
+  Expression:
+  $559: CallMath target=Greater_FloatFloat@0x212d69a2550 (
+    $568: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x213b257fce0
+    $577: LocalVariable named CallFunc_VSize_ReturnValue@0x213b257e380
+    $586: EndFunctionParms
+  )
+$587: PopExecutionFlowIfNot, cond:
+$588: LocalVariable named CallFunc_Greater_FloatFloat_ReturnValue@0x213bd28e300
+$597: LetBool (Variable = Expression)
+  Variable:
+  $598: LocalVariable named Permit@0x213bd28e380
+  Expression:
+  $607: False
+$608: LetBool (Variable = Expression)
+  Variable:
+  $609: LocalOutVariable named Placement Permission@0x213bd28e000
+  Expression:
+  $618: LocalVariable named Permit@0x213bd28e380
+$627: Jump to offset 0x2c2
+$632: Let (Variable = Expression)
+  Variable:
+  $641: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x213b257efc0
+  Expression:
+  $650: CallMath target=Add_IntInt@0x212d698fa30 (
+    $659: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b0ac0d20
+    $668: literal int32 1
+    $673: EndFunctionParms
+  )
+$674: Let (Variable = Expression)
+  Variable:
+  $683: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b0ac0d20
+  Expression:
+  $692: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x213b257efc0
+$701: Jump to offset 0x3e
+$706: Return expression:
+  $707: Nothing
+$708: EndOfScript
+
+=== BP_Placement_Functions_C::Set Spawn Properties (901 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named Radius In@0x213b257b1a0
+  Expression:
+  $18: LocalVariable named Radius@0x213b257d6d0
+$27: Let (Variable = Expression)
+  Variable:
+  $36: LocalVariable named Seed In@0x213b257a6b0
+  Expression:
+  $45: LocalVariable named Seed@0x213b257e310
+$54: LetBool (Variable = Expression)
+  Variable:
+  $55: LocalVariable named Success@0x213bd28ee80
+  Expression:
+  $64: True
+$65: LetBool (Variable = Expression)
+  Variable:
+  $66: LocalVariable named CallFunc_DoesImplementInterface_ReturnValue@0x213bd28eb80
+  Expression:
+  $75: Context
+    ObjectExpression:
+    $76: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_DoesImplementInterface_ReturnValue@0x213bd28eb80
+    ContextExpression:
+    $97: FinalFunction target=DoesImplementInterface@0x212d63a71e0 (
+      $106: LocalVariable named Object@0x213bd28e500
+      $115: ObjectConst Interface_Garden_C@0x213b1f87980
+      $124: EndFunctionParms
+    )
+$125: JumpIfNot -> 0x1d1, cond:
+  $130: LocalVariable named CallFunc_DoesImplementInterface_ReturnValue@0x213bd28eb80
+$139: Let (Variable = Expression)
+  Variable:
+  $148: LocalVariable named UniqueObjectNameForCooking_AsLevel_Streaming@0x213bd28e880
+  Expression:
+  $157: DynamicCast to LevelStreaming@0x212d5b8c080 of expr:
+  $166: LocalVariable named Object@0x213bd28e500
+$175: Let (Variable = Expression)
+  Variable:
+  $184: LocalVariable named UniqueObjectNameForCooking_bSuccess2@0x213bd28e900
+  Expression:
+  $193: PrimitiveCast type=71
+    Argument:
+    $195: LocalVariable named UniqueObjectNameForCooking_AsLevel_Streaming@0x213bd28e880
+$204: JumpIfNot -> 0x342, cond:
+  $209: LocalVariable named UniqueObjectNameForCooking_bSuccess2@0x213bd28e900
+$218: LetObj (Variable = Expression)
+  Variable:
+  $219: LocalVariable named CallFunc_GetLevelScriptActor_ReturnValue@0x213bd28ea80
+  Expression:
+  $228: Context
+    ObjectExpression:
+    $229: LocalVariable named UniqueObjectNameForCooking_AsLevel_Streaming@0x213bd28e880
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetLevelScriptActor_ReturnValue@0x213bd28ea80
+    ContextExpression:
+    $250: FinalFunction target=GetLevelScriptActor@0x212d69e8ab0 (
+      $259: EndFunctionParms
+    )
+$260: LetObj (Variable = Expression)
+  Variable:
+  $261: LocalVariable named Temp_object_Variable2@0x213bd28ec80
+  Expression:
+  $270: LocalVariable named CallFunc_GetLevelScriptActor_ReturnValue@0x213bd28ea80
+$279: Let (Variable = Expression)
+  Variable:
+  $288: LocalVariable named UniqueObjectNameForCooking_AsInterface_Garden@0x213bd28ed00
+  Expression:
+  $297: ObjToInterfaceCast to Interface_Garden_C@0x213b1f87980
+  $306: LocalVariable named Temp_object_Variable2@0x213bd28ec80
+$315: Let (Variable = Expression)
+  Variable:
+  $324: LocalVariable named UniqueObjectNameForCooking_bSuccess4@0x213bd28ed80
+  Expression:
+  $333: PrimitiveCast type=73
+    Argument:
+    $335: LocalVariable named UniqueObjectNameForCooking_AsInterface_Garden@0x213bd28ed00
+$344: JumpIfNot -> 0x35a, cond:
+  $349: LocalVariable named UniqueObjectNameForCooking_bSuccess4@0x213bd28ed80
+$358: Context
+  ObjectExpression:
+  $359: InterfaceContext:
+  $360: LocalVariable named UniqueObjectNameForCooking_AsInterface_Garden@0x213bd28ed00
+  SkipBytes: 0x29
+  RValueProperty: (null)
+  ContextExpression:
+  $381: VirtualFunction call "Set Garden Parameters" (
+    $394: LocalVariable named Radius In@0x213b257b1a0
+    $403: LocalVariable named Seed In@0x213b257a6b0
+    $412: LocalVariable named CallFunc_Set_Garden_Parameters_Instances_Created@0x213bd28ee00
+    $421: EndFunctionParms
+  )
+$422: LetBool (Variable = Expression)
+  Variable:
+  $423: LocalVariable named Success@0x213bd28ee80
+  Expression:
+  $432: LocalVariable named CallFunc_Set_Garden_Parameters_Instances_Created@0x213bd28ee00
+$441: LetBool (Variable = Expression)
+  Variable:
+  $442: LocalOutVariable named Cast Success@0x213bd28e600
+  Expression:
+  $451: LocalVariable named Success@0x213bd28ee80
+$460: Jump to offset 0x382
+$465: LetBool (Variable = Expression)
+  Variable:
+  $466: LocalVariable named CallFunc_DoesImplementInterface_ReturnValue2@0x213bd28ec00
+  Expression:
+  $475: Context
+    ObjectExpression:
+    $476: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_DoesImplementInterface_ReturnValue2@0x213bd28ec00
+    ContextExpression:
+    $497: FinalFunction target=DoesImplementInterface@0x212d63a71e0 (
+      $506: LocalVariable named Object@0x213bd28e500
+      $515: ObjectConst Interface_Bomb_C@0x213b3275a00
+      $524: EndFunctionParms
+    )
+$525: JumpIfNot -> 0x332, cond:
+  $530: LocalVariable named CallFunc_DoesImplementInterface_ReturnValue2@0x213bd28ec00
+$539: Let (Variable = Expression)
+  Variable:
+  $548: LocalVariable named UniqueObjectNameForCooking_AsLevel_Streaming2@0x213bd28e980
+  Expression:
+  $557: DynamicCast to LevelStreaming@0x212d5b8c080 of expr:
+  $566: LocalVariable named Object@0x213bd28e500
+$575: Let (Variable = Expression)
+  Variable:
+  $584: LocalVariable named UniqueObjectNameForCooking_bSuccess3@0x213bd28ea00
+  Expression:
+  $593: PrimitiveCast type=71
+    Argument:
+    $595: LocalVariable named UniqueObjectNameForCooking_AsLevel_Streaming2@0x213bd28e980
+$604: JumpIfNot -> 0x36a, cond:
+  $609: LocalVariable named UniqueObjectNameForCooking_bSuccess3@0x213bd28ea00
+$618: LetObj (Variable = Expression)
+  Variable:
+  $619: LocalVariable named CallFunc_GetLevelScriptActor_ReturnValue2@0x213bd28eb00
+  Expression:
+  $628: Context
+    ObjectExpression:
+    $629: LocalVariable named UniqueObjectNameForCooking_AsLevel_Streaming2@0x213bd28e980
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetLevelScriptActor_ReturnValue2@0x213bd28eb00
+    ContextExpression:
+    $650: FinalFunction target=GetLevelScriptActor@0x212d69e8ab0 (
+      $659: EndFunctionParms
+    )
+$660: LetObj (Variable = Expression)
+  Variable:
+  $661: LocalVariable named Temp_object_Variable@0x213bd28e700
+  Expression:
+  $670: LocalVariable named CallFunc_GetLevelScriptActor_ReturnValue2@0x213bd28eb00
+$679: Let (Variable = Expression)
+  Variable:
+  $688: LocalVariable named UniqueObjectNameForCooking_AsInterface_Bomb@0x213bd28e780
+  Expression:
+  $697: ObjToInterfaceCast to Interface_Bomb_C@0x213b3275a00
+  $706: LocalVariable named Temp_object_Variable@0x213bd28e700
+$715: Let (Variable = Expression)
+  Variable:
+  $724: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x213bd28e800
+  Expression:
+  $733: PrimitiveCast type=73
+    Argument:
+    $735: LocalVariable named UniqueObjectNameForCooking_AsInterface_Bomb@0x213bd28e780
+$744: JumpIfNot -> 0x1b9, cond:
+  $749: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x213bd28e800
+$758: Context
+  ObjectExpression:
+  $759: InterfaceContext:
+  $760: LocalVariable named UniqueObjectNameForCooking_AsInterface_Bomb@0x213bd28e780
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $781: VirtualFunction call "Set Bomb Parameters" (
+    $794: LocalVariable named Radius In@0x213b257b1a0
+    $803: LocalVariable named Seed In@0x213b257a6b0
+    $812: EndFunctionParms
+  )
+$813: Jump to offset 0x1b9
+$818: LetBool (Variable = Expression)
+  Variable:
+  $819: LocalVariable named Success@0x213bd28ee80
+  Expression:
+  $828: False
+$829: Jump to offset 0x1b9
+$834: LetObj (Variable = Expression)
+  Variable:
+  $835: LocalVariable named Temp_object_Variable2@0x213bd28ec80
+  Expression:
+  $844: LocalVariable named Object@0x213bd28e500
+$853: Jump to offset 0x117
+$858: LetBool (Variable = Expression)
+  Variable:
+  $859: LocalVariable named CallFunc_Set_Garden_Parameters_Instances_Created@0x213bd28ee00
+  Expression:
+  $868: False
+$869: Jump to offset 0x1a6
+$874: LetObj (Variable = Expression)
+  Variable:
+  $875: LocalVariable named Temp_object_Variable@0x213bd28e700
+  Expression:
+  $884: LocalVariable named Object@0x213bd28e500
+$893: Jump to offset 0x2a7
+$898: Return expression:
+  $899: Nothing
+$900: EndOfScript
+
+=== BP_Placement_Functions_C::Generate Random Box Raycast (872 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_Multiply_VectorFloat_ReturnValue@0x213bd28f200
+  Expression:
+  $18: CallMath target=Multiply_VectorFloat@0x212d69ae540 (
+    $27: LocalVariable named Extent@0x213bd28f000
+    $36: literal float 0.8999999761581421
+    $41: EndFunctionParms
+  )
+$42: Let (Variable = Expression)
+  Variable:
+  $51: LocalVariable named CallFunc_RandomFloatFromStream_ReturnValue@0x213b257a640
+  Expression:
+  $60: CallMath target=RandomFloatFromStream@0x212d69b3780 (
+    $69: LocalOutVariable named Random@0x213bd28ef00
+    $78: EndFunctionParms
+  )
+$79: CallMath target=BreakVector@0x212d69930b0 (
+  $88: LocalVariable named CallFunc_Multiply_VectorFloat_ReturnValue@0x213bd28f200
+  $97: LocalVariable named CallFunc_BreakVector_X@0x213b257a5d0
+  $106: LocalVariable named CallFunc_BreakVector_Y@0x213b257a560
+  $115: LocalVariable named CallFunc_BreakVector_Z@0x213b257a4f0
+  $124: EndFunctionParms
+)
+$125: Let (Variable = Expression)
+  Variable:
+  $134: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue@0x213b257a480
+  Expression:
+  $143: CallMath target=Subtract_FloatFloat@0x212d69b98c0 (
+    $152: LocalVariable named CallFunc_RandomFloatFromStream_ReturnValue@0x213b257a640
+    $161: literal float 0.5
+    $166: EndFunctionParms
+  )
+$167: Let (Variable = Expression)
+  Variable:
+  $176: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x213b257a3a0
+  Expression:
+  $185: CallMath target=Multiply_FloatFloat@0x212d69ad1e0 (
+    $194: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue@0x213b257a480
+    $203: literal float 2
+    $208: EndFunctionParms
+  )
+$209: Let (Variable = Expression)
+  Variable:
+  $218: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue2@0x213b257a330
+  Expression:
+  $227: CallMath target=Multiply_FloatFloat@0x212d69ad1e0 (
+    $236: LocalVariable named CallFunc_BreakVector_Y@0x213b257a560
+    $245: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x213b257a3a0
+    $254: EndFunctionParms
+  )
+$255: Let (Variable = Expression)
+  Variable:
+  $264: LocalVariable named CallFunc_RandomFloatFromStream_ReturnValue2@0x213b257a2c0
+  Expression:
+  $273: CallMath target=RandomFloatFromStream@0x212d69b3780 (
+    $282: LocalOutVariable named Random@0x213bd28ef00
+    $291: EndFunctionParms
+  )
+$292: Let (Variable = Expression)
+  Variable:
+  $301: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue2@0x213b257a250
+  Expression:
+  $310: CallMath target=Subtract_FloatFloat@0x212d69b98c0 (
+    $319: LocalVariable named CallFunc_RandomFloatFromStream_ReturnValue2@0x213b257a2c0
+    $328: literal float 0.5
+    $333: EndFunctionParms
+  )
+$334: Let (Variable = Expression)
+  Variable:
+  $343: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue3@0x213b257a090
+  Expression:
+  $352: CallMath target=Multiply_FloatFloat@0x212d69ad1e0 (
+    $361: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue2@0x213b257a250
+    $370: literal float 2
+    $375: EndFunctionParms
+  )
+$376: Let (Variable = Expression)
+  Variable:
+  $385: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue4@0x213b257a020
+  Expression:
+  $394: CallMath target=Multiply_FloatFloat@0x212d69ad1e0 (
+    $403: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue3@0x213b257a090
+    $412: LocalVariable named CallFunc_BreakVector_X@0x213b257a5d0
+    $421: EndFunctionParms
+  )
+$422: Let (Variable = Expression)
+  Variable:
+  $431: LocalVariable named CallFunc_MakeVector_ReturnValue2@0x213bd28f480
+  Expression:
+  $440: CallMath target=MakeVector@0x212d69aa910 (
+    $449: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue4@0x213b257a020
+    $458: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue2@0x213b257a330
+    $467: literal float 0
+    $472: EndFunctionParms
+  )
+$473: Let (Variable = Expression)
+  Variable:
+  $482: LocalVariable named CallFunc_Add_VectorVector_ReturnValue2@0x213bd28f500
+  Expression:
+  $491: CallMath target=Add_VectorVector@0x212d6990750 (
+    $500: LocalVariable named Centre@0x213bd28ef80
+    $509: LocalVariable named CallFunc_MakeVector_ReturnValue2@0x213bd28f480
+    $518: EndFunctionParms
+  )
+$519: Let (Variable = Expression)
+  Variable:
+  $528: LocalVariable named Centre Point@0x213bd28f580
+  Expression:
+  $537: LocalVariable named CallFunc_Add_VectorVector_ReturnValue2@0x213bd28f500
+$546: Let (Variable = Expression)
+  Variable:
+  $555: LocalVariable named CallFunc_Multiply_VectorFloat_ReturnValue@0x213bd28f200
+  Expression:
+  $564: CallMath target=Multiply_VectorFloat@0x212d69ae540 (
+    $573: LocalVariable named Extent@0x213bd28f000
+    $582: literal float 0.8999999761581421
+    $587: EndFunctionParms
+  )
+$588: CallMath target=BreakVector@0x212d69930b0 (
+  $597: LocalVariable named CallFunc_Multiply_VectorFloat_ReturnValue@0x213bd28f200
+  $606: LocalVariable named CallFunc_BreakVector_X@0x213b257a5d0
+  $615: LocalVariable named CallFunc_BreakVector_Y@0x213b257a560
+  $624: LocalVariable named CallFunc_BreakVector_Z@0x213b257a4f0
+  $633: EndFunctionParms
+)
+$634: Let (Variable = Expression)
+  Variable:
+  $643: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue@0x213b257a410
+  Expression:
+  $652: CallMath target=Divide_FloatFloat@0x212d6998eb0 (
+    $661: LocalVariable named CallFunc_BreakVector_Z@0x213b257a4f0
+    $670: literal float 2
+    $675: EndFunctionParms
+  )
+$676: Let (Variable = Expression)
+  Variable:
+  $685: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213bd28f300
+  Expression:
+  $694: CallMath target=MakeVector@0x212d69aa910 (
+    $703: literal float 0
+    $708: literal float 0
+    $713: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue@0x213b257a410
+    $722: EndFunctionParms
+  )
+$723: Let (Variable = Expression)
+  Variable:
+  $732: LocalVariable named CallFunc_Subtract_VectorVector_ReturnValue@0x213bd28f380
+  Expression:
+  $741: CallMath target=Subtract_VectorVector@0x212d69ba7f0 (
+    $750: LocalVariable named Centre Point@0x213bd28f580
+    $759: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213bd28f300
+    $768: EndFunctionParms
+  )
+$769: Let (Variable = Expression)
+  Variable:
+  $778: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x213bd28f400
+  Expression:
+  $787: CallMath target=Add_VectorVector@0x212d6990750 (
+    $796: LocalVariable named Centre Point@0x213bd28f580
+    $805: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213bd28f300
+    $814: EndFunctionParms
+  )
+$815: Let (Variable = Expression)
+  Variable:
+  $824: LocalOutVariable named Raycast Start@0x213bd28f100
+  Expression:
+  $833: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x213bd28f400
+$842: Let (Variable = Expression)
+  Variable:
+  $851: LocalOutVariable named Raycast End@0x213bd28f180
+  Expression:
+  $860: LocalVariable named CallFunc_Subtract_VectorVector_ReturnValue@0x213bd28f380
+$869: Return expression:
+  $870: Nothing
+$871: EndOfScript
+
+=== BP_Placement_Functions_C::Get Box Sample Count (298 bytes) ===
+$0: Context
+  ObjectExpression:
+  $1: LocalVariable named Actor@0x213bd28f600
+  SkipBytes: 0x1d
+  RValueProperty: (null)
+  ContextExpression:
+  $22: FinalFunction target=GetActorBounds@0x212d6381290 (
+    $31: False
+    $32: LocalVariable named CallFunc_GetActorBounds_Origin@0x213bd28f700
+    $41: LocalVariable named CallFunc_GetActorBounds_BoxExtent@0x213bd28f780
+    $50: EndFunctionParms
+  )
+$51: CallMath target=BreakVector@0x212d69930b0 (
+  $60: LocalVariable named CallFunc_GetActorBounds_BoxExtent@0x213bd28f780
+  $69: LocalVariable named CallFunc_BreakVector_X@0x213b2578f10
+  $78: LocalVariable named CallFunc_BreakVector_Y@0x213b2578ea0
+  $87: LocalVariable named CallFunc_BreakVector_Z@0x213b2578e30
+  $96: EndFunctionParms
+)
+$97: Let (Variable = Expression)
+  Variable:
+  $106: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x213b25781f0
+  Expression:
+  $115: CallMath target=Multiply_FloatFloat@0x212d69ad1e0 (
+    $124: LocalVariable named CallFunc_BreakVector_X@0x213b2578f10
+    $133: LocalVariable named CallFunc_BreakVector_Y@0x213b2578ea0
+    $142: EndFunctionParms
+  )
+$143: Let (Variable = Expression)
+  Variable:
+  $152: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue@0x213b2578180
+  Expression:
+  $161: CallMath target=Divide_FloatFloat@0x212d6998eb0 (
+    $170: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x213b25781f0
+    $179: literal float 10000
+    $184: EndFunctionParms
+  )
+$185: Let (Variable = Expression)
+  Variable:
+  $194: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue2@0x213b2578110
+  Expression:
+  $203: CallMath target=Multiply_FloatFloat@0x212d69ad1e0 (
+    $212: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue@0x213b2578180
+    $221: LocalVariable named Seed Density@0x213b2579680
+    $230: EndFunctionParms
+  )
+$231: Let (Variable = Expression)
+  Variable:
+  $240: LocalVariable named CallFunc_FFloor_ReturnValue@0x213b2577f50
+  Expression:
+  $249: CallMath target=FFloor@0x212d699c520 (
+    $258: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue2@0x213b2578110
+    $267: EndFunctionParms
+  )
+$268: Let (Variable = Expression)
+  Variable:
+  $277: LocalOutVariable named Sample Count@0x213b2578f80
+  Expression:
+  $286: LocalVariable named CallFunc_FFloor_ReturnValue@0x213b2577f50
+$295: Return expression:
+  $296: Nothing
+$297: EndOfScript
+
+=== BP_Placement_Functions_C::Generate Random Radial Raycast (833 bytes) ===
+$0: CallMath target=BreakTransform@0x212d6992df0 (
+  $9: LocalVariable named Actor Transform@0x213bd28f900
+  $18: LocalVariable named CallFunc_BreakTransform_Location@0x213bd28fb00
+  $27: LocalVariable named CallFunc_BreakTransform_Rotation@0x213bd28fb80
+  $36: LocalVariable named CallFunc_BreakTransform_Scale@0x213bd28fc00
+  $45: EndFunctionParms
+)
+$46: Let (Variable = Expression)
+  Variable:
+  $55: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x213b25782d0
+  Expression:
+  $64: CallMath target=Multiply_FloatFloat@0x212d69ad1e0 (
+    $73: LocalVariable named Radius@0x213b2577ee0
+    $82: LocalVariable named Spawn Radius Multiplier@0x213b2578340
+    $91: EndFunctionParms
+  )
+$92: CallMath target=BreakRotator@0x212d6992530 (
+  $101: LocalVariable named CallFunc_BreakTransform_Rotation@0x213bd28fb80
+  $110: LocalVariable named CallFunc_BreakRotator_Roll@0x213b2578260
+  $119: LocalVariable named CallFunc_BreakRotator_Pitch@0x213b2577af0
+  $128: LocalVariable named CallFunc_BreakRotator_Yaw@0x213b2577a80
+  $137: EndFunctionParms
+)
+$138: Let (Variable = Expression)
+  Variable:
+  $147: LocalVariable named CallFunc_RandomFloatFromStream_ReturnValue@0x213b2578030
+  Expression:
+  $156: CallMath target=RandomFloatFromStream@0x212d69b3780 (
+    $165: LocalOutVariable named Random@0x213bd28f800
+    $174: EndFunctionParms
+  )
+$175: Let (Variable = Expression)
+  Variable:
+  $184: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue2@0x213b2577fc0
+  Expression:
+  $193: CallMath target=Multiply_FloatFloat@0x212d69ad1e0 (
+    $202: LocalVariable named CallFunc_RandomFloatFromStream_ReturnValue@0x213b2578030
+    $211: literal float 360
+    $216: EndFunctionParms
+  )
+$217: Let (Variable = Expression)
+  Variable:
+  $226: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue2@0x213b2577e00
+  Expression:
+  $235: CallMath target=Add_FloatFloat@0x212d698f820 (
+    $244: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue2@0x213b2577fc0
+    $253: LocalVariable named CallFunc_BreakRotator_Yaw@0x213b2577a80
+    $262: EndFunctionParms
+  )
+$263: Let (Variable = Expression)
+  Variable:
+  $272: LocalVariable named CallFunc_MakeRotator_ReturnValue@0x213bd28ff00
+  Expression:
+  $281: CallMath target=MakeRotator@0x212d69a8d90 (
+    $290: literal float 0
+    $295: literal float 0
+    $300: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue2@0x213b2577e00
+    $309: EndFunctionParms
+  )
+$310: Let (Variable = Expression)
+  Variable:
+  $319: LocalVariable named CallFunc_GetForwardVector_ReturnValue@0x213bd28ff80
+  Expression:
+  $328: CallMath target=GetForwardVector@0x212d699f430 (
+    $337: LocalVariable named CallFunc_MakeRotator_ReturnValue@0x213bd28ff00
+    $346: EndFunctionParms
+  )
+$347: Let (Variable = Expression)
+  Variable:
+  $356: LocalVariable named CallFunc_RandomFloatFromStream_ReturnValue2@0x213b2577bd0
+  Expression:
+  $365: CallMath target=RandomFloatFromStream@0x212d69b3780 (
+    $374: LocalOutVariable named Random@0x213bd28f800
+    $383: EndFunctionParms
+  )
+$384: Let (Variable = Expression)
+  Variable:
+  $393: LocalVariable named CallFunc_MultiplyMultiply_FloatFloat_ReturnValue@0x213b2577b60
+  Expression:
+  $402: CallMath target=MultiplyMultiply_FloatFloat@0x212d69aed80 (
+    $411: LocalVariable named CallFunc_RandomFloatFromStream_ReturnValue2@0x213b2577bd0
+    $420: LocalVariable named Spawn Clustering@0x213b2577e70
+    $429: EndFunctionParms
+  )
+$430: Let (Variable = Expression)
+  Variable:
+  $439: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue3@0x213b25779a0
+  Expression:
+  $448: CallMath target=Multiply_FloatFloat@0x212d69ad1e0 (
+    $457: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x213b25782d0
+    $466: LocalVariable named CallFunc_MultiplyMultiply_FloatFloat_ReturnValue@0x213b2577b60
+    $475: EndFunctionParms
+  )
+$476: Let (Variable = Expression)
+  Variable:
+  $485: LocalVariable named CallFunc_Multiply_VectorFloat_ReturnValue@0x213b5680000
+  Expression:
+  $494: CallMath target=Multiply_VectorFloat@0x212d69ae540 (
+    $503: LocalVariable named CallFunc_GetForwardVector_ReturnValue@0x213bd28ff80
+    $512: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue3@0x213b25779a0
+    $521: EndFunctionParms
+  )
+$522: Let (Variable = Expression)
+  Variable:
+  $531: LocalVariable named CallFunc_Add_VectorVector_ReturnValue2@0x213b5680080
+  Expression:
+  $540: CallMath target=Add_VectorVector@0x212d6990750 (
+    $549: LocalVariable named CallFunc_Multiply_VectorFloat_ReturnValue@0x213b5680000
+    $558: LocalVariable named Centre@0x213bd28f880
+    $567: EndFunctionParms
+  )
+$568: Let (Variable = Expression)
+  Variable:
+  $577: LocalVariable named Random Point@0x213b5680100
+  Expression:
+  $586: LocalVariable named CallFunc_Add_VectorVector_ReturnValue2@0x213b5680080
+$595: Let (Variable = Expression)
+  Variable:
+  $604: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x213b2577a10
+  Expression:
+  $613: CallMath target=Add_FloatFloat@0x212d698f820 (
+    $622: LocalVariable named Radius@0x213b2577ee0
+    $631: literal float 100
+    $636: EndFunctionParms
+  )
+$637: Let (Variable = Expression)
+  Variable:
+  $646: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213bd28fd80
+  Expression:
+  $655: CallMath target=MakeVector@0x212d69aa910 (
+    $664: literal float 0
+    $669: literal float 0
+    $674: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x213b2577a10
+    $683: EndFunctionParms
+  )
+$684: Let (Variable = Expression)
+  Variable:
+  $693: LocalVariable named CallFunc_Subtract_VectorVector_ReturnValue@0x213bd28fe00
+  Expression:
+  $702: CallMath target=Subtract_VectorVector@0x212d69ba7f0 (
+    $711: LocalVariable named Random Point@0x213b5680100
+    $720: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213bd28fd80
+    $729: EndFunctionParms
+  )
+$730: Let (Variable = Expression)
+  Variable:
+  $739: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x213bd28fe80
+  Expression:
+  $748: CallMath target=Add_VectorVector@0x212d6990750 (
+    $757: LocalVariable named Random Point@0x213b5680100
+    $766: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213bd28fd80
+    $775: EndFunctionParms
+  )
+$776: Let (Variable = Expression)
+  Variable:
+  $785: LocalOutVariable named Raycast Start@0x213bd28fa00
+  Expression:
+  $794: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x213bd28fe80
+$803: Let (Variable = Expression)
+  Variable:
+  $812: LocalOutVariable named Raycast End@0x213bd28fa80
+  Expression:
+  $821: LocalVariable named CallFunc_Subtract_VectorVector_ReturnValue@0x213bd28fe00
+$830: Return expression:
+  $831: Nothing
+$832: EndOfScript
+
+=== BP_Placement_Functions_C::Calculate Index from Probabilities (861 bytes) ===
+$0: FlowStack.Push(0x35a)
+$5: Let (Variable = Expression)
+  Variable:
+  $14: LocalVariable named CallFunc_Array_Length_ReturnValue2@0x213b25772a0
+  Expression:
+  $23: Context
+    ObjectExpression:
+    $24: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue2@0x213b25772a0
+    ContextExpression:
+    $45: FinalFunction target=Array_Length@0x212d6987df0 (
+      $54: LocalOutVariable named Charge Probabilities@0x213b5680500
+      $63: EndFunctionParms
+    )
+$64: Let (Variable = Expression)
+  Variable:
+  $73: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x213b25771c0
+  Expression:
+  $82: CallMath target=Subtract_IntInt@0x212d69b9ad0 (
+    $91: LocalVariable named CallFunc_Array_Length_ReturnValue2@0x213b25772a0
+    $100: literal int32 1
+    $105: EndFunctionParms
+  )
+$106: Let (Variable = Expression)
+  Variable:
+  $115: LocalVariable named Output Index@0x213b2576f20
+  Expression:
+  $124: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x213b25771c0
+$133: Let (Variable = Expression)
+  Variable:
+  $142: LocalVariable named Probability Sum@0x213b2576f90
+  Expression:
+  $151: literal float 0
+$156: LetBool (Variable = Expression)
+  Variable:
+  $157: LocalVariable named Temp_bool_True_if_break_was_hit_Variable@0x213b5680280
+  Expression:
+  $166: False
+$167: Let (Variable = Expression)
+  Variable:
+  $176: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b25770e0
+  Expression:
+  $185: literal int32 0
+$190: Let (Variable = Expression)
+  Variable:
+  $199: LocalVariable named Temp_int_Array_Index_Variable@0x213b2577230
+  Expression:
+  $208: literal int32 0
+$213: Let (Variable = Expression)
+  Variable:
+  $222: LocalVariable named CallFunc_Array_Length_ReturnValue@0x213b2577c40
+  Expression:
+  $231: Context
+    ObjectExpression:
+    $232: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x213b2577c40
+    ContextExpression:
+    $253: FinalFunction target=Array_Length@0x212d6987df0 (
+      $262: LocalOutVariable named Charge Probabilities@0x213b5680500
+      $271: EndFunctionParms
+    )
+$272: LetBool (Variable = Expression)
+  Variable:
+  $273: LocalVariable named CallFunc_Not_PreBool_ReturnValue@0x213b5680300
+  Expression:
+  $282: CallMath target=Not_PreBool@0x212d69b0310 (
+    $291: LocalVariable named Temp_bool_True_if_break_was_hit_Variable@0x213b5680280
+    $300: EndFunctionParms
+  )
+$301: LetBool (Variable = Expression)
+  Variable:
+  $302: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x213b5680380
+  Expression:
+  $311: CallMath target=Less_IntInt@0x212d69a5ed0 (
+    $320: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b25770e0
+    $329: LocalVariable named CallFunc_Array_Length_ReturnValue@0x213b2577c40
+    $338: EndFunctionParms
+  )
+$339: LetBool (Variable = Expression)
+  Variable:
+  $340: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x213b5680400
+  Expression:
+  $349: CallMath target=BooleanAND@0x212d69910f0 (
+    $358: LocalVariable named CallFunc_Not_PreBool_ReturnValue@0x213b5680300
+    $367: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x213b5680380
+    $376: EndFunctionParms
+  )
+$377: JumpIfNot -> 0x26b, cond:
+  $382: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x213b5680400
+$391: Let (Variable = Expression)
+  Variable:
+  $400: LocalVariable named Temp_int_Array_Index_Variable@0x213b2577230
+  Expression:
+  $409: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b25770e0
+$418: FlowStack.Push(0x28b)
+$423: Context
+  ObjectExpression:
+  $424: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $445: FinalFunction target=Array_Get@0x212d69876b0 (
+    $454: LocalOutVariable named Charge Probabilities@0x213b5680500
+    $463: LocalVariable named Temp_int_Array_Index_Variable@0x213b2577230
+    $472: LocalVariable named CallFunc_Array_Get_Item@0x213b2577150
+    $481: EndFunctionParms
+  )
+$482: Let (Variable = Expression)
+  Variable:
+  $491: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x213b2577000
+  Expression:
+  $500: CallMath target=Add_FloatFloat@0x212d698f820 (
+    $509: LocalVariable named CallFunc_Array_Get_Item@0x213b2577150
+    $518: LocalVariable named Probability Sum@0x213b2576f90
+    $527: EndFunctionParms
+  )
+$528: LetBool (Variable = Expression)
+  Variable:
+  $529: LocalVariable named CallFunc_Less_FloatFloat_ReturnValue@0x213b5680480
+  Expression:
+  $538: CallMath target=Less_FloatFloat@0x212d69a5cb0 (
+    $547: LocalVariable named Random Float@0x213b2577d20
+    $556: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x213b2577000
+    $565: EndFunctionParms
+  )
+$566: JumpIfNot -> 0x2d5, cond:
+  $571: LocalVariable named CallFunc_Less_FloatFloat_ReturnValue@0x213b5680480
+$580: Let (Variable = Expression)
+  Variable:
+  $589: LocalVariable named Output Index@0x213b2576f20
+  Expression:
+  $598: LocalVariable named Temp_int_Array_Index_Variable@0x213b2577230
+$607: LetBool (Variable = Expression)
+  Variable:
+  $608: LocalVariable named Temp_bool_True_if_break_was_hit_Variable@0x213b5680280
+  Expression:
+  $617: True
+$618: PopExecutionFlow (jump to popped addr)
+$619: Let (Variable = Expression)
+  Variable:
+  $628: LocalOutVariable named Index@0x213b2577cb0
+  Expression:
+  $637: LocalVariable named Output Index@0x213b2576f20
+$646: Jump to offset 0x35a
+$651: Let (Variable = Expression)
+  Variable:
+  $660: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x213b2577070
+  Expression:
+  $669: CallMath target=Add_IntInt@0x212d698fa30 (
+    $678: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b25770e0
+    $687: literal int32 1
+    $692: EndFunctionParms
+  )
+$693: Let (Variable = Expression)
+  Variable:
+  $702: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b25770e0
+  Expression:
+  $711: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x213b2577070
+$720: Jump to offset 0xd5
+$725: Context
+  ObjectExpression:
+  $726: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $747: FinalFunction target=Array_Get@0x212d69876b0 (
+    $756: LocalOutVariable named Charge Probabilities@0x213b5680500
+    $765: LocalVariable named Temp_int_Array_Index_Variable@0x213b2577230
+    $774: LocalVariable named CallFunc_Array_Get_Item@0x213b2577150
+    $783: EndFunctionParms
+  )
+$784: Let (Variable = Expression)
+  Variable:
+  $793: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x213b2577000
+  Expression:
+  $802: CallMath target=Add_FloatFloat@0x212d698f820 (
+    $811: LocalVariable named CallFunc_Array_Get_Item@0x213b2577150
+    $820: LocalVariable named Probability Sum@0x213b2576f90
+    $829: EndFunctionParms
+  )
+$830: Let (Variable = Expression)
+  Variable:
+  $839: LocalVariable named Probability Sum@0x213b2576f90
+  Expression:
+  $848: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x213b2577000
+$857: PopExecutionFlow (jump to popped addr)
+$858: Return expression:
+  $859: Nothing
+$860: EndOfScript
+
+=== BP_Placement_Functions_C::Get Radial Sample Count (280 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x213b2576cf0
+  Expression:
+  $18: CallMath target=Multiply_FloatFloat@0x212d69ad1e0 (
+    $27: LocalVariable named Radius@0x213b2576e40
+    $36: LocalVariable named Radius@0x213b2576e40
+    $45: EndFunctionParms
+  )
+$46: Let (Variable = Expression)
+  Variable:
+  $55: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue2@0x213b2576c80
+  Expression:
+  $64: CallMath target=Multiply_FloatFloat@0x212d69ad1e0 (
+    $73: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue@0x213b2576cf0
+    $82: literal float 2
+    $87: EndFunctionParms
+  )
+$88: Let (Variable = Expression)
+  Variable:
+  $97: LocalVariable named CallFunc_MultiplyByPi_ReturnValue@0x213b2576c10
+  Expression:
+  $106: CallMath target=MultiplyByPi@0x212d69aebe0 (
+    $115: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue2@0x213b2576c80
+    $124: EndFunctionParms
+  )
+$125: Let (Variable = Expression)
+  Variable:
+  $134: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue@0x213b2576ba0
+  Expression:
+  $143: CallMath target=Divide_FloatFloat@0x212d6998eb0 (
+    $152: LocalVariable named CallFunc_MultiplyByPi_ReturnValue@0x213b2576c10
+    $161: literal float 10000
+    $166: EndFunctionParms
+  )
+$167: Let (Variable = Expression)
+  Variable:
+  $176: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue3@0x213b2576b30
+  Expression:
+  $185: CallMath target=Multiply_FloatFloat@0x212d69ad1e0 (
+    $194: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue@0x213b2576ba0
+    $203: LocalVariable named Spawn Sample Density@0x213b2576dd0
+    $212: EndFunctionParms
+  )
+$213: Let (Variable = Expression)
+  Variable:
+  $222: LocalVariable named CallFunc_FFloor_ReturnValue@0x213b1187d90
+  Expression:
+  $231: CallMath target=FFloor@0x212d699c520 (
+    $240: LocalVariable named CallFunc_Multiply_FloatFloat_ReturnValue3@0x213b2576b30
+    $249: EndFunctionParms
+  )
+$250: Let (Variable = Expression)
+  Variable:
+  $259: LocalOutVariable named Sample Count@0x213b2576d60
+  Expression:
+  $268: LocalVariable named CallFunc_FFloor_ReturnValue@0x213b1187d90
+$277: Return expression:
+  $278: Nothing
+$279: EndOfScript
+
+=== BP_Placement_Functions_C::Normalise Charge Probabilities (1301 bytes) ===
+$0: FlowStack.Push(0x512)
+$5: Let (Variable = Expression)
+  Variable:
+  $14: LocalVariable named Temp_int_Loop_Counter_Variable3@0x213b11894c0
+  Expression:
+  $23: literal int32 0
+$28: Let (Variable = Expression)
+  Variable:
+  $37: LocalVariable named Temp_int_Array_Index_Variable3@0x213b11895a0
+  Expression:
+  $46: literal int32 0
+$51: Let (Variable = Expression)
+  Variable:
+  $60: LocalVariable named CallFunc_Array_Length_ReturnValue@0x213b1187e00
+  Expression:
+  $69: Context
+    ObjectExpression:
+    $70: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x213b1187e00
+    ContextExpression:
+    $91: FinalFunction target=Array_Length@0x212d6987df0 (
+      $100: LocalOutVariable named Charges@0x213b5680a80
+      $109: EndFunctionParms
+    )
+$110: LetBool (Variable = Expression)
+  Variable:
+  $111: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x213b5680700
+  Expression:
+  $120: CallMath target=Less_IntInt@0x212d69a5ed0 (
+    $129: LocalVariable named Temp_int_Loop_Counter_Variable3@0x213b11894c0
+    $138: LocalVariable named CallFunc_Array_Length_ReturnValue@0x213b1187e00
+    $147: EndFunctionParms
+  )
+$148: JumpIfNot -> 0x14b, cond:
+  $153: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x213b5680700
+$162: Let (Variable = Expression)
+  Variable:
+  $171: LocalVariable named Temp_int_Array_Index_Variable3@0x213b11895a0
+  Expression:
+  $180: LocalVariable named Temp_int_Loop_Counter_Variable3@0x213b11894c0
+$189: FlowStack.Push(0x47e)
+$194: Context
+  ObjectExpression:
+  $195: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $216: FinalFunction target=Array_Get@0x212d69876b0 (
+    $225: LocalOutVariable named Charges@0x213b5680a80
+    $234: LocalVariable named Temp_int_Array_Index_Variable3@0x213b11895a0
+    $243: LocalVariable named CallFunc_Array_Get_Item@0x213b5680780
+    $252: EndFunctionParms
+  )
+$253: Let (Variable = Expression)
+  Variable:
+  $262: LocalVariable named CallFunc_Array_Add_ReturnValue@0x213b1189ae0
+  Expression:
+  $271: Context
+    ObjectExpression:
+    $272: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x25
+    RValueProperty: CallFunc_Array_Add_ReturnValue@0x213b1189ae0
+    ContextExpression:
+    $293: FinalFunction target=Array_Add@0x212d6986810 (
+      $302: LocalVariable named Local Charges@0x213b5680900
+      $311: StructMemberContext prop=SpawnWeight_19_0B05BBF2449133E0187C478432462F27@0x213b4736660
+        Expression to struct:
+        $320: LocalVariable named CallFunc_Array_Get_Item@0x213b5680780
+      $329: EndFunctionParms
+    )
+$330: PopExecutionFlow (jump to popped addr)
+$331: Let (Variable = Expression)
+  Variable:
+  $340: LocalVariable named Probability Sum@0x213b118d190
+  Expression:
+  $349: literal float 0
+$354: Context
+  ObjectExpression:
+  $355: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $376: FinalFunction target=Array_Clear@0x212d6986fd0 (
+    $385: LocalOutVariable named Charge Probabilities@0x213b5680980
+    $394: EndFunctionParms
+  )
+$395: Let (Variable = Expression)
+  Variable:
+  $404: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b1189680
+  Expression:
+  $413: literal int32 0
+$418: Let (Variable = Expression)
+  Variable:
+  $427: LocalVariable named Temp_int_Array_Index_Variable@0x213b1189610
+  Expression:
+  $436: literal int32 0
+$441: Let (Variable = Expression)
+  Variable:
+  $450: LocalVariable named CallFunc_Array_Length_ReturnValue3@0x213b1189c30
+  Expression:
+  $459: Context
+    ObjectExpression:
+    $460: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue3@0x213b1189c30
+    ContextExpression:
+    $481: FinalFunction target=Array_Length@0x212d6987df0 (
+      $490: LocalVariable named Local Charges@0x213b5680900
+      $499: EndFunctionParms
+    )
+$500: LetBool (Variable = Expression)
+  Variable:
+  $501: LocalVariable named CallFunc_Less_IntInt_ReturnValue3@0x213b5680880
+  Expression:
+  $510: CallMath target=Less_IntInt@0x212d69a5ed0 (
+    $519: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b1189680
+    $528: LocalVariable named CallFunc_Array_Length_ReturnValue3@0x213b1189c30
+    $537: EndFunctionParms
+  )
+$538: JumpIfNot -> 0x2cd, cond:
+  $543: LocalVariable named CallFunc_Less_IntInt_ReturnValue3@0x213b5680880
+$552: Let (Variable = Expression)
+  Variable:
+  $561: LocalVariable named Temp_int_Array_Index_Variable@0x213b1189610
+  Expression:
+  $570: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b1189680
+$579: FlowStack.Push(0x4c8)
+$584: Context
+  ObjectExpression:
+  $585: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $606: FinalFunction target=Array_Get@0x212d69876b0 (
+    $615: LocalVariable named Local Charges@0x213b5680900
+    $624: LocalVariable named Temp_int_Array_Index_Variable@0x213b1189610
+    $633: LocalVariable named CallFunc_Array_Get_Item3@0x213b1189bc0
+    $642: EndFunctionParms
+  )
+$643: Let (Variable = Expression)
+  Variable:
+  $652: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x213b118af00
+  Expression:
+  $661: CallMath target=Add_FloatFloat@0x212d698f820 (
+    $670: LocalVariable named Probability Sum@0x213b118d190
+    $679: LocalVariable named CallFunc_Array_Get_Item3@0x213b1189bc0
+    $688: EndFunctionParms
+  )
+$689: Let (Variable = Expression)
+  Variable:
+  $698: LocalVariable named Probability Sum@0x213b118d190
+  Expression:
+  $707: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x213b118af00
+$716: PopExecutionFlow (jump to popped addr)
+$717: Let (Variable = Expression)
+  Variable:
+  $726: LocalVariable named Temp_int_Loop_Counter_Variable2@0x213b11898b0
+  Expression:
+  $735: literal int32 0
+$740: Let (Variable = Expression)
+  Variable:
+  $749: LocalVariable named Temp_int_Array_Index_Variable2@0x213b1189920
+  Expression:
+  $758: literal int32 0
+$763: Let (Variable = Expression)
+  Variable:
+  $772: LocalVariable named CallFunc_Array_Length_ReturnValue2@0x213b1189b50
+  Expression:
+  $781: Context
+    ObjectExpression:
+    $782: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue2@0x213b1189b50
+    ContextExpression:
+    $803: FinalFunction target=Array_Length@0x212d6987df0 (
+      $812: LocalVariable named Local Charges@0x213b5680900
+      $821: EndFunctionParms
+    )
+$822: LetBool (Variable = Expression)
+  Variable:
+  $823: LocalVariable named CallFunc_Less_IntInt_ReturnValue2@0x213b5680800
+  Expression:
+  $832: CallMath target=Less_IntInt@0x212d69a5ed0 (
+    $841: LocalVariable named Temp_int_Loop_Counter_Variable2@0x213b11898b0
+    $850: LocalVariable named CallFunc_Array_Length_ReturnValue2@0x213b1189b50
+    $859: EndFunctionParms
+  )
+$860: PopExecutionFlowIfNot, cond:
+$861: LocalVariable named CallFunc_Less_IntInt_ReturnValue2@0x213b5680800
+$870: Let (Variable = Expression)
+  Variable:
+  $879: LocalVariable named Temp_int_Array_Index_Variable2@0x213b1189920
+  Expression:
+  $888: LocalVariable named Temp_int_Loop_Counter_Variable2@0x213b11898b0
+$897: FlowStack.Push(0x434)
+$902: Context
+  ObjectExpression:
+  $903: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $924: FinalFunction target=Array_Get@0x212d69876b0 (
+    $933: LocalVariable named Local Charges@0x213b5680900
+    $942: LocalVariable named Temp_int_Array_Index_Variable2@0x213b1189920
+    $951: LocalVariable named CallFunc_Array_Get_Item2@0x213b1189a70
+    $960: EndFunctionParms
+  )
+$961: Let (Variable = Expression)
+  Variable:
+  $970: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue@0x213b118ab80
+  Expression:
+  $979: CallMath target=Divide_FloatFloat@0x212d6998eb0 (
+    $988: LocalVariable named CallFunc_Array_Get_Item2@0x213b1189a70
+    $997: LocalVariable named Probability Sum@0x213b118d190
+    $1006: EndFunctionParms
+  )
+$1007: Let (Variable = Expression)
+  Variable:
+  $1016: LocalVariable named CallFunc_Array_Add_ReturnValue2@0x213b118aa30
+  Expression:
+  $1025: Context
+    ObjectExpression:
+    $1026: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Add_ReturnValue2@0x213b118aa30
+    ContextExpression:
+    $1047: FinalFunction target=Array_Add@0x212d6986810 (
+      $1056: LocalOutVariable named Charge Probabilities@0x213b5680980
+      $1065: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue@0x213b118ab80
+      $1074: EndFunctionParms
+    )
+$1075: PopExecutionFlow (jump to popped addr)
+$1076: Let (Variable = Expression)
+  Variable:
+  $1085: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x213b1189990
+  Expression:
+  $1094: CallMath target=Add_IntInt@0x212d698fa30 (
+    $1103: LocalVariable named Temp_int_Loop_Counter_Variable2@0x213b11898b0
+    $1112: literal int32 1
+    $1117: EndFunctionParms
+  )
+$1118: Let (Variable = Expression)
+  Variable:
+  $1127: LocalVariable named Temp_int_Loop_Counter_Variable2@0x213b11898b0
+  Expression:
+  $1136: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x213b1189990
+$1145: Jump to offset 0x2fb
+$1150: Let (Variable = Expression)
+  Variable:
+  $1159: LocalVariable named CallFunc_Add_IntInt_ReturnValue3@0x213b1189530
+  Expression:
+  $1168: CallMath target=Add_IntInt@0x212d698fa30 (
+    $1177: LocalVariable named Temp_int_Loop_Counter_Variable3@0x213b11894c0
+    $1186: literal int32 1
+    $1191: EndFunctionParms
+  )
+$1192: Let (Variable = Expression)
+  Variable:
+  $1201: LocalVariable named Temp_int_Loop_Counter_Variable3@0x213b11894c0
+  Expression:
+  $1210: LocalVariable named CallFunc_Add_IntInt_ReturnValue3@0x213b1189530
+$1219: Jump to offset 0x33
+$1224: Let (Variable = Expression)
+  Variable:
+  $1233: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x213b11896f0
+  Expression:
+  $1242: CallMath target=Add_IntInt@0x212d698fa30 (
+    $1251: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b1189680
+    $1260: literal int32 1
+    $1265: EndFunctionParms
+  )
+$1266: Let (Variable = Expression)
+  Variable:
+  $1275: LocalVariable named Temp_int_Loop_Counter_Variable@0x213b1189680
+  Expression:
+  $1284: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x213b11896f0
+$1293: Jump to offset 0x1b9
+$1298: Return expression:
+  $1299: Nothing
+$1300: EndOfScript

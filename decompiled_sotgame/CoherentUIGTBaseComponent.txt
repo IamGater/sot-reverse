@@ -1,0 +1,547 @@
+// Class: CoherentUIGTBaseComponent (23 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+CoherentUIGTBaseComponent::BeginDebugFrameSave @ RVA 0x456B3F0 EA 0x7FF6F7F8B3F0
+======================================================================
+void __fastcall sub_7FF6F7F8B3F0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F7F3DCB0LL);
+}
+
+
+======================================================================
+CoherentUIGTBaseComponent::CreateDataModelFromObject @ RVA 0x456B430 EA 0x7FF6F7F8B430
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F7F8B430(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rax
+  __int64 result; // rax
+  __int64 v7[4]; // [rsp+28h] [rbp-20h] BYREF
+  __int64 v8; // [rsp+58h] [rbp+10h] BYREF
+
+  v4 = 0;
+  v7[0] = 0;
+  v7[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  LOBYTE(v4) = v5 != 0;
+  a2[4] = v5 + v4;
+  result = sub_7FF6F7F44310(a1, v7, v8);
+  if ( v7[0] )
+    return sub_7FF6F4DED1F0(v7[0]);
+  return result;
+}
+
+
+======================================================================
+CoherentUIGTBaseComponent::CreateDataModelFromStruct @ RVA 0x456B5F0 EA 0x7FF6F7F8B5F0
+======================================================================
+// Hidden C++ exception states: #wind=2
+_UNKNOWN **__fastcall sub_7FF6F7F8B5F0(__int64 a1, _QWORD *a2)
+{
+  _UNKNOWN **result; // rax
+  __int64 v5; // rdi
+  __int64 v6; // r14
+  __int64 v7; // rsi
+  __int64 v8; // rax
+  __int64 v9; // rdx
+  __int64 v10; // r8
+  __int64 v11; // rax
+  __int64 v13; // rax
+  __int64 v14[4]; // [rsp+28h] [rbp-20h] BYREF
+  _UNKNOWN *retaddr; // [rsp+48h] [rbp+0h] BYREF
+
+  result = &retaddr;
+  if ( *(_BYTE *)(a1 + 824) )
+  {
+    v5 = 0;
+    v14[0] = 0;
+    v14[1] = 0;
+    if ( a2[4] )
+    {
+      sub_7FF6F4F4C960(a2, a2[3], v14);
+    }
+    else
+    {
+      a2[16] = *(_QWORD *)(a2[16] + 40LL);
+      sub_7FF6F4F4C990(a2, v14);
+    }
+    if ( a2[4] )
+    {
+      sub_7FF6F4F4C960(a2, a2[3], 0);
+    }
+    else
+    {
+      a2[16] = *(_QWORD *)(a2[16] + 40LL);
+      sub_7FF6F4F4C990(a2, 0);
+    }
+    v6 = a2[7];
+    v7 = a2[6];
+    if ( v7 )
+    {
+      v8 = sub_7FF6F4F48060(L"/Script/CoreUObject");
+      v9 = *(_QWORD *)(v7 + 16);
+      v10 = v8 + 136;
+      v11 = *(int *)(v8 + 160);
+      if ( (int)v11 <= *(_DWORD *)(v9 + 160) && *(_QWORD *)(*(_QWORD *)(v9 + 136) + 8 * v11) == v10 )
+      {
+        v13 = sub_7FF6F7F54BC0(a1);
+        sub_7FF6F7F44730(v13, v14, v6, *(_QWORD *)(v7 + 112), -2);
+      }
+    }
+    result = (_UNKNOWN **)a2[4];
+    LOBYTE(v5) = result != nullptr;
+    a2[4] = (char *)result + v5;
+    if ( v14[0] )
+      return (_UNKNOWN **)sub_7FF6F4DED1F0(v14[0]);
+  }
+  return result;
+}
+
+
+======================================================================
+CoherentUIGTBaseComponent::CreateJSEvent @ RVA 0x456B8A0 EA 0x7FF6F7F8B8A0
+======================================================================
+__int64 __fastcall sub_7FF6F7F8B8A0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F7F445B0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+CoherentUIGTBaseComponent::DebugSaveNextFrame @ RVA 0x456B980 EA 0x7FF6F7F8B980
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+CoherentUIGTBaseComponent::EnableDelayedUpdate @ RVA 0x456B9C0 EA 0x7FF6F7F8B9C0
+======================================================================
+__int64 __fastcall sub_7FF6F7F8B9C0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F7F4D4E0(a1, v5);
+}
+
+
+======================================================================
+CoherentUIGTBaseComponent::EndDebugFrameSave @ RVA 0x456BA50 EA 0x7FF6F7F8BA50
+======================================================================
+void __fastcall sub_7FF6F7F8BA50(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F7F4DB70LL);
+}
+
+
+======================================================================
+CoherentUIGTBaseComponent::GetClickThroughAlphaThreshold @ RVA 0x456BB20 EA 0x7FF6F7F8BB20
+======================================================================
+void __fastcall sub_7FF6F7F8BB20(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F7F52080();
+}
+
+
+======================================================================
+CoherentUIGTBaseComponent::HasRequestedView @ RVA 0x456BDF0 EA 0x7FF6F7F8BDF0
+======================================================================
+__int64 __fastcall sub_7FF6F7F8BDF0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F7F55920();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+CoherentUIGTBaseComponent::IsDocumentReady @ RVA 0x456C000 EA 0x7FF6F7F8C000
+======================================================================
+__int64 __fastcall sub_7FF6F7F8C000(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F7F57540();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+CoherentUIGTBaseComponent::IsReadyForBindings @ RVA 0x456C090 EA 0x7FF6F7F8C090
+======================================================================
+__int64 __fastcall sub_7FF6F7F8C090(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F7F57A60();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+CoherentUIGTBaseComponent::IsReadyToCreateView @ RVA 0x456C0F0 EA 0x7FF6F7F8C0F0
+======================================================================
+__int64 __fastcall sub_7FF6F7F8C0F0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F7F57C80();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+CoherentUIGTBaseComponent::IsTransparent @ RVA 0x456C150 EA 0x7FF6F7F8C150
+======================================================================
+__int64 __fastcall sub_7FF6F7F8C150(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F7F582C0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+CoherentUIGTBaseComponent::Load @ RVA 0x456C1B0 EA 0x7FF6F7F8C1B0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F7F8C1B0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rax
+  __int64 result; // rax
+  __int64 v7[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  v4 = 0;
+  v7[0] = 0;
+  v7[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  v5 = a2[4];
+  LOBYTE(v4) = v5 != 0;
+  a2[4] = v5 + v4;
+  result = sub_7FF6F7F58840(a1, v7);
+  if ( v7[0] )
+    return sub_7FF6F4DED1F0(v7[0]);
+  return result;
+}
+
+
+======================================================================
+CoherentUIGTBaseComponent::Redraw @ RVA 0x456C540 EA 0x7FF6F7F8C540
+======================================================================
+void __fastcall sub_7FF6F7F8C540(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F7F63300LL);
+}
+
+
+======================================================================
+CoherentUIGTBaseComponent::Reload @ RVA 0x456C580 EA 0x7FF6F7F8C580
+======================================================================
+void __fastcall sub_7FF6F7F8C580(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F7F63CC0LL);
+}
+
+
+======================================================================
+CoherentUIGTBaseComponent::Resize @ RVA 0x456C5C0 EA 0x7FF6F7F8C5C0
+======================================================================
+__int64 __fastcall sub_7FF6F7F8C5C0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // r8
+  __int64 v7; // rdx
+  unsigned int v9; // [rsp+30h] [rbp+8h] BYREF
+  unsigned int v10; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v5 = a2[4];
+  v6 = v9;
+  v7 = v10;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64, __int64))(*(_QWORD *)a1 + 952LL))(a1, v7, v6);
+}
+
+
+======================================================================
+CoherentUIGTBaseComponent::SetClickThroughAlphaThreshold @ RVA 0x456C680 EA 0x7FF6F7F8C680
+======================================================================
+__int64 __fastcall sub_7FF6F7F8C680(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F7F659B0(a1);
+}
+
+
+======================================================================
+CoherentUIGTBaseComponent::ShowPaintRects @ RVA 0x456CC40 EA 0x7FF6F7F8CC40
+======================================================================
+__int64 __fastcall sub_7FF6F7F8CC40(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F7F68A00(a1, v5);
+}
+
+
+======================================================================
+CoherentUIGTBaseComponent::SynchronizeModels @ RVA 0x456CD60 EA 0x7FF6F7F8CD60
+======================================================================
+void __fastcall sub_7FF6F7F8CD60(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F7F68A90LL);
+}
+
+
+======================================================================
+CoherentUIGTBaseComponent::TriggerJSEvent @ RVA 0x456CDC0 EA 0x7FF6F7F8CDC0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F7F8CDC0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rax
+  __int64 result; // rax
+  __int64 v7[4]; // [rsp+28h] [rbp-20h] BYREF
+  __int64 v8; // [rsp+58h] [rbp+10h] BYREF
+
+  v4 = 0;
+  v7[0] = 0;
+  v7[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  LOBYTE(v4) = v5 != 0;
+  a2[4] = v5 + v4;
+  result = sub_7FF6F7F6A9D0(a1, v7, v8);
+  if ( v7[0] )
+    return sub_7FF6F4DED1F0(v7[0]);
+  return result;
+}
+
+
+======================================================================
+CoherentUIGTBaseComponent::UpdateWholeDataModelFromObject @ RVA 0x456D090 EA 0x7FF6F7F8D090
+======================================================================
+__int64 __fastcall sub_7FF6F7F8D090(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F7F6BA60(a1, v6);
+}
+
+
+======================================================================
+CoherentUIGTBaseComponent::UpdateWholeDataModelFromStruct @ RVA 0x456D190 EA 0x7FF6F7F8D190
+======================================================================
+void __fastcall sub_7FF6F7F8D190(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rsi
+  __int64 v6; // r14
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 v9; // r8
+  __int64 v10; // rax
+  char v11; // al
+  __int64 v12; // rax
+  __int64 v13; // rax
+
+  if ( *(_BYTE *)(a1 + 824) )
+  {
+    if ( a2[4] )
+    {
+      sub_7FF6F4F4C960(a2, a2[3], 0);
+    }
+    else
+    {
+      a2[16] = *(_QWORD *)(a2[16] + 40LL);
+      sub_7FF6F4F4C990(a2, 0);
+    }
+    v4 = a2[6];
+    v5 = 0;
+    v6 = a2[7];
+    if ( !v4
+      || ((v7 = sub_7FF6F4F48060(L"/Script/CoreUObject"),
+           v8 = *(_QWORD *)(v4 + 16),
+           v9 = v7 + 136,
+           v10 = *(int *)(v7 + 160),
+           (int)v10 > *(_DWORD *)(v8 + 160))
+       || *(_QWORD *)(*(_QWORD *)(v8 + 136) + 8 * v10) != v9
+        ? (v11 = 0)
+        : (v11 = 1),
+          !v11) )
+    {
+      v4 = 0;
+    }
+    v12 = sub_7FF6F7F54BC0(a1);
+    sub_7FF6F7F6BAC0(v12, v6, *(_QWORD *)(v4 + 112));
+    v13 = a2[4];
+    LOBYTE(v5) = v13 != 0;
+    a2[4] = v13 + v5;
+  }
+}
+

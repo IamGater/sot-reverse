@@ -1,0 +1,118 @@
+// /Game/Blueprints/Prompts/TutorialStarters/bp_companyonboardingstarter -> BP_CompanyOnboardingStarter_C
+
+=== BP_CompanyOnboardingStarter_C::fn_idx_15538 (447 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_IsValid_ReturnValue@0x19f46895580
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x29
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19f46895580
+    ContextExpression:
+    $32: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $41: Context
+        ObjectExpression:
+        $42: InstanceVariable named AthenaPlayerController@0x19e4d514ab0
+        SkipBytes: 0x9
+        RValueProperty: PlayerEntitlementComponent@0x19e4d100eb0
+        ContextExpression:
+        $63: InstanceVariable named PlayerEntitlementComponent@0x19e4d100eb0
+      $72: EndFunctionParms
+    )
+$73: JumpIfNot -> 0x1a9, cond:
+  $78: LocalVariable named CallFunc_IsValid_ReturnValue@0x19f46895580
+$87: LetBool (Variable = Expression)
+  Variable:
+  $88: LocalVariable named CallFunc_HasCompanyRank_ReturnValue@0x19f46895200
+  Expression:
+  $97: Context
+    ObjectExpression:
+    $98: ObjectConst Default__PlayerEntitlementBlueprintFunctionLibrary@0x19e4d7a5aa0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_HasCompanyRank_ReturnValue@0x19f46895200
+    ContextExpression:
+    $119: FinalFunction target=HasCompanyRank@0x19e4d203d00 (
+      $128: InstanceVariable named AthenaPlayerController@0x19e4d514ab0
+      $137: ObjectConst BP_GH_Rank01_RankDesc_C@0x19f4052f540
+      $146: EndFunctionParms
+    )
+$147: LetBool (Variable = Expression)
+  Variable:
+  $148: LocalVariable named CallFunc_HasCompletedTale_ReturnValue@0x19f46895280
+  Expression:
+  $157: Context
+    ObjectExpression:
+    $158: ObjectConst Default__PlayerEntitlementBlueprintFunctionLibrary@0x19e4d7a5aa0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_HasCompletedTale_ReturnValue@0x19f46895280
+    ContextExpression:
+    $179: FinalFunction target=HasCompletedTale@0x19e4d203f40 (
+      $188: InstanceVariable named AthenaPlayerController@0x19e4d514ab0
+      $197: ObjectConst BP_CT_Rank_0_XMarks_C@0x19f48439240
+      $206: EndFunctionParms
+    )
+$207: LetBool (Variable = Expression)
+  Variable:
+  $208: LocalVariable named CallFunc_Not_PreBool_ReturnValue@0x19f46895300
+  Expression:
+  $217: CallMath target=Not_PreBool@0x19e4d390310 (
+    $226: LocalVariable named CallFunc_HasCompanyRank_ReturnValue@0x19f46895200
+    $235: EndFunctionParms
+  )
+$236: LetBool (Variable = Expression)
+  Variable:
+  $237: LocalVariable named CallFunc_Not_PreBool_ReturnValue2@0x19f46895380
+  Expression:
+  $246: CallMath target=Not_PreBool@0x19e4d390310 (
+    $255: LocalVariable named CallFunc_HasCompletedTale_ReturnValue@0x19f46895280
+    $264: EndFunctionParms
+  )
+$265: LetBool (Variable = Expression)
+  Variable:
+  $266: LocalVariable named CallFunc_HasBoughtVoyage_ReturnValue@0x19f46895400
+  Expression:
+  $275: Context
+    ObjectExpression:
+    $276: ObjectConst Default__PlayerEntitlementBlueprintFunctionLibrary@0x19e4d7a5aa0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_HasBoughtVoyage_ReturnValue@0x19f46895400
+    ContextExpression:
+    $297: FinalFunction target=HasBoughtVoyage@0x19e4d203ac0 (
+      $306: InstanceVariable named AthenaPlayerController@0x19e4d514ab0
+      $315: ObjectConst Proposal_CompanyTales_GH_Rank0_C@0x19f400196c0
+      $324: EndFunctionParms
+    )
+$325: LetBool (Variable = Expression)
+  Variable:
+  $326: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x19f46895480
+  Expression:
+  $335: CallMath target=BooleanAND@0x19e4d3710f0 (
+    $344: LocalVariable named CallFunc_Not_PreBool_ReturnValue@0x19f46895300
+    $353: LocalVariable named CallFunc_Not_PreBool_ReturnValue2@0x19f46895380
+    $362: EndFunctionParms
+  )
+$363: LetBool (Variable = Expression)
+  Variable:
+  $364: LocalVariable named CallFunc_BooleanOR_ReturnValue@0x19f46895500
+  Expression:
+  $373: CallMath target=BooleanOR@0x19e4d3717b0 (
+    $382: LocalVariable named CallFunc_HasBoughtVoyage_ReturnValue@0x19f46895400
+    $391: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x19f46895480
+    $400: EndFunctionParms
+  )
+$401: LetBool (Variable = Expression)
+  Variable:
+  $402: LocalOutVariable named ReturnValue@0x19f46895180
+  Expression:
+  $411: LocalVariable named CallFunc_BooleanOR_ReturnValue@0x19f46895500
+$420: Jump to offset 0x1b4
+$425: LetBool (Variable = Expression)
+  Variable:
+  $426: LocalOutVariable named ReturnValue@0x19f46895180
+  Expression:
+  $435: False
+$436: Return expression:
+  $437: LocalOutVariable named ReturnValue@0x19f46895180
+$446: EndOfScript

@@ -1,0 +1,90 @@
+// Class: Tankard (6 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+Tankard::CollectLiquidAmount @ RVA 0x109E2E0 EA 0x7FF6F4ABE2E0
+======================================================================
+void __fastcall sub_7FF6F4ABE2E0(__int64 a1, _QWORD *a2, float *a3)
+{
+  bool v3; // zf
+  int v7; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = a2[4] == 0;
+  v7 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  a2[4] += a2[4] != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)(a1 + 2048) + 24LL))(a1 + 2048);
+}
+
+
+======================================================================
+Tankard::GetLiquidLevel @ RVA 0x109F500 EA 0x7FF6F4ABF500
+======================================================================
+void __fastcall sub_7FF6F4ABF500(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)(a1 + 2048) + 40LL))(a1 + 2048);
+}
+
+
+======================================================================
+Tankard::GetMaxLiquidCollectionAmount @ RVA 0x109F790 EA 0x7FF6F4ABF790
+======================================================================
+void __fastcall sub_7FF6F4ABF790(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)(a1 + 2048) + 32LL))(a1 + 2048);
+}
+
+
+======================================================================
+Tankard::GetWantedLiquidLevel @ RVA 0x10A0870 EA 0x7FF6F4AC0870
+======================================================================
+void __fastcall sub_7FF6F4AC0870(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)(a1 + 2048) + 48LL))(a1 + 2048);
+}
+
+
+======================================================================
+Tankard::OnRep_RemainingVolume @ RVA 0x10A27D0 EA 0x7FF6F4AC27D0
+======================================================================
+__int64 __fastcall sub_7FF6F4AC27D0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F40FE7F0();
+}
+
+
+======================================================================
+Tankard::SetLiquidLevel @ RVA 0x10A4A60 EA 0x7FF6F4AC4A60
+======================================================================
+__int64 __fastcall sub_7FF6F4AC4A60(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)(a1 + 2048) + 16LL))(a1 + 2048);
+}
+

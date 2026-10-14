@@ -1,0 +1,73 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_2_TheCursedRogue/bp_cursedrogue_setcompassspawnlocation -> BP_CursedRogue_SetCompassSpawnLocation_C
+
+=== BP_CursedRogue_SetCompassSpawnLocation_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fce7ff980
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fce7ff900
+$18: VirtualFunction call "idx:283753" (
+  $31: literal int32 25
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_CursedRogue_SetCompassSpawnLocation_C::fn_idx_283753 (243 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fcdbb09a0
+$10: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $19: EndFunctionParms
+)
+$20: Jump to offset 0xf0
+$25: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $34: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce7ffa00
+  $43: EndFunctionParms
+)
+$44: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $53: LocalVariable named CallFunc_GetVariables_OutStruct2@0x19fce7ffa80
+  $62: EndFunctionParms
+)
+$63: LetObj (Variable = Expression)
+  Variable:
+  $64: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue@0x19fce7ffb00
+  Expression:
+  $73: Context
+    ObjectExpression:
+    $74: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Conv_AssetToObject_ReturnValue@0x19fce7ffb00
+    ContextExpression:
+    $95: FinalFunction target=Conv_AssetToObject@0x19e4cd86800 (
+      $104: StructMemberContext prop=idx:283694@0x19fce0d3780
+        Expression to struct:
+        $113: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce7ffa00
+      $122: EndFunctionParms
+    )
+$123: Let (Variable = Expression)
+  Variable:
+  $132: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19fce7ffb80
+  Expression:
+  $141: DynamicCast to Actor@0x19e261ddc80 of expr:
+  $150: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue@0x19fce7ffb00
+$159: Let (Variable = Expression)
+  Variable:
+  $168: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x19fce7ffc80
+  Expression:
+  $177: PrimitiveCast type=71
+    Argument:
+    $179: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19fce7ffb80
+$188: LetObj (Variable = Expression)
+  Variable:
+  $189: StructMemberContext prop=idx:283660@0x19fce0d5600
+    Expression to struct:
+    $198: LocalVariable named CallFunc_GetVariables_OutStruct2@0x19fce7ffa80
+  Expression:
+  $207: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19fce7ffb80
+$216: FinalFunction target=SetVariables@0x19e4cda7cc0 (
+  $225: LocalVariable named CallFunc_GetVariables_OutStruct2@0x19fce7ffa80
+  $234: EndFunctionParms
+)
+$235: Jump to offset 0xa
+$240: Return expression:
+  $241: Nothing
+$242: EndOfScript

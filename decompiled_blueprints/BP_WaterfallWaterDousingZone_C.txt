@@ -1,0 +1,284 @@
+// /Game/Blueprints/TallTales/Actors/AshenAge/Tale_2_HeartOfFire/bp_waterfallwaterdousingzone -> BP_WaterfallWaterDousingZone_C
+
+=== BP_WaterfallWaterDousingZone_C::fn_idx_278952 (177 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: StructMemberContext prop=Intensity@0x19e4ce1ff70
+    Expression to struct:
+    $18: LocalVariable named idx:278956@0x19fce562c00
+  Expression:
+  $27: literal float 1
+$32: SetArray
+  $33: LocalVariable named K2Node_MakeArray_Array@0x19fce562d80
+  $42: ObjectConst WaterStatus@0x19e4c601f80
+  $51: EndArray
+$52: Let (Variable = Expression)
+  Variable:
+  $61: StructMemberContext prop=Type@0x19e4ce1ffe0
+    Expression to struct:
+    $70: LocalVariable named idx:278955@0x19fce562c80
+  Expression:
+  $79: LocalVariable named K2Node_MakeArray_Array@0x19fce562d80
+$88: Let (Variable = Expression)
+  Variable:
+  $97: StructMemberContext prop=Descriptor@0x19e4ce1fe50
+    Expression to struct:
+    $106: LocalVariable named idx:278955@0x19fce562c80
+  Expression:
+  $115: LocalVariable named idx:278956@0x19fce562c00
+$124: Context
+  ObjectExpression:
+  $125: ObjectConst Default__StatusEffectHelperFunctionLibrary@0x19e4da17960
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $146: FinalFunction target=ApplyOneShotStatus@0x19e4d45a970 (
+    $155: LocalVariable named Recipient@0x19fce562b80
+    $164: LocalVariable named idx:278955@0x19fce562c80
+    $173: EndFunctionParms
+  )
+$174: Return expression:
+  $175: Nothing
+$176: EndOfScript
+
+=== BP_WaterfallWaterDousingZone_C::fn_idx_278954 (567 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fce562f00
+  Expression:
+  $18: DynamicCast to AthenaPlayerCharacter@0x19e4be85b00 of expr:
+  $27: LocalVariable named Object@0x19fce562e00
+$36: Let (Variable = Expression)
+  Variable:
+  $45: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fce562f80
+  Expression:
+  $54: PrimitiveCast type=71
+    Argument:
+    $56: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fce562f00
+$65: JumpIfNot -> 0x221, cond:
+  $70: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fce562f80
+$79: Let (Variable = Expression)
+  Variable:
+  $88: LocalVariable named CallFunc_GetWieldedItem_ReturnValue@0x19fce563080
+  Expression:
+  $97: Context
+    ObjectExpression:
+    $98: InterfaceContext:
+    $99: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fce562f00
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetWieldedItem_ReturnValue@0x19fce563080
+    ContextExpression:
+    $120: VirtualFunction call "GetWieldedItem" (
+      $133: EndFunctionParms
+    )
+$134: LetObj (Variable = Expression)
+  Variable:
+  $135: LocalVariable named CallFunc_GetActor_ReturnValue@0x19fce563100
+  Expression:
+  $144: Context
+    ObjectExpression:
+    $145: InterfaceContext:
+    $146: LocalVariable named CallFunc_GetWieldedItem_ReturnValue@0x19fce563080
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetActor_ReturnValue@0x19fce563100
+    ContextExpression:
+    $167: VirtualFunction call "GetActor" (
+      $180: EndFunctionParms
+    )
+$181: LetBool (Variable = Expression)
+  Variable:
+  $182: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fce563180
+  Expression:
+  $191: Context
+    ObjectExpression:
+    $192: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19fce563180
+    ContextExpression:
+    $213: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $222: LocalVariable named CallFunc_GetActor_ReturnValue@0x19fce563100
+      $231: EndFunctionParms
+    )
+$232: JumpIfNot -> 0x221, cond:
+  $237: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fce563180
+$246: Let (Variable = Expression)
+  Variable:
+  $255: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fce563400
+  Expression:
+  $264: Context
+    ObjectExpression:
+    $265: LocalVariable named CallFunc_GetActor_ReturnValue@0x19fce563100
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetComponentsByClass_ReturnValue@0x19fce563400
+    ContextExpression:
+    $286: FinalFunction target=GetComponentsByClass@0x19e4cd626c0 (
+      $295: ObjectConst ChestOfRageComponent@0x19e4c3a1c00
+      $304: EndFunctionParms
+    )
+$305: Let (Variable = Expression)
+  Variable:
+  $314: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fcde4af70
+  Expression:
+  $323: Context
+    ObjectExpression:
+    $324: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19fcde4af70
+    ContextExpression:
+    $345: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $354: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fce563400
+      $363: EndFunctionParms
+    )
+$364: LetBool (Variable = Expression)
+  Variable:
+  $365: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fce563280
+  Expression:
+  $374: CallMath target=Greater_IntInt@0x19e4d382770 (
+    $383: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fcde4af70
+    $392: literal int32 0
+    $397: EndFunctionParms
+  )
+$398: JumpIfNot -> 0x221, cond:
+  $403: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fce563280
+$412: Let (Variable = Expression)
+  Variable:
+  $421: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fce563400
+  Expression:
+  $430: Context
+    ObjectExpression:
+    $431: LocalVariable named CallFunc_GetActor_ReturnValue@0x19fce563100
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetComponentsByClass_ReturnValue@0x19fce563400
+    ContextExpression:
+    $452: FinalFunction target=GetComponentsByClass@0x19e4cd626c0 (
+      $461: ObjectConst ChestOfRageComponent@0x19e4c3a1c00
+      $470: EndFunctionParms
+    )
+$471: Context
+  ObjectExpression:
+  $472: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $493: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $502: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fce563400
+    $511: literal int32 0
+    $516: LocalVariable named CallFunc_Array_Get_Item@0x19fce563200
+    $525: EndFunctionParms
+  )
+$526: LetObj (Variable = Expression)
+  Variable:
+  $527: LocalVariable named ChestOfRageComponent@0x19fce563300
+  Expression:
+  $536: LocalVariable named CallFunc_Array_Get_Item@0x19fce563200
+$545: LetObj (Variable = Expression)
+  Variable:
+  $546: LocalOutVariable named Item@0x19fce562e80
+  Expression:
+  $555: LocalVariable named ChestOfRageComponent@0x19fce563300
+$564: Return expression:
+  $565: Nothing
+$566: EndOfScript
+
+=== BP_WaterfallWaterDousingZone_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_WaterfallWaterDousingZone_C::ReceiveActorBeginOverlap (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_OtherActor2@0x19fce563680
+  Expression:
+  $9: LocalVariable named OtherActor@0x19fce563480
+$18: VirtualFunction call "idx:278953" (
+  $31: literal int32 145
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_WaterfallWaterDousingZone_C::ReceiveActorEndOverlap (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_OtherActor@0x19fce563580
+  Expression:
+  $9: LocalVariable named OtherActor@0x19fce563500
+$18: VirtualFunction call "idx:278953" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_WaterfallWaterDousingZone_C::fn_idx_278953 (301 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fcde4af00
+$10: VirtualFunction call "idx:278954" (
+  $23: LocalVariable named K2Node_Event_OtherActor@0x19fce563580
+  $32: LocalVariable named idx:278947@0x19fce563600
+  $41: EndFunctionParms
+)
+$42: LetBool (Variable = Expression)
+  Variable:
+  $43: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fce563780
+  Expression:
+  $52: Context
+    ObjectExpression:
+    $53: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19fce563780
+    ContextExpression:
+    $74: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $83: LocalVariable named idx:278947@0x19fce563600
+      $92: EndFunctionParms
+    )
+$93: JumpIfNot -> 0x12a, cond:
+  $98: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fce563780
+$107: Context
+  ObjectExpression:
+  $108: LocalVariable named idx:278947@0x19fce563600
+  SkipBytes: 0xb
+  RValueProperty: (null)
+  ContextExpression:
+  $129: FinalFunction target=SetForceIsUnderwater@0x19e4d13bed0 (
+    $138: False
+    $139: EndFunctionParms
+  )
+$140: Jump to offset 0x12a
+$145: VirtualFunction call "idx:278952" (
+  $158: LocalVariable named K2Node_Event_OtherActor2@0x19fce563680
+  $167: EndFunctionParms
+)
+$168: VirtualFunction call "idx:278954" (
+  $181: LocalVariable named K2Node_Event_OtherActor2@0x19fce563680
+  $190: LocalVariable named idx:278948@0x19fce563700
+  $199: EndFunctionParms
+)
+$200: LetBool (Variable = Expression)
+  Variable:
+  $201: LocalVariable named CallFunc_IsValid_ReturnValue2@0x19fce563900
+  Expression:
+  $210: Context
+    ObjectExpression:
+    $211: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue2@0x19fce563900
+    ContextExpression:
+    $232: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $241: LocalVariable named idx:278948@0x19fce563700
+      $250: EndFunctionParms
+    )
+$251: JumpIfNot -> 0x12a, cond:
+  $256: LocalVariable named CallFunc_IsValid_ReturnValue2@0x19fce563900
+$265: Context
+  ObjectExpression:
+  $266: LocalVariable named idx:278948@0x19fce563700
+  SkipBytes: 0xb
+  RValueProperty: (null)
+  ContextExpression:
+  $287: FinalFunction target=SetForceIsUnderwater@0x19e4d13bed0 (
+    $296: True
+    $297: EndFunctionParms
+  )
+$298: Return expression:
+  $299: Nothing
+$300: EndOfScript

@@ -1,0 +1,271 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_8_RevengeOfTheMorningstar/bp_revengeofthemorningstar_encounterspawner_crew_1 -> BP_RevengeOfTheMorningstar_EncounterSpawner_Crew_1_C
+
+=== BP_RevengeOfTheMorningstar_EncounterSpawner_Crew_1_C::fn_idx_1842 (58 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_Pawn2@0x19f80af6c00
+  Expression:
+  $9: LocalVariable named Pawn@0x19f80af6a80
+$18: LetValueOnPersistentFrame dest=K2Node_Event_DeathType@0x19f80af6d00
+  Expression:
+  $27: LocalVariable named DeathType@0x19f80af6b00
+$36: VirtualFunction call "idx:284824" (
+  $49: literal int32 387
+  $54: EndFunctionParms
+)
+$55: Return expression:
+  $56: Nothing
+$57: EndOfScript
+
+=== BP_RevengeOfTheMorningstar_EncounterSpawner_Crew_1_C::fn_idx_1901 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_Pawn@0x19f80af7280
+  Expression:
+  $9: LocalVariable named Pawn@0x19f80af6b80
+$18: VirtualFunction call "idx:284824" (
+  $31: literal int32 909
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_RevengeOfTheMorningstar_EncounterSpawner_Crew_1_C::fn_idx_284824 (1237 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19e586b8030
+$10: FinalFunction target=OnBattleWon@0x19e4d112e50 (
+  $19: EndFunctionParms
+)
+$20: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $29: LocalVariable named CallFunc_GetVariables_OutStruct@0x19f80af7200
+  $38: EndFunctionParms
+)
+$39: Let (Variable = Expression)
+  Variable:
+  $48: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x19f80af6f80
+  Expression:
+  $57: Context
+    ObjectExpression:
+    $58: InstanceVariable named Target@0x19f80af7900
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetActorLocation_ReturnValue@0x19f80af6f80
+    ContextExpression:
+    $79: FinalFunction target=K2_GetActorLocation@0x19e4cd66b10 (
+      $88: EndFunctionParms
+    )
+$89: Let (Variable = Expression)
+  Variable:
+  $98: LocalVariable named CallFunc_Subtract_VectorVector_ReturnValue@0x19f80af7000
+  Expression:
+  $107: CallMath target=Subtract_VectorVector@0x19e4d39a7f0 (
+    $116: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x19f80af6f80
+    $125: literal vector (0,0,75)
+    $138: EndFunctionParms
+  )
+$139: Let (Variable = Expression)
+  Variable:
+  $148: StructMemberContext prop=idx:284288@0x19fcc5a8d00
+    Expression to struct:
+    $157: LocalVariable named CallFunc_GetVariables_OutStruct@0x19f80af7200
+  Expression:
+  $166: LocalVariable named CallFunc_Subtract_VectorVector_ReturnValue@0x19f80af7000
+$175: FinalFunction target=SetVariables@0x19e4cda7cc0 (
+  $184: LocalVariable named CallFunc_GetVariables_OutStruct@0x19f80af7200
+  $193: EndFunctionParms
+)
+$194: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $203: EndFunctionParms
+)
+$204: Jump to offset 0x4d2
+$209: Context
+  ObjectExpression:
+  $210: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x97
+  RValueProperty: (null)
+  ContextExpression:
+  $231: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $240: NoObject
+    $241: literal ansi string "Failed to cast pawn to AthenaAICharacter in BP_CursedRogue_SkeletonCrewEncounter-IsCaptain Macro."
+    $340: True
+    $341: True
+    $342: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $355: literal float 1
+      $360: literal float 0.10969900339841843
+      $365: literal float 0
+      $370: literal float 1
+      $375: EndStructConst
+    $376: literal float 5
+    $381: EndFunctionParms
+  )
+$382: Jump to offset 0x4d2
+$387: LetObj (Variable = Expression)
+  Variable:
+  $388: InstanceVariable named Target@0x19f80af7900
+  Expression:
+  $397: LocalVariable named K2Node_Event_Pawn2@0x19f80af6c00
+$406: LetBool (Variable = Expression)
+  Variable:
+  $407: LocalVariable named CallFunc_EqualEqual_ByteByte_ReturnValue@0x19f80af6d80
+  Expression:
+  $416: CallMath target=EqualEqual_ByteByte@0x19e4d37a620 (
+    $425: LocalVariable named K2Node_Event_DeathType@0x19f80af6d00
+    $434: literal byte 1
+    $436: EndFunctionParms
+  )
+$437: JumpIfNot -> 0x4d2, cond:
+  $442: LocalVariable named CallFunc_EqualEqual_ByteByte_ReturnValue@0x19f80af6d80
+$451: Let (Variable = Expression)
+  Variable:
+  $460: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter@0x19f80af6e00
+  Expression:
+  $469: DynamicCast to AthenaAICharacter@0x19e4c35c080 of expr:
+  $478: InstanceVariable named Target@0x19f80af7900
+$487: Let (Variable = Expression)
+  Variable:
+  $496: LocalVariable named K2Node_DynamicCast_bSuccess@0x19f80af6e80
+  Expression:
+  $505: PrimitiveCast type=71
+    Argument:
+    $507: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter@0x19f80af6e00
+$516: JumpIfNot -> 0x2db, cond:
+  $521: LocalVariable named K2Node_DynamicCast_bSuccess@0x19f80af6e80
+$530: Let (Variable = Expression)
+  Variable:
+  $539: LocalVariable named CallFunc_GetAIEncounterSpec_ReturnValue@0x19f80af6f00
+  Expression:
+  $548: Context
+    ObjectExpression:
+    $549: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter@0x19f80af6e00
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetAIEncounterSpec_ReturnValue@0x19f80af6f00
+    ContextExpression:
+    $570: FinalFunction target=GetAIEncounterSpec@0x19e4d0aac60 (
+      $579: EndFunctionParms
+    )
+$580: LetBool (Variable = Expression)
+  Variable:
+  $581: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue@0x19f80af7080
+  Expression:
+  $590: CallMath target=EqualEqual_ClassClass@0x19e4d37a860 (
+    $599: StructMemberContext prop=AIClass@0x19e4ceeffd0
+      Expression to struct:
+      $608: LocalVariable named CallFunc_GetAIEncounterSpec_ReturnValue@0x19f80af6f00
+    $617: ObjectConst FemaleCaptainAIClassId_C@0x19f57ab3840
+    $626: EndFunctionParms
+  )
+$627: LetBool (Variable = Expression)
+  Variable:
+  $628: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue2@0x19f80af7100
+  Expression:
+  $637: CallMath target=EqualEqual_ClassClass@0x19e4d37a860 (
+    $646: StructMemberContext prop=AIClass@0x19e4ceeffd0
+      Expression to struct:
+      $655: LocalVariable named CallFunc_GetAIEncounterSpec_ReturnValue@0x19f80af6f00
+    $664: ObjectConst MaleCaptainAIClassId_C@0x19f57ab57c0
+    $673: EndFunctionParms
+  )
+$674: LetBool (Variable = Expression)
+  Variable:
+  $675: LocalVariable named CallFunc_BooleanOR_ReturnValue@0x19f80af7180
+  Expression:
+  $684: CallMath target=BooleanOR@0x19e4d3717b0 (
+    $693: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue2@0x19f80af7100
+    $702: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue@0x19f80af7080
+    $711: EndFunctionParms
+  )
+$712: JumpIfNot -> 0x4d2, cond:
+  $717: LocalVariable named CallFunc_BooleanOR_ReturnValue@0x19f80af7180
+$726: Jump to offset 0xa
+$731: Context
+  ObjectExpression:
+  $732: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x97
+  RValueProperty: (null)
+  ContextExpression:
+  $753: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $762: NoObject
+    $763: literal ansi string "Failed to cast pawn to AthenaAICharacter in BP_CursedRogue_SkeletonCrewEncounter-IsCaptain Macro."
+    $862: True
+    $863: True
+    $864: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $877: literal float 1
+      $882: literal float 0.10969900339841843
+      $887: literal float 0
+      $892: literal float 1
+      $897: EndStructConst
+    $898: literal float 5
+    $903: EndFunctionParms
+  )
+$904: Jump to offset 0x4d2
+$909: Let (Variable = Expression)
+  Variable:
+  $918: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter2@0x19f80af7300
+  Expression:
+  $927: DynamicCast to AthenaAICharacter@0x19e4c35c080 of expr:
+  $936: LocalVariable named K2Node_Event_Pawn@0x19f80af7280
+$945: Let (Variable = Expression)
+  Variable:
+  $954: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19f80af7380
+  Expression:
+  $963: PrimitiveCast type=71
+    Argument:
+    $965: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter2@0x19f80af7300
+$974: JumpIfNot -> 0xd1, cond:
+  $979: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19f80af7380
+$988: Let (Variable = Expression)
+  Variable:
+  $997: LocalVariable named CallFunc_GetAIEncounterSpec_ReturnValue2@0x19f80af7400
+  Expression:
+  $1006: Context
+    ObjectExpression:
+    $1007: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter2@0x19f80af7300
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetAIEncounterSpec_ReturnValue2@0x19f80af7400
+    ContextExpression:
+    $1028: FinalFunction target=GetAIEncounterSpec@0x19e4d0aac60 (
+      $1037: EndFunctionParms
+    )
+$1038: LetBool (Variable = Expression)
+  Variable:
+  $1039: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue3@0x19f80af7480
+  Expression:
+  $1048: CallMath target=EqualEqual_ClassClass@0x19e4d37a860 (
+    $1057: StructMemberContext prop=AIClass@0x19e4ceeffd0
+      Expression to struct:
+      $1066: LocalVariable named CallFunc_GetAIEncounterSpec_ReturnValue2@0x19f80af7400
+    $1075: ObjectConst MaleCaptainAIClassId_C@0x19f57ab57c0
+    $1084: EndFunctionParms
+  )
+$1085: LetBool (Variable = Expression)
+  Variable:
+  $1086: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue4@0x19f80af7600
+  Expression:
+  $1095: CallMath target=EqualEqual_ClassClass@0x19e4d37a860 (
+    $1104: StructMemberContext prop=AIClass@0x19e4ceeffd0
+      Expression to struct:
+      $1113: LocalVariable named CallFunc_GetAIEncounterSpec_ReturnValue2@0x19f80af7400
+    $1122: ObjectConst FemaleCaptainAIClassId_C@0x19f57ab3840
+    $1131: EndFunctionParms
+  )
+$1132: LetBool (Variable = Expression)
+  Variable:
+  $1133: LocalVariable named CallFunc_BooleanOR_ReturnValue2@0x19f80af7680
+  Expression:
+  $1142: CallMath target=BooleanOR@0x19e4d3717b0 (
+    $1151: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue3@0x19f80af7480
+    $1160: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue4@0x19f80af7600
+    $1169: EndFunctionParms
+  )
+$1170: JumpIfNot -> 0x4d2, cond:
+  $1175: LocalVariable named CallFunc_BooleanOR_ReturnValue2@0x19f80af7680
+$1184: Context
+  ObjectExpression:
+  $1185: ObjectConst Default__AIManagerBlueprintFunctionLibrary@0x19e4da53f40
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $1206: FinalFunction target=AddNameplateToAI@0x19e4d4870e0 (
+    $1215: LocalVariable named K2Node_Event_Pawn@0x19f80af7280
+    $1224: InstanceVariable named idx:284825@0x19e586b8110
+    $1233: EndFunctionParms
+  )
+$1234: Return expression:
+  $1235: Nothing
+$1236: EndOfScript

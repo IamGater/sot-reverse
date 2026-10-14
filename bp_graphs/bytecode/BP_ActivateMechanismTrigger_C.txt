@@ -1,0 +1,126 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Generic/bp_activatemechanismtrigger -> BP_ActivateMechanismTrigger_C
+
+=== BP_ActivateMechanismTrigger_C::fn_idx_1698 (492 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue@0x19fcbb4c900
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Conv_AssetToObject_ReturnValue@0x19fcbb4c900
+    ContextExpression:
+    $32: FinalFunction target=Conv_AssetToObject@0x19e4cd86800 (
+      $41: LocalVariable named Trigger@0x19fcbb4c700
+      $50: EndFunctionParms
+    )
+$51: Let (Variable = Expression)
+  Variable:
+  $60: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19fcbb4c600
+  Expression:
+  $69: DynamicCast to Actor@0x19e261ddc80 of expr:
+  $78: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue@0x19fcbb4c900
+$87: Let (Variable = Expression)
+  Variable:
+  $96: LocalVariable named UniqueObjectNameForCooking_bSuccess2@0x19fcbb4c680
+  Expression:
+  $105: PrimitiveCast type=71
+    Argument:
+    $107: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19fcbb4c600
+$116: LetObj (Variable = Expression)
+  Variable:
+  $117: LocalVariable named CallFunc_GetInterfaceImplementer_ReturnValue@0x19fcbb4c980
+  Expression:
+  $126: Context
+    ObjectExpression:
+    $127: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19fcbb4c600
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetInterfaceImplementer_ReturnValue@0x19fcbb4c980
+    ContextExpression:
+    $148: FinalFunction target=GetInterfaceImplementer@0x19e4cd63b10 (
+      $157: ObjectConst MechanismTriggerInterface@0x19e4c70fc00
+      $166: EndFunctionParms
+    )
+$167: Let (Variable = Expression)
+  Variable:
+  $176: LocalVariable named UniqueObjectNameForCooking_AsLevel_Streaming@0x19fcbb4cb00
+  Expression:
+  $185: DynamicCast to LevelStreaming@0x19e4c56bb40 of expr:
+  $194: LocalVariable named CallFunc_GetInterfaceImplementer_ReturnValue@0x19fcbb4c980
+$203: Let (Variable = Expression)
+  Variable:
+  $212: LocalVariable named UniqueObjectNameForCooking_bSuccess3@0x19fcbb4ca00
+  Expression:
+  $221: PrimitiveCast type=71
+    Argument:
+    $223: LocalVariable named UniqueObjectNameForCooking_AsLevel_Streaming@0x19fcbb4cb00
+$232: JumpIfNot -> 0x1c1, cond:
+  $237: LocalVariable named UniqueObjectNameForCooking_bSuccess3@0x19fcbb4ca00
+$246: LetObj (Variable = Expression)
+  Variable:
+  $247: LocalVariable named CallFunc_GetLevelScriptActor_ReturnValue@0x19fc182f880
+  Expression:
+  $256: Context
+    ObjectExpression:
+    $257: LocalVariable named UniqueObjectNameForCooking_AsLevel_Streaming@0x19fcbb4cb00
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetLevelScriptActor_ReturnValue@0x19fc182f880
+    ContextExpression:
+    $278: FinalFunction target=GetLevelScriptActor@0x19e4d3c8ab0 (
+      $287: EndFunctionParms
+    )
+$288: LetObj (Variable = Expression)
+  Variable:
+  $289: LocalVariable named Temp_object_Variable@0x19fcbb4c780
+  Expression:
+  $298: LocalVariable named CallFunc_GetLevelScriptActor_ReturnValue@0x19fc182f880
+$307: Let (Variable = Expression)
+  Variable:
+  $316: LocalVariable named UniqueObjectNameForCooking_AsMechanism_Trigger_Interface@0x19fcbb4c800
+  Expression:
+  $325: ObjToInterfaceCast to MechanismTriggerInterface@0x19e4c70fc00
+  $334: LocalVariable named Temp_object_Variable@0x19fcbb4c780
+$343: Let (Variable = Expression)
+  Variable:
+  $352: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x19fcbb4c880
+  Expression:
+  $361: PrimitiveCast type=73
+    Argument:
+    $363: LocalVariable named UniqueObjectNameForCooking_AsMechanism_Trigger_Interface@0x19fcbb4c800
+$372: JumpIfNot -> 0x1d9, cond:
+  $377: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x19fcbb4c880
+$386: LetBool (Variable = Expression)
+  Variable:
+  $387: LocalVariable named CallFunc_ActivateTrigger_ReturnValue@0x19fcbb4ca80
+  Expression:
+  $396: Context
+    ObjectExpression:
+    $397: InterfaceContext:
+    $398: LocalVariable named UniqueObjectNameForCooking_AsMechanism_Trigger_Interface@0x19fcbb4c800
+    SkipBytes: 0xf
+    RValueProperty: CallFunc_ActivateTrigger_ReturnValue@0x19fcbb4ca80
+    ContextExpression:
+    $419: VirtualFunction call "ActivateTrigger" (
+      $432: NoObject
+      $433: EndFunctionParms
+    )
+$434: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $443: EndFunctionParms
+)
+$444: Jump to offset 0x1e9
+$449: LetObj (Variable = Expression)
+  Variable:
+  $450: LocalVariable named Temp_object_Variable@0x19fcbb4c780
+  Expression:
+  $459: LocalVariable named CallFunc_GetInterfaceImplementer_ReturnValue@0x19fcbb4c980
+$468: Jump to offset 0x133
+$473: LetBool (Variable = Expression)
+  Variable:
+  $474: LocalVariable named CallFunc_ActivateTrigger_ReturnValue@0x19fcbb4ca80
+  Expression:
+  $483: False
+$484: Jump to offset 0x1b2
+$489: Return expression:
+  $490: Nothing
+$491: EndOfScript

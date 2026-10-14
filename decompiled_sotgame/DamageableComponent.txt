@@ -1,0 +1,60 @@
+// Class: DamageableComponent (1 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+DamageableComponent::OnDamageableImpact @ RVA 0x308C700 EA 0x7FF6F6AAC700
+======================================================================
+__int64 __fastcall sub_7FF6F6AAC700(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  _QWORD *v8; // rdx
+  __int64 v9; // rax
+  __int64 result; // rax
+  _QWORD v11[6]; // [rsp+20h] [rbp-68h] BYREF
+  int v12; // [rsp+50h] [rbp-38h]
+  __int64 v13; // [rsp+54h] [rbp-34h]
+  int v14; // [rsp+5Ch] [rbp-2Ch]
+  __int64 v15; // [rsp+60h] [rbp-28h]
+  int v16; // [rsp+68h] [rbp-20h]
+  int v17; // [rsp+6Ch] [rbp-1Ch]
+  int v18; // [rsp+70h] [rbp-18h]
+  __int16 v19; // [rsp+74h] [rbp-14h]
+
+  v3 = 0;
+  v11[0] = 0;
+  v11[1] = 0;
+  v7 = sub_7FF6F45708C0(a1, a2);
+  v11[5] = *((_QWORD *)&xmmword_7FF6FA4F60F8 + 1);
+  v13 = *((_QWORD *)&xmmword_7FF6FA4F60F8 + 1);
+  v15 = *((_QWORD *)&xmmword_7FF6FA4F60F8 + 1);
+  v11[2] = v7;
+  v17 = 0;
+  v11[3] = 0;
+  v11[4] = 0;
+  v12 = qword_7FF6FA4F6108;
+  v14 = qword_7FF6FA4F6108;
+  v16 = qword_7FF6FA4F6108;
+  v18 = 1;
+  v19 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v8 = v11;
+  if ( a2[7] )
+    v8 = (_QWORD *)a2[7];
+  v9 = a2[4];
+  LOBYTE(v3) = v9 != 0;
+  a2[4] = v9 + v3;
+  result = sub_7FF6F6A957F0(a1 + 200, v8);
+  *a3 = result;
+  return result;
+}
+

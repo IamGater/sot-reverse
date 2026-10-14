@@ -1,0 +1,148 @@
+// /Game/Blueprints/GameObjects/Mechanisms/Assorted/bp_inversionmechanism -> BP_InversionMechanism_C
+
+=== BP_InversionMechanism_C::fn_idx_242159 (215 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x19f831aae00
+  Expression:
+  $10: CallMath target=NotEqual_ByteByte@0x19e4d390710 (
+    $19: LocalVariable named ActionState@0x19f831aad00
+    $28: literal byte 0
+    $30: EndFunctionParms
+  )
+$31: JumpIfNot -> 0x5f, cond:
+  $36: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x19f831aae00
+$45: LetBool (Variable = Expression)
+  Variable:
+  $46: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x19f831aae00
+  Expression:
+  $55: CallMath target=NotEqual_ByteByte@0x19e4d390710 (
+    $64: LocalVariable named ActionState@0x19f831aad00
+    $73: literal byte 1
+    $75: EndFunctionParms
+  )
+$76: JumpIfNot -> 0x9c, cond:
+  $81: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x19f831aae00
+$90: Jump to offset 0xd4
+$95: LetBool (Variable = Expression)
+  Variable:
+  $96: LocalVariable named CallFunc_DeactivateTrigger_ReturnValue@0x19f831ab000
+  Expression:
+  $105: Context
+    ObjectExpression:
+    $106: InterfaceContext:
+    $107: InstanceVariable named MechanismTrigger@0x19f831ab880
+    SkipBytes: 0x17
+    RValueProperty: CallFunc_DeactivateTrigger_ReturnValue@0x19f831ab000
+    ContextExpression:
+    $128: VirtualFunction call "DeactivateTrigger" (
+      $141: LocalVariable named Instigator@0x19f831aad80
+      $150: EndFunctionParms
+    )
+$151: Jump to offset 0xd4
+$156: LetBool (Variable = Expression)
+  Variable:
+  $157: LocalVariable named CallFunc_ActivateTrigger_ReturnValue@0x19f831aaf00
+  Expression:
+  $166: Context
+    ObjectExpression:
+    $167: InterfaceContext:
+    $168: InstanceVariable named MechanismTrigger@0x19f831ab880
+    SkipBytes: 0x17
+    RValueProperty: CallFunc_ActivateTrigger_ReturnValue@0x19f831aaf00
+    ContextExpression:
+    $189: VirtualFunction call "ActivateTrigger" (
+      $202: LocalVariable named Instigator@0x19f831aad80
+      $211: EndFunctionParms
+    )
+$212: Return expression:
+  $213: Nothing
+$214: EndOfScript
+
+=== BP_InversionMechanism_C::fn_idx_9202 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_InversionMechanism_C::fn_idx_242154 (94 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_Action@0x19f831ab380
+  Expression:
+  $9: LocalVariable named Action@0x19f831ab080
+$18: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_PreviousState@0x19f831ab400
+  Expression:
+  $27: LocalVariable named PreviousState@0x19f831ab100
+$36: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_NewState@0x19f831ab480
+  Expression:
+  $45: LocalVariable named NewState@0x19f831ab180
+$54: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_Instigator@0x19f831ab500
+  Expression:
+  $63: LocalVariable named Instigator@0x19f831ab200
+$72: VirtualFunction call "idx:242158" (
+  $85: literal int32 199
+  $90: EndFunctionParms
+)
+$91: Return expression:
+  $92: Nothing
+$93: EndOfScript
+
+=== BP_InversionMechanism_C::fn_idx_9152 (22 bytes) ===
+$0: VirtualFunction call "idx:242158" (
+  $13: literal int32 204
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_InversionMechanism_C::fn_idx_242158 (212 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19f7182f5e0
+$10: LetBool (Variable = Expression)
+  Variable:
+  $11: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x19f831ab280
+  Expression:
+  $20: FinalFunction target=HasAuthority@0x19e4cd64b30 (
+    $29: EndFunctionParms
+  )
+$30: JumpIfNot -> 0xd1, cond:
+  $35: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x19f831ab280
+$44: Let (Variable = Expression)
+  Variable:
+  $53: LocalVariable named CallFunc_GetActionState_ReturnValue@0x19f831ab600
+  Expression:
+  $62: Context
+    ObjectExpression:
+    $63: InterfaceContext:
+    $64: InstanceVariable named MechanismAction@0x19f831ab800
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetActionState_ReturnValue@0x19f831ab600
+    ContextExpression:
+    $85: VirtualFunction call "GetActionState" (
+      $98: EndFunctionParms
+    )
+$99: VirtualFunction call "idx:242159" (
+  $112: LocalVariable named CallFunc_GetActionState_ReturnValue@0x19f831ab600
+  $121: NoObject
+  $122: EndFunctionParms
+)
+$123: Jump to offset 0xd1
+$128: LetBool (Variable = Expression)
+  Variable:
+  $129: LocalVariable named CallFunc_HasAuthority_ReturnValue2@0x19f831ab300
+  Expression:
+  $138: FinalFunction target=HasAuthority@0x19e4cd64b30 (
+    $147: EndFunctionParms
+  )
+$148: JumpIfNot -> 0xd1, cond:
+  $153: LocalVariable named CallFunc_HasAuthority_ReturnValue2@0x19f831ab300
+$162: VirtualFunction call "idx:242159" (
+  $175: LocalVariable named K2Node_ComponentBoundEvent_NewState@0x19f831ab480
+  $184: LocalVariable named K2Node_ComponentBoundEvent_Instigator@0x19f831ab500
+  $193: EndFunctionParms
+)
+$194: Jump to offset 0xd1
+$199: Jump to offset 0x80
+$204: Jump to offset 0xa
+$209: Return expression:
+  $210: Nothing
+$211: EndOfScript

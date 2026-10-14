@@ -1,0 +1,119 @@
+{
+  "class": "BP_MaidenVoyage_HealPlayer_C",
+  "source": "decompiled_blueprints/BP_MaidenVoyage_HealPlayer_C.txt",
+  "functions": [
+    {
+      "name": "OnBegin",
+      "bytecode_bytes": 40,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fce70ff00",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "VirtualFunction call \"idx:283056\" (",
+          "edges": []
+        },
+        {
+          "offset": 37,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 39,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 18,
+          "expression": "idx:283056()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "ExecuteUbergraph_BP_MaidenVoyage_HealPlayer",
+      "bytecode_bytes": 241,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "Computed Jump, offset by expr:",
+          "edges": []
+        },
+        {
+          "offset": 10,
+          "opcode": "SetArray",
+          "edges": []
+        },
+        {
+          "offset": 21,
+          "opcode": "FinalFunction target=GetParticipants@0x19e4cda59a0 (",
+          "edges": []
+        },
+        {
+          "offset": 40,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 95,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 131,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 160,
+          "opcode": "JumpIfNot -> 0xee, cond:",
+          "edges": [
+            {
+              "to_label": "L_EE",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 174,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 228,
+          "opcode": "FinalFunction target=SignalComplete@0x19e4cda7e00 (",
+          "edges": []
+        },
+        {
+          "offset": 238,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 240,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 21,
+          "expression": "UBlueprintStepBase::GetParticipants(CallFunc_GetParticipants_Participants)"
+        },
+        {
+          "offset": 228,
+          "expression": "this->SignalComplete()"
+        }
+      ],
+      "types": {
+        "K2Node_DynamicCast_AsAthena_Player_Character": "AthenaPlayerCharacter*",
+        "K2Node_DynamicCast_bSuccess": "bool"
+      }
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+// /Game/Blueprints/GameObjects/NPC/bp_blindbob -> BP_BlindBob_C
+
+=== BP_BlindBob_C::fn_idx_9202 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_BlindBob_C::fn_idx_256271 (22 bytes) ===
+$0: VirtualFunction call "idx:256269" (
+  $13: literal int32 204
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_BlindBob_C::fn_idx_256269 (212 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19f9f7ff2d0
+$10: Let (Variable = Expression)
+  Variable:
+  $19: LocalVariable named K2Node_DynamicCast_AsSkeletal_Mesh_Component@0x19f9f68b980
+  Expression:
+  $28: DynamicCast to SkeletalMeshComponent@0x19e4c53ce80 of expr:
+  $37: InstanceVariable named Mesh@0x19e4d1573e0
+$46: Let (Variable = Expression)
+  Variable:
+  $55: LocalVariable named K2Node_DynamicCast_bSuccess@0x19f9f68ba00
+  Expression:
+  $64: PrimitiveCast type=71
+    Argument:
+    $66: LocalVariable named K2Node_DynamicCast_AsSkeletal_Mesh_Component@0x19f9f68b980
+$75: JumpIfNot -> 0xd1, cond:
+  $80: LocalVariable named K2Node_DynamicCast_bSuccess@0x19f9f68ba00
+$89: LetObj (Variable = Expression)
+  Variable:
+  $90: LocalVariable named CallFunc_GetAnimInstance_ReturnValue@0x19f9f68ba80
+  Expression:
+  $99: Context
+    ObjectExpression:
+    $100: LocalVariable named K2Node_DynamicCast_AsSkeletal_Mesh_Component@0x19f9f68b980
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetAnimInstance_ReturnValue@0x19f9f68ba80
+    ContextExpression:
+    $121: VirtualFunction call "GetAnimInstance" (
+      $134: EndFunctionParms
+    )
+$135: Let (Variable = Expression)
+  Variable:
+  $144: LocalVariable named idx:256267@0x19f9f7feaf0
+  Expression:
+  $153: Context
+    ObjectExpression:
+    $154: LocalVariable named CallFunc_GetAnimInstance_ReturnValue@0x19f9f68ba80
+    SkipBytes: 0x18
+    RValueProperty: idx:256267@0x19f9f7feaf0
+    ContextExpression:
+    $175: FinalFunction target=Montage_Play@0x19e4d08f650 (
+      $184: ObjectConst idx:256270@0x19f9d542700
+      $193: literal float 1
+      $198: EndFunctionParms
+    )
+$199: Jump to offset 0xd1
+$204: Jump to offset 0xa
+$209: Return expression:
+  $210: Nothing
+$211: EndOfScript

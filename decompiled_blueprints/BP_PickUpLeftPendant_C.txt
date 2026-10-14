@@ -1,0 +1,71 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_5_WildRose/bp_pickupleftpendant -> BP_PickUpLeftPendant_C
+
+=== BP_PickUpLeftPendant_C::fn_idx_284201 (22 bytes) ===
+$0: VirtualFunction call "idx:284200" (
+  $13: literal int32 201
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_PickUpLeftPendant_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fcc5aed80
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fcc5ae680
+$18: VirtualFunction call "idx:284200" (
+  $31: literal int32 206
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_PickUpLeftPendant_C::fn_idx_284200 (214 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19e586bc010
+$10: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $19: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc5ae700
+  $28: EndFunctionParms
+)
+$29: Let (Variable = Expression)
+  Variable:
+  $38: LocalVariable named K2Node_DynamicCast_AsItem_Info@0x19fcc5aea00
+  Expression:
+  $47: DynamicCast to ItemInfo@0x19e4c38a640 of expr:
+  $56: StructMemberContext prop=idx:284182@0x19f81ca0700
+    Expression to struct:
+    $65: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc5ae700
+$74: Let (Variable = Expression)
+  Variable:
+  $83: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcc5aec00
+  Expression:
+  $92: PrimitiveCast type=71
+    Argument:
+    $94: LocalVariable named K2Node_DynamicCast_AsItem_Info@0x19fcc5aea00
+$103: JumpIfNot -> 0xd3, cond:
+  $108: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcc5aec00
+$117: BindDelegate 'idx:284201'
+  Delegate:
+  $130: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fcc5aeb00
+  Object:
+  $139: Self
+$140: AddMulticastDelegate
+$141: Context
+  ObjectExpression:
+  $142: LocalVariable named K2Node_DynamicCast_AsItem_Info@0x19fcc5aea00
+  SkipBytes: 0x9
+  RValueProperty: OnItemPickedUpDelegate@0x19e4d10b7b0
+  ContextExpression:
+  $163: InstanceVariable named OnItemPickedUpDelegate@0x19e4d10b7b0
+$172: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fcc5aeb00
+$181: Jump to offset 0xd3
+$186: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $195: EndFunctionParms
+)
+$196: Jump to offset 0xd3
+$201: Jump to offset 0xba
+$206: Jump to offset 0xa
+$211: Return expression:
+  $212: Nothing
+$213: EndOfScript

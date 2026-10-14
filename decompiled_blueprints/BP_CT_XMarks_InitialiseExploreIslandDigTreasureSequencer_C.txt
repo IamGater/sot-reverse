@@ -1,0 +1,95 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/CompanyTales/GoldHoarders/Rank0_XMarks/bp_ct_xmarks_initialiseexploreislanddigtreasuresequencer -> BP_CT_XMarks_InitialiseExploreIslandDigTreasureSequencer_C
+
+=== BP_CT_XMarks_InitialiseExploreIslandDigTreasureSequencer_C::OnBeginCustom (402 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x19fc1828280
+  Expression:
+  $18: CallMath target=MakeTransform@0x19e4d38a650 (
+    $27: literal vector (0,0,0)
+    $40: literal rotation (0,0,0)
+    $53: literal vector (1,1,1)
+    $66: EndFunctionParms
+  )
+$67: LetObj (Variable = Expression)
+  Variable:
+  $68: LocalVariable named CallFunc_SpawnPhasedActor_ReturnValue@0x19fc1828300
+  Expression:
+  $77: FinalFunction target=SpawnPhasedActor@0x19e4cda8ba0 (
+    $86: InstanceVariable named idx:282343@0x19fc1829e80
+    $95: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x19fc1828280
+    $104: NoObject
+    $105: literal name "None"
+    $118: EndFunctionParms
+  )
+$119: Let (Variable = Expression)
+  Variable:
+  $128: LocalVariable named idx:282342@0x19fc1828380
+  Expression:
+  $137: DynamicCast to BP_PromptSequencer_ExploreIsland-DigTreasure_C@0x19fbcfa0d80 of expr:
+  $146: LocalVariable named CallFunc_SpawnPhasedActor_ReturnValue@0x19fc1828300
+$155: Let (Variable = Expression)
+  Variable:
+  $164: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fc1828400
+  Expression:
+  $173: PrimitiveCast type=71
+    Argument:
+    $175: LocalVariable named idx:282342@0x19fc1828380
+$184: JumpIfNot -> 0x18f, cond:
+  $189: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fc1828400
+$198: LetBool (Variable = Expression)
+  Variable:
+  $199: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue@0x19fc1828480
+  Expression:
+  $208: Context
+    ObjectExpression:
+    $209: LocalVariable named idx:282342@0x19fc1828380
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_FlushNetDormancy_ReturnValue@0x19fc1828480
+    ContextExpression:
+    $230: FinalFunction target=FlushNetDormancy@0x19e4cd61090 (
+      $239: EndFunctionParms
+    )
+$240: Let (Variable = Expression)
+  Variable:
+  $249: Context
+    ObjectExpression:
+    $250: LocalVariable named idx:282342@0x19fc1828380
+    SkipBytes: 0x9
+    RValueProperty: Island Name@0x19fbd8bcf60
+    ContextExpression:
+    $271: InstanceVariable named Island Name@0x19fbd8bcf60
+  Expression:
+  $280: LocalVariable named IslandName@0x19fcdbbd040
+$289: LetBool (Variable = Expression)
+  Variable:
+  $290: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue2@0x19fc1828500
+  Expression:
+  $299: Context
+    ObjectExpression:
+    $300: LocalVariable named idx:282342@0x19fc1828380
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_FlushNetDormancy_ReturnValue2@0x19fc1828500
+    ContextExpression:
+    $321: FinalFunction target=FlushNetDormancy@0x19e4cd61090 (
+      $330: EndFunctionParms
+    )
+$331: Let (Variable = Expression)
+  Variable:
+  $340: Context
+    ObjectExpression:
+    $341: LocalVariable named idx:282342@0x19fc1828380
+    SkipBytes: 0x9
+    RValueProperty: Bury Location@0x19fbe5b2080
+    ContextExpression:
+    $362: InstanceVariable named Bury Location@0x19fbe5b2080
+  Expression:
+  $371: LocalVariable named BuryLocation@0x19fc1828180
+$380: LetObj (Variable = Expression)
+  Variable:
+  $381: LocalOutVariable named idx:282302@0x19fc1828200
+  Expression:
+  $390: LocalVariable named idx:282342@0x19fc1828380
+$399: Return expression:
+  $400: Nothing
+$401: EndOfScript

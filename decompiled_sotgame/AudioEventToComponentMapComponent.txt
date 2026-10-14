@@ -1,0 +1,157 @@
+// Class: AudioEventToComponentMapComponent (3 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+AudioEventToComponentMapComponent::AddMapping @ RVA 0x2E48FB0 EA 0x7FF6F6868FB0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6868FB0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 *v5; // rsi
+  __int64 v6; // rax
+  __int64 v7; // rax
+  __int64 result; // rax
+  _QWORD v9[2]; // [rsp+30h] [rbp-48h] BYREF
+  _BYTE v10[16]; // [rsp+40h] [rbp-38h] BYREF
+  __int64 v11[5]; // [rsp+50h] [rbp-28h] BYREF
+  __int64 v12; // [rsp+88h] [rbp+10h] BYREF
+  __int64 v13; // [rsp+98h] [rbp+20h] BYREF
+
+  v9[1] = -2;
+  v4 = 0;
+  v9[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v11[0] = 0;
+  v11[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v5 = v11;
+  if ( a2[7] )
+    v5 = (__int64 *)a2[7];
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v6 = a2[4];
+  LOBYTE(v4) = v6 != 0;
+  a2[4] = v6 + v4;
+  v7 = sub_7FF6F681BE30(v10, v5);
+  result = sub_7FF6F6827C40(a1, v9[0], v13, v7, v12);
+  if ( v11[0] )
+    return sub_7FF6F4DED1F0(v11[0]);
+  return result;
+}
+
+
+======================================================================
+AudioEventToComponentMapComponent::AddMappingWithSingleEmitterComponent @ RVA 0x2E492A0 EA 0x7FF6F68692A0
+======================================================================
+__int64 __fastcall sub_7FF6F68692A0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 *v5; // rax
+  __int64 *v6; // rsi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rdx
+  __int64 v10; // rdi
+  __int64 v11; // rax
+  __int64 v13; // [rsp+30h] [rbp-28h] BYREF
+  _QWORD v14[4]; // [rsp+38h] [rbp-20h] BYREF
+  __int64 v15; // [rsp+68h] [rbp+10h] BYREF
+  __int64 v16; // [rsp+78h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v14[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v14);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v15 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v5 = (__int64 *)a2[7];
+  v6 = &v15;
+  v16 = 0;
+  if ( v5 )
+    v6 = v5;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v7 = a2[4];
+  v8 = v13;
+  v9 = v14[0];
+  LOBYTE(v2) = v7 != 0;
+  v10 = v7 + v2;
+  v11 = v16;
+  a2[4] = v10;
+  return sub_7FF6F6827D00(a1, v9, v8, *v6, v11);
+}
+
+
+======================================================================
+AudioEventToComponentMapComponent::ClearMappings @ RVA 0x2E49410 EA 0x7FF6F6869410
+======================================================================
+  *** no function recognized at this EA ***

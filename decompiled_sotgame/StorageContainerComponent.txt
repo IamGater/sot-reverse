@@ -1,0 +1,184 @@
+// Class: StorageContainerComponent (5 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+StorageContainerComponent::AddItem @ RVA 0x33E4780 EA 0x7FF6F6E04780
+======================================================================
+__int64 __fastcall sub_7FF6F6E04780(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // r8
+  __int64 v7; // rdx
+  __int64 v9; // [rsp+30h] [rbp+8h] BYREF
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v5 = a2[4];
+  v6 = v9;
+  v7 = v10;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F6DE42A0(a1 + 200, v7, v6);
+}
+
+
+======================================================================
+StorageContainerComponent::GetContainerDisplayName @ RVA 0x33E4990 EA 0x7FF6F6E04990
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+StorageContainerComponent::Multicast_DetachAllPlayersRPC @ RVA 0x33E4A20 EA 0x7FF6F6E04A20
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+StorageContainerComponent::OnRep_ContentsChanged @ RVA 0x33E4A40 EA 0x7FF6F6E04A40
+======================================================================
+// Hidden C++ exception states: #wind=5
+__int64 __fastcall sub_7FF6F6E04A40(__int64 a1, _QWORD *a2)
+{
+  void *v4; // rax
+  void *v5; // rsi
+  __int64 v6; // rbx
+  void *v7; // rax
+  void *v8; // rsi
+  __int64 v9; // rbx
+  __int64 result; // rax
+  void *v11; // [rsp+28h] [rbp-49h] BYREF
+  __int64 v12; // [rsp+30h] [rbp-41h]
+  int v13; // [rsp+38h] [rbp-39h]
+  int v14; // [rsp+3Ch] [rbp-35h]
+  int v15; // [rsp+40h] [rbp-31h]
+  void *v16; // [rsp+48h] [rbp-29h]
+  __int64 v17; // [rsp+50h] [rbp-21h]
+  char v18; // [rsp+58h] [rbp-19h]
+  __int64 v19; // [rsp+60h] [rbp-11h]
+  void *Src; // [rsp+68h] [rbp-9h] BYREF
+  int v21; // [rsp+70h] [rbp-1h]
+  int v22; // [rsp+78h] [rbp+7h]
+  int v23; // [rsp+7Ch] [rbp+Bh]
+  int v24; // [rsp+80h] [rbp+Fh]
+  void *v25; // [rsp+88h] [rbp+17h]
+  int v26; // [rsp+90h] [rbp+1Fh]
+  char v27; // [rsp+98h] [rbp+27h]
+  __int64 v28; // [rsp+A0h] [rbp+2Fh]
+  __int64 v29; // [rsp+A8h] [rbp+37h]
+
+  v29 = -2;
+  sub_7FF6F6DE9340(&Src);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &Src);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &Src);
+  }
+  a2[4] += a2[4] != 0;
+  v4 = nullptr;
+  v11 = nullptr;
+  v12 = 0;
+  v5 = Src;
+  v6 = v21;
+  if ( v21 )
+  {
+    v4 = (void *)sub_7FF6F4DFAA90(0, 16LL * v21, 0);
+    v11 = v4;
+  }
+  memcpy(v4, v5, 16 * v6);
+  LODWORD(v12) = v6;
+  HIDWORD(v12) = v6;
+  v13 = v22;
+  v14 = v23;
+  v15 = v24;
+  v7 = nullptr;
+  v16 = nullptr;
+  v17 = 0;
+  v8 = v25;
+  v9 = v26;
+  if ( v26 )
+  {
+    v7 = (void *)sub_7FF6F4DFAA90(0, 16LL * v26, 0);
+    v16 = v7;
+  }
+  memcpy(v7, v8, 16 * v9);
+  LODWORD(v17) = v9;
+  HIDWORD(v17) = v9;
+  v18 = v27;
+  v19 = v28;
+  result = sub_7FF6F6DE70E0(a1, &v11);
+  if ( v25 )
+  {
+    result = sub_7FF6F4DED1F0((__int64)v25);
+    v25 = nullptr;
+  }
+  if ( Src )
+    return sub_7FF6F4DED1F0((__int64)Src);
+  return result;
+}
+
+
+======================================================================
+StorageContainerComponent::TakeItem @ RVA 0x33E4D80 EA 0x7FF6F6E04D80
+======================================================================
+__int64 __fastcall sub_7FF6F6E04D80(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // r8
+  __int64 v7; // rdx
+  unsigned int v9; // [rsp+30h] [rbp+8h] BYREF
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v5 = a2[4];
+  v6 = v9;
+  v7 = v10;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F6DE8D00(a1 + 200, v7, v6);
+}
+

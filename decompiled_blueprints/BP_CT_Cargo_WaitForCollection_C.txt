@@ -1,0 +1,104 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/CompanyTales/MerchantAlliance/Rank0_Cargo/bp_ct_cargo_waitforcollection -> BP_CT_Cargo_WaitForCollection_C (RECOVERED via retry pass)
+
+=== BP_CT_Cargo_WaitForCollection_C::OnBeginCustom (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=idx:228886@0x1a3b80f2a00
+  Expression:
+  $9: LocalVariable named idx:228751@0x1a3b80f2800
+$18: VirtualFunction call "idx:228884" (
+  $31: literal int32 91
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_CT_Cargo_WaitForCollection_C::OnCollected (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=idx:228885@0x1a3b80f2b00
+  Expression:
+  $9: LocalVariable named CollectedItem@0x1a3b80f2880
+$18: VirtualFunction call "idx:228884" (
+  $31: literal int32 319
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_CT_Cargo_WaitForCollection_C::Default__BP_Totem_OnyxSnake_C (327 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x1a3b840fb90
+$10: FinalFunction target=GetVariables@0x1a2a95f5d20 (
+  $19: LocalVariable named idx:227630@0x1a3b80f2900
+  $28: EndFunctionParms
+)
+$29: LetObj (Variable = Expression)
+  Variable:
+  $30: StructMemberContext prop=idx:228881@0x1a3b80f2f00
+    Expression to struct:
+    $39: LocalVariable named idx:227630@0x1a3b80f2900
+  Expression:
+  $48: LocalVariable named idx:228885@0x1a3b80f2b00
+$57: FinalFunction target=SetVariables@0x1a2a95f7cc0 (
+  $66: LocalVariable named idx:227630@0x1a3b80f2900
+  $75: EndFunctionParms
+)
+$76: FinalFunction target=SignalComplete@0x1a2a95f7e00 (
+  $85: EndFunctionParms
+)
+$86: Jump to offset 0x144
+$91: LetObj (Variable = Expression)
+  Variable:
+  $92: LocalVariable named CallFunc_GetService_ReturnValue@0x1a3b80f2a80
+  Expression:
+  $101: FinalFunction target=GetService@0x1a2a95f5b60 (
+    $110: ObjectConst TaleQuestCargoRunContractsService@0x1a2a8ef5e80
+    $119: EndFunctionParms
+  )
+$120: Let (Variable = Expression)
+  Variable:
+  $129: LocalVariable named idx:228755@0x1a3b80f2b80
+  Expression:
+  $138: DynamicCast to TaleQuestCargoRunContractsService@0x1a2a8ef5e80 of expr:
+  $147: LocalVariable named CallFunc_GetService_ReturnValue@0x1a3b80f2a80
+$156: Let (Variable = Expression)
+  Variable:
+  $165: LocalVariable named K2Node_DynamicCast_bSuccess@0x1a3b80f2c00
+  Expression:
+  $174: PrimitiveCast type=71
+    Argument:
+    $176: LocalVariable named idx:228755@0x1a3b80f2b80
+$185: JumpIfNot -> 0x144, cond:
+  $190: LocalVariable named K2Node_DynamicCast_bSuccess@0x1a3b80f2c00
+$199: LetObj (Variable = Expression)
+  Variable:
+  $200: LocalVariable named idx:228880@0x1a3b80f2c80
+  Expression:
+  $209: Context
+    ObjectExpression:
+    $210: LocalVariable named idx:228755@0x1a3b80f2b80
+    SkipBytes: 0x13
+    RValueProperty: idx:228880@0x1a3b80f2c80
+    ContextExpression:
+    $231: FinalFunction target=GetContract@0x1a2a9d07660 (
+      $240: LocalVariable named idx:228886@0x1a3b80f2a00
+      $249: EndFunctionParms
+    )
+$250: BindDelegate 'OnCollected'
+  Delegate:
+  $263: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x1a3b80f2980
+  Object:
+  $272: Self
+$273: AddMulticastDelegate
+$274: Context
+  ObjectExpression:
+  $275: LocalVariable named idx:228880@0x1a3b80f2c80
+  SkipBytes: 0x9
+  RValueProperty: OnCollected@0x1a2a9d07130
+  ContextExpression:
+  $296: InstanceVariable named OnCollected@0x1a2a9d07130
+$305: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x1a3b80f2980
+$314: Jump to offset 0x144
+$319: Jump to offset 0xa
+$324: Return expression:
+  $325: Nothing
+$326: EndOfScript

@@ -1,0 +1,117 @@
+// Class: HorizontalBoxSlot (4 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+HorizontalBoxSlot::SetHorizontalAlignment @ RVA 0x1F31510 EA 0x7FF6F5951510
+======================================================================
+__int64 __fastcall sub_7FF6F5951510(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F58C04B0(a1, v5);
+}
+
+
+======================================================================
+HorizontalBoxSlot::SetPadding @ RVA 0x1F33070 EA 0x7FF6F5953070
+======================================================================
+__int64 __fastcall sub_7FF6F5953070(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rax
+  __int128 v7; // [rsp+20h] [rbp-28h] BYREF
+  __int128 v8; // [rsp+30h] [rbp-18h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = a2[4];
+  v8 = v7;
+  a2[4] = v5 + (v5 != 0);
+  return sub_7FF6F58C20C0(a1, &v8);
+}
+
+
+======================================================================
+HorizontalBoxSlot::SetSize @ RVA 0x1F33F40 EA 0x7FF6F5953F40
+======================================================================
+__int64 __fastcall sub_7FF6F5953F40(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rax
+  __int64 v6; // rcx
+  int v8; // [rsp+38h] [rbp+10h] BYREF
+  char v9; // [rsp+3Ch] [rbp+14h]
+  int v10; // [rsp+48h] [rbp+20h] BYREF
+  char v11; // [rsp+4Ch] [rbp+24h]
+
+  v2 = a2[4] == 0;
+  v8 = 1065353216;
+  v9 = 1;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  v5 = a2[4];
+  v10 = v8;
+  v6 = v5 + (v5 != 0);
+  LOBYTE(v5) = v9;
+  a2[4] = v6;
+  v11 = v5;
+  return sub_7FF6F58C2DD0(a1, &v10);
+}
+
+
+======================================================================
+HorizontalBoxSlot::SetVerticalAlignment @ RVA 0x1F34BF0 EA 0x7FF6F5954BF0
+======================================================================
+__int64 __fastcall sub_7FF6F5954BF0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F58C3BE0(a1, v5);
+}
+

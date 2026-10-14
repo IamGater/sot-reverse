@@ -1,0 +1,143 @@
+// Class: HandlesFunctionLibrary (3 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+HandlesFunctionLibrary::Equal @ RVA 0xDDD760 EA 0x7FF6F47FD760
+======================================================================
+__int64 __fastcall sub_7FF6F47FD760(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  int *v6; // rax
+  int *v7; // rsi
+  int *v8; // rdx
+  __int64 v9; // rax
+  __int64 result; // rax
+  int v11; // [rsp+48h] [rbp+10h] BYREF
+  int v12; // [rsp+50h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = -1;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = (int *)a2[7];
+  v7 = &v11;
+  v12 = -1;
+  a2[7] = 0;
+  if ( v6 )
+    v7 = v6;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v8 = &v12;
+  if ( a2[7] )
+    v8 = (int *)a2[7];
+  v9 = a2[4];
+  LOBYTE(v3) = v9 != 0;
+  a2[4] = v9 + v3;
+  result = sub_7FF6F3DCF570(v7, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+HandlesFunctionLibrary::IsValid @ RVA 0xDDFE70 EA 0x7FF6F47FFE70
+======================================================================
+__int64 __fastcall sub_7FF6F47FFE70(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  int *v6; // rcx
+  __int64 v7; // rax
+  __int64 result; // rax
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = -1;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = &v9;
+  if ( a2[7] )
+    v6 = (int *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = sub_7FF6F3DD7A50(v6);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+HandlesFunctionLibrary::NotEqual @ RVA 0xDE0C60 EA 0x7FF6F4800C60
+======================================================================
+__int64 __fastcall sub_7FF6F4800C60(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  int *v6; // rax
+  int *v7; // rsi
+  int *v8; // rdx
+  __int64 v9; // rax
+  __int64 result; // rax
+  int v11; // [rsp+48h] [rbp+10h] BYREF
+  int v12; // [rsp+50h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = -1;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = (int *)a2[7];
+  v7 = &v11;
+  v12 = -1;
+  a2[7] = 0;
+  if ( v6 )
+    v7 = v6;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v8 = &v12;
+  if ( a2[7] )
+    v8 = (int *)a2[7];
+  v9 = a2[4];
+  LOBYTE(v3) = v9 != 0;
+  a2[4] = v9 + v3;
+  result = sub_7FF6F3DD8090(v7, v8);
+  *a3 = result;
+  return result;
+}
+

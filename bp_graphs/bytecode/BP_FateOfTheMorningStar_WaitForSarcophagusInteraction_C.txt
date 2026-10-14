@@ -1,0 +1,70 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_7_FateOfTheMorningStar/bp_fateofthemorningstar_waitforsarcophagusinteraction -> BP_FateOfTheMorningStar_WaitForSarcophagusInteraction_C
+
+=== BP_FateOfTheMorningStar_WaitForSarcophagusInteraction_C::fn_idx_1828 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19f80afc300
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19f80afc100
+$18: VirtualFunction call "idx:284720" (
+  $31: literal int32 25
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_FateOfTheMorningStar_WaitForSarcophagusInteraction_C::fn_idx_284721 (22 bytes) ===
+$0: VirtualFunction call "idx:284720" (
+  $13: literal int32 201
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_FateOfTheMorningStar_WaitForSarcophagusInteraction_C::fn_idx_284720 (209 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19e586b8ff0
+$10: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $19: EndFunctionParms
+)
+$20: Jump to offset 0xce
+$25: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $34: LocalVariable named CallFunc_GetVariables_OutStruct@0x19f80afc480
+  $43: EndFunctionParms
+)
+$44: Let (Variable = Expression)
+  Variable:
+  $53: LocalVariable named idx:284722@0x19f80afc380
+  Expression:
+  $62: DynamicCast to BP_Sarcophagus_C@0x19fcde0b400 of expr:
+  $71: StructMemberContext prop=idx:284580@0x19fcc9c6280
+    Expression to struct:
+    $80: LocalVariable named CallFunc_GetVariables_OutStruct@0x19f80afc480
+$89: Let (Variable = Expression)
+  Variable:
+  $98: LocalVariable named K2Node_DynamicCast_bSuccess@0x19f80afc400
+  Expression:
+  $107: PrimitiveCast type=71
+    Argument:
+    $109: LocalVariable named idx:284722@0x19f80afc380
+$118: JumpIfNot -> 0xce, cond:
+  $123: LocalVariable named K2Node_DynamicCast_bSuccess@0x19f80afc400
+$132: BindDelegate 'idx:284721'
+  Delegate:
+  $145: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19f80afc280
+  Object:
+  $154: Self
+$155: AddMulticastDelegate
+$156: Context
+  ObjectExpression:
+  $157: LocalVariable named idx:284722@0x19f80afc380
+  SkipBytes: 0x9
+  RValueProperty: OnHasBeenInteracted@0x19fce07ee80
+  ContextExpression:
+  $178: InstanceVariable named OnHasBeenInteracted@0x19fce07ee80
+$187: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19f80afc280
+$196: Jump to offset 0xce
+$201: Jump to offset 0xa
+$206: Return expression:
+  $207: Nothing
+$208: EndOfScript

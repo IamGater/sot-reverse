@@ -1,0 +1,227 @@
+// Class: AchievementBlueprintLibrary (2 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+AchievementBlueprintLibrary::GetCachedAchievementDescription @ RVA 0x2155420 EA 0x7FF6F5B75420
+======================================================================
+// Hidden C++ exception states: #wind=3
+__int64 __fastcall sub_7FF6F5B75420(__int64 a1, _QWORD *a2)
+{
+  __int64 v3; // rdi
+  char *v4; // r12
+  _BYTE *v5; // r15
+  _BYTE *v6; // r14
+  _BYTE *v7; // rsi
+  char *v8; // rcx
+  __int64 v9; // rax
+  __int64 v11; // [rsp+48h] [rbp-C0h] BYREF
+  __int64 v12; // [rsp+50h] [rbp-B8h] BYREF
+  _QWORD v13[2]; // [rsp+58h] [rbp-B0h] BYREF
+  _BYTE v14[56]; // [rsp+68h] [rbp-A0h] BYREF
+  _BYTE v15[56]; // [rsp+A0h] [rbp-68h] BYREF
+  _BYTE v16[64]; // [rsp+D8h] [rbp-30h] BYREF
+  char v17; // [rsp+150h] [rbp+48h] BYREF
+  char v18; // [rsp+160h] [rbp+58h] BYREF
+
+  v13[1] = -2;
+  v3 = 0;
+  v13[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v13);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v17 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v4 = &v17;
+  if ( a2[7] )
+    v4 = (char *)a2[7];
+  sub_7FF6F4DCDFA0(v16);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v16);
+  }
+  v5 = v16;
+  if ( a2[7] )
+    v5 = (_BYTE *)a2[7];
+  sub_7FF6F4DCDFA0(v15);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v15);
+  }
+  v6 = v15;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  sub_7FF6F4DCDFA0(v14);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v14);
+  }
+  v7 = v14;
+  if ( a2[7] )
+    v7 = (_BYTE *)a2[7];
+  v18 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  v8 = &v18;
+  if ( a2[7] )
+    v8 = (char *)a2[7];
+  v9 = a2[4];
+  LOBYTE(v3) = v9 != 0;
+  a2[4] = v9 + v3;
+  sub_7FF6F5B49AB0(v13[0], v12, v11, (_DWORD)v4, (__int64)v5, (__int64)v6, (__int64)v7, (__int64)v8);
+  sub_7FF6F3C37050(v14);
+  sub_7FF6F3C37050(v15);
+  return sub_7FF6F3C37050(v16);
+}
+
+
+======================================================================
+AchievementBlueprintLibrary::GetCachedAchievementProgress @ RVA 0x2155700 EA 0x7FF6F5B75700
+======================================================================
+__int64 __fastcall sub_7FF6F5B75700(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  char *v5; // rsi
+  int *v6; // rcx
+  int v7; // r8d
+  int v8; // edx
+  __int64 v9; // rax
+  int v10; // ecx
+  __int64 v12; // [rsp+20h] [rbp-38h]
+  __int64 v13; // [rsp+30h] [rbp-28h] BYREF
+  __int64 v14; // [rsp+38h] [rbp-20h] BYREF
+  _QWORD v15[3]; // [rsp+40h] [rbp-18h] BYREF
+  char v16; // [rsp+68h] [rbp+10h] BYREF
+  int v17; // [rsp+78h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v15[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v15);
+  }
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v16 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v4 = a2[7];
+  v5 = &v16;
+  a2[7] = 0;
+  if ( v4 )
+    LODWORD(v5) = v4;
+  v17 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v6 = &v17;
+  v7 = v13;
+  v8 = v14;
+  if ( a2[7] )
+    v6 = (int *)a2[7];
+  v9 = a2[4];
+  v12 = (__int64)v6;
+  v10 = v15[0];
+  LOBYTE(v2) = v9 != 0;
+  a2[4] = v9 + v2;
+  return sub_7FF6F5B49D70(v10, v8, v7, (_DWORD)v5, v12);
+}
+

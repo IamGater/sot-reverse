@@ -1,0 +1,49 @@
+// /Game/Blueprints/GameObjects/NPC/bp_anim_merchant -> BP_Anim_Merchant_C
+
+=== BP_Anim_Merchant_C::fn_idx_245224 (22 bytes) ===
+$0: VirtualFunction call "idx:254392" (
+  $13: literal int32 10
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Anim_Merchant_C::fn_idx_254392 (149 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19f97061500
+$10: LetObj (Variable = Expression)
+  Variable:
+  $11: LocalVariable named CallFunc_GetOwningActor_ReturnValue@0x19f988aeb00
+  Expression:
+  $20: FinalFunction target=GetOwningActor@0x19e4d08d810 (
+    $29: EndFunctionParms
+  )
+$30: Let (Variable = Expression)
+  Variable:
+  $39: LocalVariable named idx:254402@0x19f988aeb80
+  Expression:
+  $48: ObjToInterfaceCast to BP_NPC_AnimatedItemInterface_C@0x19f817ba8c0
+  $57: LocalVariable named CallFunc_GetOwningActor_ReturnValue@0x19f988aeb00
+$66: Let (Variable = Expression)
+  Variable:
+  $75: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x19f988aec00
+  Expression:
+  $84: PrimitiveCast type=73
+    Argument:
+    $86: LocalVariable named idx:254402@0x19f988aeb80
+$95: JumpIfNot -> 0x92, cond:
+  $100: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x19f988aec00
+$109: Context
+  ObjectExpression:
+  $110: InterfaceContext:
+  $111: LocalVariable named idx:254402@0x19f988aeb80
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $132: VirtualFunction call "PlayItemAnimation" (
+    $145: EndFunctionParms
+  )
+$146: Return expression:
+  $147: Nothing
+$148: EndOfScript

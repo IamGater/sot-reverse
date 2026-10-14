@@ -1,0 +1,193 @@
+// Class: BillboardComponent (3 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+BillboardComponent::SetSprite @ RVA 0x2B21770 EA 0x7FF6F6541770
+======================================================================
+__int64 __fastcall sub_7FF6F6541770(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1992LL))(a1, v6);
+}
+
+
+======================================================================
+BillboardComponent::SetSpriteAndUV @ RVA 0x2B21800 EA 0x7FF6F6541800
+======================================================================
+__int64 __fastcall sub_7FF6F6541800(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // r9
+  __int64 v7; // r8
+  __int64 v8; // rdx
+  __int64 v9; // rdi
+  int v11; // [rsp+28h] [rbp-30h]
+  unsigned int v12; // [rsp+30h] [rbp-28h] BYREF
+  _QWORD v13[4]; // [rsp+38h] [rbp-20h] BYREF
+  int v14; // [rsp+60h] [rbp+8h] BYREF
+  int v15; // [rsp+68h] [rbp+10h] BYREF
+  unsigned int v16; // [rsp+78h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v13[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v13);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v5 = a2[4];
+  v6 = v16;
+  v7 = v12;
+  v8 = v13[0];
+  LOBYTE(v2) = v5 != 0;
+  v9 = v5 + v2;
+  v11 = v14;
+  LODWORD(v5) = v15;
+  a2[4] = v9;
+  return (*(__int64 (__fastcall **)(__int64, __int64, __int64, __int64, _DWORD, int))(*(_QWORD *)a1 + 2008LL))(
+           a1,
+           v8,
+           v7,
+           v6,
+           v5,
+           v11);
+}
+
+
+======================================================================
+BillboardComponent::SetUV @ RVA 0x2B22890 EA 0x7FF6F6542890
+======================================================================
+__int64 __fastcall sub_7FF6F6542890(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // r9
+  __int64 v7; // r8
+  __int64 v8; // rdx
+  __int64 v9; // rdi
+  _DWORD v11[10]; // [rsp+30h] [rbp-28h] BYREF
+  int v12; // [rsp+60h] [rbp+8h] BYREF
+  unsigned int v13; // [rsp+68h] [rbp+10h] BYREF
+  unsigned int v14; // [rsp+78h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v11[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v5 = a2[4];
+  v6 = v13;
+  v7 = v14;
+  v8 = v11[0];
+  LOBYTE(v2) = v5 != 0;
+  v9 = v5 + v2;
+  LODWORD(v5) = v12;
+  a2[4] = v9;
+  return (*(__int64 (__fastcall **)(__int64, __int64, __int64, __int64, _DWORD))(*(_QWORD *)a1 + 2000LL))(
+           a1,
+           v8,
+           v7,
+           v6,
+           v5);
+}
+

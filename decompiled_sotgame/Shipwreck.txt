@@ -1,0 +1,212 @@
+// Class: Shipwreck (3 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+Shipwreck::OnOverlapBegin @ RVA 0xFC2250 EA 0x7FF6F49E2250
+======================================================================
+__int64 __fastcall sub_7FF6F49E2250(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  bool v5; // si
+  _DWORD *v6; // rcx
+  __int64 v7; // r9
+  __int64 v8; // r8
+  __int64 v9; // rdx
+  __int64 v10; // rax
+  bool v12; // [rsp+20h] [rbp-B8h]
+  __int64 v13; // [rsp+30h] [rbp-A8h] BYREF
+  __int64 v14; // [rsp+38h] [rbp-A0h] BYREF
+  _DWORD v15[38]; // [rsp+40h] [rbp-98h] BYREF
+  int v16; // [rsp+E8h] [rbp+10h] BYREF
+  unsigned int v17; // [rsp+F8h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v17 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v5 = v16 != 0;
+  memset(v15, 0, 0x80u);
+  v15[1] = 1065353216;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v15);
+  }
+  v6 = v15;
+  v7 = v17;
+  v8 = v13;
+  v9 = v14;
+  if ( a2[7] )
+    v6 = (_DWORD *)a2[7];
+  v10 = a2[4];
+  v12 = v5;
+  LOBYTE(v2) = v10 != 0;
+  a2[4] = v10 + v2;
+  return nullsub_234(a1, v9, v8, v7, v12, v6);
+}
+
+
+======================================================================
+Shipwreck::OnOverlapEnd @ RVA 0xFC2520 EA 0x7FF6F49E2520
+======================================================================
+__int64 __fastcall sub_7FF6F49E2520(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // r9
+  __int64 v7; // r8
+  __int64 v8; // rdx
+  _QWORD v10[3]; // [rsp+20h] [rbp-18h] BYREF
+  unsigned int v11; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v12; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v10[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v5 = a2[4];
+  v6 = v11;
+  v7 = v12;
+  v8 = v10[0];
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return nullsub_235(a1, v8, v7, v6);
+}
+
+
+======================================================================
+Shipwreck::OnResetTo @ RVA 0x152AB10 EA 0x7FF6F4F4AB10
+======================================================================
+  (RVA 0x152AB10 shared with another function already decompiled above/elsewhere - likely a generic Blueprint/K2 bytecode executor, not unique native code)
+unsigned __int8 *__fastcall sub_7FF6F4F4AB10(_QWORD *a1, _QWORD *a2, void *a3)
+{
+  unsigned __int8 *result; // rax
+  char v7; // bp
+  _BYTE *i; // rax
+  unsigned __int8 *v9; // rax
+  int v10; // ecx
+  unsigned __int8 *v11; // rcx
+  __int64 v12; // rax
+  unsigned __int8 *v13; // rbx
+  char v14[64]; // [rsp+30h] [rbp-68h] BYREF
+
+  result = (unsigned __int8 *)a1[2];
+  if ( *((int *)result + 49) >= 0 )
+  {
+    v7 = (*(__int64 (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD))(*a1 + 480LL))(a1, a2[2], a2[5], 0);
+    if ( (v7 & 1) != 0 )
+      (*(void (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD, _QWORD))(*a1 + 488LL))(a1, a2[2], a2[5], a2[15], 0);
+    if ( (v7 & 2) != 0 )
+    {
+      for ( i = (_BYTE *)a2[4]; *i != 4; i = (_BYTE *)a2[4] )
+      {
+        v9 = (unsigned __int8 *)a2[4];
+        v10 = *v9;
+        a2[4] = v9 + 1;
+        ((void (__fastcall *)(_QWORD, _QWORD *, char *))funcs_7FF6F4F44D4F[v10])(a2[3], a2, v14);
+      }
+      result = i + 1;
+      a2[4] = result;
+      v11 = result + 1;
+      if ( *result == 11 )
+      {
+        a2[4] = v11;
+      }
+      else
+      {
+        v12 = *result;
+        a2[4] = v11;
+        return (unsigned __int8 *)((__int64 (__fastcall *)(_QWORD, _QWORD *, void *))funcs_7FF6F4F44D4F[v12])(
+                                    a2[3],
+                                    a2,
+                                    a3);
+      }
+    }
+    else
+    {
+      result = (unsigned __int8 *)sub_7FF6F4F072B0(a2[2]);
+      v13 = result;
+      if ( result )
+      {
+        if ( (*((_QWORD *)result + 7) & 0x1000000000LL) == 0 )
+          (*(void (__fastcall **)(unsigned __int8 *, void *))(*(_QWORD *)result + 688LL))(result, a3);
+        return (unsigned __int8 *)memset(a3, 0, *((_DWORD *)v13 + 12) * *((_DWORD *)v13 + 13));
+      }
+    }
+  }
+  else if ( !byte_7FF6FA4F64EF )
+  {
+    ++dword_7FF6FA525F48;
+  }
+  return result;
+}
+

@@ -1,0 +1,83 @@
+// /Game/Blueprints/GameObjects/Hull/Art/bp_largeship_standardhull_art_doors -> BP_LargeShip_StandardHull_Art_Doors_C
+
+=== BP_LargeShip_StandardHull_Art_Doors_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_LargeShip_StandardHull_Art_Doors_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_LargeShip_StandardHull_Art_Doors" (
+  $13: literal int32 241
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_LargeShip_StandardHull_Art_Doors_C::BP_Figurehead_C (249 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19f5412df20
+$10: Context
+  ObjectExpression:
+  $11: InstanceVariable named StaticMesh1@0x19f4f7d5b80
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $32: VirtualFunction call "SetCollisionEnabled" (
+    $45: literal byte 0
+    $47: EndFunctionParms
+  )
+$48: Jump to offset 0xf6
+$53: LetBool (Variable = Expression)
+  Variable:
+  $54: LocalVariable named CallFunc_IsFeatureEnabled_ReturnValue@0x19f4f7d5b00
+  Expression:
+  $63: Context
+    ObjectExpression:
+    $64: ObjectConst Default__FeatureConfigBlueprintFunctionLibrary@0x19e4d95eac0
+    SkipBytes: 0x17
+    RValueProperty: CallFunc_IsFeatureEnabled_ReturnValue@0x19f4f7d5b00
+    ContextExpression:
+    $85: FinalFunction target=IsFeatureEnabled@0x19e4d357510 (
+      $94: literal name "InteractableDoorsOnGalleons"
+      $107: EndFunctionParms
+    )
+$108: JumpIfNot -> 0xf6, cond:
+  $113: LocalVariable named CallFunc_IsFeatureEnabled_ReturnValue@0x19f4f7d5b00
+$122: Context
+  ObjectExpression:
+  $123: InstanceVariable named StaticMesh@0x19f4f7d5c00
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $144: VirtualFunction call "SetVisibility" (
+    $157: False
+    $158: False
+    $159: EndFunctionParms
+  )
+$160: Context
+  ObjectExpression:
+  $161: InstanceVariable named StaticMesh1@0x19f4f7d5b80
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $182: VirtualFunction call "SetVisibility" (
+    $195: False
+    $196: False
+    $197: EndFunctionParms
+  )
+$198: Context
+  ObjectExpression:
+  $199: InstanceVariable named StaticMesh@0x19f4f7d5c00
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $220: VirtualFunction call "SetCollisionEnabled" (
+    $233: literal byte 0
+    $235: EndFunctionParms
+  )
+$236: Jump to offset 0xa
+$241: Jump to offset 0x35
+$246: Return expression:
+  $247: Nothing
+$248: EndOfScript

@@ -1,0 +1,52 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Generic/bp_getislandnamefromactorstep -> BP_GetIslandNameFromActorStep_C
+
+=== BP_GetIslandNameFromActorStep_C::OnBeginCustom (205 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue@0x19fcbb4b400
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Conv_AssetToObject_ReturnValue@0x19fcbb4b400
+    ContextExpression:
+    $32: FinalFunction target=Conv_AssetToObject@0x19e4cd86800 (
+      $41: LocalVariable named ActorId@0x19fcbb4b380
+      $50: EndFunctionParms
+    )
+$51: Let (Variable = Expression)
+  Variable:
+  $60: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19fcbb4b480
+  Expression:
+  $69: DynamicCast to Actor@0x19e261ddc80 of expr:
+  $78: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue@0x19fcbb4b400
+$87: Let (Variable = Expression)
+  Variable:
+  $96: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x19fcbb4b800
+  Expression:
+  $105: PrimitiveCast type=71
+    Argument:
+    $107: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19fcbb4b480
+$116: Let (Variable = Expression)
+  Variable:
+  $125: LocalVariable named idx:282410@0x19fcdbba3a0
+  Expression:
+  $134: Context
+    ObjectExpression:
+    $135: ObjectConst Default__IslandFunctions@0x19e4d744990
+    SkipBytes: 0x13
+    RValueProperty: idx:282410@0x19fcdbba3a0
+    ContextExpression:
+    $156: FinalFunction target=GetActorsCurrentIslandName@0x19e4d1ac2c0 (
+      $165: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19fcbb4b480
+      $174: EndFunctionParms
+    )
+$175: Let (Variable = Expression)
+  Variable:
+  $184: LocalOutVariable named IslandName@0x19fcdbba2c0
+  Expression:
+  $193: LocalVariable named idx:282410@0x19fcdbba3a0
+$202: Return expression:
+  $203: Nothing
+$204: EndOfScript

@@ -1,0 +1,258 @@
+// Class: AthenaAnimationWieldedItemFunctions (2 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+AthenaAnimationWieldedItemFunctions::GetIntoContinuousUseAnimationSequence @ RVA 0xB0B810 EA 0x7FF6F452B810
+======================================================================
+__int64 __fastcall sub_7FF6F452B810(__int64 a1, _QWORD *a2, _QWORD *a3)
+{
+  bool v3; // zf
+  __int64 result; // rax
+  __int64 v7; // rdi
+  bool v8; // bp
+  __int64 v9; // rbx
+  __int64 v10; // rax
+  __int64 i; // rcx
+  __int64 v12; // rbx
+  __int64 v13; // rax
+  __int64 v14; // rsi
+  __int64 v15; // rcx
+  __int64 v16; // rbx
+  __int64 v17; // rax
+  __int128 *v18; // rax
+  __int64 v19; // rcx
+  __int128 v20; // [rsp+20h] [rbp-238h]
+  __int128 v21; // [rsp+30h] [rbp-228h]
+  _BYTE v22[176]; // [rsp+D0h] [rbp-188h] BYREF
+  _BYTE v23[176]; // [rsp+180h] [rbp-D8h] BYREF
+  char v24; // [rsp+268h] [rbp+10h] BYREF
+  int v25; // [rsp+270h] [rbp+18h] BYREF
+  __int64 v26; // [rsp+278h] [rbp+20h] BYREF
+
+  v3 = a2[4] == 0;
+  v26 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v26);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v26);
+  }
+  v3 = a2[4] == 0;
+  v24 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v24);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v24);
+  }
+  v3 = a2[4] == 0;
+  v25 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v25);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v25);
+  }
+  result = a2[4];
+  v7 = v26;
+  v8 = v25 != 0;
+  a2[4] = result + (result != 0);
+  if ( v7 )
+  {
+    if ( !v24 )
+    {
+      v9 = sub_7FF6F3E05500(v7);
+      if ( *(_QWORD *)(v9 + 8) )
+      {
+        v10 = sub_7FF6F6B6D3D0(L"/Script/AthenaInput");
+        for ( i = *(_QWORD *)(v9 + 8); i; i = *(_QWORD *)(i + 48) )
+        {
+          if ( i == v10 )
+            break;
+        }
+      }
+      sub_7FF6F6C21430(L"/Script/Athena");
+    }
+    v12 = sub_7FF6F3E05500(v7);
+    if ( *(_QWORD *)(v12 + 8)
+      && (v13 = sub_7FF6F6B6D3D0(L"/Script/AthenaInput"), v14 = *(_QWORD *)(v12 + 8), (v15 = v14) != 0) )
+    {
+      while ( v15 != v13 )
+      {
+        v15 = *(_QWORD *)(v15 + 48);
+        if ( !v15 )
+          goto LABEL_22;
+      }
+    }
+    else
+    {
+LABEL_22:
+      v14 = 0;
+    }
+    v16 = sub_7FF6F6C21430(L"/Script/Athena");
+    v17 = sub_7FF6F3E05500(v7);
+    (*(void (__fastcall **)(_QWORD))(**(_QWORD **)(v17 + 176) + 208LL))(*(_QWORD *)(v17 + 176));
+    if ( v14 == v16 )
+      v18 = (__int128 *)sub_7FF6F3E03DA0(v7, v22, v8);
+    else
+      v18 = (__int128 *)sub_7FF6F3E03E70(v7, v23, v8);
+    v20 = *v18;
+    v21 = v18[1];
+    if ( *(_BYTE *)(sub_7FF6F3E05500(v7) + 1) == 6 && *(_DWORD *)(sub_7FF6F3E05500(v7) + 4) == 1 )
+    {
+      result = v21;
+      v19 = v20;
+      if ( (_QWORD)v21 )
+        v19 = v21;
+      *a3 = v19;
+    }
+    else
+    {
+      *a3 = v20;
+      return v20;
+    }
+  }
+  else
+  {
+    *a3 = 0;
+  }
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationWieldedItemFunctions::GetIntoContinuousUseSwimmingAnimationBlendSpace @ RVA 0xB0BAE0 EA 0x7FF6F452BAE0
+======================================================================
+__int64 __fastcall sub_7FF6F452BAE0(__int64 a1, _QWORD *a2, _QWORD *a3)
+{
+  bool v3; // zf
+  __int64 result; // rax
+  __int64 v7; // rdi
+  bool v8; // bp
+  __int64 v9; // rbx
+  __int64 v10; // rax
+  __int64 i; // rcx
+  __int64 v12; // rbx
+  __int64 v13; // rax
+  __int64 v14; // rsi
+  __int64 v15; // rcx
+  __int64 v16; // rbx
+  __int64 v17; // rax
+  __int64 v18; // rax
+  __int64 v19; // rcx
+  __int128 v20; // [rsp+80h] [rbp-1D8h]
+  __int128 v21; // [rsp+90h] [rbp-1C8h]
+  _BYTE v22[176]; // [rsp+D0h] [rbp-188h] BYREF
+  _BYTE v23[176]; // [rsp+180h] [rbp-D8h] BYREF
+  char v24; // [rsp+268h] [rbp+10h] BYREF
+  int v25; // [rsp+270h] [rbp+18h] BYREF
+  __int64 v26; // [rsp+278h] [rbp+20h] BYREF
+
+  v3 = a2[4] == 0;
+  v26 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v26);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v26);
+  }
+  v3 = a2[4] == 0;
+  v24 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v24);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v24);
+  }
+  v3 = a2[4] == 0;
+  v25 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v25);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v25);
+  }
+  result = a2[4];
+  v7 = v26;
+  v8 = v25 != 0;
+  a2[4] = result + (result != 0);
+  if ( v7 )
+  {
+    if ( !v24 )
+    {
+      v9 = sub_7FF6F3E05500(v7);
+      if ( *(_QWORD *)(v9 + 8) )
+      {
+        v10 = sub_7FF6F6B6D3D0(L"/Script/AthenaInput");
+        for ( i = *(_QWORD *)(v9 + 8); i; i = *(_QWORD *)(i + 48) )
+        {
+          if ( i == v10 )
+            break;
+        }
+      }
+      sub_7FF6F6C21430(L"/Script/Athena");
+    }
+    v12 = sub_7FF6F3E05500(v7);
+    if ( *(_QWORD *)(v12 + 8)
+      && (v13 = sub_7FF6F6B6D3D0(L"/Script/AthenaInput"), v14 = *(_QWORD *)(v12 + 8), (v15 = v14) != 0) )
+    {
+      while ( v15 != v13 )
+      {
+        v15 = *(_QWORD *)(v15 + 48);
+        if ( !v15 )
+          goto LABEL_22;
+      }
+    }
+    else
+    {
+LABEL_22:
+      v14 = 0;
+    }
+    v16 = sub_7FF6F6C21430(L"/Script/Athena");
+    v17 = sub_7FF6F3E05500(v7);
+    (*(void (__fastcall **)(_QWORD))(**(_QWORD **)(v17 + 176) + 208LL))(*(_QWORD *)(v17 + 176));
+    if ( v14 == v16 )
+      v18 = sub_7FF6F3E03DA0(v7, v22, v8);
+    else
+      v18 = sub_7FF6F3E03E70(v7, v23, v8);
+    v20 = *(_OWORD *)(v18 + 96);
+    v21 = *(_OWORD *)(v18 + 112);
+    if ( *(_BYTE *)(sub_7FF6F3E05500(v7) + 1) == 6 && *(_DWORD *)(sub_7FF6F3E05500(v7) + 4) == 1 )
+    {
+      result = v21;
+      v19 = *((_QWORD *)&v20 + 1);
+      if ( (_QWORD)v21 )
+        v19 = v21;
+      *a3 = v19;
+    }
+    else
+    {
+      *a3 = *((_QWORD *)&v20 + 1);
+      return *((_QWORD *)&v20 + 1);
+    }
+  }
+  else
+  {
+    *a3 = 0;
+  }
+  return result;
+}
+

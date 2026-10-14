@@ -1,0 +1,250 @@
+// E:\unreal-projects\Athena\Content\Blueprints\Ships\Templates\bp_ailargeshiptemplate.uasset -> BP_AILargeShipTemplate_C
+
+=== BP_AILargeShipTemplate_C::SetShipSkeleton (238 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_K2_GetRootComponent_ReturnValue@0x213918fac00
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: Context
+      ObjectExpression:
+      $12: InstanceVariable named Hull@0x213934b8580
+      SkipBytes: 0x9
+      RValueProperty: ChildActor@0x212d69559f0
+      ContextExpression:
+      $33: InstanceVariable named ChildActor@0x212d69559f0
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetRootComponent_ReturnValue@0x213918fac00
+    ContextExpression:
+    $54: FinalFunction target=K2_GetRootComponent@0x212d6386d90 (
+      $63: EndFunctionParms
+    )
+$64: Let (Variable = Expression)
+  Variable:
+  $73: LocalVariable named K2Node_DynamicCast_AsChild_Actor_Component@0x213918ff080
+  Expression:
+  $82: DynamicCast to ChildActorComponent@0x212d5b586c0 of expr:
+  $91: LocalVariable named CallFunc_K2_GetRootComponent_ReturnValue@0x213918fac00
+$100: Let (Variable = Expression)
+  Variable:
+  $109: LocalVariable named K2Node_DynamicCast_bSuccess@0x213918fdd00
+  Expression:
+  $118: PrimitiveCast type=71
+    Argument:
+    $120: LocalVariable named K2Node_DynamicCast_AsChild_Actor_Component@0x213918ff080
+$129: Let (Variable = Expression)
+  Variable:
+  $138: LocalVariable named K2Node_DynamicCast_AsBP_Shp_Skeleton_01_A@0x213918fca80
+  Expression:
+  $147: DynamicCast to BP_shp_skeleton_01_a_C@0x2138946a200 of expr:
+  $156: Context
+    ObjectExpression:
+    $157: LocalVariable named K2Node_DynamicCast_AsChild_Actor_Component@0x213918ff080
+    SkipBytes: 0x9
+    RValueProperty: ChildActor@0x212d69559f0
+    ContextExpression:
+    $178: InstanceVariable named ChildActor@0x212d69559f0
+$187: Let (Variable = Expression)
+  Variable:
+  $196: LocalVariable named K2Node_DynamicCast_bSuccess2@0x213918fc900
+  Expression:
+  $205: PrimitiveCast type=71
+    Argument:
+    $207: LocalVariable named K2Node_DynamicCast_AsBP_Shp_Skeleton_01_A@0x213918fca80
+$216: LetObj (Variable = Expression)
+  Variable:
+  $217: InstanceVariable named ShipSkeleton@0x213934b8400
+  Expression:
+  $226: LocalVariable named K2Node_DynamicCast_AsBP_Shp_Skeleton_01_A@0x213918fca80
+$235: Return expression:
+  $236: Nothing
+$237: EndOfScript
+
+=== BP_AILargeShipTemplate_C::OnRep_SailData (137 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_IsValid_ReturnValue@0x213934b8c80
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x213934b8c80
+    ContextExpression:
+    $32: FinalFunction target=IsValid@0x212d63ae380 (
+      $41: InstanceVariable named ShipSkeleton@0x213934b8400
+      $50: EndFunctionParms
+    )
+$51: JumpIfNot -> 0x73, cond:
+  $56: LocalVariable named CallFunc_IsValid_ReturnValue@0x213934b8c80
+$65: Context
+  ObjectExpression:
+  $66: InstanceVariable named ShipSkeleton@0x213934b8400
+  SkipBytes: 0x17
+  RValueProperty: (null)
+  ContextExpression:
+  $87: VirtualFunction call "SetSailColour" (
+    $100: InstanceVariable named SailData@0x213934b8300
+    $109: EndFunctionParms
+  )
+$110: Jump to offset 0x86
+$115: VirtualFunction call "SetShipSkeleton" (
+  $128: EndFunctionParms
+)
+$129: Jump to offset 0x41
+$134: Return expression:
+  $135: Nothing
+$136: EndOfScript
+
+=== BP_AILargeShipTemplate_C::OnRep_NewVar_1 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_AILargeShipTemplate_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_AILargeShipTemplate_C::OnShipSurface_Client (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_AILargeShipTemplate" (
+  $13: literal int32 100
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_AILargeShipTemplate_C::OnShipSurface (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_AILargeShipTemplate" (
+  $13: literal int32 237
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_AILargeShipTemplate_C::OnShipDive_Client (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_AILargeShipTemplate" (
+  $13: literal int32 256
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_AILargeShipTemplate_C::OnShipDive (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_AILargeShipTemplate" (
+  $13: literal int32 357
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_AILargeShipTemplate_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_AILargeShipTemplate" (
+  $13: literal int32 376
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_AILargeShipTemplate_C::SetCursedCrewCustomisationProperties (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_SailData@0x213918fbb80
+  Expression:
+  $9: LocalOutVariable named SailData@0x213918fca00
+$18: VirtualFunction call "ExecuteUbergraph_BP_AILargeShipTemplate" (
+  $31: literal int32 381
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_AILargeShipTemplate_C::ExecuteUbergraph_BP_AILargeShipTemplate (389 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x2139c5b4910
+$10: VirtualFunction call "SetShipSkeleton" (
+  $23: EndFunctionParms
+)
+$24: Jump to offset 0x182
+$29: VirtualFunction call "OnRep_SailData" (
+  $42: EndFunctionParms
+)
+$43: Jump to offset 0x182
+$48: LetBool (Variable = Expression)
+  Variable:
+  $49: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue@0x213918fc280
+  Expression:
+  $58: FinalFunction target=FlushNetDormancy@0x212d6381090 (
+    $67: EndFunctionParms
+  )
+$68: Let (Variable = Expression)
+  Variable:
+  $77: InstanceVariable named SailData@0x213934b8300
+  Expression:
+  $86: LocalVariable named K2Node_Event_SailData@0x213918fbb80
+$95: Jump to offset 0x1d
+$100: Context
+  ObjectExpression:
+  $101: InstanceVariable named ShipSkeleton@0x213934b8400
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $122: VirtualFunction call "StartWetEffect" (
+    $135: EndFunctionParms
+  )
+$136: Let (Variable = Expression)
+  Variable:
+  $145: LocalVariable named CallFunc_WwiseEmitterComponentPostEvent_ReturnValue@0x2139c5b48a0
+  Expression:
+  $154: Context
+    ObjectExpression:
+    $155: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x212d7001550
+    SkipBytes: 0x38
+    RValueProperty: CallFunc_WwiseEmitterComponentPostEvent_ReturnValue@0x2139c5b48a0
+    ContextExpression:
+    $176: FinalFunction target=WwiseEmitterComponentPostEvent@0x212d6a1dca0 (
+      $185: InstanceVariable named audio_skeletonship_emerge_submerge@0x213918f6a00
+      $194: ObjectConst Play_sfx_boat_skeletonship_emerge@0x213ae34a230
+      $203: literal byte 2
+      $205: literal name "None"
+      $218: literal name "None"
+      $231: EndFunctionParms
+    )
+$232: Jump to offset 0x182
+$237: VirtualFunction call "OnShipSurface_Client" (
+  $250: EndFunctionParms
+)
+$251: Jump to offset 0x182
+$256: Let (Variable = Expression)
+  Variable:
+  $265: LocalVariable named CallFunc_WwiseEmitterComponentPostEvent_ReturnValue2@0x2139c5b4830
+  Expression:
+  $274: Context
+    ObjectExpression:
+    $275: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x212d7001550
+    SkipBytes: 0x38
+    RValueProperty: CallFunc_WwiseEmitterComponentPostEvent_ReturnValue2@0x2139c5b4830
+    ContextExpression:
+    $296: FinalFunction target=WwiseEmitterComponentPostEvent@0x212d6a1dca0 (
+      $305: InstanceVariable named audio_skeletonship_emerge_submerge@0x213918f6a00
+      $314: ObjectConst Play_sfx_boat_skeletonship_submerge@0x213ae34a0f0
+      $323: literal byte 2
+      $325: literal name "None"
+      $338: literal name "None"
+      $351: EndFunctionParms
+    )
+$352: Jump to offset 0x182
+$357: VirtualFunction call "OnShipDive_Client" (
+  $370: EndFunctionParms
+)
+$371: Jump to offset 0x182
+$376: Jump to offset 0xa
+$381: Jump to offset 0x30
+$386: Return expression:
+  $387: Nothing
+$388: EndOfScript

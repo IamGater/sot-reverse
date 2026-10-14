@@ -1,0 +1,138 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/AshenAge/Tale_1_TheAshenDragon/bp_theashendragon_closealterdoor -> BP_TheAshenDragon_CloseAlterDoor_C
+
+=== BP_TheAshenDragon_CloseAlterDoor_C::fn_idx_1698 (559 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue@0x19fcd2f6f80
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Conv_AssetToObject_ReturnValue@0x19fcd2f6f80
+    ContextExpression:
+    $32: FinalFunction target=Conv_AssetToObject@0x19e4cd86800 (
+      $41: LocalVariable named idx:281456@0x19fcd2f6e80
+      $50: EndFunctionParms
+    )
+$51: Let (Variable = Expression)
+  Variable:
+  $60: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19fcd2f7080
+  Expression:
+  $69: DynamicCast to Actor@0x19e261ddc80 of expr:
+  $78: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue@0x19fcd2f6f80
+$87: Let (Variable = Expression)
+  Variable:
+  $96: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x19fcd2f7100
+  Expression:
+  $105: PrimitiveCast type=71
+    Argument:
+    $107: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19fcd2f7080
+$116: LetObj (Variable = Expression)
+  Variable:
+  $117: LocalVariable named CallFunc_GetComponentInterfaceByClass_ReturnValue@0x19fcd2f7180
+  Expression:
+  $126: Context
+    ObjectExpression:
+    $127: LocalVariable named UniqueObjectNameForCooking_AsActor@0x19fcd2f7080
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetComponentInterfaceByClass_ReturnValue@0x19fcd2f7180
+    ContextExpression:
+    $148: FinalFunction target=GetComponentInterfaceByClass@0x19e4cd622c0 (
+      $157: ObjectConst MechanismTriggerInterface@0x19e4c70fc00
+      $166: EndFunctionParms
+    )
+$167: Let (Variable = Expression)
+  Variable:
+  $176: LocalVariable named idx:281381@0x19fcd2f7200
+  Expression:
+  $185: ObjToInterfaceCast to MechanismTriggerInterface@0x19e4c70fc00
+  $194: LocalVariable named CallFunc_GetComponentInterfaceByClass_ReturnValue@0x19fcd2f7180
+$203: Let (Variable = Expression)
+  Variable:
+  $212: LocalVariable named UniqueObjectNameForCooking_bSuccess2@0x19fcd2f7280
+  Expression:
+  $221: PrimitiveCast type=73
+    Argument:
+    $223: LocalVariable named idx:281381@0x19fcd2f7200
+$232: JumpIfNot -> 0x203, cond:
+  $237: LocalVariable named UniqueObjectNameForCooking_bSuccess2@0x19fcd2f7280
+$246: Let (Variable = Expression)
+  Variable:
+  $255: LocalVariable named CallFunc_GetTriggerState_ReturnValue@0x19fcd2f7400
+  Expression:
+  $264: Context
+    ObjectExpression:
+    $265: InterfaceContext:
+    $266: LocalVariable named idx:281381@0x19fcd2f7200
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetTriggerState_ReturnValue@0x19fcd2f7400
+    ContextExpression:
+    $287: VirtualFunction call "GetTriggerState" (
+      $300: EndFunctionParms
+    )
+$301: Let (Variable = Expression)
+  Variable:
+  $310: LocalVariable named Temp_byte_Variable@0x19fcd2f6f00
+  Expression:
+  $319: LocalVariable named CallFunc_GetTriggerState_ReturnValue@0x19fcd2f7400
+$328: LetBool (Variable = Expression)
+  Variable:
+  $329: LocalVariable named CallFunc_EqualEqual_ByteByte_ReturnValue@0x19fcd2f7000
+  Expression:
+  $338: CallMath target=EqualEqual_ByteByte@0x19e4d37a620 (
+    $347: LocalVariable named Temp_byte_Variable@0x19fcd2f6f00
+    $356: literal byte 0
+    $358: EndFunctionParms
+  )
+$359: JumpIfNot -> 0x1f4, cond:
+  $364: LocalVariable named CallFunc_EqualEqual_ByteByte_ReturnValue@0x19fcd2f7000
+$373: Let (Variable = Expression)
+  Variable:
+  $382: LocalVariable named idx:281382@0x19fcd2f7300
+  Expression:
+  $391: ObjToInterfaceCast to MechanismTriggerInterface@0x19e4c70fc00
+  $400: LocalVariable named CallFunc_GetComponentInterfaceByClass_ReturnValue@0x19fcd2f7180
+$409: Let (Variable = Expression)
+  Variable:
+  $418: LocalVariable named UniqueObjectNameForCooking_bSuccess3@0x19fcd2f7380
+  Expression:
+  $427: PrimitiveCast type=73
+    Argument:
+    $429: LocalVariable named idx:281382@0x19fcd2f7300
+$438: JumpIfNot -> 0x21c, cond:
+  $443: LocalVariable named UniqueObjectNameForCooking_bSuccess3@0x19fcd2f7380
+$452: LetBool (Variable = Expression)
+  Variable:
+  $453: LocalVariable named CallFunc_DeactivateTrigger_ReturnValue@0x19fcd2f7480
+  Expression:
+  $462: Context
+    ObjectExpression:
+    $463: InterfaceContext:
+    $464: LocalVariable named idx:281382@0x19fcd2f7300
+    SkipBytes: 0xf
+    RValueProperty: CallFunc_DeactivateTrigger_ReturnValue@0x19fcd2f7480
+    ContextExpression:
+    $485: VirtualFunction call "DeactivateTrigger" (
+      $498: NoObject
+      $499: EndFunctionParms
+    )
+$500: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $509: EndFunctionParms
+)
+$510: Jump to offset 0x22c
+$515: Let (Variable = Expression)
+  Variable:
+  $524: LocalVariable named Temp_byte_Variable@0x19fcd2f6f00
+  Expression:
+  $533: literal byte 0
+$535: Jump to offset 0x148
+$540: LetBool (Variable = Expression)
+  Variable:
+  $541: LocalVariable named CallFunc_DeactivateTrigger_ReturnValue@0x19fcd2f7480
+  Expression:
+  $550: False
+$551: Jump to offset 0x1f4
+$556: Return expression:
+  $557: Nothing
+$558: EndOfScript

@@ -1,0 +1,104 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/AshenAge/Tale_1_TheAshenDragon/bp_theashendragon_createplayer3rdtriggerproxy -> BP_TheAshenDragon_CreatePlayer3rdTriggerProxy_C
+
+=== BP_TheAshenDragon_CreatePlayer3rdTriggerProxy_C::fn_idx_1828 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=idx:281466@0x19fcd2f5080
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fcd2f5000
+$18: VirtualFunction call "idx:281498" (
+  $31: literal int32 102
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_TheAshenDragon_CreatePlayer3rdTriggerProxy_C::fn_idx_281498 (390 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fd18533a0
+$10: Context
+  ObjectExpression:
+  $11: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x41
+  RValueProperty: (null)
+  ContextExpression:
+  $32: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $41: NoObject
+    $42: literal ansi string "Cast Failed"
+    $55: True
+    $56: True
+    $57: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $70: literal float 0
+      $75: literal float 0.6600000262260437
+      $80: literal float 1
+      $85: literal float 1
+      $90: EndStructConst
+    $91: literal float 2
+    $96: EndFunctionParms
+  )
+$97: Jump to offset 0x183
+$102: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $111: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcd2f5100
+  $120: EndFunctionParms
+)
+$121: Let (Variable = Expression)
+  Variable:
+  $130: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19fcd2f5200
+  Expression:
+  $139: Context
+    ObjectExpression:
+    $140: StructMemberContext prop=idx:281471@0x19fcd2f6580
+      Expression to struct:
+      $149: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcd2f5100
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetTransform_ReturnValue@0x19fcd2f5200
+    ContextExpression:
+    $170: FinalFunction target=GetTransform@0x19e4cd64700 (
+      $179: EndFunctionParms
+    )
+$180: LetObj (Variable = Expression)
+  Variable:
+  $181: LocalVariable named idx:281491@0x19fcd2f5300
+  Expression:
+  $190: FinalFunction target=SpawnPhasedActor@0x19e4cda8ba0 (
+    $199: InstanceVariable named ProxyClass@0x19fcd2f5480
+    $208: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19fcd2f5200
+    $217: NoObject
+    $218: literal name "None"
+    $231: EndFunctionParms
+  )
+$232: Let (Variable = Expression)
+  Variable:
+  $241: LocalVariable named idx:281494@0x19fcd2f5380
+  Expression:
+  $250: DynamicCast to BP_TheAshenDragon_QuestParicipantTriggerVolume_C@0x19fcde06540 of expr:
+  $259: LocalVariable named idx:281491@0x19fcd2f5300
+$268: Let (Variable = Expression)
+  Variable:
+  $277: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcd2f5400
+  Expression:
+  $286: PrimitiveCast type=71
+    Argument:
+    $288: LocalVariable named idx:281494@0x19fcd2f5380
+$297: JumpIfNot -> 0xa, cond:
+  $302: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcd2f5400
+$311: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $320: LocalVariable named idx:281459@0x19fcd2f5280
+  $329: EndFunctionParms
+)
+$330: LetObj (Variable = Expression)
+  Variable:
+  $331: StructMemberContext prop=idx:281473@0x19fcd2f6600
+    Expression to struct:
+    $340: LocalVariable named idx:281459@0x19fcd2f5280
+  Expression:
+  $349: LocalVariable named idx:281494@0x19fcd2f5380
+$358: FinalFunction target=SetVariables@0x19e4cda7cc0 (
+  $367: LocalVariable named idx:281459@0x19fcd2f5280
+  $376: EndFunctionParms
+)
+$377: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $386: EndFunctionParms
+)
+$387: Return expression:
+  $388: Nothing
+$389: EndOfScript

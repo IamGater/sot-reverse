@@ -1,0 +1,160 @@
+// Class: WidgetComponent (8 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+WidgetComponent::GetDrawSize @ RVA 0x1F2C370 EA 0x7FF6F594C370
+======================================================================
+_QWORD *__fastcall sub_7FF6F594C370(__int64 a1, __int64 a2, _QWORD *a3)
+{
+  _QWORD *result; // rax
+  char v5; // [rsp+38h] [rbp+10h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (_QWORD *)sub_7FF6F5887970(a1, &v5);
+  *a3 = *result;
+  return result;
+}
+
+
+======================================================================
+WidgetComponent::GetMaxInteractionDistance @ RVA 0x1F2CE90 EA 0x7FF6F594CE90
+======================================================================
+void __fastcall sub_7FF6F594CE90(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F588A860();
+}
+
+
+======================================================================
+WidgetComponent::GetOwnerPlayer @ RVA 0x1F2D270 EA 0x7FF6F594D270
+======================================================================
+__int64 __fastcall sub_7FF6F594D270(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F588ACF0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+WidgetComponent::GetUserWidgetObject @ RVA 0x1F2D7F0 EA 0x7FF6F594D7F0
+======================================================================
+__int64 __fastcall sub_7FF6F594D7F0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F588D0B0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+WidgetComponent::SetDrawSize @ RVA 0x1F30B20 EA 0x7FF6F5950B20
+======================================================================
+__int64 __fastcall sub_7FF6F5950B20(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdx
+  __int64 v6; // [rsp+38h] [rbp+10h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  v4 = v6;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F58BFDB0(a1, v4);
+}
+
+
+======================================================================
+WidgetComponent::SetMaxInteractionDistance @ RVA 0x1F32480 EA 0x7FF6F5952480
+======================================================================
+__int64 __fastcall sub_7FF6F5952480(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F58C14F0(a1);
+}
+
+
+======================================================================
+WidgetComponent::SetOwnerPlayer @ RVA 0x1F32DC0 EA 0x7FF6F5952DC0
+======================================================================
+__int64 __fastcall sub_7FF6F5952DC0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F58C1D20(a1, v6);
+}
+
+
+======================================================================
+WidgetComponent::SetWidget @ RVA 0x1F35190 EA 0x7FF6F5955190
+======================================================================
+__int64 __fastcall sub_7FF6F5955190(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F58C3EB0(a1, v6);
+}
+

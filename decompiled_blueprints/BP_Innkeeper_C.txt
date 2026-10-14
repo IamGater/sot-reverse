@@ -1,0 +1,179 @@
+// /Game/Blueprints/GameObjects/TallTales/NPC/bp_innkeeper_tallulah_phased -> BP_Innkeeper_C
+
+=== BP_Innkeeper_C::GetClosestInteractionPoint (111 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_GetBoxWorldOrigin_ReturnValue@0x19f8d167780
+  Expression:
+  $18: Context
+    ObjectExpression:
+    $19: InstanceVariable named InteractionRegion@0x19e4d157360
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetBoxWorldOrigin_ReturnValue@0x19f8d167780
+    ContextExpression:
+    $40: FinalFunction target=GetBoxWorldOrigin@0x19e4d12e300 (
+      $49: EndFunctionParms
+    )
+$50: Let (Variable = Expression)
+  Variable:
+  $59: LocalOutVariable named OutInteractionPointRadius@0x19f71821650
+  Expression:
+  $68: literal float 0
+$73: Let (Variable = Expression)
+  Variable:
+  $82: LocalOutVariable named ReturnValue@0x19f8d167700
+  Expression:
+  $91: LocalVariable named CallFunc_GetBoxWorldOrigin_ReturnValue@0x19f8d167780
+$100: Return expression:
+  $101: LocalOutVariable named ReturnValue@0x19f8d167700
+$110: EndOfScript
+
+=== BP_Innkeeper_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_Innkeeper_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Innkeeper" (
+  $13: literal int32 537
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Innkeeper_C::ReceiveEndPlay (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_EndPlayReason@0x19f8d167980
+  Expression:
+  $9: LocalVariable named EndPlayReason@0x19f8d167800
+$18: VirtualFunction call "ExecuteUbergraph_BP_Innkeeper" (
+  $31: literal int32 371
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Innkeeper_C::fn_idx_244624 (545 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19f71821960
+$10: LetBool (Variable = Expression)
+  Variable:
+  $11: LocalVariable named CallFunc_WwiseCreateEmitter_ReturnValue@0x19f8d167900
+  Expression:
+  $20: Context
+    ObjectExpression:
+    $21: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x19e4d9e1550
+    SkipBytes: 0x2f
+    RValueProperty: CallFunc_WwiseCreateEmitter_ReturnValue@0x19f8d167900
+    ContextExpression:
+    $42: FinalFunction target=WwiseCreateEmitter@0x19e4d3fd8f0 (
+      $51: LocalVariable named CallFunc_WwiseCreateEmitter_Emitter@0x19f8d167880
+      $60: literal name "InnkeeperAudioEmitter"
+      $73: Self
+      $74: NoObject
+      $75: literal vector (0,0,0)
+      $88: EndFunctionParms
+    )
+$89: Let (Variable = Expression)
+  Variable:
+  $98: InstanceVariable named InnkeeperEmitter@0x19f8d169680
+  Expression:
+  $107: LocalVariable named CallFunc_WwiseCreateEmitter_Emitter@0x19f8d167880
+$116: LetBool (Variable = Expression)
+  Variable:
+  $117: LocalVariable named CallFunc_IsValid_ReturnValue@0x19f8d167a00
+  Expression:
+  $126: Context
+    ObjectExpression:
+    $127: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19f8d167a00
+    ContextExpression:
+    $148: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $157: InstanceVariable named SFX_IdleLoopPlay@0x19f8d167f80
+      $166: EndFunctionParms
+    )
+$167: LetBool (Variable = Expression)
+  Variable:
+  $168: LocalVariable named CallFunc_IsValid_ReturnValue2@0x19f8d167a80
+  Expression:
+  $177: Context
+    ObjectExpression:
+    $178: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue2@0x19f8d167a80
+    ContextExpression:
+    $199: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $208: InstanceVariable named SFX_IdleLoopStop@0x19f8d168000
+      $217: EndFunctionParms
+    )
+$218: LetBool (Variable = Expression)
+  Variable:
+  $219: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x19f8d167b00
+  Expression:
+  $228: CallMath target=BooleanAND@0x19e4d3710f0 (
+    $237: LocalVariable named CallFunc_IsValid_ReturnValue@0x19f8d167a00
+    $246: LocalVariable named CallFunc_IsValid_ReturnValue2@0x19f8d167a80
+    $255: EndFunctionParms
+  )
+$256: JumpIfNot -> 0x21e, cond:
+  $261: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x19f8d167b00
+$270: Let (Variable = Expression)
+  Variable:
+  $279: LocalVariable named CallFunc_WwiseEmitterPostEvent_ReturnValue2@0x19f71823090
+  Expression:
+  $288: Context
+    ObjectExpression:
+    $289: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x19e4d9e1550
+    SkipBytes: 0x38
+    RValueProperty: CallFunc_WwiseEmitterPostEvent_ReturnValue2@0x19f71823090
+    ContextExpression:
+    $310: FinalFunction target=WwiseEmitterPostEvent@0x19e4d3ff260 (
+      $319: InstanceVariable named InnkeeperEmitter@0x19f8d169680
+      $328: InstanceVariable named SFX_IdleLoopPlay@0x19f8d167f80
+      $337: literal byte 2
+      $339: literal name "None"
+      $352: literal name "None"
+      $365: EndFunctionParms
+    )
+$366: Jump to offset 0x21e
+$371: LetBool (Variable = Expression)
+  Variable:
+  $372: LocalVariable named CallFunc_IsValid_ReturnValue3@0x19f8d167b80
+  Expression:
+  $381: Context
+    ObjectExpression:
+    $382: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue3@0x19f8d167b80
+    ContextExpression:
+    $403: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $412: InstanceVariable named SFX_IdleLoopStop@0x19f8d168000
+      $421: EndFunctionParms
+    )
+$422: JumpIfNot -> 0x21e, cond:
+  $427: LocalVariable named CallFunc_IsValid_ReturnValue3@0x19f8d167b80
+$436: Let (Variable = Expression)
+  Variable:
+  $445: LocalVariable named CallFunc_WwiseEmitterPostEvent_ReturnValue@0x19f71820310
+  Expression:
+  $454: Context
+    ObjectExpression:
+    $455: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x19e4d9e1550
+    SkipBytes: 0x38
+    RValueProperty: CallFunc_WwiseEmitterPostEvent_ReturnValue@0x19f71820310
+    ContextExpression:
+    $476: FinalFunction target=WwiseEmitterPostEvent@0x19e4d3ff260 (
+      $485: InstanceVariable named InnkeeperEmitter@0x19f8d169680
+      $494: InstanceVariable named SFX_IdleLoopStop@0x19f8d168000
+      $503: literal byte 2
+      $505: literal name "None"
+      $518: literal name "None"
+      $531: EndFunctionParms
+    )
+$532: Jump to offset 0x21e
+$537: Jump to offset 0xa
+$542: Return expression:
+  $543: Nothing
+$544: EndOfScript

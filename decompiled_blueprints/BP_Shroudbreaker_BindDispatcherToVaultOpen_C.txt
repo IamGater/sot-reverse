@@ -1,0 +1,310 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_1_Shroudbreaker/bp_shroudbreaker_binddispatchertovaultopen -> BP_Shroudbreaker_BindDispatcherToVaultOpen_C
+
+=== BP_Shroudbreaker_BindDispatcherToVaultOpen_C::fn_idx_282658 (132 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x19fce6e2d00
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__GameplayStatics@0x19e4d95eb20
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetObjectClass_ReturnValue@0x19fce6e2d00
+    ContextExpression:
+    $32: FinalFunction target=GetObjectClass@0x19e4d35dd20 (
+      $41: Self
+      $42: EndFunctionParms
+    )
+$43: Let (Variable = Expression)
+  Variable:
+  $52: LocalVariable named CallFunc_GetClassDisplayName_ReturnValue@0x19fcdbb2d10
+  Expression:
+  $61: Context
+    ObjectExpression:
+    $62: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetClassDisplayName_ReturnValue@0x19fcdbb2d10
+    ContextExpression:
+    $83: FinalFunction target=GetClassDisplayName@0x19e4cd8bf90 (
+      $92: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x19fce6e2d00
+      $101: EndFunctionParms
+    )
+$102: Let (Variable = Expression)
+  Variable:
+  $111: LocalOutVariable named Name@0x19fcdbb2ca0
+  Expression:
+  $120: LocalVariable named CallFunc_GetClassDisplayName_ReturnValue@0x19fcdbb2d10
+$129: Return expression:
+  $130: Nothing
+$131: EndOfScript
+
+=== BP_Shroudbreaker_BindDispatcherToVaultOpen_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fce6e3380
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fce6e2d80
+$18: VirtualFunction call "idx:283413" (
+  $31: literal int32 1195
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Shroudbreaker_BindDispatcherToVaultOpen_C::fn_idx_283413 (1203 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fcdbb2d80
+$10: VirtualFunction call "GetStepName" (
+  $23: LocalVariable named CallFunc_GetStepName_Name@0x19fcdbb2df0
+  $32: EndFunctionParms
+)
+$33: Let (Variable = Expression)
+  Variable:
+  $42: LocalVariable named CallFunc_Concat_StrStr_ReturnValue@0x19fcdbb3aa0
+  Expression:
+  $51: Context
+    ObjectExpression:
+    $52: ObjectConst Default__KismetStringLibrary@0x19e4d95ecd0
+    SkipBytes: 0x44
+    RValueProperty: CallFunc_Concat_StrStr_ReturnValue@0x19fcdbb3aa0
+    ContextExpression:
+    $73: FinalFunction target=Concat_StrStr@0x19e4d3a1520 (
+      $82: literal ansi string "Failed to cast Vault Ref to BP_PuzzleVault in: "
+      $131: LocalVariable named CallFunc_GetStepName_Name@0x19fcdbb2df0
+      $140: EndFunctionParms
+    )
+$141: Context
+  ObjectExpression:
+  $142: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x3d
+  RValueProperty: (null)
+  ContextExpression:
+  $163: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $172: NoObject
+    $173: LocalVariable named CallFunc_Concat_StrStr_ReturnValue@0x19fcdbb3aa0
+    $182: True
+    $183: True
+    $184: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $197: literal float 1
+      $202: literal float 0
+      $207: literal float 0.02150299958884716
+      $212: literal float 1
+      $217: EndStructConst
+    $218: literal float 10
+    $223: EndFunctionParms
+  )
+$224: Jump to offset 0x4b0
+$229: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $238: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce6e2e80
+  $247: EndFunctionParms
+)
+$248: Let (Variable = Expression)
+  Variable:
+  $257: LocalVariable named K2Node_DynamicCast_AsBP_Puzzle_Vault@0x19fce6e2f00
+  Expression:
+  $266: DynamicCast to BP_PuzzleVault_C@0x19fb97dad40 of expr:
+  $275: StructMemberContext prop=idx:283383@0x19fce6e4780
+    Expression to struct:
+    $284: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce6e2e80
+$293: Let (Variable = Expression)
+  Variable:
+  $302: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fce6e2f80
+  Expression:
+  $311: PrimitiveCast type=71
+    Argument:
+    $313: LocalVariable named K2Node_DynamicCast_AsBP_Puzzle_Vault@0x19fce6e2f00
+$322: JumpIfNot -> 0xa, cond:
+  $327: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fce6e2f80
+$336: Let (Variable = Expression)
+  Variable:
+  $345: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fce6e3480
+  Expression:
+  $354: Context
+    ObjectExpression:
+    $355: Context
+      ObjectExpression:
+      $356: LocalVariable named K2Node_DynamicCast_AsBP_Puzzle_Vault@0x19fce6e2f00
+      SkipBytes: 0x9
+      RValueProperty: OuterDoor@0x19e4d21a820
+      ContextExpression:
+      $377: InstanceVariable named OuterDoor@0x19e4d21a820
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetComponentsByClass_ReturnValue@0x19fce6e3480
+    ContextExpression:
+    $398: FinalFunction target=GetComponentsByClass@0x19e4cd626c0 (
+      $407: ObjectConst LockComponent@0x19e4c409bc0
+      $416: EndFunctionParms
+    )
+$417: Let (Variable = Expression)
+  Variable:
+  $426: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fcdbb2ed0
+  Expression:
+  $435: Context
+    ObjectExpression:
+    $436: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19fcdbb2ed0
+    ContextExpression:
+    $457: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $466: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fce6e3480
+      $475: EndFunctionParms
+    )
+$476: LetBool (Variable = Expression)
+  Variable:
+  $477: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fce6e3300
+  Expression:
+  $486: CallMath target=Greater_IntInt@0x19e4d382770 (
+    $495: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fcdbb2ed0
+    $504: literal int32 0
+    $509: EndFunctionParms
+  )
+$510: JumpIfNot -> 0x4b0, cond:
+  $515: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fce6e3300
+$524: Let (Variable = Expression)
+  Variable:
+  $533: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19fce6e3080
+  Expression:
+  $542: Context
+    ObjectExpression:
+    $543: Context
+      ObjectExpression:
+      $544: LocalVariable named K2Node_DynamicCast_AsBP_Puzzle_Vault@0x19fce6e2f00
+      SkipBytes: 0x9
+      RValueProperty: OuterDoor@0x19e4d21a820
+      ContextExpression:
+      $565: InstanceVariable named OuterDoor@0x19e4d21a820
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetTransform_ReturnValue@0x19fce6e3080
+    ContextExpression:
+    $586: FinalFunction target=GetTransform@0x19e4cd64700 (
+      $595: EndFunctionParms
+    )
+$596: LetObj (Variable = Expression)
+  Variable:
+  $597: LocalVariable named CallFunc_SpawnActor_ReturnValue@0x19fce6e3100
+  Expression:
+  $606: FinalFunction target=SpawnActor@0x19e4cda7ec0 (
+    $615: InstanceVariable named idx:283412@0x19fce6e3500
+    $624: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19fce6e3080
+    $633: False
+    $634: EndFunctionParms
+  )
+$635: Let (Variable = Expression)
+  Variable:
+  $644: LocalVariable named idx:283414@0x19fce6e3200
+  Expression:
+  $653: DynamicCast to BP_TaleLockDelegateTrackerProxy_C@0x19fcde00480 of expr:
+  $662: LocalVariable named CallFunc_SpawnActor_ReturnValue@0x19fce6e3100
+$671: Let (Variable = Expression)
+  Variable:
+  $680: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fce6e3280
+  Expression:
+  $689: PrimitiveCast type=71
+    Argument:
+    $691: LocalVariable named idx:283414@0x19fce6e3200
+$700: JumpIfNot -> 0x3d0, cond:
+  $705: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fce6e3280
+$714: Let (Variable = Expression)
+  Variable:
+  $723: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fce6e3480
+  Expression:
+  $732: Context
+    ObjectExpression:
+    $733: Context
+      ObjectExpression:
+      $734: LocalVariable named K2Node_DynamicCast_AsBP_Puzzle_Vault@0x19fce6e2f00
+      SkipBytes: 0x9
+      RValueProperty: OuterDoor@0x19e4d21a820
+      ContextExpression:
+      $755: InstanceVariable named OuterDoor@0x19e4d21a820
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetComponentsByClass_ReturnValue@0x19fce6e3480
+    ContextExpression:
+    $776: FinalFunction target=GetComponentsByClass@0x19e4cd626c0 (
+      $785: ObjectConst LockComponent@0x19e4c409bc0
+      $794: EndFunctionParms
+    )
+$795: Context
+  ObjectExpression:
+  $796: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $817: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $826: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fce6e3480
+    $835: literal int32 0
+    $840: LocalVariable named CallFunc_Array_Get_Item@0x19fce6e3180
+    $849: EndFunctionParms
+  )
+$850: Context
+  ObjectExpression:
+  $851: LocalVariable named idx:283414@0x19fce6e3200
+  SkipBytes: 0x17
+  RValueProperty: (null)
+  ContextExpression:
+  $872: VirtualFunction call "Initialise" (
+    $885: LocalVariable named CallFunc_Array_Get_Item@0x19fce6e3180
+    $894: EndFunctionParms
+  )
+$895: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $904: LocalVariable named CallFunc_GetVariables_OutStruct2@0x19fce6e3000
+  $913: EndFunctionParms
+)
+$914: LetObj (Variable = Expression)
+  Variable:
+  $915: StructMemberContext prop=TrackedActor_2_2551955D4ACD2662E427BBBC1A1BC844@0x19fcda41800
+    Expression to struct:
+    $924: LocalVariable named CallFunc_GetVariables_OutStruct2@0x19fce6e3000
+  Expression:
+  $933: LocalVariable named idx:283414@0x19fce6e3200
+$942: FinalFunction target=SetVariables@0x19e4cda7cc0 (
+  $951: LocalVariable named CallFunc_GetVariables_OutStruct2@0x19fce6e3000
+  $960: EndFunctionParms
+)
+$961: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $970: EndFunctionParms
+)
+$971: Jump to offset 0x4b0
+$976: VirtualFunction call "GetStepName" (
+  $989: LocalVariable named idx:283410@0x19fcdbb2e60
+  $998: EndFunctionParms
+)
+$999: Let (Variable = Expression)
+  Variable:
+  $1008: LocalVariable named CallFunc_Concat_StrStr_ReturnValue2@0x19fcdbb3100
+  Expression:
+  $1017: Context
+    ObjectExpression:
+    $1018: ObjectConst Default__KismetStringLibrary@0x19e4d95ecd0
+    SkipBytes: 0x44
+    RValueProperty: CallFunc_Concat_StrStr_ReturnValue2@0x19fcdbb3100
+    ContextExpression:
+    $1039: FinalFunction target=Concat_StrStr@0x19e4d3a1520 (
+      $1048: literal ansi string "Cast to BP_TaleEventDispatcherProxy failed in: "
+      $1097: LocalVariable named idx:283410@0x19fcdbb2e60
+      $1106: EndFunctionParms
+    )
+$1107: Context
+  ObjectExpression:
+  $1108: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x3d
+  RValueProperty: (null)
+  ContextExpression:
+  $1129: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $1138: NoObject
+    $1139: LocalVariable named CallFunc_Concat_StrStr_ReturnValue2@0x19fcdbb3100
+    $1148: True
+    $1149: True
+    $1150: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $1163: literal float 1
+      $1168: literal float 0.023005999624729156
+      $1173: literal float 0
+      $1178: literal float 1
+      $1183: EndStructConst
+    $1184: literal float 10
+    $1189: EndFunctionParms
+  )
+$1190: Jump to offset 0x4b0
+$1195: Jump to offset 0xe5
+$1200: Return expression:
+  $1201: Nothing
+$1202: EndOfScript

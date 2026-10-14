@@ -1,0 +1,348 @@
+// /Game/Blueprints/TallTales/Actors/MaidenVoyage/bp_maidenvoyage_skeletontree -> BP_MaidenVoyage_SkeletonTree_C
+
+=== BP_MaidenVoyage_SkeletonTree_C::fn_idx_9202 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_MaidenVoyage_SkeletonTree_C::fn_idx_9152 (22 bytes) ===
+$0: VirtualFunction call "idx:279332" (
+  $13: literal int32 235
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_MaidenVoyage_SkeletonTree_C::fn_idx_1731 (22 bytes) ===
+$0: VirtualFunction call "idx:279332" (
+  $13: literal int32 35
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_MaidenVoyage_SkeletonTree_C::fn_idx_1702 (22 bytes) ===
+$0: VirtualFunction call "idx:279332" (
+  $13: literal int32 124
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_MaidenVoyage_SkeletonTree_C::fn_idx_9159 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_EndPlayReason@0x19fd0741080
+  Expression:
+  $9: LocalVariable named EndPlayReason@0x19fd0740e80
+$18: VirtualFunction call "idx:279332" (
+  $31: literal int32 430
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_MaidenVoyage_SkeletonTree_C::fn_idx_153615 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=idx:279335@0x19fd0741100
+  Expression:
+  $9: LocalOutVariable named ImpactDamageEvent@0x19fd0740f00
+$18: VirtualFunction call "idx:279332" (
+  $31: literal int32 495
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_MaidenVoyage_SkeletonTree_C::fn_idx_1914 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=idx:279336@0x19fd0741180
+  Expression:
+  $9: LocalVariable named FirstPersonAnimInstance@0x19fd0740f80
+$18: VirtualFunction call "idx:279332" (
+  $31: literal int32 783
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_MaidenVoyage_SkeletonTree_C::fn_idx_279322 (22 bytes) ===
+$0: VirtualFunction call "idx:279332" (
+  $13: literal int32 978
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_MaidenVoyage_SkeletonTree_C::fn_idx_279320 (22 bytes) ===
+$0: VirtualFunction call "idx:279332" (
+  $13: literal int32 993
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_MaidenVoyage_SkeletonTree_C::fn_idx_279332 (1047 bytes) ===
+$0: FlowStack.Push(0x414)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x19fcde41500
+$15: VirtualFunction call "K2_DestroyActor" (
+  $28: EndFunctionParms
+)
+$29: PopExecutionFlow (jump to popped addr)
+$30: Jump to offset 0xf
+$35: Context
+  ObjectExpression:
+  $36: InstanceVariable named Cutlass@0x19fd0741800
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $57: VirtualFunction call "SetVisibility" (
+    $70: False
+    $71: False
+    $72: EndFunctionParms
+  )
+$73: Context
+  ObjectExpression:
+  $74: InstanceVariable named idx:279333@0x19fd0741980
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $95: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $104: literal name "TurnedOn"
+    $117: literal float 0
+    $122: EndFunctionParms
+  )
+$123: PopExecutionFlow (jump to popped addr)
+$124: LetObj (Variable = Expression)
+  Variable:
+  $125: LocalVariable named CallFunc_GetAnimInstance_ReturnValue@0x19fd0741000
+  Expression:
+  $134: Context
+    ObjectExpression:
+    $135: InstanceVariable named SkeletalMeshComponent@0x19e4d1777c0
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetAnimInstance_ReturnValue@0x19fd0741000
+    ContextExpression:
+    $156: VirtualFunction call "GetAnimInstance" (
+      $169: EndFunctionParms
+    )
+$170: Let (Variable = Expression)
+  Variable:
+  $179: LocalVariable named CallFunc_Montage_Play_ReturnValue@0x19fcde415e0
+  Expression:
+  $188: Context
+    ObjectExpression:
+    $189: LocalVariable named CallFunc_GetAnimInstance_ReturnValue@0x19fd0741000
+    SkipBytes: 0x18
+    RValueProperty: CallFunc_Montage_Play_ReturnValue@0x19fcde415e0
+    ContextExpression:
+    $210: FinalFunction target=Montage_Play@0x19e4d08f650 (
+      $219: InstanceVariable named DockableAnimToPlay@0x19e4d177840
+      $228: literal float 1
+      $233: EndFunctionParms
+    )
+$234: PopExecutionFlow (jump to popped addr)
+$235: BindDelegate 'OnApplyDamage'
+  Delegate:
+  $248: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fd0741500
+  Object:
+  $257: Self
+$258: AddMulticastDelegate
+$259: Context
+  ObjectExpression:
+  $260: InstanceVariable named Damageable@0x19fd0741780
+  SkipBytes: 0x9
+  RValueProperty: OnApplyDamage@0x19e4d12b560
+  ContextExpression:
+  $281: InstanceVariable named OnApplyDamage@0x19e4d12b560
+$290: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fd0741500
+$299: LetObj (Variable = Expression)
+  Variable:
+  $300: LocalVariable named CallFunc_GetMaterial_ReturnValue@0x19fd0741380
+  Expression:
+  $309: Context
+    ObjectExpression:
+    $310: InstanceVariable named Glint@0x19fd0741680
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetMaterial_ReturnValue@0x19fd0741380
+    ContextExpression:
+    $331: VirtualFunction call "GetMaterial" (
+      $344: literal int32 0
+      $349: EndFunctionParms
+    )
+$350: LetObj (Variable = Expression)
+  Variable:
+  $351: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19fd0741400
+  Expression:
+  $360: Context
+    ObjectExpression:
+    $361: InstanceVariable named Glint@0x19fd0741680
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19fd0741400
+    ContextExpression:
+    $382: VirtualFunction call "CreateDynamicMaterialInstance" (
+      $395: literal int32 0
+      $400: LocalVariable named CallFunc_GetMaterial_ReturnValue@0x19fd0741380
+      $409: EndFunctionParms
+    )
+$410: LetObj (Variable = Expression)
+  Variable:
+  $411: InstanceVariable named idx:279333@0x19fd0741980
+  Expression:
+  $420: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19fd0741400
+$429: PopExecutionFlow (jump to popped addr)
+$430: BindDelegate 'OnApplyDamage'
+  Delegate:
+  $443: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fd0741500
+  Object:
+  $452: Self
+$453: RemoveMulticastDelegate
+$454: Context
+  ObjectExpression:
+  $455: InstanceVariable named Damageable@0x19fd0741780
+  SkipBytes: 0x9
+  RValueProperty: OnApplyDamage@0x19e4d12b560
+  ContextExpression:
+  $476: InstanceVariable named OnApplyDamage@0x19e4d12b560
+$485: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fd0741500
+$494: PopExecutionFlow (jump to popped addr)
+$495: Let (Variable = Expression)
+  Variable:
+  $504: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19fcde41650
+  Expression:
+  $513: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $522: InstanceVariable named NumHits@0x19fcde416c0
+    $531: literal int32 1
+    $536: EndFunctionParms
+  )
+$537: Let (Variable = Expression)
+  Variable:
+  $546: InstanceVariable named NumHits@0x19fcde416c0
+  Expression:
+  $555: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19fcde41650
+$564: LetBool (Variable = Expression)
+  Variable:
+  $565: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fd0741480
+  Expression:
+  $574: CallMath target=Greater_IntInt@0x19e4d382770 (
+    $583: InstanceVariable named NumHits@0x19fcde416c0
+    $592: literal int32 2
+    $597: EndFunctionParms
+  )
+$598: PopExecutionFlowIfNot, cond:
+$599: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fd0741480
+$608: CallMulticastDelegate target=BroadcastDamage__DelegateSignature@0x19fd0bceac0 delegate:
+  $617: InstanceVariable named BroadcastDamage@0x19fd0741900
+  Params:
+  $626: EndFunctionParms
+$627: VirtualFunction call "SetActorHiddenInGame" (
+  $640: True
+  $641: EndFunctionParms
+)
+$642: BindDelegate 'OnApplyDamage'
+  Delegate:
+  $655: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fd0741500
+  Object:
+  $664: Self
+$665: RemoveMulticastDelegate
+$666: Context
+  ObjectExpression:
+  $667: InstanceVariable named Damageable@0x19fd0741780
+  SkipBytes: 0x9
+  RValueProperty: OnApplyDamage@0x19e4d12b560
+  ContextExpression:
+  $688: InstanceVariable named OnApplyDamage@0x19e4d12b560
+$697: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fd0741500
+$706: Context
+  ObjectExpression:
+  $707: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $728: FinalFunction target=Delay@0x19e4cd86d40 (
+    $737: Self
+    $738: literal float 2
+    $743: literal struct LatentActionInfo@0x19e4cd86e80 (size 32)
+      $756: literal CodeSkipSizeType 0x1e
+      $761: literal int32 1
+      $766: literal name "idx:279332"
+      $779: Self
+      $780: EndStructConst
+    $781: EndFunctionParms
+  )
+$782: PopExecutionFlow (jump to popped addr)
+$783: Let (Variable = Expression)
+  Variable:
+  $792: LocalVariable named idx:279338@0x19fd0741200
+  Expression:
+  $801: ObjToInterfaceCast to PlayerGenderInterface_C@0x19f57abccc0
+  $810: LocalVariable named idx:279336@0x19fd0741180
+$819: Let (Variable = Expression)
+  Variable:
+  $828: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x19fd0741280
+  Expression:
+  $837: PrimitiveCast type=73
+    Argument:
+    $839: LocalVariable named idx:279338@0x19fd0741200
+$848: JumpIfNot -> 0x3ae, cond:
+  $853: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x19fd0741280
+$862: Context
+  ObjectExpression:
+  $863: InterfaceContext:
+  $864: LocalVariable named idx:279338@0x19fd0741200
+  SkipBytes: 0x17
+  RValueProperty: (null)
+  ContextExpression:
+  $885: VirtualFunction call "CheckIsFemale" (
+    $898: LocalVariable named idx:279324@0x19fd0741300
+    $907: EndFunctionParms
+  )
+$908: JumpIfNot -> 0x3be, cond:
+  $913: LocalVariable named idx:279324@0x19fd0741300
+$922: LetObj (Variable = Expression)
+  Variable:
+  $923: InstanceVariable named FirstPersonAnimToPlay@0x19e4d1778c0
+  Expression:
+  $932: ObjectConst idx:279328@0x19fd0630000
+$941: PopExecutionFlow (jump to popped addr)
+$942: LetBool (Variable = Expression)
+  Variable:
+  $943: LocalVariable named idx:279324@0x19fd0741300
+  Expression:
+  $952: False
+$953: Jump to offset 0x38c
+$958: LetObj (Variable = Expression)
+  Variable:
+  $959: InstanceVariable named FirstPersonAnimToPlay@0x19e4d1778c0
+  Expression:
+  $968: ObjectConst cutscene_onboarding_maidenvoyage_equipsword_male@0x19fd114f900
+$977: PopExecutionFlow (jump to popped addr)
+$978: VirtualFunction call "idx:279320" (
+  $991: EndFunctionParms
+)
+$992: PopExecutionFlow (jump to popped addr)
+$993: Context
+  ObjectExpression:
+  $994: InstanceVariable named idx:279333@0x19fd0741980
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $1015: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $1024: literal name "TurnedOn"
+    $1037: literal float 1
+    $1042: EndFunctionParms
+  )
+$1043: PopExecutionFlow (jump to popped addr)
+$1044: Return expression:
+  $1045: Nothing
+$1046: EndOfScript
+
+=== BP_MaidenVoyage_SkeletonTree_C::fn_idx_275125 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript

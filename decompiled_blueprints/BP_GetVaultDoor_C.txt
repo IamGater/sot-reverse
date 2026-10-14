@@ -1,0 +1,123 @@
+// /Game/Tests/Blueprints/TallTales/BlueprintSteps/bp_getvaultdoor -> BP_GetVaultDoor_C
+
+=== BP_GetVaultDoor_C::OnBeginCustom (123 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named K2Node_DynamicCast_AsPuzzle_Vault@0x19fd11e5c80
+  Expression:
+  $18: DynamicCast to PuzzleVault@0x19e4c4378c0 of expr:
+  $27: LocalVariable named Vault@0x19fd11e5b80
+$36: Let (Variable = Expression)
+  Variable:
+  $45: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fd11e5d00
+  Expression:
+  $54: PrimitiveCast type=71
+    Argument:
+    $56: LocalVariable named K2Node_DynamicCast_AsPuzzle_Vault@0x19fd11e5c80
+$65: JumpIfNot -> 0x4f, cond:
+  $70: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fd11e5d00
+$79: LetObj (Variable = Expression)
+  Variable:
+  $80: LocalOutVariable named VaultDoor@0x19fd11e5c00
+  Expression:
+  $89: Context
+    ObjectExpression:
+    $90: LocalVariable named K2Node_DynamicCast_AsPuzzle_Vault@0x19fd11e5c80
+    SkipBytes: 0x9
+    RValueProperty: OuterDoor@0x19e4d21a820
+    ContextExpression:
+    $111: InstanceVariable named OuterDoor@0x19e4d21a820
+$120: Return expression:
+  $121: Nothing
+$122: EndOfScript
+
+=== BP_GetVaultDoor_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fd11e5e00
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fd11e5d80
+$18: VirtualFunction call "idx:286136" (
+  $31: literal int32 25
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_GetVaultDoor_C::fn_idx_286136 (331 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fceae0d20
+$10: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $19: EndFunctionParms
+)
+$20: Jump to offset 0x148
+$25: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $34: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fd11e5e80
+  $43: EndFunctionParms
+)
+$44: LetObj (Variable = Expression)
+  Variable:
+  $45: LocalVariable named CallFunc_GetService_ReturnValue@0x19fd11e5f00
+  Expression:
+  $54: FinalFunction target=GetService@0x19e4cda5b60 (
+    $63: ObjectConst (null)
+    $72: EndFunctionParms
+  )
+$73: Let (Variable = Expression)
+  Variable:
+  $82: LocalVariable named idx:286073@0x19fd11e5f80
+  Expression:
+  $91: DynamicCast to (null) of expr:
+  $100: LocalVariable named CallFunc_GetService_ReturnValue@0x19fd11e5f00
+$109: Let (Variable = Expression)
+  Variable:
+  $118: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fd11e6000
+  Expression:
+  $127: PrimitiveCast type=71
+    Argument:
+    $129: LocalVariable named idx:286073@0x19fd11e5f80
+$138: JumpIfNot -> 0x148, cond:
+  $143: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fd11e6000
+$152: LetObj (Variable = Expression)
+  Variable:
+  $153: LocalVariable named idx:286069@0x19fd11e6180
+  Expression:
+  $162: Context
+    ObjectExpression:
+    $163: LocalVariable named idx:286073@0x19fd11e5f80
+    SkipBytes: 0xa
+    RValueProperty: idx:286069@0x19fd11e6180
+    ContextExpression:
+    $184: FinalFunction target=(null) (
+      $193: EndFunctionParms
+    )
+$194: Let (Variable = Expression)
+  Variable:
+  $203: LocalVariable named idx:286122@0x19fd11e6080
+  Expression:
+  $212: DynamicCast to InteractableObject@0x19e4be832c0 of expr:
+  $221: StructMemberContext prop=idx:286137@0x19fd11e6500
+    Expression to struct:
+    $230: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fd11e5e80
+$239: Let (Variable = Expression)
+  Variable:
+  $248: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fd11e6100
+  Expression:
+  $257: PrimitiveCast type=71
+    Argument:
+    $259: LocalVariable named idx:286122@0x19fd11e6080
+$268: JumpIfNot -> 0x148, cond:
+  $273: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fd11e6100
+$282: Context
+  ObjectExpression:
+  $283: LocalVariable named idx:286122@0x19fd11e6080
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $304: FinalFunction target=ServerInteract@0x19e4d089e30 (
+    $313: LocalVariable named idx:286069@0x19fd11e6180
+    $322: EndFunctionParms
+  )
+$323: Jump to offset 0xa
+$328: Return expression:
+  $329: Nothing
+$330: EndOfScript

@@ -1,0 +1,171 @@
+// /Game/Blueprints/GameObjects/Mechanisms/Actions/TallTales/HeartOfFire/bp_heartoffire_firepuzzle_beacon -> BP_HeartOfFire_FirePuzzle_Beacon_C
+
+=== BP_HeartOfFire_FirePuzzle_Beacon_C::fn_idx_11273 (86 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalOutVariable named ReturnValue@0x19f877d50f0
+  Expression:
+  $18: literal text (not decoded)
+$19: literal ansi string "Torch"
+$26: literal ansi string "F2D8AA4D4929082B710BDEA939BC15CB_ReturnValue1"
+$73: literal ansi string ""
+$75: Return expression:
+  $76: LocalOutVariable named ReturnValue@0x19f877d50f0
+$85: EndOfScript
+
+=== BP_HeartOfFire_FirePuzzle_Beacon_C::fn_idx_9202 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_HeartOfFire_FirePuzzle_Beacon_C::fn_idx_1954 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InInstigator@0x19f8037b280
+  Expression:
+  $9: LocalVariable named InInstigator@0x19f8037b000
+$18: VirtualFunction call "idx:241871" (
+  $31: literal int32 68
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_HeartOfFire_FirePuzzle_Beacon_C::fn_idx_9152 (22 bytes) ===
+$0: VirtualFunction call "idx:241871" (
+  $13: literal int32 129
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_HeartOfFire_FirePuzzle_Beacon_C::fn_idx_1712 (22 bytes) ===
+$0: VirtualFunction call "idx:241871" (
+  $13: literal int32 278
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_HeartOfFire_FirePuzzle_Beacon_C::fn_idx_1711 (22 bytes) ===
+$0: VirtualFunction call "idx:241871" (
+  $13: literal int32 316
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_HeartOfFire_FirePuzzle_Beacon_C::fn_idx_241868 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=idx:241872@0x19f8037bc80
+  Expression:
+  $9: LocalVariable named Mechanism@0x19f8037b080
+$18: VirtualFunction call "idx:241871" (
+  $31: literal int32 354
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_HeartOfFire_FirePuzzle_Beacon_C::fn_idx_241871 (362 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19f877d6200
+$10: VirtualFunction call "ExtinguishFlame" (
+  $23: EndFunctionParms
+)
+$24: Jump to offset 0x167
+$29: LetBool (Variable = Expression)
+  Variable:
+  $30: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x19f8037b100
+  Expression:
+  $39: FinalFunction target=HasAuthority@0x19e4cd64b30 (
+    $48: EndFunctionParms
+  )
+$49: JumpIfNot -> 0x167, cond:
+  $54: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x19f8037b100
+$63: Jump to offset 0xa
+$68: LetBool (Variable = Expression)
+  Variable:
+  $69: LocalVariable named CallFunc_ActivateTrigger_ReturnValue@0x19f8037b480
+  Expression:
+  $78: Context
+    ObjectExpression:
+    $79: InterfaceContext:
+    $80: InstanceVariable named MechanismTrigger@0x19f8037c280
+    SkipBytes: 0x17
+    RValueProperty: CallFunc_ActivateTrigger_ReturnValue@0x19f8037b480
+    ContextExpression:
+    $101: VirtualFunction call "ActivateTrigger" (
+      $114: LocalVariable named K2Node_Event_InInstigator@0x19f8037b280
+      $123: EndFunctionParms
+    )
+$124: Jump to offset 0x167
+$129: LetBool (Variable = Expression)
+  Variable:
+  $130: LocalVariable named CallFunc_HasAuthority_ReturnValue2@0x19f8037b400
+  Expression:
+  $139: FinalFunction target=HasAuthority@0x19e4cd64b30 (
+    $148: EndFunctionParms
+  )
+$149: JumpIfNot -> 0xa8, cond:
+  $154: LocalVariable named CallFunc_HasAuthority_ReturnValue2@0x19f8037b400
+$163: Jump to offset 0x167
+$168: LetBool (Variable = Expression)
+  Variable:
+  $169: LocalVariable named CallFunc_IsLit_ReturnValue@0x19f8037b580
+  Expression:
+  $178: FinalFunction target=IsLit@0x19e4d1101c0 (
+    $187: EndFunctionParms
+  )
+$188: JumpIfNot -> 0xf0, cond:
+  $193: LocalVariable named CallFunc_IsLit_ReturnValue@0x19f8037b580
+$202: Context
+  ObjectExpression:
+  $203: InstanceVariable named DynamicColourPointLight@0x19f8037b500
+  SkipBytes: 0xb
+  RValueProperty: (null)
+  ContextExpression:
+  $224: FinalFunction target=ActivateLight@0x19e4d423d20 (
+    $233: False
+    $234: EndFunctionParms
+  )
+$235: Jump to offset 0x167
+$240: Context
+  ObjectExpression:
+  $241: InstanceVariable named DynamicColourPointLight@0x19f8037b500
+  SkipBytes: 0xb
+  RValueProperty: (null)
+  ContextExpression:
+  $262: FinalFunction target=DeactivateLight@0x19e4d423e60 (
+    $271: False
+    $272: EndFunctionParms
+  )
+$273: Jump to offset 0x167
+$278: Context
+  ObjectExpression:
+  $279: InstanceVariable named DynamicColourPointLight@0x19f8037b500
+  SkipBytes: 0xb
+  RValueProperty: (null)
+  ContextExpression:
+  $300: FinalFunction target=ActivateLight@0x19e4d423d20 (
+    $309: True
+    $310: EndFunctionParms
+  )
+$311: Jump to offset 0x167
+$316: Context
+  ObjectExpression:
+  $317: InstanceVariable named DynamicColourPointLight@0x19f8037b500
+  SkipBytes: 0xb
+  RValueProperty: (null)
+  ContextExpression:
+  $338: FinalFunction target=DeactivateLight@0x19e4d423e60 (
+    $347: True
+    $348: EndFunctionParms
+  )
+$349: Jump to offset 0x167
+$354: Jump to offset 0x1d
+$359: Return expression:
+  $360: Nothing
+$361: EndOfScript

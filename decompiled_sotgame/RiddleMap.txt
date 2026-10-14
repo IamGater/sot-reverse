@@ -1,0 +1,206 @@
+// Class: RiddleMap (7 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+RiddleMap::OnMaskCanvasUpdate @ RVA 0xFC1E80 EA 0x7FF6F49E1E80
+======================================================================
+__int64 __fastcall sub_7FF6F49E1E80(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // r9
+  __int64 v7; // r8
+  __int64 v8; // rdx
+  _QWORD v10[3]; // [rsp+20h] [rbp-18h] BYREF
+  unsigned int v11; // [rsp+48h] [rbp+10h] BYREF
+  unsigned int v12; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v10[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v5 = a2[4];
+  v6 = v11;
+  v7 = v12;
+  v8 = v10[0];
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F412ABE0(a1, v8, v7, v6);
+}
+
+
+======================================================================
+RiddleMap::OnRep_Contents @ RVA 0xFC2A20 EA 0x7FF6F49E2A20
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F49E2A20(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 *v5; // rdx
+  __int64 v6; // rax
+  __int64 result; // rax
+  __int64 v8; // rbx
+  int v9; // edi
+  __int64 v10; // [rsp+28h] [rbp-20h] BYREF
+  int v11; // [rsp+30h] [rbp-18h]
+
+  sub_7FF6F4110EA0(&v10);
+  v4 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v5 = &v10;
+  if ( a2[7] )
+    v5 = (__int64 *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v4) = v6 != 0;
+  a2[4] = v6 + v4;
+  result = sub_7FF6F412B1A0(a1, v5);
+  v8 = v10;
+  v9 = v11;
+  if ( v11 )
+  {
+    do
+    {
+      sub_7FF6F4112CB0(v8 + 56);
+      result = sub_7FF6F3C37050(v8);
+      v8 += 72;
+      --v9;
+    }
+    while ( v9 );
+    v8 = v10;
+  }
+  if ( v8 )
+    return sub_7FF6F4DED1F0(v8);
+  return result;
+}
+
+
+======================================================================
+RiddleMap::OnRep_MapInventoryTexturePath @ RVA 0xFC2FB0 EA 0x7FF6F49E2FB0
+======================================================================
+void __fastcall sub_7FF6F49E2FB0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F412B3F0LL);
+}
+
+
+======================================================================
+RiddleMap::OnTextCanvasUpdate @ RVA 0xFC3680 EA 0x7FF6F49E3680
+======================================================================
+__int64 __fastcall sub_7FF6F49E3680(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // r9
+  __int64 v7; // r8
+  __int64 v8; // rdx
+  _QWORD v10[3]; // [rsp+20h] [rbp-18h] BYREF
+  unsigned int v11; // [rsp+48h] [rbp+10h] BYREF
+  unsigned int v12; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v10[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v5 = a2[4];
+  v6 = v11;
+  v7 = v12;
+  v8 = v10[0];
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F412CFA0(a1, v8, v7, v6);
+}
+
+
+======================================================================
+RiddleMap::RefreshContents @ RVA 0xFC3A50 EA 0x7FF6F49E3A50
+======================================================================
+__int64 __fastcall sub_7FF6F49E3A50(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F412E9F0();
+}
+
+
+======================================================================
+RiddleMap::StartMagicGlowEffect @ RVA 0xFC59F0 EA 0x7FF6F49E59F0
+======================================================================
+__int64 __fastcall sub_7FF6F49E59F0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F4132BE0();
+}
+
+
+======================================================================
+RiddleMap::TriggerMagicGlow_RPC @ RVA 0xFC5BE0 EA 0x7FF6F49E5BE0
+======================================================================
+__int64 __fastcall sub_7FF6F49E5BE0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1680LL))(a1);
+}
+

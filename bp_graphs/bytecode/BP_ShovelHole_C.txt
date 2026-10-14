@@ -1,0 +1,293 @@
+// /Game/Blueprints/GameObjects/Holes/bp_shovelhole -> BP_ShovelHole_C
+
+=== BP_ShovelHole_C::fn_idx_231127 (211 bytes) ===
+$0: Context
+  ObjectExpression:
+  $1: InstanceVariable named MeshDynamicMaterial@0x19e1437f080
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $22: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $31: literal name "FadeInTime"
+    $44: LocalVariable named FadeTime@0x19e13ffc550
+    $53: EndFunctionParms
+  )
+$54: Context
+  ObjectExpression:
+  $55: InstanceVariable named MeshDynamicMaterial@0x19e1437f080
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $76: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $85: literal name "FadeInDuration"
+    $98: literal float 0.10000000149011612
+    $103: EndFunctionParms
+  )
+$104: Context
+  ObjectExpression:
+  $105: InstanceVariable named DecalDynamicMaterial@0x19e1437f100
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $126: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $135: literal name "FadeInTime"
+    $148: LocalVariable named FadeTime@0x19e13ffc550
+    $157: EndFunctionParms
+  )
+$158: Context
+  ObjectExpression:
+  $159: InstanceVariable named DecalDynamicMaterial@0x19e1437f100
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $180: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $189: literal name "FadeInDuration"
+    $202: literal float 0.25
+    $207: EndFunctionParms
+  )
+$208: Return expression:
+  $209: Nothing
+$210: EndOfScript
+
+=== BP_ShovelHole_C::fn_idx_231128 (261 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue@0x19e13ffc630
+  Expression:
+  $18: CallMath target=Subtract_FloatFloat@0x19e4d3998c0 (
+    $27: LocalVariable named FadeTime@0x19e13ffc5c0
+    $36: literal float 0.5
+    $41: EndFunctionParms
+  )
+$42: Context
+  ObjectExpression:
+  $43: InstanceVariable named MeshDynamicMaterial@0x19e1437f080
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $64: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $73: literal name "FadeTime"
+    $86: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue@0x19e13ffc630
+    $95: EndFunctionParms
+  )
+$96: Context
+  ObjectExpression:
+  $97: InstanceVariable named MeshDynamicMaterial@0x19e1437f080
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $118: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $127: literal name "FadeDuration"
+    $140: InstanceVariable named DestroyTimeSpan@0x19e4d19c280
+    $149: EndFunctionParms
+  )
+$150: Context
+  ObjectExpression:
+  $151: InstanceVariable named DecalDynamicMaterial@0x19e1437f100
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $172: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $181: literal name "FadeTime"
+    $194: LocalVariable named FadeTime@0x19e13ffc5c0
+    $203: EndFunctionParms
+  )
+$204: Context
+  ObjectExpression:
+  $205: InstanceVariable named DecalDynamicMaterial@0x19e1437f100
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $226: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $235: literal name "FadeDuration"
+    $248: InstanceVariable named DestroyTimeSpan@0x19e4d19c280
+    $257: EndFunctionParms
+  )
+$258: Return expression:
+  $259: Nothing
+$260: EndOfScript
+
+=== BP_ShovelHole_C::fn_idx_9202 (232 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x19e1437ec00
+  Expression:
+  $18: FinalFunction target=K2_GetActorLocation@0x19e4cd66b10 (
+    $27: EndFunctionParms
+  )
+$28: Context
+  ObjectExpression:
+  $29: ObjectConst Default__LocalDisturbanceFunctionLibrary@0x19e4d615ff0
+  SkipBytes: 0x2b
+  RValueProperty: (null)
+  ContextExpression:
+  $50: FinalFunction target=AddDisturbance@0x19e4d0ae0b0 (
+    $59: Self
+    $60: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x19e1437ec00
+    $69: literal vector (1,1,0)
+    $82: literal float 230
+    $87: literal float 1
+    $92: EndFunctionParms
+  )
+$93: LetObj (Variable = Expression)
+  Variable:
+  $94: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19e1437ec80
+  Expression:
+  $103: Context
+    ObjectExpression:
+    $104: InstanceVariable named idx:232593@0x19e1437ef80
+    SkipBytes: 0x14
+    RValueProperty: CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19e1437ec80
+    ContextExpression:
+    $125: VirtualFunction call "CreateDynamicMaterialInstance" (
+      $138: literal int32 0
+      $143: NoObject
+      $144: EndFunctionParms
+    )
+$145: LetObj (Variable = Expression)
+  Variable:
+  $146: InstanceVariable named MeshDynamicMaterial@0x19e1437f080
+  Expression:
+  $155: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19e1437ec80
+$164: LetObj (Variable = Expression)
+  Variable:
+  $165: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue2@0x19e1437ed00
+  Expression:
+  $174: Context
+    ObjectExpression:
+    $175: InstanceVariable named idx:232591@0x19e1437ef00
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_CreateDynamicMaterialInstance_ReturnValue2@0x19e1437ed00
+    ContextExpression:
+    $196: VirtualFunction call "CreateDynamicMaterialInstance" (
+      $209: EndFunctionParms
+    )
+$210: LetObj (Variable = Expression)
+  Variable:
+  $211: InstanceVariable named DecalDynamicMaterial@0x19e1437f100
+  Expression:
+  $220: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue2@0x19e1437ed00
+$229: Return expression:
+  $230: Nothing
+$231: EndOfScript
+
+=== BP_ShovelHole_C::fn_idx_1902 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InState@0x19e1437ee00
+  Expression:
+  $9: LocalVariable named InState@0x19e1437ed80
+$18: VirtualFunction call "idx:232596" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_ShovelHole_C::fn_idx_9152 (22 bytes) ===
+$0: VirtualFunction call "idx:232596" (
+  $13: literal int32 180
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_ShovelHole_C::fn_idx_232596 (415 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19e13ffc6a0
+$10: LetBool (Variable = Expression)
+  Variable:
+  $11: LocalVariable named CallFunc_EqualEqual_ByteByte_ReturnValue@0x19e1437ee80
+  Expression:
+  $20: CallMath target=EqualEqual_ByteByte@0x19e4d37a620 (
+    $29: LocalVariable named K2Node_Event_InState@0x19e1437ee00
+    $38: literal byte 1
+    $40: EndFunctionParms
+  )
+$41: JumpIfNot -> 0x19c, cond:
+  $46: LocalVariable named CallFunc_EqualEqual_ByteByte_ReturnValue@0x19e1437ee80
+$55: Let (Variable = Expression)
+  Variable:
+  $64: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x19e13ffc710
+  Expression:
+  $73: Context
+    ObjectExpression:
+    $74: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue@0x19e13ffc710
+    ContextExpression:
+    $95: FinalFunction target=GetGameTimeInSeconds@0x19e4cd8c800 (
+      $104: Self
+      $105: EndFunctionParms
+    )
+$106: Let (Variable = Expression)
+  Variable:
+  $115: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x19e13fff6c0
+  Expression:
+  $124: CallMath target=Add_FloatFloat@0x19e4d36f820 (
+    $133: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x19e13ffc710
+    $142: InstanceVariable named DestroyTimeSpan@0x19e4d19c280
+    $151: EndFunctionParms
+  )
+$152: VirtualFunction call "SetFadeOutParameters" (
+  $165: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x19e13fff6c0
+  $174: EndFunctionParms
+)
+$175: Jump to offset 0x19c
+$180: Let (Variable = Expression)
+  Variable:
+  $189: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue2@0x19e13ffe460
+  Expression:
+  $198: Context
+    ObjectExpression:
+    $199: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue2@0x19e13ffe460
+    ContextExpression:
+    $220: FinalFunction target=GetGameTimeInSeconds@0x19e4cd8c800 (
+      $229: Self
+      $230: EndFunctionParms
+    )
+$231: Let (Variable = Expression)
+  Variable:
+  $240: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue3@0x19e12b71a40
+  Expression:
+  $249: CallMath target=Add_FloatFloat@0x19e4d36f820 (
+    $258: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue2@0x19e13ffe460
+    $267: literal float 86400
+    $272: EndFunctionParms
+  )
+$273: VirtualFunction call "SetFadeOutParameters" (
+  $286: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue3@0x19e12b71a40
+  $295: EndFunctionParms
+)
+$296: Let (Variable = Expression)
+  Variable:
+  $305: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue2@0x19e13ffe460
+  Expression:
+  $314: Context
+    ObjectExpression:
+    $315: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue2@0x19e13ffe460
+    ContextExpression:
+    $336: FinalFunction target=GetGameTimeInSeconds@0x19e4cd8c800 (
+      $345: Self
+      $346: EndFunctionParms
+    )
+$347: Let (Variable = Expression)
+  Variable:
+  $356: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue2@0x19e13ffdac0
+  Expression:
+  $365: CallMath target=Add_FloatFloat@0x19e4d36f820 (
+    $374: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue2@0x19e13ffe460
+    $383: literal float 0.25
+    $388: EndFunctionParms
+  )
+$389: VirtualFunction call "SetFadeInParameters" (
+  $402: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue2@0x19e13ffdac0
+  $411: EndFunctionParms
+)
+$412: Return expression:
+  $413: Nothing
+$414: EndOfScript

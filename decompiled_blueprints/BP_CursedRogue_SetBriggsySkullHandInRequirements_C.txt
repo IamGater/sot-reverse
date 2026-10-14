@@ -1,0 +1,133 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_2_TheCursedRogue/bp_cursedrogue_setbriggsyskullhandinrequirements -> BP_CursedRogue_SetBriggsySkullHandInRequirements_C (RECOVERED via retry pass)
+
+=== BP_CursedRogue_SetBriggsySkullHandInRequirements_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=idx:227637@0x1a3bc0dec00
+  Expression:
+  $9: LocalVariable named InBeginMode@0x1a3bc0deb80
+$18: VirtualFunction call "idx:230498" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_CursedRogue_SetBriggsySkullHandInRequirements_C::fn_idx_230498 (500 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x1a3b84027d0
+$10: FinalFunction target=GetVariables@0x1a2a95f5d20 (
+  $19: LocalVariable named idx:227630@0x1a3bc0dec80
+  $28: EndFunctionParms
+)
+$29: SetArray
+  $30: LocalVariable named idx:230495@0x1a3bc0df000
+  $39: EndArray
+$40: Context
+  ObjectExpression:
+  $41: StructMemberContext prop=idx:230499@0x1a3bc0df780
+    Expression to struct:
+    $50: LocalVariable named idx:227630@0x1a3bc0dec80
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $71: FinalFunction target=GetComponentInterfacesByClass@0x1a2a95b2480 (
+    $80: LocalVariable named idx:230495@0x1a3bc0df000
+    $89: ObjectConst NPCCustomItemPurchaseInterface@0x1a2a8beab80
+    $98: EndFunctionParms
+  )
+$99: Let (Variable = Expression)
+  Variable:
+  $108: LocalVariable named CallFunc_Array_Length_ReturnValue@0x1a3b8402d10
+  Expression:
+  $117: Context
+    ObjectExpression:
+    $118: ObjectConst Default__KismetArrayLibrary@0x1a2aa1aebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x1a3b8402d10
+    ContextExpression:
+    $139: FinalFunction target=Array_Length@0x1a2a9bb7df0 (
+      $148: LocalVariable named idx:230495@0x1a3bc0df000
+      $157: EndFunctionParms
+    )
+$158: LetBool (Variable = Expression)
+  Variable:
+  $159: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x1a3bc0ded80
+  Expression:
+  $168: CallMath target=Greater_IntInt@0x1a2a9bd2770 (
+    $177: LocalVariable named CallFunc_Array_Length_ReturnValue@0x1a3b8402d10
+    $186: literal int32 0
+    $191: EndFunctionParms
+  )
+$192: JumpIfNot -> 0x1f1, cond:
+  $197: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x1a3bc0ded80
+$206: SetArray
+  $207: LocalVariable named idx:230495@0x1a3bc0df000
+  $216: EndArray
+$217: Context
+  ObjectExpression:
+  $218: StructMemberContext prop=idx:230499@0x1a3bc0df780
+    Expression to struct:
+    $227: LocalVariable named idx:227630@0x1a3bc0dec80
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $248: FinalFunction target=GetComponentInterfacesByClass@0x1a2a95b2480 (
+    $257: LocalVariable named idx:230495@0x1a3bc0df000
+    $266: ObjectConst NPCCustomItemPurchaseInterface@0x1a2a8beab80
+    $275: EndFunctionParms
+  )
+$276: Context
+  ObjectExpression:
+  $277: ObjectConst Default__KismetArrayLibrary@0x1a2aa1aebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $298: FinalFunction target=Array_Get@0x1a2a9bb76b0 (
+    $307: LocalVariable named idx:230495@0x1a3bc0df000
+    $316: literal int32 0
+    $321: LocalVariable named CallFunc_Array_Get_Item@0x1a3bc0ded00
+    $330: EndFunctionParms
+  )
+$331: Let (Variable = Expression)
+  Variable:
+  $340: LocalVariable named idx:227755@0x1a3bc0dee00
+  Expression:
+  $349: ObjToInterfaceCast to NPCCustomItemPurchaseInterface@0x1a2a8beab80
+  $358: LocalVariable named CallFunc_Array_Get_Item@0x1a3bc0ded00
+$367: Let (Variable = Expression)
+  Variable:
+  $376: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x1a3bc0dee80
+  Expression:
+  $385: PrimitiveCast type=73
+    Argument:
+    $387: LocalVariable named idx:227755@0x1a3bc0dee00
+$396: JumpIfNot -> 0x1e1, cond:
+  $401: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x1a3bc0dee80
+$410: LetBool (Variable = Expression)
+  Variable:
+  $411: LocalVariable named idx:227751@0x1a3bc0def00
+  Expression:
+  $420: Context
+    ObjectExpression:
+    $421: InterfaceContext:
+    $422: LocalVariable named idx:227755@0x1a3bc0dee00
+    SkipBytes: 0x17
+    RValueProperty: idx:227751@0x1a3bc0def00
+    ContextExpression:
+    $443: VirtualFunction call "AddItemToPurchaseList" (
+      $456: InstanceVariable named ItemDesc@0x1a3bc0df080
+      $465: EndFunctionParms
+    )
+$466: FinalFunction target=SignalComplete@0x1a2a95f7e00 (
+  $475: EndFunctionParms
+)
+$476: Jump to offset 0x1f1
+$481: LetBool (Variable = Expression)
+  Variable:
+  $482: LocalVariable named idx:227751@0x1a3bc0def00
+  Expression:
+  $491: False
+$492: Jump to offset 0x1d2
+$497: Return expression:
+  $498: Nothing
+$499: EndOfScript

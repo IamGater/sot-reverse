@@ -1,0 +1,611 @@
+// Class: NetworkTestingBlueprintFunctionLibrary (16 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+NetworkTestingBlueprintFunctionLibrary::ClearRecentRelevanceTimer @ RVA 0x2F04600 EA 0x7FF6F6924600
+======================================================================
+__int64 __fastcall sub_7FF6F6924600(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  __int64 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v7 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v5 = v7;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return nullsub_3226(v5);
+}
+
+
+======================================================================
+NetworkTestingBlueprintFunctionLibrary::ClearRecentRelevanceTimerForPlayer @ RVA 0x2F04670 EA 0x7FF6F6924670
+======================================================================
+__int64 __fastcall sub_7FF6F6924670(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rdx
+  __int64 v6; // rcx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v9; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v4 = a2[4];
+  v5 = v8;
+  v6 = v9;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return nullsub_3227(v6, v5);
+}
+
+
+======================================================================
+NetworkTestingBlueprintFunctionLibrary::FlushComponentNetDormancy @ RVA 0x2F04820 EA 0x7FF6F6924820
+======================================================================
+__int64 __fastcall sub_7FF6F6924820(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  __int64 result; // rax
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  v7 = v9;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F69100C0(v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+NetworkTestingBlueprintFunctionLibrary::GetReliableBufferBunchCount @ RVA 0x2F048A0 EA 0x7FF6F69248A0
+======================================================================
+__int64 __fastcall sub_7FF6F69248A0(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  __int64 result; // rax
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  v7 = v9;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F69105D0(v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+NetworkTestingBlueprintFunctionLibrary::HasComponentReplicator @ RVA 0x2F049A0 EA 0x7FF6F69249A0
+======================================================================
+__int64 __fastcall sub_7FF6F69249A0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 result; // rax
+  unsigned int v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = a2[4];
+  v7 = v11;
+  v8 = v10;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F69109D0(v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+NetworkTestingBlueprintFunctionLibrary::IsActorInLevelNetworkCluster @ RVA 0x2F04A60 EA 0x7FF6F6924A60
+======================================================================
+__int64 __fastcall sub_7FF6F6924A60(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  v8 = v11;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F6910B40(v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+NetworkTestingBlueprintFunctionLibrary::IsActorInLevelNetworkClusterOnOwner @ RVA 0x2F04B20 EA 0x7FF6F6924B20
+======================================================================
+__int64 __fastcall sub_7FF6F6924B20(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  v8 = v11;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F6910CE0(v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+NetworkTestingBlueprintFunctionLibrary::IsActorInNetworkCluster @ RVA 0x2F04BE0 EA 0x7FF6F6924BE0
+======================================================================
+__int64 __fastcall sub_7FF6F6924BE0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  v8 = v11;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F6910E80(v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+NetworkTestingBlueprintFunctionLibrary::IsActorInNetworkClusterGlobal @ RVA 0x2F04CA0 EA 0x7FF6F6924CA0
+======================================================================
+__int64 __fastcall sub_7FF6F6924CA0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  __int64 result; // rax
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  v7 = v9;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F6911020(v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+NetworkTestingBlueprintFunctionLibrary::IsActorNetDormant @ RVA 0x2F04D20 EA 0x7FF6F6924D20
+======================================================================
+__int64 __fastcall sub_7FF6F6924D20(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  __int64 result; // rax
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  v7 = v9;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F69111C0(v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+NetworkTestingBlueprintFunctionLibrary::IsActorNetRelevantFor @ RVA 0x2F04DA0 EA 0x7FF6F6924DA0
+======================================================================
+__int64 __fastcall sub_7FF6F6924DA0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  v8 = v11;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F69111E0(v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+NetworkTestingBlueprintFunctionLibrary::IsComponentNetDormant @ RVA 0x2F04E60 EA 0x7FF6F6924E60
+======================================================================
+__int64 __fastcall sub_7FF6F6924E60(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 result; // rax
+  unsigned int v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = a2[4];
+  v7 = v11;
+  v8 = v10;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F6911430(v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+NetworkTestingBlueprintFunctionLibrary::PausePropertyTrackingOnNextSend @ RVA 0x2F04F20 EA 0x7FF6F6924F20
+======================================================================
+__int64 __fastcall sub_7FF6F6924F20(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  __int64 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v7 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v5 = v7;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return nullsub_3229(v5);
+}
+
+
+======================================================================
+NetworkTestingBlueprintFunctionLibrary::ResumePropertyTracking @ RVA 0x2F05120 EA 0x7FF6F6925120
+======================================================================
+__int64 __fastcall sub_7FF6F6925120(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  __int64 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v7 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v5 = v7;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return nullsub_3231(v5);
+}
+
+
+======================================================================
+NetworkTestingBlueprintFunctionLibrary::SetConnectionLastReceiveTime @ RVA 0x2F05200 EA 0x7FF6F6925200
+======================================================================
+__int64 __fastcall sub_7FF6F6925200(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  int v7; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v8; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v7 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v5 = v8;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return nullsub_3233(v5);
+}
+
+
+======================================================================
+NetworkTestingBlueprintFunctionLibrary::SwitchNetworkClusterForActor @ RVA 0x2F05590 EA 0x7FF6F6925590
+======================================================================
+__int64 __fastcall sub_7FF6F6925590(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rdx
+  __int64 v6; // rcx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v9; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v4 = a2[4];
+  v5 = v8;
+  v6 = v9;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return sub_7FF6F6913D10(v6, v5);
+}
+

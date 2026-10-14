@@ -1,0 +1,254 @@
+// Class: SpinBox (15 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+SpinBox::ClearMaxSliderValue @ RVA 0x1F2A260 EA 0x7FF6F594A260
+======================================================================
+__int64 __fastcall sub_7FF6F594A25B(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) = *(unsigned int *)(a2 + 32) + (unsigned __int64)(*(_DWORD *)(a2 + 32) != 0);
+  return sub_7FF6F5877790();
+}
+
+
+======================================================================
+SpinBox::ClearMaxValue @ RVA 0x1F2A280 EA 0x7FF6F594A280
+======================================================================
+__int64 __fastcall sub_7FF6F594A280(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F5877840();
+}
+
+
+======================================================================
+SpinBox::ClearMinSliderValue @ RVA 0x1F2A2E0 EA 0x7FF6F594A2E0
+======================================================================
+__int64 __fastcall sub_7FF6F594A2E0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F5877970();
+}
+
+
+======================================================================
+SpinBox::ClearMinValue @ RVA 0x1F2A300 EA 0x7FF6F594A300
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+SpinBox::GetMaxSliderValue @ RVA 0x1F2CEC0 EA 0x7FF6F594CEC0
+======================================================================
+void __fastcall sub_7FF6F594CEC0(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F588A870();
+}
+
+
+======================================================================
+SpinBox::GetMaxValue @ RVA 0x1F2CEF0 EA 0x7FF6F594CEF0
+======================================================================
+void __fastcall sub_7FF6F594CEF0(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F588A8E0();
+}
+
+
+======================================================================
+SpinBox::GetMinSliderValue @ RVA 0x1F2CF60 EA 0x7FF6F594CF60
+======================================================================
+void __fastcall sub_7FF6F594CF60(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F588A9A0();
+}
+
+
+======================================================================
+SpinBox::GetMinValue @ RVA 0x1F2CF90 EA 0x7FF6F594CF90
+======================================================================
+void __fastcall sub_7FF6F594CF90(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F588AA10();
+}
+
+
+======================================================================
+SpinBox::GetValue @ RVA 0x1F2D9A0 EA 0x7FF6F594D9A0
+======================================================================
+void __fastcall sub_7FF6F594D9A0(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F588D760();
+}
+
+
+======================================================================
+SpinBox::SetForegroundColor @ RVA 0x1F30FC0 EA 0x7FF6F5950FC0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F5950FC0(__int64 a1, _QWORD *a2)
+{
+  int v4; // edi
+  __int128 v6; // [rsp+28h] [rbp-70h] BYREF
+  char v7; // [rsp+38h] [rbp-60h]
+  __int128 v8; // [rsp+40h] [rbp-58h]
+  int v9; // [rsp+50h] [rbp-48h]
+  __int128 v10; // [rsp+58h] [rbp-40h] BYREF
+  char v11; // [rsp+68h] [rbp-30h]
+  __int128 v12; // [rsp+70h] [rbp-28h] BYREF
+  int v13; // [rsp+80h] [rbp-18h]
+
+  v6 = xmmword_7FF6F8C13FD0;
+  v7 = 0;
+  v8 = 0;
+  v4 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  a2[4] += a2[4] != 0;
+  v10 = v6;
+  v11 = v7;
+  v12 = v8;
+  if ( *((_QWORD *)&v8 + 1) )
+  {
+    if ( _InterlockedIncrement((volatile signed __int32 *)(*((_QWORD *)&v8 + 1) + 8LL)) == 1 )
+      MEMORY[0] = (char *)&v12 + 8;
+    if ( *((_QWORD *)&v12 + 1) )
+      v4 = *(_DWORD *)(*((_QWORD *)&v12 + 1) + 24LL);
+  }
+  v13 = v4;
+  sub_7FF6F58C0010(a1, &v10);
+  return sub_7FF6F4FBBAF0(&v6);
+}
+
+
+======================================================================
+SpinBox::SetMaxSliderValue @ RVA 0x1F32500 EA 0x7FF6F5952500
+======================================================================
+__int64 __fastcall sub_7FF6F5952500(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F58C1500(a1);
+}
+
+
+======================================================================
+SpinBox::SetMaxValue @ RVA 0x1F32580 EA 0x7FF6F5952580
+======================================================================
+__int64 __fastcall sub_7FF6F5952580(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F58C15A0(a1);
+}
+
+
+======================================================================
+SpinBox::SetMinSliderValue @ RVA 0x1F32880 EA 0x7FF6F5952880
+======================================================================
+__int64 __fastcall sub_7FF6F5952880(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F58C17B0(a1);
+}
+
+
+======================================================================
+SpinBox::SetMinValue @ RVA 0x1F32900 EA 0x7FF6F5952900
+======================================================================
+__int64 __fastcall sub_7FF6F5952900(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F58C1850(a1);
+}
+
+
+======================================================================
+SpinBox::SetValue @ RVA 0x1F34970 EA 0x7FF6F5954970
+======================================================================
+__int64 __fastcall sub_7FF6F5954970(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F58C3AF0(a1);
+}
+

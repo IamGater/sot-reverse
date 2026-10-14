@@ -1,0 +1,137 @@
+// Class: WrapBoxSlot (5 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+WrapBoxSlot::SetFillEmptySpace @ RVA 0x1F30D80 EA 0x7FF6F5950D80
+======================================================================
+__int64 __fastcall sub_7FF6F5950D80(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F58BFEF0(a1, v5);
+}
+
+
+======================================================================
+WrapBoxSlot::SetFillSpanWhenLessThan @ RVA 0x1F30E10 EA 0x7FF6F5950E10
+======================================================================
+__int64 __fastcall sub_7FF6F5950E10(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F58BFF00(a1);
+}
+
+
+======================================================================
+WrapBoxSlot::SetHorizontalAlignment @ RVA 0x1F31910 EA 0x7FF6F5951910
+======================================================================
+__int64 __fastcall sub_7FF6F5951910(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F58C0550(a1, v5);
+}
+
+
+======================================================================
+WrapBoxSlot::SetPadding @ RVA 0x1F33460 EA 0x7FF6F5953460
+======================================================================
+__int64 __fastcall sub_7FF6F5953460(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rax
+  __int128 v7; // [rsp+20h] [rbp-28h] BYREF
+  __int128 v8; // [rsp+30h] [rbp-18h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = a2[4];
+  v8 = v7;
+  a2[4] = v5 + (v5 != 0);
+  return sub_7FF6F58C2270(a1, &v8);
+}
+
+
+======================================================================
+WrapBoxSlot::SetVerticalAlignment @ RVA 0x1F34F70 EA 0x7FF6F5954F70
+======================================================================
+__int64 __fastcall sub_7FF6F5954F70(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F58C3C70(a1, v5);
+}
+

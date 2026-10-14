@@ -1,0 +1,77 @@
+// Class: BoxedRpcDispatcherComponent (3 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+BoxedRpcDispatcherComponent::Client_SendRpc @ RVA 0x2F3FA50 EA 0x7FF6F695FA50
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F695FA50(__int64 a1, _QWORD *a2)
+{
+  _BYTE v5[48]; // [rsp+28h] [rbp-30h] BYREF
+
+  sub_7FF6F6948520(v5);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v5);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v5);
+  }
+  a2[4] += a2[4] != 0;
+  (*(void (__fastcall **)(__int64, _BYTE *))(*(_QWORD *)a1 + 984LL))(a1, v5);
+  return sub_7FF6F6949D00(v5);
+}
+
+
+======================================================================
+BoxedRpcDispatcherComponent::NetMulticastExcludeServer_SendRpc @ RVA 0x2F3FD40 EA 0x7FF6F695FD40
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F695FD40(__int64 a1, _QWORD *a2)
+{
+  _BYTE v5[48]; // [rsp+28h] [rbp-30h] BYREF
+
+  sub_7FF6F6948520(v5);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v5);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v5);
+  }
+  a2[4] += a2[4] != 0;
+  (*(void (__fastcall **)(__int64, _BYTE *))(*(_QWORD *)a1 + 1000LL))(a1, v5);
+  return sub_7FF6F6949D00(v5);
+}
+
+
+======================================================================
+BoxedRpcDispatcherComponent::Server_SendRpc @ RVA 0x2F3FE70 EA 0x7FF6F695FE70
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F695FE70(__int64 a1, _QWORD *a2)
+{
+  _BYTE v5[48]; // [rsp+28h] [rbp-30h] BYREF
+
+  sub_7FF6F6948520(v5);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v5);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v5);
+  }
+  a2[4] += a2[4] != 0;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64, _BYTE *))(*(_QWORD *)a1 + 968LL))(a1, v5) )
+    (*(void (__fastcall **)(__int64, _BYTE *))(*(_QWORD *)a1 + 960LL))(a1, v5);
+  else
+    sub_7FF6F4F0F6D0(L"Server_SendRpc_Validate");
+  return sub_7FF6F6949D00(v5);
+}
+

@@ -1,0 +1,284 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Onboarding/bp_setskellyshipattacktarget -> BP_SetSkellyShipAttackTarget_C
+
+=== BP_SetSkellyShipAttackTarget_C::fn_idx_283178 (193 bytes) ===
+$0: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $9: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce706900
+  $18: EndFunctionParms
+)
+$19: Let (Variable = Expression)
+  Variable:
+  $28: LocalVariable named idx:283177@0x19fce706980
+  Expression:
+  $37: DynamicCast to BP_MaidenVoyage_SkellyShip_C@0x19fcf4ba680 of expr:
+  $46: StructMemberContext prop=idx:282921@0x19fcdd68480
+    Expression to struct:
+    $55: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce706900
+$64: Let (Variable = Expression)
+  Variable:
+  $73: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fce706a00
+  Expression:
+  $82: PrimitiveCast type=71
+    Argument:
+    $84: LocalVariable named idx:283177@0x19fce706980
+$93: JumpIfNot -> 0xbe, cond:
+  $98: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fce706a00
+$107: LetBool (Variable = Expression)
+  Variable:
+  $108: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue@0x19fce706a80
+  Expression:
+  $117: Context
+    ObjectExpression:
+    $118: LocalVariable named idx:283177@0x19fce706980
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_FlushNetDormancy_ReturnValue@0x19fce706a80
+    ContextExpression:
+    $139: FinalFunction target=FlushNetDormancy@0x19e4cd61090 (
+      $148: EndFunctionParms
+    )
+$149: LetObj (Variable = Expression)
+  Variable:
+  $150: Context
+    ObjectExpression:
+    $151: LocalVariable named idx:283177@0x19fce706980
+    SkipBytes: 0x9
+    RValueProperty: TargetShip@0x19fcf4c2780
+    ContextExpression:
+    $172: InstanceVariable named TargetShip@0x19fcf4c2780
+  Expression:
+  $181: LocalVariable named Ship@0x19fce706880
+$190: Return expression:
+  $191: Nothing
+$192: EndOfScript
+
+=== BP_SetSkellyShipAttackTarget_C::fn_idx_1828 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fce706c00
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fce706b00
+$18: VirtualFunction call "idx:283176" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_SetSkellyShipAttackTarget_C::fn_idx_275667 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event@0x19fce706f80
+  Expression:
+  $9: LocalVariable named Event@0x19fce706b80
+$18: VirtualFunction call "idx:283176" (
+  $31: literal int32 820
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_SetSkellyShipAttackTarget_C::fn_idx_283176 (916 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fcdbb5a90
+$10: Let (Variable = Expression)
+  Variable:
+  $19: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19fce707300
+  Expression:
+  $28: FinalFunction target=GetCrewShips@0x19e4cda5420 (
+    $37: EndFunctionParms
+  )
+$38: Let (Variable = Expression)
+  Variable:
+  $47: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fcdbb5cc0
+  Expression:
+  $56: Context
+    ObjectExpression:
+    $57: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19fcdbb5cc0
+    ContextExpression:
+    $78: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $87: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19fce707300
+      $96: EndFunctionParms
+    )
+$97: LetBool (Variable = Expression)
+  Variable:
+  $98: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fce706e00
+  Expression:
+  $107: CallMath target=Greater_IntInt@0x19e4d382770 (
+    $116: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fcdbb5cc0
+    $125: literal int32 0
+    $130: EndFunctionParms
+  )
+$131: JumpIfNot -> 0xee, cond:
+  $136: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fce706e00
+$145: Context
+  ObjectExpression:
+  $146: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $167: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $176: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19fce707300
+    $185: literal int32 0
+    $190: LocalVariable named CallFunc_Array_Get_Item@0x19fce706d00
+    $199: EndFunctionParms
+  )
+$200: VirtualFunction call "idx:283178" (
+  $213: LocalVariable named CallFunc_Array_Get_Item@0x19fce706d00
+  $222: EndFunctionParms
+)
+$223: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $232: EndFunctionParms
+)
+$233: Jump to offset 0x391
+$238: LetObj (Variable = Expression)
+  Variable:
+  $239: LocalVariable named CallFunc_GetGameState_ReturnValue@0x19fce706c80
+  Expression:
+  $248: FinalFunction target=GetGameState@0x19e4cda5860 (
+    $257: EndFunctionParms
+  )
+$258: Let (Variable = Expression)
+  Variable:
+  $267: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fce706d80
+  Expression:
+  $276: Context
+    ObjectExpression:
+    $277: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fce706d80
+    ContextExpression:
+    $298: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x19e4d410390 (
+      $307: LocalVariable named CallFunc_GetGameState_ReturnValue@0x19fce706c80
+      $316: EndFunctionParms
+    )
+$317: Context
+  ObjectExpression:
+  $318: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x35
+  RValueProperty: (null)
+  ContextExpression:
+  $339: FinalFunction target=RegisterEventFromHandle@0x19e4d410c00 (
+    $348: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fce706d80
+    $357: InstanceVariable named idx:282792@0x19fce707380
+    $366: Self
+    $367: literal ansi string "CustomEvent_0"
+    $382: ObjectConst EventShipAddedToCrew@0x19e4cfb4230
+    $391: EndFunctionParms
+  )
+$392: Context
+  ObjectExpression:
+  $393: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $414: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $423: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19fce707300
+    $432: literal int32 0
+    $437: LocalVariable named CallFunc_Array_Get_Item@0x19fce706d00
+    $446: EndFunctionParms
+  )
+$447: Context
+  ObjectExpression:
+  $448: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x4d
+  RValueProperty: (null)
+  ContextExpression:
+  $469: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $478: LocalVariable named CallFunc_Array_Get_Item@0x19fce706d00
+    $487: literal ansi string "EventRegistered"
+    $504: True
+    $505: True
+    $506: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $519: literal float 0
+      $524: literal float 0.6600000262260437
+      $529: literal float 1
+      $534: literal float 1
+      $539: EndStructConst
+    $540: literal float 2
+    $545: EndFunctionParms
+  )
+$546: Jump to offset 0x391
+$551: Let (Variable = Expression)
+  Variable:
+  $560: LocalVariable named idx:282789@0x19fce707200
+  Expression:
+  $569: FinalFunction target=GetCrewShips@0x19e4cda5420 (
+    $578: EndFunctionParms
+  )
+$579: LetBool (Variable = Expression)
+  Variable:
+  $580: LocalVariable named CallFunc_Array_Contains_ReturnValue@0x19fce707100
+  Expression:
+  $589: Context
+    ObjectExpression:
+    $590: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Contains_ReturnValue@0x19fce707100
+    ContextExpression:
+    $611: FinalFunction target=Array_Contains@0x19e4d367180 (
+      $620: LocalVariable named idx:282789@0x19fce707200
+      $629: LocalVariable named K2Node_DynamicCast_AsShip@0x19fce707000
+      $638: EndFunctionParms
+    )
+$639: JumpIfNot -> 0x391, cond:
+  $644: LocalVariable named CallFunc_Array_Contains_ReturnValue@0x19fce707100
+$653: VirtualFunction call "idx:283178" (
+  $666: LocalVariable named K2Node_DynamicCast_AsShip@0x19fce707000
+  $675: EndFunctionParms
+)
+$676: LetObj (Variable = Expression)
+  Variable:
+  $677: LocalVariable named CallFunc_GetGameState_ReturnValue2@0x19fce706e80
+  Expression:
+  $686: FinalFunction target=GetGameState@0x19e4cda5860 (
+    $695: EndFunctionParms
+  )
+$696: Let (Variable = Expression)
+  Variable:
+  $705: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x19fce706f00
+  Expression:
+  $714: Context
+    ObjectExpression:
+    $715: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x19fce706f00
+    ContextExpression:
+    $736: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x19e4d410390 (
+      $745: LocalVariable named CallFunc_GetGameState_ReturnValue2@0x19fce706e80
+      $754: EndFunctionParms
+    )
+$755: Context
+  ObjectExpression:
+  $756: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $777: FinalFunction target=UnregisterEventFromHandle@0x19e4d411420 (
+    $786: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x19fce706f00
+    $795: InstanceVariable named idx:282792@0x19fce707380
+    $804: EndFunctionParms
+  )
+$805: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $814: EndFunctionParms
+)
+$815: Jump to offset 0x391
+$820: Let (Variable = Expression)
+  Variable:
+  $829: LocalVariable named K2Node_DynamicCast_AsShip@0x19fce707000
+  Expression:
+  $838: DynamicCast to Ship@0x19e4c3ae700 of expr:
+  $847: StructMemberContext prop=ShipActor@0x19e4cfb42d0
+    Expression to struct:
+    $856: LocalVariable named K2Node_CustomEvent_Event@0x19fce706f80
+$865: Let (Variable = Expression)
+  Variable:
+  $874: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fce707080
+  Expression:
+  $883: PrimitiveCast type=71
+    Argument:
+    $885: LocalVariable named K2Node_DynamicCast_AsShip@0x19fce707000
+$894: JumpIfNot -> 0x391, cond:
+  $899: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fce707080
+$908: Jump to offset 0x227
+$913: Return expression:
+  $914: Nothing
+$915: EndOfScript

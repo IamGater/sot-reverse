@@ -1,0 +1,1447 @@
+// /Game/Blueprints/TallTales/Actors/AshenAge/Tale_1_TheAshenDragon/bp_pendragon_theashendragon -> BP_Pendragon_TheAshenDragon_C
+
+=== BP_Pendragon_TheAshenDragon_C::fn_idx_254706 (22 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalOutVariable named Visibility@0x19fa940a800
+  Expression:
+  $10: InstanceVariable named IsPendragonVisible@0x19fa940c680
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Pendragon_TheAshenDragon_C::fn_idx_275028 (50 bytes) ===
+$0: JumpIfNot -> 0x21, cond:
+  $5: InstanceVariable named IsPendragonVisible@0x19fa940c680
+$14: VirtualFunction call "PendragonAppear" (
+  $27: EndFunctionParms
+)
+$28: Jump to offset 0x2f
+$33: VirtualFunction call "PendragonDisappear" (
+  $46: EndFunctionParms
+)
+$47: Return expression:
+  $48: Nothing
+$49: EndOfScript
+
+=== BP_Pendragon_TheAshenDragon_C::fn_idx_275018 (378 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named UniqueObjectNameForCooking_AsInterface_Animatable@0x19fa940ab00
+  Expression:
+  $18: ObjToInterfaceCast to Interface_Animatable@0x19e4c53d040
+  $27: InstanceVariable named Mesh@0x19e4d1573e0
+$36: Let (Variable = Expression)
+  Variable:
+  $45: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x19fa940ab80
+  Expression:
+  $54: PrimitiveCast type=73
+    Argument:
+    $56: LocalVariable named UniqueObjectNameForCooking_AsInterface_Animatable@0x19fa940ab00
+$65: JumpIfNot -> 0xf8, cond:
+  $70: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x19fa940ab80
+$79: LetObj (Variable = Expression)
+  Variable:
+  $80: LocalVariable named CallFunc_GetAnimInstance_ReturnValue@0x19fa940ac00
+  Expression:
+  $89: Context
+    ObjectExpression:
+    $90: InterfaceContext:
+    $91: LocalVariable named UniqueObjectNameForCooking_AsInterface_Animatable@0x19fa940ab00
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetAnimInstance_ReturnValue@0x19fa940ac00
+    ContextExpression:
+    $112: VirtualFunction call "GetAnimInstance" (
+      $125: EndFunctionParms
+    )
+$126: LetObj (Variable = Expression)
+  Variable:
+  $127: LocalVariable named Temp_object_Variable@0x19fa940a980
+  Expression:
+  $136: LocalVariable named CallFunc_GetAnimInstance_ReturnValue@0x19fa940ac00
+$145: Let (Variable = Expression)
+  Variable:
+  $154: LocalVariable named K2Node_DynamicCast_AsNPCAnim_Instance@0x19fa940aa00
+  Expression:
+  $163: DynamicCast to NPCAnimInstance@0x19e4c42a800 of expr:
+  $172: LocalVariable named Temp_object_Variable@0x19fa940a980
+$181: Let (Variable = Expression)
+  Variable:
+  $190: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fa940aa80
+  Expression:
+  $199: PrimitiveCast type=71
+    Argument:
+    $201: LocalVariable named K2Node_DynamicCast_AsNPCAnim_Instance@0x19fa940aa00
+$210: JumpIfNot -> 0x108, cond:
+  $215: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fa940aa80
+$224: LetObj (Variable = Expression)
+  Variable:
+  $225: LocalOutVariable named NPCAnimInstance@0x19fa940a880
+  Expression:
+  $234: LocalVariable named K2Node_DynamicCast_AsNPCAnim_Instance@0x19fa940aa00
+$243: Jump to offset 0x177
+$248: LetObj (Variable = Expression)
+  Variable:
+  $249: LocalVariable named Temp_object_Variable@0x19fa940a980
+  Expression:
+  $258: NoObject
+$259: Jump to offset 0x91
+$264: Context
+  ObjectExpression:
+  $265: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x54
+  RValueProperty: (null)
+  ContextExpression:
+  $286: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $295: Self
+    $296: literal ansi string "Cast to NPCAnimInstance failed"
+    $328: True
+    $329: True
+    $330: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $343: literal float 1
+      $348: literal float 0
+      $353: literal float 0.1774280071258545
+      $358: literal float 1
+      $363: EndStructConst
+    $364: literal float 20
+    $369: EndFunctionParms
+  )
+$370: Jump to offset 0xe0
+$375: Return expression:
+  $376: Nothing
+$377: EndOfScript
+
+=== BP_Pendragon_TheAshenDragon_C::fn_idx_275004 (1713 bytes) ===
+$0: FlowStack.Push(0x6ae)
+$5: FlowStack.Push(0x138)
+$10: Let (Variable = Expression)
+  Variable:
+  $19: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue2@0x19fa940b280
+  Expression:
+  $28: FinalFunction target=GetComponentsByClass@0x19e4cd626c0 (
+    $37: ObjectConst MeshComponent@0x19e4c3e8a40
+    $46: EndFunctionParms
+  )
+$47: Let (Variable = Expression)
+  Variable:
+  $56: LocalVariable named MeshComponentArray@0x19fa940b180
+  Expression:
+  $65: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue2@0x19fa940b280
+$74: VirtualFunction call "GetNPCAnimInstance" (
+  $87: LocalVariable named CallFunc_GetNPCAnimInstance_NPCAnimInstance@0x19fa940ac80
+  $96: EndFunctionParms
+)
+$97: LetBool (Variable = Expression)
+  Variable:
+  $98: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fa940ad80
+  Expression:
+  $107: Context
+    ObjectExpression:
+    $108: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x29
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19fa940ad80
+    ContextExpression:
+    $129: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $138: Context
+        ObjectExpression:
+        $139: LocalVariable named CallFunc_GetNPCAnimInstance_NPCAnimInstance@0x19fa940ac80
+        SkipBytes: 0x9
+        RValueProperty: RightHandObject@0x19e4d1f3e40
+        ContextExpression:
+        $160: InstanceVariable named RightHandObject@0x19e4d1f3e40
+      $169: EndFunctionParms
+    )
+$170: PopExecutionFlowIfNot, cond:
+$171: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fa940ad80
+$180: Let (Variable = Expression)
+  Variable:
+  $189: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fa940b480
+  Expression:
+  $198: Context
+    ObjectExpression:
+    $199: Context
+      ObjectExpression:
+      $200: LocalVariable named CallFunc_GetNPCAnimInstance_NPCAnimInstance@0x19fa940ac80
+      SkipBytes: 0x9
+      RValueProperty: RightHandObject@0x19e4d1f3e40
+      ContextExpression:
+      $221: InstanceVariable named RightHandObject@0x19e4d1f3e40
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetComponentsByClass_ReturnValue@0x19fa940b480
+    ContextExpression:
+    $242: FinalFunction target=GetComponentsByClass@0x19e4cd626c0 (
+      $251: ObjectConst MeshComponent@0x19e4c3e8a40
+      $260: EndFunctionParms
+    )
+$261: Context
+  ObjectExpression:
+  $262: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $283: FinalFunction target=Array_Append@0x19e4d366d30 (
+    $292: LocalVariable named MeshComponentArray@0x19fa940b180
+    $301: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fa940b480
+    $310: EndFunctionParms
+  )
+$311: PopExecutionFlow (jump to popped addr)
+$312: Context
+  ObjectExpression:
+  $313: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $334: FinalFunction target=Array_Clear@0x19e4d366fd0 (
+    $343: InstanceVariable named DynamicMaterials@0x19fa940c780
+    $352: EndFunctionParms
+  )
+$353: Let (Variable = Expression)
+  Variable:
+  $362: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fbd572e60
+  Expression:
+  $371: literal int32 0
+$376: Let (Variable = Expression)
+  Variable:
+  $385: LocalVariable named Temp_int_Array_Index_Variable2@0x19fbd572f40
+  Expression:
+  $394: literal int32 0
+$399: Let (Variable = Expression)
+  Variable:
+  $408: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fbd573090
+  Expression:
+  $417: Context
+    ObjectExpression:
+    $418: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19fbd573090
+    ContextExpression:
+    $439: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $448: LocalVariable named MeshComponentArray@0x19fa940b180
+      $457: EndFunctionParms
+    )
+$458: LetBool (Variable = Expression)
+  Variable:
+  $459: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19fa940af00
+  Expression:
+  $468: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $477: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fbd572e60
+    $486: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fbd573090
+    $495: EndFunctionParms
+  )
+$496: PopExecutionFlowIfNot, cond:
+$497: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19fa940af00
+$506: Let (Variable = Expression)
+  Variable:
+  $515: LocalVariable named Temp_int_Array_Index_Variable2@0x19fbd572f40
+  Expression:
+  $524: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fbd572e60
+$533: FlowStack.Push(0x484)
+$538: Let (Variable = Expression)
+  Variable:
+  $547: LocalVariable named Temp_int_Loop_Counter_Variable2@0x19fbd572fb0
+  Expression:
+  $556: literal int32 0
+$561: Let (Variable = Expression)
+  Variable:
+  $570: LocalVariable named Temp_int_Array_Index_Variable@0x19fbd572df0
+  Expression:
+  $579: literal int32 0
+$584: Context
+  ObjectExpression:
+  $585: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $606: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $615: LocalVariable named MeshComponentArray@0x19fa940b180
+    $624: LocalVariable named Temp_int_Array_Index_Variable2@0x19fbd572f40
+    $633: LocalVariable named CallFunc_Array_Get_Item@0x19fa940ae00
+    $642: EndFunctionParms
+  )
+$643: Let (Variable = Expression)
+  Variable:
+  $652: LocalVariable named CallFunc_GetMaterials_ReturnValue@0x19fa940b380
+  Expression:
+  $661: Context
+    ObjectExpression:
+    $662: LocalVariable named CallFunc_Array_Get_Item@0x19fa940ae00
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetMaterials_ReturnValue@0x19fa940b380
+    ContextExpression:
+    $683: VirtualFunction call "GetMaterials" (
+      $696: EndFunctionParms
+    )
+$697: Let (Variable = Expression)
+  Variable:
+  $706: LocalVariable named CallFunc_Array_Length_ReturnValue2@0x19fbd573100
+  Expression:
+  $715: Context
+    ObjectExpression:
+    $716: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue2@0x19fbd573100
+    ContextExpression:
+    $737: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $746: LocalVariable named CallFunc_GetMaterials_ReturnValue@0x19fa940b380
+      $755: EndFunctionParms
+    )
+$756: LetBool (Variable = Expression)
+  Variable:
+  $757: LocalVariable named CallFunc_Less_IntInt_ReturnValue2@0x19fa940b080
+  Expression:
+  $766: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $775: LocalVariable named Temp_int_Loop_Counter_Variable2@0x19fbd572fb0
+    $784: LocalVariable named CallFunc_Array_Length_ReturnValue2@0x19fbd573100
+    $793: EndFunctionParms
+  )
+$794: PopExecutionFlowIfNot, cond:
+$795: LocalVariable named CallFunc_Less_IntInt_ReturnValue2@0x19fa940b080
+$804: Let (Variable = Expression)
+  Variable:
+  $813: LocalVariable named Temp_int_Array_Index_Variable@0x19fbd572df0
+  Expression:
+  $822: LocalVariable named Temp_int_Loop_Counter_Variable2@0x19fbd572fb0
+$831: FlowStack.Push(0x4ce)
+$836: Context
+  ObjectExpression:
+  $837: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $858: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $867: LocalVariable named MeshComponentArray@0x19fa940b180
+    $876: LocalVariable named Temp_int_Array_Index_Variable2@0x19fbd572f40
+    $885: LocalVariable named CallFunc_Array_Get_Item@0x19fa940ae00
+    $894: EndFunctionParms
+  )
+$895: Let (Variable = Expression)
+  Variable:
+  $904: LocalVariable named CallFunc_GetMaterials_ReturnValue@0x19fa940b380
+  Expression:
+  $913: Context
+    ObjectExpression:
+    $914: LocalVariable named CallFunc_Array_Get_Item@0x19fa940ae00
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetMaterials_ReturnValue@0x19fa940b380
+    ContextExpression:
+    $935: VirtualFunction call "GetMaterials" (
+      $948: EndFunctionParms
+    )
+$949: Context
+  ObjectExpression:
+  $950: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $971: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $980: LocalVariable named CallFunc_GetMaterials_ReturnValue@0x19fa940b380
+    $989: LocalVariable named Temp_int_Array_Index_Variable@0x19fbd572df0
+    $998: LocalVariable named CallFunc_Array_Get_Item2@0x19fa940ae80
+    $1007: EndFunctionParms
+  )
+$1008: Let (Variable = Expression)
+  Variable:
+  $1017: LocalVariable named K2Node_DynamicCast_AsMaterial_Instance_Dynamic@0x19fa940af80
+  Expression:
+  $1026: DynamicCast to MaterialInstanceDynamic@0x19e4c58b980 of expr:
+  $1035: LocalVariable named CallFunc_Array_Get_Item2@0x19fa940ae80
+$1044: Let (Variable = Expression)
+  Variable:
+  $1053: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fa940b000
+  Expression:
+  $1062: PrimitiveCast type=71
+    Argument:
+    $1064: LocalVariable named K2Node_DynamicCast_AsMaterial_Instance_Dynamic@0x19fa940af80
+$1073: JumpIfNot -> 0x518, cond:
+  $1078: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fa940b000
+$1087: Let (Variable = Expression)
+  Variable:
+  $1096: LocalVariable named CallFunc_Array_Add_ReturnValue@0x19fbd573170
+  Expression:
+  $1105: Context
+    ObjectExpression:
+    $1106: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Add_ReturnValue@0x19fbd573170
+    ContextExpression:
+    $1127: FinalFunction target=Array_Add@0x19e4d366810 (
+      $1136: InstanceVariable named DynamicMaterials@0x19fa940c780
+      $1145: LocalVariable named K2Node_DynamicCast_AsMaterial_Instance_Dynamic@0x19fa940af80
+      $1154: EndFunctionParms
+    )
+$1155: PopExecutionFlow (jump to popped addr)
+$1156: Let (Variable = Expression)
+  Variable:
+  $1165: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19fbd572ed0
+  Expression:
+  $1174: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $1183: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fbd572e60
+    $1192: literal int32 1
+    $1197: EndFunctionParms
+  )
+$1198: Let (Variable = Expression)
+  Variable:
+  $1207: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fbd572e60
+  Expression:
+  $1216: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19fbd572ed0
+$1225: Jump to offset 0x18f
+$1230: Let (Variable = Expression)
+  Variable:
+  $1239: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x19fbd573020
+  Expression:
+  $1248: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $1257: LocalVariable named Temp_int_Loop_Counter_Variable2@0x19fbd572fb0
+    $1266: literal int32 1
+    $1271: EndFunctionParms
+  )
+$1272: Let (Variable = Expression)
+  Variable:
+  $1281: LocalVariable named Temp_int_Loop_Counter_Variable2@0x19fbd572fb0
+  Expression:
+  $1290: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x19fbd573020
+$1299: Jump to offset 0x248
+$1304: Context
+  ObjectExpression:
+  $1305: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $1326: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $1335: LocalVariable named MeshComponentArray@0x19fa940b180
+    $1344: LocalVariable named Temp_int_Array_Index_Variable2@0x19fbd572f40
+    $1353: LocalVariable named CallFunc_Array_Get_Item@0x19fa940ae00
+    $1362: EndFunctionParms
+  )
+$1363: Let (Variable = Expression)
+  Variable:
+  $1372: LocalVariable named CallFunc_GetMaterials_ReturnValue@0x19fa940b380
+  Expression:
+  $1381: Context
+    ObjectExpression:
+    $1382: LocalVariable named CallFunc_Array_Get_Item@0x19fa940ae00
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetMaterials_ReturnValue@0x19fa940b380
+    ContextExpression:
+    $1403: VirtualFunction call "GetMaterials" (
+      $1416: EndFunctionParms
+    )
+$1417: Context
+  ObjectExpression:
+  $1418: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $1439: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $1448: LocalVariable named CallFunc_GetMaterials_ReturnValue@0x19fa940b380
+    $1457: LocalVariable named Temp_int_Array_Index_Variable@0x19fbd572df0
+    $1466: LocalVariable named CallFunc_Array_Get_Item2@0x19fa940ae80
+    $1475: EndFunctionParms
+  )
+$1476: LetObj (Variable = Expression)
+  Variable:
+  $1477: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f47065680
+  Expression:
+  $1486: Context
+    ObjectExpression:
+    $1487: ObjectConst Default__KismetMaterialLibrary@0x19e4d95ec40
+    SkipBytes: 0x14
+    RValueProperty: CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f47065680
+    ContextExpression:
+    $1508: FinalFunction target=CreateDynamicMaterialInstance@0x19e4d36e1e0 (
+      $1517: Self
+      $1518: LocalVariable named CallFunc_Array_Get_Item2@0x19fa940ae80
+      $1527: EndFunctionParms
+    )
+$1528: Context
+  ObjectExpression:
+  $1529: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $1550: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $1559: LocalVariable named MeshComponentArray@0x19fa940b180
+    $1568: LocalVariable named Temp_int_Array_Index_Variable2@0x19fbd572f40
+    $1577: LocalVariable named CallFunc_Array_Get_Item@0x19fa940ae00
+    $1586: EndFunctionParms
+  )
+$1587: Context
+  ObjectExpression:
+  $1588: LocalVariable named CallFunc_Array_Get_Item@0x19fa940ae00
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $1609: VirtualFunction call "SetMaterial" (
+    $1622: LocalVariable named Temp_int_Array_Index_Variable@0x19fbd572df0
+    $1631: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f47065680
+    $1640: EndFunctionParms
+  )
+$1641: Let (Variable = Expression)
+  Variable:
+  $1650: LocalVariable named CallFunc_Array_Add_ReturnValue2@0x19fbd5731e0
+  Expression:
+  $1659: Context
+    ObjectExpression:
+    $1660: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Add_ReturnValue2@0x19fbd5731e0
+    ContextExpression:
+    $1681: FinalFunction target=Array_Add@0x19e4d366810 (
+      $1690: InstanceVariable named DynamicMaterials@0x19fa940c780
+      $1699: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f47065680
+      $1708: EndFunctionParms
+    )
+$1709: PopExecutionFlow (jump to popped addr)
+$1710: Return expression:
+  $1711: Nothing
+$1712: EndOfScript
+
+=== BP_Pendragon_TheAshenDragon_C::fn_idx_9202 (13 bytes) ===
+$0: FinalFunction target=UserConstructionScript@0x19e4cd6c6f0 (
+  $9: EndFunctionParms
+)
+$10: Return expression:
+  $11: Nothing
+$12: EndOfScript
+
+=== BP_Pendragon_TheAshenDragon_C::fn_idx_274997 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Pendragon_TheAshenDragon" (
+  $13: literal int32 3321
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Pendragon_TheAshenDragon_C::fn_idx_274998 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Pendragon_TheAshenDragon" (
+  $13: literal int32 3297
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Pendragon_TheAshenDragon_C::fn_idx_275010 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Pendragon_TheAshenDragon" (
+  $13: literal int32 1382
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Pendragon_TheAshenDragon_C::fn_idx_275011 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Pendragon_TheAshenDragon" (
+  $13: literal int32 207
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Pendragon_TheAshenDragon_C::fn_idx_9152 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Pendragon_TheAshenDragon" (
+  $13: literal int32 2036
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Pendragon_TheAshenDragon_C::fn_idx_13579 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_AudioEvent@0x19fa940b980
+  Expression:
+  $9: LocalVariable named AudioEvent@0x19fa940b500
+$18: VirtualFunction call "ExecuteUbergraph_BP_Pendragon_TheAshenDragon" (
+  $31: literal int32 2432
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Pendragon_TheAshenDragon_C::fn_idx_13578 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Pendragon_TheAshenDragon" (
+  $13: literal int32 2860
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Pendragon_TheAshenDragon_C::fn_idx_275027 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_EventIdx@0x19fbd573870
+  Expression:
+  $9: LocalVariable named EventIdx@0x19fbd573250
+$18: VirtualFunction call "ExecuteUbergraph_BP_Pendragon_TheAshenDragon" (
+  $31: literal int32 2861
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Pendragon_TheAshenDragon_C::fn_idx_275031 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Pendragon_TheAshenDragon" (
+  $13: literal int32 3039
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Pendragon_TheAshenDragon_C::fn_idx_275034 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Pendragon_TheAshenDragon" (
+  $13: literal int32 3154
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Pendragon_TheAshenDragon_C::fn_idx_275036 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Pendragon_TheAshenDragon" (
+  $13: literal int32 3302
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Pendragon_TheAshenDragon_C::fn_idx_275032 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_NewParam3@0x19fa940bf00
+  Expression:
+  $9: LocalVariable named NewParam@0x19fa940b580
+$18: VirtualFunction call "ExecuteUbergraph_BP_Pendragon_TheAshenDragon" (
+  $31: literal int32 3322
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Pendragon_TheAshenDragon_C::fn_idx_9159 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_EndPlayReason@0x19fa940bf80
+  Expression:
+  $9: LocalVariable named EndPlayReason@0x19fa940b600
+$18: VirtualFunction call "ExecuteUbergraph_BP_Pendragon_TheAshenDragon" (
+  $31: literal int32 3327
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Pendragon_TheAshenDragon_C::fn_idx_275035 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_NewParam2@0x19fa940c080
+  Expression:
+  $9: LocalVariable named NewParam@0x19fa940b680
+$18: VirtualFunction call "ExecuteUbergraph_BP_Pendragon_TheAshenDragon" (
+  $31: literal int32 3548
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Pendragon_TheAshenDragon_C::fn_idx_275037 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_NewParam@0x19fa940c100
+  Expression:
+  $9: LocalVariable named NewParam@0x19fa940b700
+$18: VirtualFunction call "ExecuteUbergraph_BP_Pendragon_TheAshenDragon" (
+  $31: literal int32 3553
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Pendragon_TheAshenDragon_C::fn_idx_275017 (3561 bytes) ===
+$0: FlowStack.Push(0xde6)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x19fbd5732c0
+$15: VirtualFunction call "OnRep_IsPendragonVisible" (
+  $28: EndFunctionParms
+)
+$29: PopExecutionFlow (jump to popped addr)
+$30: Context
+  ObjectExpression:
+  $31: InstanceVariable named Mesh@0x19e4d1573e0
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $52: VirtualFunction call "SetHiddenInGame" (
+    $65: False
+    $66: True
+    $67: EndFunctionParms
+  )
+$68: PopExecutionFlow (jump to popped addr)
+$69: LetBool (Variable = Expression)
+  Variable:
+  $70: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue@0x19fa940b780
+  Expression:
+  $79: FinalFunction target=FlushNetDormancy@0x19e4cd61090 (
+    $88: EndFunctionParms
+  )
+$89: LetBool (Variable = Expression)
+  Variable:
+  $90: InstanceVariable named IsPendragonVisible@0x19fa940c680
+  Expression:
+  $99: True
+$100: Jump to offset 0xf
+$105: VirtualFunction call "OnRep_IsPendragonVisible" (
+  $118: EndFunctionParms
+)
+$119: PopExecutionFlow (jump to popped addr)
+$120: LetBool (Variable = Expression)
+  Variable:
+  $121: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue2@0x19fa940b800
+  Expression:
+  $130: FinalFunction target=FlushNetDormancy@0x19e4cd61090 (
+    $139: EndFunctionParms
+  )
+$140: LetBool (Variable = Expression)
+  Variable:
+  $141: InstanceVariable named IsPendragonVisible@0x19fa940c680
+  Expression:
+  $150: False
+$151: Jump to offset 0x69
+$156: VirtualFunction call "OnRep_IsPendragonVisible" (
+  $169: EndFunctionParms
+)
+$170: PopExecutionFlow (jump to popped addr)
+$171: LetBool (Variable = Expression)
+  Variable:
+  $172: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue3@0x19fa940b880
+  Expression:
+  $181: FinalFunction target=FlushNetDormancy@0x19e4cd61090 (
+    $190: EndFunctionParms
+  )
+$191: LetBool (Variable = Expression)
+  Variable:
+  $192: InstanceVariable named IsPendragonVisible@0x19fa940c680
+  Expression:
+  $201: False
+$202: Jump to offset 0x9c
+$207: Let (Variable = Expression)
+  Variable:
+  $216: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fbd5733a0
+  Expression:
+  $225: literal int32 0
+$230: Let (Variable = Expression)
+  Variable:
+  $239: LocalVariable named Temp_int_Array_Index_Variable2@0x19fbd573480
+  Expression:
+  $248: literal int32 0
+$253: Let (Variable = Expression)
+  Variable:
+  $262: LocalVariable named CallFunc_Array_Length_ReturnValue2@0x19fbd5739c0
+  Expression:
+  $271: Context
+    ObjectExpression:
+    $272: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue2@0x19fbd5739c0
+    ContextExpression:
+    $293: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $302: InstanceVariable named DynamicMaterials@0x19fa940c780
+      $311: EndFunctionParms
+    )
+$312: LetBool (Variable = Expression)
+  Variable:
+  $313: LocalVariable named CallFunc_Less_IntInt_ReturnValue2@0x19fa940bd00
+  Expression:
+  $322: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $331: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fbd5733a0
+    $340: LocalVariable named CallFunc_Array_Length_ReturnValue2@0x19fbd5739c0
+    $349: EndFunctionParms
+  )
+$350: PopExecutionFlowIfNot, cond:
+$351: LocalVariable named CallFunc_Less_IntInt_ReturnValue2@0x19fa940bd00
+$360: Let (Variable = Expression)
+  Variable:
+  $369: LocalVariable named Temp_int_Array_Index_Variable2@0x19fbd573480
+  Expression:
+  $378: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fbd5733a0
+$387: FlowStack.Push(0x2dc)
+$392: Context
+  ObjectExpression:
+  $393: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $414: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $423: InstanceVariable named DynamicMaterials@0x19fa940c780
+    $432: LocalVariable named Temp_int_Array_Index_Variable2@0x19fbd573480
+    $441: LocalVariable named CallFunc_Array_Get_Item3@0x19fa940bc80
+    $450: EndFunctionParms
+  )
+$451: Context
+  ObjectExpression:
+  $452: LocalVariable named CallFunc_Array_Get_Item3@0x19fa940bc80
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $473: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $482: literal name "EffectScale"
+    $495: InstanceVariable named Disappear_EffectScale_73E41D3145BBED2FBE43449A14AE6B5E@0x19fbd573db0
+    $504: EndFunctionParms
+  )
+$505: Context
+  ObjectExpression:
+  $506: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $527: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $536: InstanceVariable named DynamicMaterials@0x19fa940c780
+    $545: LocalVariable named Temp_int_Array_Index_Variable2@0x19fbd573480
+    $554: LocalVariable named CallFunc_Array_Get_Item3@0x19fa940bc80
+    $563: EndFunctionParms
+  )
+$564: Context
+  ObjectExpression:
+  $565: LocalVariable named CallFunc_Array_Get_Item3@0x19fa940bc80
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $586: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $595: literal name "GhostOpacity"
+    $608: InstanceVariable named Disappear_GhostOpacity_73E41D3145BBED2FBE43449A14AE6B5E@0x19fbd573cd0
+    $617: EndFunctionParms
+  )
+$618: Context
+  ObjectExpression:
+  $619: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $640: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $649: InstanceVariable named DynamicMaterials@0x19fa940c780
+    $658: LocalVariable named Temp_int_Array_Index_Variable2@0x19fbd573480
+    $667: LocalVariable named CallFunc_Array_Get_Item3@0x19fa940bc80
+    $676: EndFunctionParms
+  )
+$677: Context
+  ObjectExpression:
+  $678: LocalVariable named CallFunc_Array_Get_Item3@0x19fa940bc80
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $699: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $708: literal name "GhostBloom"
+    $721: InstanceVariable named Disappear_GhostBloom_73E41D3145BBED2FBE43449A14AE6B5E@0x19fbd573d40
+    $730: EndFunctionParms
+  )
+$731: PopExecutionFlow (jump to popped addr)
+$732: Let (Variable = Expression)
+  Variable:
+  $741: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19fbd573410
+  Expression:
+  $750: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $759: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fbd5733a0
+    $768: literal int32 1
+    $773: EndFunctionParms
+  )
+$774: Let (Variable = Expression)
+  Variable:
+  $783: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fbd5733a0
+  Expression:
+  $792: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19fbd573410
+$801: Jump to offset 0xfd
+$806: Let (Variable = Expression)
+  Variable:
+  $815: LocalVariable named Temp_int_Array_Index_Variable@0x19fbd573330
+  Expression:
+  $824: literal int32 0
+$829: Let (Variable = Expression)
+  Variable:
+  $838: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fbd573950
+  Expression:
+  $847: Context
+    ObjectExpression:
+    $848: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19fbd573950
+    ContextExpression:
+    $869: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $878: InstanceVariable named DynamicMaterials@0x19fa940c780
+      $887: EndFunctionParms
+    )
+$888: LetBool (Variable = Expression)
+  Variable:
+  $889: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19fa940bc00
+  Expression:
+  $898: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $907: LocalVariable named Temp_int_Loop_Counter_Variable3@0x19fbd573640
+    $916: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fbd573950
+    $925: EndFunctionParms
+  )
+$926: PopExecutionFlowIfNot, cond:
+$927: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19fa940bc00
+$936: Let (Variable = Expression)
+  Variable:
+  $945: LocalVariable named Temp_int_Array_Index_Variable@0x19fbd573330
+  Expression:
+  $954: LocalVariable named Temp_int_Loop_Counter_Variable3@0x19fbd573640
+$963: FlowStack.Push(0x51c)
+$968: Context
+  ObjectExpression:
+  $969: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $990: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $999: InstanceVariable named DynamicMaterials@0x19fa940c780
+    $1008: LocalVariable named Temp_int_Array_Index_Variable@0x19fbd573330
+    $1017: LocalVariable named CallFunc_Array_Get_Item2@0x19fa940bb80
+    $1026: EndFunctionParms
+  )
+$1027: Context
+  ObjectExpression:
+  $1028: LocalVariable named CallFunc_Array_Get_Item2@0x19fa940bb80
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $1049: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $1058: literal name "EffectScale"
+    $1071: InstanceVariable named Appear_EffectScale_F14087FF497F980C08B16FB24FDA4A12@0x19fbd573c60
+    $1080: EndFunctionParms
+  )
+$1081: Context
+  ObjectExpression:
+  $1082: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $1103: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $1112: InstanceVariable named DynamicMaterials@0x19fa940c780
+    $1121: LocalVariable named Temp_int_Array_Index_Variable@0x19fbd573330
+    $1130: LocalVariable named CallFunc_Array_Get_Item2@0x19fa940bb80
+    $1139: EndFunctionParms
+  )
+$1140: Context
+  ObjectExpression:
+  $1141: LocalVariable named CallFunc_Array_Get_Item2@0x19fa940bb80
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $1162: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $1171: literal name "GhostOpacity"
+    $1184: InstanceVariable named Appear_GhostOpacity_F14087FF497F980C08B16FB24FDA4A12@0x19fbd573bf0
+    $1193: EndFunctionParms
+  )
+$1194: Context
+  ObjectExpression:
+  $1195: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $1216: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $1225: InstanceVariable named DynamicMaterials@0x19fa940c780
+    $1234: LocalVariable named Temp_int_Array_Index_Variable@0x19fbd573330
+    $1243: LocalVariable named CallFunc_Array_Get_Item2@0x19fa940bb80
+    $1252: EndFunctionParms
+  )
+$1253: Context
+  ObjectExpression:
+  $1254: LocalVariable named CallFunc_Array_Get_Item2@0x19fa940bb80
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $1275: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $1284: literal name "GhostBloom"
+    $1297: InstanceVariable named Appear_GhostBloom_F14087FF497F980C08B16FB24FDA4A12@0x19fbd573b80
+    $1306: EndFunctionParms
+  )
+$1307: PopExecutionFlow (jump to popped addr)
+$1308: Let (Variable = Expression)
+  Variable:
+  $1317: LocalVariable named CallFunc_Add_IntInt_ReturnValue3@0x19fbd5736b0
+  Expression:
+  $1326: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $1335: LocalVariable named Temp_int_Loop_Counter_Variable3@0x19fbd573640
+    $1344: literal int32 1
+    $1349: EndFunctionParms
+  )
+$1350: Let (Variable = Expression)
+  Variable:
+  $1359: LocalVariable named Temp_int_Loop_Counter_Variable3@0x19fbd573640
+  Expression:
+  $1368: LocalVariable named CallFunc_Add_IntInt_ReturnValue3@0x19fbd5736b0
+$1377: Jump to offset 0x33d
+$1382: PopExecutionFlow (jump to popped addr)
+$1383: Context
+  ObjectExpression:
+  $1384: InstanceVariable named Appear@0x19fa940c380
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $1405: FinalFunction target=PlayFromStart@0x19e4d34f110 (
+    $1414: EndFunctionParms
+  )
+$1415: PopExecutionFlow (jump to popped addr)
+$1416: FlowStack.Push(0x6d5)
+$1421: Context
+  ObjectExpression:
+  $1422: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $1443: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $1452: InstanceVariable named DynamicMaterials@0x19fa940c780
+    $1461: LocalVariable named Temp_int_Array_Index_Variable3@0x19fbd5735d0
+    $1470: LocalVariable named CallFunc_Array_Get_Item4@0x19fa940bd80
+    $1479: EndFunctionParms
+  )
+$1480: Context
+  ObjectExpression:
+  $1481: LocalVariable named CallFunc_Array_Get_Item4@0x19fa940bd80
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $1502: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $1511: literal name "EffectScale"
+    $1524: literal float 0
+    $1529: EndFunctionParms
+  )
+$1530: Context
+  ObjectExpression:
+  $1531: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $1552: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $1561: InstanceVariable named DynamicMaterials@0x19fa940c780
+    $1570: LocalVariable named Temp_int_Array_Index_Variable3@0x19fbd5735d0
+    $1579: LocalVariable named CallFunc_Array_Get_Item4@0x19fa940bd80
+    $1588: EndFunctionParms
+  )
+$1589: Context
+  ObjectExpression:
+  $1590: LocalVariable named CallFunc_Array_Get_Item4@0x19fa940bd80
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $1611: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $1620: literal name "GhostOpacity"
+    $1633: literal float 0
+    $1638: EndFunctionParms
+  )
+$1639: Context
+  ObjectExpression:
+  $1640: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $1661: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $1670: InstanceVariable named DynamicMaterials@0x19fa940c780
+    $1679: LocalVariable named Temp_int_Array_Index_Variable3@0x19fbd5735d0
+    $1688: LocalVariable named CallFunc_Array_Get_Item4@0x19fa940bd80
+    $1697: EndFunctionParms
+  )
+$1698: Context
+  ObjectExpression:
+  $1699: LocalVariable named CallFunc_Array_Get_Item4@0x19fa940bd80
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $1720: FinalFunction target=SetScalarParameterValue@0x19e4d3d4620 (
+    $1729: literal name "GhostBloom"
+    $1742: literal float 0
+    $1747: EndFunctionParms
+  )
+$1748: PopExecutionFlow (jump to popped addr)
+$1749: Let (Variable = Expression)
+  Variable:
+  $1758: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x19fbd573560
+  Expression:
+  $1767: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $1776: LocalVariable named Temp_int_Loop_Counter_Variable2@0x19fbd5734f0
+    $1785: literal int32 1
+    $1790: EndFunctionParms
+  )
+$1791: Let (Variable = Expression)
+  Variable:
+  $1800: LocalVariable named Temp_int_Loop_Counter_Variable2@0x19fbd5734f0
+  Expression:
+  $1809: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x19fbd573560
+$1818: Let (Variable = Expression)
+  Variable:
+  $1827: LocalVariable named CallFunc_Array_Length_ReturnValue3@0x19fbd573a30
+  Expression:
+  $1836: Context
+    ObjectExpression:
+    $1837: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue3@0x19fbd573a30
+    ContextExpression:
+    $1858: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $1867: InstanceVariable named DynamicMaterials@0x19fa940c780
+      $1876: EndFunctionParms
+    )
+$1877: LetBool (Variable = Expression)
+  Variable:
+  $1878: LocalVariable named CallFunc_Less_IntInt_ReturnValue3@0x19fa940be00
+  Expression:
+  $1887: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $1896: LocalVariable named Temp_int_Loop_Counter_Variable2@0x19fbd5734f0
+    $1905: LocalVariable named CallFunc_Array_Length_ReturnValue3@0x19fbd573a30
+    $1914: EndFunctionParms
+  )
+$1915: PopExecutionFlowIfNot, cond:
+$1916: LocalVariable named CallFunc_Less_IntInt_ReturnValue3@0x19fa940be00
+$1925: Let (Variable = Expression)
+  Variable:
+  $1934: LocalVariable named Temp_int_Array_Index_Variable3@0x19fbd5735d0
+  Expression:
+  $1943: LocalVariable named Temp_int_Loop_Counter_Variable2@0x19fbd5734f0
+$1952: Jump to offset 0x588
+$1957: Let (Variable = Expression)
+  Variable:
+  $1966: LocalVariable named Temp_int_Loop_Counter_Variable2@0x19fbd5734f0
+  Expression:
+  $1975: literal int32 0
+$1980: Let (Variable = Expression)
+  Variable:
+  $1989: LocalVariable named Temp_int_Array_Index_Variable3@0x19fbd5735d0
+  Expression:
+  $1998: literal int32 0
+$2003: Jump to offset 0x71a
+$2008: Let (Variable = Expression)
+  Variable:
+  $2017: LocalVariable named Temp_int_Loop_Counter_Variable3@0x19fbd573640
+  Expression:
+  $2026: literal int32 0
+$2031: Jump to offset 0x326
+$2036: FinalFunction target=ReceiveBeginPlay@0x19e4cd69f70 (
+  $2045: EndFunctionParms
+)
+$2046: Let (Variable = Expression)
+  Variable:
+  $2055: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fa940be80
+  Expression:
+  $2064: Context
+    ObjectExpression:
+    $2065: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fa940be80
+    ContextExpression:
+    $2086: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x19e4d410390 (
+      $2095: Self
+      $2096: EndFunctionParms
+    )
+$2097: Context
+  ObjectExpression:
+  $2098: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x3c
+  RValueProperty: (null)
+  ContextExpression:
+  $2119: FinalFunction target=RegisterEventFromHandle@0x19e4d410c00 (
+    $2128: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fa940be80
+    $2137: InstanceVariable named PendragonAppearEventHandle@0x19fa940c500
+    $2146: Self
+    $2147: literal ansi string "PendragonAppearEvent"
+    $2169: ObjectConst PendragonAppearEvent@0x19fbae48f40
+    $2178: EndFunctionParms
+  )
+$2179: Context
+  ObjectExpression:
+  $2180: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x3f
+  RValueProperty: (null)
+  ContextExpression:
+  $2201: FinalFunction target=RegisterEventFromHandle@0x19e4d410c00 (
+    $2210: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fa940be80
+    $2219: InstanceVariable named Pendragon Disappear Event Handle@0x19fa940c580
+    $2228: Self
+    $2229: literal ansi string "PendragonDisappearEvent"
+    $2254: ObjectConst PendragonDisappearEvent@0x19fbae48a00
+    $2263: EndFunctionParms
+  )
+$2264: Context
+  ObjectExpression:
+  $2265: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x3c
+  RValueProperty: (null)
+  ContextExpression:
+  $2286: FinalFunction target=RegisterEventFromHandle@0x19e4d410c00 (
+    $2295: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fa940be80
+    $2304: InstanceVariable named Pendragon Hidden Event Handle@0x19fa940c600
+    $2313: Self
+    $2314: literal ansi string "PendragonHiddenEvent"
+    $2336: ObjectConst PendragonHiddenEvent@0x19fbae487c0
+    $2345: EndFunctionParms
+  )
+$2346: JumpIfNot -> 0x96d, cond:
+  $2351: InstanceVariable named IsPendragonVisible@0x19fa940c680
+$2360: Context
+  ObjectExpression:
+  $2361: InstanceVariable named Mesh@0x19e4d1573e0
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $2382: VirtualFunction call "SetHiddenInGame" (
+    $2395: False
+    $2396: True
+    $2397: EndFunctionParms
+  )
+$2398: VirtualFunction call "PendragonAppear" (
+  $2411: EndFunctionParms
+)
+$2412: PopExecutionFlow (jump to popped addr)
+$2413: VirtualFunction call "PendragonHidden" (
+  $2426: EndFunctionParms
+)
+$2427: Jump to offset 0x1e
+$2432: Let (Variable = Expression)
+  Variable:
+  $2441: LocalVariable named CallFunc_Array_Find_ReturnValue@0x19fbd573800
+  Expression:
+  $2450: Context
+    ObjectExpression:
+    $2451: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Find_ReturnValue@0x19fbd573800
+    ContextExpression:
+    $2472: FinalFunction target=Array_Find@0x19e4d367420 (
+      $2481: InstanceVariable named AudioEvents@0x19fa940c880
+      $2490: LocalVariable named K2Node_Event_AudioEvent@0x19fa940b980
+      $2499: EndFunctionParms
+    )
+$2500: LetBool (Variable = Expression)
+  Variable:
+  $2501: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fa940ba00
+  Expression:
+  $2510: CallMath target=Greater_IntInt@0x19e4d382770 (
+    $2519: LocalVariable named CallFunc_Array_Find_ReturnValue@0x19fbd573800
+    $2528: literal int32 -1
+    $2533: EndFunctionParms
+  )
+$2534: JumpIfNot -> 0xa50, cond:
+  $2539: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fa940ba00
+$2548: Let (Variable = Expression)
+  Variable:
+  $2557: LocalVariable named CallFunc_Array_Find_ReturnValue@0x19fbd573800
+  Expression:
+  $2566: Context
+    ObjectExpression:
+    $2567: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Find_ReturnValue@0x19fbd573800
+    ContextExpression:
+    $2588: FinalFunction target=Array_Find@0x19e4d367420 (
+      $2597: InstanceVariable named AudioEvents@0x19fa940c880
+      $2606: LocalVariable named K2Node_Event_AudioEvent@0x19fa940b980
+      $2615: EndFunctionParms
+    )
+$2616: VirtualFunction call "Multicast_TriggerAudioEvent" (
+  $2629: LocalVariable named CallFunc_Array_Find_ReturnValue@0x19fbd573800
+  $2638: EndFunctionParms
+)
+$2639: PopExecutionFlow (jump to popped addr)
+$2640: Let (Variable = Expression)
+  Variable:
+  $2649: LocalVariable named CallFunc_GetObjectName_ReturnValue@0x19fbd573720
+  Expression:
+  $2658: Context
+    ObjectExpression:
+    $2659: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectName_ReturnValue@0x19fbd573720
+    ContextExpression:
+    $2680: FinalFunction target=GetObjectName@0x19e4cd8cd40 (
+      $2689: LocalVariable named K2Node_Event_AudioEvent@0x19fa940b980
+      $2698: EndFunctionParms
+    )
+$2699: Let (Variable = Expression)
+  Variable:
+  $2708: LocalVariable named CallFunc_Concat_StrStr_ReturnValue@0x19fbd573790
+  Expression:
+  $2717: Context
+    ObjectExpression:
+    $2718: ObjectConst Default__KismetStringLibrary@0x19e4d95ecd0
+    SkipBytes: 0x25
+    RValueProperty: CallFunc_Concat_StrStr_ReturnValue@0x19fbd573790
+    ContextExpression:
+    $2739: FinalFunction target=Concat_StrStr@0x19e4d3a1520 (
+      $2748: literal ansi string "Could not find: "
+      $2766: LocalVariable named CallFunc_GetObjectName_ReturnValue@0x19fbd573720
+      $2775: EndFunctionParms
+    )
+$2776: Context
+  ObjectExpression:
+  $2777: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x3d
+  RValueProperty: (null)
+  ContextExpression:
+  $2798: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $2807: Self
+    $2808: LocalVariable named CallFunc_Concat_StrStr_ReturnValue@0x19fbd573790
+    $2817: True
+    $2818: True
+    $2819: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $2832: literal float 1
+      $2837: literal float 0
+      $2842: literal float 0
+      $2847: literal float 1
+      $2852: EndStructConst
+    $2853: literal float 5
+    $2858: EndFunctionParms
+  )
+$2859: PopExecutionFlow (jump to popped addr)
+$2860: PopExecutionFlow (jump to popped addr)
+$2861: Context
+  ObjectExpression:
+  $2862: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $2883: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $2892: InstanceVariable named AudioEvents@0x19fa940c880
+    $2901: LocalVariable named K2Node_CustomEvent_EventIdx@0x19fbd573870
+    $2910: LocalVariable named CallFunc_Array_Get_Item@0x19fa940ba80
+    $2919: EndFunctionParms
+  )
+$2920: Let (Variable = Expression)
+  Variable:
+  $2929: LocalVariable named CallFunc_WwiseEmitterPostEvent_ReturnValue@0x19fbd5738e0
+  Expression:
+  $2938: Context
+    ObjectExpression:
+    $2939: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x19e4d9e1550
+    SkipBytes: 0x4e
+    RValueProperty: CallFunc_WwiseEmitterPostEvent_ReturnValue@0x19fbd5738e0
+    ContextExpression:
+    $2960: FinalFunction target=WwiseEmitterPostEvent@0x19e4d3ff260 (
+      $2969: Context
+        ObjectExpression:
+        $2970: InstanceVariable named AnimNotifyWwiseEmitter@0x19fa940c280
+        SkipBytes: 0x9
+        RValueProperty: Emitter@0x19e4d0931d0
+        ContextExpression:
+        $2991: InstanceVariable named Emitter@0x19e4d0931d0
+      $3000: LocalVariable named CallFunc_Array_Get_Item@0x19fa940ba80
+      $3009: literal byte 2
+      $3011: literal name "None"
+      $3024: literal name "None"
+      $3037: EndFunctionParms
+    )
+$3038: PopExecutionFlow (jump to popped addr)
+$3039: Let (Variable = Expression)
+  Variable:
+  $3048: LocalVariable named CallFunc_WwiseEmitterComponentPostEvent_ReturnValue2@0x19fbd573b10
+  Expression:
+  $3057: Context
+    ObjectExpression:
+    $3058: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x19e4d9e1550
+    SkipBytes: 0x38
+    RValueProperty: CallFunc_WwiseEmitterComponentPostEvent_ReturnValue2@0x19fbd573b10
+    ContextExpression:
+    $3079: FinalFunction target=WwiseEmitterComponentPostEvent@0x19e4d3fdca0 (
+      $3088: InstanceVariable named AnimNotifyWwiseEmitter@0x19fa940c280
+      $3097: ObjectConst Play_sfx_anim_pendragon_appears@0x19f84cf8e30
+      $3106: literal byte 2
+      $3108: literal name "None"
+      $3121: literal name "None"
+      $3134: EndFunctionParms
+    )
+$3135: VirtualFunction call "CollectMaterials" (
+  $3148: EndFunctionParms
+)
+$3149: Jump to offset 0x567
+$3154: Let (Variable = Expression)
+  Variable:
+  $3163: LocalVariable named CallFunc_WwiseEmitterComponentPostEvent_ReturnValue@0x19fbd573aa0
+  Expression:
+  $3172: Context
+    ObjectExpression:
+    $3173: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x19e4d9e1550
+    SkipBytes: 0x38
+    RValueProperty: CallFunc_WwiseEmitterComponentPostEvent_ReturnValue@0x19fbd573aa0
+    ContextExpression:
+    $3194: FinalFunction target=WwiseEmitterComponentPostEvent@0x19e4d3fdca0 (
+      $3203: InstanceVariable named AnimNotifyWwiseEmitter@0x19fa940c280
+      $3212: ObjectConst Play_sfx_anim_pendragon_disappears@0x19f8e952800
+      $3221: literal byte 2
+      $3223: literal name "None"
+      $3236: literal name "None"
+      $3249: EndFunctionParms
+    )
+$3250: VirtualFunction call "CollectMaterials" (
+  $3263: EndFunctionParms
+)
+$3264: Context
+  ObjectExpression:
+  $3265: InstanceVariable named Disappear@0x19fa940c480
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $3286: FinalFunction target=PlayFromStart@0x19e4d34f110 (
+    $3295: EndFunctionParms
+  )
+$3296: PopExecutionFlow (jump to popped addr)
+$3297: Jump to offset 0x7d8
+$3302: VirtualFunction call "CollectMaterials" (
+  $3315: EndFunctionParms
+)
+$3316: Jump to offset 0x7a5
+$3321: PopExecutionFlow (jump to popped addr)
+$3322: Jump to offset 0x45
+$3327: FinalFunction target=ReceiveEndPlay@0x19e4cd6a0f0 (
+  $3336: LocalVariable named K2Node_Event_EndPlayReason@0x19fa940bf80
+  $3345: EndFunctionParms
+)
+$3346: Let (Variable = Expression)
+  Variable:
+  $3355: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x19fa940c000
+  Expression:
+  $3364: Context
+    ObjectExpression:
+    $3365: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x19fa940c000
+    ContextExpression:
+    $3386: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x19e4d410390 (
+      $3395: Self
+      $3396: EndFunctionParms
+    )
+$3397: Context
+  ObjectExpression:
+  $3398: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $3419: FinalFunction target=UnregisterEventFromHandle@0x19e4d411420 (
+    $3428: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x19fa940c000
+    $3437: InstanceVariable named PendragonAppearEventHandle@0x19fa940c500
+    $3446: EndFunctionParms
+  )
+$3447: Context
+  ObjectExpression:
+  $3448: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $3469: FinalFunction target=UnregisterEventFromHandle@0x19e4d411420 (
+    $3478: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x19fa940c000
+    $3487: InstanceVariable named Pendragon Disappear Event Handle@0x19fa940c580
+    $3496: EndFunctionParms
+  )
+$3497: Context
+  ObjectExpression:
+  $3498: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $3519: FinalFunction target=UnregisterEventFromHandle@0x19e4d411420 (
+    $3528: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x19fa940c000
+    $3537: InstanceVariable named Pendragon Hidden Event Handle@0x19fa940c600
+    $3546: EndFunctionParms
+  )
+$3547: PopExecutionFlow (jump to popped addr)
+$3548: Jump to offset 0x78
+$3553: Jump to offset 0xab
+$3558: Return expression:
+  $3559: Nothing
+$3560: EndOfScript

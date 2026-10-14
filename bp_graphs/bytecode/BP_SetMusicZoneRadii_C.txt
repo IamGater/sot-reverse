@@ -1,0 +1,416 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Generic/bp_setmusiczoneradii -> BP_SetMusicZoneRadii_C
+
+=== BP_SetMusicZoneRadii_C::fn_idx_282617 (191 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x19fcbb48800
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__GameplayStatics@0x19e4d95eb20
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetObjectClass_ReturnValue@0x19fcbb48800
+    ContextExpression:
+    $32: FinalFunction target=GetObjectClass@0x19e4d35dd20 (
+      $41: Self
+      $42: EndFunctionParms
+    )
+$43: Let (Variable = Expression)
+  Variable:
+  $52: LocalVariable named CallFunc_GetClassDisplayName_ReturnValue@0x19fcdbb9680
+  Expression:
+  $61: Context
+    ObjectExpression:
+    $62: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetClassDisplayName_ReturnValue@0x19fcdbb9680
+    ContextExpression:
+    $83: FinalFunction target=GetClassDisplayName@0x19e4cd8bf90 (
+      $92: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x19fcbb48800
+      $101: EndFunctionParms
+    )
+$102: Let (Variable = Expression)
+  Variable:
+  $111: LocalVariable named CallFunc_Conv_StringToText_ReturnValue@0x19fcdbb96f0
+  Expression:
+  $120: Context
+    ObjectExpression:
+    $121: ObjectConst Default__KismetTextLibrary@0x19e4d95ed30
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Conv_StringToText_ReturnValue@0x19fcdbb96f0
+    ContextExpression:
+    $142: FinalFunction target=Conv_StringToText@0x19e4d3a9840 (
+      $151: LocalVariable named CallFunc_GetClassDisplayName_ReturnValue@0x19fcdbb9680
+      $160: EndFunctionParms
+    )
+$161: Let (Variable = Expression)
+  Variable:
+  $170: LocalOutVariable named Name@0x19fcdbb9610
+  Expression:
+  $179: LocalVariable named CallFunc_Conv_StringToText_ReturnValue@0x19fcdbb96f0
+$188: Return expression:
+  $189: Nothing
+$190: EndOfScript
+
+=== BP_SetMusicZoneRadii_C::fn_idx_1698 (1701 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fcbb48a80
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19fcbb48a80
+    ContextExpression:
+    $32: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $41: LocalVariable named idx:282618@0x19fcbb48880
+      $50: EndFunctionParms
+    )
+$51: JumpIfNot -> 0x23c, cond:
+  $56: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fcbb48a80
+$65: Let (Variable = Expression)
+  Variable:
+  $74: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fcbb48f80
+  Expression:
+  $83: Context
+    ObjectExpression:
+    $84: LocalVariable named idx:282618@0x19fcbb48880
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetComponentsByClass_ReturnValue@0x19fcbb48f80
+    ContextExpression:
+    $105: FinalFunction target=GetComponentsByClass@0x19e4cd626c0 (
+      $114: ObjectConst MusicZoneComponent@0x19e4c6cab80
+      $123: EndFunctionParms
+    )
+$124: Let (Variable = Expression)
+  Variable:
+  $133: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fcdbb9a00
+  Expression:
+  $142: Context
+    ObjectExpression:
+    $143: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19fcdbb9a00
+    ContextExpression:
+    $164: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $173: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fcbb48f80
+      $182: EndFunctionParms
+    )
+$183: LetBool (Variable = Expression)
+  Variable:
+  $184: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fcbb48b80
+  Expression:
+  $193: CallMath target=Greater_IntInt@0x19e4d382770 (
+    $202: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fcdbb9a00
+    $211: literal int32 0
+    $216: EndFunctionParms
+  )
+$217: JumpIfNot -> 0x46c, cond:
+  $222: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fcbb48b80
+$231: Let (Variable = Expression)
+  Variable:
+  $240: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fcbb48f80
+  Expression:
+  $249: Context
+    ObjectExpression:
+    $250: LocalVariable named idx:282618@0x19fcbb48880
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetComponentsByClass_ReturnValue@0x19fcbb48f80
+    ContextExpression:
+    $271: FinalFunction target=GetComponentsByClass@0x19e4cd626c0 (
+      $280: ObjectConst MusicZoneComponent@0x19e4c6cab80
+      $289: EndFunctionParms
+    )
+$290: Context
+  ObjectExpression:
+  $291: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $312: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $321: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fcbb48f80
+    $330: literal int32 0
+    $335: LocalVariable named CallFunc_Array_Get_Item@0x19fcbb48b00
+    $344: EndFunctionParms
+  )
+$345: Let (Variable = Expression)
+  Variable:
+  $354: Context
+    ObjectExpression:
+    $355: LocalVariable named CallFunc_Array_Get_Item@0x19fcbb48b00
+    SkipBytes: 0x9
+    RValueProperty: InnerRadius@0x19e4d4aefb0
+    ContextExpression:
+    $376: InstanceVariable named InnerRadius@0x19e4d4aefb0
+  Expression:
+  $385: LocalVariable named InnerRadius@0x19fcdbb9760
+$394: Let (Variable = Expression)
+  Variable:
+  $403: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fcbb48f80
+  Expression:
+  $412: Context
+    ObjectExpression:
+    $413: LocalVariable named idx:282618@0x19fcbb48880
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetComponentsByClass_ReturnValue@0x19fcbb48f80
+    ContextExpression:
+    $434: FinalFunction target=GetComponentsByClass@0x19e4cd626c0 (
+      $443: ObjectConst MusicZoneComponent@0x19e4c6cab80
+      $452: EndFunctionParms
+    )
+$453: Context
+  ObjectExpression:
+  $454: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $475: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $484: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19fcbb48f80
+    $493: literal int32 0
+    $498: LocalVariable named CallFunc_Array_Get_Item@0x19fcbb48b00
+    $507: EndFunctionParms
+  )
+$508: Let (Variable = Expression)
+  Variable:
+  $517: Context
+    ObjectExpression:
+    $518: LocalVariable named CallFunc_Array_Get_Item@0x19fcbb48b00
+    SkipBytes: 0x9
+    RValueProperty: OuterRadius@0x19e4d4aef40
+    ContextExpression:
+    $539: InstanceVariable named OuterRadius@0x19e4d4aef40
+  Expression:
+  $548: LocalVariable named OuterRadius@0x19fcdbb97d0
+$557: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $566: EndFunctionParms
+)
+$567: Jump to offset 0x6a2
+$572: Let (Variable = Expression)
+  Variable:
+  $581: LocalVariable named CallFunc_GetDisplayName_ReturnValue@0x19fcdbb9840
+  Expression:
+  $590: Context
+    ObjectExpression:
+    $591: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetDisplayName_ReturnValue@0x19fcdbb9840
+    ContextExpression:
+    $612: FinalFunction target=GetDisplayName@0x19e4cd8c3f0 (
+      $621: LocalVariable named idx:282618@0x19fcbb48880
+      $630: EndFunctionParms
+    )
+$631: Let (Variable = Expression)
+  Variable:
+  $640: LocalVariable named CallFunc_Conv_StringToText_ReturnValue@0x19fcdbb9920
+  Expression:
+  $649: Context
+    ObjectExpression:
+    $650: ObjectConst Default__KismetTextLibrary@0x19e4d95ed30
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Conv_StringToText_ReturnValue@0x19fcdbb9920
+    ContextExpression:
+    $671: FinalFunction target=Conv_StringToText@0x19e4d3a9840 (
+      $680: LocalVariable named CallFunc_GetDisplayName_ReturnValue@0x19fcdbb9840
+      $689: EndFunctionParms
+    )
+$690: Let (Variable = Expression)
+  Variable:
+  $699: StructMemberContext prop=ArgumentName@0x19e4cf5f720
+    Expression to struct:
+    $708: LocalVariable named UniqueObjectNameForCooking_FormatTextArgument@0x19fcbb48980
+  Expression:
+  $717: literal text (not decoded)
+$718: literal ansi string "0"
+$721: literal ansi string ""
+$723: literal ansi string ""
+$725: Let (Variable = Expression)
+  Variable:
+  $734: StructMemberContext prop=TextValue@0x19e4cf5f6b0
+    Expression to struct:
+    $743: LocalVariable named UniqueObjectNameForCooking_FormatTextArgument@0x19fcbb48980
+  Expression:
+  $752: LocalVariable named CallFunc_Conv_StringToText_ReturnValue@0x19fcdbb9920
+$761: VirtualFunction call "idx:282617" (
+  $774: LocalVariable named idx:282615@0x19fcdbb9f40
+  $783: EndFunctionParms
+)
+$784: Let (Variable = Expression)
+  Variable:
+  $793: StructMemberContext prop=ArgumentName@0x19e4cf5f720
+    Expression to struct:
+    $802: LocalVariable named idx:282619@0x19fcbb48c80
+  Expression:
+  $811: literal text (not decoded)
+$812: literal ansi string "1"
+$815: literal ansi string ""
+$817: literal ansi string ""
+$819: Let (Variable = Expression)
+  Variable:
+  $828: StructMemberContext prop=TextValue@0x19e4cf5f6b0
+    Expression to struct:
+    $837: LocalVariable named idx:282619@0x19fcbb48c80
+  Expression:
+  $846: LocalVariable named idx:282615@0x19fcdbb9f40
+$855: SetArray
+  $856: LocalVariable named UniqueObjectNameForCooking_Array2@0x19fcbb48d80
+  $865: LocalVariable named UniqueObjectNameForCooking_FormatTextArgument@0x19fcbb48980
+  $874: LocalVariable named idx:282619@0x19fcbb48c80
+  $883: EndArray
+$884: Let (Variable = Expression)
+  Variable:
+  $893: LocalVariable named CallFunc_Format_ReturnValue2@0x19fcdbb9c30
+  Expression:
+  $902: Context
+    ObjectExpression:
+    $903: ObjectConst Default__KismetTextLibrary@0x19e4d95ed30
+    SkipBytes: 0x6e
+    RValueProperty: CallFunc_Format_ReturnValue2@0x19fcdbb9c30
+    ContextExpression:
+    $924: FinalFunction target=Format@0x19e4d3aa250 (
+      $933: literal text (not decoded)
+      $934: literal ansi string "Given Music Zone Actor [{0}] is Null in {1}!"
+      $980: literal ansi string "577CBE8347CDA80B7E2100BBAB1D22C9_Format0"
+      $1022: literal ansi string ""
+      $1024: LocalVariable named UniqueObjectNameForCooking_Array2@0x19fcbb48d80
+      $1033: EndFunctionParms
+    )
+$1034: Context
+  ObjectExpression:
+  $1035: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x3d
+  RValueProperty: (null)
+  ContextExpression:
+  $1056: FinalFunction target=PrintText@0x19e4cd97190 (
+    $1065: NoObject
+    $1066: LocalVariable named CallFunc_Format_ReturnValue2@0x19fcdbb9c30
+    $1075: True
+    $1076: True
+    $1077: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $1090: literal float 1
+      $1095: literal float 0.14135999977588654
+      $1100: literal float 0
+      $1105: literal float 1
+      $1110: EndStructConst
+    $1111: literal float 20
+    $1116: EndFunctionParms
+  )
+$1117: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $1126: EndFunctionParms
+)
+$1127: Jump to offset 0x6a2
+$1132: Let (Variable = Expression)
+  Variable:
+  $1141: LocalVariable named CallFunc_GetDisplayName_ReturnValue2@0x19fcdbb98b0
+  Expression:
+  $1150: Context
+    ObjectExpression:
+    $1151: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetDisplayName_ReturnValue2@0x19fcdbb98b0
+    ContextExpression:
+    $1172: FinalFunction target=GetDisplayName@0x19e4cd8c3f0 (
+      $1181: LocalVariable named idx:282618@0x19fcbb48880
+      $1190: EndFunctionParms
+    )
+$1191: Let (Variable = Expression)
+  Variable:
+  $1200: LocalVariable named CallFunc_Conv_StringToText_ReturnValue2@0x19fcdbb9990
+  Expression:
+  $1209: Context
+    ObjectExpression:
+    $1210: ObjectConst Default__KismetTextLibrary@0x19e4d95ed30
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Conv_StringToText_ReturnValue2@0x19fcdbb9990
+    ContextExpression:
+    $1231: FinalFunction target=Conv_StringToText@0x19e4d3a9840 (
+      $1240: LocalVariable named CallFunc_GetDisplayName_ReturnValue2@0x19fcdbb98b0
+      $1249: EndFunctionParms
+    )
+$1250: Let (Variable = Expression)
+  Variable:
+  $1259: StructMemberContext prop=ArgumentName@0x19e4cf5f720
+    Expression to struct:
+    $1268: LocalVariable named UniqueObjectNameForCooking_FormatTextArgument2@0x19fcbb48a00
+  Expression:
+  $1277: literal text (not decoded)
+$1278: literal ansi string "0"
+$1281: literal ansi string ""
+$1283: literal ansi string ""
+$1285: Let (Variable = Expression)
+  Variable:
+  $1294: StructMemberContext prop=TextValue@0x19e4cf5f6b0
+    Expression to struct:
+    $1303: LocalVariable named UniqueObjectNameForCooking_FormatTextArgument2@0x19fcbb48a00
+  Expression:
+  $1312: LocalVariable named CallFunc_Conv_StringToText_ReturnValue2@0x19fcdbb9990
+$1321: VirtualFunction call "idx:282617" (
+  $1334: LocalVariable named idx:282614@0x19fcdbb9a70
+  $1343: EndFunctionParms
+)
+$1344: Let (Variable = Expression)
+  Variable:
+  $1353: StructMemberContext prop=ArgumentName@0x19e4cf5f720
+    Expression to struct:
+    $1362: LocalVariable named UniqueObjectNameForCooking_FormatTextArgument3@0x19fcbb48c00
+  Expression:
+  $1371: literal text (not decoded)
+$1372: literal ansi string "1"
+$1375: literal ansi string ""
+$1377: literal ansi string ""
+$1379: Let (Variable = Expression)
+  Variable:
+  $1388: StructMemberContext prop=TextValue@0x19e4cf5f6b0
+    Expression to struct:
+    $1397: LocalVariable named UniqueObjectNameForCooking_FormatTextArgument3@0x19fcbb48c00
+  Expression:
+  $1406: LocalVariable named idx:282614@0x19fcdbb9a70
+$1415: SetArray
+  $1416: LocalVariable named UniqueObjectNameForCooking_Array@0x19fcbb48e80
+  $1425: LocalVariable named UniqueObjectNameForCooking_FormatTextArgument2@0x19fcbb48a00
+  $1434: LocalVariable named UniqueObjectNameForCooking_FormatTextArgument3@0x19fcbb48c00
+  $1443: EndArray
+$1444: Let (Variable = Expression)
+  Variable:
+  $1453: LocalVariable named CallFunc_Format_ReturnValue@0x19fcdbb9ed0
+  Expression:
+  $1462: Context
+    ObjectExpression:
+    $1463: ObjectConst Default__KismetTextLibrary@0x19e4d95ed30
+    SkipBytes: 0x79
+    RValueProperty: CallFunc_Format_ReturnValue@0x19fcdbb9ed0
+    ContextExpression:
+    $1484: FinalFunction target=Format@0x19e4d3aa250 (
+      $1493: literal text (not decoded)
+      $1494: literal ansi string "Failed to find any MusicZoneComponents on: [{0}] in {1}"
+      $1551: literal ansi string "8E57801E4AE5AEBAD0C5C8B1D7230843_Format0"
+      $1593: literal ansi string ""
+      $1595: LocalVariable named UniqueObjectNameForCooking_Array@0x19fcbb48e80
+      $1604: EndFunctionParms
+    )
+$1605: Context
+  ObjectExpression:
+  $1606: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x3d
+  RValueProperty: (null)
+  ContextExpression:
+  $1627: FinalFunction target=PrintText@0x19e4cd97190 (
+    $1636: NoObject
+    $1637: LocalVariable named CallFunc_Format_ReturnValue@0x19fcdbb9ed0
+    $1646: True
+    $1647: True
+    $1648: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $1661: literal float 1
+      $1666: literal float 0.03819800168275833
+      $1671: literal float 0.009545999579131603
+      $1676: literal float 1
+      $1681: EndStructConst
+    $1682: literal float 20
+    $1687: EndFunctionParms
+  )
+$1688: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $1697: EndFunctionParms
+)
+$1698: Return expression:
+  $1699: Nothing
+$1700: EndOfScript

@@ -1,0 +1,75 @@
+// Class: SkellyFort (2 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+SkellyFort::Multicast_OnFortComplete @ RVA 0x10A11D0 EA 0x7FF6F4AC11D0
+======================================================================
+__int64 __fastcall sub_7FF6F4AC11D0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1608LL))(a1, v6);
+}
+
+
+======================================================================
+SkellyFort::Multicast_OnWaveGroupSpawned @ RVA 0x10A1260 EA 0x7FF6F4AC1260
+======================================================================
+__int64 __fastcall sub_7FF6F4AC1260(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // r8
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  bool v8; // zf
+  int v10; // [rsp+30h] [rbp+8h] BYREF
+  __int64 v11; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v11;
+  LOBYTE(v2) = v6 != 0;
+  v8 = v10 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v8;
+  return (*(__int64 (__fastcall **)(__int64, __int64, __int64))(*(_QWORD *)a1 + 1600LL))(a1, v7, v5);
+}
+

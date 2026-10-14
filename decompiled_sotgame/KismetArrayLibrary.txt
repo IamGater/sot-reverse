@@ -1,0 +1,1324 @@
+// Class: KismetArrayLibrary (17 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+KismetArrayLibrary::Array_Add @ RVA 0x2C1DFC0 EA 0x7FF6F663DFC0
+======================================================================
+void __fastcall sub_7FF6F663DFC0(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 v3; // r14
+  __int64 v6; // r15
+  __int64 v7; // r12
+  __int64 v8; // rax
+  __int64 v9; // rdx
+  __int64 v10; // r8
+  __int64 v11; // rax
+  char v12; // al
+  _DWORD *v13; // rsi
+  int v14; // edx
+  __int64 *v15; // rdi
+  unsigned __int64 v16; // rcx
+  __int64 v17; // rax
+  void *v18; // rsp
+  __int64 *v19; // r8
+  __int64 v20; // rax
+  __int64 v21; // [rsp+20h] [rbp+0h] BYREF
+
+  v3 = 0;
+  *(_QWORD *)(a2 + 48) = 0;
+  if ( *(_QWORD *)(a2 + 32) )
+  {
+    sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), 0);
+  }
+  else
+  {
+    *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+    sub_7FF6F4F4C990(a2, 0);
+  }
+  v6 = *(_QWORD *)(a2 + 48);
+  v7 = *(_QWORD *)(a2 + 56);
+  if ( v6
+    && ((v8 = sub_7FF6F4F2EB60(L"/Script/CoreUObject"),
+         v9 = *(_QWORD *)(v6 + 16),
+         v10 = v8 + 136,
+         v11 = *(int *)(v8 + 160),
+         (int)v11 > *(_DWORD *)(v9 + 160))
+     || *(_QWORD *)(*(_QWORD *)(v9 + 136) + 8 * v11) != v10
+      ? (v12 = 0)
+      : (v12 = 1),
+        v12) )
+  {
+    v13 = *(_DWORD **)(v6 + 112);
+    v14 = v13[12] * v13[13];
+    if ( v14 )
+    {
+      v16 = v14 + 15;
+      v17 = v16 + 15;
+      if ( v16 + 15 < v16 )
+        v17 = 0xFFFFFFFFFFFFFF0LL;
+      v18 = alloca(v17 & 0xFFFFFFFFFFFFFFF0uLL);
+      v15 = &v21;
+    }
+    else
+    {
+      v15 = nullptr;
+    }
+    if ( (v13[14] & 0x200LL) != 0 )
+      memset(v15, 0, v14);
+    else
+      (*(void (__fastcall **)(_QWORD, __int64 *))(*(_QWORD *)v13 + 696LL))(*(_QWORD *)(v6 + 112), v15);
+    *(_QWORD *)(a2 + 56) = 0;
+    if ( *(_QWORD *)(a2 + 32) )
+    {
+      sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), v15);
+    }
+    else
+    {
+      *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+      sub_7FF6F4F4C990(a2, v15);
+    }
+    v19 = v15;
+    if ( *(_QWORD *)(a2 + 56) )
+      v19 = *(__int64 **)(a2 + 56);
+    v20 = *(_QWORD *)(a2 + 32);
+    LOBYTE(v3) = v20 != 0;
+    *(_QWORD *)(a2 + 32) = v20 + v3;
+    *a3 = sub_7FF6F5E676A0(v7, v6, v19);
+    if ( (*((_QWORD *)v13 + 7) & 0x1000000000LL) == 0 )
+      (*(void (__fastcall **)(_DWORD *, __int64 *))(*(_QWORD *)v13 + 688LL))(v13, v15);
+  }
+  else
+  {
+    *(_BYTE *)(a2 + 144) = 1;
+  }
+}
+
+
+======================================================================
+KismetArrayLibrary::Array_AddUnique @ RVA 0x2C1E1A0 EA 0x7FF6F663E1A0
+======================================================================
+void __fastcall sub_7FF6F663E1A0(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 v3; // r14
+  __int64 v6; // r15
+  __int64 v7; // r12
+  __int64 v8; // rax
+  __int64 v9; // rdx
+  __int64 v10; // r8
+  __int64 v11; // rax
+  char v12; // al
+  _DWORD *v13; // rsi
+  int v14; // edx
+  __int64 *v15; // rdi
+  unsigned __int64 v16; // rcx
+  __int64 v17; // rax
+  void *v18; // rsp
+  __int64 *v19; // r8
+  __int64 v20; // rax
+  __int64 v21; // [rsp+20h] [rbp+0h] BYREF
+
+  v3 = 0;
+  *(_QWORD *)(a2 + 48) = 0;
+  if ( *(_QWORD *)(a2 + 32) )
+  {
+    sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), 0);
+  }
+  else
+  {
+    *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+    sub_7FF6F4F4C990(a2, 0);
+  }
+  v6 = *(_QWORD *)(a2 + 48);
+  v7 = *(_QWORD *)(a2 + 56);
+  if ( v6
+    && ((v8 = sub_7FF6F4F2EB60(L"/Script/CoreUObject"),
+         v9 = *(_QWORD *)(v6 + 16),
+         v10 = v8 + 136,
+         v11 = *(int *)(v8 + 160),
+         (int)v11 > *(_DWORD *)(v9 + 160))
+     || *(_QWORD *)(*(_QWORD *)(v9 + 136) + 8 * v11) != v10
+      ? (v12 = 0)
+      : (v12 = 1),
+        v12) )
+  {
+    v13 = *(_DWORD **)(v6 + 112);
+    v14 = v13[12] * v13[13];
+    if ( v14 )
+    {
+      v16 = v14 + 15;
+      v17 = v16 + 15;
+      if ( v16 + 15 < v16 )
+        v17 = 0xFFFFFFFFFFFFFF0LL;
+      v18 = alloca(v17 & 0xFFFFFFFFFFFFFFF0uLL);
+      v15 = &v21;
+    }
+    else
+    {
+      v15 = nullptr;
+    }
+    if ( (v13[14] & 0x200LL) != 0 )
+      memset(v15, 0, v14);
+    else
+      (*(void (__fastcall **)(_QWORD, __int64 *))(*(_QWORD *)v13 + 696LL))(*(_QWORD *)(v6 + 112), v15);
+    *(_QWORD *)(a2 + 56) = 0;
+    if ( *(_QWORD *)(a2 + 32) )
+    {
+      sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), v15);
+    }
+    else
+    {
+      *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+      sub_7FF6F4F4C990(a2, v15);
+    }
+    v19 = v15;
+    if ( *(_QWORD *)(a2 + 56) )
+      v19 = *(__int64 **)(a2 + 56);
+    v20 = *(_QWORD *)(a2 + 32);
+    LOBYTE(v3) = v20 != 0;
+    *(_QWORD *)(a2 + 32) = v20 + v3;
+    *a3 = sub_7FF6F5E677B0(v7, v6, v19);
+    if ( (*((_QWORD *)v13 + 7) & 0x1000000000LL) == 0 )
+      (*(void (__fastcall **)(_DWORD *, __int64 *))(*(_QWORD *)v13 + 688LL))(v13, v15);
+  }
+  else
+  {
+    *(_BYTE *)(a2 + 144) = 1;
+  }
+}
+
+
+======================================================================
+KismetArrayLibrary::Array_Append @ RVA 0x2C1E380 EA 0x7FF6F663E380
+======================================================================
+void __fastcall sub_7FF6F663E380(__int64 a1, __int64 a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rbp
+  __int64 v5; // r15
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // r8
+  __int64 v9; // rax
+  char v10; // al
+  __int64 v11; // rsi
+  __int64 v12; // r14
+  __int64 v13; // rax
+  __int64 v14; // rdx
+  __int64 v15; // r8
+  __int64 v16; // rax
+  char v17; // al
+  __int64 v18; // rax
+
+  v2 = 0;
+  *(_QWORD *)(a2 + 48) = 0;
+  if ( *(_QWORD *)(a2 + 32) )
+  {
+    sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), 0);
+  }
+  else
+  {
+    *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+    sub_7FF6F4F4C990(a2, 0);
+  }
+  v4 = *(_QWORD *)(a2 + 48);
+  v5 = *(_QWORD *)(a2 + 56);
+  if ( v4
+    && ((v6 = sub_7FF6F4F2EB60(L"/Script/CoreUObject"),
+         v7 = *(_QWORD *)(v4 + 16),
+         v8 = v6 + 136,
+         v9 = *(int *)(v6 + 160),
+         (int)v9 > *(_DWORD *)(v7 + 160))
+     || *(_QWORD *)(*(_QWORD *)(v7 + 136) + 8 * v9) != v8
+      ? (v10 = 0)
+      : (v10 = 1),
+        v10) )
+  {
+    *(_QWORD *)(a2 + 48) = 0;
+    if ( *(_QWORD *)(a2 + 32) )
+    {
+      sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), 0);
+    }
+    else
+    {
+      *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+      sub_7FF6F4F4C990(a2, 0);
+    }
+    v11 = *(_QWORD *)(a2 + 48);
+    v12 = *(_QWORD *)(a2 + 56);
+    if ( !v11
+      || ((v13 = sub_7FF6F4F2EB60(L"/Script/CoreUObject"),
+           v14 = *(_QWORD *)(v11 + 16),
+           v15 = v13 + 136,
+           v16 = *(int *)(v13 + 160),
+           (int)v16 > *(_DWORD *)(v14 + 160))
+       || *(_QWORD *)(*(_QWORD *)(v14 + 136) + 8 * v16) != v15
+        ? (v17 = 0)
+        : (v17 = 1),
+          !v17) )
+    {
+      v11 = 0;
+    }
+    v18 = *(_QWORD *)(a2 + 32);
+    LOBYTE(v2) = v18 != 0;
+    *(_QWORD *)(a2 + 32) = v18 + v2;
+    sub_7FF6F5E678E0(v5, v4, v12, v11);
+  }
+  else
+  {
+    *(_BYTE *)(a2 + 144) = 1;
+  }
+}
+
+
+======================================================================
+KismetArrayLibrary::Array_Clear @ RVA 0x2C1E500 EA 0x7FF6F663E500
+======================================================================
+void __fastcall sub_7FF6F663E500(__int64 a1, __int64 a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rsi
+  __int64 v5; // rbp
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // r8
+  __int64 v9; // rax
+  char v10; // al
+  __int64 v11; // rax
+
+  v2 = 0;
+  *(_QWORD *)(a2 + 48) = 0;
+  if ( *(_QWORD *)(a2 + 32) )
+  {
+    sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), 0);
+  }
+  else
+  {
+    *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+    sub_7FF6F4F4C990(a2, 0);
+  }
+  v4 = *(_QWORD *)(a2 + 48);
+  v5 = *(_QWORD *)(a2 + 56);
+  if ( v4
+    && ((v6 = sub_7FF6F4F2EB60(L"/Script/CoreUObject"),
+         v7 = *(_QWORD *)(v4 + 16),
+         v8 = v6 + 136,
+         v9 = *(int *)(v6 + 160),
+         (int)v9 > *(_DWORD *)(v7 + 160))
+     || *(_QWORD *)(*(_QWORD *)(v7 + 136) + 8 * v9) != v8
+      ? (v10 = 0)
+      : (v10 = 1),
+        v10) )
+  {
+    v11 = *(_QWORD *)(a2 + 32);
+    LOBYTE(v2) = v11 != 0;
+    *(_QWORD *)(a2 + 32) = v11 + v2;
+    sub_7FF6F5E679D0(v5, v4);
+  }
+  else
+  {
+    *(_BYTE *)(a2 + 144) = 1;
+  }
+}
+
+
+======================================================================
+KismetArrayLibrary::Array_Contains @ RVA 0x2C1E5E0 EA 0x7FF6F663E5E0
+======================================================================
+void __fastcall sub_7FF6F663E5E0(__int64 a1, __int64 a2, bool *a3)
+{
+  __int64 v3; // r14
+  __int64 v6; // r15
+  __int64 v7; // r12
+  __int64 v8; // rax
+  __int64 v9; // rdx
+  __int64 v10; // r8
+  __int64 v11; // rax
+  char v12; // al
+  _DWORD *v13; // rsi
+  int v14; // edx
+  __int64 *v15; // rdi
+  unsigned __int64 v16; // rcx
+  __int64 v17; // rax
+  void *v18; // rsp
+  __int64 v19; // rax
+  __int64 v20; // [rsp+20h] [rbp+0h] BYREF
+
+  v3 = 0;
+  *(_QWORD *)(a2 + 48) = 0;
+  if ( *(_QWORD *)(a2 + 32) )
+  {
+    sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), 0);
+  }
+  else
+  {
+    *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+    sub_7FF6F4F4C990(a2, 0);
+  }
+  v6 = *(_QWORD *)(a2 + 48);
+  v7 = *(_QWORD *)(a2 + 56);
+  if ( v6
+    && ((v8 = sub_7FF6F4F2EB60(L"/Script/CoreUObject"),
+         v9 = *(_QWORD *)(v6 + 16),
+         v10 = v8 + 136,
+         v11 = *(int *)(v8 + 160),
+         (int)v11 > *(_DWORD *)(v9 + 160))
+     || *(_QWORD *)(*(_QWORD *)(v9 + 136) + 8 * v11) != v10
+      ? (v12 = 0)
+      : (v12 = 1),
+        v12) )
+  {
+    v13 = *(_DWORD **)(v6 + 112);
+    v14 = v13[12] * v13[13];
+    if ( v14 )
+    {
+      v16 = v14 + 15;
+      v17 = v16 + 15;
+      if ( v16 + 15 < v16 )
+        v17 = 0xFFFFFFFFFFFFFF0LL;
+      v18 = alloca(v17 & 0xFFFFFFFFFFFFFFF0uLL);
+      v15 = &v20;
+    }
+    else
+    {
+      v15 = nullptr;
+    }
+    if ( (v13[14] & 0x200LL) != 0 )
+      memset(v15, 0, v14);
+    else
+      (*(void (__fastcall **)(_QWORD, __int64 *))(*(_QWORD *)v13 + 696LL))(*(_QWORD *)(v6 + 112), v15);
+    *(_QWORD *)(a2 + 56) = 0;
+    if ( *(_QWORD *)(a2 + 32) )
+    {
+      sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), v15);
+    }
+    else
+    {
+      *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+      sub_7FF6F4F4C990(a2, v15);
+    }
+    v19 = *(_QWORD *)(a2 + 32);
+    LOBYTE(v3) = v19 != 0;
+    *(_QWORD *)(a2 + 32) = v19 + v3;
+    sub_7FF6F5E67CA0(v13, v15);
+    *a3 = (int)sub_7FF6F5E67AB0(v7, v6, v15) >= 0;
+    if ( (*((_QWORD *)v13 + 7) & 0x1000000000LL) == 0 )
+      (*(void (__fastcall **)(_DWORD *, __int64 *))(*(_QWORD *)v13 + 688LL))(v13, v15);
+  }
+  else
+  {
+    *(_BYTE *)(a2 + 144) = 1;
+  }
+}
+
+
+======================================================================
+KismetArrayLibrary::Array_Find @ RVA 0x2C1E7D0 EA 0x7FF6F663E7D0
+======================================================================
+void __fastcall sub_7FF6F663E7D0(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 v3; // r14
+  __int64 v6; // r15
+  __int64 v7; // r12
+  __int64 v8; // rax
+  __int64 v9; // rdx
+  __int64 v10; // r8
+  __int64 v11; // rax
+  char v12; // al
+  _DWORD *v13; // rsi
+  int v14; // edx
+  __int64 *v15; // rdi
+  unsigned __int64 v16; // rcx
+  __int64 v17; // rax
+  void *v18; // rsp
+  __int64 v19; // rax
+  __int64 v20; // [rsp+20h] [rbp+0h] BYREF
+
+  v3 = 0;
+  *(_QWORD *)(a2 + 48) = 0;
+  if ( *(_QWORD *)(a2 + 32) )
+  {
+    sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), 0);
+  }
+  else
+  {
+    *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+    sub_7FF6F4F4C990(a2, 0);
+  }
+  v6 = *(_QWORD *)(a2 + 48);
+  v7 = *(_QWORD *)(a2 + 56);
+  if ( v6
+    && ((v8 = sub_7FF6F4F2EB60(L"/Script/CoreUObject"),
+         v9 = *(_QWORD *)(v6 + 16),
+         v10 = v8 + 136,
+         v11 = *(int *)(v8 + 160),
+         (int)v11 > *(_DWORD *)(v9 + 160))
+     || *(_QWORD *)(*(_QWORD *)(v9 + 136) + 8 * v11) != v10
+      ? (v12 = 0)
+      : (v12 = 1),
+        v12) )
+  {
+    v13 = *(_DWORD **)(v6 + 112);
+    v14 = v13[12] * v13[13];
+    if ( v14 )
+    {
+      v16 = v14 + 15;
+      v17 = v16 + 15;
+      if ( v16 + 15 < v16 )
+        v17 = 0xFFFFFFFFFFFFFF0LL;
+      v18 = alloca(v17 & 0xFFFFFFFFFFFFFFF0uLL);
+      v15 = &v20;
+    }
+    else
+    {
+      v15 = nullptr;
+    }
+    if ( (v13[14] & 0x200LL) != 0 )
+      memset(v15, 0, v14);
+    else
+      (*(void (__fastcall **)(_QWORD, __int64 *))(*(_QWORD *)v13 + 696LL))(*(_QWORD *)(v6 + 112), v15);
+    *(_QWORD *)(a2 + 56) = 0;
+    if ( *(_QWORD *)(a2 + 32) )
+    {
+      sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), v15);
+    }
+    else
+    {
+      *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+      sub_7FF6F4F4C990(a2, v15);
+    }
+    v19 = *(_QWORD *)(a2 + 32);
+    LOBYTE(v3) = v19 != 0;
+    *(_QWORD *)(a2 + 32) = v19 + v3;
+    sub_7FF6F5E67CA0(v13, v15);
+    *a3 = sub_7FF6F5E67AB0(v7, v6, v15);
+    if ( (*((_QWORD *)v13 + 7) & 0x1000000000LL) == 0 )
+      (*(void (__fastcall **)(_DWORD *, __int64 *))(*(_QWORD *)v13 + 688LL))(v13, v15);
+  }
+  else
+  {
+    *(_BYTE *)(a2 + 144) = 1;
+  }
+}
+
+
+======================================================================
+KismetArrayLibrary::Array_Get @ RVA 0x2C1E9B0 EA 0x7FF6F663E9B0
+======================================================================
+void __fastcall sub_7FF6F663E9B0(__int64 a1, __int64 a2)
+{
+  __int64 v2; // r14
+  __int64 v4; // r15
+  __int64 v5; // r12
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // r8
+  __int64 v9; // rax
+  char v10; // al
+  _DWORD *v11; // rsi
+  int v12; // edx
+  unsigned int *v13; // rdi
+  unsigned __int64 v14; // rcx
+  __int64 v15; // rax
+  void *v16; // rsp
+  unsigned int *v17; // r9
+  __int64 v18; // r8
+  __int64 v19; // rax
+  unsigned int v20; // [rsp+20h] [rbp+0h] BYREF
+
+  v2 = 0;
+  *(_QWORD *)(a2 + 48) = 0;
+  if ( *(_QWORD *)(a2 + 32) )
+  {
+    sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), 0);
+  }
+  else
+  {
+    *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+    sub_7FF6F4F4C990(a2, 0);
+  }
+  v4 = *(_QWORD *)(a2 + 48);
+  v5 = *(_QWORD *)(a2 + 56);
+  if ( v4
+    && ((v6 = sub_7FF6F4F2EB60(L"/Script/CoreUObject"),
+         v7 = *(_QWORD *)(v4 + 16),
+         v8 = v6 + 136,
+         v9 = *(int *)(v6 + 160),
+         (int)v9 > *(_DWORD *)(v7 + 160))
+     || *(_QWORD *)(*(_QWORD *)(v7 + 136) + 8 * v9) != v8
+      ? (v10 = 0)
+      : (v10 = 1),
+        v10) )
+  {
+    v20 = 0;
+    if ( *(_QWORD *)(a2 + 32) )
+    {
+      sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), &v20);
+    }
+    else
+    {
+      *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+      sub_7FF6F4F4C990(a2, &v20);
+    }
+    v11 = *(_DWORD **)(v4 + 112);
+    v12 = v11[12] * v11[13];
+    if ( v12 )
+    {
+      v14 = v12 + 15;
+      v15 = v14 + 15;
+      if ( v14 + 15 < v14 )
+        v15 = 0xFFFFFFFFFFFFFF0LL;
+      v16 = alloca(v15 & 0xFFFFFFFFFFFFFFF0uLL);
+      v13 = &v20;
+    }
+    else
+    {
+      v13 = nullptr;
+    }
+    if ( (v11[14] & 0x200LL) != 0 )
+      memset(v13, 0, v12);
+    else
+      (*(void (__fastcall **)(_QWORD, unsigned int *))(*(_QWORD *)v11 + 696LL))(*(_QWORD *)(v4 + 112), v13);
+    *(_QWORD *)(a2 + 56) = 0;
+    if ( *(_QWORD *)(a2 + 32) )
+    {
+      sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), v13);
+    }
+    else
+    {
+      *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+      sub_7FF6F4F4C990(a2, v13);
+    }
+    v17 = v13;
+    v18 = v20;
+    if ( *(_QWORD *)(a2 + 56) )
+      v17 = *(unsigned int **)(a2 + 56);
+    v19 = *(_QWORD *)(a2 + 32);
+    LOBYTE(v2) = v19 != 0;
+    *(_QWORD *)(a2 + 32) = v19 + v2;
+    sub_7FF6F5E67B60(v5, v4, v18, v17);
+    if ( (*((_QWORD *)v11 + 7) & 0x1000000000LL) == 0 )
+      (*(void (__fastcall **)(_DWORD *, unsigned int *))(*(_QWORD *)v11 + 688LL))(v11, v13);
+  }
+  else
+  {
+    *(_BYTE *)(a2 + 144) = 1;
+  }
+}
+
+
+======================================================================
+KismetArrayLibrary::Array_Insert @ RVA 0x2C1EBC0 EA 0x7FF6F663EBC0
+======================================================================
+void __fastcall sub_7FF6F663EBC0(__int64 a1, __int64 a2)
+{
+  __int64 v2; // r14
+  __int64 v4; // r15
+  __int64 v5; // r13
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // r8
+  __int64 v9; // rax
+  char v10; // al
+  _DWORD *v11; // rsi
+  int v12; // edx
+  unsigned int *v13; // rdi
+  unsigned __int64 v14; // rcx
+  __int64 v15; // rax
+  void *v16; // rsp
+  unsigned int *v17; // rax
+  unsigned int *v18; // r12
+  __int64 v19; // rax
+  __int64 v20; // r9
+  unsigned int v21; // [rsp+20h] [rbp+0h] BYREF
+
+  v2 = 0;
+  *(_QWORD *)(a2 + 48) = 0;
+  if ( *(_QWORD *)(a2 + 32) )
+  {
+    sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), 0);
+  }
+  else
+  {
+    *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+    sub_7FF6F4F4C990(a2, 0);
+  }
+  v4 = *(_QWORD *)(a2 + 48);
+  v5 = *(_QWORD *)(a2 + 56);
+  if ( v4
+    && ((v6 = sub_7FF6F4F2EB60(L"/Script/CoreUObject"),
+         v7 = *(_QWORD *)(v4 + 16),
+         v8 = v6 + 136,
+         v9 = *(int *)(v6 + 160),
+         (int)v9 > *(_DWORD *)(v7 + 160))
+     || *(_QWORD *)(*(_QWORD *)(v7 + 136) + 8 * v9) != v8
+      ? (v10 = 0)
+      : (v10 = 1),
+        v10) )
+  {
+    v11 = *(_DWORD **)(v4 + 112);
+    v12 = v11[12] * v11[13];
+    if ( v12 )
+    {
+      v14 = v12 + 15;
+      v15 = v14 + 15;
+      if ( v14 + 15 < v14 )
+        v15 = 0xFFFFFFFFFFFFFF0LL;
+      v16 = alloca(v15 & 0xFFFFFFFFFFFFFFF0uLL);
+      v13 = &v21;
+    }
+    else
+    {
+      v13 = nullptr;
+    }
+    if ( (v11[14] & 0x200LL) != 0 )
+      memset(v13, 0, v12);
+    else
+      (*(void (__fastcall **)(_QWORD, unsigned int *))(*(_QWORD *)v11 + 696LL))(*(_QWORD *)(v4 + 112), v13);
+    *(_QWORD *)(a2 + 56) = 0;
+    if ( *(_QWORD *)(a2 + 32) )
+    {
+      sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), v13);
+    }
+    else
+    {
+      *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+      sub_7FF6F4F4C990(a2, v13);
+    }
+    v17 = *(unsigned int **)(a2 + 56);
+    v18 = v13;
+    v21 = 0;
+    if ( v17 )
+      v18 = v17;
+    if ( *(_QWORD *)(a2 + 32) )
+    {
+      sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), &v21);
+    }
+    else
+    {
+      *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+      sub_7FF6F4F4C990(a2, &v21);
+    }
+    v19 = *(_QWORD *)(a2 + 32);
+    v20 = v21;
+    LOBYTE(v2) = v19 != 0;
+    *(_QWORD *)(a2 + 32) = v19 + v2;
+    sub_7FF6F5E67D20(v5, v4, v18, v20);
+    if ( (*((_QWORD *)v11 + 7) & 0x1000000000LL) == 0 )
+      (*(void (__fastcall **)(_DWORD *, unsigned int *))(*(_QWORD *)v11 + 688LL))(v11, v13);
+  }
+  else
+  {
+    *(_BYTE *)(a2 + 144) = 1;
+  }
+}
+
+
+======================================================================
+KismetArrayLibrary::Array_LastIndex @ RVA 0x2C1EDE0 EA 0x7FF6F663EDE0
+======================================================================
+void __fastcall sub_7FF6F663EDE0(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rsi
+  __int64 v7; // rbp
+  __int64 v8; // rax
+  __int64 v9; // rdx
+  __int64 v10; // r8
+  __int64 v11; // rax
+  char v12; // al
+  __int64 v13; // rax
+
+  v3 = 0;
+  *(_QWORD *)(a2 + 48) = 0;
+  if ( *(_QWORD *)(a2 + 32) )
+  {
+    sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), 0);
+  }
+  else
+  {
+    *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+    sub_7FF6F4F4C990(a2, 0);
+  }
+  v6 = *(_QWORD *)(a2 + 48);
+  v7 = *(_QWORD *)(a2 + 56);
+  if ( v6
+    && ((v8 = sub_7FF6F4F2EB60(L"/Script/CoreUObject"),
+         v9 = *(_QWORD *)(v6 + 16),
+         v10 = v8 + 136,
+         v11 = *(int *)(v8 + 160),
+         (int)v11 > *(_DWORD *)(v9 + 160))
+     || *(_QWORD *)(*(_QWORD *)(v9 + 136) + 8 * v11) != v10
+      ? (v12 = 0)
+      : (v12 = 1),
+        v12) )
+  {
+    v13 = *(_QWORD *)(a2 + 32);
+    LOBYTE(v3) = v13 != 0;
+    *(_QWORD *)(a2 + 32) = v13 + v3;
+    *a3 = sub_7FF6F5E67EF0(v7, v6);
+  }
+  else
+  {
+    *(_BYTE *)(a2 + 144) = 1;
+  }
+}
+
+
+======================================================================
+KismetArrayLibrary::Array_Length @ RVA 0x2C1EED0 EA 0x7FF6F663EED0
+======================================================================
+void __fastcall sub_7FF6F663EED0(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rsi
+  __int64 v7; // rbp
+  __int64 v8; // rax
+  __int64 v9; // rdx
+  __int64 v10; // r8
+  __int64 v11; // rax
+  char v12; // al
+  __int64 v13; // rax
+
+  v3 = 0;
+  *(_QWORD *)(a2 + 48) = 0;
+  if ( *(_QWORD *)(a2 + 32) )
+  {
+    sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), 0);
+  }
+  else
+  {
+    *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+    sub_7FF6F4F4C990(a2, 0);
+  }
+  v6 = *(_QWORD *)(a2 + 48);
+  v7 = *(_QWORD *)(a2 + 56);
+  if ( v6
+    && ((v8 = sub_7FF6F4F2EB60(L"/Script/CoreUObject"),
+         v9 = *(_QWORD *)(v6 + 16),
+         v10 = v8 + 136,
+         v11 = *(int *)(v8 + 160),
+         (int)v11 > *(_DWORD *)(v9 + 160))
+     || *(_QWORD *)(*(_QWORD *)(v9 + 136) + 8 * v11) != v10
+      ? (v12 = 0)
+      : (v12 = 1),
+        v12) )
+  {
+    v13 = *(_QWORD *)(a2 + 32);
+    LOBYTE(v3) = v13 != 0;
+    *(_QWORD *)(a2 + 32) = v13 + v3;
+    *a3 = sub_7FF6F5E67F10(v7, v6);
+  }
+  else
+  {
+    *(_BYTE *)(a2 + 144) = 1;
+  }
+}
+
+
+======================================================================
+KismetArrayLibrary::Array_Remove @ RVA 0x2C1EFC0 EA 0x7FF6F663EFC0
+======================================================================
+void __fastcall sub_7FF6F663EFC0(__int64 a1, __int64 a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rsi
+  __int64 v5; // rbp
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // r8
+  __int64 v9; // rax
+  char v10; // al
+  __int64 v11; // rax
+  __int64 v12; // r8
+  unsigned int v13; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  *(_QWORD *)(a2 + 48) = 0;
+  if ( *(_QWORD *)(a2 + 32) )
+  {
+    sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), 0);
+  }
+  else
+  {
+    *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+    sub_7FF6F4F4C990(a2, 0);
+  }
+  v4 = *(_QWORD *)(a2 + 48);
+  v5 = *(_QWORD *)(a2 + 56);
+  if ( v4
+    && ((v6 = sub_7FF6F4F2EB60(L"/Script/CoreUObject"),
+         v7 = *(_QWORD *)(v4 + 16),
+         v8 = v6 + 136,
+         v9 = *(int *)(v6 + 160),
+         (int)v9 > *(_DWORD *)(v7 + 160))
+     || *(_QWORD *)(*(_QWORD *)(v7 + 136) + 8 * v9) != v8
+      ? (v10 = 0)
+      : (v10 = 1),
+        v10) )
+  {
+    v13 = 0;
+    if ( *(_QWORD *)(a2 + 32) )
+    {
+      sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), &v13);
+    }
+    else
+    {
+      *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+      sub_7FF6F4F4C990(a2, &v13);
+    }
+    v11 = *(_QWORD *)(a2 + 32);
+    v12 = v13;
+    LOBYTE(v2) = v11 != 0;
+    *(_QWORD *)(a2 + 32) = v11 + v2;
+    sub_7FF6F5E67F20(v5, v4, v12);
+  }
+  else
+  {
+    *(_BYTE *)(a2 + 144) = 1;
+  }
+}
+
+
+======================================================================
+KismetArrayLibrary::Array_RemoveItem @ RVA 0x2C1F0E0 EA 0x7FF6F663F0E0
+======================================================================
+void __fastcall sub_7FF6F663F0E0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 v3; // r14
+  __int64 v6; // r15
+  __int64 v7; // r12
+  __int64 v8; // rax
+  __int64 v9; // rdx
+  __int64 v10; // r8
+  __int64 v11; // rax
+  char v12; // al
+  _DWORD *v13; // rsi
+  int v14; // edx
+  __int64 *v15; // rdi
+  unsigned __int64 v16; // rcx
+  __int64 v17; // rax
+  void *v18; // rsp
+  __int64 v19; // rax
+  __int64 v20; // [rsp+20h] [rbp+0h] BYREF
+
+  v3 = 0;
+  *(_QWORD *)(a2 + 48) = 0;
+  if ( *(_QWORD *)(a2 + 32) )
+  {
+    sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), 0);
+  }
+  else
+  {
+    *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+    sub_7FF6F4F4C990(a2, 0);
+  }
+  v6 = *(_QWORD *)(a2 + 48);
+  v7 = *(_QWORD *)(a2 + 56);
+  if ( v6
+    && ((v8 = sub_7FF6F4F2EB60(L"/Script/CoreUObject"),
+         v9 = *(_QWORD *)(v6 + 16),
+         v10 = v8 + 136,
+         v11 = *(int *)(v8 + 160),
+         (int)v11 > *(_DWORD *)(v9 + 160))
+     || *(_QWORD *)(*(_QWORD *)(v9 + 136) + 8 * v11) != v10
+      ? (v12 = 0)
+      : (v12 = 1),
+        v12) )
+  {
+    v13 = *(_DWORD **)(v6 + 112);
+    v14 = v13[12] * v13[13];
+    if ( v14 )
+    {
+      v16 = v14 + 15;
+      v17 = v16 + 15;
+      if ( v16 + 15 < v16 )
+        v17 = 0xFFFFFFFFFFFFFF0LL;
+      v18 = alloca(v17 & 0xFFFFFFFFFFFFFFF0uLL);
+      v15 = &v20;
+    }
+    else
+    {
+      v15 = nullptr;
+    }
+    if ( (v13[14] & 0x200LL) != 0 )
+      memset(v15, 0, v14);
+    else
+      (*(void (__fastcall **)(_QWORD, __int64 *))(*(_QWORD *)v13 + 696LL))(*(_QWORD *)(v6 + 112), v15);
+    *(_QWORD *)(a2 + 56) = 0;
+    if ( *(_QWORD *)(a2 + 32) )
+    {
+      sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), v15);
+    }
+    else
+    {
+      *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+      sub_7FF6F4F4C990(a2, v15);
+    }
+    v19 = *(_QWORD *)(a2 + 32);
+    LOBYTE(v3) = v19 != 0;
+    *(_QWORD *)(a2 + 32) = v19 + v3;
+    sub_7FF6F5E67CA0(v13, v15);
+    *a3 = sub_7FF6F5E68030(v7, v6, v15);
+    if ( (*((_QWORD *)v13 + 7) & 0x1000000000LL) == 0 )
+      (*(void (__fastcall **)(_DWORD *, __int64 *))(*(_QWORD *)v13 + 688LL))(v13, v15);
+  }
+  else
+  {
+    *(_BYTE *)(a2 + 144) = 1;
+  }
+}
+
+
+======================================================================
+KismetArrayLibrary::Array_Resize @ RVA 0x2C1F2C0 EA 0x7FF6F663F2C0
+======================================================================
+void __fastcall sub_7FF6F663F2C0(__int64 a1, __int64 a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rsi
+  __int64 v5; // rbp
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // r8
+  __int64 v9; // rax
+  char v10; // al
+  __int64 v11; // rax
+  __int64 v12; // r8
+  unsigned int v13; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  *(_QWORD *)(a2 + 48) = 0;
+  if ( *(_QWORD *)(a2 + 32) )
+  {
+    sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), 0);
+  }
+  else
+  {
+    *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+    sub_7FF6F4F4C990(a2, 0);
+  }
+  v4 = *(_QWORD *)(a2 + 48);
+  v5 = *(_QWORD *)(a2 + 56);
+  if ( v4
+    && ((v6 = sub_7FF6F4F2EB60(L"/Script/CoreUObject"),
+         v7 = *(_QWORD *)(v4 + 16),
+         v8 = v6 + 136,
+         v9 = *(int *)(v6 + 160),
+         (int)v9 > *(_DWORD *)(v7 + 160))
+     || *(_QWORD *)(*(_QWORD *)(v7 + 136) + 8 * v9) != v8
+      ? (v10 = 0)
+      : (v10 = 1),
+        v10) )
+  {
+    v13 = 0;
+    if ( *(_QWORD *)(a2 + 32) )
+    {
+      sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), &v13);
+    }
+    else
+    {
+      *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+      sub_7FF6F4F4C990(a2, &v13);
+    }
+    v11 = *(_QWORD *)(a2 + 32);
+    v12 = v13;
+    LOBYTE(v2) = v11 != 0;
+    *(_QWORD *)(a2 + 32) = v11 + v2;
+    sub_7FF6F5E68230(v5, v4, v12);
+  }
+  else
+  {
+    *(_BYTE *)(a2 + 144) = 1;
+  }
+}
+
+
+======================================================================
+KismetArrayLibrary::Array_Set @ RVA 0x2C1F3E0 EA 0x7FF6F663F3E0
+======================================================================
+void __fastcall sub_7FF6F663F3E0(__int64 a1, __int64 a2)
+{
+  __int64 v2; // r14
+  __int64 v4; // r15
+  __int64 v5; // r13
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // r8
+  __int64 v9; // rax
+  char v10; // al
+  _DWORD *v11; // rsi
+  int v12; // edx
+  int *v13; // rdi
+  unsigned __int64 v14; // rcx
+  __int64 v15; // rax
+  void *v16; // rsp
+  __int64 v17; // rax
+  int v18; // r12d
+  __int64 v19; // rax
+  int v20; // r8d
+  bool v21; // zf
+  int v22; // [rsp+30h] [rbp+0h] BYREF
+  int v23; // [rsp+34h] [rbp+4h] BYREF
+
+  v2 = 0;
+  *(_QWORD *)(a2 + 48) = 0;
+  if ( *(_QWORD *)(a2 + 32) )
+  {
+    sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), 0);
+  }
+  else
+  {
+    *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+    sub_7FF6F4F4C990(a2, 0);
+  }
+  v4 = *(_QWORD *)(a2 + 48);
+  v5 = *(_QWORD *)(a2 + 56);
+  if ( v4
+    && ((v6 = sub_7FF6F4F2EB60(L"/Script/CoreUObject"),
+         v7 = *(_QWORD *)(v4 + 16),
+         v8 = v6 + 136,
+         v9 = *(int *)(v6 + 160),
+         (int)v9 > *(_DWORD *)(v7 + 160))
+     || *(_QWORD *)(*(_QWORD *)(v7 + 136) + 8 * v9) != v8
+      ? (v10 = 0)
+      : (v10 = 1),
+        v10) )
+  {
+    v23 = 0;
+    if ( *(_QWORD *)(a2 + 32) )
+    {
+      sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), &v23);
+    }
+    else
+    {
+      *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+      sub_7FF6F4F4C990(a2, &v23);
+    }
+    v11 = *(_DWORD **)(v4 + 112);
+    v12 = v11[12] * v11[13];
+    if ( v12 )
+    {
+      v14 = v12 + 15;
+      v15 = v14 + 15;
+      if ( v14 + 15 < v14 )
+        v15 = 0xFFFFFFFFFFFFFF0LL;
+      v16 = alloca(v15 & 0xFFFFFFFFFFFFFFF0uLL);
+      v13 = &v22;
+    }
+    else
+    {
+      v13 = nullptr;
+    }
+    if ( (v11[14] & 0x200LL) != 0 )
+      memset(v13, 0, v12);
+    else
+      (*(void (__fastcall **)(_QWORD, int *))(*(_QWORD *)v11 + 696LL))(*(_QWORD *)(v4 + 112), v13);
+    *(_QWORD *)(a2 + 56) = 0;
+    if ( *(_QWORD *)(a2 + 32) )
+    {
+      sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), v13);
+    }
+    else
+    {
+      *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+      sub_7FF6F4F4C990(a2, v13);
+    }
+    v17 = *(_QWORD *)(a2 + 56);
+    v18 = (int)v13;
+    v22 = 0;
+    if ( v17 )
+      v18 = v17;
+    if ( *(_QWORD *)(a2 + 32) )
+    {
+      sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), &v22);
+    }
+    else
+    {
+      *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+      sub_7FF6F4F4C990(a2, &v22);
+    }
+    v19 = *(_QWORD *)(a2 + 32);
+    v20 = v23;
+    LOBYTE(v2) = v19 != 0;
+    v21 = v22 == 0;
+    *(_QWORD *)(a2 + 32) = v19 + v2;
+    sub_7FF6F5E68390(v5, v4, v20, v18, !v21);
+    if ( (*((_QWORD *)v11 + 7) & 0x1000000000LL) == 0 )
+      (*(void (__fastcall **)(_DWORD *, int *))(*(_QWORD *)v11 + 688LL))(v11, v13);
+  }
+  else
+  {
+    *(_BYTE *)(a2 + 144) = 1;
+  }
+}
+
+
+======================================================================
+KismetArrayLibrary::Array_Shuffle @ RVA 0x2C1F640 EA 0x7FF6F663F640
+======================================================================
+void __fastcall sub_7FF6F663F640(__int64 a1, __int64 a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rsi
+  __int64 v5; // rbp
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // r8
+  __int64 v9; // rax
+  char v10; // al
+  __int64 v11; // rax
+
+  v2 = 0;
+  *(_QWORD *)(a2 + 48) = 0;
+  if ( *(_QWORD *)(a2 + 32) )
+  {
+    sub_7FF6F4F4C960(a2, *(_QWORD *)(a2 + 24), 0);
+  }
+  else
+  {
+    *(_QWORD *)(a2 + 128) = *(_QWORD *)(*(_QWORD *)(a2 + 128) + 40LL);
+    sub_7FF6F4F4C990(a2, 0);
+  }
+  v4 = *(_QWORD *)(a2 + 48);
+  v5 = *(_QWORD *)(a2 + 56);
+  if ( v4
+    && ((v6 = sub_7FF6F4F2EB60(L"/Script/CoreUObject"),
+         v7 = *(_QWORD *)(v4 + 16),
+         v8 = v6 + 136,
+         v9 = *(int *)(v6 + 160),
+         (int)v9 > *(_DWORD *)(v7 + 160))
+     || *(_QWORD *)(*(_QWORD *)(v7 + 136) + 8 * v9) != v8
+      ? (v10 = 0)
+      : (v10 = 1),
+        v10) )
+  {
+    v11 = *(_QWORD *)(a2 + 32);
+    LOBYTE(v2) = v11 != 0;
+    *(_QWORD *)(a2 + 32) = v11 + v2;
+    sub_7FF6F5E68630(v5, v4);
+  }
+  else
+  {
+    *(_BYTE *)(a2 + 144) = 1;
+  }
+}
+
+
+======================================================================
+KismetArrayLibrary::FilterArray @ RVA 0x2C30820 EA 0x7FF6F6650820
+======================================================================
+// Hidden C++ exception states: #wind=4
+__int64 __fastcall sub_7FF6F6650820(__int64 a1, _QWORD *a2)
+{
+  __int64 *v3; // rdi
+  __int64 *v4; // r8
+  __int64 result; // rax
+  __int64 v6[2]; // [rsp+28h] [rbp-30h] BYREF
+  __int64 v7[4]; // [rsp+38h] [rbp-20h] BYREF
+  __int64 v8; // [rsp+68h] [rbp+10h] BYREF
+
+  v7[0] = 0;
+  v7[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  v3 = v7;
+  if ( a2[7] )
+    v3 = (__int64 *)a2[7];
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v6[0] = 0;
+  v6[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v6);
+  }
+  v4 = v6;
+  if ( a2[7] )
+    v4 = (__int64 *)a2[7];
+  a2[4] += a2[4] != 0;
+  result = sub_7FF6F5E66A70(v3, v8, v4);
+  if ( v6[0] )
+  {
+    result = sub_7FF6F4DED1F0(v6[0]);
+    v6[0] = 0;
+  }
+  if ( v7[0] )
+    return sub_7FF6F4DED1F0(v7[0]);
+  return result;
+}
+
+
+======================================================================
+KismetArrayLibrary::SetArrayPropertyByName @ RVA 0x2C48310 EA 0x7FF6F6668310
+======================================================================
+__int64 __fastcall sub_7FF6F6668310(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // r8
+  __int64 v6; // rdx
+  __int64 v7; // rcx
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v10; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], 0);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, 0);
+  }
+  v4 = a2[4];
+  v5 = a2[7];
+  v6 = v9;
+  v7 = v10;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return sub_7FF6F5E68540(v7, v6, v5);
+}
+

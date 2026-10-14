@@ -1,0 +1,116 @@
+// /Game/Blueprints/TallTales/Actors/Tale_9_ShoresOfGold/bp_vaultspiketrigger -> BP_VaultSpikeTrigger_C
+
+=== BP_VaultSpikeTrigger_C::fn_idx_9202 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_VaultSpikeTrigger_C::fn_idx_281304 (22 bytes) ===
+$0: VirtualFunction call "idx:281309" (
+  $13: literal int32 97
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_VaultSpikeTrigger_C::fn_idx_281305 (22 bytes) ===
+$0: VirtualFunction call "idx:281309" (
+  $13: literal int32 284
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_VaultSpikeTrigger_C::fn_idx_281306 (22 bytes) ===
+$0: VirtualFunction call "idx:281309" (
+  $13: literal int32 10
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_VaultSpikeTrigger_C::fn_idx_281309 (292 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fd1852d80
+$10: LetBool (Variable = Expression)
+  Variable:
+  $11: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x19fcd2fe200
+  Expression:
+  $20: FinalFunction target=HasAuthority@0x19e4cd64b30 (
+    $29: EndFunctionParms
+  )
+$30: JumpIfNot -> 0x121, cond:
+  $35: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x19fcd2fe200
+$44: LetBool (Variable = Expression)
+  Variable:
+  $45: LocalVariable named CallFunc_DeactivateTrigger_ReturnValue@0x19fcd2fe600
+  Expression:
+  $54: Context
+    ObjectExpression:
+    $55: InterfaceContext:
+    $56: InstanceVariable named MechanismTrigger@0x19fcd2fe680
+    SkipBytes: 0xf
+    RValueProperty: CallFunc_DeactivateTrigger_ReturnValue@0x19fcd2fe600
+    ContextExpression:
+    $77: VirtualFunction call "DeactivateTrigger" (
+      $90: Self
+      $91: EndFunctionParms
+    )
+$92: Jump to offset 0x121
+$97: LetBool (Variable = Expression)
+  Variable:
+  $98: LocalVariable named CallFunc_HasAuthority_ReturnValue2@0x19fcd2fe280
+  Expression:
+  $107: FinalFunction target=HasAuthority@0x19e4cd64b30 (
+    $116: EndFunctionParms
+  )
+$117: JumpIfNot -> 0x121, cond:
+  $122: LocalVariable named CallFunc_HasAuthority_ReturnValue2@0x19fcd2fe280
+$131: Let (Variable = Expression)
+  Variable:
+  $140: LocalVariable named CallFunc_GetTriggerState_ReturnValue@0x19fcd2fe380
+  Expression:
+  $149: Context
+    ObjectExpression:
+    $150: InterfaceContext:
+    $151: InstanceVariable named MechanismTrigger@0x19fcd2fe680
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetTriggerState_ReturnValue@0x19fcd2fe380
+    ContextExpression:
+    $172: VirtualFunction call "GetTriggerState" (
+      $185: EndFunctionParms
+    )
+$186: LetBool (Variable = Expression)
+  Variable:
+  $187: LocalVariable named CallFunc_NotEqual_ByteByte_ReturnValue@0x19fcd2fe400
+  Expression:
+  $196: CallMath target=NotEqual_ByteByte@0x19e4d390710 (
+    $205: LocalVariable named CallFunc_GetTriggerState_ReturnValue@0x19fcd2fe380
+    $214: literal byte 0
+    $216: EndFunctionParms
+  )
+$217: JumpIfNot -> 0x121, cond:
+  $222: LocalVariable named CallFunc_NotEqual_ByteByte_ReturnValue@0x19fcd2fe400
+$231: LetBool (Variable = Expression)
+  Variable:
+  $232: LocalVariable named CallFunc_ActivateTrigger_ReturnValue@0x19fcd2fe500
+  Expression:
+  $241: Context
+    ObjectExpression:
+    $242: InterfaceContext:
+    $243: InstanceVariable named MechanismTrigger@0x19fcd2fe680
+    SkipBytes: 0xf
+    RValueProperty: CallFunc_ActivateTrigger_ReturnValue@0x19fcd2fe500
+    ContextExpression:
+    $264: VirtualFunction call "ActivateTrigger" (
+      $277: Self
+      $278: EndFunctionParms
+    )
+$279: Jump to offset 0x121
+$284: Jump to offset 0xa
+$289: Return expression:
+  $290: Nothing
+$291: EndOfScript

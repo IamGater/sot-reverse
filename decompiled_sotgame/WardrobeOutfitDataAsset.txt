@@ -1,0 +1,63 @@
+// Class: WardrobeOutfitDataAsset (1 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+WardrobeOutfitDataAsset::GetBiasForCategory @ RVA 0x137B480 EA 0x7FF6F4D9B480
+======================================================================
+__int64 __fastcall sub_7FF6F4D9B480(__int64 a1, _QWORD *a2, int *a3)
+{
+  __int64 v3; // rdi
+  __int64 *v7; // r8
+  __int64 v8; // rax
+  _DWORD *v9; // rdx
+  __int64 result; // rax
+  _DWORD *v11; // r9
+  int v12; // xmm0_4
+  __int64 v13; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v13 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v7 = &v13;
+  if ( a2[7] )
+    v7 = (__int64 *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  v9 = *(_DWORD **)(a1 + 72);
+  result = *(int *)(a1 + 80);
+  v11 = &v9[3 * result];
+  if ( v9 == v11 )
+  {
+LABEL_10:
+    v12 = 1065353216;
+  }
+  else
+  {
+    while ( 1 )
+    {
+      if ( *v9 == *(_DWORD *)v7 )
+      {
+        result = *((unsigned int *)v7 + 1);
+        if ( v9[1] == (_DWORD)result )
+          break;
+      }
+      v9 += 3;
+      if ( v9 == v11 )
+        goto LABEL_10;
+    }
+    v12 = v9[2];
+  }
+  *a3 = v12;
+  return result;
+}
+

@@ -1,0 +1,35 @@
+// Class: TestablePlayerController (3 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+TestablePlayerController::DisconnectClientFromTest @ RVA 0x194F1A0 EA 0x7FF6F536F1A0
+======================================================================
+__int64 __fastcall sub_7FF6F536F1A0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 3416LL))(a1);
+}
+
+
+======================================================================
+TestablePlayerController::PerformPostTestCleanup @ RVA 0x194FC80 EA 0x7FF6F536FC80
+======================================================================
+__int64 __fastcall sub_7FF6F536FC80(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 3392LL))(a1);
+}
+
+
+======================================================================
+TestablePlayerController::YieldToServer @ RVA 0x1951010 EA 0x7FF6F5371010
+======================================================================
+__int64 __fastcall sub_7FF6F5371010(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64))(*(_QWORD *)a1 + 3400LL))(a1) )
+    return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 3408LL))(a1);
+  else
+    return sub_7FF6F4F0F6D0(L"YieldToServer_Validate");
+}
+

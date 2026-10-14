@@ -1,0 +1,232 @@
+// Class: LocomotionFunctionLib (3 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+LocomotionFunctionLib::UpdateCalculateRateAndCurrentYaw @ RVA 0x2EE78A0 EA 0x7FF6F69078A0
+======================================================================
+void __fastcall sub_7FF6F69078A0(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  _BYTE *v6; // rax
+  _BYTE *v7; // rbp
+  int *v8; // rax
+  int *v9; // rsi
+  __int64 v10; // rdx
+  __int64 v11; // rax
+  _BYTE v12[56]; // [rsp+20h] [rbp-38h] BYREF
+  int v13; // [rsp+68h] [rbp+10h] BYREF
+  int v14; // [rsp+70h] [rbp+18h] BYREF
+  int v15; // [rsp+78h] [rbp+20h] BYREF
+
+  v3 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v6 = (_BYTE *)a2[7];
+  v7 = v12;
+  v15 = 0;
+  if ( v6 )
+    v7 = v6;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v13 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v8 = (int *)a2[7];
+  v9 = &v13;
+  v14 = 0;
+  if ( v8 )
+    v9 = v8;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v11 = a2[4];
+  LOBYTE(v3) = v11 != 0;
+  a2[4] = v11 + v3;
+  *a3 = sub_7FF6F68DC230(v7, v10, v9);
+}
+
+
+======================================================================
+LocomotionFunctionLib::UpdateCharacterSpeed @ RVA 0x2EE7A00 EA 0x7FF6F6907A00
+======================================================================
+__int64 __fastcall sub_7FF6F6907A00(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  _BYTE *v7; // rsi
+  int v8; // r8d
+  int v9; // r9d
+  __int64 v10; // rax
+  int v11; // xmm1_4
+  __int64 result; // rax
+  int v13; // [rsp+28h] [rbp-48h]
+  char v14; // [rsp+30h] [rbp-40h]
+  int v15; // [rsp+40h] [rbp-30h] BYREF
+  int v16; // [rsp+44h] [rbp-2Ch] BYREF
+  _BYTE v17[16]; // [rsp+48h] [rbp-28h] BYREF
+  char v18; // [rsp+58h] [rbp-18h] BYREF
+  int v19; // [rsp+A8h] [rbp+38h] BYREF
+  int v20; // [rsp+B0h] [rbp+40h] BYREF
+  int v21; // [rsp+B8h] [rbp+48h] BYREF
+
+  v3 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v17);
+  }
+  v6 = a2[7];
+  v7 = v17;
+  v16 = 0;
+  if ( v6 )
+    LODWORD(v7) = v6;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v21 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v21);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v21);
+  }
+  v20 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v20);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v20);
+  }
+  v19 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  v10 = a2[4];
+  v11 = v21;
+  LOBYTE(v3) = v10 != 0;
+  v14 = v19 != 0;
+  v13 = v20;
+  a2[4] = v10 + v3;
+  result = sub_7FF6F68DC2A0((unsigned int)&v18, (_DWORD)v7, v8, v9, v11, v13, v14);
+  *(_OWORD *)a3 = *(_OWORD *)result;
+  *(_QWORD *)(a3 + 16) = *(_QWORD *)(result + 16);
+  return result;
+}
+
+
+======================================================================
+LocomotionFunctionLib::UpdateControllerSpineRotation @ RVA 0x2EE7BD0 EA 0x7FF6F6907BD0
+======================================================================
+void __fastcall sub_7FF6F6907BD0(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  _BYTE *v6; // rax
+  _BYTE *v7; // rsi
+  __int64 v8; // rax
+  _BYTE v9[40]; // [rsp+20h] [rbp-28h] BYREF
+  int v10; // [rsp+58h] [rbp+10h] BYREF
+  int v11; // [rsp+60h] [rbp+18h] BYREF
+
+  v3 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = (_BYTE *)a2[7];
+  v7 = v9;
+  v11 = 0;
+  if ( v6 )
+    v7 = v6;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  *a3 = sub_7FF6F68DC3F0(v7);
+}
+

@@ -1,0 +1,168 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/CompanyTales/MerchantAlliance/Rank0_Fauna/bp_ct_fauna_waitforchickentodie -> BP_CT_Fauna_WaitForChickenToDie_C
+
+=== BP_CT_Fauna_WaitForChickenToDie_C::OnBeginCustom (58 bytes) ===
+$0: LetValueOnPersistentFrame dest=idx:282507@0x19fcbb4fb00
+  Expression:
+  $9: LocalVariable named Chicken@0x19fcbb4f980
+$18: LetValueOnPersistentFrame dest=idx:282508@0x19fcbb4fb80
+  Expression:
+  $27: LocalVariable named idx:282302@0x19fcbb4fa00
+$36: VirtualFunction call "idx:282506" (
+  $49: literal int32 10
+  $54: EndFunctionParms
+)
+$55: Return expression:
+  $56: Nothing
+$57: EndOfScript
+
+=== BP_CT_Fauna_WaitForChickenToDie_C::fn_idx_275667 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_NewParam@0x19fcbb4ff80
+  Expression:
+  $9: LocalVariable named NewParam@0x19fcbb4fa80
+$18: VirtualFunction call "idx:282506" (
+  $31: literal int32 544
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_CT_Fauna_WaitForChickenToDie_C::OnEnd (22 bytes) ===
+$0: VirtualFunction call "idx:282506" (
+  $13: literal int32 549
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_CT_Fauna_WaitForChickenToDie_C::fn_idx_282506 (557 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fcdbbb210
+$10: Let (Variable = Expression)
+  Variable:
+  $19: LocalVariable named idx:282509@0x19fcbb4fd00
+  Expression:
+  $28: DynamicCast to AICreatureCharacter@0x19e4c6ac080 of expr:
+  $37: LocalVariable named idx:282507@0x19fcbb4fb00
+$46: Let (Variable = Expression)
+  Variable:
+  $55: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fcbb4fd80
+  Expression:
+  $64: PrimitiveCast type=71
+    Argument:
+    $66: LocalVariable named idx:282509@0x19fcbb4fd00
+$75: JumpIfNot -> 0x22a, cond:
+  $80: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fcbb4fd80
+$89: LetObj (Variable = Expression)
+  Variable:
+  $90: LocalVariable named idx:282504@0x19fcbb4fe00
+  Expression:
+  $99: Context
+    ObjectExpression:
+    $100: LocalVariable named idx:282509@0x19fcbb4fd00
+    SkipBytes: 0xa
+    RValueProperty: idx:282504@0x19fcbb4fe00
+    ContextExpression:
+    $121: FinalFunction target=GetController@0x19e4d077d70 (
+      $130: EndFunctionParms
+    )
+$131: Let (Variable = Expression)
+  Variable:
+  $140: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fcbb4fe80
+  Expression:
+  $149: Context
+    ObjectExpression:
+    $150: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fcbb4fe80
+    ContextExpression:
+    $171: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x19e4d410390 (
+      $180: LocalVariable named idx:282504@0x19fcbb4fe00
+      $189: EndFunctionParms
+    )
+$190: Context
+  ObjectExpression:
+  $191: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x35
+  RValueProperty: (null)
+  ContextExpression:
+  $212: FinalFunction target=RegisterEventFromHandle@0x19e4d410c00 (
+    $221: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fcbb4fe80
+    $230: InstanceVariable named idx:282510@0x19fc1821d00
+    $239: Self
+    $240: literal ansi string "CustomEvent_0"
+    $255: ObjectConst EventOwnedPawnFinishedDying@0x19e4d0071c0
+    $264: EndFunctionParms
+  )
+$265: Jump to offset 0x22a
+$270: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $279: EndFunctionParms
+)
+$280: Jump to offset 0x22a
+$285: Let (Variable = Expression)
+  Variable:
+  $294: LocalVariable named idx:282465@0x19fcbb4fc00
+  Expression:
+  $303: DynamicCast to BP_PromptSequencer_FaunaContract_C@0x19fbf7af9c0 of expr:
+  $312: LocalVariable named idx:282508@0x19fcbb4fb80
+$321: Let (Variable = Expression)
+  Variable:
+  $330: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcbb4fc80
+  Expression:
+  $339: PrimitiveCast type=71
+    Argument:
+    $341: LocalVariable named idx:282465@0x19fcbb4fc00
+$350: JumpIfNot -> 0x22a, cond:
+  $355: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcbb4fc80
+$364: LetBool (Variable = Expression)
+  Variable:
+  $365: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue@0x19fcbb4ff00
+  Expression:
+  $374: Context
+    ObjectExpression:
+    $375: LocalVariable named idx:282465@0x19fcbb4fc00
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_FlushNetDormancy_ReturnValue@0x19fcbb4ff00
+    ContextExpression:
+    $396: FinalFunction target=FlushNetDormancy@0x19e4cd61090 (
+      $405: EndFunctionParms
+    )
+$406: Let (Variable = Expression)
+  Variable:
+  $415: Context
+    ObjectExpression:
+    $416: LocalVariable named idx:282465@0x19fcbb4fc00
+    SkipBytes: 0x9
+    RValueProperty: ChickenStatus@0x19fbf74a000
+    ContextExpression:
+    $437: InstanceVariable named ChickenStatus@0x19fbf74a000
+  Expression:
+  $446: literal byte 3
+$448: Context
+  ObjectExpression:
+  $449: LocalVariable named idx:282465@0x19fcbb4fc00
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $470: VirtualFunction call "OnRep_ChickenStatus" (
+    $483: EndFunctionParms
+  )
+$484: Jump to offset 0x10e
+$489: Context
+  ObjectExpression:
+  $490: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $511: FinalFunction target=UnregisterEventFromHandle@0x19e4d411420 (
+    $520: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fcbb4fe80
+    $529: InstanceVariable named idx:282510@0x19fc1821d00
+    $538: EndFunctionParms
+  )
+$539: Jump to offset 0x22a
+$544: Jump to offset 0x11d
+$549: Jump to offset 0x1e9
+$554: Return expression:
+  $555: Nothing
+$556: EndOfScript

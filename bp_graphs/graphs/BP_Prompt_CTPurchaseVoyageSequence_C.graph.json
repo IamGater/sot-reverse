@@ -1,0 +1,3596 @@
+{
+  "class": "BP_Prompt_CTPurchaseVoyageSequence_C",
+  "source": "decompiled_blueprints/BP_Prompt_CTPurchaseVoyageSequence_C.txt",
+  "functions": [
+    {
+      "name": "ShowAppropriateMerchantPrompt",
+      "bytecode_bytes": 204,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "FlowStack.Push(0xc9)",
+          "edges": []
+        },
+        {
+          "offset": 5,
+          "opcode": "FlowStack.Push(0xbf)",
+          "edges": []
+        },
+        {
+          "offset": 10,
+          "opcode": "FlowStack.Push(0x86)",
+          "edges": []
+        },
+        {
+          "offset": 15,
+          "opcode": "FlowStack.Push(0x4d)",
+          "edges": []
+        },
+        {
+          "offset": 20,
+          "opcode": "VirtualFunction call \"ShouldShowGoldHoarderCompanyPrompts\" (",
+          "edges": []
+        },
+        {
+          "offset": 43,
+          "opcode": "PopExecutionFlowIfNot, cond:",
+          "edges": []
+        },
+        {
+          "offset": 44,
+          "opcode": "LocalVariable named CallFunc_ShouldShowGoldHoarderCompanyPrompts_Result@0x2139321ca00",
+          "edges": []
+        },
+        {
+          "offset": 53,
+          "opcode": "FinalFunction target=SetPromptAs@0x212d6ad5a00 (",
+          "edges": []
+        },
+        {
+          "offset": 72,
+          "opcode": "Jump to offset 0xc9",
+          "edges": []
+        },
+        {
+          "offset": 77,
+          "opcode": "VirtualFunction call \"ShouldShowOrderOfSoulsCompanyPrompts\" (",
+          "edges": []
+        },
+        {
+          "offset": 100,
+          "opcode": "PopExecutionFlowIfNot, cond:",
+          "edges": []
+        },
+        {
+          "offset": 101,
+          "opcode": "LocalVariable named CallFunc_ShouldShowOrderOfSoulsCompanyPrompts_Result@0x2139321c980",
+          "edges": []
+        },
+        {
+          "offset": 110,
+          "opcode": "FinalFunction target=SetPromptAs@0x212d6ad5a00 (",
+          "edges": []
+        },
+        {
+          "offset": 129,
+          "opcode": "Jump to offset 0xc9",
+          "edges": []
+        },
+        {
+          "offset": 134,
+          "opcode": "VirtualFunction call \"ShouldShowMerchantAllianceCompanyPrompts\" (",
+          "edges": []
+        },
+        {
+          "offset": 157,
+          "opcode": "PopExecutionFlowIfNot, cond:",
+          "edges": []
+        },
+        {
+          "offset": 158,
+          "opcode": "LocalVariable named CallFunc_ShouldShowMerchantAllianceCompanyPrompts_Result@0x2139321c900",
+          "edges": []
+        },
+        {
+          "offset": 167,
+          "opcode": "FinalFunction target=SetPromptAs@0x212d6ad5a00 (",
+          "edges": []
+        },
+        {
+          "offset": 186,
+          "opcode": "Jump to offset 0xc9",
+          "edges": []
+        },
+        {
+          "offset": 191,
+          "opcode": "FinalFunction target=DismissAllPrompts@0x212d6ad4cc0 (",
+          "edges": []
+        },
+        {
+          "offset": 201,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 203,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 20,
+          "expression": "ShouldShowGoldHoarderCompanyPrompts(CallFunc_ShouldShowGoldHoarderCompanyPrompts_Result)"
+        },
+        {
+          "offset": 53,
+          "expression": "UBasePromptCoordinator::SetPromptAs(Prompt_GoToGoldhoarders)"
+        },
+        {
+          "offset": 77,
+          "expression": "ShouldShowOrderOfSoulsCompanyPrompts(CallFunc_ShouldShowOrderOfSoulsCompanyPrompts_Result)"
+        },
+        {
+          "offset": 110,
+          "expression": "UBasePromptCoordinator::SetPromptAs(Prompt_GoToOrderOfSouls)"
+        },
+        {
+          "offset": 134,
+          "expression": "ShouldShowMerchantAllianceCompanyPrompts(CallFunc_ShouldShowMerchantAllianceCompanyPrompts_Result)"
+        },
+        {
+          "offset": 167,
+          "expression": "UBasePromptCoordinator::SetPromptAs(Prompt_GoToMerchantAlliance)"
+        },
+        {
+          "offset": 191,
+          "expression": "UBasePromptCoordinator::DismissAllPrompts()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "SetIsHidden",
+      "bytecode_bytes": 22,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 19,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 21,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [],
+      "types": {}
+    },
+    {
+      "name": "PlayerLeftGoldhoarderRadiusFunc",
+      "bytecode_bytes": 74,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "VirtualFunction call \"IsCurrentlyControlledCharacter\" (",
+          "edges": []
+        },
+        {
+          "offset": 32,
+          "opcode": "JumpIfNot -> 0x47, cond:",
+          "edges": [
+            {
+              "to_label": "L_47",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 46,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 57,
+          "opcode": "VirtualFunction call \"Evaluate\" (",
+          "edges": []
+        },
+        {
+          "offset": 71,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 73,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 0,
+          "expression": "IsCurrentlyControlledCharacter(Actor, CallFunc_IsCurrentlyControlledCharacter_Result)"
+        },
+        {
+          "offset": 57,
+          "expression": "Evaluate()"
+        }
+      ],
+      "types": {
+        "State_InsideGoldhoardersRadius": "bool"
+      }
+    },
+    {
+      "name": "PlayerEnteredGoldhoarderRadiusFunc",
+      "bytecode_bytes": 74,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "VirtualFunction call \"IsCurrentlyControlledCharacter\" (",
+          "edges": []
+        },
+        {
+          "offset": 32,
+          "opcode": "JumpIfNot -> 0x47, cond:",
+          "edges": [
+            {
+              "to_label": "L_47",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 46,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 57,
+          "opcode": "VirtualFunction call \"Evaluate\" (",
+          "edges": []
+        },
+        {
+          "offset": 71,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 73,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 0,
+          "expression": "IsCurrentlyControlledCharacter(Actor, CallFunc_IsCurrentlyControlledCharacter_Result)"
+        },
+        {
+          "offset": 57,
+          "expression": "Evaluate()"
+        }
+      ],
+      "types": {
+        "State_InsideGoldhoardersRadius": "bool"
+      }
+    },
+    {
+      "name": "PlayerLeftOutpostRadiusFunc",
+      "bytecode_bytes": 74,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "VirtualFunction call \"IsCurrentlyControlledCharacter\" (",
+          "edges": []
+        },
+        {
+          "offset": 32,
+          "opcode": "JumpIfNot -> 0x47, cond:",
+          "edges": [
+            {
+              "to_label": "L_47",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 46,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 57,
+          "opcode": "VirtualFunction call \"Evaluate\" (",
+          "edges": []
+        },
+        {
+          "offset": 71,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 73,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 0,
+          "expression": "IsCurrentlyControlledCharacter(Actor, CallFunc_IsCurrentlyControlledCharacter_Result)"
+        },
+        {
+          "offset": 57,
+          "expression": "Evaluate()"
+        }
+      ],
+      "types": {
+        "State_InsideOutpostRadius": "bool"
+      }
+    },
+    {
+      "name": "PlayerEnteredOutpostRadiusFunc",
+      "bytecode_bytes": 74,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "VirtualFunction call \"IsCurrentlyControlledCharacter\" (",
+          "edges": []
+        },
+        {
+          "offset": 32,
+          "opcode": "JumpIfNot -> 0x47, cond:",
+          "edges": [
+            {
+              "to_label": "L_47",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 46,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 57,
+          "opcode": "VirtualFunction call \"Evaluate\" (",
+          "edges": []
+        },
+        {
+          "offset": 71,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 73,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 0,
+          "expression": "IsCurrentlyControlledCharacter(Actor, CallFunc_IsCurrentlyControlledCharacter_Result)"
+        },
+        {
+          "offset": 57,
+          "expression": "Evaluate()"
+        }
+      ],
+      "types": {
+        "State_InsideOutpostRadius": "bool"
+      }
+    },
+    {
+      "name": "OnCompanyRankPurchasedFunc",
+      "bytecode_bytes": 735,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "FlowStack.Push(0x2dc)",
+          "edges": []
+        },
+        {
+          "offset": 5,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 73,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 107,
+          "opcode": "PopExecutionFlowIfNot, cond:",
+          "edges": []
+        },
+        {
+          "offset": 108,
+          "opcode": "LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x2139321cf80",
+          "edges": []
+        },
+        {
+          "offset": 117,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 140,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 163,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 231,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 285,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 344,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 382,
+          "opcode": "JumpIfNot -> 0x283, cond:",
+          "edges": [
+            {
+              "to_label": "L_283",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 396,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 423,
+          "opcode": "FlowStack.Push(0x292)",
+          "edges": []
+        },
+        {
+          "offset": 428,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 496,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 550,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 609,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 642,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 643,
+          "opcode": "VirtualFunction call \"Evaluate\" (",
+          "edges": []
+        },
+        {
+          "offset": 657,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 658,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 700,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 727,
+          "opcode": "Jump to offset 0xa3",
+          "edges": []
+        },
+        {
+          "offset": 732,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 734,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 643,
+          "expression": "Evaluate()"
+        }
+      ],
+      "types": {
+        "CallFunc_Array_Length_ReturnValue": "int"
+      }
+    },
+    {
+      "name": "OnPlayerWithdrewVoyageFunc",
+      "bytecode_bytes": 73,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 56,
+          "opcode": "VirtualFunction call \"Evaluate\" (",
+          "edges": []
+        },
+        {
+          "offset": 70,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 72,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 56,
+          "expression": "Evaluate()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "OnVoyageDiscardFromInventoryFunc",
+      "bytecode_bytes": 132,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 68,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 115,
+          "opcode": "VirtualFunction call \"Evaluate\" (",
+          "edges": []
+        },
+        {
+          "offset": 129,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 131,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 115,
+          "expression": "Evaluate()"
+        }
+      ],
+      "types": {
+        "CallFunc_Conv_StringToText_ReturnValue": "FText"
+      }
+    },
+    {
+      "name": "OnPlayerProposedVoyageFunc",
+      "bytecode_bytes": 132,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 68,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 115,
+          "opcode": "VirtualFunction call \"Evaluate\" (",
+          "edges": []
+        },
+        {
+          "offset": 129,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 131,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 115,
+          "expression": "Evaluate()"
+        }
+      ],
+      "types": {
+        "CallFunc_Conv_StringToText_ReturnValue": "FText"
+      }
+    },
+    {
+      "name": "OnOfferPurchasedFunc",
+      "bytecode_bytes": 141,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 77,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 124,
+          "opcode": "VirtualFunction call \"Evaluate\" (",
+          "edges": []
+        },
+        {
+          "offset": 138,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 140,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 124,
+          "expression": "Evaluate()"
+        }
+      ],
+      "types": {
+        "CallFunc_Conv_StringToText_ReturnValue": "FText"
+      }
+    },
+    {
+      "name": "OnPlayerCancelledVoyageFunc",
+      "bytecode_bytes": 73,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 56,
+          "opcode": "VirtualFunction call \"Evaluate\" (",
+          "edges": []
+        },
+        {
+          "offset": 70,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 72,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 56,
+          "expression": "Evaluate()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "OnPlayerExitedShipFunc",
+      "bytecode_bytes": 28,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 11,
+          "opcode": "VirtualFunction call \"Evaluate\" (",
+          "edges": []
+        },
+        {
+          "offset": 25,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 27,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 11,
+          "expression": "Evaluate()"
+        }
+      ],
+      "types": {
+        "State_OnShip": "bool"
+      }
+    },
+    {
+      "name": "OnSomethingEnteredShipFunc",
+      "bytecode_bytes": 402,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 45,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 74,
+          "opcode": "JumpIfNot -> 0x18f, cond:",
+          "edges": [
+            {
+              "to_label": "L_18F",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 88,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 124,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 183,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 241,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 300,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 360,
+          "opcode": "JumpIfNot -> 0x18f, cond:",
+          "edges": [
+            {
+              "to_label": "L_18F",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 374,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 385,
+          "opcode": "VirtualFunction call \"Evaluate\" (",
+          "edges": []
+        },
+        {
+          "offset": 399,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 401,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 385,
+          "expression": "Evaluate()"
+        }
+      ],
+      "types": {
+        "K2Node_DynamicCast_AsShip": "Ship*",
+        "K2Node_DynamicCast_bSuccess": "bool",
+        "CallFunc_GetCrewId_CrewMember_CastInput": "TScriptInterface<UCrewMembershipInterface>",
+        "CallFunc_GetCrewId_CrewMember2_CastInput": "TScriptInterface<UCrewMembershipInterface>",
+        "CallFunc_EqualEqual_GuidGuid_ReturnValue": "bool",
+        "State_OnShip": "bool"
+      }
+    },
+    {
+      "name": "OnVoyageCompletedFunc",
+      "bytecode_bytes": 73,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 56,
+          "opcode": "VirtualFunction call \"Evaluate\" (",
+          "edges": []
+        },
+        {
+          "offset": 70,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 72,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 56,
+          "expression": "Evaluate()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "OnVoyageBegunFunc",
+      "bytecode_bytes": 73,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 56,
+          "opcode": "VirtualFunction call \"Evaluate\" (",
+          "edges": []
+        },
+        {
+          "offset": 70,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 72,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 56,
+          "expression": "Evaluate()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "IsNearAnyShopkeeper",
+      "bytecode_bytes": 98,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 38,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 76,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 95,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 97,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [],
+      "types": {}
+    },
+    {
+      "name": "AreTutorialsForceDisabled",
+      "bytecode_bytes": 22,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 19,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 21,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [],
+      "types": {}
+    },
+    {
+      "name": "IsCurrentlyControlledCharacter",
+      "bytecode_bytes": 102,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetObj (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 42,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 80,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 99,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 101,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [],
+      "types": {
+        "CallFunc_K2_GetPawn_ReturnValue": "APawn*"
+      }
+    },
+    {
+      "name": "ShouldShowMerchantAllianceCompanyPrompts",
+      "bytecode_bytes": 232,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 67,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 134,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 172,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 210,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 229,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 231,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [],
+      "types": {}
+    },
+    {
+      "name": "ShouldShowOrderOfSoulsCompanyPrompts",
+      "bytecode_bytes": 127,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 67,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 105,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 124,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 126,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [],
+      "types": {}
+    },
+    {
+      "name": "ClearAllOutpostOverlapActors",
+      "bytecode_bytes": 409,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "FlowStack.Push(0x196)",
+          "edges": []
+        },
+        {
+          "offset": 5,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 28,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 51,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 110,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 148,
+          "opcode": "JumpIfNot -> 0x11e, cond:",
+          "edges": [
+            {
+              "to_label": "L_11E",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 162,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 189,
+          "opcode": "FlowStack.Push(0x14c)",
+          "edges": []
+        },
+        {
+          "offset": 194,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 253,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 285,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 286,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 327,
+          "opcode": "Jump to offset 0x196",
+          "edges": []
+        },
+        {
+          "offset": 332,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 374,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 401,
+          "opcode": "Jump to offset 0x33",
+          "edges": []
+        },
+        {
+          "offset": 406,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 408,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [],
+      "types": {
+        "CallFunc_Array_Length_ReturnValue": "int"
+      }
+    },
+    {
+      "name": "ShouldShowGoldHoarderCompanyPrompts",
+      "bytecode_bytes": 232,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 67,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 134,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 172,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 210,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 229,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 231,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [],
+      "types": {}
+    },
+    {
+      "name": "ClearAllGoldHoarderOverlapActors",
+      "bytecode_bytes": 432,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "FlowStack.Push(0x1ad)",
+          "edges": []
+        },
+        {
+          "offset": 5,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 28,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 51,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 110,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 148,
+          "opcode": "JumpIfNot -> 0x11e, cond:",
+          "edges": [
+            {
+              "to_label": "L_11E",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 162,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 189,
+          "opcode": "FlowStack.Push(0x163)",
+          "edges": []
+        },
+        {
+          "offset": 194,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 253,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 285,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 286,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 327,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 350,
+          "opcode": "Jump to offset 0x1ad",
+          "edges": []
+        },
+        {
+          "offset": 355,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 397,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 424,
+          "opcode": "Jump to offset 0x33",
+          "edges": []
+        },
+        {
+          "offset": 429,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 431,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [],
+      "types": {
+        "CallFunc_Array_Length_ReturnValue": "int"
+      }
+    },
+    {
+      "name": "SetGoldHoardersLocations",
+      "bytecode_bytes": 40,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_CustomEvent_GoldHoarderLocations@0x21392e11480",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 37,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 39,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 18,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "Evaluate",
+      "bytecode_bytes": 22,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 19,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 21,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 0,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "Complete",
+      "bytecode_bytes": 22,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 19,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 21,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 0,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "SetOutposts",
+      "bytecode_bytes": 40,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_CustomEvent_OutpostNames@0x21392e11500",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 37,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 39,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 18,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "UninitializeImplementable",
+      "bytecode_bytes": 22,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 19,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 21,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 0,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "PostInitialize",
+      "bytecode_bytes": 22,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 19,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 21,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 0,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "SetOrderOfSoulsLocations",
+      "bytecode_bytes": 40,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_CustomEvent_Order_of_Souls_Locations@0x21392e11600",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 37,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 39,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 18,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "SetMerchantAllianceLocations",
+      "bytecode_bytes": 40,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_CustomEvent_Merchant_Alliance_Locations@0x21392e11700",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 37,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 39,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 18,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "RegisterCharacterEvents_Implementable",
+      "bytecode_bytes": 40,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_Event_CharacterDispatcher2@0x2139321f300",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 37,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 39,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 18,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "UnregisterCharacterEvents_Implementable",
+      "bytecode_bytes": 40,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_Event_CharacterDispatcher@0x2139321f380",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 37,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 39,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 18,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "UnregisterOtherEvents_Implementable",
+      "bytecode_bytes": 22,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 19,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 21,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 0,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "RegisterOtherEvents_Implementable",
+      "bytecode_bytes": 22,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 19,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 21,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 0,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "ForceDisableTutorials",
+      "bytecode_bytes": 22,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 19,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 21,
+          "opcode": "EndOfScript",
+          "edges": []
+        },
+        {
+          "offset": 0,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 19,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 21,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 0,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        },
+        {
+          "offset": 0,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "OnOfferPurchased",
+      "bytecode_bytes": 40,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event10@0x2139321ff00",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 37,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 39,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 18,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "OnPlayerProposedVoyage",
+      "bytecode_bytes": 40,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event9@0x21392e10000",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 37,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 39,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 18,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "OnVoyageDiscardFromInventory",
+      "bytecode_bytes": 40,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event8@0x21392e10180",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 37,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 39,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 18,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "OnVoyageBegun",
+      "bytecode_bytes": 40,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event7@0x21392e10280",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 37,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 39,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 18,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "OnVoyageCompleted",
+      "bytecode_bytes": 40,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event6@0x21392e10400",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 37,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 39,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 18,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "OnSomethingEnteredShip",
+      "bytecode_bytes": 40,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event5@0x21392e10580",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 37,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 39,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 18,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "OnPlayerExitedShip",
+      "bytecode_bytes": 40,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event4@0x21392e10680",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 37,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 39,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 18,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "PlayerLeftOutpostRadius",
+      "bytecode_bytes": 40,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_CustomEvent_ActorInZone4@0x21392e10780",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 37,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 39,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 18,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "PlayerEnteredOutpostRadius",
+      "bytecode_bytes": 40,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_CustomEvent_ActorInZone3@0x21392e10800",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 37,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 39,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 18,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "PlayerLeftGoldhoarderRadius",
+      "bytecode_bytes": 40,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_CustomEvent_ActorInZone2@0x21392e10a00",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 37,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 39,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 18,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "PlayerEnteredGoldhoarderRadius",
+      "bytecode_bytes": 40,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_CustomEvent_ActorInZone@0x21392e10a80",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 37,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 39,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 18,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "OnPlayerWithdrewVoyage",
+      "bytecode_bytes": 40,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event3@0x21392e10c00",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 37,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 39,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 18,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "OnPlayerCancelledVoyage",
+      "bytecode_bytes": 40,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event2@0x21392e10d00",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 37,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 39,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 18,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "OnCompanyRankPurchased",
+      "bytecode_bytes": 40,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event@0x21392e11100",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 37,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 39,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 18,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "OnEndPlay_HUD",
+      "bytecode_bytes": 40,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "LetValueOnPersistentFrame dest=K2Node_CustomEvent_EndPlayReason@0x2139321f280",
+          "edges": []
+        },
+        {
+          "offset": 18,
+          "opcode": "VirtualFunction call \"ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence\" (",
+          "edges": []
+        },
+        {
+          "offset": 37,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 39,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 18,
+          "expression": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence()"
+        }
+      ],
+      "types": {}
+    },
+    {
+      "name": "ExecuteUbergraph_BP_Prompt_CTPurchaseVoyageSequence",
+      "bytecode_bytes": 5313,
+      "nodes": [
+        {
+          "offset": 0,
+          "opcode": "FlowStack.Push(0x14be)",
+          "edges": []
+        },
+        {
+          "offset": 5,
+          "opcode": "Computed Jump, offset by expr:",
+          "edges": []
+        },
+        {
+          "offset": 15,
+          "opcode": "VirtualFunction call \"Unregister HUD Events\" (",
+          "edges": []
+        },
+        {
+          "offset": 29,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 30,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 31,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 32,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 68,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 69,
+          "opcode": "FlowStack.Push(0x1f1)",
+          "edges": []
+        },
+        {
+          "offset": 74,
+          "opcode": "FlowStack.Push(0x11e)",
+          "edges": []
+        },
+        {
+          "offset": 79,
+          "opcode": "FlowStack.Push(0xb7)",
+          "edges": []
+        },
+        {
+          "offset": 84,
+          "opcode": "VirtualFunction call \"GetCharacterObjectMessageDispatcher\" (",
+          "edges": []
+        },
+        {
+          "offset": 107,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 182,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 183,
+          "opcode": "VirtualFunction call \"GetCharacterObjectMessageDispatcher\" (",
+          "edges": []
+        },
+        {
+          "offset": 206,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 285,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 286,
+          "opcode": "VirtualFunction call \"GetCharacterObjectMessageDispatcher\" (",
+          "edges": []
+        },
+        {
+          "offset": 309,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 393,
+          "opcode": "VirtualFunction call \"GetCharacterObjectMessageDispatcher\" (",
+          "edges": []
+        },
+        {
+          "offset": 416,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 496,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 497,
+          "opcode": "VirtualFunction call \"GetCharacterObjectMessageDispatcher\" (",
+          "edges": []
+        },
+        {
+          "offset": 520,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 605,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 606,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 656,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 706,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 756,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 806,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 856,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 857,
+          "opcode": "VirtualFunction call \"GetControllerObjectMessageDispatcher\" (",
+          "edges": []
+        },
+        {
+          "offset": 880,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 930,
+          "opcode": "VirtualFunction call \"GetControllerObjectMessageDispatcher\" (",
+          "edges": []
+        },
+        {
+          "offset": 953,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 1003,
+          "opcode": "VirtualFunction call \"GetControllerObjectMessageDispatcher\" (",
+          "edges": []
+        },
+        {
+          "offset": 1026,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 1076,
+          "opcode": "VirtualFunction call \"Unregister HUD Events\" (",
+          "edges": []
+        },
+        {
+          "offset": 1090,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 1091,
+          "opcode": "FlowStack.Push(0x678)",
+          "edges": []
+        },
+        {
+          "offset": 1096,
+          "opcode": "FlowStack.Push(0x60c)",
+          "edges": []
+        },
+        {
+          "offset": 1101,
+          "opcode": "FlowStack.Push(0x4c2)",
+          "edges": []
+        },
+        {
+          "offset": 1106,
+          "opcode": "FlowStack.Push(0x52e)",
+          "edges": []
+        },
+        {
+          "offset": 1111,
+          "opcode": "FlowStack.Push(0x5a0)",
+          "edges": []
+        },
+        {
+          "offset": 1116,
+          "opcode": "VirtualFunction call \"GetControllerObjectMessageDispatcher\" (",
+          "edges": []
+        },
+        {
+          "offset": 1139,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 1217,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 1218,
+          "opcode": "VirtualFunction call \"GetControllerObjectMessageDispatcher\" (",
+          "edges": []
+        },
+        {
+          "offset": 1241,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 1325,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 1326,
+          "opcode": "VirtualFunction call \"GetHUDObjectMessageDispatcher\" (",
+          "edges": []
+        },
+        {
+          "offset": 1349,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 1439,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 1440,
+          "opcode": "VirtualFunction call \"GetHUDObjectMessageDispatcher\" (",
+          "edges": []
+        },
+        {
+          "offset": 1463,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 1547,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 1548,
+          "opcode": "VirtualFunction call \"GetControllerObjectMessageDispatcher\" (",
+          "edges": []
+        },
+        {
+          "offset": 1571,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 1655,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 1656,
+          "opcode": "BindDelegate 'OnEndPlay_HUD'",
+          "edges": []
+        },
+        {
+          "offset": 1679,
+          "opcode": "LetObj (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 1721,
+          "opcode": "AddMulticastDelegate",
+          "edges": []
+        },
+        {
+          "offset": 1722,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 1753,
+          "opcode": "LocalVariable named UniqueObjectNameForCooking_OutputDelegate3@0x21392e10300",
+          "edges": []
+        },
+        {
+          "offset": 1762,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 1763,
+          "opcode": "VirtualFunction call \"AreTutorialsForceDisabled\" (",
+          "edges": []
+        },
+        {
+          "offset": 1786,
+          "opcode": "JumpIfNot -> 0x709, cond:",
+          "edges": [
+            {
+              "to_label": "L_709",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 1800,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 1801,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 1848,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 1895,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 1933,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 1971,
+          "opcode": "JumpIfNot -> 0x7cc, cond:",
+          "edges": [
+            {
+              "to_label": "L_7CC",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 1985,
+          "opcode": "FinalFunction target=DismissAllPrompts@0x212d6ad4cc0 (",
+          "edges": []
+        },
+        {
+          "offset": 1995,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 1996,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 2043,
+          "opcode": "JumpIfNot -> 0x81d, cond:",
+          "edges": [
+            {
+              "to_label": "L_81D",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 2057,
+          "opcode": "FinalFunction target=SetPromptAs@0x212d6ad5a00 (",
+          "edges": []
+        },
+        {
+          "offset": 2076,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 2077,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 2124,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 2162,
+          "opcode": "JumpIfNot -> 0x894, cond:",
+          "edges": [
+            {
+              "to_label": "L_894",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 2176,
+          "opcode": "FinalFunction target=SetPromptAs@0x212d6ad5a00 (",
+          "edges": []
+        },
+        {
+          "offset": 2195,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 2196,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 2243,
+          "opcode": "JumpIfNot -> 0x8e5, cond:",
+          "edges": [
+            {
+              "to_label": "L_8E5",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 2257,
+          "opcode": "FinalFunction target=SetPromptAs@0x212d6ad5a00 (",
+          "edges": []
+        },
+        {
+          "offset": 2276,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 2277,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 2324,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 2362,
+          "opcode": "JumpIfNot -> 0x957, cond:",
+          "edges": [
+            {
+              "to_label": "L_957",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 2376,
+          "opcode": "VirtualFunction call \"ShowAppropriateMerchantPrompt\" (",
+          "edges": []
+        },
+        {
+          "offset": 2390,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 2391,
+          "opcode": "FinalFunction target=DismissAllPrompts@0x212d6ad4cc0 (",
+          "edges": []
+        },
+        {
+          "offset": 2401,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 2402,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 2413,
+          "opcode": "FinalFunction target=DismissAllPrompts@0x212d6ad4cc0 (",
+          "edges": []
+        },
+        {
+          "offset": 2423,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 2424,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 2475,
+          "opcode": "PopExecutionFlowIfNot, cond:",
+          "edges": []
+        },
+        {
+          "offset": 2476,
+          "opcode": "LocalVariable named CallFunc_IsValid_ReturnValue@0x2139321fb00",
+          "edges": []
+        },
+        {
+          "offset": 2485,
+          "opcode": "LetObj (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 2527,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 2578,
+          "opcode": "PopExecutionFlowIfNot, cond:",
+          "edges": []
+        },
+        {
+          "offset": 2579,
+          "opcode": "LocalVariable named CallFunc_IsValid_ReturnValue2@0x2139321fc00",
+          "edges": []
+        },
+        {
+          "offset": 2588,
+          "opcode": "FlowStack.Push(0xaa8)",
+          "edges": []
+        },
+        {
+          "offset": 2593,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 2644,
+          "opcode": "PopExecutionFlowIfNot, cond:",
+          "edges": []
+        },
+        {
+          "offset": 2645,
+          "opcode": "LocalVariable named CallFunc_IsHandleRegistered_ReturnValue2@0x21392e10080",
+          "edges": []
+        },
+        {
+          "offset": 2654,
+          "opcode": "VirtualFunction call \"GetHUDObjectMessageDispatcher\" (",
+          "edges": []
+        },
+        {
+          "offset": 2677,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 2727,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 2728,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 2779,
+          "opcode": "PopExecutionFlowIfNot, cond:",
+          "edges": []
+        },
+        {
+          "offset": 2780,
+          "opcode": "LocalVariable named CallFunc_IsHandleRegistered_ReturnValue@0x2139321fe00",
+          "edges": []
+        },
+        {
+          "offset": 2789,
+          "opcode": "VirtualFunction call \"GetHUDObjectMessageDispatcher\" (",
+          "edges": []
+        },
+        {
+          "offset": 2812,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 2862,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 2863,
+          "opcode": "VirtualFunction call \"OnOfferPurchasedFunc\" (",
+          "edges": []
+        },
+        {
+          "offset": 2886,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 2887,
+          "opcode": "VirtualFunction call \"OnPlayerProposedVoyageFunc\" (",
+          "edges": []
+        },
+        {
+          "offset": 2910,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 2911,
+          "opcode": "VirtualFunction call \"OnVoyageDiscardFromInventoryFunc\" (",
+          "edges": []
+        },
+        {
+          "offset": 2934,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 2935,
+          "opcode": "VirtualFunction call \"OnVoyageBegunFunc\" (",
+          "edges": []
+        },
+        {
+          "offset": 2958,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 2959,
+          "opcode": "VirtualFunction call \"OnVoyageCompletedFunc\" (",
+          "edges": []
+        },
+        {
+          "offset": 2982,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 2983,
+          "opcode": "VirtualFunction call \"OnPlayerExitedShipFunc\" (",
+          "edges": []
+        },
+        {
+          "offset": 2997,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 2998,
+          "opcode": "VirtualFunction call \"OnSomethingEnteredShipFunc\" (",
+          "edges": []
+        },
+        {
+          "offset": 3021,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 3022,
+          "opcode": "Jump to offset 0xba7",
+          "edges": []
+        },
+        {
+          "offset": 3027,
+          "opcode": "LetObj (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 3079,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 3142,
+          "opcode": "LetObj (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 3161,
+          "opcode": "Jump to offset 0x20",
+          "edges": []
+        },
+        {
+          "offset": 3166,
+          "opcode": "VirtualFunction call \"ClearAllOutpostOverlapActors\" (",
+          "edges": []
+        },
+        {
+          "offset": 3180,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 3181,
+          "opcode": "VirtualFunction call \"PlayerLeftOutpostRadiusFunc\" (",
+          "edges": []
+        },
+        {
+          "offset": 3204,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 3205,
+          "opcode": "VirtualFunction call \"PlayerEnteredOutpostRadiusFunc\" (",
+          "edges": []
+        },
+        {
+          "offset": 3228,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 3229,
+          "opcode": "VirtualFunction call \"ClearAllGoldHoarderOverlapActors\" (",
+          "edges": []
+        },
+        {
+          "offset": 3243,
+          "opcode": "Jump to offset 0xc5e",
+          "edges": []
+        },
+        {
+          "offset": 3248,
+          "opcode": "Jump to offset 0xc9d",
+          "edges": []
+        },
+        {
+          "offset": 3253,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 3276,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 3299,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 3358,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 3396,
+          "opcode": "PopExecutionFlowIfNot, cond:",
+          "edges": []
+        },
+        {
+          "offset": 3397,
+          "opcode": "LocalVariable named CallFunc_Less_IntInt_ReturnValue2@0x21392e11200",
+          "edges": []
+        },
+        {
+          "offset": 3406,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 3433,
+          "opcode": "FlowStack.Push(0x11b9)",
+          "edges": []
+        },
+        {
+          "offset": 3438,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 3497,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 3566,
+          "opcode": "JumpIfNot -> 0xf0c, cond:",
+          "edges": [
+            {
+              "to_label": "L_F0C",
+              "kind": "jump_if_not"
+            }
+          ]
+        },
+        {
+          "offset": 3580,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 3626,
+          "opcode": "LetObj (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 3687,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 3755,
+          "opcode": "BindDelegate 'PlayerEnteredOutpostRadius'",
+          "edges": []
+        },
+        {
+          "offset": 3778,
+          "opcode": "BindDelegate 'PlayerLeftOutpostRadius'",
+          "edges": []
+        },
+        {
+          "offset": 3801,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 3851,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 3852,
+          "opcode": "LetObj (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 3895,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 3954,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 4013,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 4041,
+          "opcode": "literal ansi string \"1\"",
+          "edges": []
+        },
+        {
+          "offset": 4044,
+          "opcode": "literal ansi string \"\"",
+          "edges": []
+        },
+        {
+          "offset": 4046,
+          "opcode": "literal ansi string \"\"",
+          "edges": []
+        },
+        {
+          "offset": 4048,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 4084,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 4143,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 4202,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 4230,
+          "opcode": "literal ansi string \"0\"",
+          "edges": []
+        },
+        {
+          "offset": 4233,
+          "opcode": "literal ansi string \"\"",
+          "edges": []
+        },
+        {
+          "offset": 4235,
+          "opcode": "literal ansi string \"\"",
+          "edges": []
+        },
+        {
+          "offset": 4237,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 4273,
+          "opcode": "SetArray",
+          "edges": []
+        },
+        {
+          "offset": 4302,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 4453,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 4536,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 4537,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 4579,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 4606,
+          "opcode": "Jump to offset 0xce3",
+          "edges": []
+        },
+        {
+          "offset": 4611,
+          "opcode": "FinalFunction target=DismissAllPrompts@0x212d6ad4cc0 (",
+          "edges": []
+        },
+        {
+          "offset": 4621,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 4622,
+          "opcode": "Jump to offset 0x1203",
+          "edges": []
+        },
+        {
+          "offset": 4627,
+          "opcode": "Jump to offset 0x6e3",
+          "edges": []
+        },
+        {
+          "offset": 4632,
+          "opcode": "VirtualFunction call \"ClearAllGoldHoarderOverlapActors\" (",
+          "edges": []
+        },
+        {
+          "offset": 4646,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 4669,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 4692,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 4751,
+          "opcode": "LetBool (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 4789,
+          "opcode": "PopExecutionFlowIfNot, cond:",
+          "edges": []
+        },
+        {
+          "offset": 4790,
+          "opcode": "LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x21392e10c80",
+          "edges": []
+        },
+        {
+          "offset": 4799,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 4826,
+          "opcode": "FlowStack.Push(0x13fc)",
+          "edges": []
+        },
+        {
+          "offset": 4831,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 4890,
+          "opcode": "LetObj (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 4951,
+          "opcode": "BindDelegate 'PlayerEnteredGoldhoarderRadius'",
+          "edges": []
+        },
+        {
+          "offset": 4974,
+          "opcode": "BindDelegate 'PlayerLeftGoldhoarderRadius'",
+          "edges": []
+        },
+        {
+          "offset": 4997,
+          "opcode": "Context",
+          "edges": []
+        },
+        {
+          "offset": 5047,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 5115,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 5116,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 5158,
+          "opcode": "Let (Variable = Expression)",
+          "edges": []
+        },
+        {
+          "offset": 5185,
+          "opcode": "Jump to offset 0x1254",
+          "edges": []
+        },
+        {
+          "offset": 5190,
+          "opcode": "VirtualFunction call \"PlayerLeftGoldhoarderRadiusFunc\" (",
+          "edges": []
+        },
+        {
+          "offset": 5213,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 5214,
+          "opcode": "VirtualFunction call \"PlayerEnteredGoldhoarderRadiusFunc\" (",
+          "edges": []
+        },
+        {
+          "offset": 5237,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 5238,
+          "opcode": "VirtualFunction call \"OnPlayerWithdrewVoyageFunc\" (",
+          "edges": []
+        },
+        {
+          "offset": 5261,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 5262,
+          "opcode": "VirtualFunction call \"OnPlayerCancelledVoyageFunc\" (",
+          "edges": []
+        },
+        {
+          "offset": 5285,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 5286,
+          "opcode": "VirtualFunction call \"OnCompanyRankPurchasedFunc\" (",
+          "edges": []
+        },
+        {
+          "offset": 5309,
+          "opcode": "PopExecutionFlow (jump to popped addr)",
+          "edges": []
+        },
+        {
+          "offset": 5310,
+          "opcode": "Return expression:",
+          "edges": []
+        },
+        {
+          "offset": 5312,
+          "opcode": "EndOfScript",
+          "edges": []
+        }
+      ],
+      "calls": [
+        {
+          "offset": 15,
+          "expression": "Unregister HUD Events()"
+        },
+        {
+          "offset": 84,
+          "expression": "GetCharacterObjectMessageDispatcher(CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher)"
+        },
+        {
+          "offset": 183,
+          "expression": "GetCharacterObjectMessageDispatcher(CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher2)"
+        },
+        {
+          "offset": 286,
+          "expression": "GetCharacterObjectMessageDispatcher(CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher3)"
+        },
+        {
+          "offset": 393,
+          "expression": "GetCharacterObjectMessageDispatcher(CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher4)"
+        },
+        {
+          "offset": 497,
+          "expression": "GetCharacterObjectMessageDispatcher(CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher5)"
+        },
+        {
+          "offset": 857,
+          "expression": "GetControllerObjectMessageDispatcher(CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher3)"
+        },
+        {
+          "offset": 930,
+          "expression": "GetControllerObjectMessageDispatcher(CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher)"
+        },
+        {
+          "offset": 1003,
+          "expression": "GetControllerObjectMessageDispatcher(CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher2)"
+        },
+        {
+          "offset": 1076,
+          "expression": "Unregister HUD Events()"
+        },
+        {
+          "offset": 1116,
+          "expression": "GetControllerObjectMessageDispatcher(CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher4)"
+        },
+        {
+          "offset": 1218,
+          "expression": "GetControllerObjectMessageDispatcher(CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher5)"
+        },
+        {
+          "offset": 1326,
+          "expression": "GetHUDObjectMessageDispatcher(CallFunc_GetHUDObjectMessageDispatcher_HUD_Dispatcher4)"
+        },
+        {
+          "offset": 1440,
+          "expression": "GetHUDObjectMessageDispatcher(CallFunc_GetHUDObjectMessageDispatcher_HUD_Dispatcher3)"
+        },
+        {
+          "offset": 1548,
+          "expression": "GetControllerObjectMessageDispatcher(CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher6)"
+        },
+        {
+          "offset": 1763,
+          "expression": "AreTutorialsForceDisabled(CallFunc_AreTutorialsForceDisabled_Result)"
+        },
+        {
+          "offset": 1985,
+          "expression": "UBasePromptCoordinator::DismissAllPrompts()"
+        },
+        {
+          "offset": 2057,
+          "expression": "UBasePromptCoordinator::SetPromptAs(Prompt_VoteOnVoyage)"
+        },
+        {
+          "offset": 2176,
+          "expression": "UBasePromptCoordinator::SetPromptAs(Prompt_ProposeVoyage)"
+        },
+        {
+          "offset": 2257,
+          "expression": "UBasePromptCoordinator::SetPromptAs(Prompt_BoardShip)"
+        },
+        {
+          "offset": 2376,
+          "expression": "ShowAppropriateMerchantPrompt()"
+        },
+        {
+          "offset": 2391,
+          "expression": "UBasePromptCoordinator::DismissAllPrompts()"
+        },
+        {
+          "offset": 2413,
+          "expression": "UBasePromptCoordinator::DismissAllPrompts()"
+        },
+        {
+          "offset": 2654,
+          "expression": "GetHUDObjectMessageDispatcher(CallFunc_GetHUDObjectMessageDispatcher_HUD_Dispatcher2)"
+        },
+        {
+          "offset": 2789,
+          "expression": "GetHUDObjectMessageDispatcher(CallFunc_GetHUDObjectMessageDispatcher_HUD_Dispatcher)"
+        },
+        {
+          "offset": 2863,
+          "expression": "OnOfferPurchasedFunc(K2Node_CustomEvent_Event10)"
+        },
+        {
+          "offset": 2887,
+          "expression": "OnPlayerProposedVoyageFunc(K2Node_CustomEvent_Event9)"
+        },
+        {
+          "offset": 2911,
+          "expression": "OnVoyageDiscardFromInventoryFunc(K2Node_CustomEvent_Event8)"
+        },
+        {
+          "offset": 2935,
+          "expression": "OnVoyageBegunFunc(K2Node_CustomEvent_Event7)"
+        },
+        {
+          "offset": 2959,
+          "expression": "OnVoyageCompletedFunc(K2Node_CustomEvent_Event6)"
+        },
+        {
+          "offset": 2983,
+          "expression": "OnPlayerExitedShipFunc()"
+        },
+        {
+          "offset": 2998,
+          "expression": "OnSomethingEnteredShipFunc(K2Node_CustomEvent_Event5)"
+        },
+        {
+          "offset": 3166,
+          "expression": "ClearAllOutpostOverlapActors()"
+        },
+        {
+          "offset": 3181,
+          "expression": "PlayerLeftOutpostRadiusFunc(K2Node_CustomEvent_ActorInZone4)"
+        },
+        {
+          "offset": 3205,
+          "expression": "PlayerEnteredOutpostRadiusFunc(K2Node_CustomEvent_ActorInZone3)"
+        },
+        {
+          "offset": 3229,
+          "expression": "ClearAllGoldHoarderOverlapActors()"
+        },
+        {
+          "offset": 4611,
+          "expression": "UBasePromptCoordinator::DismissAllPrompts()"
+        },
+        {
+          "offset": 4632,
+          "expression": "ClearAllGoldHoarderOverlapActors()"
+        },
+        {
+          "offset": 5190,
+          "expression": "PlayerLeftGoldhoarderRadiusFunc(K2Node_CustomEvent_ActorInZone2)"
+        },
+        {
+          "offset": 5214,
+          "expression": "PlayerEnteredGoldhoarderRadiusFunc(K2Node_CustomEvent_ActorInZone)"
+        },
+        {
+          "offset": 5238,
+          "expression": "OnPlayerWithdrewVoyageFunc(K2Node_CustomEvent_Event3)"
+        },
+        {
+          "offset": 5262,
+          "expression": "OnPlayerCancelledVoyageFunc(K2Node_CustomEvent_Event2)"
+        },
+        {
+          "offset": 5286,
+          "expression": "OnCompanyRankPurchasedFunc(K2Node_CustomEvent_Event)"
+        }
+      ],
+      "types": {
+        "CallFunc_GetHUD_ReturnValue2": "AHUD*",
+        "State_IsTutorialForceDisabled": "bool",
+        "CallFunc_GetHUD_ReturnValue": "AHUD*",
+        "CallFunc_IsHandleRegistered_ReturnValue2": "bool",
+        "CallFunc_IsHandleRegistered_ReturnValue": "bool",
+        "CallFunc_SpawnObject_ReturnValue": "UObject*",
+        "CallFunc_Array_Length_ReturnValue": "int",
+        "CallFunc_CreateOverlapTriggerActor_ReturnValue2": "AOverlapTriggerActor*",
+        "CallFunc_Array_Add_ReturnValue2": "int",
+        "CallFunc_GetObjectClass_ReturnValue": "UClass*",
+        "CallFunc_GetClassDisplayName_ReturnValue": "FString",
+        "CallFunc_Conv_StringToText_ReturnValue": "FText",
+        "CallFunc_Conv_NameToText_ReturnValue": "FText",
+        "CallFunc_Format_ReturnValue": "FText",
+        "CallFunc_Array_Length_ReturnValue2": "int",
+        "CallFunc_CreateOverlapTriggerActor_ReturnValue": "AOverlapTriggerActor*",
+        "CallFunc_Array_Add_ReturnValue": "int"
+      }
+    }
+  ]
+}

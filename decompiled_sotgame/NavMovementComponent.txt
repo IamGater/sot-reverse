@@ -1,0 +1,146 @@
+// Class: NavMovementComponent (8 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+NavMovementComponent::GetActorFeetLocation @ RVA 0x2A0AF00 EA 0x7FF6F642AF00
+======================================================================
+__int64 __fastcall sub_7FF6F642AF00(__int64 a1, __int64 a2, __int64 a3)
+{
+  __m128 *v4; // r9
+  float v5; // xmm6_4
+  float v6; // xmm0_4
+  float v7; // xmm2_4
+  __m128 v8; // xmm1
+  __int64 result; // rax
+  unsigned __int64 v10; // [rsp+20h] [rbp-28h] BYREF
+  float v11; // [rsp+28h] [rbp-20h]
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = *(__m128 **)(a1 + 200);
+  if ( v4 )
+  {
+    v5 = v4[17].m128_f32[1];
+    if ( (v4[14].m128_i8[8] & 1) != 0 )
+    {
+      (*(void (__fastcall **)(__m128 *, unsigned __int64 *))(v4->m128_u64[0] + 1128))(v4, &v10);
+      v6 = v11;
+      v7 = *((float *)&v10 + 1);
+      v8.m128_i32[0] = v10;
+    }
+    else
+    {
+      v8 = v4[21];
+      v7 = _mm_shuffle_ps(v8, v8, 85).m128_f32[0];
+      v6 = _mm_shuffle_ps(v8, v8, 170).m128_f32[0];
+    }
+    v10 = __PAIR64__(LODWORD(v7), v8.m128_u32[0]);
+    v11 = v6 - v5;
+  }
+  else
+  {
+    v10 = qword_7FF6FA4620F8;
+    v11 = *(float *)&dword_7FF6FA462100;
+  }
+  result = LODWORD(v11);
+  *(_QWORD *)a3 = v10;
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+NavMovementComponent::IsCrouching @ RVA 0x2A10700 EA 0x7FF6F6430700
+======================================================================
+__int64 __fastcall sub_7FF6F6430700(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1304LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+NavMovementComponent::IsFalling @ RVA 0x2A107F0 EA 0x7FF6F64307F0
+======================================================================
+__int64 __fastcall sub_7FF6F64307F0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1312LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+NavMovementComponent::IsFlying @ RVA 0x2A10820 EA 0x7FF6F6430820
+======================================================================
+__int64 __fastcall sub_7FF6F6430820(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1336LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+NavMovementComponent::IsMovingOnGround @ RVA 0x2A10970 EA 0x7FF6F6430970
+======================================================================
+__int64 __fastcall sub_7FF6F6430970(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1320LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+NavMovementComponent::IsSwimming @ RVA 0x2A10CC0 EA 0x7FF6F6430CC0
+======================================================================
+__int64 __fastcall sub_7FF6F6430CC0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1328LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+NavMovementComponent::StopActiveMovement @ RVA 0x2A1A1C0 EA 0x7FF6F643A1C0
+======================================================================
+__int64 __fastcall sub_7FF6F643A1C0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1264LL))(a1);
+}
+
+
+======================================================================
+NavMovementComponent::StopMovementKeepPathing @ RVA 0x2A1A2B0 EA 0x7FF6F643A2B0
+======================================================================
+__int64 __fastcall sub_7FF6F643A2B0(__int64 *a1, __int64 a2)
+{
+  __int64 v3; // rax
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v3 = *a1;
+  *((_DWORD *)a1 + 80) &= ~2u;
+  result = (*(__int64 (**)(void))(v3 + 1008))();
+  *((_DWORD *)a1 + 80) |= 2u;
+  return result;
+}
+

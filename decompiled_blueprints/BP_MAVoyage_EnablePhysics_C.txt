@@ -1,0 +1,85 @@
+// /Game/Prototype/Tales/TestTales/MA_LostShipments/bp_mavoyage_enablephysics -> BP_MAVoyage_EnablePhysics_C
+
+=== BP_MAVoyage_EnablePhysics_C::OnBeginCustom (329 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named K2Node_DynamicCast_AsItem_Info@0x19fd0f00e00
+  Expression:
+  $18: DynamicCast to ItemInfo@0x19e4c38a640 of expr:
+  $27: LocalVariable named Item@0x19fd0f00d80
+$36: Let (Variable = Expression)
+  Variable:
+  $45: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fd0f00e80
+  Expression:
+  $54: PrimitiveCast type=71
+    Argument:
+    $56: LocalVariable named K2Node_DynamicCast_AsItem_Info@0x19fd0f00e00
+$65: JumpIfNot -> 0x146, cond:
+  $70: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fd0f00e80
+$79: LetObj (Variable = Expression)
+  Variable:
+  $80: LocalVariable named CallFunc_GetItem_ReturnValue@0x19fd0f00f00
+  Expression:
+  $89: Context
+    ObjectExpression:
+    $90: LocalVariable named K2Node_DynamicCast_AsItem_Info@0x19fd0f00e00
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetItem_ReturnValue@0x19fd0f00f00
+    ContextExpression:
+    $111: FinalFunction target=GetItem@0x19e4d10a9b0 (
+      $120: EndFunctionParms
+    )
+$121: LetObj (Variable = Expression)
+  Variable:
+  $122: LocalVariable named CallFunc_K2_GetRootComponent_ReturnValue@0x19fd0f00f80
+  Expression:
+  $131: Context
+    ObjectExpression:
+    $132: LocalVariable named CallFunc_GetItem_ReturnValue@0x19fd0f00f00
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetRootComponent_ReturnValue@0x19fd0f00f80
+    ContextExpression:
+    $153: FinalFunction target=K2_GetRootComponent@0x19e4cd66d90 (
+      $162: EndFunctionParms
+    )
+$163: Let (Variable = Expression)
+  Variable:
+  $172: LocalVariable named K2Node_DynamicCast_AsPrimitive_Component@0x19fd0f01000
+  Expression:
+  $181: DynamicCast to PrimitiveComponent@0x19e4c355080 of expr:
+  $190: LocalVariable named CallFunc_K2_GetRootComponent_ReturnValue@0x19fd0f00f80
+$199: Let (Variable = Expression)
+  Variable:
+  $208: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fd0f01100
+  Expression:
+  $217: PrimitiveCast type=71
+    Argument:
+    $219: LocalVariable named K2Node_DynamicCast_AsPrimitive_Component@0x19fd0f01000
+$228: JumpIfNot -> 0x146, cond:
+  $233: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fd0f01100
+$242: Context
+  ObjectExpression:
+  $243: LocalVariable named K2Node_DynamicCast_AsPrimitive_Component@0x19fd0f01000
+  SkipBytes: 0xf
+  RValueProperty: (null)
+  ContextExpression:
+  $264: VirtualFunction call "SetEnableGravity" (
+    $277: True
+    $278: EndFunctionParms
+  )
+$279: Context
+  ObjectExpression:
+  $280: LocalVariable named K2Node_DynamicCast_AsPrimitive_Component@0x19fd0f01000
+  SkipBytes: 0xf
+  RValueProperty: (null)
+  ContextExpression:
+  $301: VirtualFunction call "SetSimulatePhysics" (
+    $314: True
+    $315: EndFunctionParms
+  )
+$316: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $325: EndFunctionParms
+)
+$326: Return expression:
+  $327: Nothing
+$328: EndOfScript

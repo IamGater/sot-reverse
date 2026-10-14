@@ -1,0 +1,140 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/CompanyTales/MerchantAlliance/Rank0_Fauna/bp_ct_fauna_waitforcrateallocation -> BP_CT_Fauna_WaitForCrateAllocation_C
+
+=== BP_CT_Fauna_WaitForCrateAllocation_C::OnBeginCustom (58 bytes) ===
+$0: LetValueOnPersistentFrame dest=idx:282435@0x19fcbb4e200
+  Expression:
+  $9: LocalVariable named idx:282397@0x19fcbb4e000
+$18: LetValueOnPersistentFrame dest=idx:282508@0x19fcbb4e280
+  Expression:
+  $27: LocalVariable named idx:282302@0x19fcbb4e080
+$36: VirtualFunction call "idx:282529" (
+  $49: literal int32 253
+  $54: EndFunctionParms
+)
+$55: Return expression:
+  $56: Nothing
+$57: EndOfScript
+
+=== BP_CT_Fauna_WaitForCrateAllocation_C::OnAllocated (22 bytes) ===
+$0: VirtualFunction call "idx:282529" (
+  $13: literal int32 467
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_CT_Fauna_WaitForCrateAllocation_C::fn_idx_282529 (475 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fcdbba9c0
+$10: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $19: EndFunctionParms
+)
+$20: Jump to offset 0x1d8
+$25: LetObj (Variable = Expression)
+  Variable:
+  $26: LocalVariable named CallFunc_GetService_ReturnValue@0x19fcbb4e180
+  Expression:
+  $35: FinalFunction target=GetService@0x19e4cda5b60 (
+    $44: ObjectConst TaleQuestMerchantContractsService@0x19e4c6c5940
+    $53: EndFunctionParms
+  )
+$54: Let (Variable = Expression)
+  Variable:
+  $63: LocalVariable named idx:282456@0x19fcbb4e300
+  Expression:
+  $72: DynamicCast to TaleQuestMerchantContractsService@0x19e4c6c5940 of expr:
+  $81: LocalVariable named CallFunc_GetService_ReturnValue@0x19fcbb4e180
+$90: Let (Variable = Expression)
+  Variable:
+  $99: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcbb4e380
+  Expression:
+  $108: PrimitiveCast type=71
+    Argument:
+    $110: LocalVariable named idx:282456@0x19fcbb4e300
+$119: JumpIfNot -> 0x1d8, cond:
+  $124: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcbb4e380
+$133: LetObj (Variable = Expression)
+  Variable:
+  $134: LocalVariable named idx:282429@0x19fcbb4e500
+  Expression:
+  $143: Context
+    ObjectExpression:
+    $144: LocalVariable named idx:282456@0x19fcbb4e300
+    SkipBytes: 0x13
+    RValueProperty: idx:282429@0x19fcbb4e500
+    ContextExpression:
+    $165: FinalFunction target=GetContract@0x19e4d4b7ec0 (
+      $174: LocalVariable named idx:282435@0x19fcbb4e200
+      $183: EndFunctionParms
+    )
+$184: BindDelegate 'OnAllocated'
+  Delegate:
+  $197: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fcbb4e100
+  Object:
+  $206: Self
+$207: AddMulticastDelegate
+$208: Context
+  ObjectExpression:
+  $209: LocalVariable named idx:282429@0x19fcbb4e500
+  SkipBytes: 0x9
+  RValueProperty: OnAllocated@0x19e4d4b7920
+  ContextExpression:
+  $230: InstanceVariable named OnAllocated@0x19e4d4b7920
+$239: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fcbb4e100
+$248: Jump to offset 0x1d8
+$253: Let (Variable = Expression)
+  Variable:
+  $262: LocalVariable named idx:282465@0x19fcbb4e400
+  Expression:
+  $271: DynamicCast to BP_PromptSequencer_FaunaContract_C@0x19fbf7af9c0 of expr:
+  $280: LocalVariable named idx:282508@0x19fcbb4e280
+$289: Let (Variable = Expression)
+  Variable:
+  $298: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fcbb4e480
+  Expression:
+  $307: PrimitiveCast type=71
+    Argument:
+    $309: LocalVariable named idx:282465@0x19fcbb4e400
+$318: JumpIfNot -> 0x1d8, cond:
+  $323: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fcbb4e480
+$332: Jump to offset 0x19
+$337: Let (Variable = Expression)
+  Variable:
+  $346: Context
+    ObjectExpression:
+    $347: LocalVariable named idx:282465@0x19fcbb4e400
+    SkipBytes: 0x9
+    RValueProperty: ChickenStatus@0x19fbf74a000
+    ContextExpression:
+    $368: InstanceVariable named ChickenStatus@0x19fbf74a000
+  Expression:
+  $377: literal byte 0
+$379: Context
+  ObjectExpression:
+  $380: LocalVariable named idx:282465@0x19fcbb4e400
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $401: VirtualFunction call "OnRep_ChickenStatus" (
+    $414: EndFunctionParms
+  )
+$415: Jump to offset 0xa
+$420: LetBool (Variable = Expression)
+  Variable:
+  $421: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue@0x19fcbb4e580
+  Expression:
+  $430: Context
+    ObjectExpression:
+    $431: LocalVariable named idx:282465@0x19fcbb4e400
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_FlushNetDormancy_ReturnValue@0x19fcbb4e580
+    ContextExpression:
+    $452: FinalFunction target=FlushNetDormancy@0x19e4cd61090 (
+      $461: EndFunctionParms
+    )
+$462: Jump to offset 0x151
+$467: Jump to offset 0x1a4
+$472: Return expression:
+  $473: Nothing
+$474: EndOfScript

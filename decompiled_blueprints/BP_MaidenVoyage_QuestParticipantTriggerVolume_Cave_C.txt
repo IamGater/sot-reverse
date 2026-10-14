@@ -1,0 +1,106 @@
+// E:\unreal-projects\Athena\Content\Blueprints\TallTales\Actors\MaidenVoyage\bp_maidenvoyage_questparticipanttriggervolume_cave.uasset -> BP_MaidenVoyage_QuestParticipantTriggerVolume_Cave_C
+
+=== BP_MaidenVoyage_QuestParticipantTriggerVolume_Cave_C::Initialise (30 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: InstanceVariable named Quest Participants@0x213b0630100
+  Expression:
+  $18: LocalOutVariable named QuestParticipants@0x213b09bf800
+$27: Return expression:
+  $28: Nothing
+$29: EndOfScript
+
+=== BP_MaidenVoyage_QuestParticipantTriggerVolume_Cave_C::CastToAthenaPlayerCharacter (152 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x213b09bfa00
+  Expression:
+  $18: DynamicCast to AthenaPlayerCharacter@0x212d54d6040 of expr:
+  $27: LocalVariable named Actor@0x213b09bf880
+$36: Let (Variable = Expression)
+  Variable:
+  $45: LocalVariable named K2Node_DynamicCast_bSuccess@0x213b09bfa80
+  Expression:
+  $54: PrimitiveCast type=71
+    Argument:
+    $56: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x213b09bfa00
+$65: JumpIfNot -> 0x85, cond:
+  $70: LocalVariable named K2Node_DynamicCast_bSuccess@0x213b09bfa80
+$79: LetBool (Variable = Expression)
+  Variable:
+  $80: InstanceVariable named CastSuccessful@0x213b09bff80
+  Expression:
+  $89: True
+$90: LetBool (Variable = Expression)
+  Variable:
+  $91: LocalOutVariable named Successful@0x213b09bf900
+  Expression:
+  $100: InstanceVariable named CastSuccessful@0x213b09bff80
+$109: LetObj (Variable = Expression)
+  Variable:
+  $110: LocalOutVariable named AthenaPlayerCharacter@0x213b09bf980
+  Expression:
+  $119: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x213b09bfa00
+$128: Jump to offset 0x95
+$133: LetBool (Variable = Expression)
+  Variable:
+  $134: InstanceVariable named CastSuccessful@0x213b09bff80
+  Expression:
+  $143: False
+$144: Jump to offset 0x5a
+$149: Return expression:
+  $150: Nothing
+$151: EndOfScript
+
+=== BP_MaidenVoyage_QuestParticipantTriggerVolume_Cave_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_MaidenVoyage_QuestParticipantTriggerVolume_Cave_C::BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_53_ComponentBeginOverlapSignature__DelegateSignature (112 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_OtherActor@0x213b09bfc80
+  Expression:
+  $9: LocalVariable named OtherActor@0x213b09bfb00
+$18: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_OtherComp@0x213b09bfd00
+  Expression:
+  $27: LocalVariable named OtherComp@0x212d6217c00
+$36: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_OtherBodyIndex@0x213af4421b0
+  Expression:
+  $45: LocalVariable named OtherBodyIndex@0x213af4420d0
+$54: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_bFromSweep@0x213b09bfd80
+  Expression:
+  $63: LocalVariable named bFromSweep@0x213b09bfb80
+$72: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_SweepResult@0x213b09bfe00
+  Expression:
+  $81: LocalOutVariable named SweepResult@0x213b09bfc00
+$90: VirtualFunction call "ExecuteUbergraph_BP_MaidenVoyage_QuestParticipantTriggerVolume_Cave" (
+  $103: literal int32 10
+  $108: EndFunctionParms
+)
+$109: Return expression:
+  $110: Nothing
+$111: EndOfScript
+
+=== BP_MaidenVoyage_QuestParticipantTriggerVolume_Cave_C::ExecuteUbergraph_BP_MaidenVoyage_QuestParticipantTriggerVolume_Cave (87 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x213af442140
+$10: VirtualFunction call "CastToAthenaPlayerCharacter" (
+  $23: LocalVariable named K2Node_ComponentBoundEvent_OtherActor@0x213b09bfc80
+  $32: LocalVariable named CallFunc_CastToAthenaPlayerCharacter_Successful@0x213b09bfe80
+  $41: LocalVariable named CallFunc_CastToAthenaPlayerCharacter_AthenaPlayerCharacter@0x213b09bff00
+  $50: EndFunctionParms
+)
+$51: JumpIfNot -> 0x54, cond:
+  $56: LocalVariable named CallFunc_CastToAthenaPlayerCharacter_Successful@0x213b09bfe80
+$65: CallMulticastDelegate target=OnPlayerEnteredTrigger1__DelegateSignature@0x213b306d680 delegate:
+  $74: InstanceVariable named OnPlayerEnteredTrigger1@0x213b0630000
+  Params:
+  $83: EndFunctionParms
+$84: Return expression:
+  $85: Nothing
+$86: EndOfScript
+
+=== BP_MaidenVoyage_QuestParticipantTriggerVolume_Cave_C::OnPlayerEnteredTrigger1__DelegateSignature (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript

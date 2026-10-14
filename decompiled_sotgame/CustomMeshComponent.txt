@@ -1,0 +1,89 @@
+// Class: CustomMeshComponent (3 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+CustomMeshComponent::AddCustomMeshTriangles @ RVA 0x456E740 EA 0x7FF6F7F8E740
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F7F8E740(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 *v5; // rdx
+  __int64 v6; // rax
+  __int64 result; // rax
+  __int64 v8[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  v4 = 0;
+  v8[0] = 0;
+  v8[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v5 = v8;
+  if ( a2[7] )
+    v5 = (__int64 *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v4) = v6 != 0;
+  a2[4] = v6 + v4;
+  result = sub_7FF6F7F8FA90(a1, v5);
+  if ( v8[0] )
+    return sub_7FF6F4DED1F0(v8[0]);
+  return result;
+}
+
+
+======================================================================
+CustomMeshComponent::ClearCustomMeshTriangles @ RVA 0x456E7F0 EA 0x7FF6F7F8E7F0
+======================================================================
+__int64 __fastcall sub_7FF6F7F8E7F0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F7F8FBA0();
+}
+
+
+======================================================================
+CustomMeshComponent::SetCustomMeshTriangles @ RVA 0x456E810 EA 0x7FF6F7F8E810
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F7F8E810(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v6; // rdi
+  __int64 *v7; // rdx
+  __int64 v8; // rax
+  __int64 result; // rax
+  __int64 v10[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  v6 = 0;
+  v10[0] = 0;
+  v10[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v7 = v10;
+  if ( a2[7] )
+    v7 = (__int64 *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v6) = v8 != 0;
+  a2[4] = v8 + v6;
+  result = sub_7FF6F7F905E0(a1, v7);
+  *a3 = result;
+  if ( v10[0] )
+    return sub_7FF6F4DED1F0(v10[0]);
+  return result;
+}
+

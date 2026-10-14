@@ -1,0 +1,47 @@
+// Class: MerchantContractsBlueprintLibrary (1 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+MerchantContractsBlueprintLibrary::GetDateFromTimeLimit @ RVA 0x365E320 EA 0x7FF6F707E320
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F707E320(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  __int128 v8; // [rsp+28h] [rbp-60h] BYREF
+  _QWORD v9[2]; // [rsp+38h] [rbp-50h] BYREF
+  _BYTE v10[64]; // [rsp+48h] [rbp-40h] BYREF
+  int v11; // [rsp+98h] [rbp+10h] BYREF
+
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v5 = 0;
+  a2[4] += a2[4] != 0;
+  v9[0] = v8;
+  if ( (_QWORD)v8 )
+    v5 = *((_QWORD *)&v8 + 1);
+  v9[1] = v5;
+  v6 = sub_7FF6F7076FD0(v10, v9);
+  sub_7FF6F4DD3BC0(a3, v6);
+  return sub_7FF6F3C37050(v10);
+}
+

@@ -1,0 +1,62 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/CompanyTales/GoldHoarders/Rank0_Riddle/bp_ct_incrementsequenceriterator -> BP_CT_IncrementSequencerIterator_C
+
+=== BP_CT_IncrementSequencerIterator_C::OnBeginCustom (251 bytes) ===
+$0: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $9: EndFunctionParms
+)
+$10: Let (Variable = Expression)
+  Variable:
+  $19: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19fcdbbd900
+  Expression:
+  $28: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $37: LocalVariable named CurrentIndex@0x19fcdbbd820
+    $46: literal int32 1
+    $51: EndFunctionParms
+  )
+$52: LetBool (Variable = Expression)
+  Variable:
+  $53: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19fc182ba80
+  Expression:
+  $62: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $71: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19fcdbbd900
+    $80: InstanceVariable named idx:282271@0x19fd1850380
+    $89: EndFunctionParms
+  )
+$90: Let (Variable = Expression)
+  Variable:
+  $99: LocalVariable named idx:282269@0x19fcdbbe000
+  Expression:
+  $108: CallMath target=Conv_BoolToInt@0x19e4d374bf0 (
+    $117: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19fc182ba80
+    $126: EndFunctionParms
+  )
+$127: LetBool (Variable = Expression)
+  Variable:
+  $128: LocalVariable named CallFunc_Not_PreBool_ReturnValue@0x19fc182bb00
+  Expression:
+  $137: CallMath target=Not_PreBool@0x19e4d390310 (
+    $146: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19fc182ba80
+    $155: EndFunctionParms
+  )
+$156: Let (Variable = Expression)
+  Variable:
+  $165: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x19fcdbbdc80
+  Expression:
+  $174: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $183: LocalVariable named idx:282269@0x19fcdbbe000
+    $192: LocalVariable named CurrentIndex@0x19fcdbbd820
+    $201: EndFunctionParms
+  )
+$202: LetBool (Variable = Expression)
+  Variable:
+  $203: LocalOutVariable named idx:282272@0x19fc182ba00
+  Expression:
+  $212: LocalVariable named CallFunc_Not_PreBool_ReturnValue@0x19fc182bb00
+$221: Let (Variable = Expression)
+  Variable:
+  $230: LocalOutVariable named NewIndex@0x19fcdbbd890
+  Expression:
+  $239: LocalVariable named CallFunc_Add_IntInt_ReturnValue2@0x19fcdbbdc80
+$248: Return expression:
+  $249: Nothing
+$250: EndOfScript

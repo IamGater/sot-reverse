@@ -1,0 +1,102 @@
+// Class: MechanismTriggerComponent (2 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+MechanismTriggerComponent::OnMechanismActionStateChanged @ RVA 0x3958660 EA 0x7FF6F7378660
+======================================================================
+__int64 __fastcall sub_7FF6F7378660(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  __int64 v6; // r9
+  __int64 v7; // r8
+  __int64 v8; // rcx
+  __int64 v9; // rax
+  __int64 v11; // [rsp+30h] [rbp-38h] BYREF
+  __int128 v12; // [rsp+38h] [rbp-30h] BYREF
+  _QWORD v13[4]; // [rsp+48h] [rbp-20h] BYREF
+  unsigned __int8 v14; // [rsp+78h] [rbp+10h] BYREF
+  unsigned __int8 v15; // [rsp+88h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v12 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  v2 = a2[4] == 0;
+  v15 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  v2 = a2[4] == 0;
+  v14 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  v5 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = v14;
+  v7 = v15;
+  v8 = a2[4] + (a2[4] != 0);
+  v13[0] = v12;
+  v9 = v11;
+  if ( (_QWORD)v12 )
+    v5 = *((_QWORD *)&v12 + 1);
+  a2[4] = v8;
+  v13[1] = v5;
+  return sub_7FF6F73263F0(a1, v13, v7, v6, v9);
+}
+
+
+======================================================================
+MechanismTriggerComponent::OnRep_TriggerState @ RVA 0x39592B0 EA 0x7FF6F73792B0
+======================================================================
+__int64 __fastcall sub_7FF6F73792B0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 952LL))(a1, v5);
+}
+

@@ -1,0 +1,48 @@
+// Class: LightComponentBase (2 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+LightComponentBase::GetLightColor @ RVA 0x2A0C160 EA 0x7FF6F642C160
+======================================================================
+_OWORD *__fastcall sub_7FF6F642C160(__int64 a1, __int64 a2, _OWORD *a3)
+{
+  _OWORD *result; // rax
+  _BYTE v5[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (_OWORD *)sub_7FF6F5CE6710(a1, v5);
+  *a3 = *result;
+  return result;
+}
+
+
+======================================================================
+LightComponentBase::SetCastShadows @ RVA 0x2A15000 EA 0x7FF6F6435000
+======================================================================
+__int64 __fastcall sub_7FF6F6435000(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F5CEFFC0(a1, v5);
+}
+

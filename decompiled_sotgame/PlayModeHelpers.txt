@@ -1,0 +1,134 @@
+// Class: PlayModeHelpers (6 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+PlayModeHelpers::ClearPlayModeOverride @ RVA 0x2F3FA10 EA 0x7FF6F695FA10
+======================================================================
+void __fastcall sub_7FF6F695FA10(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F694C5A0LL);
+}
+
+
+======================================================================
+PlayModeHelpers::ClearPlayModeVariantOverride @ RVA 0x2F3FA30 EA 0x7FF6F695FA30
+======================================================================
+void __fastcall sub_7FF6F695FA30(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F694C5B0LL);
+}
+
+
+======================================================================
+PlayModeHelpers::GetPlayMode @ RVA 0x2F3FB80 EA 0x7FF6F695FB80
+======================================================================
+__int64 __fastcall sub_7FF6F695FB80(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  __int64 result; // rax
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  v7 = v9;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F694EA30(v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PlayModeHelpers::GetPlayModeVariant @ RVA 0x2F3FC00 EA 0x7FF6F695FC00
+======================================================================
+__int64 __fastcall sub_7FF6F695FC00(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  __int64 result; // rax
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  v7 = v9;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F694EA90(v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PlayModeHelpers::SetPlayModeOverride @ RVA 0x2F3FF30 EA 0x7FF6F695FF30
+======================================================================
+__int64 __fastcall sub_7FF6F695FF30(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  unsigned __int8 v5; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v5 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v5);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v5);
+  }
+  a2[4] += a2[4] != 0;
+  return nullsub_3275(v5);
+}
+
+
+======================================================================
+PlayModeHelpers::SetPlayModeVariantOverride @ RVA 0x2F3FFA0 EA 0x7FF6F695FFA0
+======================================================================
+__int64 __fastcall sub_7FF6F695FFA0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  unsigned __int8 v5; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v5 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v5);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v5);
+  }
+  a2[4] += a2[4] != 0;
+  return nullsub_3276(v5);
+}
+

@@ -1,0 +1,102 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/AshenAge/Tale_1_TheAshenDragon/bp_theashendragon_waitforcaptainskullpickup -> BP_TheAshenDragon_WaitForCaptainSkullPickup_C
+
+=== BP_TheAshenDragon_WaitForCaptainSkullPickup_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fcda4ae00
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fcda4ad00
+$18: VirtualFunction call "idx:281941" (
+  $31: literal int32 156
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_TheAshenDragon_WaitForCaptainSkullPickup_C::fn_idx_281943 (22 bytes) ===
+$0: VirtualFunction call "idx:281941" (
+  $13: literal int32 374
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_TheAshenDragon_WaitForCaptainSkullPickup_C::fn_idx_281941 (387 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fd18505b0
+$10: Context
+  ObjectExpression:
+  $11: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x77
+  RValueProperty: (null)
+  ContextExpression:
+  $32: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $41: NoObject
+    $42: literal ansi string "Cast to Martha Skull Proxy failed in BP_WaitForCaptainSkullPickup"
+    $109: True
+    $110: True
+    $111: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $124: literal float 0
+      $129: literal float 0.6600000262260437
+      $134: literal float 1
+      $139: literal float 1
+      $144: EndStructConst
+    $145: literal float 10
+    $150: EndFunctionParms
+  )
+$151: Jump to offset 0x180
+$156: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $165: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcda4ae80
+  $174: EndFunctionParms
+)
+$175: Let (Variable = Expression)
+  Variable:
+  $184: LocalVariable named idx:281942@0x19fcda4af00
+  Expression:
+  $193: DynamicCast to BP_TheAshenDragon_MarthaSkull_Proxy_C@0x19fcde07980 of expr:
+  $202: StructMemberContext prop=CaptainSkull_66_262DE0B648C75EFC72FDE489C251FF20@0x19fcd6ff280
+    Expression to struct:
+    $211: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcda4ae80
+$220: Let (Variable = Expression)
+  Variable:
+  $229: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcda4af80
+  Expression:
+  $238: PrimitiveCast type=71
+    Argument:
+    $240: LocalVariable named idx:281942@0x19fcda4af00
+$249: JumpIfNot -> 0xa, cond:
+  $254: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcda4af80
+$263: BindDelegate 'idx:281943'
+  Delegate:
+  $276: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fcda4ad80
+  Object:
+  $285: Self
+$286: LetObj (Variable = Expression)
+  Variable:
+  $287: LocalVariable named CallFunc_GetItemInfo_ReturnValue@0x19fcda4b680
+  Expression:
+  $296: Context
+    ObjectExpression:
+    $297: LocalVariable named idx:281942@0x19fcda4af00
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetItemInfo_ReturnValue@0x19fcda4b680
+    ContextExpression:
+    $318: FinalFunction target=GetItemInfo@0x19e4d108840 (
+      $327: EndFunctionParms
+    )
+$328: AddMulticastDelegate
+$329: Context
+  ObjectExpression:
+  $330: LocalVariable named CallFunc_GetItemInfo_ReturnValue@0x19fcda4b680
+  SkipBytes: 0x9
+  RValueProperty: OnItemPickedUpDelegate@0x19e4d10b7b0
+  ContextExpression:
+  $351: InstanceVariable named OnItemPickedUpDelegate@0x19e4d10b7b0
+$360: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fcda4ad80
+$369: Jump to offset 0x180
+$374: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $383: EndFunctionParms
+)
+$384: Return expression:
+  $385: Nothing
+$386: EndOfScript

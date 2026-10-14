@@ -1,0 +1,201 @@
+// Class: RadialInventoryInterface (14 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+RadialInventoryInterface::ActivateRadialInventory @ RVA 0x31B5450 EA 0x7FF6F6BD5450
+======================================================================
+__int64 __fastcall sub_7FF6F6BD5450(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 16LL))(a1, v5);
+}
+
+
+======================================================================
+RadialInventoryInterface::AreAuxiliarySlotsActive @ RVA 0x31B54D0 EA 0x7FF6F6BD54D0
+======================================================================
+__int64 __fastcall sub_7FF6F6BD54D0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 96LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+RadialInventoryInterface::AreSpecialAmmoSlotsActive @ RVA 0x31B5500 EA 0x7FF6F6BD5500
+======================================================================
+__int64 __fastcall sub_7FF6F6BD5500(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 120LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+RadialInventoryInterface::ConfirmRadialFullyOpened @ RVA 0x31B5530 EA 0x7FF6F6BD5530
+======================================================================
+__int64 __fastcall sub_7FF6F6BD5530(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 24LL))(a1);
+}
+
+
+======================================================================
+RadialInventoryInterface::DeactivateRadialInventory @ RVA 0x31B5550 EA 0x7FF6F6BD5550
+======================================================================
+__int64 __fastcall sub_7FF6F6BD5550(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 40LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+RadialInventoryInterface::DoesDisplayAuxiliaryPrompt @ RVA 0x31B5580 EA 0x7FF6F6BD5580
+======================================================================
+__int64 __fastcall sub_7FF6F6BD5580(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 80LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+RadialInventoryInterface::DoesDisplaySpecialAmmoPrompt @ RVA 0x31B55B0 EA 0x7FF6F6BD55B0
+======================================================================
+__int64 __fastcall sub_7FF6F6BD55B0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 104LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+RadialInventoryInterface::GetMaxNumOfPages @ RVA 0x31B5600 EA 0x7FF6F6BD5600
+======================================================================
+__int64 __fastcall sub_7FF6F6BD5600(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 72LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+RadialInventoryInterface::GetNumSlots @ RVA 0x31B5630 EA 0x7FF6F6BD5630
+======================================================================
+__int64 __fastcall sub_7FF6F6BD5630(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 64LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+RadialInventoryInterface::IsFullyOpened @ RVA 0x31B5690 EA 0x7FF6F6BD5690
+======================================================================
+__int64 __fastcall sub_7FF6F6BD5690(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 32LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+RadialInventoryInterface::OnRadialInventoryInput @ RVA 0x31B56C0 EA 0x7FF6F6BD56C0
+======================================================================
+__int64 __fastcall sub_7FF6F6BD56C0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  char *v5; // rdx
+  __int64 v6; // rax
+  char v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = &v8;
+  if ( a2[7] )
+    v5 = (char *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  return (*(__int64 (__fastcall **)(__int64, char *))(*(_QWORD *)a1 + 56LL))(a1, v5);
+}
+
+
+======================================================================
+RadialInventoryInterface::ResetRadialInventory @ RVA 0x31B59F0 EA 0x7FF6F6BD59F0
+======================================================================
+__int64 __fastcall sub_7FF6F6BD59F0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 48LL))(a1);
+}
+
+
+======================================================================
+RadialInventoryInterface::ToggleAuxiliarySlots @ RVA 0x31B5A10 EA 0x7FF6F6BD5A10
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+RadialInventoryInterface::ToggleSpecialAmmoSlots @ RVA 0x31B5A30 EA 0x7FF6F6BD5A30
+======================================================================
+  *** no function recognized at this EA ***

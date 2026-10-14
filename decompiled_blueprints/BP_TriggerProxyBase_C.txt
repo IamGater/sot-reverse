@@ -1,0 +1,275 @@
+// E:\unreal-projects\Athena\Content\Blueprints\TallTales\Actors\General\bp_triggerproxybase.uasset -> BP_TriggerProxyBase_C
+
+=== BP_TriggerProxyBase_C::GetClassName (199 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x213ae3e7800
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__GameplayStatics@0x212d6f7eb20
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetObjectClass_ReturnValue@0x213ae3e7800
+    ContextExpression:
+    $32: FinalFunction target=GetObjectClass@0x212d697dd20 (
+      $41: Self
+      $42: EndFunctionParms
+    )
+$43: Let (Variable = Expression)
+  Variable:
+  $52: LocalVariable named CallFunc_GetClassDisplayName_ReturnValue@0x213b1184130
+  Expression:
+  $61: Context
+    ObjectExpression:
+    $62: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetClassDisplayName_ReturnValue@0x213b1184130
+    ContextExpression:
+    $83: FinalFunction target=GetClassDisplayName@0x212d63abf90 (
+      $92: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x213ae3e7800
+      $101: EndFunctionParms
+    )
+$102: Let (Variable = Expression)
+  Variable:
+  $111: LocalVariable named CallFunc_Conv_StringToText_ReturnValue@0x213b118fea0
+  Expression:
+  $120: Context
+    ObjectExpression:
+    $121: ObjectConst Default__KismetTextLibrary@0x212d6f7ed30
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Conv_StringToText_ReturnValue@0x213b118fea0
+    ContextExpression:
+    $142: FinalFunction target=Conv_StringToText@0x212d69c9840 (
+      $151: LocalVariable named CallFunc_GetClassDisplayName_ReturnValue@0x213b1184130
+      $160: EndFunctionParms
+    )
+$161: Let (Variable = Expression)
+  Variable:
+  $170: LocalOutVariable named ReturnValue@0x213b1184440
+  Expression:
+  $179: LocalVariable named CallFunc_Conv_StringToText_ReturnValue@0x213b118fea0
+$188: Return expression:
+  $189: LocalOutVariable named ReturnValue@0x213b1184440
+$198: EndOfScript
+
+=== BP_TriggerProxyBase_C::IsAthenaPlayerCharacter (817 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x213ae3e7f80
+  Expression:
+  $18: DynamicCast to AthenaPlayerCharacter@0x212d54d6040 of expr:
+  $27: LocalVariable named Actor@0x213ae3e7780
+$36: Let (Variable = Expression)
+  Variable:
+  $45: LocalVariable named K2Node_DynamicCast_bSuccess@0x213ae3e7f00
+  Expression:
+  $54: PrimitiveCast type=71
+    Argument:
+    $56: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x213ae3e7f80
+$65: JumpIfNot -> 0x72, cond:
+  $70: LocalVariable named K2Node_DynamicCast_bSuccess@0x213ae3e7f00
+$79: LetBool (Variable = Expression)
+  Variable:
+  $80: LocalOutVariable named Result@0x213ae3e7700
+  Expression:
+  $89: True
+$90: LetObj (Variable = Expression)
+  Variable:
+  $91: LocalOutVariable named AthenaPlayerCharacter@0x213ae3e8000
+  Expression:
+  $100: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x213ae3e7f80
+$109: Jump to offset 0x32e
+$114: Let (Variable = Expression)
+  Variable:
+  $123: LocalVariable named CallFunc_GetClassName_ReturnValue@0x213b118fd50
+  Expression:
+  $132: VirtualFunction call "GetClassName" (
+    $145: EndFunctionParms
+  )
+$146: Let (Variable = Expression)
+  Variable:
+  $155: LocalVariable named CallFunc_GetDisplayName_ReturnValue@0x213b118b2f0
+  Expression:
+  $164: Context
+    ObjectExpression:
+    $165: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetDisplayName_ReturnValue@0x213b118b2f0
+    ContextExpression:
+    $186: FinalFunction target=GetDisplayName@0x212d63ac3f0 (
+      $195: LocalVariable named Actor@0x213ae3e7780
+      $204: EndFunctionParms
+    )
+$205: Let (Variable = Expression)
+  Variable:
+  $214: StructMemberContext prop=ArgumentName@0x212d657f720
+    Expression to struct:
+    $223: LocalVariable named UniqueObjectNameForCooking_FormatTextArgument@0x213ae3e4d80
+  Expression:
+  $232: literal text (not decoded)
+$233: literal ansi string "1"
+$236: literal ansi string ""
+$238: literal ansi string ""
+$240: Let (Variable = Expression)
+  Variable:
+  $249: StructMemberContext prop=TextValue@0x212d657f6b0
+    Expression to struct:
+    $258: LocalVariable named UniqueObjectNameForCooking_FormatTextArgument@0x213ae3e4d80
+  Expression:
+  $267: LocalVariable named CallFunc_GetClassName_ReturnValue@0x213b118fd50
+$276: Let (Variable = Expression)
+  Variable:
+  $285: LocalVariable named CallFunc_Conv_StringToText_ReturnValue@0x213b1185940
+  Expression:
+  $294: Context
+    ObjectExpression:
+    $295: ObjectConst Default__KismetTextLibrary@0x212d6f7ed30
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Conv_StringToText_ReturnValue@0x213b1185940
+    ContextExpression:
+    $316: FinalFunction target=Conv_StringToText@0x212d69c9840 (
+      $325: LocalVariable named CallFunc_GetDisplayName_ReturnValue@0x213b118b2f0
+      $334: EndFunctionParms
+    )
+$335: Let (Variable = Expression)
+  Variable:
+  $344: StructMemberContext prop=ArgumentName@0x212d657f720
+    Expression to struct:
+    $353: LocalVariable named UniqueObjectNameForCooking_FormatTextArgument2@0x213ae3e8200
+  Expression:
+  $362: literal text (not decoded)
+$363: literal ansi string "0"
+$366: literal ansi string ""
+$368: literal ansi string ""
+$370: Let (Variable = Expression)
+  Variable:
+  $379: StructMemberContext prop=TextValue@0x212d657f6b0
+    Expression to struct:
+    $388: LocalVariable named UniqueObjectNameForCooking_FormatTextArgument2@0x213ae3e8200
+  Expression:
+  $397: LocalVariable named CallFunc_Conv_StringToText_ReturnValue@0x213b1185940
+$406: Let (Variable = Expression)
+  Variable:
+  $415: StructMemberContext prop=ArgumentName@0x212d657f720
+    Expression to struct:
+    $424: LocalVariable named UniqueObjectNameForCooking_FormatTextArgument3@0x213ae3e8180
+  Expression:
+  $433: literal text (not decoded)
+$434: literal ansi string "2"
+$437: literal ansi string ""
+$439: literal ansi string ""
+$441: Let (Variable = Expression)
+  Variable:
+  $450: StructMemberContext prop=TextValue@0x212d657f6b0
+    Expression to struct:
+    $459: LocalVariable named UniqueObjectNameForCooking_FormatTextArgument3@0x213ae3e8180
+  Expression:
+  $468: literal text (not decoded)
+$469: literal ansi string "IsAthenaPlayerCharacter"
+$494: literal ansi string "590532B841A2632F763136BC1E1A5D39_24"
+$531: literal ansi string ""
+$533: SetArray
+  $534: LocalVariable named UniqueObjectNameForCooking_Array@0x213ae3e5400
+  $543: LocalVariable named UniqueObjectNameForCooking_FormatTextArgument2@0x213ae3e8200
+  $552: LocalVariable named UniqueObjectNameForCooking_FormatTextArgument@0x213ae3e4d80
+  $561: LocalVariable named UniqueObjectNameForCooking_FormatTextArgument3@0x213ae3e8180
+  $570: EndArray
+$571: Let (Variable = Expression)
+  Variable:
+  $580: LocalVariable named CallFunc_Format_ReturnValue@0x213b118f260
+  Expression:
+  $589: Context
+    ObjectExpression:
+    $590: ObjectConst Default__KismetTextLibrary@0x212d6f7ed30
+    SkipBytes: 0x78
+    RValueProperty: CallFunc_Format_ReturnValue@0x213b118f260
+    ContextExpression:
+    $611: FinalFunction target=Format@0x212d69ca250 (
+      $620: literal text (not decoded)
+      $621: literal ansi string "Failed to cast {0} to AthenaPlayerCharacter in {1}.{2}"
+      $677: literal ansi string "590532B841A2632F763136BC1E1A5D39_Format0"
+      $719: literal ansi string ""
+      $721: LocalVariable named UniqueObjectNameForCooking_Array@0x213ae3e5400
+      $730: EndFunctionParms
+    )
+$731: Context
+  ObjectExpression:
+  $732: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+  SkipBytes: 0x3d
+  RValueProperty: (null)
+  ContextExpression:
+  $753: FinalFunction target=PrintText@0x212d63b7190 (
+    $762: Self
+    $763: LocalVariable named CallFunc_Format_ReturnValue@0x213b118f260
+    $772: False
+    $773: True
+    $774: literal struct LinearColor@0x212d63787c0 (size 16)
+      $787: literal float 0
+      $792: literal float 0.6600000262260437
+      $797: literal float 1
+      $802: literal float 1
+      $807: EndStructConst
+    $808: literal float 2
+    $813: EndFunctionParms
+  )
+$814: Return expression:
+  $815: Nothing
+$816: EndOfScript
+
+=== BP_TriggerProxyBase_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_TriggerProxyBase_C::TriggerActivated (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Actor@0x213ae3e5300
+  Expression:
+  $9: LocalVariable named Actor@0x213ae3e5380
+$18: VirtualFunction call "ExecuteUbergraph_BP_TriggerProxyBase" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_TriggerProxyBase_C::ExecuteUbergraph_BP_TriggerProxyBase (165 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x213b1180460
+$10: CallMulticastDelegate target=OnTriggered__DelegateSignature@0x212a26d0b40 delegate:
+  $19: InstanceVariable named OnTriggered@0x213ae3e4f80
+  Params:
+  $28: LocalVariable named K2Node_CustomEvent_Actor@0x213ae3e5300
+  $37: EndFunctionParms
+$38: VirtualFunction call "IsAthenaPlayerCharacter" (
+  $51: LocalVariable named K2Node_CustomEvent_Actor@0x213ae3e5300
+  $60: LocalVariable named CallFunc_IsAthenaPlayerCharacter_Result@0x213ae3e5280
+  $69: LocalVariable named CallFunc_IsAthenaPlayerCharacter_AthenaPlayerCharacter@0x213ae3e5200
+  $78: EndFunctionParms
+)
+$79: JumpIfNot -> 0xa2, cond:
+  $84: LocalVariable named CallFunc_IsAthenaPlayerCharacter_Result@0x213ae3e5280
+$93: VirtualFunction call "IsAthenaPlayerCharacter" (
+  $106: LocalVariable named K2Node_CustomEvent_Actor@0x213ae3e5300
+  $115: LocalVariable named CallFunc_IsAthenaPlayerCharacter_Result@0x213ae3e5280
+  $124: LocalVariable named CallFunc_IsAthenaPlayerCharacter_AthenaPlayerCharacter@0x213ae3e5200
+  $133: EndFunctionParms
+)
+$134: CallMulticastDelegate target=OnPlayerEnteredTrigger__DelegateSignature@0x212a26ddf80 delegate:
+  $143: InstanceVariable named OnPlayerEnteredTrigger@0x213ae3e5000
+  Params:
+  $152: LocalVariable named CallFunc_IsAthenaPlayerCharacter_AthenaPlayerCharacter@0x213ae3e5200
+  $161: EndFunctionParms
+$162: Return expression:
+  $163: Nothing
+$164: EndOfScript
+
+=== BP_TriggerProxyBase_C::OnTriggered__DelegateSignature (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_TriggerProxyBase_C::OnPlayerEnteredTrigger__DelegateSignature (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript

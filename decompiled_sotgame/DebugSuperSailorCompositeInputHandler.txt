@@ -1,0 +1,97 @@
+// Class: DebugSuperSailorCompositeInputHandler (4 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+DebugSuperSailorCompositeInputHandler::OnDisengageInput @ RVA 0xCF9080 EA 0x7FF6F4719080
+======================================================================
+__int64 __fastcall sub_7FF6F4719080(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3DDA6F0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+DebugSuperSailorCompositeInputHandler::OnMoveForward @ RVA 0xCF94F0 EA 0x7FF6F47194F0
+======================================================================
+__int64 __fastcall sub_7FF6F47194F0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  bool v3; // zf
+  __int64 result; // rax
+  int v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = a2[4] == 0;
+  v8 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  a2[4] += a2[4] != 0;
+  result = sub_7FF6F3DDAE20(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+DebugSuperSailorCompositeInputHandler::OnMoveRight @ RVA 0xCF97C0 EA 0x7FF6F47197C0
+======================================================================
+__int64 __fastcall sub_7FF6F47197C0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  bool v3; // zf
+  __int64 result; // rax
+  int v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = a2[4] == 0;
+  v8 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  a2[4] += a2[4] != 0;
+  result = sub_7FF6F3DDB160(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+DebugSuperSailorCompositeInputHandler::OnRightTrigger @ RVA 0xCFA0D0 EA 0x7FF6F471A0D0
+======================================================================
+__int64 __fastcall sub_7FF6F471A0D0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  bool v3; // zf
+  __int64 result; // rax
+  int v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = a2[4] == 0;
+  v8 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  a2[4] += a2[4] != 0;
+  result = sub_7FF6F3DDB800(a1);
+  *a3 = result;
+  return result;
+}
+

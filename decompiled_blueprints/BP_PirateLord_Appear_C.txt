@@ -1,0 +1,86 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Onboarding/bp_piratelord_appear -> BP_PirateLord_Appear_C
+
+=== BP_PirateLord_Appear_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fce70bb80
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fce70bb00
+$18: VirtualFunction call "idx:283123" (
+  $31: literal int32 25
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_PirateLord_Appear_C::fn_idx_283123 (294 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fcdbb62e0
+$10: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $19: EndFunctionParms
+)
+$20: Jump to offset 0x123
+$25: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $34: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce70bc00
+  $43: EndFunctionParms
+)
+$44: LetBool (Variable = Expression)
+  Variable:
+  $45: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fce70bd80
+  Expression:
+  $54: Context
+    ObjectExpression:
+    $55: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19fce70bd80
+    ContextExpression:
+    $76: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $85: StructMemberContext prop=idx:282732@0x19fcbb41800
+        Expression to struct:
+        $94: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce70bc00
+      $103: EndFunctionParms
+    )
+$104: JumpIfNot -> 0x123, cond:
+  $109: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fce70bd80
+$118: Let (Variable = Expression)
+  Variable:
+  $127: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fce70bc80
+  Expression:
+  $136: Context
+    ObjectExpression:
+    $137: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fce70bc80
+    ContextExpression:
+    $158: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x19e4d410390 (
+      $167: StructMemberContext prop=idx:282732@0x19fcbb41800
+        Expression to struct:
+        $176: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce70bc00
+      $185: EndFunctionParms
+    )
+$186: LetObj (Variable = Expression)
+  Variable:
+  $187: StructMemberContext prop=CalledOnActor_2_EF6AFF814D599D7DA02C2BAD29058BC4@0x19fa940d100
+    Expression to struct:
+    $196: LocalVariable named idx:283124@0x19fce70cf00
+  Expression:
+  $205: StructMemberContext prop=idx:282732@0x19fcbb41800
+    Expression to struct:
+    $214: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce70bc00
+$223: Context
+  ObjectExpression:
+  $224: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x29
+  RValueProperty: (null)
+  ContextExpression:
+  $245: FinalFunction target=FireEventWithDataFromHandle@0x19e4d40feb0 (
+    $254: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fce70bc80
+    $263: ObjectConst PirateLordAppearEvent@0x19fbec60840
+    $272: literal ansi string ""
+    $274: literal ansi string ""
+    $276: LocalVariable named idx:283124@0x19fce70cf00
+    $285: EndFunctionParms
+  )
+$286: Jump to offset 0xa
+$291: Return expression:
+  $292: Nothing
+$293: EndOfScript

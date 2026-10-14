@@ -1,0 +1,112 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Generic/bp_waitforpickup -> BP_WaitForPickup_C
+
+=== BP_WaitForPickup_C::fn_idx_1698 (468 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named K2Node_DynamicCast_AsItem_Proxy@0x19fcbb42580
+  Expression:
+  $18: DynamicCast to ItemProxy@0x19e4c38b980 of expr:
+  $27: LocalVariable named ItemProxy@0x19fcbb42500
+$36: Let (Variable = Expression)
+  Variable:
+  $45: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcbb42600
+  Expression:
+  $54: PrimitiveCast type=71
+    Argument:
+    $56: LocalVariable named K2Node_DynamicCast_AsItem_Proxy@0x19fcbb42580
+$65: JumpIfNot -> 0xbe, cond:
+  $70: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcbb42600
+$79: LetObj (Variable = Expression)
+  Variable:
+  $80: LocalVariable named CallFunc_GetItemInfo_ReturnValue@0x19fcbb42780
+  Expression:
+  $89: Context
+    ObjectExpression:
+    $90: LocalVariable named K2Node_DynamicCast_AsItem_Proxy@0x19fcbb42580
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetItemInfo_ReturnValue@0x19fcbb42780
+    ContextExpression:
+    $111: FinalFunction target=GetItemInfo@0x19e4d108840 (
+      $120: EndFunctionParms
+    )
+$121: BindDelegate 'SignalComplete'
+  Delegate:
+  $134: LocalVariable named K2Node_CreateDelegate_OutputDelegate@0x19fcbb43e00
+  Object:
+  $143: Self
+$144: AddMulticastDelegate
+$145: Context
+  ObjectExpression:
+  $146: LocalVariable named CallFunc_GetItemInfo_ReturnValue@0x19fcbb42780
+  SkipBytes: 0x9
+  RValueProperty: OnItemPickedUpDelegate@0x19e4d10b7b0
+  ContextExpression:
+  $167: InstanceVariable named OnItemPickedUpDelegate@0x19e4d10b7b0
+$176: LocalVariable named K2Node_CreateDelegate_OutputDelegate@0x19fcbb43e00
+$185: Jump to offset 0x1d1
+$190: LetObj (Variable = Expression)
+  Variable:
+  $191: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x19fcbb42680
+  Expression:
+  $200: Context
+    ObjectExpression:
+    $201: ObjectConst Default__GameplayStatics@0x19e4d95eb20
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetObjectClass_ReturnValue@0x19fcbb42680
+    ContextExpression:
+    $222: FinalFunction target=GetObjectClass@0x19e4d35dd20 (
+      $231: Self
+      $232: EndFunctionParms
+    )
+$233: Let (Variable = Expression)
+  Variable:
+  $242: LocalVariable named CallFunc_GetClassDisplayName_ReturnValue@0x19fcdbb9140
+  Expression:
+  $251: Context
+    ObjectExpression:
+    $252: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetClassDisplayName_ReturnValue@0x19fcdbb9140
+    ContextExpression:
+    $273: FinalFunction target=GetClassDisplayName@0x19e4cd8bf90 (
+      $282: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x19fcbb42680
+      $291: EndFunctionParms
+    )
+$292: Let (Variable = Expression)
+  Variable:
+  $301: LocalVariable named CallFunc_Concat_StrStr_ReturnValue@0x19fcdbb7d90
+  Expression:
+  $310: Context
+    ObjectExpression:
+    $311: ObjectConst Default__KismetStringLibrary@0x19e4d95ecd0
+    SkipBytes: 0x32
+    RValueProperty: CallFunc_Concat_StrStr_ReturnValue@0x19fcdbb7d90
+    ContextExpression:
+    $332: FinalFunction target=Concat_StrStr@0x19e4d3a1520 (
+      $341: literal ansi string "Cast to ItemProxy failed in: "
+      $372: LocalVariable named CallFunc_GetClassDisplayName_ReturnValue@0x19fcdbb9140
+      $381: EndFunctionParms
+    )
+$382: Context
+  ObjectExpression:
+  $383: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x3d
+  RValueProperty: (null)
+  ContextExpression:
+  $404: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $413: NoObject
+    $414: LocalVariable named CallFunc_Concat_StrStr_ReturnValue@0x19fcdbb7d90
+    $423: True
+    $424: True
+    $425: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $438: literal float 1
+      $443: literal float 0
+      $448: literal float 0.031044000759720802
+      $453: literal float 1
+      $458: EndStructConst
+    $459: literal float 10
+    $464: EndFunctionParms
+  )
+$465: Return expression:
+  $466: Nothing
+$467: EndOfScript

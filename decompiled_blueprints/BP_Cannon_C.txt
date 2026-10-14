@@ -1,0 +1,296 @@
+// /Game/Blueprints/TallTales/Actors/Tale_7_FateOfTheMorningstar/bp_islandcannon_fateofthemorningstar -> BP_Cannon_C
+
+=== BP_Cannon_C::GetDockableInfo (135 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: StructMemberContext prop=SocketName@0x19e4cf8c8f0
+    Expression to struct:
+    $18: LocalVariable named K2Node_MakeStruct_DockableInfo@0x19f3059db00
+  Expression:
+  $27: literal name "CharacterPositionSocket"
+$40: LetObj (Variable = Expression)
+  Variable:
+  $41: StructMemberContext prop=SceneComponent@0x19e4cf8c870
+    Expression to struct:
+    $50: LocalVariable named K2Node_MakeStruct_DockableInfo@0x19f3059db00
+  Expression:
+  $59: InstanceVariable named BaseMeshComponent@0x19e4d0ed8f0
+$68: Let (Variable = Expression)
+  Variable:
+  $77: StructMemberContext prop=ShouldOverlapsUpdateOnParentUpdate@0x19e4cf8c7f0
+    Expression to struct:
+    $86: LocalVariable named K2Node_MakeStruct_DockableInfo@0x19f3059db00
+  Expression:
+  $95: literal byte 1
+$97: Let (Variable = Expression)
+  Variable:
+  $106: LocalOutVariable named ReturnValue@0x19f3059da80
+  Expression:
+  $115: LocalVariable named K2Node_MakeStruct_DockableInfo@0x19f3059db00
+$124: Return expression:
+  $125: LocalOutVariable named ReturnValue@0x19f3059da80
+$134: EndOfScript
+
+=== BP_Cannon_C::UserConstructionScript (173 bytes) ===
+$0: Context
+  ObjectExpression:
+  $1: InstanceVariable named BarrelMeshComponent@0x19e4d0ed870
+  SkipBytes: 0x23
+  RValueProperty: (null)
+  ContextExpression:
+  $22: FinalFunction target=K2_AttachTo@0x19e4d071040 (
+    $31: InstanceVariable named BaseMeshComponent@0x19e4d0ed8f0
+    $40: literal name "BARREL_Socket"
+    $53: literal byte 2
+    $55: True
+    $56: EndFunctionParms
+  )
+$57: Context
+  ObjectExpression:
+  $58: InstanceVariable named FuseMeshComponent@0x19e4d0ed7f0
+  SkipBytes: 0x23
+  RValueProperty: (null)
+  ContextExpression:
+  $79: FinalFunction target=K2_AttachTo@0x19e4d071040 (
+    $88: InstanceVariable named BarrelMeshComponent@0x19e4d0ed870
+    $97: literal name "Fuse"
+    $110: literal byte 2
+    $112: True
+    $113: EndFunctionParms
+  )
+$114: Context
+  ObjectExpression:
+  $115: InstanceVariable named FuseMeshComponent@0x19e4d0ed7f0
+  SkipBytes: 0x22
+  RValueProperty: (null)
+  ContextExpression:
+  $136: FinalFunction target=K2_SetRelativeRotation@0x19e4d071df0 (
+    $145: literal rotation (-90,0,0)
+    $158: False
+    $159: LocalVariable named CallFunc_K2_SetRelativeRotation_SweepHitResult@0x19f3059db80
+    $168: True
+    $169: EndFunctionParms
+  )
+$170: Return expression:
+  $171: Nothing
+$172: EndOfScript
+
+=== BP_Cannon_C::OnCannonDescLoaded (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_CannonDesc@0x19f3059dc80
+  Expression:
+  $9: LocalVariable named CannonDesc@0x19f3059dc00
+$18: VirtualFunction call "ExecuteUbergraph_BP_Cannon" (
+  $31: literal int32 716
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Cannon_C::NEW_M Flames A (785 bytes) ===
+$0: FlowStack.Push(0x30e)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x19f57a41c70
+$15: LetObj (Variable = Expression)
+  Variable:
+  $16: InstanceVariable named MuzzleFlashVfxFirstPerson@0x19e4d0ec360
+  Expression:
+  $25: InstanceVariable named DefaultMuzzleFlashVfxFirstPerson@0x19e4d0ec260
+$34: PopExecutionFlow (jump to popped addr)
+$35: FinalFunction target=ResetLoadedItemInfoParticles@0x19e4d0eb9b0 (
+  $44: EndFunctionParms
+)
+$45: PopExecutionFlow (jump to popped addr)
+$46: FlowStack.Push(0x23)
+$51: FlowStack.Push(0x225)
+$56: FlowStack.Push(0x17e)
+$61: FlowStack.Push(0xeb)
+$66: FlowStack.Push(0x94)
+$71: Context
+  ObjectExpression:
+  $72: InstanceVariable named BaseMeshComponent@0x19e4d0ed8f0
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $93: VirtualFunction call "SetSkeletalMesh" (
+    $106: StructMemberContext prop=CannonBoxMesh@0x19e4ce112f0
+      Expression to struct:
+      $115: Context
+        ObjectExpression:
+        $116: LocalVariable named K2Node_Event_CannonDesc@0x19f3059dc80
+        SkipBytes: 0x9
+        RValueProperty: CannonDesc@0x19e4d0e8fa0
+        ContextExpression:
+        $137: InstanceVariable named CannonDesc@0x19e4d0e8fa0
+    $146: EndFunctionParms
+  )
+$147: PopExecutionFlow (jump to popped addr)
+$148: LetBool (Variable = Expression)
+  Variable:
+  $149: LocalVariable named CallFunc_SetStaticMesh_ReturnValue@0x19f3059df00
+  Expression:
+  $158: Context
+    ObjectExpression:
+    $159: InstanceVariable named BarrelMeshComponent@0x19e4d0ed870
+    SkipBytes: 0x36
+    RValueProperty: CallFunc_SetStaticMesh_ReturnValue@0x19f3059df00
+    ContextExpression:
+    $180: VirtualFunction call "SetStaticMesh" (
+      $193: StructMemberContext prop=CannonBarrelMesh@0x19e4ce11370
+        Expression to struct:
+        $202: Context
+          ObjectExpression:
+          $203: LocalVariable named K2Node_Event_CannonDesc@0x19f3059dc80
+          SkipBytes: 0x9
+          RValueProperty: CannonDesc@0x19e4d0e8fa0
+          ContextExpression:
+          $224: InstanceVariable named CannonDesc@0x19e4d0e8fa0
+      $233: EndFunctionParms
+    )
+$234: PopExecutionFlow (jump to popped addr)
+$235: LetBool (Variable = Expression)
+  Variable:
+  $236: LocalVariable named CallFunc_IsValid_ReturnValue4@0x19f3059de80
+  Expression:
+  $245: Context
+    ObjectExpression:
+    $246: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x32
+    RValueProperty: CallFunc_IsValid_ReturnValue4@0x19f3059de80
+    ContextExpression:
+    $267: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $276: StructMemberContext prop=MuzzleFlashVfxFirstPerson@0x19e4ce11270
+        Expression to struct:
+        $285: Context
+          ObjectExpression:
+          $286: LocalVariable named K2Node_Event_CannonDesc@0x19f3059dc80
+          SkipBytes: 0x9
+          RValueProperty: CannonDesc@0x19e4d0e8fa0
+          ContextExpression:
+          $307: InstanceVariable named CannonDesc@0x19e4d0e8fa0
+      $316: EndFunctionParms
+    )
+$317: JumpIfNot -> 0xf, cond:
+  $322: LocalVariable named CallFunc_IsValid_ReturnValue4@0x19f3059de80
+$331: LetObj (Variable = Expression)
+  Variable:
+  $332: InstanceVariable named MuzzleFlashVfxFirstPerson@0x19e4d0ec360
+  Expression:
+  $341: StructMemberContext prop=MuzzleFlashVfxFirstPerson@0x19e4ce11270
+    Expression to struct:
+    $350: Context
+      ObjectExpression:
+      $351: LocalVariable named K2Node_Event_CannonDesc@0x19f3059dc80
+      SkipBytes: 0x9
+      RValueProperty: CannonDesc@0x19e4d0e8fa0
+      ContextExpression:
+      $372: InstanceVariable named CannonDesc@0x19e4d0e8fa0
+$381: PopExecutionFlow (jump to popped addr)
+$382: LetBool (Variable = Expression)
+  Variable:
+  $383: LocalVariable named CallFunc_IsValid_ReturnValue3@0x19f3059de00
+  Expression:
+  $392: Context
+    ObjectExpression:
+    $393: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x32
+    RValueProperty: CallFunc_IsValid_ReturnValue3@0x19f3059de00
+    ContextExpression:
+    $414: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $423: StructMemberContext prop=MuzzleFlashVfxThirdPerson@0x19e4ce111f0
+        Expression to struct:
+        $432: Context
+          ObjectExpression:
+          $433: LocalVariable named K2Node_Event_CannonDesc@0x19f3059dc80
+          SkipBytes: 0x9
+          RValueProperty: CannonDesc@0x19e4d0e8fa0
+          ContextExpression:
+          $454: InstanceVariable named CannonDesc@0x19e4d0e8fa0
+      $463: EndFunctionParms
+    )
+$464: JumpIfNot -> 0x211, cond:
+  $469: LocalVariable named CallFunc_IsValid_ReturnValue3@0x19f3059de00
+$478: LetObj (Variable = Expression)
+  Variable:
+  $479: InstanceVariable named MuzzleFlashVfxThirdPerson@0x19e4d0ec2e0
+  Expression:
+  $488: StructMemberContext prop=MuzzleFlashVfxThirdPerson@0x19e4ce111f0
+    Expression to struct:
+    $497: Context
+      ObjectExpression:
+      $498: LocalVariable named K2Node_Event_CannonDesc@0x19f3059dc80
+      SkipBytes: 0x9
+      RValueProperty: CannonDesc@0x19e4d0e8fa0
+      ContextExpression:
+      $519: InstanceVariable named CannonDesc@0x19e4d0e8fa0
+$528: PopExecutionFlow (jump to popped addr)
+$529: LetObj (Variable = Expression)
+  Variable:
+  $530: InstanceVariable named MuzzleFlashVfxThirdPerson@0x19e4d0ec2e0
+  Expression:
+  $539: InstanceVariable named DefaultMuzzleFlashVfxThirdPerson@0x19e4d0ec1e0
+$548: PopExecutionFlow (jump to popped addr)
+$549: LetBool (Variable = Expression)
+  Variable:
+  $550: LocalVariable named CallFunc_IsValid_ReturnValue2@0x19f3059dd80
+  Expression:
+  $559: Context
+    ObjectExpression:
+    $560: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x32
+    RValueProperty: CallFunc_IsValid_ReturnValue2@0x19f3059dd80
+    ContextExpression:
+    $581: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $590: StructMemberContext prop=FireSfx@0x19e4ce11170
+        Expression to struct:
+        $599: Context
+          ObjectExpression:
+          $600: LocalVariable named K2Node_Event_CannonDesc@0x19f3059dc80
+          SkipBytes: 0x9
+          RValueProperty: CannonDesc@0x19e4d0e8fa0
+          ContextExpression:
+          $621: InstanceVariable named CannonDesc@0x19e4d0e8fa0
+      $630: EndFunctionParms
+    )
+$631: JumpIfNot -> 0x2b8, cond:
+  $636: LocalVariable named CallFunc_IsValid_ReturnValue2@0x19f3059dd80
+$645: LetObj (Variable = Expression)
+  Variable:
+  $646: InstanceVariable named FireSfx@0x19e4d0ecce0
+  Expression:
+  $655: StructMemberContext prop=FireSfx@0x19e4ce11170
+    Expression to struct:
+    $664: Context
+      ObjectExpression:
+      $665: LocalVariable named K2Node_Event_CannonDesc@0x19f3059dc80
+      SkipBytes: 0x9
+      RValueProperty: CannonDesc@0x19e4d0e8fa0
+      ContextExpression:
+      $686: InstanceVariable named CannonDesc@0x19e4d0e8fa0
+$695: PopExecutionFlow (jump to popped addr)
+$696: LetObj (Variable = Expression)
+  Variable:
+  $697: InstanceVariable named FireSfx@0x19e4d0ecce0
+  Expression:
+  $706: InstanceVariable named DefaultFireSfx@0x19e4d0ecc60
+$715: PopExecutionFlow (jump to popped addr)
+$716: LetBool (Variable = Expression)
+  Variable:
+  $717: LocalVariable named CallFunc_IsValid_ReturnValue@0x19f3059dd00
+  Expression:
+  $726: Context
+    ObjectExpression:
+    $727: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19f3059dd00
+    ContextExpression:
+    $748: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $757: LocalVariable named K2Node_Event_CannonDesc@0x19f3059dc80
+      $766: EndFunctionParms
+    )
+$767: PopExecutionFlowIfNot, cond:
+$768: LocalVariable named CallFunc_IsValid_ReturnValue@0x19f3059dd00
+$777: Jump to offset 0x2e
+$782: Return expression:
+  $783: Nothing
+$784: EndOfScript

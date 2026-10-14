@@ -1,0 +1,91 @@
+// Class: TestQuestProxy (3 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+TestQuestProxy::AddParticipant @ RVA 0x109B6A0 EA 0x7FF6F4ABB6A0
+======================================================================
+__int64 __fastcall sub_7FF6F4ABB6A0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F440E7F0(a1, v6);
+}
+
+
+======================================================================
+TestQuestProxy::CreateXMarksTheSpotQuest @ RVA 0x109E7F0 EA 0x7FF6F4ABE7F0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F4ABE7F0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rax
+  _BYTE v8[176]; // [rsp+30h] [rbp-168h] BYREF
+  _BYTE v9[176]; // [rsp+E0h] [rbp-B8h] BYREF
+  __int64 v10; // [rsp+1A8h] [rbp+10h] BYREF
+
+  v4 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  sub_7FF6F49EE240(v8);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v5 = a2[4];
+  LOBYTE(v4) = v5 != 0;
+  a2[4] = v5 + v4;
+  v6 = sub_7FF6F4407EC0(v9, v8);
+  sub_7FF6F4416E60(a1, v10, v6);
+  return sub_7FF6F440AD40(v8);
+}
+
+
+======================================================================
+TestQuestProxy::Stop @ RVA 0x10A59F0 EA 0x7FF6F4AC59F0
+======================================================================
+__int64 __fastcall sub_7FF6F4AC59F0(__int64 a1, __int64 a2)
+{
+  __int64 v2; // rcx
+  __int64 result; // rax
+
+  result = *(_QWORD *)(a2 + 32);
+  *(_QWORD *)(a2 + 32) = result + (result != 0);
+  v2 = *(_QWORD *)(a1 + 1112);
+  if ( v2 )
+    return sub_7FF6F6E3BF90(v2, 0);
+  return result;
+}
+

@@ -1,0 +1,247 @@
+// E:\unreal-projects\Athena\Content\Blueprints\Prompts\PromptConditionals\Emissary\EmissaryEncounteredSkellyFort\bp_prompt_emissaryencounteredskellyfort.uasset -> BP_Prompt_EmissaryEncounteredSkellyFort_C
+
+=== BP_Prompt_EmissaryEncounteredSkellyFort_C::OnEmissaryEncounteredSkellyFort (53 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: InstanceVariable named CompanyName@0x2139327d4a0
+  Expression:
+  $18: StructMemberContext prop=CompanyName@0x212d6636b30
+    Expression to struct:
+    $27: LocalVariable named NewParam@0x213932fb100
+$36: VirtualFunction call "Evaluate" (
+  $49: EndFunctionParms
+)
+$50: Return expression:
+  $51: Nothing
+$52: EndOfScript
+
+=== BP_Prompt_EmissaryEncounteredSkellyFort_C::EmissaryEncounteredSkellyFort (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_NewParam@0x213932fb200
+  Expression:
+  $9: LocalVariable named NewParam@0x213932fb180
+$18: VirtualFunction call "ExecuteUbergraph_BP_Prompt_EmissaryEncounteredSkellyFort" (
+  $31: literal int32 503
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_EmissaryEncounteredSkellyFort_C::Evaluate (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Prompt_EmissaryEncounteredSkellyFort" (
+  $13: literal int32 527
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_EmissaryEncounteredSkellyFort_C::RegisterOtherEvents_Implementable (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Prompt_EmissaryEncounteredSkellyFort" (
+  $13: literal int32 671
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_EmissaryEncounteredSkellyFort_C::UnregisterOtherEvents_Implementable (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Prompt_EmissaryEncounteredSkellyFort" (
+  $13: literal int32 860
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_EmissaryEncounteredSkellyFort_C::ExecuteUbergraph_BP_Prompt_EmissaryEncounteredSkellyFort (868 bytes) ===
+$0: FlowStack.Push(0x361)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x2139327d350
+$15: Let (Variable = Expression)
+  Variable:
+  $24: LocalVariable named CallFunc_Array_Length_ReturnValue@0x2139327d3c0
+  Expression:
+  $33: Context
+    ObjectExpression:
+    $34: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x2139327d3c0
+    ContextExpression:
+    $55: FinalFunction target=Array_Length@0x212d6987df0 (
+      $64: InstanceVariable named Prompts@0x213932fb780
+      $73: EndFunctionParms
+    )
+$74: Let (Variable = Expression)
+  Variable:
+  $83: InstanceVariable named NumberOfPrompts@0x2139327d660
+  Expression:
+  $92: LocalVariable named CallFunc_Array_Length_ReturnValue@0x2139327d3c0
+$101: LetBool (Variable = Expression)
+  Variable:
+  $102: LocalVariable named CallFunc_EqualEqual_IntInt_ReturnValue2@0x213932fb480
+  Expression:
+  $111: CallMath target=EqualEqual_IntInt@0x212d699af00 (
+    $120: InstanceVariable named NumberOfPrompts@0x2139327d660
+    $129: literal int32 0
+    $134: EndFunctionParms
+  )
+$135: JumpIfNot -> 0xcb, cond:
+  $140: LocalVariable named CallFunc_EqualEqual_IntInt_ReturnValue2@0x213932fb480
+$149: LetBool (Variable = Expression)
+  Variable:
+  $150: InstanceVariable named SurfacedThisSession@0x213932fb600
+  Expression:
+  $159: True
+$160: Context
+  ObjectExpression:
+  $161: ObjectConst Default__TutorialHelpersBlueprintLibrary@0x212d712f570
+  SkipBytes: 0x14
+  RValueProperty: (null)
+  ContextExpression:
+  $182: FinalFunction target=FirePromptCompleted@0x212d6b34330 (
+    $191: InstanceVariable named PromptAccessKey@0x213932fb680
+    $200: Self
+    $201: EndFunctionParms
+  )
+$202: PopExecutionFlow (jump to popped addr)
+$203: LetBool (Variable = Expression)
+  Variable:
+  $204: LocalVariable named CallFunc_EqualEqual_IntInt_ReturnValue@0x213932fb380
+  Expression:
+  $213: CallMath target=EqualEqual_IntInt@0x212d699af00 (
+    $222: InstanceVariable named PromptIndex@0x2139327d580
+    $231: InstanceVariable named NumberOfPrompts@0x2139327d660
+    $240: EndFunctionParms
+  )
+$241: JumpIfNot -> 0x104, cond:
+  $246: LocalVariable named CallFunc_EqualEqual_IntInt_ReturnValue@0x213932fb380
+$255: Jump to offset 0x95
+$260: Context
+  ObjectExpression:
+  $261: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $282: FinalFunction target=Array_Get@0x212d69876b0 (
+    $291: InstanceVariable named Prompts@0x213932fb780
+    $300: InstanceVariable named PromptIndex@0x2139327d580
+    $309: LocalVariable named CallFunc_Array_Get_Item@0x213932fb500
+    $318: EndFunctionParms
+  )
+$319: FinalFunction target=SetPromptAs@0x212d6ad5a00 (
+  $328: LocalVariable named CallFunc_Array_Get_Item@0x213932fb500
+  $337: EndFunctionParms
+)
+$338: Context
+  ObjectExpression:
+  $339: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+  SkipBytes: 0x3a
+  RValueProperty: (null)
+  ContextExpression:
+  $360: FinalFunction target=Delay@0x212d63a6d40 (
+    $369: Self
+    $370: InstanceVariable named ShowPromptDuration@0x2139327d5f0
+    $379: literal struct LatentActionInfo@0x212d63a6e80 (size 32)
+      $392: literal CodeSkipSizeType 0x1a3
+      $397: literal int32 2
+      $402: literal name "ExecuteUbergraph_BP_Prompt_EmissaryEncounteredSkellyFort"
+      $415: Self
+      $416: EndStructConst
+    $417: EndFunctionParms
+  )
+$418: PopExecutionFlow (jump to popped addr)
+$419: FinalFunction target=DismissAllPrompts@0x212d6ad4cc0 (
+  $428: EndFunctionParms
+)
+$429: Let (Variable = Expression)
+  Variable:
+  $438: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x2139327d430
+  Expression:
+  $447: CallMath target=Add_IntInt@0x212d698fa30 (
+    $456: InstanceVariable named PromptIndex@0x2139327d580
+    $465: literal int32 1
+    $470: EndFunctionParms
+  )
+$471: Let (Variable = Expression)
+  Variable:
+  $480: InstanceVariable named PromptIndex@0x2139327d580
+  Expression:
+  $489: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x2139327d430
+$498: Jump to offset 0xcb
+$503: VirtualFunction call "OnEmissaryEncounteredSkellyFort" (
+  $516: LocalVariable named K2Node_CustomEvent_NewParam@0x213932fb200
+  $525: EndFunctionParms
+)
+$526: PopExecutionFlow (jump to popped addr)
+$527: JumpIfNot -> 0x21e, cond:
+  $532: InstanceVariable named SurfacedThisSession@0x213932fb600
+$541: PopExecutionFlow (jump to popped addr)
+$542: LetBool (Variable = Expression)
+  Variable:
+  $543: LocalVariable named CallFunc_EqualEqual_NameName_ReturnValue@0x213932fb280
+  Expression:
+  $552: CallMath target=EqualEqual_NameName@0x212d699b120 (
+    $561: InstanceVariable named CompanyName@0x2139327d4a0
+    $570: InstanceVariable named ExpectedCompanyName@0x2139327d510
+    $579: EndFunctionParms
+  )
+$580: PopExecutionFlowIfNot, cond:
+$581: LocalVariable named CallFunc_EqualEqual_NameName_ReturnValue@0x213932fb280
+$590: Context
+  ObjectExpression:
+  $591: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+  SkipBytes: 0x3a
+  RValueProperty: (null)
+  ContextExpression:
+  $612: FinalFunction target=Delay@0x212d63a6d40 (
+    $621: Self
+    $622: InstanceVariable named InitialDelay@0x2139327dac0
+    $631: literal struct LatentActionInfo@0x212d63a6e80 (size 32)
+      $644: literal CodeSkipSizeType 0xf
+      $649: literal int32 1
+      $654: literal name "ExecuteUbergraph_BP_Prompt_EmissaryEncounteredSkellyFort"
+      $667: Self
+      $668: EndStructConst
+    $669: EndFunctionParms
+  )
+$670: PopExecutionFlow (jump to popped addr)
+$671: VirtualFunction call "GetControllerObjectMessageDispatcher" (
+  $684: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher2@0x213932fb400
+  $693: EndFunctionParms
+)
+$694: Context
+  ObjectExpression:
+  $695: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x45
+  RValueProperty: (null)
+  ContextExpression:
+  $716: FinalFunction target=RegisterEventFromHandle@0x212d6a30c00 (
+    $725: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher2@0x213932fb400
+    $734: InstanceVariable named Handle_EmissaryEncounteredSkellyFort@0x213932fb580
+    $743: Self
+    $744: literal ansi string "EmissaryEncounteredSkellyFort"
+    $775: ObjectConst EmissaryEncounteredSkellyFortNetworkEvent@0x212d6636a90
+    $784: EndFunctionParms
+  )
+$785: PopExecutionFlow (jump to popped addr)
+$786: VirtualFunction call "GetControllerObjectMessageDispatcher" (
+  $799: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher@0x213932fb300
+  $808: EndFunctionParms
+)
+$809: Context
+  ObjectExpression:
+  $810: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $831: FinalFunction target=UnregisterEventFromHandle@0x212d6a31420 (
+    $840: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher@0x213932fb300
+    $849: InstanceVariable named Handle_EmissaryEncounteredSkellyFort@0x213932fb580
+    $858: EndFunctionParms
+  )
+$859: PopExecutionFlow (jump to popped addr)
+$860: Jump to offset 0x312
+$865: Return expression:
+  $866: Nothing
+$867: EndOfScript

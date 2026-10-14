@@ -1,0 +1,132 @@
+// /Game/Blueprints/TallTales/Actors/Tale_7_FateOfTheMorningstar/bp_fateofthemorningstar_questparicipanttriggervolume -> BP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C
+
+=== BP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C::fn_idx_278737 (82 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_Array_Contains_ReturnValue@0x19fcb371000
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Contains_ReturnValue@0x19fcb371000
+    ContextExpression:
+    $32: FinalFunction target=Array_Contains@0x19e4d367180 (
+      $41: InstanceVariable named QuestParticipants@0x19fcb371a80
+      $50: LocalVariable named PlayerCharacter@0x19fcb370f00
+      $59: EndFunctionParms
+    )
+$60: LetBool (Variable = Expression)
+  Variable:
+  $61: LocalOutVariable named IsQuestParticipant@0x19fcb370f80
+  Expression:
+  $70: LocalVariable named CallFunc_Array_Contains_ReturnValue@0x19fcb371000
+$79: Return expression:
+  $80: Nothing
+$81: EndOfScript
+
+=== BP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C::fn_idx_278734 (152 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fcb371200
+  Expression:
+  $18: DynamicCast to AthenaPlayerCharacter@0x19e4be85b00 of expr:
+  $27: LocalVariable named Actor@0x19fcb371080
+$36: Let (Variable = Expression)
+  Variable:
+  $45: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fce56c100
+  Expression:
+  $54: PrimitiveCast type=71
+    Argument:
+    $56: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fcb371200
+$65: JumpIfNot -> 0x85, cond:
+  $70: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fce56c100
+$79: LetBool (Variable = Expression)
+  Variable:
+  $80: InstanceVariable named CastSuccessful@0x19fcb371900
+  Expression:
+  $89: True
+$90: LetBool (Variable = Expression)
+  Variable:
+  $91: LocalOutVariable named Successful@0x19fcb371100
+  Expression:
+  $100: InstanceVariable named CastSuccessful@0x19fcb371900
+$109: LetObj (Variable = Expression)
+  Variable:
+  $110: LocalOutVariable named AthenaPlayerCharacter@0x19fcb371180
+  Expression:
+  $119: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fcb371200
+$128: Jump to offset 0x95
+$133: LetBool (Variable = Expression)
+  Variable:
+  $134: InstanceVariable named CastSuccessful@0x19fcb371900
+  Expression:
+  $143: False
+$144: Jump to offset 0x5a
+$149: Return expression:
+  $150: Nothing
+$151: EndOfScript
+
+=== BP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C::Initialise (30 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: InstanceVariable named QuestParticipants@0x19fcb371a80
+  Expression:
+  $18: LocalOutVariable named QuestParticipants@0x19fcb371300
+$27: Return expression:
+  $28: Nothing
+$29: EndOfScript
+
+=== BP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C::fn_idx_278769 (112 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_OtherActor@0x19fcb371580
+  Expression:
+  $9: LocalVariable named OtherActor@0x19fcb371380
+$18: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_OtherComp@0x19fcb371600
+  Expression:
+  $27: LocalVariable named OtherComp@0x19fcb371400
+$36: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_OtherBodyIndex@0x19fd18572a0
+  Expression:
+  $45: LocalVariable named OtherBodyIndex@0x19fd1857ee0
+$54: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_bFromSweep@0x19fcb371680
+  Expression:
+  $63: LocalVariable named bFromSweep@0x19fcb371480
+$72: LetValueOnPersistentFrame dest=K2Node_ComponentBoundEvent_SweepResult@0x19fcb371700
+  Expression:
+  $81: LocalOutVariable named SweepResult@0x19fcb371500
+$90: VirtualFunction call "idx:280917" (
+  $103: literal int32 10
+  $108: EndFunctionParms
+)
+$109: Return expression:
+  $110: Nothing
+$111: EndOfScript
+
+=== BP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C::fn_idx_280917 (96 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fd1858110
+$10: VirtualFunction call "CastToAthenaPlayerCharacter" (
+  $23: LocalVariable named K2Node_ComponentBoundEvent_OtherActor@0x19fcb371580
+  $32: LocalVariable named CallFunc_CastToAthenaPlayerCharacter_Successful@0x19fcb371780
+  $41: LocalVariable named CallFunc_CastToAthenaPlayerCharacter_AthenaPlayerCharacter@0x19fcb371800
+  $50: EndFunctionParms
+)
+$51: JumpIfNot -> 0x5d, cond:
+  $56: LocalVariable named CallFunc_CastToAthenaPlayerCharacter_Successful@0x19fcb371780
+$65: CallMulticastDelegate target=OnPlayerEnteredTrigger__DelegateSignature@0x19fcc7cf840 delegate:
+  $74: InstanceVariable named OnPlayerEnteredTrigger@0x19fcb371980
+  Params:
+  $83: LocalVariable named CallFunc_CastToAthenaPlayerCharacter_AthenaPlayerCharacter@0x19fcb371800
+  $92: EndFunctionParms
+$93: Return expression:
+  $94: Nothing
+$95: EndOfScript
+
+=== BP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C::fn_idx_278739 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript

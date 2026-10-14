@@ -1,0 +1,582 @@
+// Class: MovementComponent (22 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+MovementComponent::ConstrainDirectionToPlane @ RVA 0x2A089F0 EA 0x7FF6F64289F0
+======================================================================
+__int64 __fastcall sub_7FF6F64289F0(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  __int64 v8; // rax
+  __int64 result; // rax
+  __int64 v10; // [rsp+20h] [rbp-38h] BYREF
+  int v11; // [rsp+28h] [rbp-30h]
+  __int64 v12; // [rsp+30h] [rbp-28h] BYREF
+  int v13; // [rsp+38h] [rbp-20h]
+  _BYTE v14[24]; // [rsp+40h] [rbp-18h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v12 = v10;
+  v7 = v6 + (v6 != 0);
+  LODWORD(v6) = v11;
+  a2[4] = v7;
+  v13 = v6;
+  v8 = (*(__int64 (__fastcall **)(__int64, _BYTE *, __int64 *))(*(_QWORD *)a1 + 1224LL))(a1, v14, &v12);
+  *(_QWORD *)a3 = *(_QWORD *)v8;
+  result = *(unsigned int *)(v8 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+MovementComponent::ConstrainLocationToPlane @ RVA 0x2A08AA0 EA 0x7FF6F6428AA0
+======================================================================
+__int64 __fastcall sub_7FF6F6428AA0(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  __int64 v8; // rax
+  __int64 result; // rax
+  __int64 v10; // [rsp+20h] [rbp-38h] BYREF
+  int v11; // [rsp+28h] [rbp-30h]
+  __int64 v12; // [rsp+30h] [rbp-28h] BYREF
+  int v13; // [rsp+38h] [rbp-20h]
+  _BYTE v14[24]; // [rsp+40h] [rbp-18h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v12 = v10;
+  v7 = v6 + (v6 != 0);
+  LODWORD(v6) = v11;
+  a2[4] = v7;
+  v13 = v6;
+  v8 = (*(__int64 (__fastcall **)(__int64, _BYTE *, __int64 *))(*(_QWORD *)a1 + 1232LL))(a1, v14, &v12);
+  *(_QWORD *)a3 = *(_QWORD *)v8;
+  result = *(unsigned int *)(v8 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+MovementComponent::ConstrainNormalToPlane @ RVA 0x2A08B50 EA 0x7FF6F6428B50
+======================================================================
+__int64 __fastcall sub_7FF6F6428B50(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  __int64 v8; // rax
+  __int64 result; // rax
+  __int64 v10; // [rsp+20h] [rbp-38h] BYREF
+  int v11; // [rsp+28h] [rbp-30h]
+  __int64 v12; // [rsp+30h] [rbp-28h] BYREF
+  int v13; // [rsp+38h] [rbp-20h]
+  _BYTE v14[24]; // [rsp+40h] [rbp-18h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v12 = v10;
+  v7 = v6 + (v6 != 0);
+  LODWORD(v6) = v11;
+  a2[4] = v7;
+  v13 = v6;
+  v8 = (*(__int64 (__fastcall **)(__int64, _BYTE *, __int64 *))(*(_QWORD *)a1 + 1240LL))(a1, v14, &v12);
+  *(_QWORD *)a3 = *(_QWORD *)v8;
+  result = *(unsigned int *)(v8 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+MovementComponent::GetGravityZ @ RVA 0x2A0BF20 EA 0x7FF6F642BF20
+======================================================================
+void __fastcall sub_7FF6F642BF20(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)a1 + 952LL))(a1);
+}
+
+
+======================================================================
+MovementComponent::GetMaxSpeed @ RVA 0x2A0C9B0 EA 0x7FF6F642C9B0
+======================================================================
+void __fastcall sub_7FF6F642C9B0(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)a1 + 960LL))(a1);
+}
+
+
+======================================================================
+MovementComponent::GetPhysicsVolume @ RVA 0x2A0DA10 EA 0x7FF6F642DA10
+======================================================================
+__int64 __fastcall sub_7FF6F642DA10(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1032LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+MovementComponent::GetPlaneConstraintAxisSetting @ RVA 0x2A0DA40 EA 0x7FF6F642DA40
+======================================================================
+__int64 __fastcall sub_7FF6F642DA40(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = *(unsigned __int8 *)(a1 + 236);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+MovementComponent::GetPlaneConstraintNormal @ RVA 0x2A0DA60 EA 0x7FF6F642DA60
+======================================================================
+__int64 __fastcall sub_7FF6F642DA60(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rax
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = sub_7FF6F5CE8380();
+  *(_QWORD *)a3 = *(_QWORD *)v4;
+  result = *(unsigned int *)(v4 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+MovementComponent::GetPlaneConstraintOrigin @ RVA 0x2A0DAA0 EA 0x7FF6F642DAA0
+======================================================================
+__int64 __fastcall sub_7FF6F642DAA0(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rax
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = sub_7FF6F5CE8480();
+  *(_QWORD *)a3 = *(_QWORD *)v4;
+  result = *(unsigned int *)(v4 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+MovementComponent::IsExceedingMaxSpeed @ RVA 0x2A10760 EA 0x7FF6F6430760
+======================================================================
+__int64 __fastcall sub_7FF6F6430760(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  bool v3; // zf
+  __int64 result; // rax
+  int v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = a2[4] == 0;
+  v8 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  a2[4] += a2[4] != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1000LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+MovementComponent::K2_GetMaxSpeedModifier @ RVA 0x2A10DE0 EA 0x7FF6F6430DE0
+======================================================================
+void __fastcall sub_7FF6F6430DE0(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)a1 + 976LL))(a1);
+}
+
+
+======================================================================
+MovementComponent::K2_GetModifiedMaxSpeed @ RVA 0x2A10E20 EA 0x7FF6F6430E20
+======================================================================
+void __fastcall sub_7FF6F6430E20(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)a1 + 992LL))(a1);
+}
+
+
+======================================================================
+MovementComponent::K2_MoveUpdatedComponent @ RVA 0x2A110F0 EA 0x7FF6F64310F0
+======================================================================
+__int64 __fastcall sub_7FF6F64310F0(int a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v6; // rdi
+  __int64 v7; // rax
+  _DWORD *v8; // rsi
+  char v9; // r14
+  __int64 v10; // rax
+  __int64 result; // rax
+  char v12; // [rsp+28h] [rbp-91h]
+  __int64 v13; // [rsp+30h] [rbp-89h] BYREF
+  int v14; // [rsp+38h] [rbp-81h]
+  __int64 v15; // [rsp+40h] [rbp-79h] BYREF
+  int v16; // [rsp+48h] [rbp-71h]
+  __int64 v17; // [rsp+50h] [rbp-69h] BYREF
+  int v18; // [rsp+58h] [rbp-61h]
+  __int64 v19; // [rsp+60h] [rbp-59h] BYREF
+  int v20; // [rsp+68h] [rbp-51h]
+  _DWORD v21[32]; // [rsp+70h] [rbp-49h] BYREF
+  int v22; // [rsp+128h] [rbp+6Fh] BYREF
+  int v23; // [rsp+130h] [rbp+77h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  memset(v21, 0, sizeof(v21));
+  v6 = 0;
+  v21[1] = 1065353216;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v21);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v21);
+  }
+  v7 = a2[7];
+  v8 = v21;
+  v22 = 0;
+  if ( v7 )
+    LODWORD(v8) = v7;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v22);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v22);
+  }
+  v23 = 0;
+  v9 = v22 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v23);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v23);
+  }
+  v10 = a2[4];
+  v12 = v23 != 0;
+  v17 = v13;
+  LOBYTE(v6) = v10 != 0;
+  v19 = v15;
+  v18 = v14;
+  v20 = v16;
+  a2[4] = v10 + v6;
+  result = sub_7FF6F5CEC460(a1, (unsigned int)&v19, (unsigned int)&v17, (_DWORD)v8, v9, v12);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+MovementComponent::PhysicsVolumeChanged @ RVA 0x2A122E0 EA 0x7FF6F64322E0
+======================================================================
+__int64 __fastcall sub_7FF6F64322E0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1040LL))(a1, v6);
+}
+
+
+======================================================================
+MovementComponent::SetPlaneConstraintAxisSetting @ RVA 0x2A186D0 EA 0x7FF6F64386D0
+======================================================================
+__int64 __fastcall sub_7FF6F64386D0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1184LL))(a1, v5);
+}
+
+
+======================================================================
+MovementComponent::SetPlaneConstraintEnabled @ RVA 0x2A18750 EA 0x7FF6F6438750
+======================================================================
+__int64 __fastcall sub_7FF6F6438750(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1216LL))(a1, v5);
+}
+
+
+======================================================================
+MovementComponent::SetPlaneConstraintFromVectors @ RVA 0x2A187E0 EA 0x7FF6F64387E0
+======================================================================
+__int64 __fastcall sub_7FF6F64387E0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  __int64 v7; // [rsp+20h] [rbp-48h] BYREF
+  int v8; // [rsp+28h] [rbp-40h]
+  __int64 v9; // [rsp+30h] [rbp-38h] BYREF
+  int v10; // [rsp+38h] [rbp-30h]
+  __int64 v11; // [rsp+40h] [rbp-28h] BYREF
+  int v12; // [rsp+48h] [rbp-20h]
+  __int64 v13; // [rsp+50h] [rbp-18h] BYREF
+  int v14; // [rsp+58h] [rbp-10h]
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v11 = v7;
+  v13 = v9;
+  v5 = v4 + (v4 != 0);
+  v12 = v8;
+  LODWORD(v4) = v10;
+  a2[4] = v5;
+  v14 = v4;
+  return (*(__int64 (__fastcall **)(__int64, __int64 *, __int64 *))(*(_QWORD *)a1 + 1200LL))(a1, &v13, &v11);
+}
+
+
+======================================================================
+MovementComponent::SetPlaneConstraintNormal @ RVA 0x2A188C0 EA 0x7FF6F64388C0
+======================================================================
+__int64 __fastcall sub_7FF6F64388C0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  __int64 v7; // [rsp+20h] [rbp-28h] BYREF
+  int v8; // [rsp+28h] [rbp-20h]
+  __int64 v9; // [rsp+30h] [rbp-18h] BYREF
+  int v10; // [rsp+38h] [rbp-10h]
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v9 = v7;
+  v5 = v4 + (v4 != 0);
+  LODWORD(v4) = v8;
+  a2[4] = v5;
+  v10 = v4;
+  return (*(__int64 (__fastcall **)(__int64, __int64 *))(*(_QWORD *)a1 + 1192LL))(a1, &v9);
+}
+
+
+======================================================================
+MovementComponent::SetPlaneConstraintOrigin @ RVA 0x2A18950 EA 0x7FF6F6438950
+======================================================================
+__int64 __fastcall sub_7FF6F6438950(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  __int64 v7; // [rsp+20h] [rbp-28h] BYREF
+  int v8; // [rsp+28h] [rbp-20h]
+  __int64 v9; // [rsp+30h] [rbp-18h] BYREF
+  int v10; // [rsp+38h] [rbp-10h]
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v9 = v7;
+  v5 = v4 + (v4 != 0);
+  LODWORD(v4) = v8;
+  a2[4] = v5;
+  v10 = v4;
+  return (*(__int64 (__fastcall **)(__int64, __int64 *))(*(_QWORD *)a1 + 1208LL))(a1, &v9);
+}
+
+
+======================================================================
+MovementComponent::SetUpdatedComponent @ RVA 0x2A198B0 EA 0x7FF6F64398B0
+======================================================================
+__int64 __fastcall sub_7FF6F64398B0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1048LL))(a1, v6);
+}
+
+
+======================================================================
+MovementComponent::SnapUpdatedComponentToPlane @ RVA 0x2A1A030 EA 0x7FF6F643A030
+======================================================================
+__int64 __fastcall sub_7FF6F643A030(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1248LL))(a1);
+}
+
+
+======================================================================
+MovementComponent::StopMovementImmediately @ RVA 0x2A1A290 EA 0x7FF6F643A290
+======================================================================
+__int64 __fastcall sub_7FF6F643A290(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1008LL))(a1);
+}
+

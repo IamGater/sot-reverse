@@ -1,0 +1,48 @@
+// Class: GameplayTask_WaitDelay (1 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+GameplayTask_WaitDelay::TaskWaitDelay @ RVA 0x1FACD00 EA 0x7FF6F59CCD00
+======================================================================
+__int64 __fastcall sub_7FF6F59CCD00(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  bool v3; // zf
+  __int64 v6; // rdx
+  __int64 result; // rax
+  __int128 v8; // [rsp+20h] [rbp-28h] BYREF
+  _QWORD v9[3]; // [rsp+30h] [rbp-18h] BYREF
+  int v10; // [rsp+58h] [rbp+10h] BYREF
+
+  v3 = a2[4] == 0;
+  v8 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  v3 = a2[4] == 0;
+  v10 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  v6 = 0;
+  a2[4] += a2[4] != 0;
+  v9[0] = v8;
+  if ( (_QWORD)v8 )
+    v6 = *((_QWORD *)&v8 + 1);
+  v9[1] = v6;
+  result = sub_7FF6F59C7000(v9);
+  *a3 = result;
+  return result;
+}
+

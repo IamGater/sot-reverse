@@ -1,0 +1,101 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/CompanyTales/GoldHoarders/Rank0_XMarks/bp_ct_xmarks_setpositionreference -> BP_CT_XMarks_SetPositionReference_C
+
+=== BP_CT_XMarks_SetPositionReference_C::OnBeginCustom (443 bytes) ===
+$0: SetArray
+  $1: LocalVariable named idx:281947@0x19fc1827400
+  $10: EndArray
+$11: FinalFunction target=GetParticipants@0x19e4cda59a0 (
+  $20: LocalVariable named idx:281947@0x19fc1827400
+  $29: EndFunctionParms
+)
+$30: Let (Variable = Expression)
+  Variable:
+  $39: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fcdbbc010
+  Expression:
+  $48: Context
+    ObjectExpression:
+    $49: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19fcdbbc010
+    ContextExpression:
+    $70: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $79: LocalVariable named idx:281947@0x19fc1827400
+      $88: EndFunctionParms
+    )
+$89: LetBool (Variable = Expression)
+  Variable:
+  $90: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fc1825c00
+  Expression:
+  $99: CallMath target=Greater_IntInt@0x19e4d382770 (
+    $108: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fcdbbc010
+    $117: literal int32 0
+    $122: EndFunctionParms
+  )
+$123: JumpIfNot -> 0x130, cond:
+  $128: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fc1825c00
+$137: SetArray
+  $138: LocalVariable named idx:281947@0x19fc1827400
+  $147: EndArray
+$148: FinalFunction target=GetParticipants@0x19e4cda59a0 (
+  $157: LocalVariable named idx:281947@0x19fc1827400
+  $166: EndFunctionParms
+)
+$167: Context
+  ObjectExpression:
+  $168: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $189: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $198: LocalVariable named idx:281947@0x19fc1827400
+    $207: literal int32 0
+    $212: LocalVariable named CallFunc_Array_Get_Item@0x19fc1825b80
+    $221: EndFunctionParms
+  )
+$222: Let (Variable = Expression)
+  Variable:
+  $231: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x19fc1825c80
+  Expression:
+  $240: Context
+    ObjectExpression:
+    $241: LocalVariable named CallFunc_Array_Get_Item@0x19fc1825b80
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetActorLocation_ReturnValue@0x19fc1825c80
+    ContextExpression:
+    $262: FinalFunction target=K2_GetActorLocation@0x19e4cd66b10 (
+      $271: EndFunctionParms
+    )
+$272: Let (Variable = Expression)
+  Variable:
+  $281: LocalOutVariable named idx:282384@0x19fc1825b00
+  Expression:
+  $290: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x19fc1825c80
+$299: Jump to offset 0x1b8
+$304: Context
+  ObjectExpression:
+  $305: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x53
+  RValueProperty: (null)
+  ContextExpression:
+  $326: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $335: NoObject
+    $336: literal ansi string "Failed to find a participant!"
+    $367: True
+    $368: True
+    $369: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $382: literal float 1
+      $387: literal float 0.011039000004529953
+      $392: literal float 0
+      $397: literal float 1
+      $402: EndStructConst
+    $403: literal float 10
+    $408: EndFunctionParms
+  )
+$409: Let (Variable = Expression)
+  Variable:
+  $418: LocalOutVariable named idx:282384@0x19fc1825b00
+  Expression:
+  $427: literal vector (0,0,0)
+$440: Return expression:
+  $441: Nothing
+$442: EndOfScript

@@ -1,0 +1,253 @@
+// /Game/Blueprints/Prompts/PromptConditionals/Emissary/EmissaryEntitlementPurchased/bp_prompt_emissaryentitlementpurchased -> BP_Prompt_EmissaryEntitlementPurchased_C
+
+=== BP_Prompt_EmissaryEntitlementPurchased_C::fn_idx_218599 (53 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: InstanceVariable named OfferId@0x19f4f450200
+  Expression:
+  $18: StructMemberContext prop=OfferId@0x19e4d016f70
+    Expression to struct:
+    $27: LocalVariable named NewParam@0x19f4f4bfd00
+$36: VirtualFunction call "Evaluate" (
+  $49: EndFunctionParms
+)
+$50: Return expression:
+  $51: Nothing
+$52: EndOfScript
+
+=== BP_Prompt_EmissaryEntitlementPurchased_C::fn_idx_218595 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_NewParam@0x19f4f4bfe00
+  Expression:
+  $9: LocalVariable named NewParam@0x19f4f4bfd80
+$18: VirtualFunction call "ExecuteUbergraph_BP_Prompt_EmissaryEntitlementPurchased" (
+  $31: literal int32 503
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_EmissaryEntitlementPurchased_C::fn_idx_217670 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Prompt_EmissaryEntitlementPurchased" (
+  $13: literal int32 527
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_EmissaryEntitlementPurchased_C::fn_idx_14105 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Prompt_EmissaryEntitlementPurchased" (
+  $13: literal int32 767
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_EmissaryEntitlementPurchased_C::fn_idx_14108 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Prompt_EmissaryEntitlementPurchased" (
+  $13: literal int32 881
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_EmissaryEntitlementPurchased_C::fn_idx_218596 (889 bytes) ===
+$0: FlowStack.Push(0x376)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x19f47787a10
+$15: Let (Variable = Expression)
+  Variable:
+  $24: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f47787620
+  Expression:
+  $33: Context
+    ObjectExpression:
+    $34: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19f47787620
+    ContextExpression:
+    $55: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $64: InstanceVariable named Prompts@0x19f462a1280
+      $73: EndFunctionParms
+    )
+$74: Let (Variable = Expression)
+  Variable:
+  $83: InstanceVariable named NumberOfPrompts@0x19f47787310
+  Expression:
+  $92: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f47787620
+$101: LetBool (Variable = Expression)
+  Variable:
+  $102: LocalVariable named CallFunc_EqualEqual_IntInt_ReturnValue2@0x19f4f450080
+  Expression:
+  $111: CallMath target=EqualEqual_IntInt@0x19e4d37af00 (
+    $120: InstanceVariable named NumberOfPrompts@0x19f47787310
+    $129: literal int32 0
+    $134: EndFunctionParms
+  )
+$135: JumpIfNot -> 0xcb, cond:
+  $140: LocalVariable named CallFunc_EqualEqual_IntInt_ReturnValue2@0x19f4f450080
+$149: LetBool (Variable = Expression)
+  Variable:
+  $150: InstanceVariable named PromptSurfacedThisSession@0x19f4f450300
+  Expression:
+  $159: True
+$160: Context
+  ObjectExpression:
+  $161: ObjectConst Default__TutorialHelpersBlueprintLibrary@0x19e4db0f570
+  SkipBytes: 0x14
+  RValueProperty: (null)
+  ContextExpression:
+  $182: FinalFunction target=FirePromptCompleted@0x19e4d514330 (
+    $191: InstanceVariable named PromptAccessKey@0x19f4f450880
+    $200: Self
+    $201: EndFunctionParms
+  )
+$202: PopExecutionFlow (jump to popped addr)
+$203: LetBool (Variable = Expression)
+  Variable:
+  $204: LocalVariable named CallFunc_EqualEqual_IntInt_ReturnValue@0x19f4f4bff80
+  Expression:
+  $213: CallMath target=EqualEqual_IntInt@0x19e4d37af00 (
+    $222: InstanceVariable named PromptIndex@0x19f481af260
+    $231: InstanceVariable named NumberOfPrompts@0x19f47787310
+    $240: EndFunctionParms
+  )
+$241: JumpIfNot -> 0x104, cond:
+  $246: LocalVariable named CallFunc_EqualEqual_IntInt_ReturnValue@0x19f4f4bff80
+$255: Jump to offset 0x95
+$260: Context
+  ObjectExpression:
+  $261: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $282: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $291: InstanceVariable named Prompts@0x19f462a1280
+    $300: InstanceVariable named PromptIndex@0x19f481af260
+    $309: LocalVariable named CallFunc_Array_Get_Item@0x19f4f450100
+    $318: EndFunctionParms
+  )
+$319: FinalFunction target=SetPromptAs@0x19e4d4b5a00 (
+  $328: LocalVariable named CallFunc_Array_Get_Item@0x19f4f450100
+  $337: EndFunctionParms
+)
+$338: Context
+  ObjectExpression:
+  $339: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x3a
+  RValueProperty: (null)
+  ContextExpression:
+  $360: FinalFunction target=Delay@0x19e4cd86d40 (
+    $369: Self
+    $370: InstanceVariable named ShowPromptDuration@0x19f47786ba0
+    $379: literal struct LatentActionInfo@0x19e4cd86e80 (size 32)
+      $392: literal CodeSkipSizeType 0x1a3
+      $397: literal int32 2
+      $402: literal name "ExecuteUbergraph_BP_Prompt_EmissaryEntitlementPurchased"
+      $415: Self
+      $416: EndStructConst
+    $417: EndFunctionParms
+  )
+$418: PopExecutionFlow (jump to popped addr)
+$419: FinalFunction target=DismissAllPrompts@0x19e4d4b4cc0 (
+  $428: EndFunctionParms
+)
+$429: Let (Variable = Expression)
+  Variable:
+  $438: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f47787460
+  Expression:
+  $447: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $456: InstanceVariable named PromptIndex@0x19f481af260
+    $465: literal int32 1
+    $470: EndFunctionParms
+  )
+$471: Let (Variable = Expression)
+  Variable:
+  $480: InstanceVariable named PromptIndex@0x19f481af260
+  Expression:
+  $489: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f47787460
+$498: Jump to offset 0xcb
+$503: VirtualFunction call "OnEmissaryEntitlementPurchasedFunc" (
+  $516: LocalVariable named K2Node_CustomEvent_NewParam@0x19f4f4bfe00
+  $525: EndFunctionParms
+)
+$526: PopExecutionFlow (jump to popped addr)
+$527: JumpIfNot -> 0x21e, cond:
+  $532: InstanceVariable named PromptSurfacedThisSession@0x19f4f450300
+$541: PopExecutionFlow (jump to popped addr)
+$542: LetBool (Variable = Expression)
+  Variable:
+  $543: LocalVariable named CallFunc_EqualEqual_GuidGuid_ReturnValue@0x19f4f4bfe80
+  Expression:
+  $552: Context
+    ObjectExpression:
+    $553: ObjectConst Default__KismetGuidLibrary@0x19e4d95ebe0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_EqualEqual_GuidGuid_ReturnValue@0x19f4f4bfe80
+    ContextExpression:
+    $574: FinalFunction target=EqualEqual_GuidGuid@0x19e4d369340 (
+      $583: InstanceVariable named OfferId@0x19f4f450200
+      $592: InstanceVariable named ExpectedOfferId@0x19f4f450280
+      $601: EndFunctionParms
+    )
+$602: PopExecutionFlowIfNot, cond:
+$603: LocalVariable named CallFunc_EqualEqual_GuidGuid_ReturnValue@0x19f4f4bfe80
+$612: Context
+  ObjectExpression:
+  $613: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x3a
+  RValueProperty: (null)
+  ContextExpression:
+  $634: FinalFunction target=Delay@0x19e4cd86d40 (
+    $643: Self
+    $644: InstanceVariable named InitialDelay@0x19f477865f0
+    $653: literal struct LatentActionInfo@0x19e4cd86e80 (size 32)
+      $666: literal CodeSkipSizeType 0xf
+      $671: literal int32 1
+      $676: literal name "ExecuteUbergraph_BP_Prompt_EmissaryEntitlementPurchased"
+      $689: Self
+      $690: EndStructConst
+    $691: EndFunctionParms
+  )
+$692: PopExecutionFlow (jump to popped addr)
+$693: VirtualFunction call "GetControllerObjectMessageDispatcher" (
+  $706: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher@0x19f4f4bff00
+  $715: EndFunctionParms
+)
+$716: Context
+  ObjectExpression:
+  $717: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $738: FinalFunction target=UnregisterEventFromHandle@0x19e4d411420 (
+    $747: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher@0x19f4f4bff00
+    $756: InstanceVariable named Handle_EmissaryEntitlementPurchased@0x19f4f450180
+    $765: EndFunctionParms
+  )
+$766: PopExecutionFlow (jump to popped addr)
+$767: VirtualFunction call "GetControllerObjectMessageDispatcher" (
+  $780: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher2@0x19f4f450000
+  $789: EndFunctionParms
+)
+$790: Context
+  ObjectExpression:
+  $791: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x44
+  RValueProperty: (null)
+  ContextExpression:
+  $812: FinalFunction target=RegisterEventFromHandle@0x19e4d410c00 (
+    $821: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher2@0x19f4f450000
+    $830: InstanceVariable named Handle_EmissaryEntitlementPurchased@0x19f4f450180
+    $839: Self
+    $840: literal ansi string "EmissaryEntitlementPurchased"
+    $870: ObjectConst EmissaryEntitlementPurchasedEvent@0x19e4d016ed0
+    $879: EndFunctionParms
+  )
+$880: PopExecutionFlow (jump to popped addr)
+$881: Jump to offset 0x2b5
+$886: Return expression:
+  $887: Nothing
+$888: EndOfScript

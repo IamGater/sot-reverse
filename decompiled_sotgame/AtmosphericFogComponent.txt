@@ -1,0 +1,366 @@
+// Class: AtmosphericFogComponent (14 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+AtmosphericFogComponent::DisableGroundScattering @ RVA 0x2B13220 EA 0x7FF6F6533220
+======================================================================
+__int64 __fastcall sub_7FF6F6533220(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F5C5FF60(a1, v5);
+}
+
+
+======================================================================
+AtmosphericFogComponent::DisableSunDisk @ RVA 0x2B132D0 EA 0x7FF6F65332D0
+======================================================================
+__int64 __fastcall sub_7FF6F65332D0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F5C5FF90(a1, v5);
+}
+
+
+======================================================================
+AtmosphericFogComponent::SetAltitudeScale @ RVA 0x2B1C2F0 EA 0x7FF6F653C2F0
+======================================================================
+__int64 __fastcall sub_7FF6F653C2F0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5C6BCD0(a1);
+}
+
+
+======================================================================
+AtmosphericFogComponent::SetDefaultBrightness @ RVA 0x2B1E030 EA 0x7FF6F653E030
+======================================================================
+__int64 __fastcall sub_7FF6F653E030(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5C6BFA0(a1);
+}
+
+
+======================================================================
+AtmosphericFogComponent::SetDefaultLightColor @ RVA 0x2B1E0B0 EA 0x7FF6F653E0B0
+======================================================================
+__int64 __fastcall sub_7FF6F653E0B0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rax
+  __int128 v6; // [rsp+20h] [rbp-28h] BYREF
+  __int128 v7; // [rsp+30h] [rbp-18h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  v4 = a2[4];
+  v7 = v6;
+  a2[4] = v4 + (v4 != 0);
+  return sub_7FF6F5C6BFC0(a1, &v7);
+}
+
+
+======================================================================
+AtmosphericFogComponent::SetDensityMultiplier @ RVA 0x2B1E130 EA 0x7FF6F653E130
+======================================================================
+__int64 __fastcall sub_7FF6F653E130(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5C6C000(a1);
+}
+
+
+======================================================================
+AtmosphericFogComponent::SetDensityOffset @ RVA 0x2B1E1B0 EA 0x7FF6F653E1B0
+======================================================================
+__int64 __fastcall sub_7FF6F653E1B0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5C6C020(a1);
+}
+
+
+======================================================================
+AtmosphericFogComponent::SetDistanceOffset @ RVA 0x2B1E530 EA 0x7FF6F653E530
+======================================================================
+__int64 __fastcall sub_7FF6F653E530(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5C6C050(a1);
+}
+
+
+======================================================================
+AtmosphericFogComponent::SetDistanceScale @ RVA 0x2B1E5B0 EA 0x7FF6F653E5B0
+======================================================================
+__int64 __fastcall sub_7FF6F653E5B0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5C6C070(a1);
+}
+
+
+======================================================================
+AtmosphericFogComponent::SetFogMultiplier @ RVA 0x2B1F240 EA 0x7FF6F653F240
+======================================================================
+__int64 __fastcall sub_7FF6F653F240(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5C6C0A0(a1);
+}
+
+
+======================================================================
+AtmosphericFogComponent::SetPrecomputeParams @ RVA 0x2B20D80 EA 0x7FF6F6540D80
+======================================================================
+__int64 __fastcall sub_7FF6F6540D80(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  __int64 v6; // rdx
+  __int64 v7; // rax
+  __int64 v8; // r9
+  __int64 v9; // r8
+  _DWORD v11[6]; // [rsp+20h] [rbp-18h] BYREF
+  unsigned int v12; // [rsp+48h] [rbp+10h] BYREF
+  unsigned int v13; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v11[0] = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  v5 = 0;
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v7 = a2[4];
+  v8 = v12;
+  v9 = v13;
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  return nullsub_2320(a1, v6, v9, v8);
+}
+
+
+======================================================================
+AtmosphericFogComponent::SetStartDistance @ RVA 0x2B21B40 EA 0x7FF6F6541B40
+======================================================================
+__int64 __fastcall sub_7FF6F6541B40(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5C6CCA0(a1);
+}
+
+
+======================================================================
+AtmosphericFogComponent::SetSunMultiplier @ RVA 0x2B220F0 EA 0x7FF6F65420F0
+======================================================================
+__int64 __fastcall sub_7FF6F65420F0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5C6CCC0(a1);
+}
+
+
+======================================================================
+AtmosphericFogComponent::StartPrecompute @ RVA 0x2B24870 EA 0x7FF6F6544870
+======================================================================
+  *** no function recognized at this EA ***

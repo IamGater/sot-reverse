@@ -1,0 +1,256 @@
+// Class: TaleQuestParallelForeachStep (6 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+TaleQuestParallelForeachStep::ForIndex @ RVA 0x152AB10 EA 0x7FF6F4F4AB10
+======================================================================
+  (RVA 0x152AB10 shared with another function already decompiled above/elsewhere - likely a generic Blueprint/K2 bytecode executor, not unique native code)
+unsigned __int8 *__fastcall sub_7FF6F4F4AB10(_QWORD *a1, _QWORD *a2, void *a3)
+{
+  unsigned __int8 *result; // rax
+  char v7; // bp
+  _BYTE *i; // rax
+  unsigned __int8 *v9; // rax
+  int v10; // ecx
+  unsigned __int8 *v11; // rcx
+  __int64 v12; // rax
+  unsigned __int8 *v13; // rbx
+  char v14[64]; // [rsp+30h] [rbp-68h] BYREF
+
+  result = (unsigned __int8 *)a1[2];
+  if ( *((int *)result + 49) >= 0 )
+  {
+    v7 = (*(__int64 (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD))(*a1 + 480LL))(a1, a2[2], a2[5], 0);
+    if ( (v7 & 1) != 0 )
+      (*(void (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD, _QWORD))(*a1 + 488LL))(a1, a2[2], a2[5], a2[15], 0);
+    if ( (v7 & 2) != 0 )
+    {
+      for ( i = (_BYTE *)a2[4]; *i != 4; i = (_BYTE *)a2[4] )
+      {
+        v9 = (unsigned __int8 *)a2[4];
+        v10 = *v9;
+        a2[4] = v9 + 1;
+        ((void (__fastcall *)(_QWORD, _QWORD *, char *))funcs_7FF6F4F44D4F[v10])(a2[3], a2, v14);
+      }
+      result = i + 1;
+      a2[4] = result;
+      v11 = result + 1;
+      if ( *result == 11 )
+      {
+        a2[4] = v11;
+      }
+      else
+      {
+        v12 = *result;
+        a2[4] = v11;
+        return (unsigned __int8 *)((__int64 (__fastcall *)(_QWORD, _QWORD *, void *))funcs_7FF6F4F44D4F[v12])(
+                                    a2[3],
+                                    a2,
+                                    a3);
+      }
+    }
+    else
+    {
+      result = (unsigned __int8 *)sub_7FF6F4F072B0(a2[2]);
+      v13 = result;
+      if ( result )
+      {
+        if ( (*((_QWORD *)result + 7) & 0x1000000000LL) == 0 )
+          (*(void (__fastcall **)(unsigned __int8 *, void *))(*(_QWORD *)result + 688LL))(result, a3);
+        return (unsigned __int8 *)memset(a3, 0, *((_DWORD *)v13 + 12) * *((_DWORD *)v13 + 13));
+      }
+    }
+  }
+  else if ( !byte_7FF6FA4F64EF )
+  {
+    ++dword_7FF6FA525F48;
+  }
+  return result;
+}
+
+
+======================================================================
+TaleQuestParallelForeachStep::GetCount @ RVA 0xDDE2C0 EA 0x7FF6F47FE2C0
+======================================================================
+__int64 __fastcall sub_7FF6F47FE2C0(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F43F8690();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+TaleQuestParallelForeachStep::GetDefinition @ RVA 0xDDE6C0 EA 0x7FF6F47FE6C0
+======================================================================
+__int64 __fastcall sub_7FF6F47FE6C0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F43F8A10();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+TaleQuestParallelForeachStep::GetVariables @ RVA 0xDDFB10 EA 0x7FF6F47FFB10
+======================================================================
+__int64 __fastcall sub_7FF6F47FFB10(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rsi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // r8
+  __int64 v9; // rax
+  __int64 result; // rax
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], 0);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, 0);
+  }
+  v4 = a2[6];
+  v5 = a2[7];
+  if ( v4 )
+  {
+    v6 = sub_7FF6F4F48060(L"/Script/CoreUObject");
+    v7 = *(_QWORD *)(v4 + 16);
+    v8 = v6 + 136;
+    v9 = *(int *)(v6 + 160);
+    if ( (int)v9 <= *(_DWORD *)(v7 + 160) && *(_QWORD *)(*(_QWORD *)(v7 + 136) + 8 * v9) == v8 )
+      (*(void (__fastcall **)(_QWORD, _QWORD, __int64))(**(_QWORD **)(a1 + 64) + 72LL))(
+        *(_QWORD *)(a1 + 64),
+        *(_QWORD *)(v4 + 112),
+        v5);
+  }
+  result = a2[4];
+  a2[4] = result + (result != 0);
+  return result;
+}
+
+
+======================================================================
+TaleQuestParallelForeachStep::Start @ RVA 0x152AB10 EA 0x7FF6F4F4AB10
+======================================================================
+  (RVA 0x152AB10 shared with another function already decompiled above/elsewhere - likely a generic Blueprint/K2 bytecode executor, not unique native code)
+unsigned __int8 *__fastcall sub_7FF6F4F4AB10(_QWORD *a1, _QWORD *a2, void *a3)
+{
+  unsigned __int8 *result; // rax
+  char v7; // bp
+  _BYTE *i; // rax
+  unsigned __int8 *v9; // rax
+  int v10; // ecx
+  unsigned __int8 *v11; // rcx
+  __int64 v12; // rax
+  unsigned __int8 *v13; // rbx
+  char v14[64]; // [rsp+30h] [rbp-68h] BYREF
+
+  result = (unsigned __int8 *)a1[2];
+  if ( *((int *)result + 49) >= 0 )
+  {
+    v7 = (*(__int64 (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD))(*a1 + 480LL))(a1, a2[2], a2[5], 0);
+    if ( (v7 & 1) != 0 )
+      (*(void (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD, _QWORD))(*a1 + 488LL))(a1, a2[2], a2[5], a2[15], 0);
+    if ( (v7 & 2) != 0 )
+    {
+      for ( i = (_BYTE *)a2[4]; *i != 4; i = (_BYTE *)a2[4] )
+      {
+        v9 = (unsigned __int8 *)a2[4];
+        v10 = *v9;
+        a2[4] = v9 + 1;
+        ((void (__fastcall *)(_QWORD, _QWORD *, char *))funcs_7FF6F4F44D4F[v10])(a2[3], a2, v14);
+      }
+      result = i + 1;
+      a2[4] = result;
+      v11 = result + 1;
+      if ( *result == 11 )
+      {
+        a2[4] = v11;
+      }
+      else
+      {
+        v12 = *result;
+        a2[4] = v11;
+        return (unsigned __int8 *)((__int64 (__fastcall *)(_QWORD, _QWORD *, void *))funcs_7FF6F4F44D4F[v12])(
+                                    a2[3],
+                                    a2,
+                                    a3);
+      }
+    }
+    else
+    {
+      result = (unsigned __int8 *)sub_7FF6F4F072B0(a2[2]);
+      v13 = result;
+      if ( result )
+      {
+        if ( (*((_QWORD *)result + 7) & 0x1000000000LL) == 0 )
+          (*(void (__fastcall **)(unsigned __int8 *, void *))(*(_QWORD *)result + 688LL))(result, a3);
+        return (unsigned __int8 *)memset(a3, 0, *((_DWORD *)v13 + 12) * *((_DWORD *)v13 + 13));
+      }
+    }
+  }
+  else if ( !byte_7FF6FA4F64EF )
+  {
+    ++dword_7FF6FA525F48;
+  }
+  return result;
+}
+
+
+======================================================================
+TaleQuestParallelForeachStep::ToContext @ RVA 0xDE48F0 EA 0x7FF6F48048F0
+======================================================================
+__int64 __fastcall sub_7FF6F48048F0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rsi
+  __int64 v6; // rbp
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 v9; // r8
+  __int64 v10; // rax
+  char v11; // al
+  __int64 result; // rax
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], 0);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, 0);
+  }
+  v4 = a2[6];
+  v5 = 0;
+  v6 = a2[7];
+  if ( !v4
+    || ((v7 = sub_7FF6F4F48060(L"/Script/CoreUObject"),
+         v8 = *(_QWORD *)(v4 + 16),
+         v9 = v7 + 136,
+         v10 = *(int *)(v7 + 160),
+         (int)v10 > *(_DWORD *)(v8 + 160))
+     || *(_QWORD *)(*(_QWORD *)(v8 + 136) + 8 * v10) != v9
+      ? (v11 = 0)
+      : (v11 = 1),
+        !v11) )
+  {
+    v4 = 0;
+  }
+  sub_7FF6F44003C0(a1, *(_QWORD *)(v4 + 112), v6);
+  result = a2[4];
+  LOBYTE(v5) = result != 0;
+  a2[4] = result + v5;
+  return result;
+}
+

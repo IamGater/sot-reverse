@@ -1,0 +1,199 @@
+// Class: SkeletonAnimationInstance (7 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+SkeletonAnimationInstance::AttachHeldObject @ RVA 0xB097F0 EA 0x7FF6F45297F0
+======================================================================
+__int64 __fastcall sub_7FF6F45297F0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F3E20620(a1, v5);
+}
+
+
+======================================================================
+SkeletonAnimationInstance::DestroyHeldObject @ RVA 0xB09FB0 EA 0x7FF6F4529FB0
+======================================================================
+__int64 __fastcall sub_7FF6F4529FB0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F3E29090(a1, v5);
+}
+
+
+======================================================================
+SkeletonAnimationInstance::DetachHeldObject @ RVA 0xB0A030 EA 0x7FF6F452A030
+======================================================================
+__int64 __fastcall sub_7FF6F452A030(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F3E29610(a1, v5);
+}
+
+
+======================================================================
+SkeletonAnimationInstance::GetCurrentMontagePosition @ RVA 0xB0B3C0 EA 0x7FF6F452B3C0
+======================================================================
+void __fastcall sub_7FF6F452B3C0(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F3E2C7A0();
+}
+
+
+======================================================================
+SkeletonAnimationInstance::SetNewCustomAnimationLoopingSequence @ RVA 0xB11B00 EA 0x7FF6F4531B00
+======================================================================
+__int64 __fastcall sub_7FF6F4531B00(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  bool v7; // si
+  __int64 v8; // rax
+  __int64 v9; // r8
+  __int64 result; // rax
+  int v11; // [rsp+40h] [rbp+8h] BYREF
+  __int64 v12; // [rsp+48h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v12 = 0;
+  v7 = v11 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v8 = a2[4];
+  v9 = v12;
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, bool, __int64))(*(_QWORD *)(a1 + 15328) + 40LL))(a1 + 15328, v7, v9);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+SkeletonAnimationInstance::StopAnimation @ RVA 0xB129F0 EA 0x7FF6F45329F0
+======================================================================
+__int64 __fastcall sub_7FF6F45329F0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F3E38070(a1);
+}
+
+
+======================================================================
+SkeletonAnimationInstance::UseHeldObject @ RVA 0xB13F10 EA 0x7FF6F4533F10
+======================================================================
+__int64 __fastcall sub_7FF6F4533F10(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // r8
+  __int64 v6; // rdx
+  unsigned __int8 v8; // [rsp+38h] [rbp+10h] BYREF
+  unsigned __int8 v9; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v9 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  v2 = a2[4] == 0;
+  v8 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  v5 = v8;
+  v6 = v9;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F3E3DF30(a1, v6, v5);
+}
+

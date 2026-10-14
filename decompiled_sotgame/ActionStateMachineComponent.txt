@@ -1,0 +1,431 @@
+// Class: ActionStateMachineComponent (10 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+ActionStateMachineComponent::Client_CorrectAction @ RVA 0x2F25C90 EA 0x7FF6F6945C90
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6945C90(__int64 *a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rbx
+  __int64 v6; // rax
+  _BYTE v8[8]; // [rsp+20h] [rbp-68h] BYREF
+  __int64 v9; // [rsp+28h] [rbp-60h]
+  _BYTE v10[88]; // [rsp+30h] [rbp-58h] BYREF
+  char v11; // [rsp+90h] [rbp+8h] BYREF
+  char v12; // [rsp+98h] [rbp+10h] BYREF
+  char v13; // [rsp+A8h] [rbp+20h] BYREF
+
+  v9 = -2;
+  sub_7FF6F6926DE0(&v12);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  sub_7FF6F6926DE0(&v11);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  sub_7FF6F69274D0(v10);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  a2[4] += a2[4] != 0;
+  v4 = *a1;
+  v5 = sub_7FF6F6926DD0(&v13, &v11);
+  v6 = sub_7FF6F6926DD0(v8, &v12);
+  (*(void (__fastcall **)(__int64 *, __int64, __int64, _BYTE *))(v4 + 960))(a1, v6, v5, v10);
+  return sub_7FF6F69287F0(v10);
+}
+
+
+======================================================================
+ActionStateMachineComponent::Client_ResetStateMachine @ RVA 0x2F25DF0 EA 0x7FF6F6945DF0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6945DF0(__int64 a1, _QWORD *a2)
+{
+  _BYTE *v4; // rbx
+  __int64 v5; // rdi
+  _BYTE *v6; // rbx
+  __int64 v7; // rdi
+  __int64 v8; // rbx
+  __int64 v9; // rsi
+  __int64 v10; // rdi
+  __int64 v11; // rdi
+  _BYTE v13[16]; // [rsp+40h] [rbp-2C8h] BYREF
+  char v14; // [rsp+50h] [rbp-2B8h] BYREF
+  _BYTE v15[5]; // [rsp+190h] [rbp-178h] BYREF
+  _BYTE v16[11]; // [rsp+195h] [rbp-173h] BYREF
+  _BYTE v17[320]; // [rsp+1A0h] [rbp-168h] BYREF
+
+  v4 = v15;
+  v5 = 5;
+  do
+  {
+    sub_7FF6F6926DE0(v4++);
+    --v5;
+  }
+  while ( v5 );
+  v6 = v16;
+  v7 = 5;
+  do
+  {
+    sub_7FF6F6926DE0(v6++);
+    --v7;
+  }
+  while ( v7 );
+  sub_7FF6F7F94320(v17, 64, 5, sub_7FF6F69274D0, sub_7FF6F69287F0);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v15);
+  }
+  v8 = 0;
+  a2[4] += a2[4] != 0;
+  v9 = 5;
+  v10 = 0;
+  do
+  {
+    sub_7FF6F6926DD0(&v13[v10], &v15[v10]);
+    ++v10;
+    --v9;
+  }
+  while ( v9 );
+  v11 = 5;
+  do
+  {
+    sub_7FF6F6926DD0(&v13[v8 + 5], &v16[v8]);
+    ++v8;
+    --v11;
+  }
+  while ( v11 );
+  sub_7FF6F7F94C98((unsigned int)&v14, (unsigned int)v17, 64, 5, (__int64)sub_7FF6F6927430);
+  (*(void (__fastcall **)(__int64, _BYTE *))(*(_QWORD *)a1 + 968LL))(a1, v13);
+  return sub_7FF6F7F94390(v17, 64, 5, sub_7FF6F69287F0);
+}
+
+
+======================================================================
+ActionStateMachineComponent::End @ RVA 0x2F26490 EA 0x7FF6F6946490
+======================================================================
+__int64 __fastcall sub_7FF6F6946490(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F692ABA0();
+}
+
+
+======================================================================
+ActionStateMachineComponent::Multicast_PushAction @ RVA 0x2F26DE0 EA 0x7FF6F6946DE0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6946DE0(__int64 *a1, _QWORD *a2)
+{
+  __int64 v4; // rbx
+  __int64 v5; // rax
+  _BYTE v7[72]; // [rsp+30h] [rbp-48h] BYREF
+  char v8; // [rsp+80h] [rbp+8h] BYREF
+  char v9; // [rsp+88h] [rbp+10h] BYREF
+
+  sub_7FF6F6926DE0(&v8);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  sub_7FF6F69274D0(v7);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  a2[4] += a2[4] != 0;
+  v4 = *a1;
+  v5 = sub_7FF6F6926DD0(&v9, &v8);
+  (*(void (__fastcall **)(__int64 *, __int64, _BYTE *))(v4 + 976))(a1, v5, v7);
+  return sub_7FF6F69287F0(v7);
+}
+
+
+======================================================================
+ActionStateMachineComponent::Multicast_PushActionFromRequest @ RVA 0x2F26EE0 EA 0x7FF6F6946EE0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6946EE0(__int64 *a1, _QWORD *a2)
+{
+  __int64 v4; // rbx
+  __int64 v5; // rax
+  _BYTE v7[72]; // [rsp+30h] [rbp-48h] BYREF
+  char v8; // [rsp+80h] [rbp+8h] BYREF
+  char v9; // [rsp+88h] [rbp+10h] BYREF
+
+  sub_7FF6F6926DE0(&v8);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  sub_7FF6F69274D0(v7);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  a2[4] += a2[4] != 0;
+  v4 = *a1;
+  v5 = sub_7FF6F6926DD0(&v9, &v8);
+  (*(void (__fastcall **)(__int64 *, __int64, _BYTE *))(v4 + 984))(a1, v5, v7);
+  return sub_7FF6F69287F0(v7);
+}
+
+
+======================================================================
+ActionStateMachineComponent::Multicast_PushSerialisableData @ RVA 0x2F26FE0 EA 0x7FF6F6946FE0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6946FE0(__int64 *a1, _QWORD *a2)
+{
+  __int64 v4; // rbx
+  __int64 v5; // rax
+  _BYTE v7[72]; // [rsp+30h] [rbp-48h] BYREF
+  char v8; // [rsp+80h] [rbp+8h] BYREF
+  char v9; // [rsp+88h] [rbp+10h] BYREF
+
+  sub_7FF6F6926DE0(&v8);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  sub_7FF6F69274D0(v7);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  a2[4] += a2[4] != 0;
+  v4 = *a1;
+  v5 = sub_7FF6F6926DD0(&v9, &v8);
+  (*(void (__fastcall **)(__int64 *, __int64, _BYTE *))(v4 + 992))(a1, v5, v7);
+  return sub_7FF6F69287F0(v7);
+}
+
+
+======================================================================
+ActionStateMachineComponent::OnNetOwnershipChanged @ RVA 0x2F270E0 EA 0x7FF6F69470E0
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+ActionStateMachineComponent::PostNetInit @ RVA 0x2F27100 EA 0x7FF6F6947100
+======================================================================
+__int64 __fastcall sub_7FF6F6947100(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F692CC60();
+}
+
+
+======================================================================
+ActionStateMachineComponent::Server_RequestAction @ RVA 0x2F27530 EA 0x7FF6F6947530
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6947530(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rbx
+  __int64 v5; // rax
+  __int64 v6; // rbx
+  __int64 v7; // rax
+  char v9; // [rsp+20h] [rbp-60h]
+  int v10; // [rsp+20h] [rbp-60h]
+  char v11; // [rsp+30h] [rbp-50h] BYREF
+  char v12; // [rsp+31h] [rbp-4Fh] BYREF
+  _BYTE v13[6]; // [rsp+32h] [rbp-4Eh] BYREF
+  __int64 v14; // [rsp+38h] [rbp-48h]
+  _BYTE v15[64]; // [rsp+40h] [rbp-40h] BYREF
+  char v16; // [rsp+98h] [rbp+18h] BYREF
+  char v17; // [rsp+A8h] [rbp+28h] BYREF
+
+  v14 = -2;
+  sub_7FF6F6926DE0(&v17);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  sub_7FF6F6926DE0(&v16);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  sub_7FF6F69274D0(v15);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v15);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  a2[4] += a2[4] != 0;
+  v4 = sub_7FF6F6926DD0(&v12, &v16);
+  v5 = sub_7FF6F6926DD0(v13, &v17);
+  v9 = v11;
+  if ( (unsigned __int8)sub_7FF6F692ED50(a1, v5, v4, v15, v9) )
+  {
+    v6 = sub_7FF6F6926DD0(v13, &v16);
+    v7 = sub_7FF6F6926DD0(&v12, &v17);
+    LOBYTE(v10) = v11;
+    sub_7FF6F692ED20(a1, v7, v6, v15, v10);
+  }
+  else
+  {
+    sub_7FF6F4F0F6D0(L"Server_RequestAction_Validate");
+  }
+  return sub_7FF6F69287F0(v15);
+}
+
+
+======================================================================
+ActionStateMachineComponent::Server_RequestActionWithMessageForCurrentState @ RVA 0x2F27700 EA 0x7FF6F6947700
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6947700(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rbx
+  __int64 v5; // rax
+  __int64 v6; // rbx
+  __int64 v7; // rax
+  char v9; // [rsp+38h] [rbp-19h] BYREF
+  _BYTE v10[7]; // [rsp+39h] [rbp-18h] BYREF
+  _BYTE v11[24]; // [rsp+40h] [rbp-11h] BYREF
+  __int64 v12; // [rsp+58h] [rbp+7h]
+  _BYTE v13[64]; // [rsp+68h] [rbp+17h] BYREF
+  char v14; // [rsp+C0h] [rbp+6Fh] BYREF
+  char v15; // [rsp+D0h] [rbp+7Fh] BYREF
+
+  v12 = -2;
+  sub_7FF6F6926DE0(&v15);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  sub_7FF6F6926DE0(&v14);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  sub_7FF6F69274D0(v13);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v13);
+  }
+  sub_7FF6F6927500(v11);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  a2[4] += a2[4] != 0;
+  v4 = sub_7FF6F6926DD0(&v9, &v14);
+  v5 = sub_7FF6F6926DD0(v10, &v15);
+  if ( (unsigned __int8)sub_7FF6F692ED10(a1, v5, v4, v13, v11) )
+  {
+    v6 = sub_7FF6F6926DD0(v10, &v14);
+    v7 = sub_7FF6F6926DD0(&v9, &v15);
+    nullsub_3260(a1, v7, v6, v13, v11);
+  }
+  else
+  {
+    sub_7FF6F4F0F6D0(L"Server_RequestActionWithMessageForCurrentState_Validate");
+  }
+  sub_7FF6F6928940(v11);
+  return sub_7FF6F69287F0(v13);
+}
+

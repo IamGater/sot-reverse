@@ -1,0 +1,82 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_1_Shroudbreaker/bp_shroudbreaker_medalliondigencounter -> BP_Shroudbreaker_MedallionDigEncounter_C
+
+=== BP_Shroudbreaker_MedallionDigEncounter_C::fn_idx_1842 (58 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_Pawn@0x19fce0df900
+  Expression:
+  $9: LocalVariable named Pawn@0x19fce0df780
+$18: LetValueOnPersistentFrame dest=K2Node_Event_DeathType@0x19fce0df980
+  Expression:
+  $27: LocalVariable named DeathType@0x19fce0df800
+$36: VirtualFunction call "idx:283478" (
+  $49: literal int32 172
+  $54: EndFunctionParms
+)
+$55: Return expression:
+  $56: Nothing
+$57: EndOfScript
+
+=== BP_Shroudbreaker_MedallionDigEncounter_C::fn_idx_1845 (22 bytes) ===
+$0: VirtualFunction call "idx:283478" (
+  $13: literal int32 222
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Shroudbreaker_MedallionDigEncounter_C::fn_idx_283478 (230 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fcdbb2ae0
+$10: FinalFunction target=OnBattleWon@0x19e4d112e50 (
+  $19: EndFunctionParms
+)
+$20: Jump to offset 0xe3
+$25: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $34: EndFunctionParms
+)
+$35: Jump to offset 0xe3
+$40: Let (Variable = Expression)
+  Variable:
+  $49: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19fcdbb2fb0
+  Expression:
+  $58: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $67: InstanceVariable named idx:283479@0x19fcdbb28b0
+    $76: literal int32 1
+    $81: EndFunctionParms
+  )
+$82: Let (Variable = Expression)
+  Variable:
+  $91: InstanceVariable named idx:283479@0x19fcdbb28b0
+  Expression:
+  $100: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19fcdbb2fb0
+$109: LetBool (Variable = Expression)
+  Variable:
+  $110: LocalVariable named CallFunc_EqualEqual_IntInt_ReturnValue@0x19fce0df880
+  Expression:
+  $119: CallMath target=EqualEqual_IntInt@0x19e4d37af00 (
+    $128: InstanceVariable named idx:283479@0x19fcdbb28b0
+    $137: literal int32 2
+    $142: EndFunctionParms
+  )
+$143: JumpIfNot -> 0xe3, cond:
+  $148: LocalVariable named CallFunc_EqualEqual_IntInt_ReturnValue@0x19fce0df880
+$157: FinalFunction target=OnBattleWon@0x19e4d112e50 (
+  $166: EndFunctionParms
+)
+$167: Jump to offset 0x19
+$172: LetBool (Variable = Expression)
+  Variable:
+  $173: LocalVariable named CallFunc_EqualEqual_ByteByte_ReturnValue@0x19fce0dfa00
+  Expression:
+  $182: CallMath target=EqualEqual_ByteByte@0x19e4d37a620 (
+    $191: LocalVariable named K2Node_Event_DeathType@0x19fce0df980
+    $200: literal byte 1
+    $202: EndFunctionParms
+  )
+$203: JumpIfNot -> 0xe3, cond:
+  $208: LocalVariable named CallFunc_EqualEqual_ByteByte_ReturnValue@0x19fce0dfa00
+$217: Jump to offset 0x28
+$222: Jump to offset 0xa
+$227: Return expression:
+  $228: Nothing
+$229: EndOfScript

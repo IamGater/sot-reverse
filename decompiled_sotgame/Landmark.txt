@@ -1,0 +1,62 @@
+// Class: Landmark (1 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+Landmark::TriggerLandmarkReactionForNearbyPlayersExplicitList @ RVA 0x3436DA0 EA 0x7FF6F6E56DA0
+======================================================================
+// Hidden C++ exception states: #wind=3
+__int64 __fastcall sub_7FF6F6E56DA0(__int64 a1, _QWORD *a2)
+{
+  void *v4; // rdi
+  void *v5; // rsi
+  __int64 v6; // rbx
+  __int64 result; // rax
+  void *v8; // [rsp+28h] [rbp-40h] BYREF
+  __int64 v9; // [rsp+30h] [rbp-38h]
+  void *Src; // [rsp+38h] [rbp-30h] BYREF
+  __int64 v11; // [rsp+40h] [rbp-28h]
+  unsigned int v12; // [rsp+78h] [rbp+10h] BYREF
+  void **v13; // [rsp+88h] [rbp+20h]
+
+  v4 = nullptr;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  Src = nullptr;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &Src);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &Src);
+  }
+  a2[4] += a2[4] != 0;
+  v13 = &v8;
+  v8 = nullptr;
+  v9 = 0;
+  v5 = Src;
+  v6 = (int)v11;
+  if ( (_DWORD)v11 )
+  {
+    v4 = (void *)sub_7FF6F4DFAA90(0, 8LL * (int)v11, 0);
+    v8 = v4;
+  }
+  memcpy(v4, v5, 8 * v6);
+  LODWORD(v9) = v6;
+  HIDWORD(v9) = v6;
+  result = sub_7FF6F6E4EB10(a1, v12, &v8);
+  if ( Src )
+    return sub_7FF6F4DED1F0((__int64)Src);
+  return result;
+}
+

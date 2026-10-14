@@ -1,0 +1,106 @@
+// Class: BountyMap (4 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+BountyMap::OnRep_Contents @ RVA 0xC0DBC0 EA 0x7FF6F462DBC0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F462DBC0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  _BYTE *v5; // rdx
+  __int64 v6; // rax
+  _BYTE v8[112]; // [rsp+30h] [rbp-78h] BYREF
+
+  sub_7FF6F4110370(v8);
+  v4 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v5 = v8;
+  if ( a2[7] )
+    v5 = (_BYTE *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v4) = v6 != 0;
+  a2[4] = v6 + v4;
+  sub_7FF6F412AF30(a1, v5);
+  return sub_7FF6F4114630(v8);
+}
+
+
+======================================================================
+BountyMap::OnRep_MapInventoryTexturePath @ RVA 0xC0DDE0 EA 0x7FF6F462DDE0
+======================================================================
+__int64 __fastcall sub_7FF6F462DDE0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return nullsub_6330();
+}
+
+
+======================================================================
+BountyMap::OnTextCanvasUpdate @ RVA 0xC0E340 EA 0x7FF6F462E340
+======================================================================
+__int64 __fastcall sub_7FF6F462E340(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // r9
+  __int64 v7; // r8
+  __int64 v8; // rdx
+  _QWORD v10[3]; // [rsp+20h] [rbp-18h] BYREF
+  unsigned int v11; // [rsp+48h] [rbp+10h] BYREF
+  unsigned int v12; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v10[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v5 = a2[4];
+  v6 = v11;
+  v7 = v12;
+  v8 = v10[0];
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F412C4C0(a1, v8, v7, v6);
+}
+
+
+======================================================================
+BountyMap::RefreshContents @ RVA 0xC0F340 EA 0x7FF6F462F340
+======================================================================
+  *** no function recognized at this EA ***

@@ -1,0 +1,41 @@
+// Class: WindService (3 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+WindService::GetWindParams @ RVA 0x30BE570 EA 0x7FF6F6ADE570
+======================================================================
+__int64 __fastcall sub_7FF6F6ADE570(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rax
+  __int64 result; // rax
+  _BYTE v6[56]; // [rsp+20h] [rbp-38h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = sub_7FF6F6AD2E30(a1, v6);
+  *(_OWORD *)a3 = *(_OWORD *)v4;
+  *(_OWORD *)(a3 + 16) = *(_OWORD *)(v4 + 16);
+  result = *(unsigned int *)(v4 + 32);
+  *(_DWORD *)(a3 + 32) = result;
+  return result;
+}
+
+
+======================================================================
+WindService::OnRep_WindAngle @ RVA 0x30BE790 EA 0x7FF6F6ADE790
+======================================================================
+__int64 __fastcall sub_7FF6F6ADE790(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F6AD2EF0();
+}
+
+
+======================================================================
+WindService::OnRep_WindMagnitude @ RVA 0x30BE7B0 EA 0x7FF6F6ADE7B0
+======================================================================
+__int64 __fastcall sub_7FF6F6ADE7B0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F6AD2FD0();
+}
+

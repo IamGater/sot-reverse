@@ -1,0 +1,518 @@
+// /Game/Blueprints/GameObjects/Mechanisms/Triggers/Capstans/bp_capstanmechanismtrigger_4arms -> BP_Base_Capstan_C
+
+=== BP_Base_Capstan_C::GetArms (610 bytes) ===
+$0: FlowStack.Push(0x257)
+$5: Let (Variable = Expression)
+  Variable:
+  $14: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f43e91ab0
+  Expression:
+  $23: literal int32 0
+$28: Let (Variable = Expression)
+  Variable:
+  $37: LocalVariable named Temp_int_Array_Index_Variable@0x19f43e91a40
+  Expression:
+  $46: literal int32 0
+$51: Let (Variable = Expression)
+  Variable:
+  $60: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19f4f7de700
+  Expression:
+  $69: FinalFunction target=GetComponentsByClass@0x19e4cd626c0 (
+    $78: ObjectConst ChildActorComponent@0x19e4c538180
+    $87: EndFunctionParms
+  )
+$88: Let (Variable = Expression)
+  Variable:
+  $97: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f43e91b20
+  Expression:
+  $106: Context
+    ObjectExpression:
+    $107: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19f43e91b20
+    ContextExpression:
+    $128: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $137: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19f4f7de700
+      $146: EndFunctionParms
+    )
+$147: LetBool (Variable = Expression)
+  Variable:
+  $148: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19f4f7de380
+  Expression:
+  $157: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $166: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f43e91ab0
+    $175: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f43e91b20
+    $184: EndFunctionParms
+  )
+$185: JumpIfNot -> 0x1ed, cond:
+  $190: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19f4f7de380
+$199: Let (Variable = Expression)
+  Variable:
+  $208: LocalVariable named Temp_int_Array_Index_Variable@0x19f43e91a40
+  Expression:
+  $217: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f43e91ab0
+$226: FlowStack.Push(0x20d)
+$231: Let (Variable = Expression)
+  Variable:
+  $240: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19f4f7de700
+  Expression:
+  $249: FinalFunction target=GetComponentsByClass@0x19e4cd626c0 (
+    $258: ObjectConst ChildActorComponent@0x19e4c538180
+    $267: EndFunctionParms
+  )
+$268: Context
+  ObjectExpression:
+  $269: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $290: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $299: LocalVariable named CallFunc_GetComponentsByClass_ReturnValue@0x19f4f7de700
+    $308: LocalVariable named Temp_int_Array_Index_Variable@0x19f43e91a40
+    $317: LocalVariable named CallFunc_Array_Get_Item@0x19f4f7de300
+    $326: EndFunctionParms
+  )
+$327: Let (Variable = Expression)
+  Variable:
+  $336: LocalVariable named K2Node_DynamicCast_AsBP_Capstan_Arm@0x19f4f7de400
+  Expression:
+  $345: DynamicCast to BP_CapstanArm_C@0x19f4674cf00 of expr:
+  $354: Context
+    ObjectExpression:
+    $355: LocalVariable named CallFunc_Array_Get_Item@0x19f4f7de300
+    SkipBytes: 0x9
+    RValueProperty: ChildActor@0x19e4d3359f0
+    ContextExpression:
+    $376: InstanceVariable named ChildActor@0x19e4d3359f0
+$385: Let (Variable = Expression)
+  Variable:
+  $394: LocalVariable named K2Node_DynamicCast_bSuccess@0x19f4f7de480
+  Expression:
+  $403: PrimitiveCast type=71
+    Argument:
+    $405: LocalVariable named K2Node_DynamicCast_AsBP_Capstan_Arm@0x19f4f7de400
+$414: PopExecutionFlowIfNot, cond:
+$415: LocalVariable named K2Node_DynamicCast_bSuccess@0x19f4f7de480
+$424: Let (Variable = Expression)
+  Variable:
+  $433: LocalVariable named CallFunc_Array_Add_ReturnValue@0x19f43e91b90
+  Expression:
+  $442: Context
+    ObjectExpression:
+    $443: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Add_ReturnValue@0x19f43e91b90
+    ContextExpression:
+    $464: FinalFunction target=Array_Add@0x19e4d366810 (
+      $473: LocalVariable named Arms@0x19f4f7de600
+      $482: LocalVariable named K2Node_DynamicCast_AsBP_Capstan_Arm@0x19f4f7de400
+      $491: EndFunctionParms
+    )
+$492: PopExecutionFlow (jump to popped addr)
+$493: Let (Variable = Expression)
+  Variable:
+  $502: LocalOutVariable named ReturnValue@0x19f4f7de800
+  Expression:
+  $511: LocalVariable named Arms@0x19f4f7de600
+$520: Jump to offset 0x257
+$525: Let (Variable = Expression)
+  Variable:
+  $534: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f43e91c00
+  Expression:
+  $543: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $552: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f43e91ab0
+    $561: literal int32 1
+    $566: EndFunctionParms
+  )
+$567: Let (Variable = Expression)
+  Variable:
+  $576: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f43e91ab0
+  Expression:
+  $585: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f43e91c00
+$594: Jump to offset 0x33
+$599: Return expression:
+  $600: LocalOutVariable named ReturnValue@0x19f4f7de800
+$609: EndOfScript
+
+=== BP_Base_Capstan_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_Base_Capstan_C::BP_CharacterInterface_C (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_AthenaCharacter@0x19f4f7df000
+  Expression:
+  $9: LocalVariable named AthenaCharacter@0x19f4f7de880
+$18: VirtualFunction call "ExecuteUbergraph_BP_Base_Capstan" (
+  $31: literal int32 529
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Base_Capstan_C::EIKLimbName::NewEnumerator4 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_RotationSpeed@0x19f43e921b0
+  Expression:
+  $9: LocalVariable named RotationSpeed@0x19f43e91c70
+$18: VirtualFunction call "ExecuteUbergraph_BP_Base_Capstan" (
+  $31: literal int32 530
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Base_Capstan_C::EDocking::EDocking_MAX (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_Docking@0x19f4f7df080
+  Expression:
+  $9: LocalVariable named Docking@0x19f4f7de900
+$18: VirtualFunction call "ExecuteUbergraph_BP_Base_Capstan" (
+  $31: literal int32 531
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Base_Capstan_C::EIKLimbName::NewEnumerator3 (94 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_IndividualForce@0x19f43e92220
+  Expression:
+  $9: LocalVariable named IndividualForce@0x19f43e91ce0
+$18: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_LH_IK@0x19f4f7df100
+  Expression:
+  $27: LocalVariable named LH_IK@0x19f4f7de980
+$36: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_RH_IK@0x19f4f7df180
+  Expression:
+  $45: LocalVariable named RH_IK@0x19f4f7dea00
+$54: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_Actor@0x19f4f7df200
+  Expression:
+  $63: LocalVariable named Actor@0x19f4f7dea80
+$72: VirtualFunction call "ExecuteUbergraph_BP_Base_Capstan" (
+  $85: literal int32 532
+  $90: EndFunctionParms
+)
+$91: Return expression:
+  $92: Nothing
+$93: EndOfScript
+
+=== BP_Base_Capstan_C::CanDock_1_9709281449045809CBDC7C8FF23165CB (58 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_LimbId4@0x19f4f7df280
+  Expression:
+  $9: LocalVariable named LimbId@0x19f4f7deb00
+$18: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_TransformUpdate@0x19f4f7df300
+  Expression:
+  $27: LocalVariable named TransformUpdate@0x19f4f7deb80
+$36: VirtualFunction call "ExecuteUbergraph_BP_Base_Capstan" (
+  $49: literal int32 533
+  $54: EndFunctionParms
+)
+$55: Return expression:
+  $56: Nothing
+$57: EndOfScript
+
+=== BP_Base_Capstan_C::EDocking::NewEnumerator1 (76 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_LimbId3@0x19f4f7df380
+  Expression:
+  $9: LocalVariable named LimbId@0x19f4f7dec00
+$18: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_BlendIn@0x19f43e92290
+  Expression:
+  $27: LocalVariable named BlendIn@0x19f43e91d50
+$36: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_BlendOut@0x19f43e92300
+  Expression:
+  $45: LocalVariable named BlendOut@0x19f43e91dc0
+$54: VirtualFunction call "ExecuteUbergraph_BP_Base_Capstan" (
+  $67: literal int32 534
+  $72: EndFunctionParms
+)
+$73: Return expression:
+  $74: Nothing
+$75: EndOfScript
+
+=== BP_Base_Capstan_C::BP_Docking (76 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_LimbId2@0x19f4f7df400
+  Expression:
+  $9: LocalVariable named LimbId@0x19f4f7ded00
+$18: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_LocationStrength@0x19f43e92370
+  Expression:
+  $27: LocalVariable named LocationStrength@0x19f43e91e30
+$36: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_RotationStrength@0x19f43e923e0
+  Expression:
+  $45: LocalVariable named RotationStrength@0x19f43e91ea0
+$54: VirtualFunction call "ExecuteUbergraph_BP_Base_Capstan" (
+  $67: literal int32 535
+  $72: EndFunctionParms
+)
+$73: Return expression:
+  $74: Nothing
+$75: EndOfScript
+
+=== BP_Base_Capstan_C::EDocking::NewEnumerator0 (76 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_LimbId@0x19f4f7df500
+  Expression:
+  $9: LocalVariable named LimbId@0x19f4f7ded80
+$18: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_Active@0x19f4f7df580
+  Expression:
+  $27: LocalVariable named Active@0x19f4f7dee00
+$36: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_CoordinateSpace@0x19f4f7df600
+  Expression:
+  $45: LocalVariable named CoordinateSpace@0x19f4f7dee80
+$54: VirtualFunction call "ExecuteUbergraph_BP_Base_Capstan" (
+  $67: literal int32 536
+  $72: EndFunctionParms
+)
+$73: Return expression:
+  $74: Nothing
+$75: EndOfScript
+
+=== BP_Base_Capstan_C::EDocking::NewEnumerator2 (76 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_ArmStretch@0x19f43e92450
+  Expression:
+  $9: LocalVariable named ArmStretch@0x19f43e91f10
+$18: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_SpineStretch@0x19f43e924c0
+  Expression:
+  $27: LocalVariable named SpineStretch@0x19f43e91f80
+$36: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_LegStretch@0x19f43e92530
+  Expression:
+  $45: LocalVariable named LegStretch@0x19f43e91ff0
+$54: VirtualFunction call "ExecuteUbergraph_BP_Base_Capstan" (
+  $67: literal int32 537
+  $72: EndFunctionParms
+)
+$73: Return expression:
+  $74: Nothing
+$75: EndOfScript
+
+=== BP_Base_Capstan_C::OnCapstanDescLoaded (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_CapstanDesc@0x19f4f7df680
+  Expression:
+  $9: LocalVariable named CapstanDesc@0x19f4f7def00
+$18: VirtualFunction call "ExecuteUbergraph_BP_Base_Capstan" (
+  $31: literal int32 538
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Base_Capstan_C::ArmDock07 (905 bytes) ===
+$0: FlowStack.Push(0x386)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x19f43e92060
+$15: Let (Variable = Expression)
+  Variable:
+  $24: LocalVariable named CallFunc_GetArms_ReturnValue@0x19f4f7dfb00
+  Expression:
+  $33: VirtualFunction call "GetArms" (
+    $46: EndFunctionParms
+  )
+$47: Let (Variable = Expression)
+  Variable:
+  $56: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f43e925a0
+  Expression:
+  $65: literal int32 0
+$70: Let (Variable = Expression)
+  Variable:
+  $79: LocalVariable named Temp_int_Array_Index_Variable@0x19f43e92140
+  Expression:
+  $88: literal int32 0
+$93: Let (Variable = Expression)
+  Variable:
+  $102: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f43e920d0
+  Expression:
+  $111: Context
+    ObjectExpression:
+    $112: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19f43e920d0
+    ContextExpression:
+    $133: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $142: LocalVariable named CallFunc_GetArms_ReturnValue@0x19f4f7dfb00
+      $151: EndFunctionParms
+    )
+$152: LetBool (Variable = Expression)
+  Variable:
+  $153: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19f4f7df980
+  Expression:
+  $162: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $171: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f43e925a0
+    $180: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19f43e920d0
+    $189: EndFunctionParms
+  )
+$190: PopExecutionFlowIfNot, cond:
+$191: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19f4f7df980
+$200: Let (Variable = Expression)
+  Variable:
+  $209: LocalVariable named Temp_int_Array_Index_Variable@0x19f43e92140
+  Expression:
+  $218: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f43e925a0
+$227: FlowStack.Push(0x1c7)
+$232: Context
+  ObjectExpression:
+  $233: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $254: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $263: LocalVariable named CallFunc_GetArms_ReturnValue@0x19f4f7dfb00
+    $272: LocalVariable named Temp_int_Array_Index_Variable@0x19f43e92140
+    $281: LocalVariable named CallFunc_Array_Get_Item@0x19f4f7def80
+    $290: EndFunctionParms
+  )
+$291: Context
+  ObjectExpression:
+  $292: LocalVariable named CallFunc_Array_Get_Item@0x19f4f7def80
+  SkipBytes: 0x32
+  RValueProperty: (null)
+  ContextExpression:
+  $313: FinalFunction target=UpdateIntactHandleMesh@0x19e4d1300b0 (
+    $322: StructMemberContext prop=CapstanArmMesh@0x19e4ce25940
+      Expression to struct:
+      $331: Context
+        ObjectExpression:
+        $332: LocalVariable named K2Node_Event_CapstanDesc@0x19f4f7df680
+        SkipBytes: 0x9
+        RValueProperty: CapstanDesc@0x19e4d12a7c0
+        ContextExpression:
+        $353: InstanceVariable named CapstanDesc@0x19e4d12a7c0
+    $362: EndFunctionParms
+  )
+$363: Context
+  ObjectExpression:
+  $364: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $385: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $394: LocalVariable named CallFunc_GetArms_ReturnValue@0x19f4f7dfb00
+    $403: LocalVariable named Temp_int_Array_Index_Variable@0x19f43e92140
+    $412: LocalVariable named CallFunc_Array_Get_Item@0x19f4f7def80
+    $421: EndFunctionParms
+  )
+$422: Context
+  ObjectExpression:
+  $423: LocalVariable named CallFunc_Array_Get_Item@0x19f4f7def80
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $444: FinalFunction target=UpdateArmVisuals@0x19e4d12fff0 (
+    $453: EndFunctionParms
+  )
+$454: PopExecutionFlow (jump to popped addr)
+$455: Let (Variable = Expression)
+  Variable:
+  $464: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f43e92610
+  Expression:
+  $473: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $482: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f43e925a0
+    $491: literal int32 1
+    $496: EndFunctionParms
+  )
+$497: Let (Variable = Expression)
+  Variable:
+  $506: LocalVariable named Temp_int_Loop_Counter_Variable@0x19f43e925a0
+  Expression:
+  $515: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19f43e92610
+$524: Jump to offset 0x5d
+$529: PopExecutionFlow (jump to popped addr)
+$530: PopExecutionFlow (jump to popped addr)
+$531: PopExecutionFlow (jump to popped addr)
+$532: PopExecutionFlow (jump to popped addr)
+$533: PopExecutionFlow (jump to popped addr)
+$534: PopExecutionFlow (jump to popped addr)
+$535: PopExecutionFlow (jump to popped addr)
+$536: PopExecutionFlow (jump to popped addr)
+$537: PopExecutionFlow (jump to popped addr)
+$538: LetBool (Variable = Expression)
+  Variable:
+  $539: LocalVariable named CallFunc_IsValid_ReturnValue@0x19f4f7df700
+  Expression:
+  $548: Context
+    ObjectExpression:
+    $549: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19f4f7df700
+    ContextExpression:
+    $570: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $579: LocalVariable named K2Node_Event_CapstanDesc@0x19f4f7df680
+      $588: EndFunctionParms
+    )
+$589: PopExecutionFlowIfNot, cond:
+$590: LocalVariable named CallFunc_IsValid_ReturnValue@0x19f4f7df700
+$599: FlowStack.Push(0x2b8)
+$604: FlowStack.Push(0xf)
+$609: LetBool (Variable = Expression)
+  Variable:
+  $610: LocalVariable named CallFunc_SetStaticMesh_ReturnValue@0x19f4f7df780
+  Expression:
+  $619: Context
+    ObjectExpression:
+    $620: InstanceVariable named MeshComponent@0x19e4d12db00
+    SkipBytes: 0x36
+    RValueProperty: CallFunc_SetStaticMesh_ReturnValue@0x19f4f7df780
+    ContextExpression:
+    $641: VirtualFunction call "SetStaticMesh" (
+      $654: StructMemberContext prop=CapstanBodyMesh@0x19e4ce259c0
+        Expression to struct:
+        $663: Context
+          ObjectExpression:
+          $664: LocalVariable named K2Node_Event_CapstanDesc@0x19f4f7df680
+          SkipBytes: 0x9
+          RValueProperty: CapstanDesc@0x19e4d12a7c0
+          ContextExpression:
+          $685: InstanceVariable named CapstanDesc@0x19e4d12a7c0
+      $694: EndFunctionParms
+    )
+$695: PopExecutionFlow (jump to popped addr)
+$696: Let (Variable = Expression)
+  Variable:
+  $705: LocalVariable named K2Node_DynamicCast_AsBP_Capstan_Release@0x19f4f7df800
+  Expression:
+  $714: DynamicCast to BP_CapstanRelease_C@0x19f464d4a40 of expr:
+  $723: Context
+    ObjectExpression:
+    $724: InstanceVariable named CapstanReleaseComponent@0x19e4d12da80
+    SkipBytes: 0x9
+    RValueProperty: ChildActor@0x19e4d3359f0
+    ContextExpression:
+    $745: InstanceVariable named ChildActor@0x19e4d3359f0
+$754: Let (Variable = Expression)
+  Variable:
+  $763: LocalVariable named K2Node_DynamicCast_bSuccess@0x19f4f7df880
+  Expression:
+  $772: PrimitiveCast type=71
+    Argument:
+    $774: LocalVariable named K2Node_DynamicCast_AsBP_Capstan_Release@0x19f4f7df800
+$783: PopExecutionFlowIfNot, cond:
+$784: LocalVariable named K2Node_DynamicCast_bSuccess@0x19f4f7df880
+$793: LetBool (Variable = Expression)
+  Variable:
+  $794: LocalVariable named CallFunc_SetStaticMesh_ReturnValue2@0x19f4f7df900
+  Expression:
+  $803: Context
+    ObjectExpression:
+    $804: Context
+      ObjectExpression:
+      $805: LocalVariable named K2Node_DynamicCast_AsBP_Capstan_Release@0x19f4f7df800
+      SkipBytes: 0x9
+      RValueProperty: MeshComponent@0x19e4d1309c0
+      ContextExpression:
+      $826: InstanceVariable named MeshComponent@0x19e4d1309c0
+    SkipBytes: 0x36
+    RValueProperty: CallFunc_SetStaticMesh_ReturnValue2@0x19f4f7df900
+    ContextExpression:
+    $847: VirtualFunction call "SetStaticMesh" (
+      $860: StructMemberContext prop=CapstanReleaseMesh@0x19e4ce258c0
+        Expression to struct:
+        $869: Context
+          ObjectExpression:
+          $870: LocalVariable named K2Node_Event_CapstanDesc@0x19f4f7df680
+          SkipBytes: 0x9
+          RValueProperty: CapstanDesc@0x19e4d12a7c0
+          ContextExpression:
+          $891: InstanceVariable named CapstanDesc@0x19e4d12a7c0
+      $900: EndFunctionParms
+    )
+$901: PopExecutionFlow (jump to popped addr)
+$902: Return expression:
+  $903: Nothing
+$904: EndOfScript

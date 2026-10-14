@@ -1,0 +1,37 @@
+// Class: PlayerTelemetrySubjectGetterInterface (1 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+PlayerTelemetrySubjectGetterInterface::GetTelemetrySubject @ RVA 0x2F62360 EA 0x7FF6F6982360
+======================================================================
+char __fastcall sub_7FF6F6982360(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rsi
+  __int64 v7; // rbp
+  __int64 v8; // rax
+  __int64 v9; // rcx
+  __int64 v10; // rax
+  __int64 v11; // rdx
+
+  v3 = 0;
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v5 = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 16LL))(a1);
+  v6 = v5;
+  if ( v5 )
+  {
+    v7 = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)v5 + 8LL))(v5);
+    v8 = sub_7FF6F4F67890(L"/Script/CoreUObject");
+    v9 = *(_QWORD *)(v7 + 16);
+    v10 = v8 + 136;
+    v11 = *(int *)(v10 + 24);
+    LOBYTE(v5) = (int)v11 <= *(_DWORD *)(v9 + 160) && *(_QWORD *)(*(_QWORD *)(v9 + 136) + 8 * v11) == v10;
+    if ( (_BYTE)v5 )
+      v3 = v7;
+  }
+  a3[1] = v6;
+  *a3 = v3;
+  return v5;
+}
+

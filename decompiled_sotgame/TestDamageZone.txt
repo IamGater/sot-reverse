@@ -1,0 +1,96 @@
+// Class: TestDamageZone (7 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+TestDamageZone::IsWaterLeakRepairSfxPlaying @ RVA 0xCF8290 EA 0x7FF6F4718290
+======================================================================
+__int64 __fastcall sub_7FF6F4718290(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F42F5E50();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+TestDamageZone::IsWaterLeakSfxPlaying @ RVA 0xCF82C0 EA 0x7FF6F47182C0
+======================================================================
+__int64 __fastcall sub_7FF6F47182C0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F42F5E70();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+TestDamageZone::TestPlayWaterLeakRepairingSfx @ RVA 0xCFDBA0 EA 0x7FF6F471DBA0
+======================================================================
+__int64 __fastcall sub_7FF6F471DBA0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return nullsub_6395();
+}
+
+
+======================================================================
+TestDamageZone::TestPlayWaterLeakSfx @ RVA 0xCFDBC0 EA 0x7FF6F471DBC0
+======================================================================
+void __fastcall sub_7FF6F471DBC0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F42F6730LL);
+}
+
+
+======================================================================
+TestDamageZone::TestSetRepairableState @ RVA 0xCFDBE0 EA 0x7FF6F471DBE0
+======================================================================
+__int64 __fastcall sub_7FF6F471DBE0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return nullsub_283(a1, v5);
+}
+
+
+======================================================================
+TestDamageZone::TestStopWaterLeakRepairingSfx @ RVA 0xCFDC60 EA 0x7FF6F471DC60
+======================================================================
+__int64 __fastcall sub_7FF6F471DC60(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return nullsub_5423();
+}
+
+
+======================================================================
+TestDamageZone::TestStopWaterLeakSfx @ RVA 0xCFDC80 EA 0x7FF6F471DC80
+======================================================================
+void __fastcall sub_7FF6F471DC80(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F42F68D0LL);
+}
+

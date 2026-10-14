@@ -1,0 +1,263 @@
+// Class: TeleportActionStateId (2 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+TeleportActionStateId::PushCharacterIntoTeleportActionState @ RVA 0xC0E770 EA 0x7FF6F462E770
+======================================================================
+__int64 __fastcall sub_7FF6F462E770(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  char v4; // r15
+  char v5; // r14
+  char v6; // si
+  __int64 v7; // rax
+  int v8; // r9d
+  int v9; // r8d
+  int v10; // edx
+  int v11; // ecx
+  bool v12; // zf
+  _BYTE v14[4]; // [rsp+50h] [rbp-30h] BYREF
+  int v15; // [rsp+54h] [rbp-2Ch] BYREF
+  int v16; // [rsp+58h] [rbp-28h] BYREF
+  int v17; // [rsp+5Ch] [rbp-24h] BYREF
+  int v18; // [rsp+60h] [rbp-20h] BYREF
+  int v19; // [rsp+64h] [rbp-1Ch] BYREF
+  int v20; // [rsp+68h] [rbp-18h] BYREF
+  _QWORD v21[2]; // [rsp+70h] [rbp-10h] BYREF
+  unsigned __int8 v22; // [rsp+B8h] [rbp+38h] BYREF
+  unsigned __int8 v23; // [rsp+C8h] [rbp+48h] BYREF
+
+  v2 = 0;
+  v21[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v21);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v21);
+  }
+  v14[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v14);
+  }
+  v23 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v23);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v23);
+  }
+  v22 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v22);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v22);
+  }
+  v20 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v20);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v20);
+  }
+  v19 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v16 = 0;
+  v4 = v15 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v17 = 0;
+  v5 = v16 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v18 = 0;
+  v6 = v17 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  v7 = a2[4];
+  v8 = v22;
+  v9 = v23;
+  v10 = v14[0];
+  LOBYTE(v2) = v7 != 0;
+  v11 = v21[0];
+  v12 = v18 == 0;
+  a2[4] = v7 + v2;
+  return sub_7FF6F3EEAB30(v11, v10, v9, v8, v20, v19, v4, v5, v6, !v12);
+}
+
+
+======================================================================
+TeleportActionStateId::PushCharacterIntoTeleportActionStateWithCustomTeleportLocation @ RVA 0xC0EA30 EA 0x7FF6F462EA30
+======================================================================
+__int64 __fastcall sub_7FF6F462EA30(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  _BYTE *v5; // rsi
+  __int64 v6; // rax
+  int v7; // r9d
+  int v8; // r8d
+  int v9; // ecx
+  bool v10; // zf
+  _BYTE v12[4]; // [rsp+40h] [rbp-40h] BYREF
+  int v13; // [rsp+44h] [rbp-3Ch] BYREF
+  int v14; // [rsp+48h] [rbp-38h] BYREF
+  int v15; // [rsp+4Ch] [rbp-34h] BYREF
+  __int64 v16; // [rsp+50h] [rbp-30h] BYREF
+  _BYTE v17[40]; // [rsp+58h] [rbp-28h] BYREF
+  char v18; // [rsp+A8h] [rbp+28h] BYREF
+  unsigned __int8 v19; // [rsp+B8h] [rbp+38h] BYREF
+
+  v2 = 0;
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  sub_7FF6F74AB530(v17);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v17);
+  }
+  v4 = a2[7];
+  v5 = v17;
+  v12[0] = 0;
+  if ( v4 )
+    LODWORD(v5) = v4;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v19 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  v18 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v6 = a2[4];
+  v7 = v19;
+  v8 = v12[0];
+  v9 = v16;
+  LOBYTE(v2) = v6 != 0;
+  v10 = v13 == 0;
+  a2[4] = v6 + v2;
+  return sub_7FF6F3EEAD70(v9, (_DWORD)v5, v8, v7, v18, v15, v14, !v10);
+}
+

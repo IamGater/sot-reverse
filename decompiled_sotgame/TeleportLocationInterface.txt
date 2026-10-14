@@ -1,0 +1,82 @@
+// Class: TeleportLocationInterface (2 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+TeleportLocationInterface::GetAllTeleportLocationsForCharacter @ RVA 0xC0A750 EA 0x7FF6F462A750
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F462A750(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 result; // rax
+  __int64 v7; // rdi
+  __int64 v8[4]; // [rsp+28h] [rbp-20h] BYREF
+  __int64 v9; // [rsp+50h] [rbp+8h] BYREF
+
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  a2[4] += a2[4] != 0;
+  result = (*(__int64 (__fastcall **)(__int64, __int64 *, __int64))(*(_QWORD *)a1 + 24LL))(a1, v8, v9);
+  v7 = result;
+  if ( a3 != result )
+  {
+    if ( *(_QWORD *)a3 )
+    {
+      sub_7FF6F4DED1F0(*(_QWORD *)a3);
+      if ( *(_QWORD *)a3 )
+        *(_QWORD *)a3 = 0;
+    }
+    *(_QWORD *)a3 = *(_QWORD *)v7;
+    *(_QWORD *)v7 = 0;
+    *(_DWORD *)(a3 + 8) = *(_DWORD *)(v7 + 8);
+    result = *(unsigned int *)(v7 + 12);
+    *(_DWORD *)(a3 + 12) = result;
+    *(_QWORD *)(v7 + 8) = 0;
+  }
+  if ( v8[0] )
+    return sub_7FF6F4DED1F0(v8[0]);
+  return result;
+}
+
+
+======================================================================
+TeleportLocationInterface::GetTeleportLocationForCharacter @ RVA 0xC0BB00 EA 0x7FF6F462BB00
+======================================================================
+__int64 __fastcall sub_7FF6F462BB00(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 result; // rax
+  _BYTE v10[56]; // [rsp+20h] [rbp-38h] BYREF
+  __int64 v11; // [rsp+60h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v7 = a2[4];
+  v8 = v11;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, _BYTE *, __int64))(*(_QWORD *)a1 + 16LL))(a1, v10, v8);
+  *(_OWORD *)a3 = *(_OWORD *)result;
+  *(_OWORD *)(a3 + 16) = *(_OWORD *)(result + 16);
+  *(_QWORD *)(a3 + 32) = *(_QWORD *)(result + 32);
+  return result;
+}
+

@@ -1,0 +1,353 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_2_TheCursedRogue/bp_cursedrogue_briggsyencounter -> BP_CursedRogue_BriggsyEncounter_C
+
+=== BP_CursedRogue_BriggsyEncounter_C::fn_idx_283648 (310 bytes) ===
+$0: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $9: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce0d4300
+  $18: EndFunctionParms
+)
+$19: Let (Variable = Expression)
+  Variable:
+  $28: LocalVariable named idx:283436@0x19fce0d4380
+  Expression:
+  $37: DynamicCast to BP_TaleEventDispatcherProxy_C@0x19fcde00900 of expr:
+  $46: StructMemberContext prop=TrackedActor_2_2551955D4ACD2662E427BBBC1A1BC844@0x19fcda41800
+    Expression to struct:
+    $55: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce0d4300
+$64: Let (Variable = Expression)
+  Variable:
+  $73: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fce0d4400
+  Expression:
+  $82: PrimitiveCast type=71
+    Argument:
+    $84: LocalVariable named idx:283436@0x19fce0d4380
+$93: JumpIfNot -> 0x94, cond:
+  $98: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fce0d4400
+$107: Context
+  ObjectExpression:
+  $108: LocalVariable named idx:283436@0x19fce0d4380
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $129: VirtualFunction call "Broadcast" (
+    $142: EndFunctionParms
+  )
+$143: Jump to offset 0x133
+$148: Context
+  ObjectExpression:
+  $149: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x84
+  RValueProperty: (null)
+  ContextExpression:
+  $170: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $179: NoObject
+    $180: literal ansi string "Cast to BP_TaleEventDispatcherProxy in BP_CursedRogue_BriggsyEncounter failed!"
+    $260: False
+    $261: True
+    $262: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $275: literal float 1
+      $280: literal float 0.028243999928236008
+      $285: literal float 0
+      $290: literal float 1
+      $295: EndStructConst
+    $296: literal float 10
+    $301: EndFunctionParms
+  )
+$302: Jump to offset 0x8f
+$307: Return expression:
+  $308: Nothing
+$309: EndOfScript
+
+=== BP_CursedRogue_BriggsyEncounter_C::OnSpawn (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_Pawn2@0x19fce0d4600
+  Expression:
+  $9: LocalVariable named Pawn@0x19fce0d4480
+$18: VirtualFunction call "idx:283646" (
+  $31: literal int32 232
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_CursedRogue_BriggsyEncounter_C::OnDespawn (58 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_Pawn@0x19fce0d4800
+  Expression:
+  $9: LocalVariable named Pawn@0x19fce0d4500
+$18: LetValueOnPersistentFrame dest=K2Node_Event_DeathType@0x19fce0d4880
+  Expression:
+  $27: LocalVariable named DeathType@0x19fce0d4580
+$36: VirtualFunction call "idx:283646" (
+  $49: literal int32 563
+  $54: EndFunctionParms
+)
+$55: Return expression:
+  $56: Nothing
+$57: EndOfScript
+
+=== BP_CursedRogue_BriggsyEncounter_C::fn_idx_282659 (22 bytes) ===
+$0: VirtualFunction call "idx:283646" (
+  $13: literal int32 1159
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_CursedRogue_BriggsyEncounter_C::fn_idx_283646 (1221 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fcdbb0930
+$10: VirtualFunction call "idx:283648" (
+  $23: EndFunctionParms
+)
+$24: LetObj (Variable = Expression)
+  Variable:
+  $25: LocalVariable named CallFunc_SpawnDroppedItem_ReturnValue@0x19fce0d4980
+  Expression:
+  $34: FinalFunction target=SpawnDroppedItem@0x19e4cda8440 (
+    $43: LocalVariable named K2Node_Event_Pawn@0x19fce0d4800
+    $52: ObjectConst BP_BriggsysSkull_Desc_C@0x19f40f67080
+    $61: True
+    $62: True
+    $63: literal text (not decoded)
+    $64: literal ansi string "Briggy's Skull was lost"
+    $89: literal ansi string "08BDE55342E1AC3AD2DE4DB3882A1C7B_FailureMessage7"
+    $139: literal ansi string ""
+    $141: EndFunctionParms
+  )
+$142: FinalFunction target=ChangeCompassTargetByActor@0x19e4cda4ba0 (
+  $151: LocalVariable named CallFunc_SpawnDroppedItem_ReturnValue@0x19fce0d4980
+  $160: literal byte 0
+  $162: EndFunctionParms
+)
+$163: BindDelegate 'OnPickup'
+  Delegate:
+  $176: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fce0d4e80
+  Object:
+  $185: Self
+$186: AddMulticastDelegate
+$187: Context
+  ObjectExpression:
+  $188: LocalVariable named CallFunc_SpawnDroppedItem_ReturnValue@0x19fce0d4980
+  SkipBytes: 0x9
+  RValueProperty: OnItemPickedUpDelegate@0x19e4d10b7b0
+  ContextExpression:
+  $209: InstanceVariable named OnItemPickedUpDelegate@0x19e4d10b7b0
+$218: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fce0d4e80
+$227: Jump to offset 0x4c2
+$232: Let (Variable = Expression)
+  Variable:
+  $241: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter@0x19fce0d4700
+  Expression:
+  $250: DynamicCast to AthenaAICharacter@0x19e4c35c080 of expr:
+  $259: LocalVariable named K2Node_Event_Pawn2@0x19fce0d4600
+$268: Let (Variable = Expression)
+  Variable:
+  $277: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fce0d4780
+  Expression:
+  $286: PrimitiveCast type=71
+    Argument:
+    $288: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter@0x19fce0d4700
+$297: JumpIfNot -> 0x4c2, cond:
+  $302: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fce0d4780
+$311: Let (Variable = Expression)
+  Variable:
+  $320: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter@0x19fce0d4700
+  Expression:
+  $329: DynamicCast to AthenaAICharacter@0x19e4c35c080 of expr:
+  $338: LocalVariable named K2Node_Event_Pawn2@0x19fce0d4600
+$347: Let (Variable = Expression)
+  Variable:
+  $356: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fce0d4780
+  Expression:
+  $365: PrimitiveCast type=71
+    Argument:
+    $367: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter@0x19fce0d4700
+$376: Let (Variable = Expression)
+  Variable:
+  $385: LocalVariable named idx:283642@0x19fce0d4d80
+  Expression:
+  $394: Context
+    ObjectExpression:
+    $395: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter@0x19fce0d4700
+    SkipBytes: 0xa
+    RValueProperty: idx:283642@0x19fce0d4d80
+    ContextExpression:
+    $416: FinalFunction target=GetAIEncounterSpec@0x19e4d0aac60 (
+      $425: EndFunctionParms
+    )
+$426: LetBool (Variable = Expression)
+  Variable:
+  $427: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue3@0x19fce0d4e00
+  Expression:
+  $436: CallMath target=EqualEqual_ClassClass@0x19e4d37a860 (
+    $445: StructMemberContext prop=AIClass@0x19e4ceeffd0
+      Expression to struct:
+      $454: LocalVariable named idx:283642@0x19fce0d4d80
+    $463: ObjectConst BriggsyLordAIClassId_C@0x19e0e1cd5c0
+    $472: EndFunctionParms
+  )
+$473: JumpIfNot -> 0x4c2, cond:
+  $478: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue3@0x19fce0d4e00
+$487: Context
+  ObjectExpression:
+  $488: ObjectConst Default__AIManagerBlueprintFunctionLibrary@0x19e4da53f40
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $509: FinalFunction target=AddNameplateToAI@0x19e4d4870e0 (
+    $518: LocalVariable named K2Node_Event_Pawn2@0x19fce0d4600
+    $527: InstanceVariable named idx:283641@0x19fcdbb0bd0
+    $536: EndFunctionParms
+  )
+$537: FinalFunction target=ChangeCompassTargetByActor@0x19e4cda4ba0 (
+  $546: LocalVariable named K2Node_Event_Pawn2@0x19fce0d4600
+  $555: literal byte 0
+  $557: EndFunctionParms
+)
+$558: Jump to offset 0x4c2
+$563: LetBool (Variable = Expression)
+  Variable:
+  $564: LocalVariable named CallFunc_EqualEqual_ByteByte_ReturnValue@0x19fce0d4900
+  Expression:
+  $573: CallMath target=EqualEqual_ByteByte@0x19e4d37a620 (
+    $582: LocalVariable named K2Node_Event_DeathType@0x19fce0d4880
+    $591: literal byte 1
+    $593: EndFunctionParms
+  )
+$594: JumpIfNot -> 0x36e, cond:
+  $599: LocalVariable named CallFunc_EqualEqual_ByteByte_ReturnValue@0x19fce0d4900
+$608: Let (Variable = Expression)
+  Variable:
+  $617: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter2@0x19fce0d4a00
+  Expression:
+  $626: DynamicCast to AthenaAICharacter@0x19e4c35c080 of expr:
+  $635: LocalVariable named K2Node_Event_Pawn@0x19fce0d4800
+$644: Let (Variable = Expression)
+  Variable:
+  $653: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fce6e4680
+  Expression:
+  $662: PrimitiveCast type=71
+    Argument:
+    $664: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter2@0x19fce0d4a00
+$673: JumpIfNot -> 0x4c2, cond:
+  $678: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fce6e4680
+$687: Let (Variable = Expression)
+  Variable:
+  $696: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter2@0x19fce0d4a00
+  Expression:
+  $705: DynamicCast to AthenaAICharacter@0x19e4c35c080 of expr:
+  $714: LocalVariable named K2Node_Event_Pawn@0x19fce0d4800
+$723: Let (Variable = Expression)
+  Variable:
+  $732: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fce6e4680
+  Expression:
+  $741: PrimitiveCast type=71
+    Argument:
+    $743: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter2@0x19fce0d4a00
+$752: Let (Variable = Expression)
+  Variable:
+  $761: LocalVariable named CallFunc_GetAIEncounterSpec_ReturnValue2@0x19fce0d4c00
+  Expression:
+  $770: Context
+    ObjectExpression:
+    $771: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter2@0x19fce0d4a00
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetAIEncounterSpec_ReturnValue2@0x19fce0d4c00
+    ContextExpression:
+    $792: FinalFunction target=GetAIEncounterSpec@0x19e4d0aac60 (
+      $801: EndFunctionParms
+    )
+$802: LetBool (Variable = Expression)
+  Variable:
+  $803: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue2@0x19fce0d4d00
+  Expression:
+  $812: CallMath target=EqualEqual_ClassClass@0x19e4d37a860 (
+    $821: StructMemberContext prop=AIClass@0x19e4ceeffd0
+      Expression to struct:
+      $830: LocalVariable named CallFunc_GetAIEncounterSpec_ReturnValue2@0x19fce0d4c00
+    $839: ObjectConst BriggsyLordAIClassId_C@0x19e0e1cd5c0
+    $848: EndFunctionParms
+  )
+$849: JumpIfNot -> 0x4c2, cond:
+  $854: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue2@0x19fce0d4d00
+$863: FinalFunction target=OnBattleWon@0x19e4d112e50 (
+  $872: EndFunctionParms
+)
+$873: Jump to offset 0xa
+$878: Let (Variable = Expression)
+  Variable:
+  $887: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter3@0x19fce0d4a80
+  Expression:
+  $896: DynamicCast to AthenaAICharacter@0x19e4c35c080 of expr:
+  $905: LocalVariable named K2Node_Event_Pawn@0x19fce0d4800
+$914: Let (Variable = Expression)
+  Variable:
+  $923: LocalVariable named K2Node_DynamicCast_bSuccess3@0x19fce0d4b00
+  Expression:
+  $932: PrimitiveCast type=71
+    Argument:
+    $934: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter3@0x19fce0d4a80
+$943: JumpIfNot -> 0x4c2, cond:
+  $948: LocalVariable named K2Node_DynamicCast_bSuccess3@0x19fce0d4b00
+$957: Let (Variable = Expression)
+  Variable:
+  $966: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter3@0x19fce0d4a80
+  Expression:
+  $975: DynamicCast to AthenaAICharacter@0x19e4c35c080 of expr:
+  $984: LocalVariable named K2Node_Event_Pawn@0x19fce0d4800
+$993: Let (Variable = Expression)
+  Variable:
+  $1002: LocalVariable named K2Node_DynamicCast_bSuccess3@0x19fce0d4b00
+  Expression:
+  $1011: PrimitiveCast type=71
+    Argument:
+    $1013: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter3@0x19fce0d4a80
+$1022: Let (Variable = Expression)
+  Variable:
+  $1031: LocalVariable named CallFunc_GetAIEncounterSpec_ReturnValue@0x19fce0d4b80
+  Expression:
+  $1040: Context
+    ObjectExpression:
+    $1041: LocalVariable named K2Node_DynamicCast_AsAthena_AICharacter3@0x19fce0d4a80
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetAIEncounterSpec_ReturnValue@0x19fce0d4b80
+    ContextExpression:
+    $1062: FinalFunction target=GetAIEncounterSpec@0x19e4d0aac60 (
+      $1071: EndFunctionParms
+    )
+$1072: LetBool (Variable = Expression)
+  Variable:
+  $1073: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue@0x19fce0d4c80
+  Expression:
+  $1082: CallMath target=EqualEqual_ClassClass@0x19e4d37a860 (
+    $1091: StructMemberContext prop=AIClass@0x19e4ceeffd0
+      Expression to struct:
+      $1100: LocalVariable named CallFunc_GetAIEncounterSpec_ReturnValue@0x19fce0d4b80
+    $1109: ObjectConst BriggsyLordAIClassId_C@0x19e0e1cd5c0
+    $1118: EndFunctionParms
+  )
+$1119: JumpIfNot -> 0x4c2, cond:
+  $1124: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue@0x19fce0d4c80
+$1133: FinalFunction target=ChangeCompassTargetByActor@0x19e4cda4ba0 (
+  $1142: InstanceVariable named idx:283643@0x19fce0d4f80
+  $1151: literal byte 0
+  $1153: EndFunctionParms
+)
+$1154: Jump to offset 0x4c2
+$1159: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $1168: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce0d4f00
+  $1177: EndFunctionParms
+)
+$1178: FinalFunction target=ChangeCompassTargetByActor@0x19e4cda4ba0 (
+  $1187: StructMemberContext prop=idx:283647@0x19fce0d5680
+    Expression to struct:
+    $1196: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce0d4f00
+  $1205: literal byte 0
+  $1207: EndFunctionParms
+)
+$1208: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $1217: EndFunctionParms
+)
+$1218: Return expression:
+  $1219: Nothing
+$1220: EndOfScript

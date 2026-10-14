@@ -1,0 +1,398 @@
+// Class: AthenaAnimationWieldedItemAnimationOverlayFunctions (6 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+AthenaAnimationWieldedItemAnimationOverlayFunctions::JumpToFacialAnimationMontageSection @ RVA 0xB0EC00 EA 0x7FF6F452EC00
+======================================================================
+__int64 __fastcall sub_7FF6F452EC00(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // r9
+  __int64 v8; // r8
+  __int64 v9; // rdx
+  __int64 v10; // rcx
+  __int64 result; // rax
+  _QWORD v12[5]; // [rsp+20h] [rbp-28h] BYREF
+  unsigned __int8 v13; // [rsp+58h] [rbp+10h] BYREF
+  __int64 v14; // [rsp+60h] [rbp+18h] BYREF
+  __int64 v15; // [rsp+68h] [rbp+20h] BYREF
+
+  v3 = 0;
+  v12[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v6 = a2[4];
+  v7 = v13;
+  v8 = v14;
+  v9 = v15;
+  LOBYTE(v3) = v6 != 0;
+  v10 = v12[0];
+  a2[4] = v6 + v3;
+  result = sub_7FF6F3E2F8E0(v10, v9, v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationWieldedItemAnimationOverlayFunctions::PlayNewFacialAnimation @ RVA 0xB104C0 EA 0x7FF6F45304C0
+======================================================================
+__int64 __fastcall sub_7FF6F45304C0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // r8
+  __int64 v7; // rax
+  __int64 v8; // r9
+  __int64 v9; // rdx
+  __int64 v10; // rcx
+  __int64 result; // rax
+  _QWORD v12[5]; // [rsp+20h] [rbp-28h] BYREF
+  unsigned __int8 v13; // [rsp+58h] [rbp+10h] BYREF
+  int v14; // [rsp+60h] [rbp+18h] BYREF
+  __int64 v15; // [rsp+68h] [rbp+20h] BYREF
+
+  v3 = 0;
+  v12[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v7 = a2[4];
+  v8 = v13;
+  v9 = v15;
+  LOBYTE(v3) = v7 != 0;
+  v10 = v12[0];
+  a2[4] = v7 + v3;
+  result = sub_7FF6F3E326A0(v10, v9, v6, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationWieldedItemAnimationOverlayFunctions::StopFacialAnimationMontage @ RVA 0xB12A70 EA 0x7FF6F4532A70
+======================================================================
+__int64 __fastcall sub_7FF6F4532A70(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // r8
+  __int64 v7; // rax
+  __int64 v8; // r9
+  __int64 v9; // rdx
+  __int64 v10; // rcx
+  __int64 result; // rax
+  _QWORD v12[5]; // [rsp+20h] [rbp-28h] BYREF
+  unsigned __int8 v13; // [rsp+58h] [rbp+10h] BYREF
+  int v14; // [rsp+60h] [rbp+18h] BYREF
+  __int64 v15; // [rsp+68h] [rbp+20h] BYREF
+
+  v3 = 0;
+  v12[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v7 = a2[4];
+  v8 = v13;
+  v9 = v15;
+  LOBYTE(v3) = v7 != 0;
+  v10 = v12[0];
+  a2[4] = v7 + v3;
+  result = sub_7FF6F3E38160(v10, v9, v6, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationWieldedItemAnimationOverlayFunctions::UpdateAnimOverlayParameters @ RVA 0xB13760 EA 0x7FF6F4533760
+======================================================================
+__int64 __fastcall sub_7FF6F4533760(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // r8
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v7; // rcx
+  bool v8; // zf
+  _QWORD v10[3]; // [rsp+20h] [rbp-18h] BYREF
+  unsigned __int8 v11; // [rsp+48h] [rbp+10h] BYREF
+  int v12; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v10[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v5 = a2[4];
+  v6 = v11;
+  v7 = v10[0];
+  LOBYTE(v2) = v5 != 0;
+  v8 = v12 == 0;
+  a2[4] = v5 + v2;
+  LOBYTE(v4) = !v8;
+  return sub_7FF6F3E3B190(v7, v6, v4);
+}
+
+
+======================================================================
+AthenaAnimationWieldedItemAnimationOverlayFunctions::UpdateFirstPersonArmOverlayFlags @ RVA 0xB13AC0 EA 0x7FF6F4533AC0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F4533AC0(__int64 a1, _QWORD *a2)
+{
+  __int64 v3; // rsi
+  _BYTE *v4; // rbx
+  __int64 v5; // rax
+  __int64 result; // rax
+  __int64 v7[2]; // [rsp+20h] [rbp-A8h] BYREF
+  _BYTE v8[16]; // [rsp+30h] [rbp-98h] BYREF
+  __int64 v9; // [rsp+40h] [rbp-88h]
+  _BYTE v10[112]; // [rsp+50h] [rbp-78h] BYREF
+  __int64 v11; // [rsp+D8h] [rbp+10h] BYREF
+
+  v9 = -2;
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v7[0] = 0;
+  v7[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  sub_7FF6F3E18D50(v10);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v4 = v10;
+  if ( a2[7] )
+    v4 = (_BYTE *)a2[7];
+  v5 = a2[4];
+  LOBYTE(v3) = v5 != 0;
+  a2[4] = v5 + v3;
+  sub_7FF6F3C34DB0((__int64)v8, (__int64)v7);
+  result = sub_7FF6F3E3C080(v11, v8, v4);
+  if ( v7[0] )
+    return sub_7FF6F4DED1F0(v7[0]);
+  return result;
+}
+
+
+======================================================================
+AthenaAnimationWieldedItemAnimationOverlayFunctions::UpdateThirdPersonArmOverlayFlags @ RVA 0xB13DA0 EA 0x7FF6F4533DA0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F4533DA0(__int64 a1, _QWORD *a2)
+{
+  __int64 v3; // rsi
+  _BYTE *v4; // rbx
+  __int64 v5; // rax
+  __int64 result; // rax
+  __int64 v7[2]; // [rsp+20h] [rbp-A8h] BYREF
+  _BYTE v8[16]; // [rsp+30h] [rbp-98h] BYREF
+  __int64 v9; // [rsp+40h] [rbp-88h]
+  _BYTE v10[112]; // [rsp+50h] [rbp-78h] BYREF
+  __int64 v11; // [rsp+D8h] [rbp+10h] BYREF
+
+  v9 = -2;
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v7[0] = 0;
+  v7[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  sub_7FF6F3E18D50(v10);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v4 = v10;
+  if ( a2[7] )
+    v4 = (_BYTE *)a2[7];
+  v5 = a2[4];
+  LOBYTE(v3) = v5 != 0;
+  a2[4] = v5 + v3;
+  sub_7FF6F3C34DB0((__int64)v8, (__int64)v7);
+  result = sub_7FF6F3E3DBF0(v11, v8, v4);
+  if ( v7[0] )
+    return sub_7FF6F4DED1F0(v7[0]);
+  return result;
+}
+

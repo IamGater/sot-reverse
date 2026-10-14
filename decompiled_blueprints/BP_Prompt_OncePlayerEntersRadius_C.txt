@@ -1,0 +1,219 @@
+// E:\unreal-projects\Athena\Content\Blueprints\Prompts\PromptConditionals\bp_prompt_onceplayerentersradius.uasset -> BP_Prompt_OncePlayerEntersRadius_C
+
+=== BP_Prompt_OncePlayerEntersRadius_C::OnPlayerExitedFunc (28 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: InstanceVariable named State_WithinRadius@0x2139c823780
+  Expression:
+  $10: False
+$11: VirtualFunction call "Evaluate" (
+  $24: EndFunctionParms
+)
+$25: Return expression:
+  $26: Nothing
+$27: EndOfScript
+
+=== BP_Prompt_OncePlayerEntersRadius_C::OnPlayerEnteredFunc (28 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: InstanceVariable named State_WithinRadius@0x2139c823780
+  Expression:
+  $10: True
+$11: VirtualFunction call "Evaluate" (
+  $24: EndFunctionParms
+)
+$25: Return expression:
+  $26: Nothing
+$27: EndOfScript
+
+=== BP_Prompt_OncePlayerEntersRadius_C::Evaluate (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Prompt_OncePlayerEntersRadius" (
+  $13: literal int32 568
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_OncePlayerEntersRadius_C::RegisterCharacterEvents_Implementable (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_CharacterDispatcher2@0x2139c820e80
+  Expression:
+  $9: LocalOutVariable named CharacterDispatcher@0x2139c820200
+$18: VirtualFunction call "ExecuteUbergraph_BP_Prompt_OncePlayerEntersRadius" (
+  $31: literal int32 175
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_OncePlayerEntersRadius_C::UnregisterCharacterEvents_Implementable (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_CharacterDispatcher@0x2139c821e00
+  Expression:
+  $9: LocalOutVariable named CharacterDispatcher@0x2139c820d80
+$18: VirtualFunction call "ExecuteUbergraph_BP_Prompt_OncePlayerEntersRadius" (
+  $31: literal int32 515
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_OncePlayerEntersRadius_C::OnPlayerExited (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Prompt_OncePlayerEntersRadius" (
+  $13: literal int32 558
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_OncePlayerEntersRadius_C::OnPlayerEntered (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Prompt_OncePlayerEntersRadius" (
+  $13: literal int32 563
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_OncePlayerEntersRadius_C::ExecuteUbergraph_BP_Prompt_OncePlayerEntersRadius (576 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x213794cabf0
+$10: FinalFunction target=SetPromptAs@0x212d6ad5a00 (
+  $19: InstanceVariable named Prompt_WithinRadius@0x2139c822f00
+  $28: EndFunctionParms
+)
+$29: Jump to offset 0x23d
+$34: FinalFunction target=DismissAllPrompts@0x212d6ad4cc0 (
+  $43: EndFunctionParms
+)
+$44: Jump to offset 0x23d
+$49: Context
+  ObjectExpression:
+  $50: InstanceVariable named OverlapTrigger@0x2139c823980
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $71: FinalFunction target=ClearDelegatesAndDestroy@0x212d6a9c0b0 (
+    $80: EndFunctionParms
+  )
+$81: Jump to offset 0x23d
+$86: LetBool (Variable = Expression)
+  Variable:
+  $87: LocalVariable named CallFunc_IsValid_ReturnValue@0x2139c821680
+  Expression:
+  $96: Context
+    ObjectExpression:
+    $97: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x2139c821680
+    ContextExpression:
+    $118: FinalFunction target=IsValid@0x212d63ae380 (
+      $127: InstanceVariable named OverlapTrigger@0x2139c823980
+      $136: EndFunctionParms
+    )
+$137: JumpIfNot -> 0x23d, cond:
+  $142: LocalVariable named CallFunc_IsValid_ReturnValue@0x2139c821680
+$151: Jump to offset 0x31
+$156: JumpIfNot -> 0x22, cond:
+  $161: InstanceVariable named State_WithinRadius@0x2139c823780
+$170: Jump to offset 0xa
+$175: LetObj (Variable = Expression)
+  Variable:
+  $176: LocalVariable named CallFunc_CreateOverlapTriggerActor_ReturnValue@0x2139c822380
+  Expression:
+  $185: Context
+    ObjectExpression:
+    $186: ObjectConst Default__OverlapTriggerActor@0x212d706b3d0
+    SkipBytes: 0x1d
+    RValueProperty: CallFunc_CreateOverlapTriggerActor_ReturnValue@0x2139c822380
+    ContextExpression:
+    $207: FinalFunction target=CreateOverlapTriggerActor@0x212d6a9c170 (
+      $216: Self
+      $217: InstanceVariable named Location@0x2139c822080
+      $226: InstanceVariable named Radius@0x213794cab80
+      $235: EndFunctionParms
+    )
+$236: LetObj (Variable = Expression)
+  Variable:
+  $237: InstanceVariable named OverlapTrigger@0x2139c823980
+  Expression:
+  $246: LocalVariable named CallFunc_CreateOverlapTriggerActor_ReturnValue@0x2139c822380
+$255: BindDelegate 'OnPlayerExited'
+  Delegate:
+  $268: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x2139c820e00
+  Object:
+  $277: Self
+$278: BindDelegate 'OnPlayerEntered'
+  Delegate:
+  $291: LocalVariable named UniqueObjectNameForCooking_OutputDelegate2@0x2139c823e80
+  Object:
+  $300: Self
+$301: LetObj (Variable = Expression)
+  Variable:
+  $302: LocalVariable named CallFunc_GetPlayerController_ReturnValue@0x2139c822d80
+  Expression:
+  $311: Context
+    ObjectExpression:
+    $312: ObjectConst Default__GameplayStatics@0x212d6f7eb20
+    SkipBytes: 0x10
+    RValueProperty: CallFunc_GetPlayerController_ReturnValue@0x2139c822d80
+    ContextExpression:
+    $333: FinalFunction target=GetPlayerController@0x212d697e470 (
+      $342: Self
+      $343: literal int32 0
+      $348: EndFunctionParms
+    )
+$349: LetObj (Variable = Expression)
+  Variable:
+  $350: LocalVariable named CallFunc_K2_GetPawn_ReturnValue@0x2139c821f80
+  Expression:
+  $359: Context
+    ObjectExpression:
+    $360: LocalVariable named CallFunc_GetPlayerController_ReturnValue@0x2139c822d80
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetPawn_ReturnValue@0x2139c821f80
+    ContextExpression:
+    $381: FinalFunction target=K2_GetPawn@0x212d670f6a0 (
+      $390: EndFunctionParms
+    )
+$391: Context
+  ObjectExpression:
+  $392: InstanceVariable named OverlapTrigger@0x2139c823980
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $413: FinalFunction target=SetDelegatesForActor@0x212d6a9c720 (
+    $422: LocalVariable named CallFunc_K2_GetPawn_ReturnValue@0x2139c821f80
+    $431: LocalVariable named UniqueObjectNameForCooking_OutputDelegate2@0x2139c823e80
+    $440: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x2139c820e00
+    $449: EndFunctionParms
+  )
+$450: VirtualFunction call "IsCharacterInsideRadius" (
+  $463: InstanceVariable named Location@0x2139c822080
+  $472: InstanceVariable named Radius@0x213794cab80
+  $481: LocalVariable named CallFunc_IsCharacterInsideRadius_Result@0x2139c821c80
+  $490: EndFunctionParms
+)
+$491: LetBool (Variable = Expression)
+  Variable:
+  $492: InstanceVariable named State_WithinRadius@0x2139c823780
+  Expression:
+  $501: LocalVariable named CallFunc_IsCharacterInsideRadius_Result@0x2139c821c80
+$510: Jump to offset 0x23d
+$515: Jump to offset 0x56
+$520: VirtualFunction call "OnPlayerExitedFunc" (
+  $533: EndFunctionParms
+)
+$534: Jump to offset 0x23d
+$539: VirtualFunction call "OnPlayerEnteredFunc" (
+  $552: EndFunctionParms
+)
+$553: Jump to offset 0x23d
+$558: Jump to offset 0x208
+$563: Jump to offset 0x21b
+$568: Jump to offset 0x9c
+$573: Return expression:
+  $574: Nothing
+$575: EndOfScript

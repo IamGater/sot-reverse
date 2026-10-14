@@ -1,0 +1,41 @@
+// Class: OpenableItemComponent (2 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+OpenableItemComponent::OnRep_OpenState @ RVA 0x359FA50 EA 0x7FF6F6FBFA50
+======================================================================
+void __fastcall sub_7FF6F6FBFA50(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F6FBC940LL);
+}
+
+
+======================================================================
+OpenableItemComponent::Server_RequestOpenState @ RVA 0x359FA70 EA 0x7FF6F6FBFA70
+======================================================================
+__int64 __fastcall sub_7FF6F6FBFA70(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 952LL))(a1, v5) )
+    return sub_7FF6F6FBCA70(a1, v7);
+  else
+    return sub_7FF6F4F0F6D0(L"Server_RequestOpenState_Validate");
+}
+

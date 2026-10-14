@@ -1,0 +1,216 @@
+// Class: LaunchableProjectile (10 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+LaunchableProjectile::IsInWater @ RVA 0xC0C170 EA 0x7FF6F462C170
+======================================================================
+__int64 __fastcall sub_7FF6F462C170(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F4052180();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+LaunchableProjectile::LaunchWithOffset @ RVA 0xC0C540 EA 0x7FF6F462C540
+======================================================================
+__int64 __fastcall sub_7FF6F462C540(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  _BYTE *v5; // rax
+  _BYTE *v6; // rsi
+  _BYTE *v7; // r8
+  __int64 v8; // rax
+  _BYTE v10[16]; // [rsp+20h] [rbp-28h] BYREF
+  _BYTE v11[24]; // [rsp+30h] [rbp-18h] BYREF
+
+  v2 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v5 = (_BYTE *)a2[7];
+  v6 = v10;
+  a2[7] = 0;
+  if ( v5 )
+    v6 = v5;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v7 = v11;
+  if ( a2[7] )
+    v7 = (_BYTE *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v2) = v8 != 0;
+  a2[4] = v8 + v2;
+  return (*(__int64 (__fastcall **)(__int64, _BYTE *, _BYTE *))(*(_QWORD *)a1 + 1544LL))(a1, v6, v7);
+}
+
+
+======================================================================
+LaunchableProjectile::OnEnterWater @ RVA 0xC0D180 EA 0x7FF6F462D180
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+LaunchableProjectile::OnExitWater @ RVA 0xC0D1A0 EA 0x7FF6F462D1A0
+======================================================================
+__int64 __fastcall sub_7FF6F462D1A0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1592LL))(a1);
+}
+
+
+======================================================================
+LaunchableProjectile::OnImpact @ RVA 0xC0D1E0 EA 0x7FF6F462D1E0
+======================================================================
+__int64 __fastcall sub_7FF6F462D1E0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  _DWORD *v5; // rdx
+  __int64 v6; // rax
+  _DWORD v8[32]; // [rsp+20h] [rbp-88h] BYREF
+
+  memset(v8, 0, sizeof(v8));
+  v4 = 0;
+  v8[1] = 1065353216;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v5 = v8;
+  if ( a2[7] )
+    v5 = (_DWORD *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v4) = v6 != 0;
+  a2[4] = v6 + v4;
+  return (*(__int64 (__fastcall **)(__int64, _DWORD *))(*(_QWORD *)a1 + 1568LL))(a1, v5);
+}
+
+
+======================================================================
+LaunchableProjectile::OnImpactEffects @ RVA 0xC0D2A0 EA 0x7FF6F462D2A0
+======================================================================
+__int64 __fastcall sub_7FF6F462D2A0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  _DWORD *v5; // rdx
+  __int64 v6; // rax
+  _DWORD v8[32]; // [rsp+20h] [rbp-88h] BYREF
+
+  memset(v8, 0, sizeof(v8));
+  v4 = 0;
+  v8[1] = 1065353216;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v5 = v8;
+  if ( a2[7] )
+    v5 = (_DWORD *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v4) = v6 != 0;
+  a2[4] = v6 + v4;
+  return (*(__int64 (__fastcall **)(__int64, _DWORD *))(*(_QWORD *)a1 + 1576LL))(a1, v5);
+}
+
+
+======================================================================
+LaunchableProjectile::OnReachedDeepWater @ RVA 0xC0D9D0 EA 0x7FF6F462D9D0
+======================================================================
+__int64 __fastcall sub_7FF6F462D9D0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1600LL))(a1);
+}
+
+
+======================================================================
+LaunchableProjectile::OnStop @ RVA 0xC0E100 EA 0x7FF6F462E100
+======================================================================
+__int64 __fastcall sub_7FF6F462E100(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  _DWORD *v5; // rdx
+  __int64 v6; // rax
+  _DWORD v8[32]; // [rsp+20h] [rbp-88h] BYREF
+
+  memset(v8, 0, sizeof(v8));
+  v4 = 0;
+  v8[1] = 1065353216;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v5 = v8;
+  if ( a2[7] )
+    v5 = (_DWORD *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v4) = v6 != 0;
+  a2[4] = v6 + v4;
+  return (*(__int64 (__fastcall **)(__int64, _DWORD *))(*(_QWORD *)a1 + 1608LL))(a1, v5);
+}
+
+
+======================================================================
+LaunchableProjectile::TrailIsActive @ RVA 0xC11950 EA 0x7FF6F4631950
+======================================================================
+__int64 __fastcall sub_7FF6F4631950(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1560LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+LaunchableProjectile::TrailSfxIsActive @ RVA 0xC11980 EA 0x7FF6F4631980
+======================================================================
+__int64 __fastcall sub_7FF6F4631980(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F405ACE0();
+  *a3 = result;
+  return result;
+}
+

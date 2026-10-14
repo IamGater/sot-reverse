@@ -1,0 +1,86 @@
+// /Game/DataAssets/VoyageRecipe/CompanyVoyages_Tales/GoldHoarders/WayfinderVoyage/bp_gh_selectitemspawndistribution -> BP_GH_SelectItemSpawnDistribution_C
+
+=== BP_GH_SelectItemSpawnDistribution_C::OnBeginCustom (359 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fceaeb6e0
+  Expression:
+  $18: Context
+    ObjectExpression:
+    $19: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19fceaeb6e0
+    ContextExpression:
+    $40: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $49: InstanceVariable named idx:285560@0x19fcd582700
+      $58: EndFunctionParms
+    )
+$59: LetBool (Variable = Expression)
+  Variable:
+  $60: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fcd582500
+  Expression:
+  $69: CallMath target=Greater_IntInt@0x19e4d382770 (
+    $78: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fceaeb6e0
+    $87: literal int32 0
+    $92: EndFunctionParms
+  )
+$93: JumpIfNot -> 0x151, cond:
+  $98: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fcd582500
+$107: Let (Variable = Expression)
+  Variable:
+  $116: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fceaeb6e0
+  Expression:
+  $125: Context
+    ObjectExpression:
+    $126: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19fceaeb6e0
+    ContextExpression:
+    $147: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $156: InstanceVariable named idx:285560@0x19fcd582700
+      $165: EndFunctionParms
+    )
+$166: Let (Variable = Expression)
+  Variable:
+  $175: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x19fceaeb280
+  Expression:
+  $184: CallMath target=Subtract_IntInt@0x19e4d399ad0 (
+    $193: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fceaeb6e0
+    $202: literal int32 1
+    $207: EndFunctionParms
+  )
+$208: Let (Variable = Expression)
+  Variable:
+  $217: LocalVariable named CallFunc_Clamp_ReturnValue@0x19fceaeb600
+  Expression:
+  $226: CallMath target=Clamp@0x19e4d373880 (
+    $235: LocalVariable named Rank@0x19fceae8ea0
+    $244: literal int32 0
+    $249: LocalVariable named CallFunc_Subtract_IntInt_ReturnValue@0x19fceaeb280
+    $258: EndFunctionParms
+  )
+$259: Context
+  ObjectExpression:
+  $260: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $281: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $290: InstanceVariable named idx:285560@0x19fcd582700
+    $299: LocalVariable named CallFunc_Clamp_ReturnValue@0x19fceaeb600
+    $308: LocalVariable named CallFunc_Array_Get_Item@0x19fcd582580
+    $317: EndFunctionParms
+  )
+$318: LetObj (Variable = Expression)
+  Variable:
+  $319: LocalVariable named SelectedItem@0x19fcd582600
+  Expression:
+  $328: LocalVariable named CallFunc_Array_Get_Item@0x19fcd582580
+$337: LetObj (Variable = Expression)
+  Variable:
+  $338: LocalOutVariable named ItemList@0x19fcd582480
+  Expression:
+  $347: LocalVariable named SelectedItem@0x19fcd582600
+$356: Return expression:
+  $357: Nothing
+$358: EndOfScript

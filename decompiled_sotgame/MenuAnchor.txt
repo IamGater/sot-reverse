@@ -1,0 +1,131 @@
+// Class: MenuAnchor (7 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+MenuAnchor::Close @ RVA 0x1F2A4C0 EA 0x7FF6F594A4C0
+======================================================================
+void __fastcall sub_7FF6F594A4C0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F5877E50LL);
+}
+
+
+======================================================================
+MenuAnchor::GetMenuPosition @ RVA 0x1F2CF20 EA 0x7FF6F594CF20
+======================================================================
+_QWORD *__fastcall sub_7FF6F594CF20(__int64 a1, __int64 a2, _QWORD *a3)
+{
+  _QWORD *result; // rax
+  char v5; // [rsp+38h] [rbp+10h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (_QWORD *)sub_7FF6F588A960(a1, &v5);
+  *a3 = *result;
+  return result;
+}
+
+
+======================================================================
+MenuAnchor::HasOpenSubMenus @ RVA 0x1F2DEF0 EA 0x7FF6F594DEF0
+======================================================================
+__int64 __fastcall sub_7FF6F594DEF0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5891220();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+MenuAnchor::IsOpen @ RVA 0x1F2E140 EA 0x7FF6F594E140
+======================================================================
+__int64 __fastcall sub_7FF6F594E140(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5893620();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+MenuAnchor::Open @ RVA 0x1F2EBD0 EA 0x7FF6F594EBD0
+======================================================================
+__int64 __fastcall sub_7FF6F594EBD0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F58A4240(a1, v5);
+}
+
+
+======================================================================
+MenuAnchor::ShouldOpenDueToClick @ RVA 0x1F35310 EA 0x7FF6F5955310
+======================================================================
+__int64 __fastcall sub_7FF6F5955310(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F58C4680();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+MenuAnchor::ToggleOpen @ RVA 0x1F35750 EA 0x7FF6F5955750
+======================================================================
+__int64 __fastcall sub_7FF6F5955750(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F58CCF90(a1, v5);
+}
+

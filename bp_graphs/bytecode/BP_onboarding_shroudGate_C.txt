@@ -1,0 +1,158 @@
+// /Game/Blueprints/VFX/BP_Effects/bp_onboarding_shroudgate -> BP_onboarding_shroudGate_C
+
+=== BP_onboarding_shroudGate_C::fn_idx_2005 (61 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_StopReaction_ReturnValue@0x19fcc0e6e00
+  Expression:
+  $10: FinalFunction target=StopReaction@0x19e4d1b8880 (
+    $19: EndFunctionParms
+  )
+$20: FinalFunction target=SetActorTickEnabled@0x19e4cd6ba30 (
+  $29: False
+  $30: EndFunctionParms
+)
+$31: LetBool (Variable = Expression)
+  Variable:
+  $32: LocalOutVariable named ReturnValue@0x19fcc0e6d80
+  Expression:
+  $41: LocalVariable named CallFunc_StopReaction_ReturnValue@0x19fcc0e6e00
+$50: Return expression:
+  $51: LocalOutVariable named ReturnValue@0x19fcc0e6d80
+$60: EndOfScript
+
+=== BP_onboarding_shroudGate_C::fn_idx_2004 (61 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named idx:285286@0x19fcc0e6f00
+  Expression:
+  $10: FinalFunction target=StartReaction@0x19e4d1b8740 (
+    $19: EndFunctionParms
+  )
+$20: FinalFunction target=SetActorTickEnabled@0x19e4cd6ba30 (
+  $29: True
+  $30: EndFunctionParms
+)
+$31: LetBool (Variable = Expression)
+  Variable:
+  $32: LocalOutVariable named ReturnValue@0x19fcc0e6e80
+  Expression:
+  $41: LocalVariable named idx:285286@0x19fcc0e6f00
+$50: Return expression:
+  $51: LocalOutVariable named ReturnValue@0x19fcc0e6e80
+$60: EndOfScript
+
+=== BP_onboarding_shroudGate_C::fn_idx_9202 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_onboarding_shroudGate_C::fn_idx_285293 (22 bytes) ===
+$0: VirtualFunction call "idx:285290" (
+  $13: literal int32 10
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_onboarding_shroudGate_C::fn_idx_285294 (22 bytes) ===
+$0: VirtualFunction call "idx:285290" (
+  $13: literal int32 302
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_onboarding_shroudGate_C::fn_idx_8396 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_DeltaSeconds@0x19fceaece80
+  Expression:
+  $9: LocalVariable named DeltaSeconds@0x19fceaecda0
+$18: VirtualFunction call "idx:285290" (
+  $31: literal int32 53
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_onboarding_shroudGate_C::fn_idx_285290 (310 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fceaece10
+$10: Context
+  ObjectExpression:
+  $11: InstanceVariable named ParticleSystem@0x19fcc0e7300
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $32: VirtualFunction call "SetActive" (
+    $45: False
+    $46: False
+    $47: EndFunctionParms
+  )
+$48: Jump to offset 0x133
+$53: Context
+  ObjectExpression:
+  $54: InstanceVariable named idx:285291@0x19fcc0e7880
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $75: FinalFunction target=Play@0x19e4d34f050 (
+    $84: EndFunctionParms
+  )
+$85: Jump to offset 0x133
+$90: Let (Variable = Expression)
+  Variable:
+  $99: LocalVariable named CallFunc_K2_GetComponentLocation_ReturnValue@0x19fcc0e6f80
+  Expression:
+  $108: Context
+    ObjectExpression:
+    $109: InstanceVariable named idx:285300@0x19fcc0e7200
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetComponentLocation_ReturnValue@0x19fcc0e6f80
+    ContextExpression:
+    $130: FinalFunction target=K2_GetComponentLocation@0x19e4d0712f0 (
+      $139: EndFunctionParms
+    )
+$140: Let (Variable = Expression)
+  Variable:
+  $149: LocalVariable named CallFunc_K2_GetComponentLocation_ReturnValue2@0x19fcc0e7000
+  Expression:
+  $158: Context
+    ObjectExpression:
+    $159: InstanceVariable named idx:285288@0x19fcc0e7180
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetComponentLocation_ReturnValue2@0x19fcc0e7000
+    ContextExpression:
+    $180: FinalFunction target=K2_GetComponentLocation@0x19e4d0712f0 (
+      $189: EndFunctionParms
+    )
+$190: Let (Variable = Expression)
+  Variable:
+  $199: LocalVariable named CallFunc_VLerp_ReturnValue@0x19fcc0e7080
+  Expression:
+  $208: CallMath target=VLerp@0x19e4d39d560 (
+    $217: LocalVariable named CallFunc_K2_GetComponentLocation_ReturnValue@0x19fcc0e6f80
+    $226: LocalVariable named CallFunc_K2_GetComponentLocation_ReturnValue2@0x19fcc0e7000
+    $235: InstanceVariable named idx:285295@0x19fceaecf60
+    $244: EndFunctionParms
+  )
+$245: Context
+  ObjectExpression:
+  $246: InstanceVariable named DefaultSceneRoot@0x19fcc0e7400
+  SkipBytes: 0x1e
+  RValueProperty: (null)
+  ContextExpression:
+  $267: FinalFunction target=K2_SetWorldLocation@0x19e4d072370 (
+    $276: LocalVariable named CallFunc_VLerp_ReturnValue@0x19fcc0e7080
+    $285: False
+    $286: LocalVariable named CallFunc_K2_SetWorldLocation_SweepHitResult@0x19fcc0e7100
+    $295: False
+    $296: EndFunctionParms
+  )
+$297: Jump to offset 0x133
+$302: Jump to offset 0x5a
+$307: Return expression:
+  $308: Nothing
+$309: EndOfScript

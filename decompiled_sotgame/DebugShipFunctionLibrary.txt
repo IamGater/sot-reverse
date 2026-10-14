@@ -1,0 +1,849 @@
+// Class: DebugShipFunctionLibrary (16 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+DebugShipFunctionLibrary::CycleAllMastsSailLowered @ RVA 0xCF5920 EA 0x7FF6F4715920
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F4715920(__int64 a1, _QWORD *a2)
+{
+  __int64 v3; // rdi
+  __int64 *v4; // rsi
+  __int64 v5; // rdx
+  int *v6; // r8
+  __int64 v7; // rax
+  __int64 result; // rax
+  __int64 v9[4]; // [rsp+28h] [rbp-20h] BYREF
+  int v10; // [rsp+58h] [rbp+10h] BYREF
+  int v11; // [rsp+68h] [rbp+20h] BYREF
+
+  v3 = 0;
+  v9[0] = 0;
+  v9[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v4 = v9;
+  if ( a2[7] )
+    v4 = (__int64 *)a2[7];
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = &v10;
+  if ( a2[7] )
+    v6 = (int *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = nullsub_67(v4, v5, v6);
+  if ( v9[0] )
+    return sub_7FF6F4DED1F0(v9[0]);
+  return result;
+}
+
+
+======================================================================
+DebugShipFunctionLibrary::FireAllCannons @ RVA 0xCF6190 EA 0x7FF6F4716190
+======================================================================
+__int64 __fastcall sub_7FF6F4716190(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  __int64 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v7 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v5 = v7;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return nullsub_68(v5);
+}
+
+
+======================================================================
+DebugShipFunctionLibrary::FireCannonEveryXSecond @ RVA 0xCF6200 EA 0x7FF6F4716200
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F4716200(__int64 a1, _QWORD *a2)
+{
+  __int64 v3; // rdi
+  __int64 *v4; // rbp
+  int *v5; // rsi
+  __int64 v6; // r8
+  int *v7; // rdx
+  __int64 v8; // rax
+  __int64 result; // rax
+  int v10; // [rsp+30h] [rbp-38h] BYREF
+  int v11; // [rsp+34h] [rbp-34h] BYREF
+  __int64 v12; // [rsp+38h] [rbp-30h]
+  __int64 v13[5]; // [rsp+40h] [rbp-28h] BYREF
+  int v14; // [rsp+78h] [rbp+10h] BYREF
+  int v15; // [rsp+88h] [rbp+20h] BYREF
+
+  v12 = -2;
+  v3 = 0;
+  v13[0] = 0;
+  v13[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v13);
+  }
+  v4 = v13;
+  if ( a2[7] )
+    v4 = (__int64 *)a2[7];
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v14 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v5 = &v14;
+  if ( a2[7] )
+    v5 = (int *)a2[7];
+  v15 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v7 = &v15;
+  if ( a2[7] )
+    v7 = (int *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = nullsub_69(v4, v7, v6, v5, v7);
+  if ( v13[0] )
+    return sub_7FF6F4DED1F0(v13[0]);
+  return result;
+}
+
+
+======================================================================
+DebugShipFunctionLibrary::FireEveryNthCannons @ RVA 0xCF63F0 EA 0x7FF6F47163F0
+======================================================================
+__int64 __fastcall sub_7FF6F47163F0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rdx
+  __int64 v6; // rcx
+  unsigned int v8; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v9; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v4 = a2[4];
+  v5 = v8;
+  v6 = v9;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return nullsub_70(v6, v5);
+}
+
+
+======================================================================
+DebugShipFunctionLibrary::RotateAllMastsSailAngles @ RVA 0xCFBB00 EA 0x7FF6F471BB00
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F471BB00(__int64 a1, _QWORD *a2)
+{
+  __int64 v3; // rdi
+  __int64 *v4; // rsi
+  __int64 v5; // rdx
+  int *v6; // r8
+  __int64 v7; // rax
+  __int64 result; // rax
+  __int64 v9[4]; // [rsp+28h] [rbp-20h] BYREF
+  int v10; // [rsp+58h] [rbp+10h] BYREF
+  int v11; // [rsp+68h] [rbp+20h] BYREF
+
+  v3 = 0;
+  v9[0] = 0;
+  v9[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v4 = v9;
+  if ( a2[7] )
+    v4 = (__int64 *)a2[7];
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = &v10;
+  if ( a2[7] )
+    v6 = (int *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = nullsub_72(v4, v5, v6);
+  if ( v9[0] )
+    return sub_7FF6F4DED1F0(v9[0]);
+  return result;
+}
+
+
+======================================================================
+DebugShipFunctionLibrary::SetAllAnchorsLoweredProportion @ RVA 0xCFC020 EA 0x7FF6F471C020
+======================================================================
+__int64 __fastcall sub_7FF6F471C020(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  int v7; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v8; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v7 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v5 = v8;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return sub_7FF6F3DDF840(v5);
+}
+
+
+======================================================================
+DebugShipFunctionLibrary::SetAllCannonsAim @ RVA 0xCFC0E0 EA 0x7FF6F471C0E0
+======================================================================
+__int64 __fastcall sub_7FF6F471C0E0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  _QWORD v7[3]; // [rsp+20h] [rbp-18h] BYREF
+  int v8; // [rsp+48h] [rbp+10h] BYREF
+  int v9; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v7[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v4 = a2[4];
+  v5 = v7[0];
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return nullsub_73(v5);
+}
+
+
+======================================================================
+DebugShipFunctionLibrary::SetAllCapstansPosition @ RVA 0xCFC1D0 EA 0x7FF6F471C1D0
+======================================================================
+__int64 __fastcall sub_7FF6F471C1D0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  int v7; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v8; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v7 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v5 = v8;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return sub_7FF6F3DDF930(v5);
+}
+
+
+======================================================================
+DebugShipFunctionLibrary::SetAllRuddersAngleRatio @ RVA 0xCFC290 EA 0x7FF6F471C290
+======================================================================
+__int64 __fastcall sub_7FF6F471C290(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  int v7; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v8; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v7 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v5 = v8;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return sub_7FF6F3DDFA10(v5);
+}
+
+
+======================================================================
+DebugShipFunctionLibrary::SetAllSailsAngle @ RVA 0xCFC350 EA 0x7FF6F471C350
+======================================================================
+__int64 __fastcall sub_7FF6F471C350(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  int v7; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v8; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v7 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v5 = v8;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return sub_7FF6F3DDFAF0(v5);
+}
+
+
+======================================================================
+DebugShipFunctionLibrary::SetAllSailsDamageScalar @ RVA 0xCFC410 EA 0x7FF6F471C410
+======================================================================
+__int64 __fastcall sub_7FF6F471C410(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  int v7; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v8; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v7 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v5 = v8;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return nullsub_74(v5);
+}
+
+
+======================================================================
+DebugShipFunctionLibrary::SetAllSailsLoweredProportion @ RVA 0xCFC4D0 EA 0x7FF6F471C4D0
+======================================================================
+__int64 __fastcall sub_7FF6F471C4D0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  int v7; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v8; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v7 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v5 = v8;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return sub_7FF6F3DDFB40(v5);
+}
+
+
+======================================================================
+DebugShipFunctionLibrary::SetAllWheelAngle @ RVA 0xCFC590 EA 0x7FF6F471C590
+======================================================================
+__int64 __fastcall sub_7FF6F471C590(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  int v7; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v8; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v7 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v5 = v8;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return nullsub_75(v5);
+}
+
+
+======================================================================
+DebugShipFunctionLibrary::ToggleAllMastsDestroyedEveryXSecond @ RVA 0xCFDCA0 EA 0x7FF6F471DCA0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F471DCA0(__int64 a1, _QWORD *a2)
+{
+  __int64 v3; // rdi
+  __int64 *v4; // rsi
+  __int64 v5; // rdx
+  __int64 v6; // r8
+  int *v7; // r9
+  __int64 v8; // rax
+  __int64 result; // rax
+  int v10; // [rsp+20h] [rbp-28h] BYREF
+  __int64 v11; // [rsp+28h] [rbp-20h]
+  __int64 v12[3]; // [rsp+30h] [rbp-18h] BYREF
+  int v13; // [rsp+58h] [rbp+10h] BYREF
+  int v14; // [rsp+68h] [rbp+20h] BYREF
+
+  v11 = -2;
+  v3 = 0;
+  v12[0] = 0;
+  v12[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v4 = v12;
+  if ( a2[7] )
+    v4 = (__int64 *)a2[7];
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v13 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v7 = &v13;
+  if ( a2[7] )
+    v7 = (int *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = nullsub_76(v4, v5, v6, v7);
+  if ( v12[0] )
+    return sub_7FF6F4DED1F0(v12[0]);
+  return result;
+}
+
+
+======================================================================
+DebugShipFunctionLibrary::ToggleShipCapstanDestroyedEveryXSecond @ RVA 0xCFDE30 EA 0x7FF6F471DE30
+======================================================================
+__int64 __fastcall sub_7FF6F471DE30(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rdx
+  __int64 v5; // r8
+  int *v6; // r9
+  __int64 v7; // rcx
+  __int64 v8; // rax
+  int v10; // [rsp+20h] [rbp-18h] BYREF
+  _QWORD v11[2]; // [rsp+28h] [rbp-10h] BYREF
+  int v12; // [rsp+48h] [rbp+10h] BYREF
+  int v13; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v11[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v12 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v6 = &v12;
+  v7 = v11[0];
+  if ( a2[7] )
+    v6 = (int *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v2) = v8 != 0;
+  a2[4] = v8 + v2;
+  return nullsub_77(v7, v4, v5, v6);
+}
+
+
+======================================================================
+DebugShipFunctionLibrary::ToggleShipWheelDestroyedEveryXSecond @ RVA 0xCFDF70 EA 0x7FF6F471DF70
+======================================================================
+__int64 __fastcall sub_7FF6F471DF70(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rdx
+  __int64 v5; // r8
+  int *v6; // r9
+  __int64 v7; // rcx
+  __int64 v8; // rax
+  int v10; // [rsp+20h] [rbp-18h] BYREF
+  _QWORD v11[2]; // [rsp+28h] [rbp-10h] BYREF
+  int v12; // [rsp+48h] [rbp+10h] BYREF
+  int v13; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v11[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v12 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v6 = &v12;
+  v7 = v11[0];
+  if ( a2[7] )
+    v6 = (int *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v2) = v8 != 0;
+  a2[4] = v8 + v2;
+  return nullsub_78(v7, v4, v5, v6);
+}
+

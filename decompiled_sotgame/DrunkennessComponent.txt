@@ -1,0 +1,171 @@
+// Class: DrunkennessComponent (10 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+DrunkennessComponent::ChangeDrunkenness @ RVA 0xCF4F70 EA 0x7FF6F4714F70
+======================================================================
+__int64 __fastcall sub_7FF6F4714F70(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+  int v8; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v2 = a2[4] == 0;
+  v8 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return nullsub_143(a1, v5);
+}
+
+
+======================================================================
+DrunkennessComponent::GetOverallCurrentDrunkenness @ RVA 0xCF7350 EA 0x7FF6F4717350
+======================================================================
+void __fastcall sub_7FF6F4717350(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F3FE4300();
+}
+
+
+======================================================================
+DrunkennessComponent::GetStaggerAmplitude @ RVA 0xCF79F0 EA 0x7FF6F47179F0
+======================================================================
+void __fastcall sub_7FF6F47179F0(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F3FE4BD0();
+}
+
+
+======================================================================
+DrunkennessComponent::GetVomitComponent @ RVA 0xCF7A90 EA 0x7FF6F4717A90
+======================================================================
+__int64 __fastcall sub_7FF6F4717A90(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F4F5BA50(a1 + 216);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+DrunkennessComponent::OnRep_CurrentDrunkenness @ RVA 0xCF9C60 EA 0x7FF6F4719C60
+======================================================================
+__int64 __fastcall sub_7FF6F4719C60(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F3FEE0A0();
+}
+
+
+======================================================================
+DrunkennessComponent::OnRep_RemainingAmountToSoberUpDueToWaterSplash @ RVA 0xCF9E60 EA 0x7FF6F4719E60
+======================================================================
+void __fastcall sub_7FF6F4719E60(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F3FEE460LL);
+}
+
+
+======================================================================
+DrunkennessComponent::OnRep_TargetDrunkenness @ RVA 0xCF9FC0 EA 0x7FF6F4719FC0
+======================================================================
+void __fastcall sub_7FF6F4719FC0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F3FEE4C0LL);
+}
+
+
+======================================================================
+DrunkennessComponent::Reset @ RVA 0xCFB8B0 EA 0x7FF6F471B8B0
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+DrunkennessComponent::SetTargetDrunkenness @ RVA 0xCFD430 EA 0x7FF6F471D430
+======================================================================
+__int64 __fastcall sub_7FF6F471D430(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+  int v8; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v2 = a2[4] == 0;
+  v8 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return nullsub_146(a1, v5);
+}
+
+
+======================================================================
+DrunkennessComponent::TestForceVomiting @ RVA 0xCFDB20 EA 0x7FF6F471DB20
+======================================================================
+__int64 __fastcall sub_7FF6F471DB20(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return nullsub_147(a1);
+}
+

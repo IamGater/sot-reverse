@@ -1,0 +1,136 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Onboarding/bp_lightfirstbeacons -> BP_LightFirstBeacons_C
+
+=== BP_LightFirstBeacons_C::OnBeginCustom (600 bytes) ===
+$0: FlowStack.Push(0x255)
+$5: Let (Variable = Expression)
+  Variable:
+  $14: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fcdbb7150
+  Expression:
+  $23: literal int32 0
+$28: Let (Variable = Expression)
+  Variable:
+  $37: LocalVariable named Temp_int_Array_Index_Variable@0x19fcdbb6dd0
+  Expression:
+  $46: literal int32 0
+$51: SetArray
+  $52: LocalVariable named K2Node_MakeArray_Array@0x19fcdd69900
+  $61: LocalVariable named idx:282867@0x19fcdd69580
+  $70: LocalVariable named idx:282868@0x19fcdd69600
+  $79: EndArray
+$80: Let (Variable = Expression)
+  Variable:
+  $89: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fcdbb72a0
+  Expression:
+  $98: Context
+    ObjectExpression:
+    $99: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19fcdbb72a0
+    ContextExpression:
+    $120: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $129: LocalVariable named K2Node_MakeArray_Array@0x19fcdd69900
+      $138: EndFunctionParms
+    )
+$139: LetBool (Variable = Expression)
+  Variable:
+  $140: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19fcdd69800
+  Expression:
+  $149: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $158: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fcdbb7150
+    $167: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fcdbb72a0
+    $176: EndFunctionParms
+  )
+$177: JumpIfNot -> 0x1ac, cond:
+  $182: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19fcdd69800
+$191: Let (Variable = Expression)
+  Variable:
+  $200: LocalVariable named Temp_int_Array_Index_Variable@0x19fcdbb6dd0
+  Expression:
+  $209: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fcdbb7150
+$218: FlowStack.Push(0x1b7)
+$223: SetArray
+  $224: LocalVariable named K2Node_MakeArray_Array@0x19fcdd69900
+  $233: LocalVariable named idx:282867@0x19fcdd69580
+  $242: LocalVariable named idx:282868@0x19fcdd69600
+  $251: EndArray
+$252: Context
+  ObjectExpression:
+  $253: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $274: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $283: LocalVariable named K2Node_MakeArray_Array@0x19fcdd69900
+    $292: LocalVariable named Temp_int_Array_Index_Variable@0x19fcdbb6dd0
+    $301: LocalVariable named CallFunc_Array_Get_Item@0x19fcdd69680
+    $310: EndFunctionParms
+  )
+$311: Let (Variable = Expression)
+  Variable:
+  $320: LocalVariable named idx:282871@0x19fcdd69700
+  Expression:
+  $329: DynamicCast to BP_OnboardingBeacon_C@0x19faad5f300 of expr:
+  $338: LocalVariable named CallFunc_Array_Get_Item@0x19fcdd69680
+$347: Let (Variable = Expression)
+  Variable:
+  $356: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcdd69780
+  Expression:
+  $365: PrimitiveCast type=71
+    Argument:
+    $367: LocalVariable named idx:282871@0x19fcdd69700
+$376: JumpIfNot -> 0x201, cond:
+  $381: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcdd69780
+$390: Context
+  ObjectExpression:
+  $391: LocalVariable named idx:282871@0x19fcdd69700
+  SkipBytes: 0xf
+  RValueProperty: (null)
+  ContextExpression:
+  $412: VirtualFunction call "SetActiveState" (
+    $425: True
+    $426: EndFunctionParms
+  )
+$427: PopExecutionFlow (jump to popped addr)
+$428: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $437: EndFunctionParms
+)
+$438: PopExecutionFlow (jump to popped addr)
+$439: Let (Variable = Expression)
+  Variable:
+  $448: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19fcdbb70e0
+  Expression:
+  $457: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $466: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fcdbb7150
+    $475: literal int32 1
+    $480: EndFunctionParms
+  )
+$481: Let (Variable = Expression)
+  Variable:
+  $490: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fcdbb7150
+  Expression:
+  $499: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19fcdbb70e0
+$508: Jump to offset 0x33
+$513: Context
+  ObjectExpression:
+  $514: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x3d
+  RValueProperty: (null)
+  ContextExpression:
+  $535: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $544: NoObject
+    $545: literal ansi string "no cast"
+    $554: True
+    $555: True
+    $556: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $569: literal float 0
+      $574: literal float 0.6600000262260437
+      $579: literal float 1
+      $584: literal float 1
+      $589: EndStructConst
+    $590: literal float 15
+    $595: EndFunctionParms
+  )
+$596: PopExecutionFlow (jump to popped addr)
+$597: Return expression:
+  $598: Nothing
+$599: EndOfScript

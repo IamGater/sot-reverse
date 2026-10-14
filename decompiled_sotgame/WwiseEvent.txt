@@ -1,0 +1,111 @@
+// Class: WwiseEvent (5 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+WwiseEvent::GetDurationMax @ RVA 0x2E49730 EA 0x7FF6F6869730
+======================================================================
+void __fastcall sub_7FF6F6869730(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F6831470();
+}
+
+
+======================================================================
+WwiseEvent::GetDurationMin @ RVA 0x2E49760 EA 0x7FF6F6869760
+======================================================================
+void __fastcall sub_7FF6F6869760(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F6831480();
+}
+
+
+======================================================================
+WwiseEvent::GetDurationType @ RVA 0x2E49790 EA 0x7FF6F6869790
+======================================================================
+_BYTE *__fastcall sub_7FF6F6869790(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  _BYTE *result; // rax
+  char v5; // [rsp+38h] [rbp+10h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (_BYTE *)sub_7FF6F6831490(a1, &v5);
+  *a3 = *result;
+  return result;
+}
+
+
+======================================================================
+WwiseEvent::GetMaxAttenuation @ RVA 0x2E497D0 EA 0x7FF6F68697D0
+======================================================================
+void __fastcall sub_7FF6F68697D0(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F6832380();
+}
+
+
+======================================================================
+WwiseEvent::IsAudible @ RVA 0x2E49AD0 EA 0x7FF6F6869AD0
+======================================================================
+__int64 __fastcall sub_7FF6F6869AD0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  _BYTE *v7; // rax
+  _BYTE *v8; // rsi
+  _BYTE *v9; // rax
+  _BYTE *v10; // rbp
+  __int64 v11; // rax
+  __int64 result; // rax
+  _BYTE v13[16]; // [rsp+20h] [rbp-38h] BYREF
+  _BYTE v14[40]; // [rsp+30h] [rbp-28h] BYREF
+  int v15; // [rsp+68h] [rbp+10h] BYREF
+
+  v3 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v13);
+  }
+  v7 = (_BYTE *)a2[7];
+  v8 = v13;
+  a2[7] = 0;
+  if ( v7 )
+    v8 = v7;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v14);
+  }
+  v9 = (_BYTE *)a2[7];
+  v10 = v14;
+  v15 = 0;
+  if ( v9 )
+    v10 = v9;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v11 = a2[4];
+  LOBYTE(v3) = v11 != 0;
+  a2[4] = v11 + v3;
+  result = sub_7FF6F68358C0(a1, v8, v10);
+  *a3 = result;
+  return result;
+}
+

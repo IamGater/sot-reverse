@@ -1,0 +1,103 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_7_FateOfTheMorningStar/bp_fateofthemorningstar_waitfortriggerbroadcast -> BP_FateOfTheMorningstar_WaitForTriggerBroadcast_C
+
+=== BP_FateOfTheMorningstar_WaitForTriggerBroadcast_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19f80afbc80
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19f80afbb80
+$18: VirtualFunction call "idx:284728" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_FateOfTheMorningstar_WaitForTriggerBroadcast_C::fn_idx_281964 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_PlayerCharacter@0x19f80afbe00
+  Expression:
+  $9: LocalVariable named PlayerCharacter@0x19f80afbc00
+$18: VirtualFunction call "idx:284728" (
+  $31: literal int32 230
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_FateOfTheMorningstar_WaitForTriggerBroadcast_C::fn_idx_284728 (342 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19e586b83b0
+$10: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $19: LocalVariable named CallFunc_GetVariables_OutStruct@0x19f80afbd00
+  $28: EndFunctionParms
+)
+$29: BindDelegate 'Player Entered Trigger'
+  Delegate:
+  $42: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19f80afbd80
+  Object:
+  $51: Self
+$52: AddMulticastDelegate
+$53: Context
+  ObjectExpression:
+  $54: StructMemberContext prop=idx:284633@0x19fcc9c3300
+    Expression to struct:
+    $63: LocalVariable named CallFunc_GetVariables_OutStruct@0x19f80afbd00
+  SkipBytes: 0x9
+  RValueProperty: OnPlayerEnteredTrigger@0x19fcb371980
+  ContextExpression:
+  $84: InstanceVariable named OnPlayerEnteredTrigger@0x19fcb371980
+$93: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19f80afbd80
+$102: Jump to offset 0x153
+$107: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $116: EndFunctionParms
+)
+$117: Jump to offset 0x153
+$122: Context
+  ObjectExpression:
+  $123: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x51
+  RValueProperty: (null)
+  ContextExpression:
+  $144: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $153: NoObject
+    $154: literal ansi string "Player entered the trigger!"
+    $183: True
+    $184: True
+    $185: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $198: literal float 0
+      $203: literal float 0.6600000262260437
+      $208: literal float 1
+      $213: literal float 1
+      $218: EndStructConst
+    $219: literal float 1000000000
+    $224: EndFunctionParms
+  )
+$225: Jump to offset 0x6b
+$230: SetArray
+  $231: LocalVariable named CallFunc_GetParticipants_Participants@0x19f80afbf80
+  $240: EndArray
+$241: FinalFunction target=GetParticipants@0x19e4cda59a0 (
+  $250: LocalVariable named CallFunc_GetParticipants_Participants@0x19f80afbf80
+  $259: EndFunctionParms
+)
+$260: LetBool (Variable = Expression)
+  Variable:
+  $261: LocalVariable named CallFunc_Array_Contains_ReturnValue@0x19f80afbe80
+  Expression:
+  $270: Context
+    ObjectExpression:
+    $271: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Contains_ReturnValue@0x19f80afbe80
+    ContextExpression:
+    $292: FinalFunction target=Array_Contains@0x19e4d367180 (
+      $301: LocalVariable named CallFunc_GetParticipants_Participants@0x19f80afbf80
+      $310: LocalVariable named K2Node_CustomEvent_PlayerCharacter@0x19f80afbe00
+      $319: EndFunctionParms
+    )
+$320: JumpIfNot -> 0x153, cond:
+  $325: LocalVariable named CallFunc_Array_Contains_ReturnValue@0x19f80afbe80
+$334: Jump to offset 0x7a
+$339: Return expression:
+  $340: Nothing
+$341: EndOfScript

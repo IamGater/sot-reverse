@@ -1,0 +1,289 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/CompanyTales/GoldHoarders/Rank0_XMarks/bp_ct_xmarks_initialiserecurringreturntogoldhoarderprompt -> BP_CT_XMarks_InitialiseRecurringReturnToGoldhoarderPrompt_C
+
+=== BP_CT_XMarks_InitialiseRecurringReturnToGoldhoarderPrompt_C::fn_idx_282362 (481 bytes) ===
+$0: FlowStack.Push(0x1de)
+$5: Let (Variable = Expression)
+  Variable:
+  $14: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fcdbbc1d0
+  Expression:
+  $23: literal int32 0
+$28: Let (Variable = Expression)
+  Variable:
+  $37: LocalVariable named Temp_int_Array_Index_Variable@0x19fcdbbc160
+  Expression:
+  $46: literal int32 0
+$51: Let (Variable = Expression)
+  Variable:
+  $60: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fcdbbc0f0
+  Expression:
+  $69: Context
+    ObjectExpression:
+    $70: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19fcdbbc0f0
+    ContextExpression:
+    $91: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $100: LocalOutVariable named Actors@0x19fc1826a00
+      $109: EndFunctionParms
+    )
+$110: LetBool (Variable = Expression)
+  Variable:
+  $111: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19fc1826700
+  Expression:
+  $120: CallMath target=Less_IntInt@0x19e4d385ed0 (
+    $129: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fcdbbc1d0
+    $138: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fcdbbc0f0
+    $147: EndFunctionParms
+  )
+$148: JumpIfNot -> 0x174, cond:
+  $153: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x19fc1826700
+$162: Let (Variable = Expression)
+  Variable:
+  $171: LocalVariable named Temp_int_Array_Index_Variable@0x19fcdbbc160
+  Expression:
+  $180: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fcdbbc1d0
+$189: FlowStack.Push(0x194)
+$194: Context
+  ObjectExpression:
+  $195: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $216: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $225: LocalOutVariable named Actors@0x19fc1826a00
+    $234: LocalVariable named Temp_int_Array_Index_Variable@0x19fcdbbc160
+    $243: LocalVariable named CallFunc_Array_Get_Item@0x19fc1826600
+    $252: EndFunctionParms
+  )
+$253: Let (Variable = Expression)
+  Variable:
+  $262: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x19fc1826680
+  Expression:
+  $271: Context
+    ObjectExpression:
+    $272: LocalVariable named CallFunc_Array_Get_Item@0x19fc1826600
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetActorLocation_ReturnValue@0x19fc1826680
+    ContextExpression:
+    $293: FinalFunction target=K2_GetActorLocation@0x19e4cd66b10 (
+      $302: EndFunctionParms
+    )
+$303: Let (Variable = Expression)
+  Variable:
+  $312: LocalVariable named CallFunc_Array_Add_ReturnValue@0x19fcdbbc240
+  Expression:
+  $321: Context
+    ObjectExpression:
+    $322: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Add_ReturnValue@0x19fcdbbc240
+    ContextExpression:
+    $343: FinalFunction target=Array_Add@0x19e4d366810 (
+      $352: LocalVariable named idx:282366@0x19fc1826800
+      $361: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x19fc1826680
+      $370: EndFunctionParms
+    )
+$371: PopExecutionFlow (jump to popped addr)
+$372: Let (Variable = Expression)
+  Variable:
+  $381: LocalOutVariable named Vectors@0x19fc1826900
+  Expression:
+  $390: LocalVariable named idx:282366@0x19fc1826800
+$399: Jump to offset 0x1de
+$404: Let (Variable = Expression)
+  Variable:
+  $413: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19fcdbbd200
+  Expression:
+  $422: CallMath target=Add_IntInt@0x19e4d36fa30 (
+    $431: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fcdbbc1d0
+    $440: literal int32 1
+    $445: EndFunctionParms
+  )
+$446: Let (Variable = Expression)
+  Variable:
+  $455: LocalVariable named Temp_int_Loop_Counter_Variable@0x19fcdbbc1d0
+  Expression:
+  $464: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x19fcdbbd200
+$473: Jump to offset 0x33
+$478: Return expression:
+  $479: Nothing
+$480: EndOfScript
+
+=== BP_CT_XMarks_InitialiseRecurringReturnToGoldhoarderPrompt_C::OnBeginCustom (743 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x19fc1826b80
+  Expression:
+  $18: CallMath target=MakeTransform@0x19e4d38a650 (
+    $27: literal vector (0,0,0)
+    $40: literal rotation (0,0,0)
+    $53: literal vector (1,1,1)
+    $66: EndFunctionParms
+  )
+$67: LetObj (Variable = Expression)
+  Variable:
+  $68: LocalVariable named CallFunc_SpawnPhasedActor_ReturnValue@0x19fc1826c00
+  Expression:
+  $77: FinalFunction target=SpawnPhasedActor@0x19e4cda8ba0 (
+    $86: InstanceVariable named PromptActor@0x19fc1827280
+    $95: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x19fc1826b80
+    $104: NoObject
+    $105: literal name "None"
+    $118: EndFunctionParms
+  )
+$119: Let (Variable = Expression)
+  Variable:
+  $128: LocalVariable named idx:282363@0x19fc1826c80
+  Expression:
+  $137: DynamicCast to BP_PromptActor_RecurringPromptWithExclusionZones_C@0x19fbcfa4ec0 of expr:
+  $146: LocalVariable named CallFunc_SpawnPhasedActor_ReturnValue@0x19fc1826c00
+$155: Let (Variable = Expression)
+  Variable:
+  $164: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fc1826d00
+  Expression:
+  $173: PrimitiveCast type=71
+    Argument:
+    $175: LocalVariable named idx:282363@0x19fc1826c80
+$184: JumpIfNot -> 0x2e4, cond:
+  $189: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fc1826d00
+$198: LetBool (Variable = Expression)
+  Variable:
+  $199: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue@0x19fc1826d80
+  Expression:
+  $208: Context
+    ObjectExpression:
+    $209: LocalVariable named idx:282363@0x19fc1826c80
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_FlushNetDormancy_ReturnValue@0x19fc1826d80
+    ContextExpression:
+    $230: FinalFunction target=FlushNetDormancy@0x19e4cd61090 (
+      $239: EndFunctionParms
+    )
+$240: Let (Variable = Expression)
+  Variable:
+  $249: Context
+    ObjectExpression:
+    $250: LocalVariable named idx:282363@0x19fc1826c80
+    SkipBytes: 0x9
+    RValueProperty: Prompt@0x19fbd383880
+    ContextExpression:
+    $271: InstanceVariable named Prompt@0x19fbd383880
+  Expression:
+  $280: StructMemberContext prop=idx:282364@0x19fc1827380
+    Expression to struct:
+    $289: LocalVariable named Params@0x19fc1826a80
+$298: LetBool (Variable = Expression)
+  Variable:
+  $299: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue5@0x19fc1826f80
+  Expression:
+  $308: Context
+    ObjectExpression:
+    $309: LocalVariable named idx:282363@0x19fc1826c80
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_FlushNetDormancy_ReturnValue5@0x19fc1826f80
+    ContextExpression:
+    $330: FinalFunction target=FlushNetDormancy@0x19e4cd61090 (
+      $339: EndFunctionParms
+    )
+$340: Let (Variable = Expression)
+  Variable:
+  $349: Context
+    ObjectExpression:
+    $350: LocalVariable named idx:282363@0x19fc1826c80
+    SkipBytes: 0x9
+    RValueProperty: ShowDuration@0x19fbd8bfab0
+    ContextExpression:
+    $371: InstanceVariable named ShowDuration@0x19fbd8bfab0
+  Expression:
+  $380: StructMemberContext prop=idx:282365@0x19fcdbbda50
+    Expression to struct:
+    $389: LocalVariable named Params@0x19fc1826a80
+$398: LetBool (Variable = Expression)
+  Variable:
+  $399: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue4@0x19fc1826f00
+  Expression:
+  $408: Context
+    ObjectExpression:
+    $409: LocalVariable named idx:282363@0x19fc1826c80
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_FlushNetDormancy_ReturnValue4@0x19fc1826f00
+    ContextExpression:
+    $430: FinalFunction target=FlushNetDormancy@0x19e4cd61090 (
+      $439: EndFunctionParms
+    )
+$440: Let (Variable = Expression)
+  Variable:
+  $449: Context
+    ObjectExpression:
+    $450: LocalVariable named idx:282363@0x19fc1826c80
+    SkipBytes: 0x9
+    RValueProperty: Delay@0x19fbd8bfb20
+    ContextExpression:
+    $471: InstanceVariable named Delay@0x19fbd8bfb20
+  Expression:
+  $480: StructMemberContext prop=idx:282357@0x19fcdbbc780
+    Expression to struct:
+    $489: LocalVariable named Params@0x19fc1826a80
+$498: VirtualFunction call "idx:282362" (
+  $511: LocalOutVariable named idx:282361@0x19fc1827200
+  $520: LocalVariable named idx:282355@0x19fc1827180
+  $529: EndFunctionParms
+)
+$530: LetBool (Variable = Expression)
+  Variable:
+  $531: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue3@0x19fc1826e80
+  Expression:
+  $540: Context
+    ObjectExpression:
+    $541: LocalVariable named idx:282363@0x19fc1826c80
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_FlushNetDormancy_ReturnValue3@0x19fc1826e80
+    ContextExpression:
+    $562: FinalFunction target=FlushNetDormancy@0x19e4cd61090 (
+      $571: EndFunctionParms
+    )
+$572: Let (Variable = Expression)
+  Variable:
+  $581: Context
+    ObjectExpression:
+    $582: LocalVariable named idx:282363@0x19fc1826c80
+    SkipBytes: 0x9
+    RValueProperty: ExclusionPoints@0x19fbd383a00
+    ContextExpression:
+    $603: InstanceVariable named ExclusionPoints@0x19fbd383a00
+  Expression:
+  $612: LocalVariable named idx:282355@0x19fc1827180
+$621: LetBool (Variable = Expression)
+  Variable:
+  $622: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue2@0x19fc1826e00
+  Expression:
+  $631: Context
+    ObjectExpression:
+    $632: LocalVariable named idx:282363@0x19fc1826c80
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_FlushNetDormancy_ReturnValue2@0x19fc1826e00
+    ContextExpression:
+    $653: FinalFunction target=FlushNetDormancy@0x19e4cd61090 (
+      $662: EndFunctionParms
+    )
+$663: Let (Variable = Expression)
+  Variable:
+  $672: Context
+    ObjectExpression:
+    $673: LocalVariable named idx:282363@0x19fc1826c80
+    SkipBytes: 0x9
+    RValueProperty: ExclusionRadius@0x19fbd8bfb90
+    ContextExpression:
+    $694: InstanceVariable named ExclusionRadius@0x19fbd8bfb90
+  Expression:
+  $703: StructMemberContext prop=idx:282360@0x19fcdbbc2b0
+    Expression to struct:
+    $712: LocalVariable named Params@0x19fc1826a80
+$721: LetObj (Variable = Expression)
+  Variable:
+  $722: LocalOutVariable named PromptActor@0x19fc1826b00
+  Expression:
+  $731: LocalVariable named idx:282363@0x19fc1826c80
+$740: Return expression:
+  $741: Nothing
+$742: EndOfScript

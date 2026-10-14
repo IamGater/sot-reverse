@@ -1,0 +1,79 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_5_WildRose/bp_wildrose_identifyismusicbox -> BP_WildRose_IdentifyIsMusicBox_C
+
+=== BP_WildRose_IdentifyIsMusicBox_C::fn_idx_1828 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fcc5a7700
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fcc5a7500
+$18: VirtualFunction call "idx:284302" (
+  $31: literal int32 259
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_WildRose_IdentifyIsMusicBox_C::fn_idx_284302 (267 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19e586bb670
+$10: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $19: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc5a7580
+  $28: EndFunctionParms
+)
+$29: Let (Variable = Expression)
+  Variable:
+  $38: LocalVariable named K2Node_DynamicCast_AsItem_Info@0x19fcc5a7600
+  Expression:
+  $47: DynamicCast to ItemInfo@0x19e4c38a640 of expr:
+  $56: StructMemberContext prop=idx:284305@0x19fcc5a7980
+    Expression to struct:
+    $65: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc5a7580
+$74: Let (Variable = Expression)
+  Variable:
+  $83: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcc5a7680
+  Expression:
+  $92: PrimitiveCast type=71
+    Argument:
+    $94: LocalVariable named K2Node_DynamicCast_AsItem_Info@0x19fcc5a7600
+$103: JumpIfNot -> 0x108, cond:
+  $108: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcc5a7680
+$117: LetObj (Variable = Expression)
+  Variable:
+  $118: LocalVariable named CallFunc_GetItemType_ReturnValue@0x19fcc5a7780
+  Expression:
+  $127: Context
+    ObjectExpression:
+    $128: LocalVariable named K2Node_DynamicCast_AsItem_Info@0x19fcc5a7600
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetItemType_ReturnValue@0x19fcc5a7780
+    ContextExpression:
+    $149: FinalFunction target=GetItemType@0x19e4d10ac30 (
+      $158: EndFunctionParms
+    )
+$159: LetBool (Variable = Expression)
+  Variable:
+  $160: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue@0x19fcc5a7800
+  Expression:
+  $169: CallMath target=EqualEqual_ClassClass@0x19e4d37a860 (
+    $178: LocalVariable named CallFunc_GetItemType_ReturnValue@0x19fcc5a7780
+    $187: InstanceVariable named idx:284304@0x19fcc5a7880
+    $196: EndFunctionParms
+  )
+$197: LetBool (Variable = Expression)
+  Variable:
+  $198: StructMemberContext prop=idx:284303@0x19fcc5a7900
+    Expression to struct:
+    $207: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc5a7580
+  Expression:
+  $216: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue@0x19fcc5a7800
+$225: FinalFunction target=SetVariables@0x19e4cda7cc0 (
+  $234: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc5a7580
+  $243: EndFunctionParms
+)
+$244: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $253: EndFunctionParms
+)
+$254: Jump to offset 0x108
+$259: Jump to offset 0xa
+$264: Return expression:
+  $265: Nothing
+$266: EndOfScript

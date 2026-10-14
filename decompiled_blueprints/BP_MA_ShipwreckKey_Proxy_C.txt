@@ -1,0 +1,57 @@
+// /Game/Prototype/Tales/TestTales/MA_LostShipments/bp_ma_shipwreckkey_proxy -> BP_MA_ShipwreckKey_Proxy_C
+
+=== BP_MA_ShipwreckKey_Proxy_C::GetClosestInteractionPoint (232 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x19fd0f03a00
+  Expression:
+  $18: FinalFunction target=K2_GetActorLocation@0x19e4cd66b10 (
+    $27: EndFunctionParms
+  )
+$28: CallMath target=BreakVector@0x19e4d3730b0 (
+  $37: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x19fd0f03a00
+  $46: LocalVariable named CallFunc_BreakVector_X@0x19fceae2920
+  $55: LocalVariable named CallFunc_BreakVector_Y@0x19fceae4ec0
+  $64: LocalVariable named CallFunc_BreakVector_Z@0x19fceae2840
+  $73: EndFunctionParms
+)
+$74: Let (Variable = Expression)
+  Variable:
+  $83: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x19fceae2990
+  Expression:
+  $92: CallMath target=Add_FloatFloat@0x19e4d36f820 (
+    $101: LocalVariable named CallFunc_BreakVector_Z@0x19fceae2840
+    $110: literal float 15
+    $115: EndFunctionParms
+  )
+$116: Let (Variable = Expression)
+  Variable:
+  $125: LocalVariable named CallFunc_MakeVector_ReturnValue@0x19fd0f03a80
+  Expression:
+  $134: CallMath target=MakeVector@0x19e4d38a910 (
+    $143: LocalVariable named CallFunc_BreakVector_X@0x19fceae2920
+    $152: LocalVariable named CallFunc_BreakVector_Y@0x19fceae4ec0
+    $161: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x19fceae2990
+    $170: EndFunctionParms
+  )
+$171: Let (Variable = Expression)
+  Variable:
+  $180: LocalOutVariable named OutInteractionPointRadius@0x19fceae2a00
+  Expression:
+  $189: literal float 0
+$194: Let (Variable = Expression)
+  Variable:
+  $203: LocalOutVariable named ReturnValue@0x19fd0f03980
+  Expression:
+  $212: LocalVariable named CallFunc_MakeVector_ReturnValue@0x19fd0f03a80
+$221: Return expression:
+  $222: LocalOutVariable named ReturnValue@0x19fd0f03980
+$231: EndOfScript
+
+=== BP_MA_ShipwreckKey_Proxy_C::UserConstructionScript (13 bytes) ===
+$0: FinalFunction target=UserConstructionScript@0x19e1ab3aec0 (
+  $9: EndFunctionParms
+)
+$10: Return expression:
+  $11: Nothing
+$12: EndOfScript

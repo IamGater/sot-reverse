@@ -1,0 +1,156 @@
+// /Game/Blueprints/GameObjects/NPC/bp_npc_cheertrigger -> BP_NPC_CheerTrigger_C (RECOVERED via retry pass)
+
+=== BP_NPC_CheerTrigger_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_NPC_CheerTrigger_C::ReceiveActorBeginOverlap (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=idx:225714@0x1a3b3e07680
+  Expression:
+  $9: LocalVariable named OtherActor@0x1a3b3e07580
+$18: VirtualFunction call "idx:225713" (
+  $31: literal int32 404
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_NPC_CheerTrigger_C::vfx_AA_Spirit (569 bytes) ===
+$0: FlowStack.Push(0x236)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x1a3b3c6d120
+$15: FlowStack.Push(0x74)
+$20: Context
+  ObjectExpression:
+  $21: ObjectConst Default__KismetArrayLibrary@0x1a2aa1aebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $42: FinalFunction target=Array_Get@0x1a2a9bb76b0 (
+    $51: InstanceVariable named idx:225716@0x1a3b3e07b80
+    $60: LocalVariable named Temp_int_Array_Index_Variable@0x1a3b3c6d190
+    $69: LocalVariable named CallFunc_Array_Get_Item@0x1a3b3e07780
+    $78: EndFunctionParms
+  )
+$79: Context
+  ObjectExpression:
+  $80: LocalVariable named CallFunc_Array_Get_Item@0x1a3b3e07780
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $101: VirtualFunction call "idx:225717" (
+    $114: EndFunctionParms
+  )
+$115: PopExecutionFlow (jump to popped addr)
+$116: Let (Variable = Expression)
+  Variable:
+  $125: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x1a3b3c6d350
+  Expression:
+  $134: CallMath target=Add_IntInt@0x1a2a9bbfa30 (
+    $143: LocalVariable named Temp_int_Loop_Counter_Variable@0x1a3b3c6d270
+    $152: literal int32 1
+    $157: EndFunctionParms
+  )
+$158: Let (Variable = Expression)
+  Variable:
+  $167: LocalVariable named Temp_int_Loop_Counter_Variable@0x1a3b3c6d270
+  Expression:
+  $176: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x1a3b3c6d350
+$185: Let (Variable = Expression)
+  Variable:
+  $194: LocalVariable named CallFunc_Array_Length_ReturnValue@0x1a3b3c6d200
+  Expression:
+  $203: Context
+    ObjectExpression:
+    $204: ObjectConst Default__KismetArrayLibrary@0x1a2aa1aebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x1a3b3c6d200
+    ContextExpression:
+    $225: FinalFunction target=Array_Length@0x1a2a9bb7df0 (
+      $234: InstanceVariable named idx:225716@0x1a3b3e07b80
+      $243: EndFunctionParms
+    )
+$244: LetBool (Variable = Expression)
+  Variable:
+  $245: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x1a3b3e07800
+  Expression:
+  $254: CallMath target=Less_IntInt@0x1a2a9bd5ed0 (
+    $263: LocalVariable named Temp_int_Loop_Counter_Variable@0x1a3b3c6d270
+    $272: LocalVariable named CallFunc_Array_Length_ReturnValue@0x1a3b3c6d200
+    $281: EndFunctionParms
+  )
+$282: JumpIfNot -> 0x148, cond:
+  $287: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x1a3b3e07800
+$296: Let (Variable = Expression)
+  Variable:
+  $305: LocalVariable named Temp_int_Array_Index_Variable@0x1a3b3c6d190
+  Expression:
+  $314: LocalVariable named Temp_int_Loop_Counter_Variable@0x1a3b3c6d270
+$323: Jump to offset 0xf
+$328: Context
+  ObjectExpression:
+  $329: InstanceVariable named NPC@0x1a3b3e07a00
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $350: VirtualFunction call "idx:225717" (
+    $363: EndFunctionParms
+  )
+$364: LetBool (Variable = Expression)
+  Variable:
+  $365: InstanceVariable named idx:225717@0x1a3b3e07a80
+  Expression:
+  $374: False
+$375: PopExecutionFlow (jump to popped addr)
+$376: Let (Variable = Expression)
+  Variable:
+  $385: LocalVariable named Temp_int_Array_Index_Variable@0x1a3b3c6d190
+  Expression:
+  $394: literal int32 0
+$399: Jump to offset 0xb9
+$404: LetObj (Variable = Expression)
+  Variable:
+  $405: LocalVariable named CallFunc_GetPlayerPawn_ReturnValue@0x1a3b3e07600
+  Expression:
+  $414: Context
+    ObjectExpression:
+    $415: ObjectConst Default__GameplayStatics@0x1a2aa1aeb20
+    SkipBytes: 0x10
+    RValueProperty: CallFunc_GetPlayerPawn_ReturnValue@0x1a3b3e07600
+    ContextExpression:
+    $436: FinalFunction target=GetPlayerPawn@0x1a2a9bae6a0 (
+      $445: Self
+      $446: literal int32 0
+      $451: EndFunctionParms
+    )
+$452: LetBool (Variable = Expression)
+  Variable:
+  $453: LocalVariable named CallFunc_EqualEqual_ObjectObject_ReturnValue@0x1a3b3e07700
+  Expression:
+  $462: CallMath target=EqualEqual_ObjectObject@0x1a2a9bcb340 (
+    $471: LocalVariable named idx:225714@0x1a3b3e07680
+    $480: LocalVariable named CallFunc_GetPlayerPawn_ReturnValue@0x1a3b3e07600
+    $489: EndFunctionParms
+  )
+$490: LetBool (Variable = Expression)
+  Variable:
+  $491: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x1a3b3e07880
+  Expression:
+  $500: CallMath target=BooleanAND@0x1a2a9bc10f0 (
+    $509: LocalVariable named CallFunc_EqualEqual_ObjectObject_ReturnValue@0x1a3b3e07700
+    $518: InstanceVariable named idx:225717@0x1a3b3e07a80
+    $527: EndFunctionParms
+  )
+$528: PopExecutionFlowIfNot, cond:
+$529: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x1a3b3e07880
+$538: Let (Variable = Expression)
+  Variable:
+  $547: LocalVariable named Temp_int_Loop_Counter_Variable@0x1a3b3c6d270
+  Expression:
+  $556: literal int32 0
+$561: Jump to offset 0x178
+$566: Return expression:
+  $567: Nothing
+$568: EndOfScript

@@ -1,0 +1,5069 @@
+// Class: PlayerController (128 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+PlayerController::ActivateTouchInterface @ RVA 0x2905190 EA 0x7FF6F6325190
+======================================================================
+__int64 __fastcall sub_7FF6F6325190(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2888LL))(a1, v6);
+}
+
+
+======================================================================
+PlayerController::AddPitchInput @ RVA 0x2905740 EA 0x7FF6F6325740
+======================================================================
+__int64 __fastcall sub_7FF6F6325740(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 2864LL))(a1);
+}
+
+
+======================================================================
+PlayerController::AddRollInput @ RVA 0x29057C0 EA 0x7FF6F63257C0
+======================================================================
+__int64 __fastcall sub_7FF6F63257C0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 2880LL))(a1);
+}
+
+
+======================================================================
+PlayerController::AddYawInput @ RVA 0x2905A80 EA 0x7FF6F6325A80
+======================================================================
+__int64 __fastcall sub_7FF6F6325A80(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 2872LL))(a1);
+}
+
+
+======================================================================
+PlayerController::Camera @ RVA 0x2905E20 EA 0x7FF6F6325E20
+======================================================================
+__int64 __fastcall sub_7FF6F6325E20(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2912LL))(a1, v6);
+}
+
+
+======================================================================
+PlayerController::ClearAudioListenerOverride @ RVA 0x2905EE0 EA 0x7FF6F6325EE0
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+PlayerController::ClientAddTextureStreamingLoc @ RVA 0x2905F20 EA 0x7FF6F6325F20
+======================================================================
+__int64 __fastcall sub_7FF6F6325F20(__int64 a1, _QWORD *a2)
+{
+  bool v4; // zf
+  __int64 v5; // rdi
+  __int64 v6; // r8
+  __int64 v7; // r9
+  __int64 v8; // rax
+  __int64 v9; // rdi
+  __int64 v11; // [rsp+20h] [rbp-28h] BYREF
+  int v12; // [rsp+28h] [rbp-20h]
+  __int64 v13; // [rsp+30h] [rbp-18h] BYREF
+  int v14; // [rsp+38h] [rbp-10h]
+  int v15; // [rsp+58h] [rbp+10h] BYREF
+  int v16; // [rsp+68h] [rbp+20h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v4 = a2[4] == 0;
+  v16 = 0;
+  if ( v4 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  v5 = 0;
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v8 = a2[4];
+  LOBYTE(v5) = v8 != 0;
+  v13 = v11;
+  v9 = v8 + v5;
+  LODWORD(v8) = v12;
+  v4 = v15 == 0;
+  a2[4] = v9;
+  LOBYTE(v7) = !v4;
+  v14 = v8;
+  return sub_7FF6F6037130(a1, &v13, v6, v7);
+}
+
+
+======================================================================
+PlayerController::ClientCancelPendingMapChange @ RVA 0x2906040 EA 0x7FF6F6326040
+======================================================================
+__int64 __fastcall sub_7FF6F6326040(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 2368LL))(a1);
+}
+
+
+======================================================================
+PlayerController::ClientCapBandwidth @ RVA 0x2906060 EA 0x7FF6F6326060
+======================================================================
+__int64 __fastcall sub_7FF6F6326060(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  unsigned int v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2360LL))(a1, v6);
+}
+
+
+======================================================================
+PlayerController::ClientClearCameraLensEffects @ RVA 0x29060F0 EA 0x7FF6F63260F0
+======================================================================
+__int64 __fastcall sub_7FF6F63260F0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 2168LL))(a1);
+}
+
+
+======================================================================
+PlayerController::ClientCommitMapChange @ RVA 0x2906110 EA 0x7FF6F6326110
+======================================================================
+__int64 __fastcall sub_7FF6F6326110(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 2352LL))(a1);
+}
+
+
+======================================================================
+PlayerController::ClientEnableNetworkVoice @ RVA 0x2906130 EA 0x7FF6F6326130
+======================================================================
+__int64 __fastcall sub_7FF6F6326130(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2432LL))(a1, v5);
+}
+
+
+======================================================================
+PlayerController::ClientEndOnlineSession @ RVA 0x29061C0 EA 0x7FF6F63261C0
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+PlayerController::ClientFlushLevelStreaming @ RVA 0x29061E0 EA 0x7FF6F63261E0
+======================================================================
+__int64 __fastcall sub_7FF6F63261E0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F60374C0();
+}
+
+
+======================================================================
+PlayerController::ClientForceGarbageCollection @ RVA 0x2906200 EA 0x7FF6F6326200
+======================================================================
+__int64 __fastcall sub_7FF6F6326200(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 2344LL))(a1);
+}
+
+
+======================================================================
+PlayerController::ClientGameEnded @ RVA 0x2906220 EA 0x7FF6F6326220
+======================================================================
+__int64 __fastcall sub_7FF6F6326220(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // r8
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  bool v8; // zf
+  int v10; // [rsp+30h] [rbp+8h] BYREF
+  __int64 v11; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v11;
+  LOBYTE(v2) = v6 != 0;
+  v8 = v10 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v8;
+  return (*(__int64 (__fastcall **)(__int64, __int64, __int64))(*(_QWORD *)a1 + 2336LL))(a1, v7, v5);
+}
+
+
+======================================================================
+PlayerController::ClientGotoState @ RVA 0x29062F0 EA 0x7FF6F63262F0
+======================================================================
+__int64 __fastcall sub_7FF6F63262F0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2328LL))(a1, v6);
+}
+
+
+======================================================================
+PlayerController::ClientIgnoreLookInput @ RVA 0x2906380 EA 0x7FF6F6326380
+======================================================================
+__int64 __fastcall sub_7FF6F6326380(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2320LL))(a1, v5);
+}
+
+
+======================================================================
+PlayerController::ClientIgnoreMoveInput @ RVA 0x2906410 EA 0x7FF6F6326410
+======================================================================
+__int64 __fastcall sub_7FF6F6326410(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2312LL))(a1, v5);
+}
+
+
+======================================================================
+PlayerController::ClientMessage @ RVA 0x29064A0 EA 0x7FF6F63264A0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F63264A0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rax
+  __int64 result; // rax
+  __int64 v7[4]; // [rsp+28h] [rbp-20h] BYREF
+  int v8; // [rsp+50h] [rbp+8h] BYREF
+  __int64 v9; // [rsp+58h] [rbp+10h] BYREF
+
+  v4 = 0;
+  v7[0] = 0;
+  v7[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  LOBYTE(v4) = v5 != 0;
+  a2[4] = v5 + v4;
+  result = (*(__int64 (__fastcall **)(__int64, __int64 *, __int64))(*(_QWORD *)a1 + 2304LL))(a1, v7, v9);
+  if ( v7[0] )
+    return sub_7FF6F4DED1F0(v7[0]);
+  return result;
+}
+
+
+======================================================================
+PlayerController::ClientMutePlayer @ RVA 0x29065D0 EA 0x7FF6F63265D0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F63265D0(__int64 a1, _QWORD *a2)
+{
+  int v4; // edi
+  __int128 v6; // [rsp+28h] [rbp-40h] BYREF
+  int v7; // [rsp+38h] [rbp-30h]
+  __int128 v8; // [rsp+40h] [rbp-28h] BYREF
+  int v9; // [rsp+50h] [rbp-18h]
+
+  v8 = 0;
+  v4 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  a2[4] += a2[4] != 0;
+  v6 = v8;
+  if ( *((_QWORD *)&v8 + 1) )
+  {
+    if ( _InterlockedIncrement((volatile signed __int32 *)(*((_QWORD *)&v8 + 1) + 8LL)) == 1 )
+      MEMORY[0] = (char *)&v6 + 8;
+    if ( *((_QWORD *)&v6 + 1) )
+      v4 = *(_DWORD *)(*((_QWORD *)&v6 + 1) + 24LL);
+  }
+  v7 = v4;
+  (*(void (__fastcall **)(__int64, __int128 *))(*(_QWORD *)a1 + 2384LL))(a1, &v6);
+  return sub_7FF6F3CAD880(&v8);
+}
+
+
+======================================================================
+PlayerController::ClientPlayCameraAnim @ RVA 0x29066C0 EA 0x7FF6F63266C0
+======================================================================
+__int64 __fastcall sub_7FF6F63266C0(__int64 *a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // xmm0_8
+  __int64 v7; // rdx
+  __int64 v8; // r8
+  int v10; // [rsp+50h] [rbp-9h] BYREF
+  int v11; // [rsp+54h] [rbp-5h] BYREF
+  int v12; // [rsp+58h] [rbp-1h] BYREF
+  int v13; // [rsp+5Ch] [rbp+3h] BYREF
+  __int64 v14; // [rsp+60h] [rbp+7h] BYREF
+  __int64 v15; // [rsp+68h] [rbp+Fh] BYREF
+  int v16; // [rsp+70h] [rbp+17h]
+  __int64 v17; // [rsp+80h] [rbp+27h]
+  int v18; // [rsp+88h] [rbp+2Fh]
+  char v19; // [rsp+C0h] [rbp+67h] BYREF
+  int v20; // [rsp+C8h] [rbp+6Fh] BYREF
+  int v21; // [rsp+D8h] [rbp+7Fh] BYREF
+
+  v2 = 0;
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v20 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v20);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v20);
+  }
+  v21 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v21);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v21);
+  }
+  v19 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v5 = a2[4];
+  v6 = v15;
+  LOBYTE(v2) = v5 != 0;
+  v7 = v14;
+  v18 = v16;
+  a2[4] = v5 + v2;
+  v8 = *a1;
+  v17 = v6;
+  return (*(__int64 (__fastcall **)(__int64 *, __int64))(v8 + 2296))(a1, v7);
+}
+
+
+======================================================================
+PlayerController::ClientPlayCameraShake @ RVA 0x2906960 EA 0x7FF6F6326960
+======================================================================
+__int64 __fastcall sub_7FF6F6326960(__int64 *a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // r8
+  __int64 v6; // rax
+  __int64 v7; // xmm0_8
+  __int64 v8; // r9
+  __int64 v9; // rdx
+  __int64 v10; // rdi
+  __int64 v11; // rax
+  __int64 v13; // [rsp+30h] [rbp-38h] BYREF
+  int v14; // [rsp+38h] [rbp-30h]
+  __int64 v15; // [rsp+40h] [rbp-28h] BYREF
+  int v16; // [rsp+48h] [rbp-20h]
+  unsigned __int8 v17; // [rsp+70h] [rbp+8h] BYREF
+  int v18; // [rsp+78h] [rbp+10h] BYREF
+  __int64 v19; // [rsp+88h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v19 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  v18 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  v17 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v6 = a2[4];
+  v7 = v13;
+  v8 = v17;
+  LOBYTE(v2) = v6 != 0;
+  v9 = v19;
+  v10 = v6 + v2;
+  LODWORD(v6) = v14;
+  a2[4] = v10;
+  v16 = v6;
+  v11 = *a1;
+  v15 = v7;
+  return (*(__int64 (__fastcall **)(__int64 *, __int64, __int64, __int64, __int64 *))(v11 + 2288))(a1, v9, v5, v8, &v15);
+}
+
+
+======================================================================
+PlayerController::ClientPlayForceFeedback @ RVA 0x2906AC0 EA 0x7FF6F6326AC0
+======================================================================
+__int64 __fastcall sub_7FF6F6326AC0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  bool v5; // si
+  __int64 v6; // rax
+  __int64 v7; // r9
+  __int64 v8; // rdx
+  int v10; // [rsp+40h] [rbp+8h] BYREF
+  __int64 v11; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v12; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v11 = 0;
+  v5 = v10 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = a2[4];
+  v7 = v11;
+  v8 = v12;
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64, bool, __int64))(*(_QWORD *)a1 + 2144LL))(a1, v8, v5, v7);
+}
+
+
+======================================================================
+PlayerController::ClientPlaySound @ RVA 0x2906BD0 EA 0x7FF6F6326BD0
+======================================================================
+__int64 __fastcall sub_7FF6F6326BD0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  int v8; // [rsp+40h] [rbp+8h] BYREF
+  int v9; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v10; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v10;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2280LL))(a1, v6);
+}
+
+
+======================================================================
+PlayerController::ClientPlaySoundAtLocation @ RVA 0x2906CD0 EA 0x7FF6F6326CD0
+======================================================================
+__int64 __fastcall sub_7FF6F6326CD0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v7; // rdi
+  __int64 v9; // [rsp+30h] [rbp-38h] BYREF
+  int v10; // [rsp+38h] [rbp-30h]
+  __int64 v11; // [rsp+40h] [rbp-28h] BYREF
+  int v12; // [rsp+48h] [rbp-20h]
+  int v13; // [rsp+70h] [rbp+8h] BYREF
+  int v14; // [rsp+78h] [rbp+10h] BYREF
+  __int64 v15; // [rsp+88h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v5 = a2[4];
+  v6 = v15;
+  LOBYTE(v2) = v5 != 0;
+  v7 = v5 + v2;
+  v11 = v9;
+  LODWORD(v5) = v10;
+  a2[4] = v7;
+  v12 = v5;
+  return (*(__int64 (__fastcall **)(__int64, __int64, __int64 *))(*(_QWORD *)a1 + 2272LL))(a1, v6, &v11);
+}
+
+
+======================================================================
+PlayerController::ClientPrepareMapChange @ RVA 0x2906E20 EA 0x7FF6F6326E20
+======================================================================
+__int64 __fastcall sub_7FF6F6326E20(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  bool v5; // si
+  __int64 v6; // r9
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  bool v9; // zf
+  int v11; // [rsp+40h] [rbp+8h] BYREF
+  int v12; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v13; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v12 = 0;
+  v5 = v11 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v7 = a2[4];
+  v8 = v13;
+  LOBYTE(v2) = v7 != 0;
+  v9 = v12 == 0;
+  a2[4] = v7 + v2;
+  LOBYTE(v6) = !v9;
+  return (*(__int64 (__fastcall **)(__int64, __int64, bool, __int64))(*(_QWORD *)a1 + 2264LL))(a1, v8, v5, v6);
+}
+
+
+======================================================================
+PlayerController::ClientPrestreamTextures @ RVA 0x2906F30 EA 0x7FF6F6326F30
+======================================================================
+__int64 __fastcall sub_7FF6F6326F30(_QWORD *a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  bool v5; // si
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // rdi
+  _QWORD v10[5]; // [rsp+30h] [rbp-28h] BYREF
+  int v11; // [rsp+60h] [rbp+8h] BYREF
+  int v12; // [rsp+68h] [rbp+10h] BYREF
+  int v13; // [rsp+78h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v10[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v12 = 0;
+  v5 = v11 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v6 = a2[4];
+  v7 = v10[0];
+  LOBYTE(v2) = v6 != 0;
+  v8 = v6 + v2;
+  LODWORD(v6) = v12;
+  a2[4] = v8;
+  return (*(__int64 (__fastcall **)(_QWORD *, __int64, _QWORD, bool, _DWORD))(*a1 + 2256LL))(a1, v7, *a1, v5, v6);
+}
+
+
+======================================================================
+PlayerController::ClientReceiveLocalizedMessage @ RVA 0x2907080 EA 0x7FF6F6327080
+======================================================================
+__int64 __fastcall sub_7FF6F6327080(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // r9
+  __int64 v7; // r8
+  __int64 v8; // rdx
+  __int64 v9; // rdi
+  __int64 v10; // rax
+  __int64 v12; // [rsp+28h] [rbp-30h]
+  __int64 v13; // [rsp+30h] [rbp-28h] BYREF
+  _QWORD v14[4]; // [rsp+38h] [rbp-20h] BYREF
+  unsigned int v15; // [rsp+60h] [rbp+8h] BYREF
+  __int64 v16; // [rsp+68h] [rbp+10h] BYREF
+  __int64 v17; // [rsp+78h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v14[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v14);
+  }
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v17 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v5 = a2[4];
+  v6 = v13;
+  v7 = v15;
+  v8 = v14[0];
+  LOBYTE(v2) = v5 != 0;
+  v9 = v5 + v2;
+  v12 = v16;
+  v10 = v17;
+  a2[4] = v9;
+  return (*(__int64 (__fastcall **)(__int64, __int64, __int64, __int64, __int64, __int64))(*(_QWORD *)a1 + 2072LL))(
+           a1,
+           v8,
+           v7,
+           v6,
+           v10,
+           v12);
+}
+
+
+======================================================================
+PlayerController::ClientRepObjRef @ RVA 0x2907200 EA 0x7FF6F6327200
+======================================================================
+__int64 __fastcall sub_7FF6F6327200(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2448LL))(a1, v6);
+}
+
+
+======================================================================
+PlayerController::ClientReset @ RVA 0x2907290 EA 0x7FF6F6327290
+======================================================================
+__int64 __fastcall sub_7FF6F6327290(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 2248LL))(a1);
+}
+
+
+======================================================================
+PlayerController::ClientRestart @ RVA 0x29072B0 EA 0x7FF6F63272B0
+======================================================================
+__int64 __fastcall sub_7FF6F63272B0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2240LL))(a1, v6);
+}
+
+
+======================================================================
+PlayerController::ClientRetryClientRestart @ RVA 0x2907340 EA 0x7FF6F6327340
+======================================================================
+__int64 __fastcall sub_7FF6F6327340(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2080LL))(a1, v6);
+}
+
+
+======================================================================
+PlayerController::ClientReturnToMainMenu @ RVA 0x29073D0 EA 0x7FF6F63273D0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F63273D0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rax
+  __int64 result; // rax
+  __int64 v7[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  v4 = 0;
+  v7[0] = 0;
+  v7[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  v5 = a2[4];
+  LOBYTE(v4) = v5 != 0;
+  a2[4] = v5 + v4;
+  result = (*(__int64 (__fastcall **)(__int64, __int64 *))(*(_QWORD *)a1 + 2456LL))(a1, v7);
+  if ( v7[0] )
+    return sub_7FF6F4DED1F0(v7[0]);
+  return result;
+}
+
+
+======================================================================
+PlayerController::ClientSeamlessTravelComplete @ RVA 0x2907480 EA 0x7FF6F6327480
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+PlayerController::ClientSetBlockOnAsyncLoading @ RVA 0x29074A0 EA 0x7FF6F63274A0
+======================================================================
+__int64 __fastcall sub_7FF6F63274A0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 2232LL))(a1);
+}
+
+
+======================================================================
+PlayerController::ClientSetCameraFade @ RVA 0x29074C0 EA 0x7FF6F63274C0
+======================================================================
+__int64 __fastcall sub_7FF6F63274C0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  bool v5; // si
+  __int64 v6; // rax
+  int v7; // xmm0_4
+  __int64 v8; // r9
+  __int64 v9; // r8
+  bool v10; // zf
+  bool v12; // [rsp+28h] [rbp-30h]
+  unsigned int v13; // [rsp+30h] [rbp-28h] BYREF
+  _QWORD v14[4]; // [rsp+38h] [rbp-20h] BYREF
+  int v15; // [rsp+60h] [rbp+8h] BYREF
+  int v16; // [rsp+68h] [rbp+10h] BYREF
+  int v17; // [rsp+78h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v5 = v15 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v14);
+  }
+  v17 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v6 = a2[4];
+  v7 = v17;
+  v8 = v14[0];
+  v9 = v13;
+  LOBYTE(v2) = v6 != 0;
+  v10 = v16 == 0;
+  a2[4] = v6 + v2;
+  v12 = !v10;
+  return (*(__int64 (__fastcall **)(__int64, bool, __int64, __int64, int, bool))(*(_QWORD *)a1 + 2224LL))(
+           a1,
+           v5,
+           v9,
+           v8,
+           v7,
+           v12);
+}
+
+
+======================================================================
+PlayerController::ClientSetCameraMode @ RVA 0x2907650 EA 0x7FF6F6327650
+======================================================================
+__int64 __fastcall sub_7FF6F6327650(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2216LL))(a1, v6);
+}
+
+
+======================================================================
+PlayerController::ClientSetCinematicMode @ RVA 0x29076E0 EA 0x7FF6F63276E0
+======================================================================
+__int64 __fastcall sub_7FF6F63276E0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  bool v5; // r14
+  bool v6; // bp
+  bool v7; // si
+  __int64 v8; // rax
+  bool v9; // zf
+  bool v11; // [rsp+20h] [rbp-48h]
+  _DWORD v12[14]; // [rsp+30h] [rbp-38h] BYREF
+  int v13; // [rsp+70h] [rbp+8h] BYREF
+  int v14; // [rsp+78h] [rbp+10h] BYREF
+  int v15; // [rsp+88h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v14 = 0;
+  v5 = v13 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v15 = 0;
+  v6 = v14 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v12[0] = 0;
+  v7 = v15 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v8 = a2[4];
+  LOBYTE(v2) = v8 != 0;
+  v9 = v12[0] == 0;
+  a2[4] = v8 + v2;
+  v11 = !v9;
+  return (*(__int64 (__fastcall **)(__int64, bool, bool, bool, bool))(*(_QWORD *)a1 + 2208LL))(a1, v5, v6, v7, v11);
+}
+
+
+======================================================================
+PlayerController::ClientSetForceMipLevelsToBeResident @ RVA 0x2907850 EA 0x7FF6F6327850
+======================================================================
+__int64 __fastcall sub_7FF6F6327850(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // r8
+  __int64 v6; // rax
+  __int64 v7; // r9
+  __int64 v8; // rdx
+  unsigned int v10; // [rsp+40h] [rbp+8h] BYREF
+  int v11; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v12; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  v8 = v12;
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64, __int64, __int64))(*(_QWORD *)a1 + 2200LL))(a1, v8, v5, v7);
+}
+
+
+======================================================================
+PlayerController::ClientSetHUD @ RVA 0x2907950 EA 0x7FF6F6327950
+======================================================================
+__int64 __fastcall sub_7FF6F6327950(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2192LL))(a1, v6);
+}
+
+
+======================================================================
+PlayerController::ClientSetSpectatorWaiting @ RVA 0x2907BA0 EA 0x7FF6F6327BA0
+======================================================================
+__int64 __fastcall sub_7FF6F6327BA0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2464LL))(a1, v5);
+}
+
+
+======================================================================
+PlayerController::ClientSetViewTarget @ RVA 0x2907C30 EA 0x7FF6F6327C30
+======================================================================
+__int64 __fastcall sub_7FF6F6327C30(__int64 *a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  int v6; // ecx
+  __int64 v7; // rdx
+  __int64 v8; // rdi
+  int v9; // xmm0_4
+  int v10; // ecx
+  __int64 v11; // rax
+  int v13; // [rsp+20h] [rbp-28h] BYREF
+  char v14; // [rsp+24h] [rbp-24h]
+  int v15; // [rsp+28h] [rbp-20h]
+  int v16; // [rsp+2Ch] [rbp-1Ch]
+  int v17; // [rsp+30h] [rbp-18h] BYREF
+  char v18; // [rsp+34h] [rbp-14h]
+  int v19; // [rsp+38h] [rbp-10h]
+  int v20; // [rsp+3Ch] [rbp-Ch]
+  __int64 v21; // [rsp+50h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v21 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v21);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v21);
+  }
+  v16 &= ~1u;
+  v13 = 0;
+  v15 = 0x40000000;
+  v14 = 1;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v5 = a2[4];
+  v6 = v20;
+  v7 = v21;
+  LOBYTE(v2) = v5 != 0;
+  v8 = v5 + v2;
+  v17 = v13;
+  v9 = v15;
+  v18 = v14;
+  LODWORD(v5) = ((unsigned __int8)v16 ^ (unsigned __int8)v20) & 1;
+  a2[4] = v8;
+  v10 = v5 ^ v6;
+  v19 = v9;
+  v11 = *a1;
+  v20 = v10;
+  return (*(__int64 (__fastcall **)(__int64 *, __int64, int *))(v11 + 2184))(a1, v7, &v17);
+}
+
+
+======================================================================
+PlayerController::ClientSpawnCameraLensEffect @ RVA 0x2907D50 EA 0x7FF6F6327D50
+======================================================================
+__int64 __fastcall sub_7FF6F6327D50(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2176LL))(a1, v6);
+}
+
+
+======================================================================
+PlayerController::ClientStartOnlineSession @ RVA 0x2907DE0 EA 0x7FF6F6327DE0
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+PlayerController::ClientStopCameraAnim @ RVA 0x2907E00 EA 0x7FF6F6327E00
+======================================================================
+__int64 __fastcall sub_7FF6F6327E00(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2160LL))(a1, v6);
+}
+
+
+======================================================================
+PlayerController::ClientStopCameraShake @ RVA 0x2907E90 EA 0x7FF6F6327E90
+======================================================================
+__int64 __fastcall sub_7FF6F6327E90(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2152LL))(a1, v6);
+}
+
+
+======================================================================
+PlayerController::ClientStopForceFeedback @ RVA 0x2907F20 EA 0x7FF6F6327F20
+======================================================================
+__int64 __fastcall sub_7FF6F6327F20(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // r8
+  __int64 v7; // rdx
+  __int64 v9; // [rsp+30h] [rbp+8h] BYREF
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v5 = a2[4];
+  v6 = v9;
+  v7 = v10;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64, __int64))(*(_QWORD *)a1 + 2136LL))(a1, v7, v6);
+}
+
+
+======================================================================
+PlayerController::ClientTeamMessage @ RVA 0x2907FF0 EA 0x7FF6F6327FF0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6327FF0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rax
+  __int64 result; // rax
+  __int64 v7[6]; // [rsp+38h] [rbp-30h] BYREF
+  int v8; // [rsp+70h] [rbp+8h] BYREF
+  __int64 v9; // [rsp+78h] [rbp+10h] BYREF
+  __int64 v10; // [rsp+88h] [rbp+20h] BYREF
+
+  v4 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7[0] = 0;
+  v7[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  LOBYTE(v4) = v5 != 0;
+  a2[4] = v5 + v4;
+  result = (*(__int64 (__fastcall **)(__int64, __int64, __int64 *, __int64, int))(*(_QWORD *)a1 + 1840LL))(
+             a1,
+             v10,
+             v7,
+             v9,
+             v8);
+  if ( v7[0] )
+    return sub_7FF6F4DED1F0(v7[0]);
+  return result;
+}
+
+
+======================================================================
+PlayerController::ClientTravel @ RVA 0x2908160 EA 0x7FF6F6328160
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6328160(int a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  bool v5; // si
+  __int64 v6; // rax
+  __int64 result; // rax
+  __int128 v8; // [rsp+40h] [rbp-30h] BYREF
+  __int64 v9[2]; // [rsp+50h] [rbp-20h] BYREF
+  __int128 v10; // [rsp+60h] [rbp-10h] BYREF
+  unsigned __int8 v11; // [rsp+98h] [rbp+28h] BYREF
+  int v12; // [rsp+A8h] [rbp+38h] BYREF
+
+  v4 = 0;
+  v9[0] = 0;
+  v9[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v5 = v12 != 0;
+  v8 = 0u;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v6 = a2[4];
+  LOBYTE(v4) = v6 != 0;
+  a2[4] = v6 + v4;
+  v10 = v8;
+  result = sub_7FF6F60388C0(a1, (unsigned int)v9, v11, v5, (__int64)&v10);
+  if ( v9[0] )
+    return sub_7FF6F4DED1F0(v9[0]);
+  return result;
+}
+
+
+======================================================================
+PlayerController::ClientTravelInternal @ RVA 0x29082E0 EA 0x7FF6F63282E0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F63282E0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  bool v5; // si
+  __int64 v6; // rax
+  __int64 result; // rax
+  __int128 v8; // [rsp+40h] [rbp-30h] BYREF
+  __int64 v9[2]; // [rsp+50h] [rbp-20h] BYREF
+  __int128 v10; // [rsp+60h] [rbp-10h] BYREF
+  unsigned __int8 v11; // [rsp+90h] [rbp+20h] BYREF
+  int v12; // [rsp+98h] [rbp+28h] BYREF
+
+  v4 = 0;
+  v9[0] = 0;
+  v9[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v5 = v12 != 0;
+  v8 = 0u;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v6 = a2[4];
+  LOBYTE(v4) = v6 != 0;
+  a2[4] = v6 + v4;
+  v10 = v8;
+  result = (*(__int64 (__fastcall **)(__int64, __int64 *, _QWORD, bool, __int128 *))(*(_QWORD *)a1 + 2128LL))(
+             a1,
+             v9,
+             v11,
+             v5,
+             &v10);
+  if ( v9[0] )
+    return sub_7FF6F4DED1F0(v9[0]);
+  return result;
+}
+
+
+======================================================================
+PlayerController::ClientUnmutePlayer @ RVA 0x2908460 EA 0x7FF6F6328460
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6328460(__int64 a1, _QWORD *a2)
+{
+  int v4; // edi
+  __int128 v6; // [rsp+28h] [rbp-40h] BYREF
+  int v7; // [rsp+38h] [rbp-30h]
+  __int128 v8; // [rsp+40h] [rbp-28h] BYREF
+  int v9; // [rsp+50h] [rbp-18h]
+
+  v8 = 0;
+  v4 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  a2[4] += a2[4] != 0;
+  v6 = v8;
+  if ( *((_QWORD *)&v8 + 1) )
+  {
+    if ( _InterlockedIncrement((volatile signed __int32 *)(*((_QWORD *)&v8 + 1) + 8LL)) == 1 )
+      MEMORY[0] = (char *)&v6 + 8;
+    if ( *((_QWORD *)&v6 + 1) )
+      v4 = *(_DWORD *)(*((_QWORD *)&v6 + 1) + 24LL);
+  }
+  v7 = v4;
+  (*(void (__fastcall **)(__int64, __int128 *))(*(_QWORD *)a1 + 2376LL))(a1, &v6);
+  return sub_7FF6F3CAD880(&v8);
+}
+
+
+======================================================================
+PlayerController::ClientUpdateLevelStreamingStatus @ RVA 0x2908550 EA 0x7FF6F6328550
+======================================================================
+__int64 __fastcall sub_7FF6F6328550(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  bool v5; // r14
+  bool v6; // bp
+  bool v7; // si
+  __int64 v8; // rax
+  __int64 v9; // rdx
+  __int64 v10; // rdi
+  bool v12; // [rsp+20h] [rbp-48h]
+  int v13; // [rsp+30h] [rbp-38h] BYREF
+  _QWORD v14[6]; // [rsp+38h] [rbp-30h] BYREF
+  int v15; // [rsp+70h] [rbp+8h] BYREF
+  int v16; // [rsp+78h] [rbp+10h] BYREF
+  int v17; // [rsp+88h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v14[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v14);
+  }
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v16 = 0;
+  v5 = v15 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v17 = 0;
+  v6 = v16 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v13 = 0;
+  v7 = v17 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v8 = a2[4];
+  v9 = v14[0];
+  LOBYTE(v2) = v8 != 0;
+  v10 = v8 + v2;
+  LODWORD(v8) = v13;
+  a2[4] = v10;
+  v12 = v7;
+  return (*(__int64 (__fastcall **)(__int64, __int64, bool, bool, bool, _DWORD))(*(_QWORD *)a1 + 2120LL))(
+           a1,
+           v9,
+           v5,
+           v6,
+           v12,
+           v8);
+}
+
+
+======================================================================
+PlayerController::ClientUpdateLevelStreamingStatusBatched @ RVA 0x2908700 EA 0x7FF6F6328700
+======================================================================
+// Hidden C++ exception states: #wind=4
+__int64 __fastcall sub_7FF6F6328700(__int64 a1, _QWORD *a2)
+{
+  __int64 result; // rax
+  int v5; // edi
+  __int64 *v6; // rbx
+  __int64 *v7; // [rsp+28h] [rbp-30h] BYREF
+  __int64 v8; // [rsp+30h] [rbp-28h]
+  __int64 v9[4]; // [rsp+38h] [rbp-20h] BYREF
+
+  v9[0] = 0;
+  v9[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v7 = nullptr;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  a2[4] += a2[4] != 0;
+  result = (*(__int64 (__fastcall **)(__int64, __int64 *, __int64 **))(*(_QWORD *)a1 + 2112LL))(a1, v9, &v7);
+  v5 = v8;
+  v6 = v7;
+  if ( (_DWORD)v8 )
+  {
+    do
+    {
+      if ( *v6 )
+      {
+        result = sub_7FF6F4DED1F0(*v6);
+        if ( *v6 )
+          *v6 = 0;
+      }
+      v6 += 3;
+      --v5;
+    }
+    while ( v5 );
+    v6 = v7;
+  }
+  if ( v6 )
+  {
+    result = sub_7FF6F4DED1F0((__int64)v6);
+    v7 = nullptr;
+  }
+  if ( v9[0] )
+    return sub_7FF6F4DED1F0(v9[0]);
+  return result;
+}
+
+
+======================================================================
+PlayerController::ClientVoiceHandshakeComplete @ RVA 0x2908830 EA 0x7FF6F6328830
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+PlayerController::ClientWasKicked @ RVA 0x2908850 EA 0x7FF6F6328850
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6328850(__int64 a1, _QWORD *a2)
+{
+  _BYTE v5[64]; // [rsp+28h] [rbp-40h] BYREF
+
+  sub_7FF6F4DCDFA0(v5);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v5);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v5);
+  }
+  a2[4] += a2[4] != 0;
+  (*(void (__fastcall **)(__int64, _BYTE *))(*(_QWORD *)a1 + 2104LL))(a1, v5);
+  return sub_7FF6F3C37050(v5);
+}
+
+
+======================================================================
+PlayerController::ConsoleKey @ RVA 0x2908980 EA 0x7FF6F6328980
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6328980(__int64 a1, _QWORD *a2)
+{
+  int v4; // ebx
+  __int64 v6; // [rsp+28h] [rbp-50h] BYREF
+  __int128 v7; // [rsp+30h] [rbp-48h]
+  int v8; // [rsp+40h] [rbp-38h]
+  __int64 v9; // [rsp+48h] [rbp-30h] BYREF
+  __int128 v10; // [rsp+50h] [rbp-28h] BYREF
+  int v11; // [rsp+60h] [rbp-18h]
+
+  v4 = 0;
+  v6 = 0;
+  v7 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  a2[4] += a2[4] != 0;
+  v9 = v6;
+  v10 = v7;
+  if ( *((_QWORD *)&v7 + 1) )
+  {
+    if ( _InterlockedIncrement((volatile signed __int32 *)(*((_QWORD *)&v7 + 1) + 8LL)) == 1 )
+      MEMORY[0] = (char *)&v10 + 8;
+    if ( *((_QWORD *)&v10 + 1) )
+      v4 = *(_DWORD *)(*((_QWORD *)&v10 + 1) + 24LL);
+  }
+  v11 = v4;
+  (*(void (__fastcall **)(__int64, __int64 *))(*(_QWORD *)a1 + 2824LL))(a1, &v9);
+  return sub_7FF6F3C36760(&v6);
+}
+
+
+======================================================================
+PlayerController::DeprojectMousePositionToWorld @ RVA 0x2908BC0 EA 0x7FF6F6328BC0
+======================================================================
+__int64 __fastcall sub_7FF6F6328BC0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  _BYTE *v7; // rax
+  _BYTE *v8; // rsi
+  _BYTE *v9; // r8
+  __int64 v10; // rax
+  __int64 result; // rax
+  _BYTE v12[16]; // [rsp+20h] [rbp-28h] BYREF
+  _BYTE v13[24]; // [rsp+30h] [rbp-18h] BYREF
+
+  v3 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v7 = (_BYTE *)a2[7];
+  v8 = v12;
+  a2[7] = 0;
+  if ( v7 )
+    v8 = v7;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v13);
+  }
+  v9 = v13;
+  if ( a2[7] )
+    v9 = (_BYTE *)a2[7];
+  v10 = a2[4];
+  LOBYTE(v3) = v10 != 0;
+  a2[4] = v10 + v3;
+  result = sub_7FF6F603A6D0(a1, v8, v9);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PlayerController::DeprojectScreenPositionToWorld @ RVA 0x2908CC0 EA 0x7FF6F6328CC0
+======================================================================
+__int64 __fastcall sub_7FF6F6328CC0(int a1, _QWORD *a2, _BYTE *a3)
+{
+  bool v3; // zf
+  __int64 v7; // rdi
+  __int64 v8; // rax
+  _BYTE *v9; // rsi
+  int v10; // edx
+  int v11; // r8d
+  _BYTE *v12; // rcx
+  __int64 v13; // rax
+  __int64 result; // rax
+  _BYTE v15[16]; // [rsp+30h] [rbp-38h] BYREF
+  _BYTE v16[40]; // [rsp+40h] [rbp-28h] BYREF
+  int v17; // [rsp+78h] [rbp+10h] BYREF
+  int v18; // [rsp+80h] [rbp+18h] BYREF
+
+  v3 = a2[4] == 0;
+  v18 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  v3 = a2[4] == 0;
+  v17 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  v7 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v15);
+  }
+  v8 = a2[7];
+  v9 = v15;
+  a2[7] = 0;
+  if ( v8 )
+    LODWORD(v9) = v8;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v16);
+  }
+  v12 = v16;
+  if ( a2[7] )
+    v12 = (_BYTE *)a2[7];
+  v13 = a2[4];
+  LOBYTE(v7) = v13 != 0;
+  a2[4] = v13 + v7;
+  result = sub_7FF6F603A740(a1, v10, v11, (_DWORD)v9, (__int64)v12);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PlayerController::EnableCheats @ RVA 0x29090D0 EA 0x7FF6F63290D0
+======================================================================
+__int64 __fastcall sub_7FF6F63290D0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 2488LL))(a1);
+}
+
+
+======================================================================
+PlayerController::FOV @ RVA 0x2909180 EA 0x7FF6F6329180
+======================================================================
+__int64 __fastcall sub_7FF6F6329180(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 2504LL))(a1);
+}
+
+
+======================================================================
+PlayerController::GetFocalLocation @ RVA 0x290A870 EA 0x7FF6F632A870
+======================================================================
+__int64 __fastcall sub_7FF6F632A870(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rax
+  __int64 result; // rax
+  _BYTE v6[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = (*(__int64 (__fastcall **)(__int64, _BYTE *))(*(_QWORD *)a1 + 3264LL))(a1, v6);
+  *(_QWORD *)a3 = *(_QWORD *)v4;
+  result = *(unsigned int *)(v4 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+PlayerController::GetHitResultUnderCursor @ RVA 0x290A920 EA 0x7FF6F632A920
+======================================================================
+__int64 __fastcall sub_7FF6F632A920(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  bool v3; // zf
+  __int64 v7; // rdi
+  bool v8; // si
+  _DWORD *v9; // r9
+  __int64 v10; // rdx
+  __int64 v11; // rax
+  __int64 result; // rax
+  _DWORD v13[32]; // [rsp+20h] [rbp-98h] BYREF
+  unsigned __int8 v14; // [rsp+C8h] [rbp+10h] BYREF
+  int v15; // [rsp+D0h] [rbp+18h] BYREF
+
+  v3 = a2[4] == 0;
+  v14 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  v7 = 0;
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v8 = v15 != 0;
+  memset(v13, 0, sizeof(v13));
+  v13[1] = 1065353216;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v13);
+  }
+  v9 = v13;
+  v10 = v14;
+  if ( a2[7] )
+    v9 = (_DWORD *)a2[7];
+  v11 = a2[4];
+  LOBYTE(v7) = v11 != 0;
+  a2[4] = v11 + v7;
+  result = sub_7FF6F6040890(a1, v10, v8, v9);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PlayerController::GetHitResultUnderCursorByChannel @ RVA 0x290AA80 EA 0x7FF6F632AA80
+======================================================================
+__int64 __fastcall sub_7FF6F632AA80(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  bool v3; // zf
+  __int64 v7; // rdi
+  bool v8; // si
+  _DWORD *v9; // r9
+  __int64 v10; // rdx
+  __int64 v11; // rax
+  __int64 result; // rax
+  _DWORD v13[32]; // [rsp+20h] [rbp-98h] BYREF
+  unsigned __int8 v14; // [rsp+C8h] [rbp+10h] BYREF
+  int v15; // [rsp+D0h] [rbp+18h] BYREF
+
+  v3 = a2[4] == 0;
+  v14 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  v7 = 0;
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v8 = v15 != 0;
+  memset(v13, 0, sizeof(v13));
+  v13[1] = 1065353216;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v13);
+  }
+  v9 = v13;
+  v10 = v14;
+  if ( a2[7] )
+    v9 = (_DWORD *)a2[7];
+  v11 = a2[4];
+  LOBYTE(v7) = v11 != 0;
+  a2[4] = v11 + v7;
+  result = sub_7FF6F6040A30(a1, v10, v8, v9);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PlayerController::GetHitResultUnderCursorForObjects @ RVA 0x290ABE0 EA 0x7FF6F632ABE0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F632ABE0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v6; // rdi
+  __int64 *v7; // rsi
+  bool v8; // bp
+  _DWORD *v9; // r9
+  __int64 v10; // rax
+  __int64 result; // rax
+  __int64 v12[4]; // [rsp+20h] [rbp-B8h] BYREF
+  _DWORD v13[32]; // [rsp+40h] [rbp-98h] BYREF
+  int v14; // [rsp+E8h] [rbp+10h] BYREF
+
+  v12[2] = -2;
+  v6 = 0;
+  v12[0] = 0;
+  v12[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v7 = v12;
+  if ( a2[7] )
+    v7 = (__int64 *)a2[7];
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v8 = v14 != 0;
+  memset(v13, 0, sizeof(v13));
+  v13[1] = 1065353216;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v13);
+  }
+  v9 = v13;
+  if ( a2[7] )
+    v9 = (_DWORD *)a2[7];
+  v10 = a2[4];
+  LOBYTE(v6) = v10 != 0;
+  a2[4] = v10 + v6;
+  result = sub_7FF6F6040BF0(a1, v7, v8, v9);
+  *a3 = result;
+  if ( v12[0] )
+    return sub_7FF6F4DED1F0(v12[0]);
+  return result;
+}
+
+
+======================================================================
+PlayerController::GetHitResultUnderFinger @ RVA 0x290AD70 EA 0x7FF6F632AD70
+======================================================================
+__int64 __fastcall sub_7FF6F632AD70(int a1, _QWORD *a2, _BYTE *a3)
+{
+  bool v3; // zf
+  __int64 v7; // rdi
+  bool v8; // si
+  _DWORD *v9; // rcx
+  int v10; // r8d
+  int v11; // edx
+  __int64 v12; // rax
+  __int64 result; // rax
+  _DWORD v14[42]; // [rsp+30h] [rbp-A8h] BYREF
+  unsigned __int8 v15; // [rsp+E8h] [rbp+10h] BYREF
+  unsigned __int8 v16; // [rsp+F0h] [rbp+18h] BYREF
+  int v17; // [rsp+F8h] [rbp+20h] BYREF
+
+  v3 = a2[4] == 0;
+  v16 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  v3 = a2[4] == 0;
+  v15 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  v7 = 0;
+  v17 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v8 = v17 != 0;
+  memset(v14, 0, 0x80u);
+  v14[1] = 1065353216;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v14);
+  }
+  v9 = v14;
+  v10 = v15;
+  v11 = v16;
+  if ( a2[7] )
+    v9 = (_DWORD *)a2[7];
+  v12 = a2[4];
+  LOBYTE(v7) = v12 != 0;
+  a2[4] = v12 + v7;
+  result = sub_7FF6F6040D90(a1, v11, v10, v8, (__int64)v9);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PlayerController::GetHitResultUnderFingerByChannel @ RVA 0x290AF10 EA 0x7FF6F632AF10
+======================================================================
+__int64 __fastcall sub_7FF6F632AF10(int a1, _QWORD *a2, _BYTE *a3)
+{
+  bool v3; // zf
+  __int64 v7; // rdi
+  bool v8; // si
+  _DWORD *v9; // rcx
+  int v10; // r8d
+  int v11; // edx
+  __int64 v12; // rax
+  __int64 result; // rax
+  _DWORD v14[42]; // [rsp+30h] [rbp-A8h] BYREF
+  unsigned __int8 v15; // [rsp+E8h] [rbp+10h] BYREF
+  unsigned __int8 v16; // [rsp+F0h] [rbp+18h] BYREF
+  int v17; // [rsp+F8h] [rbp+20h] BYREF
+
+  v3 = a2[4] == 0;
+  v16 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  v3 = a2[4] == 0;
+  v15 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  v7 = 0;
+  v17 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v8 = v17 != 0;
+  memset(v14, 0, 0x80u);
+  v14[1] = 1065353216;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v14);
+  }
+  v9 = v14;
+  v10 = v15;
+  v11 = v16;
+  if ( a2[7] )
+    v9 = (_DWORD *)a2[7];
+  v12 = a2[4];
+  LOBYTE(v7) = v12 != 0;
+  a2[4] = v12 + v7;
+  result = sub_7FF6F6040EF0(a1, v11, v10, v8, (__int64)v9);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PlayerController::GetHitResultUnderFingerForObjects @ RVA 0x290B0B0 EA 0x7FF6F632B0B0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F632B0B0(int a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v6; // rdi
+  __int64 *v7; // rsi
+  bool v8; // bp
+  _DWORD *v9; // rcx
+  __int64 v10; // rax
+  __int64 result; // rax
+  __int64 v12[4]; // [rsp+30h] [rbp-C8h] BYREF
+  _DWORD v13[42]; // [rsp+50h] [rbp-A8h] BYREF
+  unsigned __int8 v14; // [rsp+108h] [rbp+10h] BYREF
+  int v15; // [rsp+110h] [rbp+18h] BYREF
+
+  v12[2] = -2;
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v6 = 0;
+  v12[0] = 0;
+  v12[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v7 = v12;
+  if ( a2[7] )
+    v7 = (__int64 *)a2[7];
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v8 = v15 != 0;
+  memset(v13, 0, 0x80u);
+  v13[1] = 1065353216;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v13);
+  }
+  v9 = v13;
+  if ( a2[7] )
+    v9 = (_DWORD *)a2[7];
+  v10 = a2[4];
+  LOBYTE(v6) = v10 != 0;
+  a2[4] = v10 + v6;
+  result = sub_7FF6F6041080(a1, v14, (_DWORD)v7, v8, (__int64)v9);
+  *a3 = result;
+  if ( v12[0] )
+    return sub_7FF6F4DED1F0(v12[0]);
+  return result;
+}
+
+
+======================================================================
+PlayerController::GetHUD @ RVA 0x290A8F0 EA 0x7FF6F632A8F0
+======================================================================
+__int64 __fastcall sub_7FF6F632A8F0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F60404E0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PlayerController::GetInputAnalogKeyState @ RVA 0x290B3C0 EA 0x7FF6F632B3C0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F632B3C0(__int64 a1, _QWORD *a2, float *a3)
+{
+  int v6; // ebx
+  __int64 v8; // [rsp+28h] [rbp-50h] BYREF
+  __int128 v9; // [rsp+30h] [rbp-48h]
+  int v10; // [rsp+40h] [rbp-38h]
+  __int64 v11; // [rsp+48h] [rbp-30h] BYREF
+  __int128 v12; // [rsp+50h] [rbp-28h] BYREF
+  int v13; // [rsp+60h] [rbp-18h]
+
+  v6 = 0;
+  v8 = 0;
+  v9 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  a2[4] += a2[4] != 0;
+  v11 = v8;
+  v12 = v9;
+  if ( *((_QWORD *)&v9 + 1) )
+  {
+    if ( _InterlockedIncrement((volatile signed __int32 *)(*((_QWORD *)&v9 + 1) + 8LL)) == 1 )
+      MEMORY[0] = (char *)&v12 + 8;
+    if ( *((_QWORD *)&v12 + 1) )
+      v6 = *(_DWORD *)(*((_QWORD *)&v12 + 1) + 24LL);
+  }
+  v13 = v6;
+  *a3 = sub_7FF6F6041210(a1, &v11);
+  return sub_7FF6F3C36760(&v8);
+}
+
+
+======================================================================
+PlayerController::GetInputAnalogStickState @ RVA 0x290B4C0 EA 0x7FF6F632B4C0
+======================================================================
+__int64 __fastcall sub_7FF6F632B4C0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  int *v6; // rax
+  int *v7; // rsi
+  _DWORD *v8; // r9
+  __int64 v9; // rdx
+  __int64 v10; // rax
+  _DWORD v12[10]; // [rsp+20h] [rbp-28h] BYREF
+  unsigned __int8 v13; // [rsp+58h] [rbp+10h] BYREF
+  int v14; // [rsp+68h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v13 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  v5 = 0;
+  v14 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v6 = (int *)a2[7];
+  v7 = &v14;
+  v12[0] = 0;
+  a2[7] = 0;
+  if ( v6 )
+    v7 = v6;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v8 = v12;
+  v9 = v13;
+  if ( a2[7] )
+    v8 = (_DWORD *)a2[7];
+  v10 = a2[4];
+  LOBYTE(v5) = v10 != 0;
+  a2[4] = v10 + v5;
+  return sub_7FF6F6041260(a1, v9, v7, v8, v12[0]);
+}
+
+
+======================================================================
+PlayerController::GetInputKeyTimeDown @ RVA 0x290B780 EA 0x7FF6F632B780
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F632B780(__int64 a1, _QWORD *a2, float *a3)
+{
+  int v6; // ebx
+  __int64 v8; // [rsp+28h] [rbp-50h] BYREF
+  __int128 v9; // [rsp+30h] [rbp-48h]
+  int v10; // [rsp+40h] [rbp-38h]
+  __int64 v11; // [rsp+48h] [rbp-30h] BYREF
+  __int128 v12; // [rsp+50h] [rbp-28h] BYREF
+  int v13; // [rsp+60h] [rbp-18h]
+
+  v6 = 0;
+  v8 = 0;
+  v9 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  a2[4] += a2[4] != 0;
+  v11 = v8;
+  v12 = v9;
+  if ( *((_QWORD *)&v9 + 1) )
+  {
+    if ( _InterlockedIncrement((volatile signed __int32 *)(*((_QWORD *)&v9 + 1) + 8LL)) == 1 )
+      MEMORY[0] = (char *)&v12 + 8;
+    if ( *((_QWORD *)&v12 + 1) )
+      v6 = *(_DWORD *)(*((_QWORD *)&v12 + 1) + 24LL);
+  }
+  v13 = v6;
+  *a3 = sub_7FF6F6041310(a1, &v11);
+  return sub_7FF6F3C36760(&v8);
+}
+
+
+======================================================================
+PlayerController::GetInputMotionState @ RVA 0x290B880 EA 0x7FF6F632B880
+======================================================================
+__int64 __fastcall sub_7FF6F632B880(int a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  _BYTE *v6; // r14
+  __int64 v7; // rax
+  _BYTE *v8; // rbp
+  __int64 v9; // rax
+  _BYTE *v10; // rsi
+  _BYTE *v11; // rcx
+  __int64 v12; // rax
+  _BYTE v14[16]; // [rsp+30h] [rbp-58h] BYREF
+  _BYTE v15[16]; // [rsp+40h] [rbp-48h] BYREF
+  _BYTE v16[16]; // [rsp+50h] [rbp-38h] BYREF
+  _BYTE v17[16]; // [rsp+60h] [rbp-28h] BYREF
+
+  v2 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v14);
+  }
+  v5 = a2[7];
+  v6 = v14;
+  a2[7] = 0;
+  if ( v5 )
+    LODWORD(v6) = v5;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v15);
+  }
+  v7 = a2[7];
+  v8 = v15;
+  a2[7] = 0;
+  if ( v7 )
+    LODWORD(v8) = v7;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v16);
+  }
+  v9 = a2[7];
+  v10 = v16;
+  a2[7] = 0;
+  if ( v9 )
+    LODWORD(v10) = v9;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v17);
+  }
+  v11 = v17;
+  if ( a2[7] )
+    v11 = (_BYTE *)a2[7];
+  v12 = a2[4];
+  LOBYTE(v2) = v12 != 0;
+  a2[4] = v12 + v2;
+  return sub_7FF6F6041360(a1, (_DWORD)v6, (_DWORD)v8, (_DWORD)v10, (__int64)v11);
+}
+
+
+======================================================================
+PlayerController::GetInputMouseDelta @ RVA 0x290BA10 EA 0x7FF6F632BA10
+======================================================================
+__int64 __fastcall sub_7FF6F632BA10(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  int *v5; // rax
+  int *v6; // rsi
+  int *v7; // r8
+  __int64 v8; // rax
+  int v10; // [rsp+48h] [rbp+10h] BYREF
+  int v11; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v10 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v5 = (int *)a2[7];
+  v6 = &v10;
+  v11 = 0;
+  a2[7] = 0;
+  if ( v5 )
+    v6 = v5;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v7 = &v11;
+  if ( a2[7] )
+    v7 = (int *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v2) = v8 != 0;
+  a2[4] = v8 + v2;
+  return sub_7FF6F6041640(a1, v6, v7);
+}
+
+
+======================================================================
+PlayerController::GetInputTouchState @ RVA 0x290BAF0 EA 0x7FF6F632BAF0
+======================================================================
+__int64 __fastcall sub_7FF6F632BAF0(int a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  __int64 v6; // rax
+  int *v7; // rbp
+  __int64 v8; // rax
+  _DWORD *v9; // rsi
+  char *v10; // rcx
+  int v11; // edx
+  __int64 v12; // rax
+  int v14; // [rsp+30h] [rbp-28h] BYREF
+  _DWORD v15[9]; // [rsp+34h] [rbp-24h] BYREF
+  char v16; // [rsp+68h] [rbp+10h] BYREF
+  unsigned __int8 v17; // [rsp+78h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v17 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  v5 = 0;
+  v14 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v6 = a2[7];
+  v7 = &v14;
+  v15[0] = 0;
+  a2[7] = 0;
+  if ( v6 )
+    LODWORD(v7) = v6;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v15);
+  }
+  v8 = a2[7];
+  v9 = v15;
+  v16 = 0;
+  a2[7] = 0;
+  if ( v8 )
+    LODWORD(v9) = v8;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v10 = &v16;
+  v11 = v17;
+  if ( a2[7] )
+    v10 = (char *)a2[7];
+  v12 = a2[4];
+  LOBYTE(v5) = v12 != 0;
+  a2[4] = v12 + v5;
+  return sub_7FF6F60416C0(a1, v11, (_DWORD)v7, (_DWORD)v9, (__int64)v10);
+}
+
+
+======================================================================
+PlayerController::GetInputVectorKeyState @ RVA 0x290BD90 EA 0x7FF6F632BD90
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F632BD90(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  int v6; // edi
+  __int64 v7; // rax
+  _BYTE v9[16]; // [rsp+28h] [rbp-60h] BYREF
+  __int64 v10; // [rsp+38h] [rbp-50h] BYREF
+  __int128 v11; // [rsp+40h] [rbp-48h]
+  int v12; // [rsp+50h] [rbp-38h]
+  __int64 v13; // [rsp+58h] [rbp-30h] BYREF
+  __int128 v14; // [rsp+60h] [rbp-28h] BYREF
+  int v15; // [rsp+70h] [rbp-18h]
+
+  v6 = 0;
+  v10 = 0;
+  v11 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  a2[4] += a2[4] != 0;
+  v13 = v10;
+  v14 = v11;
+  if ( *((_QWORD *)&v11 + 1) )
+  {
+    if ( _InterlockedIncrement((volatile signed __int32 *)(*((_QWORD *)&v11 + 1) + 8LL)) == 1 )
+      MEMORY[0] = (char *)&v14 + 8;
+    if ( *((_QWORD *)&v14 + 1) )
+      v6 = *(_DWORD *)(*((_QWORD *)&v14 + 1) + 24LL);
+  }
+  v15 = v6;
+  v7 = sub_7FF6F6041740(a1, v9, &v13);
+  *(_QWORD *)a3 = *(_QWORD *)v7;
+  *(_DWORD *)(a3 + 8) = *(_DWORD *)(v7 + 8);
+  return sub_7FF6F3C36760(&v10);
+}
+
+
+======================================================================
+PlayerController::GetMousePosition @ RVA 0x290C080 EA 0x7FF6F632C080
+======================================================================
+__int64 __fastcall sub_7FF6F632C080(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  int *v7; // rax
+  int *v8; // rsi
+  int *v9; // r8
+  __int64 v10; // rax
+  __int64 result; // rax
+  int v12; // [rsp+48h] [rbp+10h] BYREF
+  int v13; // [rsp+50h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v12 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v7 = (int *)a2[7];
+  v8 = &v12;
+  v13 = 0;
+  a2[7] = 0;
+  if ( v7 )
+    v8 = v7;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v9 = &v13;
+  if ( a2[7] )
+    v9 = (int *)a2[7];
+  v10 = a2[4];
+  LOBYTE(v3) = v10 != 0;
+  a2[4] = v10 + v3;
+  result = sub_7FF6F6042000(a1, v8, v9);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PlayerController::GetSpectatorPawn @ RVA 0x290C8A0 EA 0x7FF6F632C8A0
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+PlayerController::GetViewportSize @ RVA 0x290CE10 EA 0x7FF6F632CE10
+======================================================================
+__int64 __fastcall sub_7FF6F632CE10(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  int *v5; // rax
+  int *v6; // rsi
+  int *v7; // r8
+  __int64 v8; // rax
+  int v10; // [rsp+48h] [rbp+10h] BYREF
+  int v11; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v10 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v5 = (int *)a2[7];
+  v6 = &v10;
+  v11 = 0;
+  a2[7] = 0;
+  if ( v5 )
+    v6 = v5;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v7 = &v11;
+  if ( a2[7] )
+    v7 = (int *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v2) = v8 != 0;
+  a2[4] = v8 + v2;
+  return sub_7FF6F6043630(a1, v6, v7);
+}
+
+
+======================================================================
+PlayerController::IsInputKeyDown @ RVA 0x290D200 EA 0x7FF6F632D200
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F632D200(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  int v6; // ebx
+  __int64 v8; // [rsp+28h] [rbp-50h] BYREF
+  __int128 v9; // [rsp+30h] [rbp-48h]
+  int v10; // [rsp+40h] [rbp-38h]
+  __int64 v11; // [rsp+48h] [rbp-30h] BYREF
+  __int128 v12; // [rsp+50h] [rbp-28h] BYREF
+  int v13; // [rsp+60h] [rbp-18h]
+
+  v6 = 0;
+  v8 = 0;
+  v9 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  a2[4] += a2[4] != 0;
+  v11 = v8;
+  v12 = v9;
+  if ( *((_QWORD *)&v9 + 1) )
+  {
+    if ( _InterlockedIncrement((volatile signed __int32 *)(*((_QWORD *)&v9 + 1) + 8LL)) == 1 )
+      MEMORY[0] = (char *)&v12 + 8;
+    if ( *((_QWORD *)&v12 + 1) )
+      v6 = *(_DWORD *)(*((_QWORD *)&v12 + 1) + 24LL);
+  }
+  v13 = v6;
+  *a3 = sub_7FF6F6045160(a1, &v11);
+  return sub_7FF6F3C36760(&v8);
+}
+
+
+======================================================================
+PlayerController::IsLookInputIgnored @ RVA 0x290D360 EA 0x7FF6F632D360
+======================================================================
+__int64 __fastcall sub_7FF6F632D360(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 2664LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PlayerController::IsMoveInputIgnored @ RVA 0x290D390 EA 0x7FF6F632D390
+======================================================================
+__int64 __fastcall sub_7FF6F632D390(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 2640LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PlayerController::IsPossessingServerAcknowledgedPawn @ RVA 0x290D450 EA 0x7FF6F632D450
+======================================================================
+__int64 __fastcall sub_7FF6F632D450(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F60453D0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PlayerController::IsSeamlessTravelInProgress @ RVA 0x290D4B0 EA 0x7FF6F632D4B0
+======================================================================
+__int64 __fastcall sub_7FF6F632D4B0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F6045760();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PlayerController::LocalTravel @ RVA 0x2911160 EA 0x7FF6F6331160
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6331160(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rax
+  __int64 result; // rax
+  __int64 v7[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  v4 = 0;
+  v7[0] = 0;
+  v7[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  v5 = a2[4];
+  LOBYTE(v4) = v5 != 0;
+  a2[4] = v5 + v4;
+  result = (*(__int64 (__fastcall **)(__int64, __int64 *))(*(_QWORD *)a1 + 2520LL))(a1, v7);
+  if ( v7[0] )
+    return sub_7FF6F4DED1F0(v7[0]);
+  return result;
+}
+
+
+======================================================================
+PlayerController::OnServerStartedVisualLogger @ RVA 0x29115E0 EA 0x7FF6F63315E0
+======================================================================
+__int64 __fastcall sub_7FF6F63315E0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1816LL))(a1, v5);
+}
+
+
+======================================================================
+PlayerController::Pause @ RVA 0x2911670 EA 0x7FF6F6331670
+======================================================================
+__int64 __fastcall sub_7FF6F6331670(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 2552LL))(a1);
+}
+
+
+======================================================================
+PlayerController::PlayDynamicForceFeedback @ RVA 0x2911BA0 EA 0x7FF6F6331BA0
+======================================================================
+__int64 __fastcall sub_7FF6F6331BA0(int a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  bool v6; // r12
+  char v7; // r15
+  char v8; // r14
+  char v9; // si
+  int v10; // edx
+  int v11; // r8d
+  __int64 v12; // rax
+  __int128 v13; // xmm0
+  int v15; // [rsp+50h] [rbp-29h] BYREF
+  int v16; // [rsp+54h] [rbp-25h] BYREF
+  int v17; // [rsp+58h] [rbp-21h] BYREF
+  int v18; // [rsp+5Ch] [rbp-1Dh] BYREF
+  int v19; // [rsp+60h] [rbp-19h] BYREF
+  int v20; // [rsp+64h] [rbp-15h] BYREF
+  __int128 v21; // [rsp+68h] [rbp-11h] BYREF
+  __int64 v22; // [rsp+78h] [rbp-1h]
+  __int128 v23; // [rsp+80h] [rbp+7h] BYREF
+  __int64 v24; // [rsp+90h] [rbp+17h]
+  char v25; // [rsp+E8h] [rbp+6Fh] BYREF
+  char v26; // [rsp+F8h] [rbp+7Fh] BYREF
+
+  v2 = a2[4] == 0;
+  v20 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v20);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v20);
+  }
+  v2 = a2[4] == 0;
+  v19 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  v5 = 0;
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v16 = 0;
+  v6 = v15 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v17 = 0;
+  v7 = v16 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v18 = 0;
+  v8 = v17 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  v25 = 0;
+  v9 = v18 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v25);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v25);
+  }
+  v21 = 0xFFFFFFFFFFFFFFFFuLL;
+  v22 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v21);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v21);
+  }
+  v12 = a2[4];
+  v13 = v21;
+  LOBYTE(v5) = v12 != 0;
+  v26 = v25;
+  v24 = v22;
+  a2[4] = v12 + v5;
+  v23 = v13;
+  return sub_7FF6F6047200(a1, v10, v11, v6, v7, v8, v9, (__int64)&v26, (__int64)&v23);
+}
+
+
+======================================================================
+PlayerController::PlayHapticEffect @ RVA 0x2911E30 EA 0x7FF6F6331E30
+======================================================================
+__int64 __fastcall sub_7FF6F6331E30(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  int v8; // [rsp+20h] [rbp-18h] BYREF
+  _QWORD v9[2]; // [rsp+28h] [rbp-10h] BYREF
+  char v10; // [rsp+48h] [rbp+10h] BYREF
+  char v11; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v9[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v9[0];
+  LOBYTE(v2) = v5 != 0;
+  v11 = v10;
+  a2[4] = v5 + v2;
+  return sub_7FF6F60473E0(a1, v6, &v11);
+}
+
+
+======================================================================
+PlayerController::ProjectWorldLocationToScreen @ RVA 0x2911FD0 EA 0x7FF6F6331FD0
+======================================================================
+__int64 __fastcall sub_7FF6F6331FD0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v6; // rdi
+  char *v7; // rax
+  char *v8; // r8
+  __int64 v9; // rax
+  __int64 v10; // rdi
+  __int64 result; // rax
+  __int64 v12; // [rsp+20h] [rbp-28h] BYREF
+  int v13; // [rsp+28h] [rbp-20h]
+  __int64 v14; // [rsp+30h] [rbp-18h] BYREF
+  int v15; // [rsp+38h] [rbp-10h]
+  char v16; // [rsp+58h] [rbp+10h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v6 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v7 = (char *)a2[7];
+  v8 = &v16;
+  v14 = v12;
+  if ( v7 )
+    v8 = v7;
+  v9 = a2[4];
+  LOBYTE(v6) = v9 != 0;
+  v10 = v9 + v6;
+  LODWORD(v9) = v13;
+  a2[4] = v10;
+  v15 = v9;
+  result = sub_7FF6F6049850(a1, &v14, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PlayerController::ResetIgnoreInputFlags @ RVA 0x2912710 EA 0x7FF6F6332710
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+PlayerController::ResetIgnoreLookInput @ RVA 0x2912730 EA 0x7FF6F6332730
+======================================================================
+__int64 __fastcall sub_7FF6F6332730(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 2656LL))(a1);
+}
+
+
+======================================================================
+PlayerController::ResetIgnoreMoveInput @ RVA 0x2912750 EA 0x7FF6F6332750
+======================================================================
+__int64 __fastcall sub_7FF6F6332750(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 2632LL))(a1);
+}
+
+
+======================================================================
+PlayerController::RestartLevel @ RVA 0x2912790 EA 0x7FF6F6332790
+======================================================================
+__int64 __fastcall sub_7FF6F6332790(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 2512LL))(a1);
+}
+
+
+======================================================================
+PlayerController::SendToConsole @ RVA 0x29127B0 EA 0x7FF6F63327B0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F63327B0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rax
+  __int64 result; // rax
+  __int64 v7[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  v4 = 0;
+  v7[0] = 0;
+  v7[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  v5 = a2[4];
+  LOBYTE(v4) = v5 != 0;
+  a2[4] = v5 + v4;
+  result = (*(__int64 (__fastcall **)(__int64, __int64 *))(*(_QWORD *)a1 + 2832LL))(a1, v7);
+  if ( v7[0] )
+    return sub_7FF6F4DED1F0(v7[0]);
+  return result;
+}
+
+
+======================================================================
+PlayerController::ServerAcknowledgePossession @ RVA 0x2912860 EA 0x7FF6F6332860
+======================================================================
+__int64 __fastcall sub_7FF6F6332860(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rsi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2056LL))(a1, v6) )
+    return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2064LL))(a1, v8);
+  else
+    return sub_7FF6F4F0F6D0(L"ServerAcknowledgePossession_Validate");
+}
+
+
+======================================================================
+PlayerController::ServerCamera @ RVA 0x2912920 EA 0x7FF6F6332920
+======================================================================
+__int64 __fastcall sub_7FF6F6332920(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2040LL))(a1, v6) )
+    return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2048LL))(a1, v8);
+  else
+    return sub_7FF6F4F0F6D0(L"ServerCamera_Validate");
+}
+
+
+======================================================================
+PlayerController::ServerChangeName @ RVA 0x29129E0 EA 0x7FF6F63329E0
+======================================================================
+// Hidden C++ exception states: #wind=3
+__int64 __fastcall sub_7FF6F63329E0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rax
+  __int64 result; // rax
+  __int64 v7[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  v4 = 0;
+  v7[0] = 0;
+  v7[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  v5 = a2[4];
+  LOBYTE(v4) = v5 != 0;
+  a2[4] = v5 + v4;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64, __int64 *))(*(_QWORD *)a1 + 2024LL))(a1, v7) )
+    result = (*(__int64 (__fastcall **)(__int64, __int64 *))(*(_QWORD *)a1 + 2032LL))(a1, v7);
+  else
+    result = sub_7FF6F4F0F6D0(L"ServerChangeName_Validate");
+  if ( v7[0] )
+    return sub_7FF6F4DED1F0(v7[0]);
+  return result;
+}
+
+
+======================================================================
+PlayerController::ServerCheckClientPossession @ RVA 0x2912AB0 EA 0x7FF6F6332AB0
+======================================================================
+__int64 __fastcall sub_7FF6F6332AB0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1960LL))(a1) )
+    return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1968LL))(a1);
+  else
+    return sub_7FF6F4F0F6D0(L"ServerCheckClientPossession_Validate");
+}
+
+
+======================================================================
+PlayerController::ServerCheckClientPossessionReliable @ RVA 0x2912B00 EA 0x7FF6F6332B00
+======================================================================
+__int64 __fastcall sub_7FF6F6332B00(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1944LL))(a1) )
+    return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1952LL))(a1);
+  else
+    return sub_7FF6F4F0F6D0(L"ServerCheckClientPossessionReliable_Validate");
+}
+
+
+======================================================================
+PlayerController::ServerMutePlayer @ RVA 0x2912B50 EA 0x7FF6F6332B50
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6332B50(__int64 a1, _QWORD *a2)
+{
+  int v4; // ebx
+  int v5; // ecx
+  __int128 v7; // [rsp+28h] [rbp-50h] BYREF
+  int v8; // [rsp+38h] [rbp-40h]
+  __int128 v9; // [rsp+40h] [rbp-38h] BYREF
+  int v10; // [rsp+50h] [rbp-28h]
+  __int128 v11; // [rsp+58h] [rbp-20h] BYREF
+  int v12; // [rsp+68h] [rbp-10h]
+
+  v7 = 0;
+  v4 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  a2[4] += a2[4] != 0;
+  v9 = v7;
+  if ( !*((_QWORD *)&v7 + 1) )
+    goto LABEL_9;
+  if ( _InterlockedIncrement((volatile signed __int32 *)(*((_QWORD *)&v7 + 1) + 8LL)) == 1 )
+    MEMORY[0] = (char *)&v9 + 8;
+  if ( *((_QWORD *)&v9 + 1) )
+    v5 = *(_DWORD *)(*((_QWORD *)&v9 + 1) + 24LL);
+  else
+LABEL_9:
+    v5 = 0;
+  v10 = v5;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64, __int128 *))(*(_QWORD *)a1 + 2408LL))(a1, &v9) )
+  {
+    v11 = v7;
+    if ( *((_QWORD *)&v7 + 1) )
+    {
+      if ( _InterlockedIncrement((volatile signed __int32 *)(*((_QWORD *)&v7 + 1) + 8LL)) == 1 )
+        MEMORY[0] = (char *)&v11 + 8;
+      if ( *((_QWORD *)&v11 + 1) )
+        v4 = *(_DWORD *)(*((_QWORD *)&v11 + 1) + 24LL);
+    }
+    v12 = v4;
+    (*(void (__fastcall **)(__int64, __int128 *))(*(_QWORD *)a1 + 2416LL))(a1, &v11);
+  }
+  else
+  {
+    sub_7FF6F4F0F6D0(L"ServerMutePlayer_Validate");
+  }
+  return sub_7FF6F3CAD880(&v7);
+}
+
+
+======================================================================
+PlayerController::ServerNotifyLoadedWorld @ RVA 0x2912CA0 EA 0x7FF6F6332CA0
+======================================================================
+__int64 __fastcall sub_7FF6F6332CA0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  if ( (unsigned __int8)sub_7FF6F604C4A0(a1, v6) )
+    return sub_7FF6F604C380(a1, v8);
+  else
+    return sub_7FF6F4F0F6D0(L"ServerNotifyLoadedWorld_Validate");
+}
+
+
+======================================================================
+PlayerController::ServerPause @ RVA 0x2912D50 EA 0x7FF6F6332D50
+======================================================================
+__int64 __fastcall sub_7FF6F6332D50(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64))(*(_QWORD *)a1 + 2008LL))(a1) )
+    return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 2016LL))(a1);
+  else
+    return sub_7FF6F4F0F6D0(L"ServerPause_Validate");
+}
+
+
+======================================================================
+PlayerController::ServerRestartPlayer @ RVA 0x2912DA0 EA 0x7FF6F6332DA0
+======================================================================
+__int64 __fastcall sub_7FF6F6332DA0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1992LL))(a1) )
+    return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 2000LL))(a1);
+  else
+    return sub_7FF6F4F0F6D0(L"ServerRestartPlayer_Validate");
+}
+
+
+======================================================================
+PlayerController::ServerSetSpectatorLocation @ RVA 0x2912DF0 EA 0x7FF6F6332DF0
+======================================================================
+__int64 __fastcall sub_7FF6F6332DF0(__int64 *a1, _QWORD *a2)
+{
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  __int64 v7; // rax
+  __int64 v8; // [rsp+20h] [rbp-40h] BYREF
+  int v9; // [rsp+28h] [rbp-38h]
+  __int64 v10; // [rsp+30h] [rbp-30h] BYREF
+  int v11; // [rsp+38h] [rbp-28h]
+  __int64 v12; // [rsp+40h] [rbp-20h] BYREF
+  int v13; // [rsp+48h] [rbp-18h]
+  __int64 v14; // [rsp+50h] [rbp-10h] BYREF
+  int v15; // [rsp+58h] [rbp-8h]
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v4 = a2[4];
+  v12 = v8;
+  v14 = v10;
+  v5 = v4 + (v4 != 0);
+  v13 = v9;
+  LODWORD(v4) = v11;
+  a2[4] = v5;
+  v15 = v4;
+  if ( !(*(unsigned __int8 (__fastcall **)(__int64 *, __int64 *, __int64 *))(*a1 + 1976))(a1, &v14, &v12) )
+    return sub_7FF6F4F0F6D0(L"ServerSetSpectatorLocation_Validate");
+  v15 = v9;
+  v13 = v11;
+  v7 = *a1;
+  v14 = v8;
+  v12 = v10;
+  return (*(__int64 (__fastcall **)(__int64 *, __int64 *, __int64 *))(v7 + 1984))(a1, &v12, &v14);
+}
+
+
+======================================================================
+PlayerController::ServerSetSpectatorWaiting @ RVA 0x2912F20 EA 0x7FF6F6332F20
+======================================================================
+__int64 __fastcall sub_7FF6F6332F20(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rsi
+  __int64 v5; // rax
+  bool v6; // bp
+  _BOOL8 v7; // rdx
+  int v9; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v5 = a2[4];
+  v6 = v9 != 0;
+  v7 = v9 != 0;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64, _BOOL8))(*(_QWORD *)a1 + 2472LL))(a1, v7) )
+    return (*(__int64 (__fastcall **)(__int64, bool))(*(_QWORD *)a1 + 2480LL))(a1, v6);
+  else
+    return sub_7FF6F4F0F6D0(L"ServerSetSpectatorWaiting_Validate");
+}
+
+
+======================================================================
+PlayerController::ServerShortTimeout @ RVA 0x2912FE0 EA 0x7FF6F6332FE0
+======================================================================
+__int64 __fastcall sub_7FF6F6332FE0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1928LL))(a1) )
+    return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1936LL))(a1);
+  else
+    return sub_7FF6F4F0F6D0(L"ServerShortTimeout_Validate");
+}
+
+
+======================================================================
+PlayerController::ServerToggleAILogging @ RVA 0x2913030 EA 0x7FF6F6333030
+======================================================================
+__int64 __fastcall sub_7FF6F6333030(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1824LL))(a1) )
+    return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1832LL))(a1);
+  else
+    return sub_7FF6F4F0F6D0(L"ServerToggleAILogging_Validate");
+}
+
+
+======================================================================
+PlayerController::ServerUnmutePlayer @ RVA 0x2913080 EA 0x7FF6F6333080
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6333080(__int64 a1, _QWORD *a2)
+{
+  int v4; // ebx
+  int v5; // ecx
+  __int128 v7; // [rsp+28h] [rbp-50h] BYREF
+  int v8; // [rsp+38h] [rbp-40h]
+  __int128 v9; // [rsp+40h] [rbp-38h] BYREF
+  int v10; // [rsp+50h] [rbp-28h]
+  __int128 v11; // [rsp+58h] [rbp-20h] BYREF
+  int v12; // [rsp+68h] [rbp-10h]
+
+  v7 = 0;
+  v4 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  a2[4] += a2[4] != 0;
+  v9 = v7;
+  if ( !*((_QWORD *)&v7 + 1) )
+    goto LABEL_9;
+  if ( _InterlockedIncrement((volatile signed __int32 *)(*((_QWORD *)&v7 + 1) + 8LL)) == 1 )
+    MEMORY[0] = (char *)&v9 + 8;
+  if ( *((_QWORD *)&v9 + 1) )
+    v5 = *(_DWORD *)(*((_QWORD *)&v9 + 1) + 24LL);
+  else
+LABEL_9:
+    v5 = 0;
+  v10 = v5;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64, __int128 *))(*(_QWORD *)a1 + 2392LL))(a1, &v9) )
+  {
+    v11 = v7;
+    if ( *((_QWORD *)&v7 + 1) )
+    {
+      if ( _InterlockedIncrement((volatile signed __int32 *)(*((_QWORD *)&v7 + 1) + 8LL)) == 1 )
+        MEMORY[0] = (char *)&v11 + 8;
+      if ( *((_QWORD *)&v11 + 1) )
+        v4 = *(_DWORD *)(*((_QWORD *)&v11 + 1) + 24LL);
+    }
+    v12 = v4;
+    (*(void (__fastcall **)(__int64, __int128 *))(*(_QWORD *)a1 + 2400LL))(a1, &v11);
+  }
+  else
+  {
+    sub_7FF6F4F0F6D0(L"ServerUnmutePlayer_Validate");
+  }
+  return sub_7FF6F3CAD880(&v7);
+}
+
+
+======================================================================
+PlayerController::ServerUpdateCamera @ RVA 0x29131D0 EA 0x7FF6F63331D0
+======================================================================
+__int64 __fastcall sub_7FF6F63331D0(__int64 *a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rax
+  __int64 v6; // r8
+  __int64 v7; // rdi
+  __int64 v9; // rax
+  __int64 v10; // [rsp+20h] [rbp-28h] BYREF
+  int v11; // [rsp+28h] [rbp-20h]
+  __int64 v12; // [rsp+30h] [rbp-18h] BYREF
+  int v13; // [rsp+38h] [rbp-10h]
+  unsigned int v14; // [rsp+50h] [rbp+8h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v4 = 0;
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v5 = a2[4];
+  v6 = v14;
+  LOBYTE(v4) = v5 != 0;
+  v12 = v10;
+  v7 = v5 + v4;
+  LODWORD(v5) = v11;
+  a2[4] = v7;
+  v13 = v5;
+  if ( !(*(unsigned __int8 (__fastcall **)(__int64 *, __int64 *, __int64))(*a1 + 1912))(a1, &v12, v6) )
+    return sub_7FF6F4F0F6D0(L"ServerUpdateCamera_Validate");
+  v13 = v11;
+  v9 = *a1;
+  v12 = v10;
+  return (*(__int64 (__fastcall **)(__int64 *, __int64 *, _QWORD))(v9 + 1920))(a1, &v12, v14);
+}
+
+
+======================================================================
+PlayerController::ServerVerifyViewTarget @ RVA 0x29132F0 EA 0x7FF6F63332F0
+======================================================================
+__int64 __fastcall sub_7FF6F63332F0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1896LL))(a1) )
+    return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1904LL))(a1);
+  else
+    return sub_7FF6F4F0F6D0(L"ServerVerifyViewTarget_Validate");
+}
+
+
+======================================================================
+PlayerController::ServerViewNextPlayer @ RVA 0x2913340 EA 0x7FF6F6333340
+======================================================================
+__int64 __fastcall sub_7FF6F6333340(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1880LL))(a1) )
+    return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1888LL))(a1);
+  else
+    return sub_7FF6F4F0F6D0(L"ServerViewNextPlayer_Validate");
+}
+
+
+======================================================================
+PlayerController::ServerViewPrevPlayer @ RVA 0x2913390 EA 0x7FF6F6333390
+======================================================================
+__int64 __fastcall sub_7FF6F6333390(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1864LL))(a1) )
+    return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1872LL))(a1);
+  else
+    return sub_7FF6F4F0F6D0(L"ServerViewPrevPlayer_Validate");
+}
+
+
+======================================================================
+PlayerController::ServerViewSelf @ RVA 0x29133E0 EA 0x7FF6F63333E0
+======================================================================
+__int64 __fastcall sub_7FF6F63333E0(__int64 *a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rax
+  __int64 v6; // rcx
+  __int64 v7; // rax
+  __int64 v9; // rax
+  int v10; // [rsp+20h] [rbp-20h] BYREF
+  char v11; // [rsp+24h] [rbp-1Ch]
+  int v12; // [rsp+28h] [rbp-18h]
+  int v13; // [rsp+2Ch] [rbp-14h]
+  int v14; // [rsp+30h] [rbp-10h] BYREF
+  char v15; // [rsp+34h] [rbp-Ch]
+  int v16; // [rsp+38h] [rbp-8h]
+  int v17; // [rsp+3Ch] [rbp-4h]
+
+  v13 &= ~1u;
+  v2 = a2[4] == 0;
+  v10 = 0;
+  v12 = 0x40000000;
+  v11 = 1;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  v5 = a2[4];
+  v14 = v10;
+  v16 = v12;
+  v6 = v5 + (v5 != 0);
+  LOBYTE(v5) = v11;
+  a2[4] = v6;
+  v15 = v5;
+  v7 = *a1;
+  v17 ^= ((unsigned __int8)v13 ^ (unsigned __int8)v17) & 1;
+  if ( !(*(unsigned __int8 (__fastcall **)(__int64 *, int *))(v7 + 1848))(a1, &v14) )
+    return sub_7FF6F4F0F6D0(L"ServerViewSelf_Validate");
+  v15 = v11;
+  v14 = v10;
+  v9 = *a1;
+  v17 ^= ((unsigned __int8)v13 ^ (unsigned __int8)v17) & 1;
+  v16 = v12;
+  return (*(__int64 (__fastcall **)(__int64 *, int *))(v9 + 1856))(a1, &v14);
+}
+
+
+======================================================================
+PlayerController::SetAudioListenerOverride @ RVA 0x2913B70 EA 0x7FF6F6333B70
+======================================================================
+__int64 __fastcall sub_7FF6F6333B70(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+20h] [rbp-48h] BYREF
+  int v9; // [rsp+28h] [rbp-40h]
+  __int64 v10; // [rsp+30h] [rbp-38h] BYREF
+  int v11; // [rsp+38h] [rbp-30h]
+  __int64 v12; // [rsp+40h] [rbp-28h] BYREF
+  int v13; // [rsp+48h] [rbp-20h]
+  __int64 v14; // [rsp+50h] [rbp-18h] BYREF
+  int v15; // [rsp+58h] [rbp-10h]
+  __int64 v16; // [rsp+78h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v16;
+  v12 = v8;
+  LOBYTE(v2) = v5 != 0;
+  v14 = v10;
+  v13 = v9;
+  v15 = v11;
+  a2[4] = v5 + v2;
+  return sub_7FF6F604D3B0(a1, v6, &v14, &v12);
+}
+
+
+======================================================================
+PlayerController::SetCinematicMode @ RVA 0x2913D90 EA 0x7FF6F6333D90
+======================================================================
+__int64 __fastcall sub_7FF6F6333D90(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  bool v5; // r15
+  bool v6; // r14
+  bool v7; // bp
+  bool v8; // si
+  __int64 v9; // rax
+  bool v10; // zf
+  bool v12; // [rsp+20h] [rbp-58h]
+  bool v13; // [rsp+28h] [rbp-50h]
+  int v14; // [rsp+30h] [rbp-48h] BYREF
+  _DWORD v15[17]; // [rsp+34h] [rbp-44h] BYREF
+  int v16; // [rsp+80h] [rbp+8h] BYREF
+  int v17; // [rsp+88h] [rbp+10h] BYREF
+  int v18; // [rsp+98h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v17 = 0;
+  v5 = v16 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v18 = 0;
+  v6 = v17 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  v14 = 0;
+  v7 = v18 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v15[0] = 0;
+  v8 = v14 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v15);
+  }
+  v9 = a2[4];
+  LOBYTE(v2) = v9 != 0;
+  v10 = v15[0] == 0;
+  a2[4] = v9 + v2;
+  v13 = !v10;
+  v12 = v8;
+  return (*(__int64 (__fastcall **)(__int64, bool, bool, bool, bool, bool))(*(_QWORD *)a1 + 2608LL))(
+           a1,
+           v5,
+           v6,
+           v7,
+           v12,
+           v13);
+}
+
+
+======================================================================
+PlayerController::SetHapticsByValue @ RVA 0x2914270 EA 0x7FF6F6334270
+======================================================================
+__int64 __fastcall sub_7FF6F6334270(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  __int64 v6; // r8
+  char v7; // al
+  int v9; // [rsp+20h] [rbp-18h] BYREF
+  _DWORD v10[5]; // [rsp+24h] [rbp-14h] BYREF
+  char v11; // [rsp+48h] [rbp+10h] BYREF
+  char v12; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v10[0] = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  v2 = a2[4] == 0;
+  v9 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  v2 = a2[4] == 0;
+  v11 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  v7 = v11;
+  a2[4] += a2[4] != 0;
+  v12 = v7;
+  return sub_7FF6F604DAB0(a1, v5, v6, &v12);
+}
+
+
+======================================================================
+PlayerController::SetIgnoreLookInput @ RVA 0x2914450 EA 0x7FF6F6334450
+======================================================================
+__int64 __fastcall sub_7FF6F6334450(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2648LL))(a1, v5);
+}
+
+
+======================================================================
+PlayerController::SetIgnoreMoveInput @ RVA 0x29144E0 EA 0x7FF6F63344E0
+======================================================================
+__int64 __fastcall sub_7FF6F63344E0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2624LL))(a1, v5);
+}
+
+
+======================================================================
+PlayerController::SetName @ RVA 0x29149A0 EA 0x7FF6F63349A0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F63349A0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rax
+  __int64 result; // rax
+  __int64 v7[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  v4 = 0;
+  v7[0] = 0;
+  v7[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  v5 = a2[4];
+  LOBYTE(v4) = v5 != 0;
+  a2[4] = v5 + v4;
+  result = (*(__int64 (__fastcall **)(__int64, __int64 *))(*(_QWORD *)a1 + 2560LL))(a1, v7);
+  if ( v7[0] )
+    return sub_7FF6F4DED1F0(v7[0]);
+  return result;
+}
+
+
+======================================================================
+PlayerController::SetViewTargetWithBlend @ RVA 0x2915020 EA 0x7FF6F6335020
+======================================================================
+__int64 __fastcall sub_7FF6F6335020(_QWORD *a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  int v6; // xmm0_4
+  __int64 v7; // r9
+  __int64 v8; // rdx
+  bool v9; // zf
+  bool v11; // [rsp+28h] [rbp-30h]
+  int v12; // [rsp+30h] [rbp-28h] BYREF
+  _QWORD v13[4]; // [rsp+38h] [rbp-20h] BYREF
+  unsigned __int8 v14; // [rsp+60h] [rbp+8h] BYREF
+  int v15; // [rsp+68h] [rbp+10h] BYREF
+  int v16; // [rsp+78h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v13[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v13);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v5 = a2[4];
+  v6 = v16;
+  v7 = v14;
+  LOBYTE(v2) = v5 != 0;
+  v8 = v13[0];
+  v9 = v15 == 0;
+  a2[4] = v5 + v2;
+  v11 = !v9;
+  return (*(__int64 (__fastcall **)(_QWORD *, __int64, _QWORD, __int64, int, bool))(*a1 + 2920LL))(
+           a1,
+           v8,
+           *a1,
+           v7,
+           v6,
+           v11);
+}
+
+
+======================================================================
+PlayerController::SetVirtualJoystickVisibility @ RVA 0x29151A0 EA 0x7FF6F63351A0
+======================================================================
+__int64 __fastcall sub_7FF6F63351A0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2896LL))(a1, v5);
+}
+
+
+======================================================================
+PlayerController::StartFire @ RVA 0x2915880 EA 0x7FF6F6335880
+======================================================================
+__int64 __fastcall sub_7FF6F6335880(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2704LL))(a1, v5);
+}
+
+
+======================================================================
+PlayerController::StopHapticEffect @ RVA 0x2915CB0 EA 0x7FF6F6335CB0
+======================================================================
+__int64 __fastcall sub_7FF6F6335CB0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  char v5; // al
+  char v7; // [rsp+38h] [rbp+10h] BYREF
+  char v8; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  v8 = v5;
+  return sub_7FF6F604F6E0(a1, &v8);
+}
+
+
+======================================================================
+PlayerController::SwitchLevel @ RVA 0x2915D50 EA 0x7FF6F6335D50
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6335D50(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rax
+  __int64 result; // rax
+  __int64 v7[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  v4 = 0;
+  v7[0] = 0;
+  v7[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  v5 = a2[4];
+  LOBYTE(v4) = v5 != 0;
+  a2[4] = v5 + v4;
+  result = (*(__int64 (__fastcall **)(__int64, __int64 *))(*(_QWORD *)a1 + 2568LL))(a1, v7);
+  if ( v7[0] )
+    return sub_7FF6F4DED1F0(v7[0]);
+  return result;
+}
+
+
+======================================================================
+PlayerController::ToggleSpeaking @ RVA 0x2915E40 EA 0x7FF6F6335E40
+======================================================================
+__int64 __fastcall sub_7FF6F6335E40(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 2760LL))(a1, v5);
+}
+
+
+======================================================================
+PlayerController::WasInputKeyJustPressed @ RVA 0x2916210 EA 0x7FF6F6336210
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6336210(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  int v6; // ebx
+  __int64 v8; // [rsp+28h] [rbp-50h] BYREF
+  __int128 v9; // [rsp+30h] [rbp-48h]
+  int v10; // [rsp+40h] [rbp-38h]
+  __int64 v11; // [rsp+48h] [rbp-30h] BYREF
+  __int128 v12; // [rsp+50h] [rbp-28h] BYREF
+  int v13; // [rsp+60h] [rbp-18h]
+
+  v6 = 0;
+  v8 = 0;
+  v9 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  a2[4] += a2[4] != 0;
+  v11 = v8;
+  v12 = v9;
+  if ( *((_QWORD *)&v9 + 1) )
+  {
+    if ( _InterlockedIncrement((volatile signed __int32 *)(*((_QWORD *)&v9 + 1) + 8LL)) == 1 )
+      MEMORY[0] = (char *)&v12 + 8;
+    if ( *((_QWORD *)&v12 + 1) )
+      v6 = *(_DWORD *)(*((_QWORD *)&v12 + 1) + 24LL);
+  }
+  v13 = v6;
+  *a3 = sub_7FF6F6052F60(a1, &v11);
+  return sub_7FF6F3C36760(&v8);
+}
+
+
+======================================================================
+PlayerController::WasInputKeyJustReleased @ RVA 0x2916310 EA 0x7FF6F6336310
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6336310(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  int v6; // ebx
+  __int64 v8; // [rsp+28h] [rbp-50h] BYREF
+  __int128 v9; // [rsp+30h] [rbp-48h]
+  int v10; // [rsp+40h] [rbp-38h]
+  __int64 v11; // [rsp+48h] [rbp-30h] BYREF
+  __int128 v12; // [rsp+50h] [rbp-28h] BYREF
+  int v13; // [rsp+60h] [rbp-18h]
+
+  v6 = 0;
+  v8 = 0;
+  v9 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  a2[4] += a2[4] != 0;
+  v11 = v8;
+  v12 = v9;
+  if ( *((_QWORD *)&v9 + 1) )
+  {
+    if ( _InterlockedIncrement((volatile signed __int32 *)(*((_QWORD *)&v9 + 1) + 8LL)) == 1 )
+      MEMORY[0] = (char *)&v12 + 8;
+    if ( *((_QWORD *)&v12 + 1) )
+      v6 = *(_DWORD *)(*((_QWORD *)&v12 + 1) + 24LL);
+  }
+  v13 = v6;
+  *a3 = sub_7FF6F6052FB0(a1, &v11);
+  return sub_7FF6F3C36760(&v8);
+}
+

@@ -1,0 +1,212 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Onboarding/bp_waitforcookmeat -> BP_WaitForCookMeat_C (RECOVERED via retry pass)
+
+=== BP_WaitForCookMeat_C::ChildActor43 (201 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x1a3b89bb080
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__GameplayStatics@0x1a2aa1aeb20
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_GetObjectClass_ReturnValue@0x1a3b89bb080
+    ContextExpression:
+    $32: FinalFunction target=GetObjectClass@0x1a2a9badd20 (
+      $41: StructMemberContext prop=ItemToCook@0x1a2a9838bc0
+        Expression to struct:
+        $50: LocalOutVariable named OnPlacedItemInCookingPot@0x1a3b89bb000
+      $59: EndFunctionParms
+    )
+$60: LetBool (Variable = Expression)
+  Variable:
+  $61: LocalVariable named CallFunc_NotEqual_ClassClass_ReturnValue@0x1a3b89bb100
+  Expression:
+  $70: CallMath target=NotEqual_ClassClass@0x1a2a9be0950 (
+    $79: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x1a3b89bb080
+    $88: ObjectConst idx:229298@0x1a394968940
+    $97: EndFunctionParms
+  )
+$98: LetBool (Variable = Expression)
+  Variable:
+  $99: LocalVariable named CallFunc_NotEqual_ClassClass_ReturnValue2@0x1a3b89bb180
+  Expression:
+  $108: CallMath target=NotEqual_ClassClass@0x1a2a9be0950 (
+    $117: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x1a3b89bb080
+    $126: ObjectConst idx:229299@0x1a394967980
+    $135: EndFunctionParms
+  )
+$136: LetBool (Variable = Expression)
+  Variable:
+  $137: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x1a3b89bb200
+  Expression:
+  $146: CallMath target=BooleanAND@0x1a2a9bc10f0 (
+    $155: LocalVariable named CallFunc_NotEqual_ClassClass_ReturnValue@0x1a3b89bb100
+    $164: LocalVariable named CallFunc_NotEqual_ClassClass_ReturnValue2@0x1a3b89bb180
+    $173: EndFunctionParms
+  )
+$174: JumpIfNot -> 0xc6, cond:
+  $179: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x1a3b89bb200
+$188: FinalFunction target=SignalComplete@0x1a2a95f7e00 (
+  $197: EndFunctionParms
+)
+$198: Return expression:
+  $199: Nothing
+$200: EndOfScript
+
+=== BP_WaitForCookMeat_C::ChildActor42_GEN_VARIABLE (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_NewParam@0x1a3b89bb600
+  Expression:
+  $9: LocalVariable named NewParam@0x1a3b89bb280
+$18: VirtualFunction call "idx:229304" (
+  $31: literal int32 245
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_WaitForCookMeat_C::OnParticipantJoin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=idx:229307@0x1a3b89bb700
+  Expression:
+  $9: LocalVariable named Participant@0x1a3b89bb300
+$18: VirtualFunction call "idx:229304" (
+  $31: literal int32 273
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_WaitForCookMeat_C::OnParticipantLeave (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=idx:229306@0x1a3b89bb400
+  Expression:
+  $9: LocalVariable named Participant@0x1a3b89bb380
+$18: VirtualFunction call "idx:229304" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_WaitForCookMeat_C::ChildActor40_GEN_VARIABLE (529 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x1a3b840d120
+$10: Let (Variable = Expression)
+  Variable:
+  $19: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x1a3b89bb480
+  Expression:
+  $28: DynamicCast to AthenaPlayerCharacter@0x1a2a86d5b00 of expr:
+  $37: LocalVariable named idx:229306@0x1a3b89bb400
+$46: Let (Variable = Expression)
+  Variable:
+  $55: LocalVariable named K2Node_DynamicCast_bSuccess@0x1a3b89bb500
+  Expression:
+  $64: PrimitiveCast type=71
+    Argument:
+    $66: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x1a3b89bb480
+$75: JumpIfNot -> 0x20e, cond:
+  $80: LocalVariable named K2Node_DynamicCast_bSuccess@0x1a3b89bb500
+$89: LetObj (Variable = Expression)
+  Variable:
+  $90: LocalVariable named idx:229301@0x1a3b89bb580
+  Expression:
+  $99: Context
+    ObjectExpression:
+    $100: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x1a3b89bb480
+    SkipBytes: 0xa
+    RValueProperty: idx:229301@0x1a3b89bb580
+    ContextExpression:
+    $121: FinalFunction target=GetController@0x1a2a98c7d70 (
+      $130: EndFunctionParms
+    )
+$131: Let (Variable = Expression)
+  Variable:
+  $140: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x1a3b89bb680
+  Expression:
+  $149: Context
+    ObjectExpression:
+    $150: ObjectConst Default__ObjectMessagingFunctions@0x1a2aa233ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x1a3b89bb680
+    ContextExpression:
+    $171: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x1a2a9c60390 (
+      $180: LocalVariable named idx:229301@0x1a3b89bb580
+      $189: EndFunctionParms
+    )
+$190: Context
+  ObjectExpression:
+  $191: ObjectConst Default__ObjectMessagingFunctions@0x1a2aa233ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $212: FinalFunction target=UnregisterEventFromHandle@0x1a2a9c61420 (
+    $221: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x1a3b89bb680
+    $230: InstanceVariable named idx:229305@0x1a3b89bba00
+    $239: EndFunctionParms
+  )
+$240: Jump to offset 0x20e
+$245: VirtualFunction call "idx:229309" (
+  $258: LocalVariable named K2Node_CustomEvent_NewParam@0x1a3b89bb600
+  $267: EndFunctionParms
+)
+$268: Jump to offset 0x20e
+$273: Let (Variable = Expression)
+  Variable:
+  $282: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character2@0x1a3b89bb780
+  Expression:
+  $291: DynamicCast to AthenaPlayerCharacter@0x1a2a86d5b00 of expr:
+  $300: LocalVariable named idx:229307@0x1a3b89bb700
+$309: Let (Variable = Expression)
+  Variable:
+  $318: LocalVariable named K2Node_DynamicCast_bSuccess2@0x1a3b89bb800
+  Expression:
+  $327: PrimitiveCast type=71
+    Argument:
+    $329: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character2@0x1a3b89bb780
+$338: JumpIfNot -> 0x20e, cond:
+  $343: LocalVariable named K2Node_DynamicCast_bSuccess2@0x1a3b89bb800
+$352: LetObj (Variable = Expression)
+  Variable:
+  $353: LocalVariable named idx:229302@0x1a3b89bb880
+  Expression:
+  $362: Context
+    ObjectExpression:
+    $363: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character2@0x1a3b89bb780
+    SkipBytes: 0xa
+    RValueProperty: idx:229302@0x1a3b89bb880
+    ContextExpression:
+    $384: FinalFunction target=GetController@0x1a2a98c7d70 (
+      $393: EndFunctionParms
+    )
+$394: Let (Variable = Expression)
+  Variable:
+  $403: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x1a3b89bb900
+  Expression:
+  $412: Context
+    ObjectExpression:
+    $413: ObjectConst Default__ObjectMessagingFunctions@0x1a2aa233ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x1a3b89bb900
+    ContextExpression:
+    $434: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x1a2a9c60390 (
+      $443: LocalVariable named idx:229302@0x1a3b89bb880
+      $452: EndFunctionParms
+    )
+$453: Context
+  ObjectExpression:
+  $454: ObjectConst Default__ObjectMessagingFunctions@0x1a2aa233ad0
+  SkipBytes: 0x33
+  RValueProperty: (null)
+  ContextExpression:
+  $475: FinalFunction target=RegisterEventFromHandle@0x1a2a9c60c00 (
+    $484: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x1a3b89bb900
+    $493: InstanceVariable named idx:229305@0x1a3b89bba00
+    $502: Self
+    $503: literal ansi string "OnFoodInPot"
+    $516: ObjectConst OnPlacedItemInCookingPot@0x1a2a9838b20
+    $525: EndFunctionParms
+  )
+$526: Return expression:
+  $527: Nothing
+$528: EndOfScript

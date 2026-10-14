@@ -1,0 +1,160 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Onboarding/bp_maidenvoyage_damageplayer -> BP_MaidenVoyage_DamagePlayer_C
+
+=== BP_MaidenVoyage_DamagePlayer_C::fn_idx_283050 (110 bytes) ===
+$0: Context
+  ObjectExpression:
+  $1: ObjectConst Default__HealthTestFunctions@0x19e4d735b50
+  SkipBytes: 0x14
+  RValueProperty: (null)
+  ContextExpression:
+  $22: FinalFunction target=EnableAdjustHealth_IsInert@0x19e4d1994b0 (
+    $31: LocalVariable named InputPin@0x19fcdd60280
+    $40: False
+    $41: EndFunctionParms
+  )
+$42: VirtualFunction call "ApplyDamage" (
+  $55: LocalVariable named InputPin@0x19fcdd60280
+  $64: EndFunctionParms
+)
+$65: Context
+  ObjectExpression:
+  $66: ObjectConst Default__HealthTestFunctions@0x19e4d735b50
+  SkipBytes: 0x14
+  RValueProperty: (null)
+  ContextExpression:
+  $87: FinalFunction target=DisableAdjustHealth_IsInert@0x19e4d1984f0 (
+    $96: LocalVariable named InputPin@0x19fcdd60280
+    $105: False
+    $106: EndFunctionParms
+  )
+$107: Return expression:
+  $108: Nothing
+$109: EndOfScript
+
+=== BP_MaidenVoyage_DamagePlayer_C::fn_idx_1619 (105 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: StructMemberContext prop=Amount@0x19e4ce0f540
+    Expression to struct:
+    $18: LocalVariable named idx:283052@0x19fcdd60380
+  Expression:
+  $27: literal float 15
+$32: Let (Variable = Expression)
+  Variable:
+  $41: StructMemberContext prop=Reason@0x19e4ce0f4c0
+    Expression to struct:
+    $50: LocalVariable named idx:283052@0x19fcdd60380
+  Expression:
+  $59: literal byte 5
+$61: Context
+  ObjectExpression:
+  $62: LocalVariable named HealthComponent@0x19fcdd60300
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $83: FinalFunction target=TakeDamage@0x19e4d18fec0 (
+    $92: LocalVariable named idx:283052@0x19fcdd60380
+    $101: EndFunctionParms
+  )
+$102: Return expression:
+  $103: Nothing
+$104: EndOfScript
+
+=== BP_MaidenVoyage_DamagePlayer_C::fn_idx_1828 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fcdd60480
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fcdd60400
+$18: VirtualFunction call "idx:283051" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_MaidenVoyage_DamagePlayer_C::fn_idx_283051 (369 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fcdbb6d60
+$10: SetArray
+  $11: LocalVariable named CallFunc_GetParticipants_Participants@0x19fcdd62780
+  $20: EndArray
+$21: FinalFunction target=GetParticipants@0x19e4cda59a0 (
+  $30: LocalVariable named CallFunc_GetParticipants_Participants@0x19fcdd62780
+  $39: EndFunctionParms
+)
+$40: Context
+  ObjectExpression:
+  $41: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $62: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $71: LocalVariable named CallFunc_GetParticipants_Participants@0x19fcdd62780
+    $80: literal int32 0
+    $85: LocalVariable named CallFunc_Array_Get_Item@0x19fcdd60500
+    $94: EndFunctionParms
+  )
+$95: Let (Variable = Expression)
+  Variable:
+  $104: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fcdd60580
+  Expression:
+  $113: DynamicCast to AthenaPlayerCharacter@0x19e4be85b00 of expr:
+  $122: LocalVariable named CallFunc_Array_Get_Item@0x19fcdd60500
+$131: Let (Variable = Expression)
+  Variable:
+  $140: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcdd60600
+  Expression:
+  $149: PrimitiveCast type=71
+    Argument:
+    $151: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fcdd60580
+$160: JumpIfNot -> 0x16e, cond:
+  $165: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcdd60600
+$174: LetBool (Variable = Expression)
+  Variable:
+  $175: LocalVariable named idx:283048@0x19fcda47680
+  Expression:
+  $184: Context
+    ObjectExpression:
+    $185: Context
+      ObjectExpression:
+      $186: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fcdd60580
+      SkipBytes: 0x9
+      RValueProperty: HealthComponent@0x19e4d0811d0
+      ContextExpression:
+      $207: InstanceVariable named HealthComponent@0x19e4d0811d0
+    SkipBytes: 0xe
+    RValueProperty: idx:283048@0x19fcda47680
+    ContextExpression:
+    $228: VirtualFunction call "CanAdjustHealth" (
+      $241: EndFunctionParms
+    )
+$242: JumpIfNot -> 0x13c, cond:
+  $247: LocalVariable named idx:283048@0x19fcda47680
+$256: VirtualFunction call "ApplyDamage" (
+  $269: Context
+    ObjectExpression:
+    $270: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fcdd60580
+    SkipBytes: 0x9
+    RValueProperty: HealthComponent@0x19e4d0811d0
+    ContextExpression:
+    $291: InstanceVariable named HealthComponent@0x19e4d0811d0
+  $300: EndFunctionParms
+)
+$301: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $310: EndFunctionParms
+)
+$311: Jump to offset 0x16e
+$316: VirtualFunction call "idx:283050" (
+  $329: Context
+    ObjectExpression:
+    $330: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fcdd60580
+    SkipBytes: 0x9
+    RValueProperty: HealthComponent@0x19e4d0811d0
+    ContextExpression:
+    $351: InstanceVariable named HealthComponent@0x19e4d0811d0
+  $360: EndFunctionParms
+)
+$361: Jump to offset 0x12d
+$366: Return expression:
+  $367: Nothing
+$368: EndOfScript

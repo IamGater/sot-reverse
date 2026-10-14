@@ -1,0 +1,170 @@
+// Class: AnimationDataFunctionLib (4 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+AnimationDataFunctionLib::CheckAnimDataClassTypeForDuplicateAnimDataEntryStructs @ RVA 0x2EE5520 EA 0x7FF6F6905520
+======================================================================
+__int64 __fastcall sub_7FF6F6905520(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  __int64 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v7 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v5 = v7;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return sub_7FF6F68D23E0(v5);
+}
+
+
+======================================================================
+AnimationDataFunctionLib::GetAnimDataEntryStructAsStructWrapper @ RVA 0x2EE5960 EA 0x7FF6F6905960
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6905960(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  int v5; // edi
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  _BYTE v9[32]; // [rsp+28h] [rbp-20h] BYREF
+  __int64 v10; // [rsp+58h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+60h] [rbp+18h] BYREF
+
+  v5 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  a2[4] += a2[4] != 0;
+  v6 = sub_7FF6F68D49E0(v9, v11, v10);
+  if ( *(_QWORD *)a3 != *(_QWORD *)v6 )
+  {
+    *(_QWORD *)a3 = *(_QWORD *)v6;
+    *(_QWORD *)v6 = 0;
+    v7 = *(_QWORD *)(v6 + 8);
+    if ( v7 )
+      v5 = *(_DWORD *)(v7 + 24);
+    *(_DWORD *)(a3 + 16) = v5;
+    *(_DWORD *)(v6 + 16) = -2040109466;
+    sub_7FF6F3C379A0(a3 + 8, v6 + 8);
+  }
+  return sub_7FF6F68CFB30(v9);
+}
+
+
+======================================================================
+AnimationDataFunctionLib::MakeAnimationData @ RVA 0x2EE64F0 EA 0x7FF6F69064F0
+======================================================================
+__int64 __fastcall sub_7FF6F69064F0(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  __int64 result; // rax
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  v7 = v9;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F68D8290(v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AnimationDataFunctionLib::UnwrapAnimDataEntryStruct @ RVA 0x2EE7770 EA 0x7FF6F6907770
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6907770(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  __int128 *v6; // rsi
+  __int64 v7; // rax
+  __int128 v9; // [rsp+28h] [rbp-20h] BYREF
+  int v10; // [rsp+38h] [rbp-10h]
+  __int64 v11; // [rsp+58h] [rbp+10h] BYREF
+
+  v9 = 0;
+  v5 = 0;
+  v10 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = &v9;
+  if ( a2[7] )
+    v6 = (__int128 *)a2[7];
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], 0);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, 0);
+  }
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  *a3 = sub_7FF6F68D7780(v6, v11, a2[7]);
+  return sub_7FF6F68CFB30(&v9);
+}
+

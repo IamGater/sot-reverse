@@ -1,0 +1,71 @@
+// Class: ServiceMessagingFunctions (2 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+ServiceMessagingFunctions::GetServiceMessagingDispatcher @ RVA 0x3002700 EA 0x7FF6F6A22700
+======================================================================
+_QWORD *__fastcall sub_7FF6F6A22700(__int64 a1, _QWORD *a2, _QWORD *a3)
+{
+  __int64 v3; // rdi
+  __int128 *v6; // rdx
+  __int64 v7; // rax
+  _QWORD *result; // rax
+  __int128 v9; // [rsp+20h] [rbp-18h] BYREF
+  char v10; // [rsp+48h] [rbp+10h] BYREF
+
+  v3 = 0;
+  a2[7] = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = &v9;
+  if ( a2[7] )
+    v6 = (__int128 *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (_QWORD *)sub_7FF6F6A1FAA0(&v10, v6);
+  *a3 = *result;
+  return result;
+}
+
+
+======================================================================
+ServiceMessagingFunctions::GetServiceMessagingDispatcherFromActor @ RVA 0x30027A0 EA 0x7FF6F6A227A0
+======================================================================
+_QWORD *__fastcall sub_7FF6F6A227A0(__int64 a1, _QWORD *a2, _QWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  _QWORD *result; // rax
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+  char v10; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  v7 = v9;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = (_QWORD *)sub_7FF6F6A1FAE0(&v10, v7);
+  *a3 = *result;
+  return result;
+}
+

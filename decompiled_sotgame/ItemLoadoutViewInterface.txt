@@ -1,0 +1,370 @@
+// Class: ItemLoadoutViewInterface (11 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+ItemLoadoutViewInterface::GetAllItems @ RVA 0x33AF0B0 EA 0x7FF6F6DCF0B0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6DCF0B0(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 result; // rax
+  __int64 v5; // rdi
+  __int64 v6[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64, __int64 *))(*(_QWORD *)a1 + 64LL))(a1, v6);
+  v5 = result;
+  if ( a3 != result )
+  {
+    if ( *(_QWORD *)a3 )
+    {
+      sub_7FF6F4DED1F0(*(_QWORD *)a3);
+      if ( *(_QWORD *)a3 )
+        *(_QWORD *)a3 = 0;
+    }
+    *(_QWORD *)a3 = *(_QWORD *)v5;
+    *(_QWORD *)v5 = 0;
+    *(_DWORD *)(a3 + 8) = *(_DWORD *)(v5 + 8);
+    result = *(unsigned int *)(v5 + 12);
+    *(_DWORD *)(a3 + 12) = result;
+    *(_QWORD *)(v5 + 8) = 0;
+  }
+  if ( v6[0] )
+    return sub_7FF6F4DED1F0(v6[0]);
+  return result;
+}
+
+
+======================================================================
+ItemLoadoutViewInterface::GetCapacity @ RVA 0x33AF150 EA 0x7FF6F6DCF150
+======================================================================
+__int64 __fastcall sub_7FF6F6DCF150(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 result; // rax
+  __int64 v10; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 72LL))(a1, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ItemLoadoutViewInterface::GetCategories @ RVA 0x33AF1F0 EA 0x7FF6F6DCF1F0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6DCF1F0(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 result; // rax
+  __int64 v5; // rdi
+  __int64 v6[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64, __int64 *))(*(_QWORD *)a1 + 32LL))(a1, v6);
+  v5 = result;
+  if ( a3 != result )
+  {
+    if ( *(_QWORD *)a3 )
+    {
+      sub_7FF6F4DED1F0(*(_QWORD *)a3);
+      if ( *(_QWORD *)a3 )
+        *(_QWORD *)a3 = 0;
+    }
+    *(_QWORD *)a3 = *(_QWORD *)v5;
+    *(_QWORD *)v5 = 0;
+    *(_DWORD *)(a3 + 8) = *(_DWORD *)(v5 + 8);
+    result = *(unsigned int *)(v5 + 12);
+    *(_DWORD *)(a3 + 12) = result;
+    *(_QWORD *)(v5 + 8) = 0;
+  }
+  if ( v6[0] )
+    return sub_7FF6F4DED1F0(v6[0]);
+  return result;
+}
+
+
+======================================================================
+ItemLoadoutViewInterface::GetItem @ RVA 0x33AF290 EA 0x7FF6F6DCF290
+======================================================================
+__int64 __fastcall sub_7FF6F6DCF290(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 result; // rax
+  __int64 v10; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 40LL))(a1, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ItemLoadoutViewInterface::GetItemByIndex @ RVA 0x33AF330 EA 0x7FF6F6DCF330
+======================================================================
+__int64 __fastcall sub_7FF6F6DCF330(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rdx
+  __int64 result; // rax
+  unsigned int v11; // [rsp+40h] [rbp+8h] BYREF
+  __int64 v12; // [rsp+48h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v7 = a2[4];
+  v8 = v11;
+  v9 = v12;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, __int64, __int64))(*(_QWORD *)a1 + 48LL))(a1, v9, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ItemLoadoutViewInterface::GetItemLoadout @ RVA 0x33AF400 EA 0x7FF6F6DCF400
+======================================================================
+const void **__fastcall sub_7FF6F6DCF400(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rax
+  __int64 v5; // rsi
+  __int64 v6; // rdi
+  const void *v7; // rbp
+  const void **result; // rax
+  __int64 v9; // rbx
+  __int64 v10; // rdi
+  const void *v11; // rsi
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 16LL))(a1);
+  v5 = v4;
+  if ( a3 != v4 )
+  {
+    v6 = *(int *)(v4 + 8);
+    v7 = *(const void **)v4;
+    if ( (_DWORD)v6 != *(_DWORD *)(a3 + 12) && (*(_QWORD *)a3 || (_DWORD)v6) )
+      *(_QWORD *)a3 = sub_7FF6F4DFAA90(*(_QWORD *)a3, 16 * v6, 0);
+    memcpy(*(void **)a3, v7, 16 * v6);
+    *(_DWORD *)(a3 + 8) = v6;
+    *(_DWORD *)(a3 + 12) = v6;
+  }
+  result = (const void **)(v5 + 16);
+  v9 = a3 + 16;
+  if ( v9 != v5 + 16 )
+  {
+    v10 = *(int *)(v5 + 24);
+    v11 = *result;
+    if ( (_DWORD)v10 != *(_DWORD *)(v9 + 12) && (*(_QWORD *)v9 || (_DWORD)v10) )
+      *(_QWORD *)v9 = sub_7FF6F4DFAA90(*(_QWORD *)v9, 8 * v10, 0);
+    result = (const void **)memcpy(*(void **)v9, v11, 8 * v10);
+    *(_DWORD *)(v9 + 8) = v10;
+    *(_DWORD *)(v9 + 12) = v10;
+  }
+  return result;
+}
+
+
+======================================================================
+ItemLoadoutViewInterface::GetItems @ RVA 0x33AF4E0 EA 0x7FF6F6DCF4E0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6DCF4E0(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 result; // rax
+  __int64 v7; // rdi
+  __int64 v8[4]; // [rsp+28h] [rbp-20h] BYREF
+  __int64 v9; // [rsp+50h] [rbp+8h] BYREF
+
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  a2[4] += a2[4] != 0;
+  result = (*(__int64 (__fastcall **)(__int64, __int64 *, __int64))(*(_QWORD *)a1 + 56LL))(a1, v8, v9);
+  v7 = result;
+  if ( a3 != result )
+  {
+    if ( *(_QWORD *)a3 )
+    {
+      sub_7FF6F4DED1F0(*(_QWORD *)a3);
+      if ( *(_QWORD *)a3 )
+        *(_QWORD *)a3 = 0;
+    }
+    *(_QWORD *)a3 = *(_QWORD *)v7;
+    *(_QWORD *)v7 = 0;
+    *(_DWORD *)(a3 + 8) = *(_DWORD *)(v7 + 8);
+    result = *(unsigned int *)(v7 + 12);
+    *(_DWORD *)(a3 + 12) = result;
+    *(_QWORD *)(v7 + 8) = 0;
+  }
+  if ( v8[0] )
+    return sub_7FF6F4DED1F0(v8[0]);
+  return result;
+}
+
+
+======================================================================
+ItemLoadoutViewInterface::GetNumCategories @ RVA 0x33AF5D0 EA 0x7FF6F6DCF5D0
+======================================================================
+__int64 __fastcall sub_7FF6F6DCF5D0(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 24LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ItemLoadoutViewInterface::GetNumItems @ RVA 0x33AF600 EA 0x7FF6F6DCF600
+======================================================================
+__int64 __fastcall sub_7FF6F6DCF600(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 result; // rax
+  __int64 v10; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 80LL))(a1, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ItemLoadoutViewInterface::GetWeaponsLoadout @ RVA 0x33AF6A0 EA 0x7FF6F6DCF6A0
+======================================================================
+const void **__fastcall sub_7FF6F6DCF6A0(__int64 a1, __int64 a2, __int64 a3)
+{
+  const void **result; // rax
+  __int64 v5; // rbx
+  const void *v6; // rsi
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (const void **)(*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 96LL))(a1);
+  if ( (const void **)a3 != result )
+  {
+    v5 = *((int *)result + 2);
+    v6 = *result;
+    if ( (_DWORD)v5 != *(_DWORD *)(a3 + 12) && (*(_QWORD *)a3 || (_DWORD)v5) )
+      *(_QWORD *)a3 = sub_7FF6F4DFAA90(*(_QWORD *)a3, 8 * v5, 0);
+    result = (const void **)memcpy(*(void **)a3, v6, 8 * v5);
+    *(_DWORD *)(a3 + 8) = v5;
+    *(_DWORD *)(a3 + 12) = v5;
+  }
+  return result;
+}
+
+
+======================================================================
+ItemLoadoutViewInterface::HasCapacity @ RVA 0x33AF730 EA 0x7FF6F6DCF730
+======================================================================
+__int64 __fastcall sub_7FF6F6DCF730(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 result; // rax
+  __int64 v10; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 88LL))(a1, v8);
+  *a3 = result;
+  return result;
+}
+

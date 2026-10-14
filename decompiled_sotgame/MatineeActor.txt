@@ -1,0 +1,168 @@
+// Class: MatineeActor (8 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+MatineeActor::ChangePlaybackDirection @ RVA 0x2A08870 EA 0x7FF6F6428870
+======================================================================
+__int64 __fastcall sub_7FF6F6428870(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1592LL))(a1);
+}
+
+
+======================================================================
+MatineeActor::Pause @ RVA 0x2A12150 EA 0x7FF6F6432150
+======================================================================
+__int64 __fastcall sub_7FF6F6432150(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1576LL))(a1);
+}
+
+
+======================================================================
+MatineeActor::Play @ RVA 0x2A12370 EA 0x7FF6F6432370
+======================================================================
+__int64 __fastcall sub_7FF6F6432370(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int128 v8; // [rsp+20h] [rbp-48h] BYREF
+  __int64 v9; // [rsp+30h] [rbp-38h]
+  __int128 v10; // [rsp+40h] [rbp-28h] BYREF
+  __int64 v11; // [rsp+50h] [rbp-18h]
+  __int64 v12; // [rsp+78h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v8 = 0xFFFFFFFFFFFFFFFFuLL;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v12;
+  LOBYTE(v2) = v5 != 0;
+  v10 = v8;
+  v11 = v9;
+  a2[4] = v5 + v2;
+  return sub_7FF6F5E3C700(a1, v6, &v10);
+}
+
+
+======================================================================
+MatineeActor::PlayInstantly @ RVA 0x2A126D0 EA 0x7FF6F64326D0
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+MatineeActor::Reverse @ RVA 0x2A13020 EA 0x7FF6F6433020
+======================================================================
+__int64 __fastcall sub_7FF6F6433020(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1568LL))(a1);
+}
+
+
+======================================================================
+MatineeActor::SetLoopingState @ RVA 0x2A178D0 EA 0x7FF6F64378D0
+======================================================================
+__int64 __fastcall sub_7FF6F64378D0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1600LL))(a1, v5);
+}
+
+
+======================================================================
+MatineeActor::SetPosition @ RVA 0x2A18A60 EA 0x7FF6F6438A60
+======================================================================
+__int64 __fastcall sub_7FF6F6438A60(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  __int64 v6; // rdx
+  __int64 v7; // r8
+  __int64 v8; // rax
+  int v10; // [rsp+30h] [rbp+8h] BYREF
+  int v11; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v11 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  v5 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v8 = a2[4];
+  LOBYTE(v5) = v8 != 0;
+  v2 = v10 == 0;
+  a2[4] = v8 + v5;
+  LOBYTE(v7) = !v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64, __int64))(*(_QWORD *)a1 + 1584LL))(a1, v6, v7);
+}
+
+
+======================================================================
+MatineeActor::Stop @ RVA 0x2A1A180 EA 0x7FF6F643A180
+======================================================================
+__int64 __fastcall sub_7FF6F643A180(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1560LL))(a1);
+}
+

@@ -1,0 +1,614 @@
+// Class: Widget (30 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+Widget::ForceLayoutPrepass @ RVA 0x1F2B950 EA 0x7FF6F594B950
+======================================================================
+__int64 __fastcall sub_7FF6F594B950(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F58846D0();
+}
+
+
+======================================================================
+Widget::ForceVolatile @ RVA 0x1F2B970 EA 0x7FF6F594B970
+======================================================================
+__int64 __fastcall sub_7FF6F594B970(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F5884790(a1, v5);
+}
+
+
+======================================================================
+Widget::GetDesiredSize @ RVA 0x1F2C300 EA 0x7FF6F594C300
+======================================================================
+_QWORD *__fastcall sub_7FF6F594C300(__int64 a1, __int64 a2, _QWORD *a3)
+{
+  _QWORD *result; // rax
+  char v5; // [rsp+38h] [rbp+10h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (_QWORD *)sub_7FF6F5887630(a1, &v5);
+  *a3 = *result;
+  return result;
+}
+
+
+======================================================================
+Widget::GetIsEnabled @ RVA 0x1F2CB00 EA 0x7FF6F594CB00
+======================================================================
+__int64 __fastcall sub_7FF6F594CB00(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5889500();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+Widget::GetParent @ RVA 0x1F2D330 EA 0x7FF6F594D330
+======================================================================
+__int64 __fastcall sub_7FF6F594D330(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F588ADD0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+Widget::GetVisibility @ RVA 0x1F2DC00 EA 0x7FF6F594DC00
+======================================================================
+__int64 __fastcall sub_7FF6F594DC00(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F588DBA0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+Widget::HasAnyUserFocus @ RVA 0x1F2DDA0 EA 0x7FF6F594DDA0
+======================================================================
+__int64 __fastcall sub_7FF6F594DDA0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5890D10();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+Widget::HasFocusedDescendants @ RVA 0x1F2DE60 EA 0x7FF6F594DE60
+======================================================================
+__int64 __fastcall sub_7FF6F594DE60(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5890E20();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+Widget::HasKeyboardFocus @ RVA 0x1F2DE90 EA 0x7FF6F594DE90
+======================================================================
+__int64 __fastcall sub_7FF6F594DE90(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5890EF0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+Widget::HasMouseCapture @ RVA 0x1F2DEC0 EA 0x7FF6F594DEC0
+======================================================================
+__int64 __fastcall sub_7FF6F594DEC0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5891150();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+Widget::HasUserFocus @ RVA 0x1F2DF20 EA 0x7FF6F594DF20
+======================================================================
+__int64 __fastcall sub_7FF6F594DF20(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = sub_7FF6F5891C40(a1, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+Widget::HasUserFocusedDescendants @ RVA 0x1F2DFB0 EA 0x7FF6F594DFB0
+======================================================================
+__int64 __fastcall sub_7FF6F594DFB0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = sub_7FF6F5891D70(a1, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+Widget::InvalidateLayoutAndVolatility @ RVA 0x1F2E060 EA 0x7FF6F594E060
+======================================================================
+__int64 __fastcall sub_7FF6F594E060(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F58927C0();
+}
+
+
+======================================================================
+Widget::IsHovered @ RVA 0x1F2E0E0 EA 0x7FF6F594E0E0
+======================================================================
+__int64 __fastcall sub_7FF6F594E0E0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F58931F0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+Widget::IsVisible @ RVA 0x1F2E2D0 EA 0x7FF6F594E2D0
+======================================================================
+__int64 __fastcall sub_7FF6F594E2D0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5896330();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+Widget::RemoveFromParent @ RVA 0x1F2F3E0 EA 0x7FF6F594F3E0
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+Widget::ResetCursor @ RVA 0x1F2F4F0 EA 0x7FF6F594F4F0
+======================================================================
+__int64 __fastcall sub_7FF6F594F4F0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F58BD110();
+}
+
+
+======================================================================
+Widget::SetCursor @ RVA 0x1F30A20 EA 0x7FF6F5950A20
+======================================================================
+__int64 __fastcall sub_7FF6F5950A20(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F58BFB60(a1, v5);
+}
+
+
+======================================================================
+Widget::SetIsEnabled @ RVA 0x1F31DE0 EA 0x7FF6F5951DE0
+======================================================================
+__int64 __fastcall sub_7FF6F5951DE0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F58C0C30(a1, v5);
+}
+
+
+======================================================================
+Widget::SetKeyboardFocus @ RVA 0x1F32230 EA 0x7FF6F5952230
+======================================================================
+__int64 __fastcall sub_7FF6F5952230(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F58C10C0();
+}
+
+
+======================================================================
+Widget::SetRenderAngle @ RVA 0x1F337B0 EA 0x7FF6F59537B0
+======================================================================
+__int64 __fastcall sub_7FF6F59537B0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F58C2450(a1);
+}
+
+
+======================================================================
+Widget::SetRenderScale @ RVA 0x1F33830 EA 0x7FF6F5953830
+======================================================================
+__int64 __fastcall sub_7FF6F5953830(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdx
+  __int64 v6; // [rsp+38h] [rbp+10h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  v4 = v6;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F58C2460(a1, v4);
+}
+
+
+======================================================================
+Widget::SetRenderShear @ RVA 0x1F338B0 EA 0x7FF6F59538B0
+======================================================================
+__int64 __fastcall sub_7FF6F59538B0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdx
+  __int64 v6; // [rsp+38h] [rbp+10h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  v4 = v6;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F58C2470(a1, v4);
+}
+
+
+======================================================================
+Widget::SetRenderTransform @ RVA 0x1F33930 EA 0x7FF6F5953930
+======================================================================
+__int64 __fastcall sub_7FF6F5953930(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rax
+  __int64 v6; // rcx
+  __int128 v8; // [rsp+20h] [rbp-48h] BYREF
+  __int64 v9; // [rsp+30h] [rbp-38h]
+  int v10; // [rsp+38h] [rbp-30h]
+  __int128 v11; // [rsp+40h] [rbp-28h] BYREF
+  __int64 v12; // [rsp+50h] [rbp-18h]
+  int v13; // [rsp+58h] [rbp-10h]
+
+  v2 = a2[4] == 0;
+  *((_QWORD *)&v8 + 1) = qword_7FF6FA447640;
+  v10 = 0;
+  *(_QWORD *)&v8 = xmmword_7FF6FA4F60F8;
+  v9 = xmmword_7FF6FA4F60F8;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  v5 = a2[4];
+  v11 = v8;
+  v12 = v9;
+  v6 = v5 + (v5 != 0);
+  LODWORD(v5) = v10;
+  a2[4] = v6;
+  v13 = v5;
+  return sub_7FF6F58C2480(a1, &v11);
+}
+
+
+======================================================================
+Widget::SetRenderTransformPivot @ RVA 0x1F33A10 EA 0x7FF6F5953A10
+======================================================================
+__int64 __fastcall sub_7FF6F5953A10(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdx
+  __int64 v6; // [rsp+38h] [rbp+10h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  v4 = v6;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F58C24B0(a1, v4);
+}
+
+
+======================================================================
+Widget::SetRenderTranslation @ RVA 0x1F33A90 EA 0x7FF6F5953A90
+======================================================================
+__int64 __fastcall sub_7FF6F5953A90(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdx
+  __int64 v6; // [rsp+38h] [rbp+10h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  v4 = v6;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F58C25D0(a1, v4);
+}
+
+
+======================================================================
+Widget::SetToolTip @ RVA 0x1F345C0 EA 0x7FF6F59545C0
+======================================================================
+__int64 __fastcall sub_7FF6F59545C0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F58C32A0(a1, v6);
+}
+
+
+======================================================================
+Widget::SetToolTipText @ RVA 0x1F34640 EA 0x7FF6F5954640
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F5954640(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  _BYTE *v5; // rdx
+  __int64 v6; // rax
+  _BYTE v8[64]; // [rsp+28h] [rbp-40h] BYREF
+
+  sub_7FF6F4DCDFA0(v8);
+  v4 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v5 = v8;
+  if ( a2[7] )
+    v5 = (_BYTE *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v4) = v6 != 0;
+  a2[4] = v6 + v4;
+  sub_7FF6F58C36A0(a1, v5);
+  return sub_7FF6F3C37050(v8);
+}
+
+
+======================================================================
+Widget::SetUserFocus @ RVA 0x1F346F0 EA 0x7FF6F59546F0
+======================================================================
+__int64 __fastcall sub_7FF6F59546F0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F58C3810(a1, v6);
+}
+
+
+======================================================================
+Widget::SetVisibility @ RVA 0x1F35110 EA 0x7FF6F5955110
+======================================================================
+__int64 __fastcall sub_7FF6F5955110(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F58C3D00(a1, v5);
+}
+

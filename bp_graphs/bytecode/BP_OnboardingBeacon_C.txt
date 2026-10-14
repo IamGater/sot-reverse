@@ -1,0 +1,152 @@
+// /Game/Blueprints/GameObjects/Onboarding/bp_onboardingbeacon -> BP_OnboardingBeacon_C
+
+=== BP_OnboardingBeacon_C::fn_idx_751 (420 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named idx:257881@0x19faac7b680
+  Expression:
+  $10: CallMath target=NotEqual_BoolBool@0x19e4d3904d0 (
+    $19: LocalVariable named Active@0x19faac7b600
+    $28: InstanceVariable named Active@0x19faac7ba80
+    $37: EndFunctionParms
+  )
+$38: JumpIfNot -> 0x1a1, cond:
+  $43: LocalVariable named idx:257881@0x19faac7b680
+$52: LetBool (Variable = Expression)
+  Variable:
+  $53: InstanceVariable named Active@0x19faac7ba80
+  Expression:
+  $62: LocalVariable named Active@0x19faac7b600
+$71: Context
+  ObjectExpression:
+  $72: InstanceVariable named idx:257887@0x19faac7ba00
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $93: VirtualFunction call "SetActive" (
+    $106: LocalVariable named Active@0x19faac7b600
+    $115: LocalVariable named Active@0x19faac7b600
+    $124: EndFunctionParms
+  )
+$125: Context
+  ObjectExpression:
+  $126: InstanceVariable named PointLight@0x19e4d111010
+  SkipBytes: 0x18
+  RValueProperty: (null)
+  ContextExpression:
+  $147: VirtualFunction call "SetVisibility" (
+    $160: LocalVariable named Active@0x19faac7b600
+    $169: False
+    $170: EndFunctionParms
+  )
+$171: LetObj (Variable = Expression)
+  Variable:
+  $172: StructMemberContext prop=Event@0x19e4cf88000
+    Expression to struct:
+    $181: LocalVariable named K2Node_MakeStruct_WwiseEmitterCreationParams@0x19faac7b700
+  Expression:
+  $190: ObjectConst idx:257885@0x19fa99e53c0
+$199: Let (Variable = Expression)
+  Variable:
+  $208: StructMemberContext prop=RTPCName@0x19e4cf87f90
+    Expression to struct:
+    $217: LocalVariable named K2Node_MakeStruct_WwiseEmitterCreationParams@0x19faac7b700
+  Expression:
+  $226: literal name "None"
+$239: Let (Variable = Expression)
+  Variable:
+  $248: StructMemberContext prop=RTPCValue@0x19e4cf87f20
+    Expression to struct:
+    $257: LocalVariable named K2Node_MakeStruct_WwiseEmitterCreationParams@0x19faac7b700
+  Expression:
+  $266: literal float 0
+$271: Let (Variable = Expression)
+  Variable:
+  $280: StructMemberContext prop=SwitchGroup@0x19e4cf87eb0
+    Expression to struct:
+    $289: LocalVariable named K2Node_MakeStruct_WwiseEmitterCreationParams@0x19faac7b700
+  Expression:
+  $298: literal name "None"
+$311: Let (Variable = Expression)
+  Variable:
+  $320: StructMemberContext prop=SwitchValue@0x19e4cf87e40
+    Expression to struct:
+    $329: LocalVariable named K2Node_MakeStruct_WwiseEmitterCreationParams@0x19faac7b700
+  Expression:
+  $338: literal name "None"
+$351: Context
+  ObjectExpression:
+  $352: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x19e4d9e1550
+  SkipBytes: 0x2c
+  RValueProperty: (null)
+  ContextExpression:
+  $373: FinalFunction target=WwisePostOneShotOnOwner@0x19e4d401dc0 (
+    $382: Self
+    $383: ObjectConst pool_sfx_fire_beacon@0x19e13634300
+    $392: LocalVariable named K2Node_MakeStruct_WwiseEmitterCreationParams@0x19faac7b700
+    $401: literal vector (0,0,0)
+    $414: literal byte 2
+    $416: EndFunctionParms
+  )
+$417: Return expression:
+  $418: Nothing
+$419: EndOfScript
+
+=== BP_OnboardingBeacon_C::fn_idx_9202 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_OnboardingBeacon_C::fn_idx_9152 (22 bytes) ===
+$0: VirtualFunction call "idx:257883" (
+  $13: literal int32 38
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_OnboardingBeacon_C::fn_idx_9142 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_OtherActor@0x19faac7b900
+  Expression:
+  $9: LocalVariable named OtherActor@0x19faac7b780
+$18: VirtualFunction call "idx:257883" (
+  $31: literal int32 58
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_OnboardingBeacon_C::fn_idx_257886 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=idx:257884@0x19faac7b880
+  Expression:
+  $9: LocalVariable named Active@0x19faac7b800
+$18: VirtualFunction call "idx:257883" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_OnboardingBeacon_C::fn_idx_257883 (76 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fa44f3170
+$10: VirtualFunction call "SetActive" (
+  $23: LocalVariable named idx:257884@0x19faac7b880
+  $32: EndFunctionParms
+)
+$33: Jump to offset 0x49
+$38: VirtualFunction call "SetActive" (
+  $51: False
+  $52: EndFunctionParms
+)
+$53: Jump to offset 0x49
+$58: VirtualFunction call "SetActive" (
+  $71: True
+  $72: EndFunctionParms
+)
+$73: Return expression:
+  $74: Nothing
+$75: EndOfScript

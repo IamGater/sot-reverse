@@ -1,0 +1,71 @@
+// Class: ShipServiceInterface (2 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+ShipServiceInterface::GetCrewFromShip @ RVA 0xB0B220 EA 0x7FF6F452B220
+======================================================================
+_OWORD *__fastcall sub_7FF6F452B220(__int64 a1, _QWORD *a2, _OWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  _OWORD *result; // rax
+  _BYTE v10[24]; // [rsp+20h] [rbp-18h] BYREF
+  __int64 v11; // [rsp+40h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v7 = a2[4];
+  v8 = v11;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (_OWORD *)(*(__int64 (__fastcall **)(__int64, _BYTE *, __int64))(*(_QWORD *)a1 + 152LL))(a1, v10, v8);
+  *a3 = *result;
+  return result;
+}
+
+
+======================================================================
+ShipServiceInterface::GetShipForCrew @ RVA 0xB0DA20 EA 0x7FF6F452DA20
+======================================================================
+__int64 __fastcall sub_7FF6F452DA20(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  _QWORD *v7; // rdx
+  __int64 v8; // rax
+  __int64 result; // rax
+  _QWORD v10[3]; // [rsp+20h] [rbp-18h] BYREF
+
+  v3 = 0;
+  v10[0] = 0;
+  v10[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v10);
+  }
+  v7 = v10;
+  if ( a2[7] )
+    v7 = (_QWORD *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, _QWORD *))(*(_QWORD *)a1 + 48LL))(a1, v7);
+  *a3 = result;
+  return result;
+}
+

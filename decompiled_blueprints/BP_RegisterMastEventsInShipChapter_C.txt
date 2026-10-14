@@ -1,0 +1,75 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Onboarding/bp_registermasteventsinshipchapter -> BP_RegisterMastEventsInShipChapter_C
+
+=== BP_RegisterMastEventsInShipChapter_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fce70b880
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fce70b600
+$18: VirtualFunction call "idx:283128" (
+  $31: literal int32 260
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_RegisterMastEventsInShipChapter_C::fn_idx_283128 (268 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fcdbb5e80
+$10: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $19: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce70b680
+  $28: EndFunctionParms
+)
+$29: Let (Variable = Expression)
+  Variable:
+  $38: LocalVariable named idx:282836@0x19fce70b700
+  Expression:
+  $47: DynamicCast to BP_PromptActor_MaidenVoyage_ShipChapter_C@0x19fbcfa7080 of expr:
+  $56: StructMemberContext prop=idx:282837@0x19fcdd6b200
+    Expression to struct:
+    $65: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce70b680
+$74: Let (Variable = Expression)
+  Variable:
+  $83: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fce70b780
+  Expression:
+  $92: PrimitiveCast type=71
+    Argument:
+    $94: LocalVariable named idx:282836@0x19fce70b700
+$103: JumpIfNot -> 0x109, cond:
+  $108: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fce70b780
+$117: Let (Variable = Expression)
+  Variable:
+  $126: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19fce70b980
+  Expression:
+  $135: FinalFunction target=GetCrewShips@0x19e4cda5420 (
+    $144: EndFunctionParms
+  )
+$145: Context
+  ObjectExpression:
+  $146: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $167: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $176: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19fce70b980
+    $185: literal int32 0
+    $190: LocalVariable named CallFunc_Array_Get_Item@0x19fce70b800
+    $199: EndFunctionParms
+  )
+$200: Context
+  ObjectExpression:
+  $201: LocalVariable named idx:282836@0x19fce70b700
+  SkipBytes: 0x17
+  RValueProperty: (null)
+  ContextExpression:
+  $222: VirtualFunction call "RegisterMastRepairEvents" (
+    $235: LocalVariable named CallFunc_Array_Get_Item@0x19fce70b800
+    $244: EndFunctionParms
+  )
+$245: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $254: EndFunctionParms
+)
+$255: Jump to offset 0x109
+$260: Jump to offset 0xa
+$265: Return expression:
+  $266: Nothing
+$267: EndOfScript

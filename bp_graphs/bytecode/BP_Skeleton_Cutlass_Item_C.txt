@@ -1,0 +1,110 @@
+// /Game/Blueprints/GameObjects/Items/MeleeWeapons/bp_skeleton_cutlass_item -> BP_Skeleton_Cutlass_Item_C
+
+=== BP_Skeleton_Cutlass_Item_C::fn_idx_216279 (254 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_GetWielder_ReturnValue@0x19f83b6ce80
+  Expression:
+  $10: VirtualFunction call "GetWielder" (
+    $23: EndFunctionParms
+  )
+$24: Let (Variable = Expression)
+  Variable:
+  $33: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19f83b6cf00
+  Expression:
+  $42: DynamicCast to AthenaPlayerCharacter@0x19e4be85b00 of expr:
+  $51: LocalVariable named CallFunc_GetWielder_ReturnValue@0x19f83b6ce80
+$60: Let (Variable = Expression)
+  Variable:
+  $69: LocalVariable named K2Node_DynamicCast_bSuccess@0x19f83b6cf80
+  Expression:
+  $78: PrimitiveCast type=71
+    Argument:
+    $80: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19f83b6cf00
+$89: JumpIfNot -> 0xfb, cond:
+  $94: LocalVariable named K2Node_DynamicCast_bSuccess@0x19f83b6cf80
+$103: LetBool (Variable = Expression)
+  Variable:
+  $104: LocalVariable named CallFunc_IsUnderwater_ReturnValue@0x19f83b6ce00
+  Expression:
+  $113: VirtualFunction call "IsUnderwater" (
+    $126: EndFunctionParms
+  )
+$127: LetObj (Variable = Expression)
+  Variable:
+  $128: LocalVariable named CallFunc_AthenaSpawnEmitterAttachedWithOwner_ReturnValue@0x19f83b6d000
+  Expression:
+  $137: Context
+    ObjectExpression:
+    $138: ObjectConst Default__VfxFunctionLibrary@0x19e4d8493d0
+    SkipBytes: 0x5c
+    RValueProperty: CallFunc_AthenaSpawnEmitterAttachedWithOwner_ReturnValue@0x19f83b6d000
+    ContextExpression:
+    $159: FinalFunction target=AthenaSpawnEmitterAttachedWithOwner@0x19e4d26e900 (
+      $168: ObjectConst vfx_sword_Metal_Block_MainPlayer@0x19f3142eb00
+      $177: InstanceVariable named FirstPersonMesh@0x19e4d10ee80
+      $186: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19f83b6cf00
+      $195: literal name "VFX_BlockedSocket"
+      $208: literal vector (0,0,0)
+      $221: literal rotation (0,0,0)
+      $234: literal byte 2
+      $236: True
+      $237: True
+      $238: False
+      $239: LocalVariable named CallFunc_IsUnderwater_ReturnValue@0x19f83b6ce00
+      $248: literal byte 0
+      $250: EndFunctionParms
+    )
+$251: Return expression:
+  $252: Nothing
+$253: EndOfScript
+
+=== BP_Skeleton_Cutlass_Item_C::fn_idx_9202 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_Skeleton_Cutlass_Item_C::fn_idx_1831 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_Event@0x19f83b6d200
+  Expression:
+  $9: LocalOutVariable named Event@0x19f83b6d080
+$18: VirtualFunction call "idx:240094" (
+  $31: literal int32 91
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Skeleton_Cutlass_Item_C::fn_idx_240094 (118 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19f799f1f10
+$10: VirtualFunction call "DoBlockEffect" (
+  $23: EndFunctionParms
+)
+$24: Jump to offset 0x73
+$29: LetBool (Variable = Expression)
+  Variable:
+  $30: LocalVariable named CallFunc_IsDedicatedServer_ReturnValue@0x19f83b6d100
+  Expression:
+  $39: Context
+    ObjectExpression:
+    $40: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_IsDedicatedServer_ReturnValue@0x19f83b6d100
+    ContextExpression:
+    $61: FinalFunction target=IsDedicatedServer@0x19e4cd8dd00 (
+      $70: Self
+      $71: EndFunctionParms
+    )
+$72: JumpIfNot -> 0xa, cond:
+  $77: LocalVariable named CallFunc_IsDedicatedServer_ReturnValue@0x19f83b6d100
+$86: Jump to offset 0x73
+$91: FinalFunction target=OnBlockedAttack@0x19e4d1df4e0 (
+  $100: LocalVariable named K2Node_Event_Event@0x19f83b6d200
+  $109: EndFunctionParms
+)
+$110: Jump to offset 0x1d
+$115: Return expression:
+  $116: Nothing
+$117: EndOfScript

@@ -1,0 +1,69 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_4_StarsOfAThief/bp_setstatuelocks_soat -> BP_SetStatueLocks_SoAT_C
+
+=== BP_SetStatueLocks_SoAT_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19f81caa380
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19f81caa300
+$18: VirtualFunction call "idx:284048" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_SetStatueLocks_SoAT_C::fn_idx_284048 (227 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19e586bd7b0
+$10: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $19: LocalVariable named CallFunc_GetVariables_OutStruct@0x19f81caa400
+  $28: EndFunctionParms
+)
+$29: LetObj (Variable = Expression)
+  Variable:
+  $30: LocalVariable named CallFunc_GetComponentInterfaceByClass_ReturnValue@0x19f81caa480
+  Expression:
+  $39: Context
+    ObjectExpression:
+    $40: StructMemberContext prop=idx:284018@0x19f81cad600
+      Expression to struct:
+      $49: LocalVariable named CallFunc_GetVariables_OutStruct@0x19f81caa400
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetComponentInterfaceByClass_ReturnValue@0x19f81caa480
+    ContextExpression:
+    $70: FinalFunction target=GetComponentInterfaceByClass@0x19e4cd622c0 (
+      $79: ObjectConst LockableInterface@0x19e4c6a7380
+      $88: EndFunctionParms
+    )
+$89: Let (Variable = Expression)
+  Variable:
+  $98: LocalVariable named UniqueObjectNameForCooking_AsLockable_Interface@0x19f81caa500
+  Expression:
+  $107: ObjToInterfaceCast to LockableInterface@0x19e4c6a7380
+  $116: LocalVariable named CallFunc_GetComponentInterfaceByClass_ReturnValue@0x19f81caa480
+$125: Let (Variable = Expression)
+  Variable:
+  $134: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x19f81caa580
+  Expression:
+  $143: PrimitiveCast type=73
+    Argument:
+    $145: LocalVariable named UniqueObjectNameForCooking_AsLockable_Interface@0x19f81caa500
+$154: JumpIfNot -> 0xd6, cond:
+  $159: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x19f81caa580
+$168: Context
+  ObjectExpression:
+  $169: InterfaceContext:
+  $170: LocalVariable named UniqueObjectNameForCooking_AsLockable_Interface@0x19f81caa500
+  SkipBytes: 0x17
+  RValueProperty: (null)
+  ContextExpression:
+  $191: VirtualFunction call "Lock" (
+    $204: InstanceVariable named Locks@0x19f81caa680
+    $213: EndFunctionParms
+  )
+$214: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $223: EndFunctionParms
+)
+$224: Return expression:
+  $225: Nothing
+$226: EndOfScript

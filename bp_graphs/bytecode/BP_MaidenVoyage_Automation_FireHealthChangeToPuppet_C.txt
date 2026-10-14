@@ -1,0 +1,97 @@
+// /Game/Tests/Blueprints/MaidenVoyage/TaleAutomationSteps/bp_maidenvoyage_automation_firehealthchangetopuppet -> BP_MaidenVoyage_Automation_FireHealthChangeToPuppet_C
+
+=== BP_MaidenVoyage_Automation_FireHealthChangeToPuppet_C::fn_idx_1828 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fd11ea180
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fd11ea100
+$18: VirtualFunction call "idx:286080" (
+  $31: literal int32 120
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_MaidenVoyage_Automation_FireHealthChangeToPuppet_C::fn_idx_286080 (348 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fceae05b0
+$10: Context
+  ObjectExpression:
+  $11: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x53
+  RValueProperty: (null)
+  ContextExpression:
+  $32: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $41: NoObject
+    $42: literal ansi string "CastToAutomationServiceFailed"
+    $73: True
+    $74: True
+    $75: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $88: literal float 0
+      $93: literal float 0.6600000262260437
+      $98: literal float 1
+      $103: literal float 1
+      $108: EndStructConst
+    $109: literal float 2
+    $114: EndFunctionParms
+  )
+$115: Jump to offset 0x159
+$120: LetObj (Variable = Expression)
+  Variable:
+  $121: LocalVariable named CallFunc_GetService_ReturnValue@0x19fd11ea200
+  Expression:
+  $130: FinalFunction target=GetService@0x19e4cda5b60 (
+    $139: ObjectConst (null)
+    $148: EndFunctionParms
+  )
+$149: Let (Variable = Expression)
+  Variable:
+  $158: LocalVariable named idx:286073@0x19fd11ea280
+  Expression:
+  $167: DynamicCast to (null) of expr:
+  $176: LocalVariable named CallFunc_GetService_ReturnValue@0x19fd11ea200
+$185: Let (Variable = Expression)
+  Variable:
+  $194: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fd11ea300
+  Expression:
+  $203: PrimitiveCast type=71
+    Argument:
+    $205: LocalVariable named idx:286073@0x19fd11ea280
+$214: JumpIfNot -> 0xa, cond:
+  $219: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fd11ea300
+$228: LetObj (Variable = Expression)
+  Variable:
+  $229: LocalVariable named idx:286069@0x19fd11ead00
+  Expression:
+  $238: Context
+    ObjectExpression:
+    $239: LocalVariable named idx:286073@0x19fd11ea280
+    SkipBytes: 0xa
+    RValueProperty: idx:286069@0x19fd11ead00
+    ContextExpression:
+    $260: FinalFunction target=(null) (
+      $269: EndFunctionParms
+    )
+$270: Context
+  ObjectExpression:
+  $271: Context
+    ObjectExpression:
+    $272: LocalVariable named idx:286069@0x19fd11ead00
+    SkipBytes: 0x9
+    RValueProperty: HealthComponent@0x19e4d0811d0
+    ContextExpression:
+    $293: InstanceVariable named HealthComponent@0x19e4d0811d0
+  SkipBytes: 0x15
+  RValueProperty: (null)
+  ContextExpression:
+  $314: VirtualFunction call "AdjustHealth" (
+    $327: literal float 10
+    $332: literal byte 0
+    $334: EndFunctionParms
+  )
+$335: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $344: EndFunctionParms
+)
+$345: Return expression:
+  $346: Nothing
+$347: EndOfScript

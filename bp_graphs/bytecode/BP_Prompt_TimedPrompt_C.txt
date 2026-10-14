@@ -1,0 +1,77 @@
+// /Game/Blueprints/Prompts/PromptConditionals/bp_prompt_timedprompt -> BP_Prompt_TimedPrompt_C
+
+=== BP_Prompt_TimedPrompt_C::fn_idx_217670 (22 bytes) ===
+$0: VirtualFunction call "idx:276089" (
+  $13: literal int32 206
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_TimedPrompt_C::fn_idx_217680 (22 bytes) ===
+$0: VirtualFunction call "idx:276089" (
+  $13: literal int32 66
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_TimedPrompt_C::fn_idx_276089 (214 bytes) ===
+$0: FlowStack.Push(0xd3)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x19fbd8bf730
+$15: FinalFunction target=DismissAllPrompts@0x19e4d4b4cc0 (
+  $24: EndFunctionParms
+)
+$25: VirtualFunction call "Complete" (
+  $38: EndFunctionParms
+)
+$39: PopExecutionFlow (jump to popped addr)
+$40: LetBool (Variable = Expression)
+  Variable:
+  $41: InstanceVariable named State_ShowPrompt@0x19fbe5b8480
+  Expression:
+  $50: False
+$51: VirtualFunction call "Evaluate" (
+  $64: EndFunctionParms
+)
+$65: PopExecutionFlow (jump to popped addr)
+$66: LetBool (Variable = Expression)
+  Variable:
+  $67: InstanceVariable named State_ShowPrompt@0x19fbe5b8480
+  Expression:
+  $76: True
+$77: VirtualFunction call "Evaluate" (
+  $90: EndFunctionParms
+)
+$91: Context
+  ObjectExpression:
+  $92: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x3a
+  RValueProperty: (null)
+  ContextExpression:
+  $113: FinalFunction target=Delay@0x19e4cd86d40 (
+    $122: Self
+    $123: InstanceVariable named Duration@0x19fbf4316c0
+    $132: literal struct LatentActionInfo@0x19e4cd86e80 (size 32)
+      $145: literal CodeSkipSizeType 0x28
+      $150: literal int32 1
+      $155: literal name "idx:276089"
+      $168: Self
+      $169: EndStructConst
+    $170: EndFunctionParms
+  )
+$171: PopExecutionFlow (jump to popped addr)
+$172: JumpIfNot -> 0xf, cond:
+  $177: InstanceVariable named State_ShowPrompt@0x19fbe5b8480
+$186: FinalFunction target=SetPromptAs@0x19e4d4b5a00 (
+  $195: InstanceVariable named Prompt@0x19fbe5bb680
+  $204: EndFunctionParms
+)
+$205: PopExecutionFlow (jump to popped addr)
+$206: Jump to offset 0xac
+$211: Return expression:
+  $212: Nothing
+$213: EndOfScript

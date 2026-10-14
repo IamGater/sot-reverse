@@ -1,0 +1,408 @@
+// Class: LinkerComponent (12 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+LinkerComponent::GetNumPendingLinks @ RVA 0x3B19170 EA 0x7FF6F7539170
+======================================================================
+__int64 __fastcall sub_7FF6F7539170(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F75301A0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+LinkerComponent::GetNumRegisteredEndpoints @ RVA 0x3B191A0 EA 0x7FF6F75391A0
+======================================================================
+__int64 __fastcall sub_7FF6F75391A0(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F75301B0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+LinkerComponent::GetNumRegisteredLinks @ RVA 0x3B191D0 EA 0x7FF6F75391D0
+======================================================================
+__int64 __fastcall sub_7FF6F75391D0(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F75301C0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+LinkerComponent::GetNumSetLinks @ RVA 0x3B19200 EA 0x7FF6F7539200
+======================================================================
+__int64 __fastcall sub_7FF6F7539200(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F75301D0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+LinkerComponent::LookupEndpoint @ RVA 0x3B19410 EA 0x7FF6F7539410
+======================================================================
+__int64 __fastcall sub_7FF6F7539410(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v6; // rdi
+  char *v7; // rdx
+  __int64 v8; // rax
+  __int64 result; // rax
+  char v10; // [rsp+38h] [rbp+10h] BYREF
+
+  sub_7FF6F752EBD0(&v10);
+  v6 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = &v10;
+  if ( a2[7] )
+    v7 = (char *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v6) = v8 != 0;
+  a2[4] = v8 + v6;
+  result = sub_7FF6F75301E0(a1, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+LinkerComponent::OnEndpointAddedToChild @ RVA 0x3B196E0 EA 0x7FF6F75396E0
+======================================================================
+__int64 __fastcall sub_7FF6F75396E0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  char *v5; // rax
+  char *v6; // rsi
+  __int64 v7; // rax
+  __int64 v8; // r9
+  __int64 v9; // rdx
+  _QWORD v11[5]; // [rsp+20h] [rbp-28h] BYREF
+  char v12; // [rsp+58h] [rbp+10h] BYREF
+  __int64 v13; // [rsp+68h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v11[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  sub_7FF6F752EBD0(&v12);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v5 = (char *)a2[7];
+  v6 = &v12;
+  v13 = 0;
+  if ( v5 )
+    v6 = v5;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v7 = a2[4];
+  v8 = v13;
+  v9 = v11[0];
+  LOBYTE(v2) = v7 != 0;
+  a2[4] = v7 + v2;
+  return sub_7FF6F7530410(a1, v9, v6, v8);
+}
+
+
+======================================================================
+LinkerComponent::OnEndpointRemovedFromChild @ RVA 0x3B198C0 EA 0x7FF6F75398C0
+======================================================================
+__int64 __fastcall sub_7FF6F75398C0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  char *v5; // r8
+  __int64 v6; // rdx
+  __int64 v7; // rax
+  char v9; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v10; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  sub_7FF6F752EBD0(&v9);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v5 = &v9;
+  v6 = v10;
+  if ( a2[7] )
+    v5 = (char *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v2) = v7 != 0;
+  a2[4] = v7 + v2;
+  return sub_7FF6F75304B0(a1, v6, v5);
+}
+
+
+======================================================================
+LinkerComponent::RegisterEndpoint @ RVA 0x3B19A70 EA 0x7FF6F7539A70
+======================================================================
+__int64 __fastcall sub_7FF6F7539A70(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v6; // rdi
+  char *v7; // rax
+  char *v8; // rsi
+  __int64 v9; // rax
+  __int64 v10; // r8
+  __int64 result; // rax
+  char v12; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v13; // [rsp+50h] [rbp+18h] BYREF
+
+  sub_7FF6F752EBD0(&v12);
+  v6 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v7 = (char *)a2[7];
+  v8 = &v12;
+  v13 = 0;
+  if ( v7 )
+    v8 = v7;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v9 = a2[4];
+  v10 = v13;
+  LOBYTE(v6) = v9 != 0;
+  a2[4] = v9 + v6;
+  result = sub_7FF6F7530540(a1, v8, v10);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+LinkerComponent::RegisterLink @ RVA 0x3B19B60 EA 0x7FF6F7539B60
+======================================================================
+__int64 __fastcall sub_7FF6F7539B60(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v6; // rdi
+  char *v7; // rsi
+  char *v8; // r8
+  __int64 v9; // rax
+  __int64 result; // rax
+  char v11; // [rsp+48h] [rbp+10h] BYREF
+  char v12; // [rsp+50h] [rbp+18h] BYREF
+
+  sub_7FF6F752EBD0(&v11);
+  v6 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v7 = &v11;
+  if ( a2[7] )
+    v7 = (char *)a2[7];
+  sub_7FF6F752EBD0(&v12);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v8 = &v12;
+  if ( a2[7] )
+    v8 = (char *)a2[7];
+  v9 = a2[4];
+  LOBYTE(v6) = v9 != 0;
+  a2[4] = v9 + v6;
+  result = sub_7FF6F7530900(a1, v7, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+LinkerComponent::SetParent @ RVA 0x3B19E50 EA 0x7FF6F7539E50
+======================================================================
+__int64 __fastcall sub_7FF6F7539E50(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F7530CA0(a1, v6);
+}
+
+
+======================================================================
+LinkerComponent::UnregisterEndpoint @ RVA 0x3B19ED0 EA 0x7FF6F7539ED0
+======================================================================
+__int64 __fastcall sub_7FF6F7539ED0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  char *v5; // rdx
+  __int64 v6; // rax
+  char v8; // [rsp+38h] [rbp+10h] BYREF
+
+  sub_7FF6F752EBD0(&v8);
+  v4 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = &v8;
+  if ( a2[7] )
+    v5 = (char *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v4) = v6 != 0;
+  a2[4] = v6 + v4;
+  return sub_7FF6F7530CB0(a1, v5);
+}
+
+
+======================================================================
+LinkerComponent::UnregisterLink @ RVA 0x3B19F70 EA 0x7FF6F7539F70
+======================================================================
+__int64 __fastcall sub_7FF6F7539F70(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  char *v5; // rsi
+  char *v6; // r8
+  __int64 v7; // rax
+  char v9; // [rsp+48h] [rbp+10h] BYREF
+  char v10; // [rsp+58h] [rbp+20h] BYREF
+
+  sub_7FF6F752EBD0(&v9);
+  v4 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v5 = &v9;
+  if ( a2[7] )
+    v5 = (char *)a2[7];
+  sub_7FF6F752EBD0(&v10);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = &v10;
+  if ( a2[7] )
+    v6 = (char *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v4) = v7 != 0;
+  a2[4] = v7 + v4;
+  return sub_7FF6F7530E80(a1, v5, v6);
+}
+

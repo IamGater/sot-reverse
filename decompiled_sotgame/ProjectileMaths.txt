@@ -1,0 +1,409 @@
+// Class: ProjectileMaths (4 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+ProjectileMaths::CalculateLaunchVelocity @ RVA 0x2E9CC90 EA 0x7FF6F68BCC90
+======================================================================
+__int64 __fastcall sub_7FF6F68BCC90(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v5; // rax
+  _BYTE *v6; // r13
+  __int64 v7; // rax
+  int *v8; // r12
+  __int64 v9; // rax
+  _BYTE *v10; // r15
+  __int64 v11; // rax
+  _BYTE *v12; // r14
+  _BYTE *v13; // rax
+  _BYTE *v14; // rsi
+  __int64 v15; // rax
+  __int64 result; // rax
+  int v17; // [rsp+28h] [rbp-41h]
+  int v18; // [rsp+30h] [rbp-39h]
+  char v19; // [rsp+38h] [rbp-31h]
+  int v20; // [rsp+40h] [rbp-29h] BYREF
+  int v21; // [rsp+44h] [rbp-25h] BYREF
+  _BYTE v22[16]; // [rsp+48h] [rbp-21h] BYREF
+  _BYTE v23[16]; // [rsp+58h] [rbp-11h] BYREF
+  _BYTE v24[16]; // [rsp+68h] [rbp-1h] BYREF
+  _BYTE v25[72]; // [rsp+78h] [rbp+Fh] BYREF
+  int v26; // [rsp+D8h] [rbp+6Fh] BYREF
+  _BYTE *v27; // [rsp+E0h] [rbp+77h]
+  int v28; // [rsp+E8h] [rbp+7Fh] BYREF
+
+  v27 = a3;
+  v3 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v22);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v22);
+  }
+  v5 = a2[7];
+  v6 = v22;
+  v26 = 0;
+  a2[7] = 0;
+  if ( v5 )
+    LODWORD(v6) = v5;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v26);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v26);
+  }
+  v7 = a2[7];
+  v8 = &v26;
+  a2[7] = 0;
+  if ( v7 )
+    LODWORD(v8) = v7;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v23);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v23);
+  }
+  v9 = a2[7];
+  v10 = v23;
+  a2[7] = 0;
+  if ( v9 )
+    LODWORD(v10) = v9;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v24);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v24);
+  }
+  v11 = a2[7];
+  v12 = v24;
+  a2[7] = 0;
+  if ( v11 )
+    LODWORD(v12) = v11;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v25);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v25);
+  }
+  v13 = (_BYTE *)a2[7];
+  v14 = v25;
+  v21 = 0;
+  if ( v13 )
+    v14 = v13;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v21);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v21);
+  }
+  v20 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v20);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v20);
+  }
+  v28 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v28);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v28);
+  }
+  v15 = a2[4];
+  v19 = v28 != 0;
+  v18 = v20;
+  LOBYTE(v3) = v15 != 0;
+  v17 = v21;
+  a2[4] = v15 + v3;
+  result = sub_7FF6F689DB00((_DWORD)v6, (_DWORD)v8, (_DWORD)v10, (_DWORD)v12, (__int64)v14, v17, v18, v19);
+  *v27 = result;
+  return result;
+}
+
+
+======================================================================
+ProjectileMaths::FindAimDirectionToHitTarget @ RVA 0x2E9D580 EA 0x7FF6F68BD580
+======================================================================
+__int64 __fastcall sub_7FF6F68BD580(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  _BYTE *v7; // r14
+  __int64 v8; // rax
+  _BYTE *v9; // rbp
+  __int64 v10; // rax
+  _BYTE *v11; // rsi
+  int v12; // r9d
+  __int64 v13; // rax
+  __int64 result; // rax
+  int v15; // [rsp+20h] [rbp-68h]
+  char v16; // [rsp+28h] [rbp-60h]
+  _BYTE v17[16]; // [rsp+30h] [rbp-58h] BYREF
+  _BYTE v18[16]; // [rsp+40h] [rbp-48h] BYREF
+  _BYTE v19[56]; // [rsp+50h] [rbp-38h] BYREF
+  int v20; // [rsp+98h] [rbp+10h] BYREF
+  int v21; // [rsp+A0h] [rbp+18h] BYREF
+  int v22; // [rsp+A8h] [rbp+20h] BYREF
+
+  v3 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v17);
+  }
+  v6 = a2[7];
+  v7 = v17;
+  a2[7] = 0;
+  if ( v6 )
+    LODWORD(v7) = v6;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v18);
+  }
+  v8 = a2[7];
+  v9 = v18;
+  a2[7] = 0;
+  if ( v8 )
+    LODWORD(v9) = v8;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v19);
+  }
+  v10 = a2[7];
+  v11 = v19;
+  v22 = 0;
+  if ( v10 )
+    LODWORD(v11) = v10;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v22);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v22);
+  }
+  v21 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v21);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v21);
+  }
+  v20 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v20);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v20);
+  }
+  v13 = a2[4];
+  LOBYTE(v12) = v20 != 0;
+  v16 = v20 != 0;
+  LOBYTE(v3) = v13 != 0;
+  v15 = v21;
+  a2[4] = v13 + v3;
+  result = sub_7FF6F689F1B0((_DWORD)v7, (_DWORD)v9, (_DWORD)v11, v12, v15, v16);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ProjectileMaths::FindProjectileSpeedModifierToHitTarget @ RVA 0x2E9DC70 EA 0x7FF6F68BDC70
+======================================================================
+__int64 __fastcall sub_7FF6F68BDC70(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  _BYTE *v7; // rbp
+  __int64 v8; // rax
+  _BYTE *v9; // rsi
+  int v10; // r8d
+  int v11; // r9d
+  __int64 v12; // rax
+  int v13; // xmm0_4
+  __int64 result; // rax
+  int v15; // [rsp+20h] [rbp-58h]
+  _BYTE v16[16]; // [rsp+30h] [rbp-48h] BYREF
+  _BYTE v17[56]; // [rsp+40h] [rbp-38h] BYREF
+  int v18; // [rsp+88h] [rbp+10h] BYREF
+  int v19; // [rsp+90h] [rbp+18h] BYREF
+  int v20; // [rsp+98h] [rbp+20h] BYREF
+
+  v3 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v16);
+  }
+  v6 = a2[7];
+  v7 = v16;
+  a2[7] = 0;
+  if ( v6 )
+    LODWORD(v7) = v6;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v17);
+  }
+  v8 = a2[7];
+  v9 = v17;
+  v20 = 0;
+  if ( v8 )
+    LODWORD(v9) = v8;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v20);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v20);
+  }
+  v19 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  v18 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  v12 = a2[4];
+  v13 = v18;
+  LOBYTE(v3) = v12 != 0;
+  v15 = v18;
+  a2[4] = v12 + v3;
+  result = sub_7FF6F68A0050((_DWORD)v7, (_DWORD)v9, v10, v11, v15);
+  *a3 = v13;
+  return result;
+}
+
+
+======================================================================
+ProjectileMaths::PredictProjectileFlightTime @ RVA 0x2E9F610 EA 0x7FF6F68BF610
+======================================================================
+void __fastcall sub_7FF6F68BF610(__int64 a1, _QWORD *a2, float *a3)
+{
+  bool v3; // zf
+  _DWORD v6[6]; // [rsp+20h] [rbp-18h] BYREF
+  int v7; // [rsp+48h] [rbp+10h] BYREF
+  int v8; // [rsp+50h] [rbp+18h] BYREF
+  int v9; // [rsp+58h] [rbp+20h] BYREF
+
+  v3 = a2[4] == 0;
+  v6[0] = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v6);
+  }
+  v3 = a2[4] == 0;
+  v9 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  v3 = a2[4] == 0;
+  v8 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  v3 = a2[4] == 0;
+  v7 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  a2[4] += a2[4] != 0;
+  *a3 = sub_7FF6F68A2A70();
+}
+

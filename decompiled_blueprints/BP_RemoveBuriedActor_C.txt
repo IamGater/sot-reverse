@@ -1,0 +1,64 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Generic/bp_removeburiedactor -> BP_RemoveBuriedActor_C
+
+=== BP_RemoveBuriedActor_C::OnBeginCustom (281 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_GetService_ReturnValue@0x19fcbb49d80
+  Expression:
+  $10: FinalFunction target=GetService@0x19e4cda5b60 (
+    $19: ObjectConst BuryingTaleQuestService@0x19e4c3abd00
+    $28: EndFunctionParms
+  )
+$29: Let (Variable = Expression)
+  Variable:
+  $38: LocalVariable named idx:282591@0x19fcbb4a180
+  Expression:
+  $47: DynamicCast to BuryingTaleQuestService@0x19e4c3abd00 of expr:
+  $56: LocalVariable named CallFunc_GetService_ReturnValue@0x19fcbb49d80
+$65: Let (Variable = Expression)
+  Variable:
+  $74: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcbb4a080
+  Expression:
+  $83: PrimitiveCast type=71
+    Argument:
+    $85: LocalVariable named idx:282591@0x19fcbb4a180
+$94: JumpIfNot -> 0xa4, cond:
+  $99: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcbb4a080
+$108: Context
+  ObjectExpression:
+  $109: LocalVariable named idx:282591@0x19fcbb4a180
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $130: FinalFunction target=RemoveBuriedActor@0x19e4d1263a0 (
+    $139: LocalVariable named ItemId@0x19fcbb49d00
+    $148: EndFunctionParms
+  )
+$149: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $158: EndFunctionParms
+)
+$159: Jump to offset 0x116
+$164: Context
+  ObjectExpression:
+  $165: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x57
+  RValueProperty: (null)
+  ContextExpression:
+  $186: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $195: NoObject
+    $196: literal ansi string " BuryingTaleService not available"
+    $231: True
+    $232: True
+    $233: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $246: literal float 0
+      $251: literal float 0.6600000262260437
+      $256: literal float 1
+      $261: literal float 1
+      $266: EndStructConst
+    $267: literal float 2
+    $272: EndFunctionParms
+  )
+$273: Jump to offset 0x95
+$278: Return expression:
+  $279: Nothing
+$280: EndOfScript

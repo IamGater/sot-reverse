@@ -1,0 +1,74 @@
+// Class: CapstanArmInterface (5 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+CapstanArmInterface::GetCapstanRatioVelocity @ RVA 0x3284D40 EA 0x7FF6F6CA4D40
+======================================================================
+void __fastcall sub_7FF6F6CA4D40(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)a1 + 40LL))(a1);
+}
+
+
+======================================================================
+CapstanArmInterface::GetCurrentIntent @ RVA 0x3284D70 EA 0x7FF6F6CA4D70
+======================================================================
+void __fastcall sub_7FF6F6CA4D70(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)a1 + 16LL))(a1);
+}
+
+
+======================================================================
+CapstanArmInterface::IsArmInUse @ RVA 0x3284DA0 EA 0x7FF6F6CA4DA0
+======================================================================
+__int64 __fastcall sub_7FF6F6CA4DA0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 48LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+CapstanArmInterface::IsLocked @ RVA 0x3284DD0 EA 0x7FF6F6CA4DD0
+======================================================================
+__int64 __fastcall sub_7FF6F6CA4DD0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 32LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+CapstanArmInterface::SetIntent @ RVA 0x3284E00 EA 0x7FF6F6CA4E00
+======================================================================
+__int64 __fastcall sub_7FF6F6CA4E00(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 24LL))(a1);
+}
+

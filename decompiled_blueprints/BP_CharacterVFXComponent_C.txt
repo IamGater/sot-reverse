@@ -1,0 +1,1425 @@
+// E:\unreal-projects\Athena\Content\Blueprints\VFX\bp_charactervfxcomponent.uasset -> BP_CharacterVFXComponent_C
+
+=== BP_CharacterVFXComponent_C::GetWindService (221 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_GetGameState_ReturnValue@0x21390938580
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__GameplayStatics@0x212d6f7eb20
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameState_ReturnValue@0x21390938580
+    ContextExpression:
+    $32: FinalFunction target=GetGameState@0x212d697d520 (
+      $41: Self
+      $42: EndFunctionParms
+    )
+$43: Let (Variable = Expression)
+  Variable:
+  $52: LocalVariable named UniqueObjectNameForCooking_AsGame_Service_Provider_Interface@0x21390938600
+  Expression:
+  $61: ObjToInterfaceCast to GameServiceProviderInterface@0x212d5be9840
+  $70: LocalVariable named CallFunc_GetGameState_ReturnValue@0x21390938580
+$79: Let (Variable = Expression)
+  Variable:
+  $88: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x21390938680
+  Expression:
+  $97: PrimitiveCast type=73
+    Argument:
+    $99: LocalVariable named UniqueObjectNameForCooking_AsGame_Service_Provider_Interface@0x21390938600
+$108: JumpIfNot -> 0xca, cond:
+  $113: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x21390938680
+$122: LetObj (Variable = Expression)
+  Variable:
+  $123: LocalVariable named CallFunc_GetService_ReturnValue@0x21390938700
+  Expression:
+  $132: Context
+    ObjectExpression:
+    $133: InterfaceContext:
+    $134: LocalVariable named UniqueObjectNameForCooking_AsGame_Service_Provider_Interface@0x21390938600
+    SkipBytes: 0x17
+    RValueProperty: CallFunc_GetService_ReturnValue@0x21390938700
+    ContextExpression:
+    $155: VirtualFunction call "GetService" (
+      $168: ObjectConst WindInterface@0x212d5bf9300
+      $177: EndFunctionParms
+    )
+$178: LetObj (Variable = Expression)
+  Variable:
+  $179: LocalOutVariable named WindInterface@0x21390938500
+  Expression:
+  $188: LocalVariable named CallFunc_GetService_ReturnValue@0x21390938700
+$197: Jump to offset 0xda
+$202: LetObj (Variable = Expression)
+  Variable:
+  $203: LocalVariable named CallFunc_GetService_ReturnValue@0x21390938700
+  Expression:
+  $212: NoObject
+$213: Jump to offset 0xb2
+$218: Return expression:
+  $219: Nothing
+$220: EndOfScript
+
+=== BP_CharacterVFXComponent_C::WindVFX_DebugTick (751 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_IsValid_ReturnValue@0x21390938780
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x21390938780
+    ContextExpression:
+    $32: FinalFunction target=IsValid@0x212d63ae380 (
+      $41: InstanceVariable named WindVFX@0x212d675ba10
+      $50: EndFunctionParms
+    )
+$51: JumpIfNot -> 0x9a, cond:
+  $56: LocalVariable named CallFunc_IsValid_ReturnValue@0x21390938780
+$65: Context
+  ObjectExpression:
+  $66: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+  SkipBytes: 0x43
+  RValueProperty: (null)
+  ContextExpression:
+  $87: FinalFunction target=PrintString@0x212d63b6df0 (
+    $96: Self
+    $97: literal ansi string "Wind Is Valid"
+    $112: True
+    $113: True
+    $114: literal struct LinearColor@0x212d63787c0 (size 16)
+      $127: literal float 0
+      $132: literal float 0.6600000262260437
+      $137: literal float 1
+      $142: literal float 1
+      $147: EndStructConst
+    $148: literal float 0
+    $153: EndFunctionParms
+  )
+$154: LetBool (Variable = Expression)
+  Variable:
+  $155: LocalVariable named CallFunc_IsActive_ReturnValue@0x21390938800
+  Expression:
+  $164: Context
+    ObjectExpression:
+    $165: InstanceVariable named WindVFX@0x212d675ba10
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_IsActive_ReturnValue@0x21390938800
+    ContextExpression:
+    $186: VirtualFunction call "IsActive" (
+      $199: EndFunctionParms
+    )
+$200: JumpIfNot -> 0x13a, cond:
+  $205: LocalVariable named CallFunc_IsActive_ReturnValue@0x21390938800
+$214: Context
+  ObjectExpression:
+  $215: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+  SkipBytes: 0x4e
+  RValueProperty: (null)
+  ContextExpression:
+  $236: FinalFunction target=PrintString@0x212d63b6df0 (
+    $245: Self
+    $246: literal ansi string "WIND Component is active"
+    $272: True
+    $273: True
+    $274: literal struct LinearColor@0x212d63787c0 (size 16)
+      $287: literal float 0
+      $292: literal float 0.6600000262260437
+      $297: literal float 1
+      $302: literal float 1
+      $307: EndStructConst
+    $308: literal float 0
+    $313: EndFunctionParms
+  )
+$314: JumpIfNot -> 0x19f, cond:
+  $319: InstanceVariable named DEBUG_WindActive@0x2139093b600
+$328: Context
+  ObjectExpression:
+  $329: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+  SkipBytes: 0x41
+  RValueProperty: (null)
+  ContextExpression:
+  $350: FinalFunction target=PrintString@0x212d63b6df0 (
+    $359: Self
+    $360: literal ansi string "WIND ACTIVE"
+    $373: True
+    $374: True
+    $375: literal struct LinearColor@0x212d63787c0 (size 16)
+      $388: literal float 0
+      $393: literal float 0.6600000262260437
+      $398: literal float 1
+      $403: literal float 1
+      $408: EndStructConst
+    $409: literal float 0
+    $414: EndFunctionParms
+  )
+$415: Let (Variable = Expression)
+  Variable:
+  $424: LocalVariable named CallFunc_GetWorldDeltaSeconds_ReturnValue@0x213908e5f60
+  Expression:
+  $433: Context
+    ObjectExpression:
+    $434: ObjectConst Default__GameplayStatics@0x212d6f7eb20
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetWorldDeltaSeconds_ReturnValue@0x213908e5f60
+    ContextExpression:
+    $455: FinalFunction target=GetWorldDeltaSeconds@0x212d697ee70 (
+      $464: Self
+      $465: EndFunctionParms
+    )
+$466: Let (Variable = Expression)
+  Variable:
+  $475: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue@0x213908e5fd0
+  Expression:
+  $484: CallMath target=Subtract_FloatFloat@0x212d69b98c0 (
+    $493: InstanceVariable named DEBUG_WindToggleTimer@0x213908e65f0
+    $502: LocalVariable named CallFunc_GetWorldDeltaSeconds_ReturnValue@0x213908e5f60
+    $511: EndFunctionParms
+  )
+$512: Let (Variable = Expression)
+  Variable:
+  $521: InstanceVariable named DEBUG_WindToggleTimer@0x213908e65f0
+  Expression:
+  $530: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue@0x213908e5fd0
+$539: LetBool (Variable = Expression)
+  Variable:
+  $540: LocalVariable named CallFunc_LessEqual_FloatFloat_ReturnValue@0x21390938880
+  Expression:
+  $549: CallMath target=LessEqual_FloatFloat@0x212d69a67b0 (
+    $558: InstanceVariable named DEBUG_WindToggleTimer@0x213908e65f0
+    $567: literal float 0
+    $572: EndFunctionParms
+  )
+$573: JumpIfNot -> 0x2ec, cond:
+  $578: LocalVariable named CallFunc_LessEqual_FloatFloat_ReturnValue@0x21390938880
+$587: JumpIfNot -> 0x2ae, cond:
+  $592: InstanceVariable named DEBUG_WindActive@0x2139093b600
+$601: LetBool (Variable = Expression)
+  Variable:
+  $602: InstanceVariable named DEBUG_WindActive@0x2139093b600
+  Expression:
+  $611: False
+$612: Context
+  ObjectExpression:
+  $613: InstanceVariable named WindVFX@0x212d675ba10
+  SkipBytes: 0x18
+  RValueProperty: (null)
+  ContextExpression:
+  $634: VirtualFunction call "SetActive" (
+    $647: InstanceVariable named DEBUG_WindActive@0x2139093b600
+    $656: False
+    $657: EndFunctionParms
+  )
+$658: Let (Variable = Expression)
+  Variable:
+  $667: InstanceVariable named DEBUG_WindToggleTimer@0x213908e65f0
+  Expression:
+  $676: literal float 15
+$681: Jump to offset 0x2ec
+$686: LetBool (Variable = Expression)
+  Variable:
+  $687: InstanceVariable named DEBUG_WindActive@0x2139093b600
+  Expression:
+  $696: True
+$697: Context
+  ObjectExpression:
+  $698: InstanceVariable named WindVFX@0x212d675ba10
+  SkipBytes: 0x18
+  RValueProperty: (null)
+  ContextExpression:
+  $719: VirtualFunction call "SetActive" (
+    $732: InstanceVariable named DEBUG_WindActive@0x2139093b600
+    $741: False
+    $742: EndFunctionParms
+  )
+$743: Jump to offset 0x292
+$748: Return expression:
+  $749: Nothing
+$750: EndOfScript
+
+=== BP_CharacterVFXComponent_C::WindVFX_Destroy (101 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_IsValid_ReturnValue@0x21390938900
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x21390938900
+    ContextExpression:
+    $32: FinalFunction target=IsValid@0x212d63ae380 (
+      $41: InstanceVariable named WindVFX@0x212d675ba10
+      $50: EndFunctionParms
+    )
+$51: JumpIfNot -> 0x62, cond:
+  $56: LocalVariable named CallFunc_IsValid_ReturnValue@0x21390938900
+$65: Context
+  ObjectExpression:
+  $66: InstanceVariable named WindVFX@0x212d675ba10
+  SkipBytes: 0xb
+  RValueProperty: (null)
+  ContextExpression:
+  $87: FinalFunction target=K2_DestroyComponent@0x212d63924d0 (
+    $96: Self
+    $97: EndFunctionParms
+  )
+$98: Return expression:
+  $99: Nothing
+$100: EndOfScript
+
+=== BP_CharacterVFXComponent_C::WindVFX_Create (507 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_WindVFX_CanProcessWind_ReturnValue@0x21390938c00
+  Expression:
+  $10: FinalFunction target=WindVFX_CanProcessWind@0x212d675b710 (
+    $19: EndFunctionParms
+  )
+$20: JumpIfNot -> 0x1f8, cond:
+  $25: LocalVariable named CallFunc_WindVFX_CanProcessWind_ReturnValue@0x21390938c00
+$34: LetObj (Variable = Expression)
+  Variable:
+  $35: LocalVariable named CallFunc_GetOwner_ReturnValue@0x21390938980
+  Expression:
+  $44: FinalFunction target=GetOwner@0x212d6391e30 (
+    $53: EndFunctionParms
+  )
+$54: Let (Variable = Expression)
+  Variable:
+  $63: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x21390938a00
+  Expression:
+  $72: DynamicCast to AthenaPlayerCharacter@0x212d54d6040 of expr:
+  $81: LocalVariable named CallFunc_GetOwner_ReturnValue@0x21390938980
+$90: Let (Variable = Expression)
+  Variable:
+  $99: LocalVariable named K2Node_DynamicCast_bSuccess@0x21390938a80
+  Expression:
+  $108: PrimitiveCast type=71
+    Argument:
+    $110: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x21390938a00
+$119: JumpIfNot -> 0x1f8, cond:
+  $124: LocalVariable named K2Node_DynamicCast_bSuccess@0x21390938a80
+$133: LetBool (Variable = Expression)
+  Variable:
+  $134: LocalVariable named CallFunc_IsValid_ReturnValue@0x21390938b00
+  Expression:
+  $143: Context
+    ObjectExpression:
+    $144: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x21390938b00
+    ContextExpression:
+    $165: FinalFunction target=IsValid@0x212d63ae380 (
+      $174: InstanceVariable named WindVFX@0x212d675ba10
+      $183: EndFunctionParms
+    )
+$184: Context
+  ObjectExpression:
+  $185: ObjectConst Default__AutomationBlueprintFunctionLibrary@0x212d6e8e2b0
+  SkipBytes: 0x4c
+  RValueProperty: (null)
+  ContextExpression:
+  $206: FinalFunction target=AssertFalse@0x212d68b4f00 (
+    $215: LocalVariable named CallFunc_IsValid_ReturnValue@0x21390938b00
+    $224: literal ansi string "Trying to spawn the wind VFX when it is already active"
+    $280: Self
+    $281: EndFunctionParms
+  )
+$282: LetObj (Variable = Expression)
+  Variable:
+  $283: LocalVariable named CallFunc_K2_GetRootComponent_ReturnValue@0x21390938b80
+  Expression:
+  $292: Context
+    ObjectExpression:
+    $293: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x21390938a00
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetRootComponent_ReturnValue@0x21390938b80
+    ContextExpression:
+    $314: FinalFunction target=K2_GetRootComponent@0x212d6386d90 (
+      $323: EndFunctionParms
+    )
+$324: LetObj (Variable = Expression)
+  Variable:
+  $325: LocalVariable named CallFunc_AthenaSpawnEmitterAttachedWithOwner_ReturnValue@0x21390938c80
+  Expression:
+  $334: Context
+    ObjectExpression:
+    $335: ObjectConst Default__VfxFunctionLibrary@0x212d6e693d0
+    SkipBytes: 0x50
+    RValueProperty: CallFunc_AthenaSpawnEmitterAttachedWithOwner_ReturnValue@0x21390938c80
+    ContextExpression:
+    $356: FinalFunction target=AthenaSpawnEmitterAttachedWithOwner@0x212d688e900 (
+      $365: ObjectConst vfx_wind_ship@0x212a6c21540
+      $374: LocalVariable named CallFunc_K2_GetRootComponent_ReturnValue@0x21390938b80
+      $383: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x21390938a00
+      $392: literal name "None"
+      $405: InstanceVariable named WindOffsetFromShip@0x2139093b580
+      $414: literal rotation (0,0,0)
+      $427: literal byte 0
+      $429: False
+      $430: True
+      $431: False
+      $432: False
+      $433: literal byte 0
+      $435: EndFunctionParms
+    )
+$436: LetObj (Variable = Expression)
+  Variable:
+  $437: InstanceVariable named WindVFX@0x212d675ba10
+  Expression:
+  $446: LocalVariable named CallFunc_AthenaSpawnEmitterAttachedWithOwner_ReturnValue@0x21390938c80
+$455: Context
+  ObjectExpression:
+  $456: InstanceVariable named WindVFX@0x212d675ba10
+  SkipBytes: 0xd
+  RValueProperty: (null)
+  ContextExpression:
+  $477: FinalFunction target=SetAbsolute@0x212d66933e0 (
+    $486: False
+    $487: True
+    $488: True
+    $489: EndFunctionParms
+  )
+$490: VirtualFunction call "WindVFX_Deactivate" (
+  $503: EndFunctionParms
+)
+$504: Return expression:
+  $505: Nothing
+$506: EndOfScript
+
+=== BP_CharacterVFXComponent_C::WindVFX_Deactivate (106 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_IsValid_ReturnValue@0x21390938d00
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x21390938d00
+    ContextExpression:
+    $32: FinalFunction target=IsValid@0x212d63ae380 (
+      $41: InstanceVariable named WindVFX@0x212d675ba10
+      $50: EndFunctionParms
+    )
+$51: JumpIfNot -> 0x67, cond:
+  $56: LocalVariable named CallFunc_IsValid_ReturnValue@0x21390938d00
+$65: Context
+  ObjectExpression:
+  $66: InstanceVariable named WindVFX@0x212d675ba10
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $87: VirtualFunction call "SetActive" (
+    $100: False
+    $101: False
+    $102: EndFunctionParms
+  )
+$103: Return expression:
+  $104: Nothing
+$105: EndOfScript
+
+=== BP_CharacterVFXComponent_C::Play View Under Water FX (405 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_GetOwner_ReturnValue@0x21390938e00
+  Expression:
+  $10: FinalFunction target=GetOwner@0x212d6391e30 (
+    $19: EndFunctionParms
+  )
+$20: Let (Variable = Expression)
+  Variable:
+  $29: LocalVariable named K2Node_DynamicCast_AsAthena_Character@0x21390938f00
+  Expression:
+  $38: DynamicCast to AthenaCharacter@0x212d54d7380 of expr:
+  $47: LocalVariable named CallFunc_GetOwner_ReturnValue@0x21390938e00
+$56: Let (Variable = Expression)
+  Variable:
+  $65: LocalVariable named K2Node_DynamicCast_bSuccess@0x21390938f80
+  Expression:
+  $74: PrimitiveCast type=71
+    Argument:
+    $76: LocalVariable named K2Node_DynamicCast_AsAthena_Character@0x21390938f00
+$85: JumpIfNot -> 0x192, cond:
+  $90: LocalVariable named K2Node_DynamicCast_bSuccess@0x21390938f80
+$99: JumpIfNot -> 0x130, cond:
+  $104: StructMemberContext prop=NewUnderWaterState@0x212d64d6020
+    Expression to struct:
+    $113: LocalVariable named Event@0x21390938d80
+$122: LetObj (Variable = Expression)
+  Variable:
+  $123: LocalVariable named CallFunc_GetOwner_ReturnValue@0x21390938e00
+  Expression:
+  $132: FinalFunction target=GetOwner@0x212d6391e30 (
+    $141: EndFunctionParms
+  )
+$142: LetObj (Variable = Expression)
+  Variable:
+  $143: LocalVariable named CallFunc_AthenaSpawnEmitterAttachedWithOwner_ReturnValue@0x21390939000
+  Expression:
+  $152: Context
+    ObjectExpression:
+    $153: ObjectConst Default__VfxFunctionLibrary@0x212d6e693d0
+    SkipBytes: 0x6a
+    RValueProperty: CallFunc_AthenaSpawnEmitterAttachedWithOwner_ReturnValue@0x21390939000
+    ContextExpression:
+    $174: FinalFunction target=AthenaSpawnEmitterAttachedWithOwner@0x212d688e900 (
+      $183: ObjectConst vfx_bubbles_underwater_ambient_player_1st@0x212a6c28e80
+      $192: Context
+        ObjectExpression:
+        $193: LocalVariable named K2Node_DynamicCast_AsAthena_Character@0x21390938f00
+        SkipBytes: 0x9
+        RValueProperty: Mesh@0x212d669ced0
+        ContextExpression:
+        $214: InstanceVariable named Mesh@0x212d669ced0
+      $223: LocalVariable named CallFunc_GetOwner_ReturnValue@0x21390938e00
+      $232: literal name "None"
+      $245: literal vector (0,0,0)
+      $258: literal rotation (0,0,0)
+      $271: literal byte 0
+      $273: True
+      $274: True
+      $275: False
+      $276: True
+      $277: literal byte 0
+      $279: EndFunctionParms
+    )
+$280: LetObj (Variable = Expression)
+  Variable:
+  $281: InstanceVariable named vfx_player_underwater_ambient@0x2139093b780
+  Expression:
+  $290: LocalVariable named CallFunc_AthenaSpawnEmitterAttachedWithOwner_ReturnValue@0x21390939000
+$299: Jump to offset 0x192
+$304: LetBool (Variable = Expression)
+  Variable:
+  $305: LocalVariable named CallFunc_IsValid_ReturnValue@0x21390938e80
+  Expression:
+  $314: Context
+    ObjectExpression:
+    $315: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x21390938e80
+    ContextExpression:
+    $336: FinalFunction target=IsValid@0x212d63ae380 (
+      $345: InstanceVariable named vfx_player_underwater_ambient@0x2139093b780
+      $354: EndFunctionParms
+    )
+$355: JumpIfNot -> 0x192, cond:
+  $360: LocalVariable named CallFunc_IsValid_ReturnValue@0x21390938e80
+$369: Context
+  ObjectExpression:
+  $370: InstanceVariable named vfx_player_underwater_ambient@0x2139093b780
+  SkipBytes: 0xb
+  RValueProperty: (null)
+  ContextExpression:
+  $391: FinalFunction target=K2_DestroyComponent@0x212d63924d0 (
+    $400: Self
+    $401: EndFunctionParms
+  )
+$402: Return expression:
+  $403: Nothing
+$404: EndOfScript
+
+=== BP_CharacterVFXComponent_C::Play Falling Splash (627 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_GetOwner_ReturnValue2@0x21390939100
+  Expression:
+  $10: FinalFunction target=GetOwner@0x212d6391e30 (
+    $19: EndFunctionParms
+  )
+$20: Let (Variable = Expression)
+  Variable:
+  $29: LocalVariable named K2Node_DynamicCast_AsAthena_Character@0x21390939200
+  Expression:
+  $38: DynamicCast to AthenaCharacter@0x212d54d7380 of expr:
+  $47: LocalVariable named CallFunc_GetOwner_ReturnValue2@0x21390939100
+$56: Let (Variable = Expression)
+  Variable:
+  $65: LocalVariable named K2Node_DynamicCast_bSuccess@0x21390939280
+  Expression:
+  $74: PrimitiveCast type=71
+    Argument:
+    $76: LocalVariable named K2Node_DynamicCast_AsAthena_Character@0x21390939200
+$85: JumpIfNot -> 0x270, cond:
+  $90: LocalVariable named K2Node_DynamicCast_bSuccess@0x21390939280
+$99: LetBool (Variable = Expression)
+  Variable:
+  $100: LocalVariable named CallFunc_HasValidWaterHeight_ReturnValue@0x21390939300
+  Expression:
+  $109: Context
+    ObjectExpression:
+    $110: LocalVariable named K2Node_DynamicCast_AsAthena_Character@0x21390939200
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_HasValidWaterHeight_ReturnValue@0x21390939300
+    ContextExpression:
+    $131: VirtualFunction call "HasValidWaterHeight" (
+      $144: EndFunctionParms
+    )
+$145: JumpIfNot -> 0x270, cond:
+  $150: LocalVariable named CallFunc_HasValidWaterHeight_ReturnValue@0x21390939300
+$159: LetObj (Variable = Expression)
+  Variable:
+  $160: LocalVariable named CallFunc_GetOwner_ReturnValue@0x21390939080
+  Expression:
+  $169: FinalFunction target=GetOwner@0x212d6391e30 (
+    $178: EndFunctionParms
+  )
+$179: Let (Variable = Expression)
+  Variable:
+  $188: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x21390939180
+  Expression:
+  $197: Context
+    ObjectExpression:
+    $198: LocalVariable named CallFunc_GetOwner_ReturnValue@0x21390939080
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetActorLocation_ReturnValue@0x21390939180
+    ContextExpression:
+    $219: FinalFunction target=K2_GetActorLocation@0x212d6386b10 (
+      $228: EndFunctionParms
+    )
+$229: CallMath target=BreakVector@0x212d69930b0 (
+  $238: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x21390939180
+  $247: LocalVariable named CallFunc_BreakVector_X@0x213908e6190
+  $256: LocalVariable named CallFunc_BreakVector_Y@0x213908e6200
+  $265: LocalVariable named CallFunc_BreakVector_Z@0x213908e6270
+  $274: EndFunctionParms
+)
+$275: Let (Variable = Expression)
+  Variable:
+  $284: LocalVariable named CallFunc_GetWaterHeight_ReturnValue@0x213908e62e0
+  Expression:
+  $293: Context
+    ObjectExpression:
+    $294: LocalVariable named K2Node_DynamicCast_AsAthena_Character@0x21390939200
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetWaterHeight_ReturnValue@0x213908e62e0
+    ContextExpression:
+    $315: VirtualFunction call "GetWaterHeight" (
+      $328: EndFunctionParms
+    )
+$329: Let (Variable = Expression)
+  Variable:
+  $338: LocalVariable named CallFunc_MakeVector_ReturnValue@0x21390939400
+  Expression:
+  $347: CallMath target=MakeVector@0x212d69aa910 (
+    $356: LocalVariable named CallFunc_BreakVector_X@0x213908e6190
+    $365: LocalVariable named CallFunc_BreakVector_Y@0x213908e6200
+    $374: LocalVariable named CallFunc_GetWaterHeight_ReturnValue@0x213908e62e0
+    $383: EndFunctionParms
+  )
+$384: LetObj (Variable = Expression)
+  Variable:
+  $385: LocalVariable named CallFunc_SelectSpawnVfx_ReturnValue@0x21390939480
+  Expression:
+  $394: Context
+    ObjectExpression:
+    $395: ObjectConst Default__VfxSelectorFunctionLibrary@0x212d70109c0
+    SkipBytes: 0x3f
+    RValueProperty: CallFunc_SelectSpawnVfx_ReturnValue@0x21390939480
+    ContextExpression:
+    $416: FinalFunction target=SelectSpawnVfx@0x212d6a4bd40 (
+      $425: LocalVariable named K2Node_DynamicCast_AsAthena_Character@0x21390939200
+      $434: ObjectConst PlayerImpactWaterSplashVfxSelector@0x2137f5991a0
+      $443: LocalVariable named FallingSpeed@0x213908e6120
+      $452: LocalVariable named CallFunc_MakeVector_ReturnValue@0x21390939400
+      $461: literal rotation (0,0,0)
+      $474: True
+      $475: False
+      $476: True
+      $477: False
+      $478: EndFunctionParms
+    )
+$479: LetObj (Variable = Expression)
+  Variable:
+  $480: LocalVariable named CallFunc_SelectSpawnVfxAttachedWithOwner_ReturnValue@0x21390939380
+  Expression:
+  $489: Context
+    ObjectExpression:
+    $490: ObjectConst Default__VfxSelectorFunctionLibrary@0x212d70109c0
+    SkipBytes: 0x71
+    RValueProperty: CallFunc_SelectSpawnVfxAttachedWithOwner_ReturnValue@0x21390939380
+    ContextExpression:
+    $511: FinalFunction target=SelectSpawnVfxAttachedWithOwner@0x212d6a4c2f0 (
+      $520: ObjectConst PlayerImpactWaterSplashUnderwaterVfxSelector@0x2137f599ce0
+      $529: LocalVariable named FallingSpeed@0x213908e6120
+      $538: Context
+        ObjectExpression:
+        $539: LocalVariable named K2Node_DynamicCast_AsAthena_Character@0x21390939200
+        SkipBytes: 0x9
+        RValueProperty: Mesh@0x212d669ced0
+        ContextExpression:
+        $560: InstanceVariable named Mesh@0x212d669ced0
+      $569: LocalVariable named K2Node_DynamicCast_AsAthena_Character@0x21390939200
+      $578: literal name "None"
+      $591: literal byte 0
+      $593: literal vector (0,0,0)
+      $606: literal rotation (0,0,0)
+      $619: True
+      $620: False
+      $621: False
+      $622: True
+      $623: EndFunctionParms
+    )
+$624: Return expression:
+  $625: Nothing
+$626: EndOfScript
+
+=== BP_CharacterVFXComponent_C::Play Foot Splash (720 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_IsFeatureEnabled_ReturnValue@0x21390939680
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__FeatureConfigBlueprintFunctionLibrary@0x212d6f7eac0
+    SkipBytes: 0x17
+    RValueProperty: CallFunc_IsFeatureEnabled_ReturnValue@0x21390939680
+    ContextExpression:
+    $32: FinalFunction target=IsFeatureEnabled@0x212d6977510 (
+      $41: literal name "VfxWaterFootSplash"
+      $54: EndFunctionParms
+    )
+$55: JumpIfNot -> 0x2cd, cond:
+  $60: LocalVariable named CallFunc_IsFeatureEnabled_ReturnValue@0x21390939680
+$69: LetObj (Variable = Expression)
+  Variable:
+  $70: LocalVariable named CallFunc_GetOwner_ReturnValue@0x21390939700
+  Expression:
+  $79: FinalFunction target=GetOwner@0x212d6391e30 (
+    $88: EndFunctionParms
+  )
+$89: Let (Variable = Expression)
+  Variable:
+  $98: LocalVariable named K2Node_DynamicCast_AsAthena_Character@0x21390939780
+  Expression:
+  $107: DynamicCast to AthenaCharacter@0x212d54d7380 of expr:
+  $116: LocalVariable named CallFunc_GetOwner_ReturnValue@0x21390939700
+$125: Let (Variable = Expression)
+  Variable:
+  $134: LocalVariable named K2Node_DynamicCast_bSuccess@0x21390939880
+  Expression:
+  $143: PrimitiveCast type=71
+    Argument:
+    $145: LocalVariable named K2Node_DynamicCast_AsAthena_Character@0x21390939780
+$154: JumpIfNot -> 0x2cd, cond:
+  $159: LocalVariable named K2Node_DynamicCast_bSuccess@0x21390939880
+$168: LetBool (Variable = Expression)
+  Variable:
+  $169: LocalVariable named CallFunc_IsSwimming_ReturnValue@0x21390939a00
+  Expression:
+  $178: Context
+    ObjectExpression:
+    $179: Context
+      ObjectExpression:
+      $180: LocalVariable named K2Node_DynamicCast_AsAthena_Character@0x21390939780
+      SkipBytes: 0x9
+      RValueProperty: AthenaCharacterMovementComponent@0x212d66a17d0
+      ContextExpression:
+      $201: InstanceVariable named AthenaCharacterMovementComponent@0x212d66a17d0
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_IsSwimming_ReturnValue@0x21390939a00
+    ContextExpression:
+    $222: VirtualFunction call "IsSwimming" (
+      $235: EndFunctionParms
+    )
+$236: LetBool (Variable = Expression)
+  Variable:
+  $237: LocalVariable named CallFunc_Not_PreBool_ReturnValue@0x21390939a80
+  Expression:
+  $246: CallMath target=Not_PreBool@0x212d69b0310 (
+    $255: LocalVariable named CallFunc_IsSwimming_ReturnValue@0x21390939a00
+    $264: EndFunctionParms
+  )
+$265: LetBool (Variable = Expression)
+  Variable:
+  $266: LocalVariable named CallFunc_IsFalling_ReturnValue@0x21390939b80
+  Expression:
+  $275: Context
+    ObjectExpression:
+    $276: Context
+      ObjectExpression:
+      $277: LocalVariable named K2Node_DynamicCast_AsAthena_Character@0x21390939780
+      SkipBytes: 0x9
+      RValueProperty: AthenaCharacterMovementComponent@0x212d66a17d0
+      ContextExpression:
+      $298: InstanceVariable named AthenaCharacterMovementComponent@0x212d66a17d0
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_IsFalling_ReturnValue@0x21390939b80
+    ContextExpression:
+    $319: VirtualFunction call "IsFalling" (
+      $332: EndFunctionParms
+    )
+$333: LetBool (Variable = Expression)
+  Variable:
+  $334: LocalVariable named CallFunc_Not_PreBool_ReturnValue2@0x21390939c00
+  Expression:
+  $343: CallMath target=Not_PreBool@0x212d69b0310 (
+    $352: LocalVariable named CallFunc_IsFalling_ReturnValue@0x21390939b80
+    $361: EndFunctionParms
+  )
+$362: LetBool (Variable = Expression)
+  Variable:
+  $363: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x21390939d00
+  Expression:
+  $372: CallMath target=BooleanAND@0x212d69910f0 (
+    $381: LocalVariable named CallFunc_Not_PreBool_ReturnValue@0x21390939a80
+    $390: LocalVariable named CallFunc_Not_PreBool_ReturnValue2@0x21390939c00
+    $399: EndFunctionParms
+  )
+$400: JumpIfNot -> 0x2cd, cond:
+  $405: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x21390939d00
+$414: LetObj (Variable = Expression)
+  Variable:
+  $415: LocalVariable named CallFunc_GetOwner_ReturnValue2@0x21390939900
+  Expression:
+  $424: FinalFunction target=GetOwner@0x212d6391e30 (
+    $433: EndFunctionParms
+  )
+$434: Let (Variable = Expression)
+  Variable:
+  $443: LocalVariable named CallFunc_GetVelocity_ReturnValue@0x21390939980
+  Expression:
+  $452: Context
+    ObjectExpression:
+    $453: LocalVariable named CallFunc_GetOwner_ReturnValue2@0x21390939900
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetVelocity_ReturnValue@0x21390939980
+    ContextExpression:
+    $474: VirtualFunction call "GetVelocity" (
+      $487: EndFunctionParms
+    )
+$488: CallMath target=BreakVector@0x212d69930b0 (
+  $497: LocalVariable named CallFunc_GetVelocity_ReturnValue@0x21390939980
+  $506: LocalVariable named CallFunc_BreakVector_X@0x213908e63c0
+  $515: LocalVariable named CallFunc_BreakVector_Y@0x213908e6430
+  $524: LocalVariable named CallFunc_BreakVector_Z@0x213908e64a0
+  $533: EndFunctionParms
+)
+$534: Let (Variable = Expression)
+  Variable:
+  $543: LocalVariable named CallFunc_MakeVector_ReturnValue@0x21390939b00
+  Expression:
+  $552: CallMath target=MakeVector@0x212d69aa910 (
+    $561: LocalVariable named CallFunc_BreakVector_X@0x213908e63c0
+    $570: LocalVariable named CallFunc_BreakVector_Y@0x213908e6430
+    $579: literal float 0
+    $584: EndFunctionParms
+  )
+$585: Let (Variable = Expression)
+  Variable:
+  $594: LocalVariable named CallFunc_VSize_ReturnValue@0x213908e6510
+  Expression:
+  $603: CallMath target=VSize@0x212d69bd810 (
+    $612: LocalVariable named CallFunc_MakeVector_ReturnValue@0x21390939b00
+    $621: EndFunctionParms
+  )
+$622: LetObj (Variable = Expression)
+  Variable:
+  $623: LocalVariable named CallFunc_SelectSpawnVfx_ReturnValue@0x21390939c80
+  Expression:
+  $632: Context
+    ObjectExpression:
+    $633: ObjectConst Default__VfxSelectorFunctionLibrary@0x212d70109c0
+    SkipBytes: 0x3f
+    RValueProperty: CallFunc_SelectSpawnVfx_ReturnValue@0x21390939c80
+    ContextExpression:
+    $654: FinalFunction target=SelectSpawnVfx@0x212d6a4bd40 (
+      $663: LocalVariable named K2Node_DynamicCast_AsAthena_Character@0x21390939780
+      $672: ObjectConst PlayerFootWaterSplashVfxSelector@0x212953e2120
+      $681: LocalVariable named CallFunc_VSize_ReturnValue@0x213908e6510
+      $690: LocalVariable named Location@0x21390939600
+      $699: literal rotation (0,0,0)
+      $712: True
+      $713: False
+      $714: False
+      $715: False
+      $716: EndFunctionParms
+    )
+$717: Return expression:
+  $718: Nothing
+$719: EndOfScript
+
+=== BP_CharacterVFXComponent_C::ReceiveEndPlay (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_EndPlayReason@0x2139093a480
+  Expression:
+  $9: LocalVariable named EndPlayReason@0x21390939d80
+$18: VirtualFunction call "ExecuteUbergraph_BP_CharacterVFXComponent" (
+  $31: literal int32 1600
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_CharacterVFXComponent_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_CharacterVFXComponent" (
+  $13: literal int32 2058
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_CharacterVFXComponent_C::PlayerViewUnderWaterEvent (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event2@0x2139093ae00
+  Expression:
+  $9: LocalVariable named Event@0x21390939e00
+$18: VirtualFunction call "ExecuteUbergraph_BP_CharacterVFXComponent" (
+  $31: literal int32 2063
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_CharacterVFXComponent_C::FallingIntoWaterEvent (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event@0x2139093ae80
+  Expression:
+  $9: LocalVariable named Event@0x21390939e80
+$18: VirtualFunction call "ExecuteUbergraph_BP_CharacterVFXComponent" (
+  $31: literal int32 2091
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_CharacterVFXComponent_C::WaterStateChanged (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Under_water_state_changed@0x2139093af00
+  Expression:
+  $9: LocalVariable named Under water state changed@0x21390939f00
+$18: VirtualFunction call "ExecuteUbergraph_BP_CharacterVFXComponent" (
+  $31: literal int32 2128
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_CharacterVFXComponent_C::On Foot Enter Water (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Enter_Water@0x2139093af80
+  Expression:
+  $9: LocalVariable named Enter Water@0x21390939f80
+$18: VirtualFunction call "ExecuteUbergraph_BP_CharacterVFXComponent" (
+  $31: literal int32 2133
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_CharacterVFXComponent_C::ExecuteUbergraph_BP_CharacterVFXComponent (2186 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x213908e6580
+$10: LetObj (Variable = Expression)
+  Variable:
+  $11: LocalVariable named CallFunc_GetOwner_ReturnValue@0x2139093a000
+  Expression:
+  $20: FinalFunction target=GetOwner@0x212d6391e30 (
+    $29: EndFunctionParms
+  )
+$30: Let (Variable = Expression)
+  Variable:
+  $39: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x2139093a100
+  Expression:
+  $48: Context
+    ObjectExpression:
+    $49: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x2139093a100
+    ContextExpression:
+    $70: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x212d6a30390 (
+      $79: LocalVariable named CallFunc_GetOwner_ReturnValue@0x2139093a000
+      $88: EndFunctionParms
+    )
+$89: Context
+  ObjectExpression:
+  $90: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $111: FinalFunction target=UnregisterEventFromHandle@0x212d6a31420 (
+    $120: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x2139093a100
+    $129: InstanceVariable named ExitShipEventHandle@0x2139093b500
+    $138: EndFunctionParms
+  )
+$139: VirtualFunction call "WindVFX_Destroy" (
+  $152: EndFunctionParms
+)
+$153: LetBool (Variable = Expression)
+  Variable:
+  $154: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue7@0x2139093ab00
+  Expression:
+  $163: Context
+    ObjectExpression:
+    $164: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsHandleRegistered_ReturnValue7@0x2139093ab00
+    ContextExpression:
+    $185: FinalFunction target=IsHandleRegistered@0x212d6a30550 (
+      $194: InstanceVariable named WindDirectionChangedHandle@0x2139093b700
+      $203: EndFunctionParms
+    )
+$204: JumpIfNot -> 0x887, cond:
+  $209: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue7@0x2139093ab00
+$218: VirtualFunction call "GetWindService" (
+  $231: LocalVariable named CallFunc_GetWindService_WindInterface@0x2139093aa80
+  $240: EndFunctionParms
+)
+$241: Let (Variable = Expression)
+  Variable:
+  $250: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue7@0x2139093ab80
+  Expression:
+  $259: Context
+    ObjectExpression:
+    $260: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue7@0x2139093ab80
+    ContextExpression:
+    $281: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x212d6a30390 (
+      $290: LocalVariable named CallFunc_GetWindService_WindInterface@0x2139093aa80
+      $299: EndFunctionParms
+    )
+$300: Context
+  ObjectExpression:
+  $301: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $322: FinalFunction target=UnregisterEventFromHandle@0x212d6a31420 (
+    $331: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue7@0x2139093ab80
+    $340: InstanceVariable named WindDirectionChangedHandle@0x2139093b700
+    $349: EndFunctionParms
+  )
+$350: Jump to offset 0x887
+$355: LetObj (Variable = Expression)
+  Variable:
+  $356: LocalVariable named CallFunc_GetOwner_ReturnValue2@0x2139093a080
+  Expression:
+  $365: FinalFunction target=GetOwner@0x212d6391e30 (
+    $374: EndFunctionParms
+  )
+$375: Let (Variable = Expression)
+  Variable:
+  $384: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x2139093a180
+  Expression:
+  $393: Context
+    ObjectExpression:
+    $394: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x2139093a180
+    ContextExpression:
+    $415: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x212d6a30390 (
+      $424: LocalVariable named CallFunc_GetOwner_ReturnValue2@0x2139093a080
+      $433: EndFunctionParms
+    )
+$434: Context
+  ObjectExpression:
+  $435: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $456: FinalFunction target=UnregisterEventFromHandle@0x212d6a31420 (
+    $465: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x2139093a180
+    $474: InstanceVariable named EnterShipEventHandle@0x2139093b480
+    $483: EndFunctionParms
+  )
+$484: LetBool (Variable = Expression)
+  Variable:
+  $485: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue5@0x2139093a980
+  Expression:
+  $494: Context
+    ObjectExpression:
+    $495: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsHandleRegistered_ReturnValue5@0x2139093a980
+    ContextExpression:
+    $516: FinalFunction target=IsHandleRegistered@0x212d6a30550 (
+      $525: InstanceVariable named ExitShipEventHandle@0x2139093b500
+      $534: EndFunctionParms
+    )
+$535: JumpIfNot -> 0x8b, cond:
+  $540: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue5@0x2139093a980
+$549: Jump to offset 0xa
+$554: LetObj (Variable = Expression)
+  Variable:
+  $555: LocalVariable named CallFunc_GetOwner_ReturnValue3@0x2139093a200
+  Expression:
+  $564: FinalFunction target=GetOwner@0x212d6391e30 (
+    $573: EndFunctionParms
+  )
+$574: Let (Variable = Expression)
+  Variable:
+  $583: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue3@0x2139093a300
+  Expression:
+  $592: Context
+    ObjectExpression:
+    $593: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue3@0x2139093a300
+    ContextExpression:
+    $614: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x212d6a30390 (
+      $623: LocalVariable named CallFunc_GetOwner_ReturnValue3@0x2139093a200
+      $632: EndFunctionParms
+    )
+$633: Context
+  ObjectExpression:
+  $634: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $655: FinalFunction target=UnregisterEventFromHandle@0x212d6a31420 (
+    $664: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue3@0x2139093a300
+    $673: InstanceVariable named PlayerViewUnderWaterHandle@0x2139093b400
+    $682: EndFunctionParms
+  )
+$683: LetBool (Variable = Expression)
+  Variable:
+  $684: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue6@0x2139093aa00
+  Expression:
+  $693: Context
+    ObjectExpression:
+    $694: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsHandleRegistered_ReturnValue6@0x2139093aa00
+    ContextExpression:
+    $715: FinalFunction target=IsHandleRegistered@0x212d6a30550 (
+      $724: InstanceVariable named EnterShipEventHandle@0x2139093b480
+      $733: EndFunctionParms
+    )
+$734: JumpIfNot -> 0x1e4, cond:
+  $739: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue6@0x2139093aa00
+$748: Jump to offset 0x163
+$753: LetObj (Variable = Expression)
+  Variable:
+  $754: LocalVariable named CallFunc_GetOwner_ReturnValue4@0x2139093a280
+  Expression:
+  $763: FinalFunction target=GetOwner@0x212d6391e30 (
+    $772: EndFunctionParms
+  )
+$773: Let (Variable = Expression)
+  Variable:
+  $782: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue4@0x2139093a380
+  Expression:
+  $791: Context
+    ObjectExpression:
+    $792: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue4@0x2139093a380
+    ContextExpression:
+    $813: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x212d6a30390 (
+      $822: LocalVariable named CallFunc_GetOwner_ReturnValue4@0x2139093a280
+      $831: EndFunctionParms
+    )
+$832: Context
+  ObjectExpression:
+  $833: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $854: FinalFunction target=UnregisterEventFromHandle@0x212d6a31420 (
+    $863: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue4@0x2139093a380
+    $872: InstanceVariable named FallingIntoWaterHandle@0x2139093b300
+    $881: EndFunctionParms
+  )
+$882: LetBool (Variable = Expression)
+  Variable:
+  $883: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue3@0x2139093a880
+  Expression:
+  $892: Context
+    ObjectExpression:
+    $893: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsHandleRegistered_ReturnValue3@0x2139093a880
+    ContextExpression:
+    $914: FinalFunction target=IsHandleRegistered@0x212d6a30550 (
+      $923: InstanceVariable named PlayerViewUnderWaterHandle@0x2139093b400
+      $932: EndFunctionParms
+    )
+$933: JumpIfNot -> 0x2ab, cond:
+  $938: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue3@0x2139093a880
+$947: Jump to offset 0x22a
+$952: LetBool (Variable = Expression)
+  Variable:
+  $953: LocalVariable named CallFunc_IsDedicatedServer_ReturnValue@0x2139093a400
+  Expression:
+  $962: Context
+    ObjectExpression:
+    $963: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_IsDedicatedServer_ReturnValue@0x2139093a400
+    ContextExpression:
+    $984: FinalFunction target=IsDedicatedServer@0x212d63add00 (
+      $993: Self
+      $994: EndFunctionParms
+    )
+$995: JumpIfNot -> 0x3f6, cond:
+  $1000: LocalVariable named CallFunc_IsDedicatedServer_ReturnValue@0x2139093a400
+$1009: Jump to offset 0x887
+$1014: LetObj (Variable = Expression)
+  Variable:
+  $1015: LocalVariable named CallFunc_GetOwner_ReturnValue7@0x2139093ac00
+  Expression:
+  $1024: FinalFunction target=GetOwner@0x212d6391e30 (
+    $1033: EndFunctionParms
+  )
+$1034: Let (Variable = Expression)
+  Variable:
+  $1043: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue10@0x2139093ad80
+  Expression:
+  $1052: Context
+    ObjectExpression:
+    $1053: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue10@0x2139093ad80
+    ContextExpression:
+    $1074: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x212d6a30390 (
+      $1083: LocalVariable named CallFunc_GetOwner_ReturnValue7@0x2139093ac00
+      $1092: EndFunctionParms
+    )
+$1093: Context
+  ObjectExpression:
+  $1094: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x3b
+  RValueProperty: (null)
+  ContextExpression:
+  $1115: FinalFunction target=RegisterEventFromHandle@0x212d6a30c00 (
+    $1124: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue10@0x2139093ad80
+    $1133: InstanceVariable named EnterWaterEvent@0x2139093b080
+    $1142: Self
+    $1143: literal ansi string "On Foot Enter Water"
+    $1164: ObjectConst EventCharacterFootEnterWater@0x212d64ca430
+    $1173: EndFunctionParms
+  )
+$1174: Context
+  ObjectExpression:
+  $1175: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x39
+  RValueProperty: (null)
+  ContextExpression:
+  $1196: FinalFunction target=RegisterEventFromHandle@0x212d6a30c00 (
+    $1205: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue10@0x2139093ad80
+    $1214: InstanceVariable named UnderwaterStateChanged@0x2139093b100
+    $1223: Self
+    $1224: literal ansi string "WaterStateChanged"
+    $1243: ObjectConst EventPlayerViewUnderWaterStateChanged@0x212d64d5f80
+    $1252: EndFunctionParms
+  )
+$1253: LetObj (Variable = Expression)
+  Variable:
+  $1254: LocalVariable named CallFunc_GetOwner_ReturnValue7@0x2139093ac00
+  Expression:
+  $1263: FinalFunction target=GetOwner@0x212d6391e30 (
+    $1272: EndFunctionParms
+  )
+$1273: Let (Variable = Expression)
+  Variable:
+  $1282: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue9@0x2139093ad00
+  Expression:
+  $1291: Context
+    ObjectExpression:
+    $1292: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue9@0x2139093ad00
+    ContextExpression:
+    $1313: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x212d6a30390 (
+      $1322: LocalVariable named CallFunc_GetOwner_ReturnValue7@0x2139093ac00
+      $1331: EndFunctionParms
+    )
+$1332: Context
+  ObjectExpression:
+  $1333: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x3d
+  RValueProperty: (null)
+  ContextExpression:
+  $1354: FinalFunction target=RegisterEventFromHandle@0x212d6a30c00 (
+    $1363: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue9@0x2139093ad00
+    $1372: InstanceVariable named FallingIntoWaterHandle@0x2139093b300
+    $1381: Self
+    $1382: literal ansi string "FallingIntoWaterEvent"
+    $1405: ObjectConst FallingIntoWaterEvent@0x212d64c8a00
+    $1414: EndFunctionParms
+  )
+$1415: LetObj (Variable = Expression)
+  Variable:
+  $1416: LocalVariable named CallFunc_GetOwner_ReturnValue7@0x2139093ac00
+  Expression:
+  $1425: FinalFunction target=GetOwner@0x212d6391e30 (
+    $1434: EndFunctionParms
+  )
+$1435: Let (Variable = Expression)
+  Variable:
+  $1444: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue8@0x2139093ac80
+  Expression:
+  $1453: Context
+    ObjectExpression:
+    $1454: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue8@0x2139093ac80
+    ContextExpression:
+    $1475: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x212d6a30390 (
+      $1484: LocalVariable named CallFunc_GetOwner_ReturnValue7@0x2139093ac00
+      $1493: EndFunctionParms
+    )
+$1494: Context
+  ObjectExpression:
+  $1495: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x41
+  RValueProperty: (null)
+  ContextExpression:
+  $1516: FinalFunction target=RegisterEventFromHandle@0x212d6a30c00 (
+    $1525: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue8@0x2139093ac80
+    $1534: InstanceVariable named PlayerViewUnderWaterHandle@0x2139093b400
+    $1543: Self
+    $1544: literal ansi string "PlayerViewUnderWaterEvent"
+    $1571: ObjectConst EventPlayerViewUnderWaterStateChanged@0x212d64d5f80
+    $1580: EndFunctionParms
+  )
+$1581: VirtualFunction call "WindVFX_Create" (
+  $1594: EndFunctionParms
+)
+$1595: Jump to offset 0x887
+$1600: LetBool (Variable = Expression)
+  Variable:
+  $1601: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue@0x2139093a780
+  Expression:
+  $1610: Context
+    ObjectExpression:
+    $1611: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsHandleRegistered_ReturnValue@0x2139093a780
+    ContextExpression:
+    $1632: FinalFunction target=IsHandleRegistered@0x212d6a30550 (
+      $1641: InstanceVariable named EnterWaterEvent@0x2139093b080
+      $1650: EndFunctionParms
+    )
+$1651: JumpIfNot -> 0x702, cond:
+  $1656: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue@0x2139093a780
+$1665: LetObj (Variable = Expression)
+  Variable:
+  $1666: LocalVariable named CallFunc_GetOwner_ReturnValue6@0x2139093a580
+  Expression:
+  $1675: FinalFunction target=GetOwner@0x212d6391e30 (
+    $1684: EndFunctionParms
+  )
+$1685: Let (Variable = Expression)
+  Variable:
+  $1694: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue6@0x2139093a700
+  Expression:
+  $1703: Context
+    ObjectExpression:
+    $1704: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue6@0x2139093a700
+    ContextExpression:
+    $1725: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x212d6a30390 (
+      $1734: LocalVariable named CallFunc_GetOwner_ReturnValue6@0x2139093a580
+      $1743: EndFunctionParms
+    )
+$1744: Context
+  ObjectExpression:
+  $1745: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $1766: FinalFunction target=UnregisterEventFromHandle@0x212d6a31420 (
+    $1775: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue6@0x2139093a700
+    $1784: InstanceVariable named EnterWaterEvent@0x2139093b080
+    $1793: EndFunctionParms
+  )
+$1794: LetBool (Variable = Expression)
+  Variable:
+  $1795: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue2@0x2139093a800
+  Expression:
+  $1804: Context
+    ObjectExpression:
+    $1805: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsHandleRegistered_ReturnValue2@0x2139093a800
+    ContextExpression:
+    $1826: FinalFunction target=IsHandleRegistered@0x212d6a30550 (
+      $1835: InstanceVariable named UnderwaterStateChanged@0x2139093b100
+      $1844: EndFunctionParms
+    )
+$1845: JumpIfNot -> 0x7c4, cond:
+  $1850: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue2@0x2139093a800
+$1859: LetObj (Variable = Expression)
+  Variable:
+  $1860: LocalVariable named CallFunc_GetOwner_ReturnValue5@0x2139093a500
+  Expression:
+  $1869: FinalFunction target=GetOwner@0x212d6391e30 (
+    $1878: EndFunctionParms
+  )
+$1879: Let (Variable = Expression)
+  Variable:
+  $1888: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue5@0x2139093a600
+  Expression:
+  $1897: Context
+    ObjectExpression:
+    $1898: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue5@0x2139093a600
+    ContextExpression:
+    $1919: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x212d6a30390 (
+      $1928: LocalVariable named CallFunc_GetOwner_ReturnValue5@0x2139093a500
+      $1937: EndFunctionParms
+    )
+$1938: Context
+  ObjectExpression:
+  $1939: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $1960: FinalFunction target=UnregisterEventFromHandle@0x212d6a31420 (
+    $1969: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue5@0x2139093a600
+    $1978: InstanceVariable named UnderwaterStateChanged@0x2139093b100
+    $1987: EndFunctionParms
+  )
+$1988: LetBool (Variable = Expression)
+  Variable:
+  $1989: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue4@0x2139093a900
+  Expression:
+  $1998: Context
+    ObjectExpression:
+    $1999: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsHandleRegistered_ReturnValue4@0x2139093a900
+    ContextExpression:
+    $2020: FinalFunction target=IsHandleRegistered@0x212d6a30550 (
+      $2029: InstanceVariable named FallingIntoWaterHandle@0x2139093b300
+      $2038: EndFunctionParms
+    )
+$2039: JumpIfNot -> 0x372, cond:
+  $2044: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue4@0x2139093a900
+$2053: Jump to offset 0x2f1
+$2058: Jump to offset 0x3b8
+$2063: VirtualFunction call "Play View Under Water FX" (
+  $2076: LocalVariable named K2Node_CustomEvent_Event2@0x2139093ae00
+  $2085: EndFunctionParms
+)
+$2086: Jump to offset 0x887
+$2091: VirtualFunction call "Play Falling Splash" (
+  $2104: StructMemberContext prop=FallingSpeed@0x212d64c8aa0
+    Expression to struct:
+    $2113: LocalVariable named K2Node_CustomEvent_Event@0x2139093ae80
+  $2122: EndFunctionParms
+)
+$2123: Jump to offset 0x887
+$2128: Jump to offset 0x887
+$2133: VirtualFunction call "Play Foot Splash" (
+  $2146: StructMemberContext prop=Position@0x212d644b7c0
+    Expression to struct:
+    $2155: StructMemberContext prop=SocketFootImpactResult@0x212d644b950
+      Expression to struct:
+      $2164: StructMemberContext prop=Result@0x212d64ca4d0
+        Expression to struct:
+        $2173: LocalVariable named K2Node_CustomEvent_Enter_Water@0x2139093af80
+  $2182: EndFunctionParms
+)
+$2183: Return expression:
+  $2184: Nothing
+$2185: EndOfScript

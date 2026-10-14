@@ -1,0 +1,166 @@
+// /Game/Blueprints/Prompts/PromptConditionals/bp_prompt_proposevoyage -> BP_Prompt_ProposeVoyage_C
+
+=== BP_Prompt_ProposeVoyage_C::fn_idx_217680 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Prompt_ProposeVoyage" (
+  $13: literal int32 42
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_ProposeVoyage_C::fn_idx_218289 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Ev@0x19f4953c000
+  Expression:
+  $9: LocalVariable named Ev@0x19f4953bf80
+$18: VirtualFunction call "ExecuteUbergraph_BP_Prompt_ProposeVoyage" (
+  $31: literal int32 149
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_ProposeVoyage_C::fn_idx_14108 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Prompt_ProposeVoyage" (
+  $13: literal int32 253
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_ProposeVoyage_C::fn_idx_217670 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Prompt_ProposeVoyage" (
+  $13: literal int32 327
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_ProposeVoyage_C::fn_idx_218286 (518 bytes) ===
+$0: FlowStack.Push(0x203)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x19f494c6d60
+$15: LetBool (Variable = Expression)
+  Variable:
+  $16: InstanceVariable named State_Complete@0x19f4953c300
+  Expression:
+  $25: True
+$26: FinalFunction target=DismissAllPrompts@0x19e4d4b4cc0 (
+  $35: EndFunctionParms
+)
+$36: PopExecutionFlow (jump to popped addr)
+$37: Jump to offset 0xf
+$42: VirtualFunction call "GetControllerObjectMessageDispatcher" (
+  $55: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher@0x19f4953c100
+  $64: EndFunctionParms
+)
+$65: Context
+  ObjectExpression:
+  $66: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x3d
+  RValueProperty: (null)
+  ContextExpression:
+  $87: FinalFunction target=RegisterEventFromHandle@0x19e4d410c00 (
+    $96: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher@0x19f4953c100
+    $105: InstanceVariable named Handle_OnOfferPurchased@0x19f4953c280
+    $114: Self
+    $115: literal ansi string "Prompt_OfferPurchased"
+    $138: ObjectConst OfferPurchasedEvent@0x19e4cee86b0
+    $147: EndFunctionParms
+  )
+$148: PopExecutionFlow (jump to popped addr)
+$149: LetBool (Variable = Expression)
+  Variable:
+  $150: LocalVariable named CallFunc_IsOfferCategory_ReturnValue@0x19f4953c080
+  Expression:
+  $159: Context
+    ObjectExpression:
+    $160: ObjectConst Default__ShopOfferBlueprintFunctionLibrary@0x19e4d7ea280
+    SkipBytes: 0x24
+    RValueProperty: CallFunc_IsOfferCategory_ReturnValue@0x19f4953c080
+    ContextExpression:
+    $181: FinalFunction target=IsOfferCategory@0x19e4d240120 (
+      $190: literal ansi string "Voyage"
+      $198: StructMemberContext prop=Purchase@0x19e4cee8750
+        Expression to struct:
+        $207: LocalVariable named K2Node_CustomEvent_Ev@0x19f4953c000
+      $216: EndFunctionParms
+    )
+$217: PopExecutionFlowIfNot, cond:
+$218: LocalVariable named CallFunc_IsOfferCategory_ReturnValue@0x19f4953c080
+$227: LetBool (Variable = Expression)
+  Variable:
+  $228: InstanceVariable named State_OfferPurchased@0x19f4953c200
+  Expression:
+  $237: True
+$238: VirtualFunction call "Evaluate" (
+  $251: EndFunctionParms
+)
+$252: PopExecutionFlow (jump to popped addr)
+$253: VirtualFunction call "GetControllerObjectMessageDispatcher" (
+  $266: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher2@0x19f4953c180
+  $275: EndFunctionParms
+)
+$276: Context
+  ObjectExpression:
+  $277: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $298: FinalFunction target=UnregisterEventFromHandle@0x19e4d411420 (
+    $307: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher2@0x19f4953c180
+    $316: InstanceVariable named Handle_OnOfferPurchased@0x19f4953c280
+    $325: EndFunctionParms
+  )
+$326: PopExecutionFlow (jump to popped addr)
+$327: JumpIfNot -> 0x160, cond:
+  $332: InstanceVariable named State_Complete@0x19f4953c300
+$341: FinalFunction target=DismissAllPrompts@0x19e4d4b4cc0 (
+  $350: EndFunctionParms
+)
+$351: PopExecutionFlow (jump to popped addr)
+$352: JumpIfNot -> 0x1f8, cond:
+  $357: InstanceVariable named State_OfferPurchased@0x19f4953c200
+$366: FinalFunction target=SetPromptAs@0x19e4d4b5a00 (
+  $375: InstanceVariable named Prompt_ProposeVoyage@0x19f4953c380
+  $384: EndFunctionParms
+)
+$385: Context
+  ObjectExpression:
+  $386: ObjectConst Default__TutorialHelpersBlueprintLibrary@0x19e4db0f570
+  SkipBytes: 0x14
+  RValueProperty: (null)
+  ContextExpression:
+  $407: FinalFunction target=FirePromptCompleted@0x19e4d514330 (
+    $416: ObjectConst ProposeVoyage_PromptAccessKey_C@0x19f5c03a440
+    $425: Self
+    $426: EndFunctionParms
+  )
+$427: Context
+  ObjectExpression:
+  $428: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $449: FinalFunction target=Delay@0x19e4cd86d40 (
+    $458: Self
+    $459: literal float 20
+    $464: literal struct LatentActionInfo@0x19e4cd86e80 (size 32)
+      $477: literal CodeSkipSizeType 0x25
+      $482: literal int32 1
+      $487: literal name "ExecuteUbergraph_BP_Prompt_ProposeVoyage"
+      $500: Self
+      $501: EndStructConst
+    $502: EndFunctionParms
+  )
+$503: PopExecutionFlow (jump to popped addr)
+$504: FinalFunction target=DismissAllPrompts@0x19e4d4b4cc0 (
+  $513: EndFunctionParms
+)
+$514: PopExecutionFlow (jump to popped addr)
+$515: Return expression:
+  $516: Nothing
+$517: EndOfScript

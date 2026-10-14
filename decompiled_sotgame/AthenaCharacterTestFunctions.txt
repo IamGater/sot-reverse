@@ -1,0 +1,1457 @@
+// Class: AthenaCharacterTestFunctions (27 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+AthenaCharacterTestFunctions::ClearCharacterInteractionPolicies @ RVA 0xB09B70 EA 0x7FF6F4529B70
+======================================================================
+__int64 __fastcall sub_7FF6F4529B70(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  __int64 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v7 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v5 = v7;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return nullsub_259(v5);
+}
+
+
+======================================================================
+AthenaCharacterTestFunctions::ClearInputBindings @ RVA 0xB09BE0 EA 0x7FF6F4529BE0
+======================================================================
+__int64 __fastcall sub_7FF6F4529BE0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  __int64 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v7 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v5 = v7;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return nullsub_260(v5);
+}
+
+
+======================================================================
+AthenaCharacterTestFunctions::CreateAndAddItemDescToInventory @ RVA 0xB09DF0 EA 0x7FF6F4529DF0
+======================================================================
+__int64 __fastcall sub_7FF6F4529DF0(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  v8 = v11;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F42EB0A0(v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaCharacterTestFunctions::CreateAndEquipItemDesc @ RVA 0xB09EB0 EA 0x7FF6F4529EB0
+======================================================================
+__int64 __fastcall sub_7FF6F4529EB0(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  v8 = v11;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F42EB0B0(v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaCharacterTestFunctions::ForceInteract @ RVA 0xB0A250 EA 0x7FF6F452A250
+======================================================================
+__int64 __fastcall sub_7FF6F452A250(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int128 v5; // xmm0
+  __int64 v6; // r9
+  __int64 v7; // xmm1_8
+  __int64 v8; // r8
+  __int64 v9; // rcx
+  bool v10; // zf
+  bool v12; // [rsp+20h] [rbp-60h]
+  __int64 v13; // [rsp+30h] [rbp-50h] BYREF
+  __int64 v14; // [rsp+38h] [rbp-48h] BYREF
+  __int128 v15; // [rsp+40h] [rbp-40h] BYREF
+  __int64 v16; // [rsp+50h] [rbp-30h]
+  __int128 v17; // [rsp+60h] [rbp-20h] BYREF
+  __int64 v18; // [rsp+70h] [rbp-10h]
+  int v19; // [rsp+98h] [rbp+18h] BYREF
+  __int64 v20; // [rsp+A8h] [rbp+28h] BYREF
+
+  v2 = 0;
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v15 = 0xFFFFFFFFFFFFFFFFuLL;
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v20 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v20);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v20);
+  }
+  v19 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  v4 = a2[4];
+  v5 = v15;
+  v6 = v20;
+  v7 = v16;
+  v8 = v13;
+  LOBYTE(v2) = v4 != 0;
+  v9 = v14;
+  v10 = v19 == 0;
+  a2[4] = v4 + v2;
+  v17 = v5;
+  v12 = !v10;
+  v18 = v7;
+  return nullsub_261(v9, &v17, v8, v6, v12);
+}
+
+
+======================================================================
+AthenaCharacterTestFunctions::GetClientCharacter @ RVA 0xB0AEA0 EA 0x7FF6F452AEA0
+======================================================================
+__int64 __fastcall sub_7FF6F452AEA0(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // r8
+  __int64 v8; // rdx
+  __int64 v9; // rcx
+  __int64 result; // rax
+  unsigned int v11; // [rsp+48h] [rbp+10h] BYREF
+  unsigned int v12; // [rsp+50h] [rbp+18h] BYREF
+  __int64 v13; // [rsp+58h] [rbp+20h] BYREF
+
+  v3 = 0;
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = a2[4];
+  v7 = v11;
+  v8 = v12;
+  v9 = v13;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F42EC360(v9, v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaCharacterTestFunctions::GetClientPlayerCharacter @ RVA 0xB0AF90 EA 0x7FF6F452AF90
+======================================================================
+__int64 __fastcall sub_7FF6F452AF90(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // r8
+  __int64 v8; // rdx
+  __int64 v9; // rcx
+  __int64 result; // rax
+  unsigned int v11; // [rsp+48h] [rbp+10h] BYREF
+  unsigned int v12; // [rsp+50h] [rbp+18h] BYREF
+  __int64 v13; // [rsp+58h] [rbp+20h] BYREF
+
+  v3 = 0;
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = a2[4];
+  v7 = v11;
+  v8 = v12;
+  v9 = v13;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F42EC370(v9, v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaCharacterTestFunctions::GetLocalAthenaCharacter @ RVA 0xB0D1F0 EA 0x7FF6F452D1F0
+======================================================================
+__int64 __fastcall sub_7FF6F452D1F0(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 result; // rax
+  unsigned int v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  v8 = v11;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F42EC4C0(v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaCharacterTestFunctions::HasAnyoneGotInputBindings @ RVA 0xB0E310 EA 0x7FF6F452E310
+======================================================================
+__int64 __fastcall sub_7FF6F452E310(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  __int64 result; // rax
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  v7 = v9;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F42EC6B0(v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaCharacterTestFunctions::SendCharacterMoveInput @ RVA 0xB10AF0 EA 0x7FF6F4530AF0
+======================================================================
+__int64 __fastcall sub_7FF6F4530AF0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rdx
+  __int64 v6; // rcx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v9; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v4 = a2[4];
+  v5 = v9;
+  v6 = v8;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return nullsub_264(v6, v5);
+}
+
+
+======================================================================
+AthenaCharacterTestFunctions::SendCharacterWheelInput @ RVA 0xB10BA0 EA 0x7FF6F4530BA0
+======================================================================
+__int64 __fastcall sub_7FF6F4530BA0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  int v7; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v8; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v7 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v5 = v8;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return nullsub_265(v5);
+}
+
+
+======================================================================
+AthenaCharacterTestFunctions::SetupAthenaCharacterForInteractionTest @ RVA 0xB12290 EA 0x7FF6F4532290
+======================================================================
+__int64 __fastcall sub_7FF6F4532290(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  v8 = v11;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F42EDA80(v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaCharacterTestFunctions::SetupAthenaCharacterForInteractionTestByIndex @ RVA 0xB12350 EA 0x7FF6F4532350
+======================================================================
+__int64 __fastcall sub_7FF6F4532350(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 result; // rax
+  unsigned int v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  v8 = v11;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F42EDA90(v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaCharacterTestFunctions::SetupCharacterForMPTesting @ RVA 0xB12410 EA 0x7FF6F4532410
+======================================================================
+__int64 __fastcall sub_7FF6F4532410(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rdx
+  __int64 v6; // rcx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v9; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v4 = a2[4];
+  v5 = v8;
+  v6 = v9;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return nullsub_266(v6, v5);
+}
+
+
+======================================================================
+AthenaCharacterTestFunctions::SetupInputBinder @ RVA 0xB124C0 EA 0x7FF6F45324C0
+======================================================================
+__int64 __fastcall sub_7FF6F45324C0(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  __int64 result; // rax
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  v7 = v9;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F42EDAB0(v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaCharacterTestFunctions::SimulateButtonPress @ RVA 0xB12570 EA 0x7FF6F4532570
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F4532570(__int64 a1, _QWORD *a2)
+{
+  int v3; // edi
+  __int64 v5; // [rsp+28h] [rbp-50h] BYREF
+  __int128 v6; // [rsp+30h] [rbp-48h]
+  int v7; // [rsp+40h] [rbp-38h]
+  __int64 v8; // [rsp+48h] [rbp-30h] BYREF
+  __int128 v9; // [rsp+50h] [rbp-28h] BYREF
+  int v10; // [rsp+60h] [rbp-18h]
+  __int64 v11; // [rsp+88h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v5 = 0;
+  v6 = 0;
+  v7 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v5);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v5);
+  }
+  a2[4] += a2[4] != 0;
+  v8 = v5;
+  v9 = v6;
+  if ( *((_QWORD *)&v6 + 1) )
+  {
+    if ( _InterlockedIncrement((volatile signed __int32 *)(*((_QWORD *)&v6 + 1) + 8LL)) == 1 )
+      MEMORY[0] = (char *)&v9 + 8;
+    if ( *((_QWORD *)&v9 + 1) )
+      v3 = *(_DWORD *)(*((_QWORD *)&v9 + 1) + 24LL);
+  }
+  v10 = v3;
+  sub_7FF6F42EDBA0(v11, &v8);
+  return sub_7FF6F3C36760(&v5);
+}
+
+
+======================================================================
+AthenaCharacterTestFunctions::SimulateButtonRelease @ RVA 0xB126A0 EA 0x7FF6F45326A0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F45326A0(__int64 a1, _QWORD *a2)
+{
+  int v3; // edi
+  __int64 v5; // [rsp+28h] [rbp-50h] BYREF
+  __int128 v6; // [rsp+30h] [rbp-48h]
+  int v7; // [rsp+40h] [rbp-38h]
+  __int64 v8; // [rsp+48h] [rbp-30h] BYREF
+  __int128 v9; // [rsp+50h] [rbp-28h] BYREF
+  int v10; // [rsp+60h] [rbp-18h]
+  __int64 v11; // [rsp+88h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v5 = 0;
+  v6 = 0;
+  v7 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v5);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v5);
+  }
+  a2[4] += a2[4] != 0;
+  v8 = v5;
+  v9 = v6;
+  if ( *((_QWORD *)&v6 + 1) )
+  {
+    if ( _InterlockedIncrement((volatile signed __int32 *)(*((_QWORD *)&v6 + 1) + 8LL)) == 1 )
+      MEMORY[0] = (char *)&v9 + 8;
+    if ( *((_QWORD *)&v9 + 1) )
+      v3 = *(_DWORD *)(*((_QWORD *)&v9 + 1) + 24LL);
+  }
+  v10 = v3;
+  sub_7FF6F42EDBB0(v11, &v8);
+  return sub_7FF6F3C36760(&v5);
+}
+
+
+======================================================================
+AthenaCharacterTestFunctions::TeleportToPosition @ RVA 0xB12DD0 EA 0x7FF6F4532DD0
+======================================================================
+__int64 __fastcall sub_7FF6F4532DD0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // xmm1_8
+  __int64 v6; // r9
+  __int64 v7; // r8
+  __int64 v8; // rcx
+  __int128 v9; // xmm0
+  int v11; // [rsp+30h] [rbp-49h]
+  int v12; // [rsp+38h] [rbp-41h]
+  __int64 v13; // [rsp+40h] [rbp-39h] BYREF
+  __int64 v14; // [rsp+48h] [rbp-31h] BYREF
+  __int64 v15; // [rsp+50h] [rbp-29h] BYREF
+  __int128 v16; // [rsp+58h] [rbp-21h] BYREF
+  __int64 v17; // [rsp+68h] [rbp-11h]
+  __int64 v18; // [rsp+70h] [rbp-9h] BYREF
+  int v19; // [rsp+78h] [rbp-1h]
+  __int64 v20; // [rsp+80h] [rbp+7h] BYREF
+  int v21; // [rsp+88h] [rbp+Fh]
+  __int64 v22; // [rsp+90h] [rbp+17h] BYREF
+  int v23; // [rsp+98h] [rbp+1Fh]
+  __int64 v24; // [rsp+A0h] [rbp+27h] BYREF
+  int v25; // [rsp+A8h] [rbp+2Fh]
+  __int128 v26; // [rsp+B0h] [rbp+37h] BYREF
+  __int64 v27; // [rsp+C0h] [rbp+47h]
+  int v28; // [rsp+E8h] [rbp+6Fh] BYREF
+  int v29; // [rsp+F8h] [rbp+7Fh] BYREF
+
+  v2 = 0;
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v16 = 0xFFFFFFFFFFFFFFFFuLL;
+  v17 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v20);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v20);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  v29 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v29);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v29);
+  }
+  v28 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v28);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v28);
+  }
+  v4 = a2[4];
+  v5 = v17;
+  v6 = v13;
+  LOBYTE(v2) = v4 != 0;
+  v7 = v14;
+  v8 = v15;
+  v23 = v19;
+  v25 = v21;
+  v12 = v28;
+  v11 = v29;
+  v22 = v18;
+  v24 = v20;
+  v9 = v16;
+  a2[4] = v4 + v2;
+  v26 = v9;
+  v27 = v5;
+  return nullsub_267(v8, &v26, v7, v6, &v24, &v22, v11, v12);
+}
+
+
+======================================================================
+AthenaCharacterTestFunctions::TestAthenaCharacterHandleAnalogInput @ RVA 0xB13040 EA 0x7FF6F4533040
+======================================================================
+__int64 __fastcall sub_7FF6F4533040(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rdx
+  __int64 v6; // rcx
+  _QWORD v8[3]; // [rsp+20h] [rbp-18h] BYREF
+  int v9; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v10; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v8[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v4 = a2[4];
+  v5 = v10;
+  v6 = v8[0];
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return nullsub_268(v6, v5);
+}
+
+
+======================================================================
+AthenaCharacterTestFunctions::TestAthenaCharacterHandleNotificationInput @ RVA 0xB13140 EA 0x7FF6F4533140
+======================================================================
+__int64 __fastcall sub_7FF6F4533140(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rdx
+  __int64 v6; // rcx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v9; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v4 = a2[4];
+  v5 = v8;
+  v6 = v9;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return nullsub_269(v6, v5);
+}
+
+
+======================================================================
+AthenaCharacterTestFunctions::TestRadialHandleAnalogInput @ RVA 0xB131F0 EA 0x7FF6F45331F0
+======================================================================
+__int64 __fastcall sub_7FF6F45331F0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rdx
+  __int64 v6; // rcx
+  _QWORD v8[3]; // [rsp+20h] [rbp-18h] BYREF
+  int v9; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v10; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v8[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v4 = a2[4];
+  v5 = v10;
+  v6 = v8[0];
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return nullsub_270(v6, v5);
+}
+
+
+======================================================================
+AthenaCharacterTestFunctions::TestRadialHandleNotificationInput @ RVA 0xB132F0 EA 0x7FF6F45332F0
+======================================================================
+__int64 __fastcall sub_7FF6F45332F0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rdx
+  __int64 v6; // rcx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v9; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v4 = a2[4];
+  v5 = v8;
+  v6 = v9;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return nullsub_271(v6, v5);
+}
+
+
+======================================================================
+AthenaCharacterTestFunctions::WaitForCustomMovementMode @ RVA 0xB143F0 EA 0x7FF6F45343F0
+======================================================================
+__int64 __fastcall sub_7FF6F45343F0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int128 v5; // xmm0
+  __int64 v6; // r9
+  __int64 v7; // xmm1_8
+  __int64 v8; // r8
+  __int64 v9; // rcx
+  __int64 v10; // rdi
+  __int64 v12; // [rsp+30h] [rbp-50h] BYREF
+  __int64 v13; // [rsp+38h] [rbp-48h] BYREF
+  __int128 v14; // [rsp+40h] [rbp-40h] BYREF
+  __int64 v15; // [rsp+50h] [rbp-30h]
+  __int128 v16; // [rsp+60h] [rbp-20h] BYREF
+  __int64 v17; // [rsp+70h] [rbp-10h]
+  unsigned __int8 v18; // [rsp+98h] [rbp+18h] BYREF
+  int v19; // [rsp+A8h] [rbp+28h] BYREF
+
+  v2 = 0;
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v14 = 0xFFFFFFFFFFFFFFFFuLL;
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v18 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  v19 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  v4 = a2[4];
+  v5 = v14;
+  v6 = v18;
+  v7 = v15;
+  v8 = v12;
+  LOBYTE(v2) = v4 != 0;
+  v9 = v13;
+  v10 = v4 + v2;
+  LODWORD(v4) = v19;
+  a2[4] = v10;
+  v16 = v5;
+  v17 = v7;
+  return nullsub_274(v9, &v16, v8, v6, v4);
+}
+
+
+======================================================================
+AthenaCharacterTestFunctions::WaitForMovementMode @ RVA 0xB14580 EA 0x7FF6F4534580
+======================================================================
+__int64 __fastcall sub_7FF6F4534580(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int128 v5; // xmm0
+  __int64 v6; // r9
+  __int64 v7; // xmm1_8
+  __int64 v8; // r8
+  __int64 v9; // rcx
+  __int64 v10; // rdi
+  __int64 v12; // [rsp+30h] [rbp-50h] BYREF
+  __int64 v13; // [rsp+38h] [rbp-48h] BYREF
+  __int128 v14; // [rsp+40h] [rbp-40h] BYREF
+  __int64 v15; // [rsp+50h] [rbp-30h]
+  __int128 v16; // [rsp+60h] [rbp-20h] BYREF
+  __int64 v17; // [rsp+70h] [rbp-10h]
+  unsigned __int8 v18; // [rsp+98h] [rbp+18h] BYREF
+  int v19; // [rsp+A8h] [rbp+28h] BYREF
+
+  v2 = 0;
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v14 = 0xFFFFFFFFFFFFFFFFuLL;
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v18 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  v19 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  v4 = a2[4];
+  v5 = v14;
+  v6 = v18;
+  v7 = v15;
+  v8 = v12;
+  LOBYTE(v2) = v4 != 0;
+  v9 = v13;
+  v10 = v4 + v2;
+  LODWORD(v4) = v19;
+  a2[4] = v10;
+  v16 = v5;
+  v17 = v7;
+  return nullsub_275(v9, &v16, v8, v6, v4);
+}
+
+
+======================================================================
+AthenaCharacterTestFunctions::WaitForTeleport @ RVA 0xB14710 EA 0x7FF6F4534710
+======================================================================
+__int64 __fastcall sub_7FF6F4534710(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rdx
+  __int64 v6; // xmm1_8
+  __int64 v7; // rcx
+  __int128 v9; // [rsp+20h] [rbp-48h] BYREF
+  __int64 v10; // [rsp+30h] [rbp-38h]
+  __int128 v11; // [rsp+40h] [rbp-28h] BYREF
+  __int64 v12; // [rsp+50h] [rbp-18h]
+  __int64 v13; // [rsp+78h] [rbp+10h] BYREF
+  __int64 v14; // [rsp+88h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v9 = 0xFFFFFFFFFFFFFFFFuLL;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v4 = a2[4];
+  v5 = v13;
+  v6 = v10;
+  v7 = v14;
+  LOBYTE(v2) = v4 != 0;
+  v11 = v9;
+  a2[4] = v4 + v2;
+  v12 = v6;
+  return nullsub_276(v7, v5, &v11);
+}
+
+
+======================================================================
+AthenaCharacterTestFunctions::WaitUntilDocked @ RVA 0xB14830 EA 0x7FF6F4534830
+======================================================================
+__int64 __fastcall sub_7FF6F4534830(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // r8
+  __int64 v6; // xmm1_8
+  __int64 v7; // rcx
+  __int128 v9; // [rsp+20h] [rbp-48h] BYREF
+  __int64 v10; // [rsp+30h] [rbp-38h]
+  __int128 v11; // [rsp+40h] [rbp-28h] BYREF
+  __int64 v12; // [rsp+50h] [rbp-18h]
+  __int64 v13; // [rsp+78h] [rbp+10h] BYREF
+  __int64 v14; // [rsp+88h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v9 = 0xFFFFFFFFFFFFFFFFuLL;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v4 = a2[4];
+  v5 = v13;
+  v6 = v10;
+  v7 = v14;
+  LOBYTE(v2) = v4 != 0;
+  v11 = v9;
+  a2[4] = v4 + v2;
+  v12 = v6;
+  return sub_7FF6F42EE660(v7, &v11, v5);
+}
+
+
+======================================================================
+AthenaCharacterTestFunctions::WaitUntilFullySpawned @ RVA 0xB14950 EA 0x7FF6F4534950
+======================================================================
+__int64 __fastcall sub_7FF6F4534950(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  __int128 v7; // [rsp+20h] [rbp-48h] BYREF
+  __int64 v8; // [rsp+30h] [rbp-38h]
+  __int128 v9; // [rsp+40h] [rbp-28h] BYREF
+  __int64 v10; // [rsp+50h] [rbp-18h]
+  __int64 v11; // [rsp+78h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v7 = 0xFFFFFFFFFFFFFFFFuLL;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v5 = v11;
+  LOBYTE(v2) = v4 != 0;
+  v9 = v7;
+  v10 = v8;
+  a2[4] = v4 + v2;
+  return nullsub_277(v5, &v9);
+}
+

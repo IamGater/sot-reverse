@@ -1,0 +1,68 @@
+// Class: RadialForceComponent (3 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+RadialForceComponent::AddObjectTypeToAffect @ RVA 0x2B0FA10 EA 0x7FF6F652FA10
+======================================================================
+__int64 __fastcall sub_7FF6F652FA10(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  char v5; // al
+  char v7; // [rsp+30h] [rbp+8h] BYREF
+  char v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  v8 = v5;
+  return (*(__int64 (__fastcall **)(__int64, char *))(*(_QWORD *)a1 + 1304LL))(a1, &v8);
+}
+
+
+======================================================================
+RadialForceComponent::FireImpulse @ RVA 0x2B139F0 EA 0x7FF6F65339F0
+======================================================================
+__int64 __fastcall sub_7FF6F65339F0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1296LL))(a1);
+}
+
+
+======================================================================
+RadialForceComponent::RemoveObjectTypeToAffect @ RVA 0x2B1B1F0 EA 0x7FF6F653B1F0
+======================================================================
+__int64 __fastcall sub_7FF6F653B1F0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  char v5; // al
+  char v7; // [rsp+30h] [rbp+8h] BYREF
+  char v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  v8 = v5;
+  return (*(__int64 (__fastcall **)(__int64, char *))(*(_QWORD *)a1 + 1312LL))(a1, &v8);
+}
+

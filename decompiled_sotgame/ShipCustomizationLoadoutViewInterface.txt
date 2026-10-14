@@ -1,0 +1,46 @@
+// Class: ShipCustomizationLoadoutViewInterface (3 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+ShipCustomizationLoadoutViewInterface::GetActivePartCustomizations @ RVA 0xCF64C0 EA 0x7FF6F47164C0
+======================================================================
+__int64 __fastcall sub_7FF6F47164C0(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 24LL))(a1);
+  return sub_7FF6F463AA30(a3, v4);
+}
+
+
+======================================================================
+ShipCustomizationLoadoutViewInterface::GetInitialShipCustomizations @ RVA 0xCF7090 EA 0x7FF6F4717090
+======================================================================
+__int64 __fastcall sub_7FF6F4717090(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 32LL))(a1);
+  return sub_7FF6F3F8DBC0(a3, v4);
+}
+
+
+======================================================================
+ShipCustomizationLoadoutViewInterface::GetShipCustomizationLoadout @ RVA 0xCF7790 EA 0x7FF6F4717790
+======================================================================
+__int64 __fastcall sub_7FF6F4717790(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rbx
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 16LL))(a1);
+  sub_7FF6F3F8DBC0(a3, v4);
+  sub_7FF6F3F8DBC0(a3 + 16, v4 + 16);
+  result = *(unsigned __int8 *)(v4 + 32);
+  *(_BYTE *)(a3 + 32) = result;
+  return result;
+}
+

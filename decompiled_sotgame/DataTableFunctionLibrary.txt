@@ -1,0 +1,197 @@
+// Class: DataTableFunctionLibrary (3 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+DataTableFunctionLibrary::EvaluateCurveTableRow @ RVA 0x2B13560 EA 0x7FF6F6533560
+======================================================================
+__int64 __fastcall sub_7FF6F6533560(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  char *v5; // rsi
+  int v6; // r8d
+  int *v7; // rcx
+  int v8; // edx
+  __int64 v9; // rax
+  int v10; // ecx
+  __int64 v12; // [rsp+20h] [rbp-38h]
+  int v13; // [rsp+30h] [rbp-28h] BYREF
+  __int64 v14; // [rsp+38h] [rbp-20h] BYREF
+  _QWORD v15[3]; // [rsp+40h] [rbp-18h] BYREF
+  char v16; // [rsp+68h] [rbp+10h] BYREF
+  int v17; // [rsp+78h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v15[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v15);
+  }
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v16 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v4 = a2[7];
+  v5 = &v16;
+  v17 = 0;
+  a2[7] = 0;
+  if ( v4 )
+    LODWORD(v5) = v4;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v7 = &v17;
+  v8 = v14;
+  if ( a2[7] )
+    v7 = (int *)a2[7];
+  v9 = a2[4];
+  v12 = (__int64)v7;
+  v10 = v15[0];
+  LOBYTE(v2) = v9 != 0;
+  a2[4] = v9 + v2;
+  return sub_7FF6F5D54460(v10, v8, v6, (_DWORD)v5, v12);
+}
+
+
+======================================================================
+DataTableFunctionLibrary::GetDataTableRowFromName @ RVA 0x2B15130 EA 0x7FF6F6535130
+======================================================================
+__int64 __fastcall sub_7FF6F6535130(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // r8
+  __int64 v8; // rdx
+  __int64 v9; // rcx
+  __int64 result; // rax
+  __int64 v11; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v12; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], 0);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, 0);
+  }
+  v6 = a2[4];
+  v7 = a2[7];
+  v8 = v11;
+  v9 = v12;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F5D557E0(v9, v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+DataTableFunctionLibrary::GetDataTableRowNames @ RVA 0x2B15230 EA 0x7FF6F6535230
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6535230(__int64 a1, _QWORD *a2)
+{
+  __int64 v3; // rdi
+  __int64 *v4; // rdx
+  __int64 v5; // rax
+  __int64 result; // rax
+  __int64 v7[4]; // [rsp+28h] [rbp-20h] BYREF
+  __int64 v8; // [rsp+58h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v7[0] = 0;
+  v7[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v7);
+  }
+  v4 = v7;
+  if ( a2[7] )
+    v4 = (__int64 *)a2[7];
+  v5 = a2[4];
+  LOBYTE(v3) = v5 != 0;
+  a2[4] = v5 + v3;
+  result = sub_7FF6F5D56A60(v8, v4);
+  if ( v7[0] )
+    return sub_7FF6F4DED1F0(v7[0]);
+  return result;
+}
+

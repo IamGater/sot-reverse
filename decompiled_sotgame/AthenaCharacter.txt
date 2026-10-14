@@ -1,0 +1,828 @@
+// Class: AthenaCharacter (37 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+AthenaCharacter::AllAnimationsLoaded @ RVA 0xB093C0 EA 0x7FF6F45293C0
+======================================================================
+__int64 __fastcall sub_7FF6F45293C0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 2264LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaCharacter::CalculateWaterHeight @ RVA 0xB099F0 EA 0x7FF6F45299F0
+======================================================================
+__int64 __fastcall sub_7FF6F45299F0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)(a1 + 1800) + 48LL))(a1 + 1800);
+}
+
+
+======================================================================
+AthenaCharacter::CanInteractWith @ RVA 0xB09A20 EA 0x7FF6F4529A20
+======================================================================
+__int64 __fastcall sub_7FF6F4529A20(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rdx
+  __int64 result; // rax
+  __int64 v11; // [rsp+40h] [rbp+8h] BYREF
+  __int64 v12; // [rsp+48h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v7 = a2[4];
+  v8 = v11;
+  v9 = v12;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, __int64, __int64))(*(_QWORD *)(a1 + 1688) + 24LL))(a1 + 1688, v9, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaCharacter::CreateProjectileTraceHitVolume @ RVA 0xB09F70 EA 0x7FF6F4529F70
+======================================================================
+__int64 __fastcall sub_7FF6F4529F70(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 2208LL))(a1);
+}
+
+
+======================================================================
+AthenaCharacter::CureAllAilings @ RVA 0xB09F90 EA 0x7FF6F4529F90
+======================================================================
+__int64 __fastcall sub_7FF6F4529F90(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return nullsub_6109();
+}
+
+
+======================================================================
+AthenaCharacter::ForceWaterHeight @ RVA 0xB0A590 EA 0x7FF6F452A590
+======================================================================
+__int64 __fastcall sub_7FF6F452A590(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  __int64 v6; // rdx
+  __int64 v7; // rax
+  __int64 v8; // r8
+  int v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v10 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  v5 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v7 = a2[4];
+  v8 = v11;
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  return nullsub_95(a1, v6, v8);
+}
+
+
+======================================================================
+AthenaCharacter::GenerateNewRandomAnimationSeed @ RVA 0xB0A660 EA 0x7FF6F452A660
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+AthenaCharacter::GenerateNewRandomBool @ RVA 0xB0A680 EA 0x7FF6F452A680
+======================================================================
+__int64 __fastcall sub_7FF6F452A680(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F3E5D850();
+}
+
+
+======================================================================
+AthenaCharacter::GetCharacterRotation @ RVA 0xB0ADE0 EA 0x7FF6F452ADE0
+======================================================================
+__int64 __fastcall sub_7FF6F452ADE0(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rax
+  __int64 result; // rax
+  _BYTE v6[24]; // [rsp+20h] [rbp-18h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = (*(__int64 (__fastcall **)(__int64, _BYTE *))(*(_QWORD *)(a1 + 1840) + 32LL))(a1 + 1840, v6);
+  *(_QWORD *)a3 = *(_QWORD *)v4;
+  result = *(unsigned int *)(v4 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+AthenaCharacter::GetCharacterTransform @ RVA 0xB0AE30 EA 0x7FF6F452AE30
+======================================================================
+_OWORD *__fastcall sub_7FF6F452AE30(__int64 a1, __int64 a2, _OWORD *a3)
+{
+  _OWORD *result; // rax
+  _BYTE v5[48]; // [rsp+20h] [rbp-48h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (_OWORD *)(*(__int64 (__fastcall **)(__int64, _BYTE *))(*(_QWORD *)(a1 + 1840) + 40LL))(a1 + 1840, v5);
+  *a3 = *result;
+  a3[1] = result[1];
+  a3[2] = result[2];
+  return result;
+}
+
+
+======================================================================
+AthenaCharacter::GetCurrentShip @ RVA 0xB0B3F0 EA 0x7FF6F452B3F0
+======================================================================
+__int64 __fastcall sub_7FF6F452B3F0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)(a1 + 1776) + 16LL))(a1 + 1776);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaCharacter::GetFirstPersonMeshComponent @ RVA 0xB0B5D0 EA 0x7FF6F452B5D0
+======================================================================
+__int64 __fastcall sub_7FF6F452B5D0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)(a1 + 1656) + 16LL))(a1 + 1656);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaCharacter::GetFloorSweepCollisionResponseContainer @ RVA 0xB0B680 EA 0x7FF6F452B680
+======================================================================
+_OWORD *__fastcall sub_7FF6F452B680(__int64 a1, __int64 a2, _OWORD *a3)
+{
+  _OWORD *result; // rax
+  _BYTE v5[40]; // [rsp+20h] [rbp-28h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (_OWORD *)sub_7FF6F3E5FA90(a1, v5);
+  *a3 = *result;
+  a3[1] = result[1];
+  return result;
+}
+
+
+======================================================================
+AthenaCharacter::GetFocusedInteractable @ RVA 0xB0B6C0 EA 0x7FF6F452B6C0
+======================================================================
+__int64 __fastcall sub_7FF6F452B6C0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)(a1 + 1688) + 40LL))(a1 + 1688);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaCharacter::GetIgnoreReplicationRotationOnly @ RVA 0xB0B770 EA 0x7FF6F452B770
+======================================================================
+__int64 __fastcall sub_7FF6F452B770(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E5FD20();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaCharacter::GetInputBinder @ RVA 0xB0B7E0 EA 0x7FF6F452B7E0
+======================================================================
+__int64 __fastcall sub_7FF6F452B7E0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E5FD30();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaCharacter::GetThirdPersonMeshComponent @ RVA 0xB0DC00 EA 0x7FF6F452DC00
+======================================================================
+__int64 __fastcall sub_7FF6F452DC00(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)(a1 + 1656) + 24LL))(a1 + 1656);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaCharacter::GetValidWaterHeightAtomic @ RVA 0xB0DEF0 EA 0x7FF6F452DEF0
+======================================================================
+__int64 __fastcall sub_7FF6F452DEF0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  int *v7; // rdx
+  __int64 v8; // rax
+  __int64 result; // rax
+  int v10; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = &v10;
+  if ( a2[7] )
+    v7 = (int *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, int *))(*(_QWORD *)(a1 + 1800) + 24LL))(a1 + 1800, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaCharacter::GetViewPitch @ RVA 0xB0E050 EA 0x7FF6F452E050
+======================================================================
+void __fastcall sub_7FF6F452E050(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F3E63660();
+}
+
+
+======================================================================
+AthenaCharacter::GetWaterHeight @ RVA 0xB0E150 EA 0x7FF6F452E150
+======================================================================
+void __fastcall sub_7FF6F452E150(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)(a1 + 1800) + 32LL))(a1 + 1800);
+}
+
+
+======================================================================
+AthenaCharacter::GetWaterLevelRelativeToCharacterBasePosition @ RVA 0xB0E190 EA 0x7FF6F452E190
+======================================================================
+void __fastcall sub_7FF6F452E190(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F3E63700();
+}
+
+
+======================================================================
+AthenaCharacter::GetYawOnMovingBase @ RVA 0xB0E1C0 EA 0x7FF6F452E1C0
+======================================================================
+void __fastcall sub_7FF6F452E1C0(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F3E63880();
+}
+
+
+======================================================================
+AthenaCharacter::HandleCharacterMovementUpdated @ RVA 0xB0E1F0 EA 0x7FF6F452E1F0
+======================================================================
+__int64 __fastcall sub_7FF6F452E1F0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  __int64 v9; // [rsp+20h] [rbp-48h] BYREF
+  int v10; // [rsp+28h] [rbp-40h]
+  __int64 v11; // [rsp+30h] [rbp-38h] BYREF
+  int v12; // [rsp+38h] [rbp-30h]
+  __int64 v13; // [rsp+40h] [rbp-28h] BYREF
+  int v14; // [rsp+48h] [rbp-20h]
+  __int64 v15; // [rsp+50h] [rbp-18h] BYREF
+  int v16; // [rsp+58h] [rbp-10h]
+  int v17; // [rsp+78h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v17 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  v13 = v9;
+  v15 = v11;
+  v7 = v6 + (v6 != 0);
+  LODWORD(v6) = v10;
+  a2[4] = v7;
+  v14 = v6;
+  v16 = v12;
+  return sub_7FF6F3E63990(a1, v5, &v15, &v13);
+}
+
+
+======================================================================
+AthenaCharacter::HasValidWaterHeight @ RVA 0xB0E430 EA 0x7FF6F452E430
+======================================================================
+__int64 __fastcall sub_7FF6F452E430(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)(a1 + 1800) + 16LL))(a1 + 1800);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaCharacter::Interact @ RVA 0xB0E5A0 EA 0x7FF6F452E5A0
+======================================================================
+__int64 __fastcall sub_7FF6F452E5A0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F3E64970(a1, v6);
+}
+
+
+======================================================================
+AthenaCharacter::InteractWith @ RVA 0xB0E620 EA 0x7FF6F452E620
+======================================================================
+__int64 __fastcall sub_7FF6F452E620(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // r8
+  __int64 v7; // rdx
+  __int64 v9; // [rsp+30h] [rbp+8h] BYREF
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v5 = a2[4];
+  v6 = v9;
+  v7 = v10;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64, __int64))(*(_QWORD *)(a1 + 1688) + 16LL))(a1 + 1688, v7, v6);
+}
+
+
+======================================================================
+AthenaCharacter::IsDead @ RVA 0xB0E890 EA 0x7FF6F452E890
+======================================================================
+__int64 __fastcall sub_7FF6F452E890(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)(a1 + 1832) + 16LL))(a1 + 1832);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaCharacter::IsInteractionValid @ RVA 0xB0E900 EA 0x7FF6F452E900
+======================================================================
+__int64 __fastcall sub_7FF6F452E900(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 result; // rax
+  __int64 v10; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)(a1 + 1688) + 32LL))(a1 + 1688, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaCharacter::IsInWater @ RVA 0xB0E8D0 EA 0x7FF6F452E8D0
+======================================================================
+__int64 __fastcall sub_7FF6F452E8D0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3E658A0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaCharacter::Kill @ RVA 0xB0ED30 EA 0x7FF6F452ED30
+======================================================================
+__int64 __fastcall sub_7FF6F452ED30(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F3E65F20(a1, v5);
+}
+
+
+======================================================================
+AthenaCharacter::PickUpItem @ RVA 0xB103F0 EA 0x7FF6F45303F0
+======================================================================
+__int64 __fastcall sub_7FF6F45303F0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // r8
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  bool v8; // zf
+  int v10; // [rsp+30h] [rbp+8h] BYREF
+  __int64 v11; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v11;
+  LOBYTE(v2) = v6 != 0;
+  v8 = v10 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v8;
+  return (*(__int64 (__fastcall **)(__int64, __int64, __int64))(*(_QWORD *)(a1 + 1808) + 24LL))(a1 + 1808, v7, v5);
+}
+
+
+======================================================================
+AthenaCharacter::ReceiveRestart @ RVA 0x152AB10 EA 0x7FF6F4F4AB10
+======================================================================
+  (RVA 0x152AB10 shared with another function already decompiled above/elsewhere - likely a generic Blueprint/K2 bytecode executor, not unique native code)
+unsigned __int8 *__fastcall sub_7FF6F4F4AB10(_QWORD *a1, _QWORD *a2, void *a3)
+{
+  unsigned __int8 *result; // rax
+  char v7; // bp
+  _BYTE *i; // rax
+  unsigned __int8 *v9; // rax
+  int v10; // ecx
+  unsigned __int8 *v11; // rcx
+  __int64 v12; // rax
+  unsigned __int8 *v13; // rbx
+  char v14[64]; // [rsp+30h] [rbp-68h] BYREF
+
+  result = (unsigned __int8 *)a1[2];
+  if ( *((int *)result + 49) >= 0 )
+  {
+    v7 = (*(__int64 (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD))(*a1 + 480LL))(a1, a2[2], a2[5], 0);
+    if ( (v7 & 1) != 0 )
+      (*(void (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD, _QWORD))(*a1 + 488LL))(a1, a2[2], a2[5], a2[15], 0);
+    if ( (v7 & 2) != 0 )
+    {
+      for ( i = (_BYTE *)a2[4]; *i != 4; i = (_BYTE *)a2[4] )
+      {
+        v9 = (unsigned __int8 *)a2[4];
+        v10 = *v9;
+        a2[4] = v9 + 1;
+        ((void (__fastcall *)(_QWORD, _QWORD *, char *))funcs_7FF6F4F44D4F[v10])(a2[3], a2, v14);
+      }
+      result = i + 1;
+      a2[4] = result;
+      v11 = result + 1;
+      if ( *result == 11 )
+      {
+        a2[4] = v11;
+      }
+      else
+      {
+        v12 = *result;
+        a2[4] = v11;
+        return (unsigned __int8 *)((__int64 (__fastcall *)(_QWORD, _QWORD *, void *))funcs_7FF6F4F44D4F[v12])(
+                                    a2[3],
+                                    a2,
+                                    a3);
+      }
+    }
+    else
+    {
+      result = (unsigned __int8 *)sub_7FF6F4F072B0(a2[2]);
+      v13 = result;
+      if ( result )
+      {
+        if ( (*((_QWORD *)result + 7) & 0x1000000000LL) == 0 )
+          (*(void (__fastcall **)(unsigned __int8 *, void *))(*(_QWORD *)result + 688LL))(result, a3);
+        return (unsigned __int8 *)memset(a3, 0, *((_DWORD *)v13 + 12) * *((_DWORD *)v13 + 13));
+      }
+    }
+  }
+  else if ( !byte_7FF6FA4F64EF )
+  {
+    ++dword_7FF6FA525F48;
+  }
+  return result;
+}
+
+
+======================================================================
+AthenaCharacter::SetIgnoreReplicationRotationOnly @ RVA 0xB115F0 EA 0x7FF6F45315F0
+======================================================================
+__int64 __fastcall sub_7FF6F45315F0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F3E711B0(a1, v5);
+}
+
+
+======================================================================
+AthenaCharacter::UnforceWaterHeight @ RVA 0xB13550 EA 0x7FF6F4533550
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+AthenaCharacter::UpdateWaterServiceInterface @ RVA 0xB13EF0 EA 0x7FF6F4533EF0
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+AthenaCharacter::UseItem @ RVA 0xB13FD0 EA 0x7FF6F4533FD0
+======================================================================
+__int64 __fastcall sub_7FF6F4533FD0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 result; // rax
+  __int64 v10; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)(a1 + 1864) + 16LL))(a1 + 1864, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+AthenaCharacter::WieldItem @ RVA 0xB14A60 EA 0x7FF6F4534A60
+======================================================================
+__int64 __fastcall sub_7FF6F4534A60(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  bool v3; // zf
+  __int64 v7; // rdi
+  __int64 v8; // r8
+  __int64 v9; // rax
+  __int64 *v10; // rcx
+  __int64 v11; // rax
+  __int64 result; // rax
+  __int128 v13; // [rsp+20h] [rbp-28h] BYREF
+  _QWORD v14[3]; // [rsp+30h] [rbp-18h] BYREF
+  int v15; // [rsp+50h] [rbp+8h] BYREF
+
+  v3 = a2[4] == 0;
+  v13 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  v7 = 0;
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  LOBYTE(v8) = v15 != 0;
+  v9 = v13;
+  a2[4] += a2[4] != 0;
+  v10 = (__int64 *)(a1 + 1752);
+  v14[0] = v9;
+  if ( v9 )
+    v7 = *((_QWORD *)&v13 + 1);
+  v11 = *v10;
+  v14[1] = v7;
+  result = (*(__int64 (__fastcall **)(__int64 *, _QWORD *, __int64))(v11 + 16))(v10, v14, v8);
+  *a3 = result;
+  return result;
+}
+

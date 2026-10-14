@@ -1,0 +1,125 @@
+// E:\unreal-projects\Athena\Content\Blueprints\TallTales\Actors\AshenAge\Tale_1_TheAshenDragon\bp_theashendragon_enterislanddirectlytriggervolume.uasset -> BP_TheAshenDragon_EnterIslandDirectlyTriggerVolume_C
+
+=== BP_TheAshenDragon_EnterIslandDirectlyTriggerVolume_C::IsQuestParticipant (82 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_Array_Contains_ReturnValue@0x213ae606f00
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Contains_ReturnValue@0x213ae606f00
+    ContextExpression:
+    $32: FinalFunction target=Array_Contains@0x212d6987180 (
+      $41: InstanceVariable named QuestParticipants@0x213ae602700
+      $50: LocalVariable named PlayerCharacter@0x213ae607000
+      $59: EndFunctionParms
+    )
+$60: LetBool (Variable = Expression)
+  Variable:
+  $61: LocalOutVariable named IsQuestParticipant@0x213ae606f80
+  Expression:
+  $70: LocalVariable named CallFunc_Array_Contains_ReturnValue@0x213ae606f00
+$79: Return expression:
+  $80: Nothing
+$81: EndOfScript
+
+=== BP_TheAshenDragon_EnterIslandDirectlyTriggerVolume_C::CastToAthenaPlayerCharacter (152 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x213ae606d00
+  Expression:
+  $18: DynamicCast to AthenaPlayerCharacter@0x212d54d6040 of expr:
+  $27: LocalVariable named Actor@0x213ae606e80
+$36: Let (Variable = Expression)
+  Variable:
+  $45: LocalVariable named K2Node_DynamicCast_bSuccess@0x213ae606c80
+  Expression:
+  $54: PrimitiveCast type=71
+    Argument:
+    $56: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x213ae606d00
+$65: JumpIfNot -> 0x85, cond:
+  $70: LocalVariable named K2Node_DynamicCast_bSuccess@0x213ae606c80
+$79: LetBool (Variable = Expression)
+  Variable:
+  $80: InstanceVariable named CastSuccessful@0x213ae605b80
+  Expression:
+  $89: True
+$90: LetBool (Variable = Expression)
+  Variable:
+  $91: LocalOutVariable named Successful@0x213ae606e00
+  Expression:
+  $100: InstanceVariable named CastSuccessful@0x213ae605b80
+$109: LetObj (Variable = Expression)
+  Variable:
+  $110: LocalOutVariable named AthenaPlayerCharacter@0x213ae606d80
+  Expression:
+  $119: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x213ae606d00
+$128: Jump to offset 0x95
+$133: LetBool (Variable = Expression)
+  Variable:
+  $134: InstanceVariable named CastSuccessful@0x213ae605b80
+  Expression:
+  $143: False
+$144: Jump to offset 0x5a
+$149: Return expression:
+  $150: Nothing
+$151: EndOfScript
+
+=== BP_TheAshenDragon_EnterIslandDirectlyTriggerVolume_C::Initialise (30 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: InstanceVariable named QuestParticipants@0x213ae602700
+  Expression:
+  $18: LocalOutVariable named QuestParticipants@0x213ae606b80
+$27: Return expression:
+  $28: Nothing
+$29: EndOfScript
+
+=== BP_TheAshenDragon_EnterIslandDirectlyTriggerVolume_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_TheAshenDragon_EnterIslandDirectlyTriggerVolume_C::ReceiveActorBeginOverlap (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_OtherActor@0x213ae605f80
+  Expression:
+  $9: LocalVariable named OtherActor@0x213ae605b00
+$18: VirtualFunction call "ExecuteUbergraph_BP_TheAshenDragon_EnterIslandDirectlyTriggerVolume" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_TheAshenDragon_EnterIslandDirectlyTriggerVolume_C::ExecuteUbergraph_BP_TheAshenDragon_EnterIslandDirectlyTriggerVolume (96 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x213b118acd0
+$10: VirtualFunction call "CastToAthenaPlayerCharacter" (
+  $23: LocalVariable named K2Node_Event_OtherActor@0x213ae605f80
+  $32: LocalVariable named CallFunc_CastToAthenaPlayerCharacter_Successful@0x213ae608000
+  $41: LocalVariable named CallFunc_CastToAthenaPlayerCharacter_AthenaPlayerCharacter@0x213ae601200
+  $50: EndFunctionParms
+)
+$51: JumpIfNot -> 0x5d, cond:
+  $56: LocalVariable named CallFunc_CastToAthenaPlayerCharacter_Successful@0x213ae608000
+$65: CallMulticastDelegate target=OnPlayerEnteredTrigger__DelegateSignature@0x213b3061e00 delegate:
+  $74: InstanceVariable named OnPlayerEnteredTrigger@0x213ae607400
+  Params:
+  $83: LocalVariable named CallFunc_CastToAthenaPlayerCharacter_AthenaPlayerCharacter@0x213ae601200
+  $92: EndFunctionParms
+$93: Return expression:
+  $94: Nothing
+$95: EndOfScript
+
+=== BP_TheAshenDragon_EnterIslandDirectlyTriggerVolume_C::OnPlayerLeftTrigger__DelegateSignature (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_TheAshenDragon_EnterIslandDirectlyTriggerVolume_C::OnPlayerEnteredTrigger__DelegateSignature (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript

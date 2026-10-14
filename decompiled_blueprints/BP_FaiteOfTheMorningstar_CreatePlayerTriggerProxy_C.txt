@@ -1,0 +1,85 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_7_FateOfTheMorningStar/bp_faiteofthemorningstar_createplayertriggerproxy -> BP_FaiteOfTheMorningstar_CreatePlayerTriggerProxy_C
+
+=== BP_FaiteOfTheMorningstar_CreatePlayerTriggerProxy_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fcc9c2e80
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fcc9c2d00
+$18: VirtualFunction call "idx:284631" (
+  $31: literal int32 300
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_FaiteOfTheMorningstar_CreatePlayerTriggerProxy_C::fn_idx_284631 (308 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19e586b97d0
+$10: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $19: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc9c2d80
+  $28: EndFunctionParms
+)
+$29: Let (Variable = Expression)
+  Variable:
+  $38: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19fcc9c2e00
+  Expression:
+  $47: Context
+    ObjectExpression:
+    $48: StructMemberContext prop=Location_2_7AB781BA44D20A4C516F1C8301632592@0x19fcc9c3280
+      Expression to struct:
+      $57: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc9c2d80
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetTransform_ReturnValue@0x19fcc9c2e00
+    ContextExpression:
+    $78: FinalFunction target=GetTransform@0x19e4cd64700 (
+      $87: EndFunctionParms
+    )
+$88: LetObj (Variable = Expression)
+  Variable:
+  $89: LocalVariable named CallFunc_SpawnPhasedActor_ReturnValue@0x19fcc9c2f00
+  Expression:
+  $98: FinalFunction target=SpawnPhasedActor@0x19e4cda8ba0 (
+    $107: InstanceVariable named ProxyClass@0x19fcc9c3100
+    $116: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19fcc9c2e00
+    $125: NoObject
+    $126: literal name "None"
+    $139: EndFunctionParms
+  )
+$140: Let (Variable = Expression)
+  Variable:
+  $149: LocalVariable named idx:284632@0x19fcc9c3000
+  Expression:
+  $158: DynamicCast to BP_FateOfTheMorningstar_QuestParicipantTriggerVolume_C@0x19fcb38d5c0 of expr:
+  $167: LocalVariable named CallFunc_SpawnPhasedActor_ReturnValue@0x19fcc9c2f00
+$176: Let (Variable = Expression)
+  Variable:
+  $185: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcc9c3080
+  Expression:
+  $194: PrimitiveCast type=71
+    Argument:
+    $196: LocalVariable named idx:284632@0x19fcc9c3000
+$205: JumpIfNot -> 0x131, cond:
+  $210: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcc9c3080
+$219: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $228: LocalVariable named CallFunc_GetVariables_OutStruct2@0x19fcc9c2f80
+  $237: EndFunctionParms
+)
+$238: LetObj (Variable = Expression)
+  Variable:
+  $239: StructMemberContext prop=idx:284633@0x19fcc9c3300
+    Expression to struct:
+    $248: LocalVariable named CallFunc_GetVariables_OutStruct2@0x19fcc9c2f80
+  Expression:
+  $257: LocalVariable named idx:284632@0x19fcc9c3000
+$266: FinalFunction target=SetVariables@0x19e4cda7cc0 (
+  $275: LocalVariable named CallFunc_GetVariables_OutStruct2@0x19fcc9c2f80
+  $284: EndFunctionParms
+)
+$285: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $294: EndFunctionParms
+)
+$295: Jump to offset 0x131
+$300: Jump to offset 0xa
+$305: Return expression:
+  $306: Nothing
+$307: EndOfScript

@@ -1,0 +1,1861 @@
+// Class: GameplayAbility (46 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+GameplayAbility::BP_ApplyGameplayEffectToOwner @ RVA 0x3C0F180 EA 0x7FF6F762F180
+======================================================================
+_DWORD *__fastcall sub_7FF6F762F180(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r9
+  __int64 v9; // r8
+  _DWORD *result; // rax
+  unsigned int v11; // [rsp+48h] [rbp+10h] BYREF
+  char v12; // [rsp+50h] [rbp+18h] BYREF
+  __int64 v13; // [rsp+58h] [rbp+20h] BYREF
+
+  v3 = 0;
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v7 = a2[4];
+  v8 = v11;
+  v9 = v13;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (_DWORD *)sub_7FF6F75773C0(a1, &v12, v9, v8);
+  *a3 = *result;
+  return result;
+}
+
+
+======================================================================
+GameplayAbility::BP_ApplyGameplayEffectToTarget @ RVA 0x3C0F590 EA 0x7FF6F762F590
+======================================================================
+// Hidden C++ exception states: #wind=3
+__int64 __fastcall sub_7FF6F762F590(int a1, _QWORD *a2, __int64 a3)
+{
+  int v6; // eax
+  __int64 v7; // rbx
+  _QWORD v9[2]; // [rsp+38h] [rbp-50h] BYREF
+  _BYTE v10[16]; // [rsp+48h] [rbp-40h] BYREF
+  __int64 v11; // [rsp+58h] [rbp-30h] BYREF
+  int v12; // [rsp+98h] [rbp+10h] BYREF
+  __int64 v13; // [rsp+A0h] [rbp+18h] BYREF
+
+  v9[0] = 0;
+  v9[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  a2[4] += a2[4] != 0;
+  v6 = sub_7FF6F755F130(v10, v9);
+  v7 = sub_7FF6F7577780(a1, (unsigned int)&v11, v6, v13, v12);
+  if ( a3 != v7 )
+  {
+    if ( *(_QWORD *)a3 )
+    {
+      sub_7FF6F4DED1F0(*(_QWORD *)a3);
+      if ( *(_QWORD *)a3 )
+        *(_QWORD *)a3 = 0;
+    }
+    *(_QWORD *)a3 = *(_QWORD *)v7;
+    *(_QWORD *)v7 = 0;
+    *(_DWORD *)(a3 + 8) = *(_DWORD *)(v7 + 8);
+    *(_DWORD *)(a3 + 12) = *(_DWORD *)(v7 + 12);
+    *(_QWORD *)(v7 + 8) = 0;
+  }
+  if ( v11 )
+    sub_7FF6F4DED1F0(v11);
+  return sub_7FF6F7563FE0(v9);
+}
+
+
+======================================================================
+GameplayAbility::BP_RemoveGameplayEffectFromOwnerWithAssetTags @ RVA 0x3C0F720 EA 0x7FF6F762F720
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 (__fastcall **__fastcall sub_7FF6F762F720(__int64 a1, _QWORD *a2))()
+{
+  __int64 v4; // rax
+  __int64 (__fastcall **result)(); // rax
+  __int64 (__fastcall **v6)(); // [rsp+28h] [rbp-60h] BYREF
+  __int64 v7; // [rsp+30h] [rbp-58h]
+  __int64 v8; // [rsp+40h] [rbp-48h]
+  _BYTE v9[56]; // [rsp+50h] [rbp-38h] BYREF
+  unsigned int v10; // [rsp+98h] [rbp+10h] BYREF
+
+  sub_7FF6F59B0070(&v6);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  a2[4] += a2[4] != 0;
+  v4 = sub_7FF6F59AFF00(v9, &v6);
+  sub_7FF6F7577850(a1, v4, v10);
+  result = off_7FF6F8DCBD30;
+  v6 = off_7FF6F8DCBD30;
+  if ( v8 )
+  {
+    result = (__int64 (__fastcall **)())sub_7FF6F4DED1F0(v8);
+    v8 = 0;
+  }
+  if ( v7 )
+    return (__int64 (__fastcall **)())sub_7FF6F4DED1F0(v7);
+  return result;
+}
+
+
+======================================================================
+GameplayAbility::BP_RemoveGameplayEffectFromOwnerWithGrantedTags @ RVA 0x3C0F850 EA 0x7FF6F762F850
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 (__fastcall **__fastcall sub_7FF6F762F850(__int64 a1, _QWORD *a2))()
+{
+  __int64 v4; // rax
+  __int64 (__fastcall **result)(); // rax
+  __int64 (__fastcall **v6)(); // [rsp+28h] [rbp-60h] BYREF
+  __int64 v7; // [rsp+30h] [rbp-58h]
+  __int64 v8; // [rsp+40h] [rbp-48h]
+  _BYTE v9[56]; // [rsp+50h] [rbp-38h] BYREF
+  unsigned int v10; // [rsp+98h] [rbp+10h] BYREF
+
+  sub_7FF6F59B0070(&v6);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  a2[4] += a2[4] != 0;
+  v4 = sub_7FF6F59AFF00(v9, &v6);
+  sub_7FF6F75779F0(a1, v4, v10);
+  result = off_7FF6F8DCBD30;
+  v6 = off_7FF6F8DCBD30;
+  if ( v8 )
+  {
+    result = (__int64 (__fastcall **)())sub_7FF6F4DED1F0(v8);
+    v8 = 0;
+  }
+  if ( v7 )
+    return (__int64 (__fastcall **)())sub_7FF6F4DED1F0(v7);
+  return result;
+}
+
+
+======================================================================
+GameplayAbility::CancelTaskByInstanceName @ RVA 0x3C0FE40 EA 0x7FF6F762FE40
+======================================================================
+__int64 __fastcall sub_7FF6F762FE40(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F757BFD0(a1, v6);
+}
+
+
+======================================================================
+GameplayAbility::ConfirmTaskByInstanceName @ RVA 0x3C10620 EA 0x7FF6F7630620
+======================================================================
+__int64 __fastcall sub_7FF6F7630620(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // r8
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  bool v8; // zf
+  int v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v11;
+  LOBYTE(v2) = v6 != 0;
+  v8 = v10 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v8;
+  return sub_7FF6F7580620(a1, v7, v5);
+}
+
+
+======================================================================
+GameplayAbility::EndAbilityState @ RVA 0x3C11560 EA 0x7FF6F7631560
+======================================================================
+__int64 __fastcall sub_7FF6F7631560(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F7587E10(a1, v6);
+}
+
+
+======================================================================
+GameplayAbility::EndTaskByInstanceName @ RVA 0x3C115E0 EA 0x7FF6F76315E0
+======================================================================
+__int64 __fastcall sub_7FF6F76315E0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F7588B80(a1, v6);
+}
+
+
+======================================================================
+GameplayAbility::GetAbilityLevel @ RVA 0x3C11EE0 EA 0x7FF6F7631EE0
+======================================================================
+__int64 __fastcall sub_7FF6F7631EE0(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F758D710();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+GameplayAbility::GetActorInfo @ RVA 0x3C12240 EA 0x7FF6F7632240
+======================================================================
+__int64 __fastcall sub_7FF6F7632240(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  _DWORD *v4; // rax
+  __int64 result; // rax
+  _BYTE v6[72]; // [rsp+20h] [rbp-48h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = (_DWORD *)sub_7FF6F758E4E0(a1, v6);
+  a3[2] = v4[2];
+  a3[3] = v4[3];
+  a3[4] = v4[4];
+  a3[5] = v4[5];
+  a3[6] = v4[6];
+  a3[7] = v4[7];
+  a3[8] = v4[8];
+  a3[9] = v4[9];
+  a3[10] = v4[10];
+  a3[11] = v4[11];
+  a3[12] = v4[12];
+  result = (unsigned int)v4[13];
+  a3[13] = result;
+  return result;
+}
+
+
+======================================================================
+GameplayAbility::GetAvatarActorFromActorInfo @ RVA 0x3C123F0 EA 0x7FF6F76323F0
+======================================================================
+__int64 __fastcall sub_7FF6F76323F0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F758EEF0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+GameplayAbility::GetContextFromOwner @ RVA 0x3C12420 EA 0x7FF6F7632420
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F7632420(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  int v6; // ebx
+  __int64 v7; // rax
+  __int64 v8; // rax
+  __int64 v9; // rcx
+  __int64 v10; // rcx
+  _QWORD v12[2]; // [rsp+28h] [rbp-50h] BYREF
+  _BYTE v13[16]; // [rsp+38h] [rbp-40h] BYREF
+  _BYTE v14[40]; // [rsp+48h] [rbp-30h] BYREF
+
+  v6 = 0;
+  v12[0] = 0;
+  v12[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  a2[4] += a2[4] != 0;
+  v7 = sub_7FF6F755F130(v13, v12);
+  v8 = (*(__int64 (__fastcall **)(__int64, _BYTE *, __int64))(*(_QWORD *)a1 + 776LL))(a1, v14, v7);
+  v9 = *(_QWORD *)(v8 + 8);
+  if ( *(_QWORD *)(a3 + 8) != v9 )
+  {
+    *(_QWORD *)(a3 + 8) = v9;
+    *(_QWORD *)(v8 + 8) = 0;
+    v10 = *(_QWORD *)(v8 + 16);
+    if ( v10 )
+      v6 = *(_DWORD *)(v10 + 24);
+    *(_DWORD *)(a3 + 24) = v6;
+    *(_DWORD *)(v8 + 24) = -2040109466;
+    sub_7FF6F3C379A0(a3 + 16, v8 + 16);
+  }
+  sub_7FF6F7566C20(v14);
+  return sub_7FF6F7563FE0(v12);
+}
+
+
+======================================================================
+GameplayAbility::GetCurrentMontage @ RVA 0x3C12520 EA 0x7FF6F7632520
+======================================================================
+__int64 __fastcall sub_7FF6F7632520(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F758F700();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+GameplayAbility::GetCurrentSourceObject @ RVA 0x3C12550 EA 0x7FF6F7632550
+======================================================================
+__int64 __fastcall sub_7FF6F7632550(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F758F710();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+GameplayAbility::GetOutgoingGameplayEffectSpec @ RVA 0x3C13200 EA 0x7FF6F7633200
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F7633200(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  int v6; // esi
+  __int64 v7; // rbx
+  __int64 v8; // rax
+  _BYTE v10[64]; // [rsp+28h] [rbp-40h] BYREF
+  int v11; // [rsp+78h] [rbp+10h] BYREF
+  __int64 v12; // [rsp+80h] [rbp+18h] BYREF
+
+  v6 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  a2[4] += a2[4] != 0;
+  v7 = sub_7FF6F7593AC0(a1, v10, v12);
+  if ( *(_QWORD *)a3 != *(_QWORD *)v7 )
+  {
+    *(_QWORD *)a3 = *(_QWORD *)v7;
+    *(_QWORD *)v7 = 0;
+    v8 = *(_QWORD *)(v7 + 8);
+    if ( v8 )
+      v6 = *(_DWORD *)(v8 + 24);
+    *(_DWORD *)(a3 + 16) = v6;
+    *(_DWORD *)(v7 + 16) = -2040109466;
+    sub_7FF6F3C379A0(a3 + 8, v7 + 8);
+  }
+  *(_BYTE *)(a3 + 24) = *(_BYTE *)(v7 + 24);
+  return sub_7FF6F7567110(v10);
+}
+
+
+======================================================================
+GameplayAbility::GetOwningActorFromActorInfo @ RVA 0x3C13440 EA 0x7FF6F7633440
+======================================================================
+__int64 __fastcall sub_7FF6F7633440(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F7593D60();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+GameplayAbility::GetOwningComponentFromActorInfo @ RVA 0x3C13470 EA 0x7FF6F7633470
+======================================================================
+__int64 __fastcall sub_7FF6F7633470(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F7593D80();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+GameplayAbility::K2_ActivateAbility @ RVA 0x152AB10 EA 0x7FF6F4F4AB10
+======================================================================
+  (RVA 0x152AB10 shared with another function already decompiled above/elsewhere - likely a generic Blueprint/K2 bytecode executor, not unique native code)
+unsigned __int8 *__fastcall sub_7FF6F4F4AB10(_QWORD *a1, _QWORD *a2, void *a3)
+{
+  unsigned __int8 *result; // rax
+  char v7; // bp
+  _BYTE *i; // rax
+  unsigned __int8 *v9; // rax
+  int v10; // ecx
+  unsigned __int8 *v11; // rcx
+  __int64 v12; // rax
+  unsigned __int8 *v13; // rbx
+  char v14[64]; // [rsp+30h] [rbp-68h] BYREF
+
+  result = (unsigned __int8 *)a1[2];
+  if ( *((int *)result + 49) >= 0 )
+  {
+    v7 = (*(__int64 (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD))(*a1 + 480LL))(a1, a2[2], a2[5], 0);
+    if ( (v7 & 1) != 0 )
+      (*(void (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD, _QWORD))(*a1 + 488LL))(a1, a2[2], a2[5], a2[15], 0);
+    if ( (v7 & 2) != 0 )
+    {
+      for ( i = (_BYTE *)a2[4]; *i != 4; i = (_BYTE *)a2[4] )
+      {
+        v9 = (unsigned __int8 *)a2[4];
+        v10 = *v9;
+        a2[4] = v9 + 1;
+        ((void (__fastcall *)(_QWORD, _QWORD *, char *))funcs_7FF6F4F44D4F[v10])(a2[3], a2, v14);
+      }
+      result = i + 1;
+      a2[4] = result;
+      v11 = result + 1;
+      if ( *result == 11 )
+      {
+        a2[4] = v11;
+      }
+      else
+      {
+        v12 = *result;
+        a2[4] = v11;
+        return (unsigned __int8 *)((__int64 (__fastcall *)(_QWORD, _QWORD *, void *))funcs_7FF6F4F44D4F[v12])(
+                                    a2[3],
+                                    a2,
+                                    a3);
+      }
+    }
+    else
+    {
+      result = (unsigned __int8 *)sub_7FF6F4F072B0(a2[2]);
+      v13 = result;
+      if ( result )
+      {
+        if ( (*((_QWORD *)result + 7) & 0x1000000000LL) == 0 )
+          (*(void (__fastcall **)(unsigned __int8 *, void *))(*(_QWORD *)result + 688LL))(result, a3);
+        return (unsigned __int8 *)memset(a3, 0, *((_DWORD *)v13 + 12) * *((_DWORD *)v13 + 13));
+      }
+    }
+  }
+  else if ( !byte_7FF6FA4F64EF )
+  {
+    ++dword_7FF6FA525F48;
+  }
+  return result;
+}
+
+
+======================================================================
+GameplayAbility::K2_ActivateAbilityFromEvent @ RVA 0x152AB10 EA 0x7FF6F4F4AB10
+======================================================================
+  (RVA 0x152AB10 shared with another function already decompiled above/elsewhere - likely a generic Blueprint/K2 bytecode executor, not unique native code)
+unsigned __int8 *__fastcall sub_7FF6F4F4AB10(_QWORD *a1, _QWORD *a2, void *a3)
+{
+  unsigned __int8 *result; // rax
+  char v7; // bp
+  _BYTE *i; // rax
+  unsigned __int8 *v9; // rax
+  int v10; // ecx
+  unsigned __int8 *v11; // rcx
+  __int64 v12; // rax
+  unsigned __int8 *v13; // rbx
+  char v14[64]; // [rsp+30h] [rbp-68h] BYREF
+
+  result = (unsigned __int8 *)a1[2];
+  if ( *((int *)result + 49) >= 0 )
+  {
+    v7 = (*(__int64 (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD))(*a1 + 480LL))(a1, a2[2], a2[5], 0);
+    if ( (v7 & 1) != 0 )
+      (*(void (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD, _QWORD))(*a1 + 488LL))(a1, a2[2], a2[5], a2[15], 0);
+    if ( (v7 & 2) != 0 )
+    {
+      for ( i = (_BYTE *)a2[4]; *i != 4; i = (_BYTE *)a2[4] )
+      {
+        v9 = (unsigned __int8 *)a2[4];
+        v10 = *v9;
+        a2[4] = v9 + 1;
+        ((void (__fastcall *)(_QWORD, _QWORD *, char *))funcs_7FF6F4F44D4F[v10])(a2[3], a2, v14);
+      }
+      result = i + 1;
+      a2[4] = result;
+      v11 = result + 1;
+      if ( *result == 11 )
+      {
+        a2[4] = v11;
+      }
+      else
+      {
+        v12 = *result;
+        a2[4] = v11;
+        return (unsigned __int8 *)((__int64 (__fastcall *)(_QWORD, _QWORD *, void *))funcs_7FF6F4F44D4F[v12])(
+                                    a2[3],
+                                    a2,
+                                    a3);
+      }
+    }
+    else
+    {
+      result = (unsigned __int8 *)sub_7FF6F4F072B0(a2[2]);
+      v13 = result;
+      if ( result )
+      {
+        if ( (*((_QWORD *)result + 7) & 0x1000000000LL) == 0 )
+          (*(void (__fastcall **)(unsigned __int8 *, void *))(*(_QWORD *)result + 688LL))(result, a3);
+        return (unsigned __int8 *)memset(a3, 0, *((_DWORD *)v13 + 12) * *((_DWORD *)v13 + 13));
+      }
+    }
+  }
+  else if ( !byte_7FF6FA4F64EF )
+  {
+    ++dword_7FF6FA525F48;
+  }
+  return result;
+}
+
+
+======================================================================
+GameplayAbility::K2_AddGameplayCue @ RVA 0x3C13B90 EA 0x7FF6F7633B90
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F7633B90(__int64 a1, _QWORD *a2)
+{
+  int v4; // edi
+  __int64 v5; // r9
+  _UNKNOWN **v7; // [rsp+28h] [rbp-48h] BYREF
+  __int128 v8; // [rsp+30h] [rbp-40h] BYREF
+  int v9; // [rsp+40h] [rbp-30h]
+  _UNKNOWN **v10; // [rsp+48h] [rbp-28h] BYREF
+  __int128 v11; // [rsp+50h] [rbp-20h]
+  int v12; // [rsp+60h] [rbp-10h]
+  int v13; // [rsp+A0h] [rbp+30h] BYREF
+  __int64 v14; // [rsp+A8h] [rbp+38h] BYREF
+
+  sub_7FF6F59AFE50(&v14);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v10 = &off_7FF6F962BB28;
+  v11 = 0;
+  v4 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  LOBYTE(v5) = v13 != 0;
+  a2[4] += a2[4] != 0;
+  v7 = &off_7FF6F962BB28;
+  v8 = v11;
+  if ( *((_QWORD *)&v11 + 1) )
+  {
+    if ( _InterlockedIncrement((volatile signed __int32 *)(*((_QWORD *)&v11 + 1) + 8LL)) == 1 )
+      MEMORY[0] = (char *)&v8 + 8;
+    if ( *((_QWORD *)&v8 + 1) )
+      v4 = *(_DWORD *)(*((_QWORD *)&v8 + 1) + 24LL);
+  }
+  v9 = v4;
+  (*(void (__fastcall **)(__int64, __int64, _UNKNOWN ***, __int64, __int64))(*(_QWORD *)a1 + 760LL))(
+    a1,
+    v14,
+    &v7,
+    v5,
+    -2);
+  return sub_7FF6F7566C20(&v10);
+}
+
+
+======================================================================
+GameplayAbility::K2_ApplyGameplayEffectSpecToOwner @ RVA 0x3C13CF0 EA 0x7FF6F7633CF0
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F7633CF0(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  int v6; // edx
+  __int64 v8; // [rsp+28h] [rbp-50h] BYREF
+  __int64 v9; // [rsp+30h] [rbp-48h] BYREF
+  int v10; // [rsp+38h] [rbp-40h]
+  char v11; // [rsp+40h] [rbp-38h]
+  __int64 v12; // [rsp+48h] [rbp-30h] BYREF
+  __int64 v13; // [rsp+50h] [rbp-28h]
+  char v14; // [rsp+60h] [rbp-18h]
+  char v15; // [rsp+88h] [rbp+10h] BYREF
+
+  sub_7FF6F7560BD0(&v12);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v6 = 0;
+  a2[4] += a2[4] != 0;
+  v8 = v12;
+  v9 = v13;
+  if ( v13 )
+  {
+    if ( _InterlockedIncrement((volatile signed __int32 *)(v13 + 8)) == 1 )
+      MEMORY[0] = &v9;
+    if ( v9 )
+      v6 = *(_DWORD *)(v9 + 24);
+  }
+  v10 = v6;
+  v11 = v14;
+  *a3 = *(_DWORD *)sub_7FF6F759CF60(a1, &v15, &v8);
+  return sub_7FF6F7567110(&v12);
+}
+
+
+======================================================================
+GameplayAbility::K2_ApplyGameplayEffectSpecToTarget @ RVA 0x3C13DF0 EA 0x7FF6F7633DF0
+======================================================================
+// Hidden C++ exception states: #wind=4
+__int64 __fastcall sub_7FF6F7633DF0(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v6; // r9
+  int v7; // ecx
+  __int64 v8; // rbx
+  __int64 v10; // [rsp+30h] [rbp-31h] BYREF
+  __int64 v11; // [rsp+38h] [rbp-29h]
+  _BYTE v12[16]; // [rsp+40h] [rbp-21h] BYREF
+  __int64 v13; // [rsp+50h] [rbp-11h] BYREF
+  __int64 v14; // [rsp+60h] [rbp-1h] BYREF
+  __int64 v15; // [rsp+68h] [rbp+7h] BYREF
+  int v16; // [rsp+70h] [rbp+Fh]
+  char v17; // [rsp+78h] [rbp+17h]
+  __int64 v18; // [rsp+80h] [rbp+1Fh] BYREF
+  __int64 v19; // [rsp+88h] [rbp+27h]
+  char v20; // [rsp+98h] [rbp+37h]
+
+  sub_7FF6F7560BD0(&v18);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  v10 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  a2[4] += a2[4] != 0;
+  v6 = sub_7FF6F755F130(v12, &v10);
+  v14 = v18;
+  v15 = v19;
+  if ( !v19 )
+    goto LABEL_12;
+  if ( _InterlockedIncrement((volatile signed __int32 *)(v19 + 8)) == 1 )
+    MEMORY[0] = &v15;
+  if ( v15 )
+    v7 = *(_DWORD *)(v15 + 24);
+  else
+LABEL_12:
+    v7 = 0;
+  v16 = v7;
+  v17 = v20;
+  v8 = sub_7FF6F759D040(a1, &v13, &v14, v6, -2, v10, v11);
+  if ( a3 != v8 )
+  {
+    if ( *(_QWORD *)a3 )
+    {
+      sub_7FF6F4DED1F0(*(_QWORD *)a3);
+      if ( *(_QWORD *)a3 )
+        *(_QWORD *)a3 = 0;
+    }
+    *(_QWORD *)a3 = *(_QWORD *)v8;
+    *(_QWORD *)v8 = 0;
+    *(_DWORD *)(a3 + 8) = *(_DWORD *)(v8 + 8);
+    *(_DWORD *)(a3 + 12) = *(_DWORD *)(v8 + 12);
+    *(_QWORD *)(v8 + 8) = 0;
+  }
+  if ( v13 )
+    sub_7FF6F4DED1F0(v13);
+  sub_7FF6F7563FE0(&v10);
+  return sub_7FF6F7567110(&v18);
+}
+
+
+======================================================================
+GameplayAbility::K2_ApplyGameplayEffectToOwner @ RVA 0x3C13F90 EA 0x7FF6F7633F90
+======================================================================
+_DWORD *__fastcall sub_7FF6F7633F90(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r9
+  __int64 v9; // r8
+  _DWORD *result; // rax
+  unsigned int v11; // [rsp+48h] [rbp+10h] BYREF
+  char v12; // [rsp+50h] [rbp+18h] BYREF
+  __int64 v13; // [rsp+58h] [rbp+20h] BYREF
+
+  v3 = 0;
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v7 = a2[4];
+  v8 = v11;
+  v9 = v13;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (_DWORD *)sub_7FF6F759D160(a1, &v12, v9, v8);
+  *a3 = *result;
+  return result;
+}
+
+
+======================================================================
+GameplayAbility::K2_ApplyGameplayEffectToTarget @ RVA 0x3C143A0 EA 0x7FF6F76343A0
+======================================================================
+// Hidden C++ exception states: #wind=3
+__int64 __fastcall sub_7FF6F76343A0(int a1, _QWORD *a2, __int64 a3)
+{
+  int v6; // eax
+  __int64 v7; // rbx
+  _QWORD v9[2]; // [rsp+38h] [rbp-50h] BYREF
+  _BYTE v10[16]; // [rsp+48h] [rbp-40h] BYREF
+  __int64 v11; // [rsp+58h] [rbp-30h] BYREF
+  int v12; // [rsp+98h] [rbp+10h] BYREF
+  __int64 v13; // [rsp+A0h] [rbp+18h] BYREF
+
+  v9[0] = 0;
+  v9[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  a2[4] += a2[4] != 0;
+  v6 = sub_7FF6F755F130(v10, v9);
+  v7 = sub_7FF6F759D500(a1, (unsigned int)&v11, v6, v13, v12);
+  if ( a3 != v7 )
+  {
+    if ( *(_QWORD *)a3 )
+    {
+      sub_7FF6F4DED1F0(*(_QWORD *)a3);
+      if ( *(_QWORD *)a3 )
+        *(_QWORD *)a3 = 0;
+    }
+    *(_QWORD *)a3 = *(_QWORD *)v7;
+    *(_QWORD *)v7 = 0;
+    *(_DWORD *)(a3 + 8) = *(_DWORD *)(v7 + 8);
+    *(_DWORD *)(a3 + 12) = *(_DWORD *)(v7 + 12);
+    *(_QWORD *)(v7 + 8) = 0;
+  }
+  if ( v11 )
+    sub_7FF6F4DED1F0(v11);
+  return sub_7FF6F7563FE0(v9);
+}
+
+
+======================================================================
+GameplayAbility::K2_CanActivateAbility @ RVA 0x152AB10 EA 0x7FF6F4F4AB10
+======================================================================
+  (RVA 0x152AB10 shared with another function already decompiled above/elsewhere - likely a generic Blueprint/K2 bytecode executor, not unique native code)
+unsigned __int8 *__fastcall sub_7FF6F4F4AB10(_QWORD *a1, _QWORD *a2, void *a3)
+{
+  unsigned __int8 *result; // rax
+  char v7; // bp
+  _BYTE *i; // rax
+  unsigned __int8 *v9; // rax
+  int v10; // ecx
+  unsigned __int8 *v11; // rcx
+  __int64 v12; // rax
+  unsigned __int8 *v13; // rbx
+  char v14[64]; // [rsp+30h] [rbp-68h] BYREF
+
+  result = (unsigned __int8 *)a1[2];
+  if ( *((int *)result + 49) >= 0 )
+  {
+    v7 = (*(__int64 (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD))(*a1 + 480LL))(a1, a2[2], a2[5], 0);
+    if ( (v7 & 1) != 0 )
+      (*(void (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD, _QWORD))(*a1 + 488LL))(a1, a2[2], a2[5], a2[15], 0);
+    if ( (v7 & 2) != 0 )
+    {
+      for ( i = (_BYTE *)a2[4]; *i != 4; i = (_BYTE *)a2[4] )
+      {
+        v9 = (unsigned __int8 *)a2[4];
+        v10 = *v9;
+        a2[4] = v9 + 1;
+        ((void (__fastcall *)(_QWORD, _QWORD *, char *))funcs_7FF6F4F44D4F[v10])(a2[3], a2, v14);
+      }
+      result = i + 1;
+      a2[4] = result;
+      v11 = result + 1;
+      if ( *result == 11 )
+      {
+        a2[4] = v11;
+      }
+      else
+      {
+        v12 = *result;
+        a2[4] = v11;
+        return (unsigned __int8 *)((__int64 (__fastcall *)(_QWORD, _QWORD *, void *))funcs_7FF6F4F44D4F[v12])(
+                                    a2[3],
+                                    a2,
+                                    a3);
+      }
+    }
+    else
+    {
+      result = (unsigned __int8 *)sub_7FF6F4F072B0(a2[2]);
+      v13 = result;
+      if ( result )
+      {
+        if ( (*((_QWORD *)result + 7) & 0x1000000000LL) == 0 )
+          (*(void (__fastcall **)(unsigned __int8 *, void *))(*(_QWORD *)result + 688LL))(result, a3);
+        return (unsigned __int8 *)memset(a3, 0, *((_DWORD *)v13 + 12) * *((_DWORD *)v13 + 13));
+      }
+    }
+  }
+  else if ( !byte_7FF6FA4F64EF )
+  {
+    ++dword_7FF6FA525F48;
+  }
+  return result;
+}
+
+
+======================================================================
+GameplayAbility::K2_CheckAbilityCooldown @ RVA 0x3C14530 EA 0x7FF6F7634530
+======================================================================
+__int64 __fastcall sub_7FF6F7634530(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 664LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+GameplayAbility::K2_CheckAbilityCost @ RVA 0x3C14560 EA 0x7FF6F7634560
+======================================================================
+__int64 __fastcall sub_7FF6F7634560(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 672LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+GameplayAbility::K2_CommitAbility @ RVA 0x3C14590 EA 0x7FF6F7634590
+======================================================================
+__int64 __fastcall sub_7FF6F7634590(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 640LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+GameplayAbility::K2_CommitAbilityCooldown @ RVA 0x3C145C0 EA 0x7FF6F76345C0
+======================================================================
+__int64 __fastcall sub_7FF6F76345C0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rdx
+  __int64 v8; // rax
+  __int64 result; // rax
+  int v10; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v8 = a2[4];
+  LOBYTE(v7) = v10 != 0;
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 648LL))(a1, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+GameplayAbility::K2_CommitAbilityCost @ RVA 0x3C14660 EA 0x7FF6F7634660
+======================================================================
+__int64 __fastcall sub_7FF6F7634660(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rdx
+  __int64 v8; // rax
+  __int64 result; // rax
+  int v10; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v8 = a2[4];
+  LOBYTE(v7) = v10 != 0;
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 656LL))(a1, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+GameplayAbility::K2_CommitExecute @ RVA 0x152AB10 EA 0x7FF6F4F4AB10
+======================================================================
+  (RVA 0x152AB10 shared with another function already decompiled above/elsewhere - likely a generic Blueprint/K2 bytecode executor, not unique native code)
+unsigned __int8 *__fastcall sub_7FF6F4F4AB10(_QWORD *a1, _QWORD *a2, void *a3)
+{
+  unsigned __int8 *result; // rax
+  char v7; // bp
+  _BYTE *i; // rax
+  unsigned __int8 *v9; // rax
+  int v10; // ecx
+  unsigned __int8 *v11; // rcx
+  __int64 v12; // rax
+  unsigned __int8 *v13; // rbx
+  char v14[64]; // [rsp+30h] [rbp-68h] BYREF
+
+  result = (unsigned __int8 *)a1[2];
+  if ( *((int *)result + 49) >= 0 )
+  {
+    v7 = (*(__int64 (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD))(*a1 + 480LL))(a1, a2[2], a2[5], 0);
+    if ( (v7 & 1) != 0 )
+      (*(void (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD, _QWORD))(*a1 + 488LL))(a1, a2[2], a2[5], a2[15], 0);
+    if ( (v7 & 2) != 0 )
+    {
+      for ( i = (_BYTE *)a2[4]; *i != 4; i = (_BYTE *)a2[4] )
+      {
+        v9 = (unsigned __int8 *)a2[4];
+        v10 = *v9;
+        a2[4] = v9 + 1;
+        ((void (__fastcall *)(_QWORD, _QWORD *, char *))funcs_7FF6F4F44D4F[v10])(a2[3], a2, v14);
+      }
+      result = i + 1;
+      a2[4] = result;
+      v11 = result + 1;
+      if ( *result == 11 )
+      {
+        a2[4] = v11;
+      }
+      else
+      {
+        v12 = *result;
+        a2[4] = v11;
+        return (unsigned __int8 *)((__int64 (__fastcall *)(_QWORD, _QWORD *, void *))funcs_7FF6F4F44D4F[v12])(
+                                    a2[3],
+                                    a2,
+                                    a3);
+      }
+    }
+    else
+    {
+      result = (unsigned __int8 *)sub_7FF6F4F072B0(a2[2]);
+      v13 = result;
+      if ( result )
+      {
+        if ( (*((_QWORD *)result + 7) & 0x1000000000LL) == 0 )
+          (*(void (__fastcall **)(unsigned __int8 *, void *))(*(_QWORD *)result + 688LL))(result, a3);
+        return (unsigned __int8 *)memset(a3, 0, *((_DWORD *)v13 + 12) * *((_DWORD *)v13 + 13));
+      }
+    }
+  }
+  else if ( !byte_7FF6FA4F64EF )
+  {
+    ++dword_7FF6FA525F48;
+  }
+  return result;
+}
+
+
+======================================================================
+GameplayAbility::K2_EndAbility @ RVA 0x3C14700 EA 0x7FF6F7634700
+======================================================================
+__int64 __fastcall sub_7FF6F7634700(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 728LL))(a1);
+}
+
+
+======================================================================
+GameplayAbility::K2_ExecuteGameplayCue @ RVA 0x3C14720 EA 0x7FF6F7634720
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F7634720(__int64 a1, _QWORD *a2)
+{
+  int v4; // edi
+  _UNKNOWN **v6; // [rsp+28h] [rbp-60h] BYREF
+  __int128 v7; // [rsp+30h] [rbp-58h] BYREF
+  int v8; // [rsp+40h] [rbp-48h]
+  _UNKNOWN **v9; // [rsp+48h] [rbp-40h] BYREF
+  __int128 v10; // [rsp+50h] [rbp-38h]
+  int v11; // [rsp+60h] [rbp-28h]
+  __int64 v12; // [rsp+90h] [rbp+8h] BYREF
+
+  sub_7FF6F59AFE50(&v12);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v9 = &off_7FF6F962BB28;
+  v10 = 0;
+  v4 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  a2[4] += a2[4] != 0;
+  v6 = &off_7FF6F962BB28;
+  v7 = v10;
+  if ( *((_QWORD *)&v10 + 1) )
+  {
+    if ( _InterlockedIncrement((volatile signed __int32 *)(*((_QWORD *)&v10 + 1) + 8LL)) == 1 )
+      MEMORY[0] = (char *)&v7 + 8;
+    if ( *((_QWORD *)&v7 + 1) )
+      v4 = *(_DWORD *)(*((_QWORD *)&v7 + 1) + 24LL);
+  }
+  v8 = v4;
+  (*(void (__fastcall **)(__int64, __int64, _UNKNOWN ***))(*(_QWORD *)a1 + 744LL))(a1, v12, &v6);
+  return sub_7FF6F7566C20(&v9);
+}
+
+
+======================================================================
+GameplayAbility::K2_ExecuteGameplayCueWithParams @ RVA 0x3C14870 EA 0x7FF6F7634870
+======================================================================
+// Hidden C++ exception states: #wind=3
+__int64 __fastcall sub_7FF6F7634870(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  _QWORD *v5; // r8
+  __int64 v6; // rax
+  _QWORD v8[2]; // [rsp+30h] [rbp-98h] BYREF
+  __int128 v9; // [rsp+40h] [rbp-88h]
+  int v10; // [rsp+50h] [rbp-78h]
+  __int64 v11; // [rsp+58h] [rbp-70h]
+  _BYTE v12[8]; // [rsp+60h] [rbp-68h] BYREF
+  _BYTE v13[40]; // [rsp+68h] [rbp-60h] BYREF
+  _BYTE v14[48]; // [rsp+90h] [rbp-38h] BYREF
+  __int64 v15; // [rsp+D0h] [rbp+8h] BYREF
+
+  sub_7FF6F59AFE50(&v15);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v8[0] = 0;
+  v8[1] = &off_7FF6F962BB28;
+  v9 = 0;
+  v4 = 0;
+  v10 = 0;
+  v11 = 0;
+  sub_7FF6F59AFE50(v12);
+  sub_7FF6F59B0070(v13);
+  sub_7FF6F59B0070(v14);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v5 = v8;
+  if ( a2[7] )
+    v5 = (_QWORD *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v4) = v6 != 0;
+  a2[4] = v6 + v4;
+  (*(void (__fastcall **)(__int64, __int64, _QWORD *))(*(_QWORD *)a1 + 752LL))(a1, v15, v5);
+  return sub_7FF6F7566AD0(v8);
+}
+
+
+======================================================================
+GameplayAbility::K2_OnEndAbility @ RVA 0x152AB10 EA 0x7FF6F4F4AB10
+======================================================================
+  (RVA 0x152AB10 shared with another function already decompiled above/elsewhere - likely a generic Blueprint/K2 bytecode executor, not unique native code)
+unsigned __int8 *__fastcall sub_7FF6F4F4AB10(_QWORD *a1, _QWORD *a2, void *a3)
+{
+  unsigned __int8 *result; // rax
+  char v7; // bp
+  _BYTE *i; // rax
+  unsigned __int8 *v9; // rax
+  int v10; // ecx
+  unsigned __int8 *v11; // rcx
+  __int64 v12; // rax
+  unsigned __int8 *v13; // rbx
+  char v14[64]; // [rsp+30h] [rbp-68h] BYREF
+
+  result = (unsigned __int8 *)a1[2];
+  if ( *((int *)result + 49) >= 0 )
+  {
+    v7 = (*(__int64 (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD))(*a1 + 480LL))(a1, a2[2], a2[5], 0);
+    if ( (v7 & 1) != 0 )
+      (*(void (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD, _QWORD))(*a1 + 488LL))(a1, a2[2], a2[5], a2[15], 0);
+    if ( (v7 & 2) != 0 )
+    {
+      for ( i = (_BYTE *)a2[4]; *i != 4; i = (_BYTE *)a2[4] )
+      {
+        v9 = (unsigned __int8 *)a2[4];
+        v10 = *v9;
+        a2[4] = v9 + 1;
+        ((void (__fastcall *)(_QWORD, _QWORD *, char *))funcs_7FF6F4F44D4F[v10])(a2[3], a2, v14);
+      }
+      result = i + 1;
+      a2[4] = result;
+      v11 = result + 1;
+      if ( *result == 11 )
+      {
+        a2[4] = v11;
+      }
+      else
+      {
+        v12 = *result;
+        a2[4] = v11;
+        return (unsigned __int8 *)((__int64 (__fastcall *)(_QWORD, _QWORD *, void *))funcs_7FF6F4F44D4F[v12])(
+                                    a2[3],
+                                    a2,
+                                    a3);
+      }
+    }
+    else
+    {
+      result = (unsigned __int8 *)sub_7FF6F4F072B0(a2[2]);
+      v13 = result;
+      if ( result )
+      {
+        if ( (*((_QWORD *)result + 7) & 0x1000000000LL) == 0 )
+          (*(void (__fastcall **)(unsigned __int8 *, void *))(*(_QWORD *)result + 688LL))(result, a3);
+        return (unsigned __int8 *)memset(a3, 0, *((_DWORD *)v13 + 12) * *((_DWORD *)v13 + 13));
+      }
+    }
+  }
+  else if ( !byte_7FF6FA4F64EF )
+  {
+    ++dword_7FF6FA525F48;
+  }
+  return result;
+}
+
+
+======================================================================
+GameplayAbility::K2_RemoveGameplayCue @ RVA 0x3C14A80 EA 0x7FF6F7634A80
+======================================================================
+__int64 __fastcall sub_7FF6F7634A80(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdx
+  __int64 v6; // [rsp+30h] [rbp+8h] BYREF
+
+  sub_7FF6F59AFE50(&v6);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  v4 = v6;
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 768LL))(a1, v4);
+}
+
+
+======================================================================
+GameplayAbility::K2_ShouldAbilityRespondToEvent @ RVA 0x152AB10 EA 0x7FF6F4F4AB10
+======================================================================
+  (RVA 0x152AB10 shared with another function already decompiled above/elsewhere - likely a generic Blueprint/K2 bytecode executor, not unique native code)
+unsigned __int8 *__fastcall sub_7FF6F4F4AB10(_QWORD *a1, _QWORD *a2, void *a3)
+{
+  unsigned __int8 *result; // rax
+  char v7; // bp
+  _BYTE *i; // rax
+  unsigned __int8 *v9; // rax
+  int v10; // ecx
+  unsigned __int8 *v11; // rcx
+  __int64 v12; // rax
+  unsigned __int8 *v13; // rbx
+  char v14[64]; // [rsp+30h] [rbp-68h] BYREF
+
+  result = (unsigned __int8 *)a1[2];
+  if ( *((int *)result + 49) >= 0 )
+  {
+    v7 = (*(__int64 (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD))(*a1 + 480LL))(a1, a2[2], a2[5], 0);
+    if ( (v7 & 1) != 0 )
+      (*(void (__fastcall **)(_QWORD *, _QWORD, _QWORD, _QWORD, _QWORD))(*a1 + 488LL))(a1, a2[2], a2[5], a2[15], 0);
+    if ( (v7 & 2) != 0 )
+    {
+      for ( i = (_BYTE *)a2[4]; *i != 4; i = (_BYTE *)a2[4] )
+      {
+        v9 = (unsigned __int8 *)a2[4];
+        v10 = *v9;
+        a2[4] = v9 + 1;
+        ((void (__fastcall *)(_QWORD, _QWORD *, char *))funcs_7FF6F4F44D4F[v10])(a2[3], a2, v14);
+      }
+      result = i + 1;
+      a2[4] = result;
+      v11 = result + 1;
+      if ( *result == 11 )
+      {
+        a2[4] = v11;
+      }
+      else
+      {
+        v12 = *result;
+        a2[4] = v11;
+        return (unsigned __int8 *)((__int64 (__fastcall *)(_QWORD, _QWORD *, void *))funcs_7FF6F4F44D4F[v12])(
+                                    a2[3],
+                                    a2,
+                                    a3);
+      }
+    }
+    else
+    {
+      result = (unsigned __int8 *)sub_7FF6F4F072B0(a2[2]);
+      v13 = result;
+      if ( result )
+      {
+        if ( (*((_QWORD *)result + 7) & 0x1000000000LL) == 0 )
+          (*(void (__fastcall **)(unsigned __int8 *, void *))(*(_QWORD *)result + 688LL))(result, a3);
+        return (unsigned __int8 *)memset(a3, 0, *((_DWORD *)v13 + 12) * *((_DWORD *)v13 + 13));
+      }
+    }
+  }
+  else if ( !byte_7FF6FA4F64EF )
+  {
+    ++dword_7FF6FA525F48;
+  }
+  return result;
+}
+
+
+======================================================================
+GameplayAbility::MakeOutgoingGameplayEffectSpec @ RVA 0x3C14C60 EA 0x7FF6F7634C60
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F7634C60(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  int v6; // esi
+  __int64 v7; // rbx
+  __int64 v8; // rax
+  _BYTE v10[64]; // [rsp+28h] [rbp-40h] BYREF
+  int v11; // [rsp+78h] [rbp+10h] BYREF
+  __int64 v12; // [rsp+80h] [rbp+18h] BYREF
+
+  v6 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  a2[4] += a2[4] != 0;
+  v7 = sub_7FF6F759E380(a1, v10, v12);
+  if ( *(_QWORD *)a3 != *(_QWORD *)v7 )
+  {
+    *(_QWORD *)a3 = *(_QWORD *)v7;
+    *(_QWORD *)v7 = 0;
+    v8 = *(_QWORD *)(v7 + 8);
+    if ( v8 )
+      v6 = *(_DWORD *)(v8 + 24);
+    *(_DWORD *)(a3 + 16) = v6;
+    *(_DWORD *)(v7 + 16) = -2040109466;
+    sub_7FF6F3C379A0(a3 + 8, v7 + 8);
+  }
+  *(_BYTE *)(a3 + 24) = *(_BYTE *)(v7 + 24);
+  return sub_7FF6F7567110(v10);
+}
+
+
+======================================================================
+GameplayAbility::MakeTargetLocationInfoFromOwnerActor @ RVA 0x3C15100 EA 0x7FF6F7635100
+======================================================================
+__int64 __fastcall sub_7FF6F7635100(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rax
+  __int64 result; // rax
+  _BYTE v6[112]; // [rsp+20h] [rbp-88h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = sub_7FF6F759EF30(a1, v6);
+  *(_BYTE *)(a3 + 16) = *(_BYTE *)(v4 + 16);
+  *(_OWORD *)(a3 + 32) = *(_OWORD *)(v4 + 32);
+  *(_OWORD *)(a3 + 48) = *(_OWORD *)(v4 + 48);
+  *(_OWORD *)(a3 + 64) = *(_OWORD *)(v4 + 64);
+  *(_QWORD *)(a3 + 80) = *(_QWORD *)(v4 + 80);
+  *(_QWORD *)(a3 + 88) = *(_QWORD *)(v4 + 88);
+  result = *(_QWORD *)(v4 + 104);
+  *(_QWORD *)(a3 + 104) = result;
+  return result;
+}
+
+
+======================================================================
+GameplayAbility::MakeTargetLocationInfoFromOwnerSkeletalMeshComponent @ RVA 0x3C15190 EA 0x7FF6F7635190
+======================================================================
+__int64 __fastcall sub_7FF6F7635190(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rax
+  __int64 result; // rax
+  _QWORD v11[2]; // [rsp+20h] [rbp-A8h] BYREF
+  _BYTE v12[112]; // [rsp+30h] [rbp-98h] BYREF
+
+  v3 = 0;
+  v11[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v7 = a2[4];
+  v8 = v11[0];
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  v9 = sub_7FF6F759EFD0(a1, v12, v8);
+  *(_BYTE *)(a3 + 16) = *(_BYTE *)(v9 + 16);
+  *(_OWORD *)(a3 + 32) = *(_OWORD *)(v9 + 32);
+  *(_OWORD *)(a3 + 48) = *(_OWORD *)(v9 + 48);
+  *(_OWORD *)(a3 + 64) = *(_OWORD *)(v9 + 64);
+  *(_QWORD *)(a3 + 80) = *(_QWORD *)(v9 + 80);
+  *(_QWORD *)(a3 + 88) = *(_QWORD *)(v9 + 88);
+  result = *(_QWORD *)(v9 + 104);
+  *(_QWORD *)(a3 + 104) = result;
+  return result;
+}
+
+
+======================================================================
+GameplayAbility::MontageJumpToSection @ RVA 0x3C15280 EA 0x7FF6F7635280
+======================================================================
+__int64 __fastcall sub_7FF6F7635280(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F759F730(a1, v6);
+}
+
+
+======================================================================
+GameplayAbility::MontageSetNextSectionName @ RVA 0x3C15300 EA 0x7FF6F7635300
+======================================================================
+__int64 __fastcall sub_7FF6F7635300(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // r8
+  __int64 v7; // rdx
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v10; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v5 = a2[4];
+  v6 = v9;
+  v7 = v10;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F759F7E0(a1, v7, v6);
+}
+
+
+======================================================================
+GameplayAbility::MontageStop @ RVA 0x3C153C0 EA 0x7FF6F76353C0
+======================================================================
+__int64 __fastcall sub_7FF6F76353C0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F759F8C0(a1);
+}
+
+
+======================================================================
+GameplayAbility::SendGameplayEvent @ RVA 0x3C17590 EA 0x7FF6F7637590
+======================================================================
+// Hidden C++ exception states: #wind=3
+__int64 __fastcall sub_7FF6F7637590(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rax
+  _BYTE v8[8]; // [rsp+30h] [rbp-148h] BYREF
+  __int64 v9; // [rsp+38h] [rbp-140h]
+  __int128 v10; // [rsp+40h] [rbp-138h]
+  __int64 v11; // [rsp+50h] [rbp-128h]
+  _UNKNOWN **v12; // [rsp+58h] [rbp-120h]
+  __int128 v13; // [rsp+60h] [rbp-118h]
+  int v14; // [rsp+70h] [rbp-108h]
+  _BYTE v15[40]; // [rsp+78h] [rbp-100h] BYREF
+  _BYTE v16[40]; // [rsp+A0h] [rbp-D8h] BYREF
+  int v17; // [rsp+C8h] [rbp-B0h]
+  _BYTE v18[160]; // [rsp+D0h] [rbp-A8h] BYREF
+  __int64 v19; // [rsp+180h] [rbp+8h] BYREF
+
+  sub_7FF6F59AFE50(&v19);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  sub_7FF6F59AFE50(v8);
+  v4 = 0;
+  v9 = 0;
+  v10 = 0;
+  v11 = 0;
+  v12 = &off_7FF6F962BB28;
+  v13 = 0;
+  v14 = 0;
+  sub_7FF6F59B0070(v15);
+  sub_7FF6F59B0070(v16);
+  v17 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v5 = a2[4];
+  LOBYTE(v4) = v5 != 0;
+  a2[4] = v5 + v4;
+  v6 = sub_7FF6F7560BE0(v18, v8);
+  (*(void (__fastcall **)(__int64, __int64, __int64))(*(_QWORD *)a1 + 632LL))(a1, v19, v6);
+  return sub_7FF6F75671D0(v8);
+}
+
+
+======================================================================
+GameplayAbility::SetCanBeCanceled @ RVA 0x3C18970 EA 0x7FF6F7638970
+======================================================================
+__int64 __fastcall sub_7FF6F7638970(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 816LL))(a1, v5);
+}
+
+
+======================================================================
+GameplayAbility::SetShouldBlockOtherAbilities @ RVA 0x3C18B90 EA 0x7FF6F7638B90
+======================================================================
+__int64 __fastcall sub_7FF6F7638B90(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 832LL))(a1, v5);
+}
+

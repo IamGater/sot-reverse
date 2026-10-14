@@ -1,0 +1,90 @@
+// /Game/Blueprints/GameObjects/TallTales/Chests/bp_lockedgoldhoarderdoor_shoresofgold -> BP_LockedGoldHoarderDoor_ShoresOfGold_C
+
+=== BP_LockedGoldHoarderDoor_ShoresOfGold_C::GetObjectDisplayName (92 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalOutVariable named ReturnValue@0x19fbd578ab0
+  Expression:
+  $18: literal text (not decoded)
+$19: literal ansi string "Evil Statue"
+$32: literal ansi string "78D1408D4DE35719C33A16AECC3E4EF4_ReturnValue1"
+$79: literal ansi string ""
+$81: Return expression:
+  $82: LocalOutVariable named ReturnValue@0x19fbd578ab0
+$91: EndOfScript
+
+=== BP_LockedGoldHoarderDoor_ShoresOfGold_C::GetClosestInteractionPoint (111 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_GetBoxWorldOrigin_ReturnValue@0x19fbecef180
+  Expression:
+  $18: Context
+    ObjectExpression:
+    $19: InstanceVariable named Interactable@0x19fbecef300
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetBoxWorldOrigin_ReturnValue@0x19fbecef180
+    ContextExpression:
+    $40: FinalFunction target=GetBoxWorldOrigin@0x19e4d12e300 (
+      $49: EndFunctionParms
+    )
+$50: Let (Variable = Expression)
+  Variable:
+  $59: LocalOutVariable named OutInteractionPointRadius@0x19fbd578b20
+  Expression:
+  $68: literal float 0
+$73: Let (Variable = Expression)
+  Variable:
+  $82: LocalOutVariable named ReturnValue@0x19fbecef100
+  Expression:
+  $91: LocalVariable named CallFunc_GetBoxWorldOrigin_ReturnValue@0x19fbecef180
+$100: Return expression:
+  $101: LocalOutVariable named ReturnValue@0x19fbecef100
+$110: EndOfScript
+
+=== BP_LockedGoldHoarderDoor_ShoresOfGold_C::UserConstructionScript (44 bytes) ===
+$0: Context
+  ObjectExpression:
+  $1: InstanceVariable named Lock@0x19fbecef280
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $22: FinalFunction target=SetLockKeyMeshAttachParent@0x19e4d1ca000 (
+    $31: InstanceVariable named StaticMesh@0x19fbecef380
+    $40: EndFunctionParms
+  )
+$41: Return expression:
+  $42: Nothing
+$43: EndOfScript
+
+=== BP_LockedGoldHoarderDoor_ShoresOfGold_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "idx:274580" (
+  $13: literal int32 10
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_LockedGoldHoarderDoor_ShoresOfGold_C::fn_idx_274580 (91 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fbd578b90
+$10: Let (Variable = Expression)
+  Variable:
+  $19: LocalVariable named CallFunc_Initialise_InInteractableInterface_CastInput@0x19fbecef200
+  Expression:
+  $28: ObjToInterfaceCast to InteractableInterface@0x19e4c5fd580
+  $37: Self
+$38: Context
+  ObjectExpression:
+  $39: InstanceVariable named Lock@0x19fbecef280
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $60: FinalFunction target=Initialise@0x19e4d1c9ba0 (
+    $69: InstanceVariable named ActionRulesComponent@0x19e4d06a6a0
+    $78: LocalVariable named CallFunc_Initialise_InInteractableInterface_CastInput@0x19fbecef200
+    $87: EndFunctionParms
+  )
+$88: Return expression:
+  $89: Nothing
+$90: EndOfScript

@@ -1,0 +1,126 @@
+// /Game/Blueprints/TallTales/Actors/Tale_9_ShoresOfGold/bp_medallionspawner -> BP_MedallionSpawner_C
+
+=== BP_MedallionSpawner_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_MedallionSpawner_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "idx:280986" (
+  $13: literal int32 408
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_MedallionSpawner_C::fn_idx_280981 (22 bytes) ===
+$0: VirtualFunction call "idx:280986" (
+  $13: literal int32 409
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_MedallionSpawner_C::fn_idx_280986 (417 bytes) ===
+$0: FlowStack.Push(0x19e)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x19f5e305fd0
+$15: LetBool (Variable = Expression)
+  Variable:
+  $16: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fccb79e00
+  Expression:
+  $25: Context
+    ObjectExpression:
+    $26: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19fccb79e00
+    ContextExpression:
+    $47: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $56: InstanceVariable named idx:280987@0x19fccb7a000
+      $65: EndFunctionParms
+    )
+$66: PopExecutionFlowIfNot, cond:
+$67: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fccb79e00
+$76: Let (Variable = Expression)
+  Variable:
+  $85: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x19fccb79c80
+  Expression:
+  $94: CallMath target=MakeTransform@0x19e4d38a650 (
+    $103: literal vector (0,0,5)
+    $116: literal rotation (0,-90,90)
+    $129: literal vector (1,1,1)
+    $142: EndFunctionParms
+  )
+$143: Let (Variable = Expression)
+  Variable:
+  $152: LocalVariable named idx:280983@0x19fccb79d80
+  Expression:
+  $161: Context
+    ObjectExpression:
+    $162: InstanceVariable named idx:280987@0x19fccb7a000
+    SkipBytes: 0xa
+    RValueProperty: idx:280983@0x19fccb79d80
+    ContextExpression:
+    $183: FinalFunction target=GetPlinthItemSpawnTransform@0x19e4d217a50 (
+      $192: EndFunctionParms
+    )
+$193: Let (Variable = Expression)
+  Variable:
+  $202: LocalVariable named CallFunc_ComposeTransforms_ReturnValue@0x19fccb79e80
+  Expression:
+  $211: CallMath target=ComposeTransforms@0x19e4d374640 (
+    $220: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x19fccb79c80
+    $229: LocalVariable named idx:280983@0x19fccb79d80
+    $238: EndFunctionParms
+  )
+$239: LetObj (Variable = Expression)
+  Variable:
+  $240: LocalVariable named idx:280984@0x19fccb79f00
+  Expression:
+  $249: Context
+    ObjectExpression:
+    $250: ObjectConst Default__ItemFactoryFunctions@0x19e4da101c0
+    SkipBytes: 0x1d
+    RValueProperty: idx:280984@0x19fccb79f00
+    ContextExpression:
+    $271: FinalFunction target=SpawnProxyItem@0x19e4d453060 (
+      $280: Self
+      $281: InstanceVariable named idx:280988@0x19fccb7a200
+      $290: LocalVariable named CallFunc_ComposeTransforms_ReturnValue@0x19fccb79e80
+      $299: EndFunctionParms
+    )
+$300: PopExecutionFlow (jump to popped addr)
+$301: LetBool (Variable = Expression)
+  Variable:
+  $302: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x19fccb79d00
+  Expression:
+  $311: FinalFunction target=HasAuthority@0x19e4cd64b30 (
+    $320: EndFunctionParms
+  )
+$321: PopExecutionFlowIfNot, cond:
+$322: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x19fccb79d00
+$331: Context
+  ObjectExpression:
+  $332: ObjectConst Default__AutomationBlueprintFunctionLibrary@0x19e4d86e2b0
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $353: FinalFunction target=DelayForFrames@0x19e4d297060 (
+    $362: Self
+    $363: literal struct LatentActionInfo@0x19e4cd86e80 (size 32)
+      $376: literal CodeSkipSizeType 0xf
+      $381: literal int32 1
+      $386: literal name "idx:280986"
+      $399: Self
+      $400: EndStructConst
+    $401: literal int32 2
+    $406: EndFunctionParms
+  )
+$407: PopExecutionFlow (jump to popped addr)
+$408: PopExecutionFlow (jump to popped addr)
+$409: Jump to offset 0x12d
+$414: Return expression:
+  $415: Nothing
+$416: EndOfScript

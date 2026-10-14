@@ -1,0 +1,133 @@
+// E:\unreal-projects\Athena\Content\Blueprints\RenderToTextureWorlds\bp_piratepreview.uasset -> BP_PiratePreview_C
+
+=== BP_PiratePreview_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_PiratePreview_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_PiratePreview" (
+  $13: literal int32 244
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_PiratePreview_C::PreviewBusy_Event (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Data2@0x212a7f0cd80
+  Expression:
+  $9: LocalVariable named Data@0x212a7f0cb80
+$18: VirtualFunction call "ExecuteUbergraph_BP_PiratePreview" (
+  $31: literal int32 268
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_PiratePreview_C::PreviewReady_Event (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Data@0x212a7f0ce00
+  Expression:
+  $9: LocalVariable named Data@0x212a7f0cc00
+$18: VirtualFunction call "ExecuteUbergraph_BP_PiratePreview" (
+  $31: literal int32 273
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_PiratePreview_C::ReceiveEndPlay (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_EndPlayReason@0x212a7f0ce80
+  Expression:
+  $9: LocalVariable named EndPlayReason@0x212a7f0cc80
+$18: VirtualFunction call "ExecuteUbergraph_BP_PiratePreview" (
+  $31: literal int32 301
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_PiratePreview_C::ExecuteUbergraph_BP_PiratePreview (304 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x2137ebfec40
+$10: LetWeakObjPtr (Variable = Expression)
+  Variable:
+  $11: InstanceVariable named MainCamera@0x212d681e980
+  Expression:
+  $20: InstanceVariable named Camera@0x212a7f0da00
+$29: Let (Variable = Expression)
+  Variable:
+  $38: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x212a7f0cd00
+  Expression:
+  $47: Context
+    ObjectExpression:
+    $48: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x212a7f0cd00
+    ContextExpression:
+    $69: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x212d6a30390 (
+      $78: Self
+      $79: EndFunctionParms
+    )
+$80: Context
+  ObjectExpression:
+  $81: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x39
+  RValueProperty: (null)
+  ContextExpression:
+  $102: FinalFunction target=RegisterEventFromHandle@0x212d6a30c00 (
+    $111: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x212a7f0cd00
+    $120: InstanceVariable named PreviewBusyEventHandle@0x212d681e880
+    $129: Self
+    $130: literal ansi string "PreviewBusy_Event"
+    $149: ObjectConst PiratePreviewBusyEvent@0x212d648eca0
+    $158: EndFunctionParms
+  )
+$159: Context
+  ObjectExpression:
+  $160: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x3a
+  RValueProperty: (null)
+  ContextExpression:
+  $181: FinalFunction target=RegisterEventFromHandle@0x212d6a30c00 (
+    $190: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x212a7f0cd00
+    $199: InstanceVariable named PreviewReadyEventHandle@0x212d681e900
+    $208: Self
+    $209: literal ansi string "PreviewReady_Event"
+    $229: ObjectConst PiratePreviewReadyEvent@0x212d648ed40
+    $238: EndFunctionParms
+  )
+$239: Jump to offset 0x12d
+$244: LetWeakObjPtr (Variable = Expression)
+  Variable:
+  $245: InstanceVariable named Pirate@0x212d681ea00
+  Expression:
+  $254: InstanceVariable named PirateMesh@0x212a7f0d980
+$263: Jump to offset 0xa
+$268: Jump to offset 0x12d
+$273: JumpIfNot -> 0x12d, cond:
+  $278: StructMemberContext prop=Valid@0x212d648ede0
+    Expression to struct:
+    $287: LocalVariable named K2Node_CustomEvent_Data@0x212a7f0ce00
+$296: Jump to offset 0x12d
+$301: Return expression:
+  $302: Nothing
+$303: EndOfScript
+
+=== BP_PiratePreview_C::PreviewShutdown__DelegateSignature (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_PiratePreview_C::PreviewReady__DelegateSignature (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_PiratePreview_C::PreviewBusy__DelegateSignature (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript

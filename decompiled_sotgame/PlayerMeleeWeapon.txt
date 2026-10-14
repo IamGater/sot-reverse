@@ -1,0 +1,127 @@
+// Class: PlayerMeleeWeapon (3 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+PlayerMeleeWeapon::Multicast_StartAttackAnimation @ RVA 0xEC5F00 EA 0x7FF6F48E5F00
+======================================================================
+__int64 __fastcall sub_7FF6F48E5F00(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  __int64 v6; // rax
+  __int64 v7; // r8
+  __int64 v8; // rdx
+  unsigned __int8 v10; // [rsp+38h] [rbp+10h] BYREF
+  unsigned int v11; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v10 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  v5 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = a2[4];
+  v7 = v11;
+  v8 = v10;
+  LOBYTE(v5) = v6 != 0;
+  a2[4] = v6 + v5;
+  return sub_7FF6F40FC650(a1, v8, v7);
+}
+
+
+======================================================================
+PlayerMeleeWeapon::Server_AttackAnimationStart @ RVA 0xEC9260 EA 0x7FF6F48E9260
+======================================================================
+__int64 __fastcall sub_7FF6F48E9260(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  __int64 v6; // rax
+  __int64 v7; // r8
+  __int64 v8; // rdx
+  unsigned __int8 v10; // [rsp+38h] [rbp+10h] BYREF
+  unsigned int v11; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v10 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  v5 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = a2[4];
+  v7 = v11;
+  v8 = v10;
+  LOBYTE(v5) = v6 != 0;
+  a2[4] = v6 + v5;
+  if ( (unsigned __int8)sub_7FF6F4102750(a1, v8, v7) )
+    return nullsub_208(a1, v10, v11);
+  else
+    return sub_7FF6F4F0F6D0(L"Server_AttackAnimationStart_Validate");
+}
+
+
+======================================================================
+PlayerMeleeWeapon::Server_SetWasBlockingAtStartOfAttack @ RVA 0xECA2E0 EA 0x7FF6F48EA2E0
+======================================================================
+__int64 __fastcall sub_7FF6F48EA2E0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  bool v6; // bp
+  _BOOL8 v7; // rdx
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v5 = a2[4];
+  v6 = v9 != 0;
+  v7 = v9 != 0;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  if ( (unsigned __int8)sub_7FF6F4102C50(a1, v7) )
+    return sub_7FF6F4102C40(a1, v6);
+  else
+    return sub_7FF6F4F0F6D0(L"Server_SetWasBlockingAtStartOfAttack_Validate");
+}
+

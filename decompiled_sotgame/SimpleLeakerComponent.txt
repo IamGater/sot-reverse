@@ -1,0 +1,52 @@
+// Class: SimpleLeakerComponent (1 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+SimpleLeakerComponent::AddLeak @ RVA 0xDDBBC0 EA 0x7FF6F47FBBC0
+======================================================================
+__int64 __fastcall sub_7FF6F47FBBC0(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v3; // rsi
+  _OWORD *v7; // rax
+  _OWORD *v8; // rdi
+  __int64 v9; // rax
+  __int64 result; // rax
+  _DWORD v11[4]; // [rsp+20h] [rbp-78h] BYREF
+  _OWORD v12[3]; // [rsp+30h] [rbp-68h] BYREF
+
+  v12[1] = 0;
+  v3 = 0;
+  v12[0] = _mm_shuffle_ps((__m128)0LL, _mm_movehl_ps((__m128)xmmword_7FF6FA4CFB50, (__m128)0LL), 196);
+  v12[2] = _mm_and_ps((__m128)xmmword_7FF6FA4CFB50, (__m128)xmmword_7FF6FA4CFB60);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v7 = (_OWORD *)a2[7];
+  v8 = v12;
+  v11[0] = 0;
+  if ( v7 )
+    v8 = v7;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v9 = a2[4];
+  LOBYTE(v3) = v9 != 0;
+  a2[4] = v9 + v3;
+  result = sub_7FF6F3F1F620(a1, v8);
+  *a3 = result;
+  return result;
+}
+

@@ -1,0 +1,251 @@
+// Class: PlayerCrewComponent (9 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+PlayerCrewComponent::OnRep_CrewMatchmakingVisibility @ RVA 0xFC2B00 EA 0x7FF6F49E2B00
+======================================================================
+__int64 __fastcall sub_7FF6F49E2B00(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F4028730();
+}
+
+
+======================================================================
+PlayerCrewComponent::OnRep_CrewMembers @ RVA 0xFC2B20 EA 0x7FF6F49E2B20
+======================================================================
+void __fastcall sub_7FF6F49E2B20(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F4028870LL);
+}
+
+
+======================================================================
+PlayerCrewComponent::OnRep_CrewRivalVotingData @ RVA 0xFC2B40 EA 0x7FF6F49E2B40
+======================================================================
+__int64 __fastcall sub_7FF6F49E2B40(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F4028890();
+}
+
+
+======================================================================
+PlayerCrewComponent::OnRep_CrewShip @ RVA 0xFC2B60 EA 0x7FF6F49E2B60
+======================================================================
+void __fastcall sub_7FF6F49E2B60(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F4028C10LL);
+}
+
+
+======================================================================
+PlayerCrewComponent::Server_VoteOnChangeMatchmakingVisibility @ RVA 0xFC4330 EA 0x7FF6F49E4330
+======================================================================
+__int64 __fastcall sub_7FF6F49E4330(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rsi
+  __int64 v5; // rax
+  bool v6; // bp
+  _BOOL8 v7; // rdx
+  int v9; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v5 = a2[4];
+  v6 = v9 != 0;
+  v7 = v9 != 0;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64, _BOOL8))(*(_QWORD *)a1 + 968LL))(a1, v7) )
+    return (*(__int64 (__fastcall **)(__int64, bool))(*(_QWORD *)a1 + 976LL))(a1, v6);
+  else
+    return sub_7FF6F4F0F6D0(L"Server_VoteOnChangeMatchmakingVisibility_Validate");
+}
+
+
+======================================================================
+PlayerCrewComponent::Server_VoteOnChangingTavernLobby @ RVA 0xFC43F0 EA 0x7FF6F49E43F0
+======================================================================
+__int64 __fastcall sub_7FF6F49E43F0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  bool v7; // bp
+  _BOOL8 v8; // r8
+  int v10; // [rsp+40h] [rbp+8h] BYREF
+  __int64 v11; // [rsp+48h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v5 = a2[4];
+  v6 = v11;
+  v7 = v10 != 0;
+  v8 = v10 != 0;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64, __int64, _BOOL8))(*(_QWORD *)a1 + 952LL))(a1, v6, v8) )
+    return (*(__int64 (__fastcall **)(__int64, __int64, bool))(*(_QWORD *)a1 + 960LL))(a1, v11, v7);
+  else
+    return sub_7FF6F4F0F6D0(L"Server_VoteOnChangingTavernLobby_Validate");
+}
+
+
+======================================================================
+PlayerCrewComponent::Server_VoteOnReleasePlayerFromBrig @ RVA 0xFC44F0 EA 0x7FF6F49E44F0
+======================================================================
+__int64 __fastcall sub_7FF6F49E44F0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  bool v7; // bp
+  _BOOL8 v8; // r8
+  int v10; // [rsp+40h] [rbp+8h] BYREF
+  __int64 v11; // [rsp+48h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v5 = a2[4];
+  v6 = v11;
+  v7 = v10 != 0;
+  v8 = v10 != 0;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64, __int64, _BOOL8))(*(_QWORD *)a1 + 1000LL))(a1, v6, v8) )
+    return (*(__int64 (__fastcall **)(__int64, __int64, bool))(*(_QWORD *)a1 + 1008LL))(a1, v11, v7);
+  else
+    return sub_7FF6F4F0F6D0(L"Server_VoteOnReleasePlayerFromBrig_Validate");
+}
+
+
+======================================================================
+PlayerCrewComponent::Server_VoteOnScuttleShip @ RVA 0xFC45F0 EA 0x7FF6F49E45F0
+======================================================================
+__int64 __fastcall sub_7FF6F49E45F0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rsi
+  __int64 v5; // rax
+  bool v6; // bp
+  _BOOL8 v7; // rdx
+  int v9; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v5 = a2[4];
+  v6 = v9 != 0;
+  v7 = v9 != 0;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64, _BOOL8))(*(_QWORD *)a1 + 984LL))(a1, v7) )
+    return (*(__int64 (__fastcall **)(__int64, bool))(*(_QWORD *)a1 + 992LL))(a1, v6);
+  else
+    return sub_7FF6F4F0F6D0(L"Server_VoteOnScuttleShip_Validate");
+}
+
+
+======================================================================
+PlayerCrewComponent::Server_VoteOnSendPlayerToBrig @ RVA 0xFC46B0 EA 0x7FF6F49E46B0
+======================================================================
+__int64 __fastcall sub_7FF6F49E46B0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  bool v7; // bp
+  _BOOL8 v8; // r8
+  int v10; // [rsp+40h] [rbp+8h] BYREF
+  __int64 v11; // [rsp+48h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v5 = a2[4];
+  v6 = v11;
+  v7 = v10 != 0;
+  v8 = v10 != 0;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64, __int64, _BOOL8))(*(_QWORD *)a1 + 1016LL))(a1, v6, v8) )
+    return (*(__int64 (__fastcall **)(__int64, __int64, bool))(*(_QWORD *)a1 + 1024LL))(a1, v11, v7);
+  else
+    return sub_7FF6F4F0F6D0(L"Server_VoteOnSendPlayerToBrig_Validate");
+}
+

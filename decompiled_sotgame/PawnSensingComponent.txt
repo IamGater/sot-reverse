@@ -1,0 +1,109 @@
+// Class: PawnSensingComponent (5 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+PawnSensingComponent::GetPeripheralVisionAngle @ RVA 0x20A3E20 EA 0x7FF6F5AC3E20
+======================================================================
+__int64 __fastcall sub_7FF6F5AC3E20(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = *(unsigned int *)(a1 + 264);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PawnSensingComponent::GetPeripheralVisionCosine @ RVA 0x20A3E40 EA 0x7FF6F5AC3E40
+======================================================================
+__int64 __fastcall sub_7FF6F5AC3E40(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = *(unsigned int *)(a1 + 268);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PawnSensingComponent::SetPeripheralVisionAngle @ RVA 0x20A76D0 EA 0x7FF6F5AC76D0
+======================================================================
+__int64 __fastcall sub_7FF6F5AC76D0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 968LL))(a1);
+}
+
+
+======================================================================
+PawnSensingComponent::SetSensingInterval @ RVA 0x20A7750 EA 0x7FF6F5AC7750
+======================================================================
+__int64 __fastcall sub_7FF6F5AC7750(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 952LL))(a1);
+}
+
+
+======================================================================
+PawnSensingComponent::SetSensingUpdatesEnabled @ RVA 0x20A77D0 EA 0x7FF6F5AC77D0
+======================================================================
+__int64 __fastcall sub_7FF6F5AC77D0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 960LL))(a1, v5);
+}
+

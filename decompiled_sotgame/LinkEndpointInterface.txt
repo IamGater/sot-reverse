@@ -1,0 +1,72 @@
+// Class: LinkEndpointInterface (2 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+LinkEndpointInterface::LoseLink @ RVA 0x3B194C0 EA 0x7FF6F75394C0
+======================================================================
+__int64 __fastcall sub_7FF6F75394C0(__int64 (__fastcall ***a1)(_QWORD, __int64), _QWORD *a2)
+{
+  __int64 (__fastcall **v4)(_QWORD, __int64); // rbx
+  __int64 v5; // rax
+  char v7; // [rsp+30h] [rbp+8h] BYREF
+  char v8; // [rsp+38h] [rbp+10h] BYREF
+
+  sub_7FF6F752EBD0(&v7);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  a2[4] += a2[4] != 0;
+  v4 = *a1;
+  v5 = sub_7FF6F752EB10(&v8, &v7);
+  return (*v4)(a1, v5);
+}
+
+
+======================================================================
+LinkEndpointInterface::ReceiveLink @ RVA 0x3B199A0 EA 0x7FF6F75399A0
+======================================================================
+__int64 __fastcall sub_7FF6F75399A0(__int64 *a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rbx
+  __int64 v7; // rax
+  char v9; // [rsp+40h] [rbp+8h] BYREF
+  __int64 v10; // [rsp+48h] [rbp+10h] BYREF
+  char v11; // [rsp+58h] [rbp+20h] BYREF
+
+  sub_7FF6F752EBD0(&v9);
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v4 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v5 = a2[4];
+  LOBYTE(v4) = v5 != 0;
+  a2[4] = v5 + v4;
+  v6 = *a1;
+  v7 = sub_7FF6F752EB10(&v11, &v9);
+  return (*(__int64 (__fastcall **)(__int64 *, __int64, __int64))(v6 + 8))(a1, v7, v10);
+}
+

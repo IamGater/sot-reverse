@@ -1,0 +1,92 @@
+// /Game/Blueprints/GameObjects/StorageContainers/ShipBarrels/bp_shipstoragebarrel_grog -> BP_ShipStorageBarrel_Grog_C
+
+=== BP_ShipStorageBarrel_Grog_C::GetClosestInteractionPoint (165 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_GetBoxSphereRadius_ReturnValue@0x19f58591c00
+  Expression:
+  $18: Context
+    ObjectExpression:
+    $19: InstanceVariable named Interactable@0x19f4fc8c000
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetBoxSphereRadius_ReturnValue@0x19f58591c00
+    ContextExpression:
+    $40: FinalFunction target=GetBoxSphereRadius@0x19e4d12e1d0 (
+      $49: EndFunctionParms
+    )
+$50: Let (Variable = Expression)
+  Variable:
+  $59: LocalVariable named CallFunc_GetBoxWorldOrigin_ReturnValue@0x19f4fc8bc80
+  Expression:
+  $68: Context
+    ObjectExpression:
+    $69: InstanceVariable named Interactable@0x19f4fc8c000
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetBoxWorldOrigin_ReturnValue@0x19f4fc8bc80
+    ContextExpression:
+    $90: FinalFunction target=GetBoxWorldOrigin@0x19e4d12e300 (
+      $99: EndFunctionParms
+    )
+$100: Let (Variable = Expression)
+  Variable:
+  $109: LocalOutVariable named OutInteractionPointRadius@0x19f58591b90
+  Expression:
+  $118: LocalVariable named CallFunc_GetBoxSphereRadius_ReturnValue@0x19f58591c00
+$127: Let (Variable = Expression)
+  Variable:
+  $136: LocalOutVariable named ReturnValue@0x19f4fc8bc00
+  Expression:
+  $145: LocalVariable named CallFunc_GetBoxWorldOrigin_ReturnValue@0x19f4fc8bc80
+$154: Return expression:
+  $155: LocalOutVariable named ReturnValue@0x19f4fc8bc00
+$164: EndOfScript
+
+=== BP_ShipStorageBarrel_Grog_C::ShouldDrawTooltipInWorldSpace (200 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_GetBoxWorldOrigin_ReturnValue@0x19f4fc8be80
+  Expression:
+  $18: Context
+    ObjectExpression:
+    $19: InstanceVariable named Interactable@0x19f4fc8c000
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetBoxWorldOrigin_ReturnValue@0x19f4fc8be80
+    ContextExpression:
+    $40: FinalFunction target=GetBoxWorldOrigin@0x19e4d12e300 (
+      $49: EndFunctionParms
+    )
+$50: CallMath target=BreakVector@0x19e4d3730b0 (
+  $59: LocalVariable named CallFunc_GetBoxWorldOrigin_ReturnValue@0x19f4fc8be80
+  $68: LocalVariable named CallFunc_BreakVector_X@0x19f58591c70
+  $77: LocalVariable named CallFunc_BreakVector_Y@0x19f58591ce0
+  $86: LocalVariable named CallFunc_BreakVector_Z@0x19f58591d50
+  $95: EndFunctionParms
+)
+$96: Let (Variable = Expression)
+  Variable:
+  $105: LocalVariable named CallFunc_MakeVector_ReturnValue@0x19f4fc8bf00
+  Expression:
+  $114: CallMath target=MakeVector@0x19e4d38a910 (
+    $123: LocalVariable named CallFunc_BreakVector_X@0x19f58591c70
+    $132: LocalVariable named CallFunc_BreakVector_Y@0x19f58591ce0
+    $141: LocalVariable named CallFunc_BreakVector_Z@0x19f58591d50
+    $150: EndFunctionParms
+  )
+$151: Let (Variable = Expression)
+  Variable:
+  $160: LocalOutVariable named DesiredTooltipWorldPosition@0x19f4fc8bd80
+  Expression:
+  $169: LocalVariable named CallFunc_MakeVector_ReturnValue@0x19f4fc8bf00
+$178: LetBool (Variable = Expression)
+  Variable:
+  $179: LocalOutVariable named ReturnValue@0x19f4fc8be00
+  Expression:
+  $188: True
+$189: Return expression:
+  $190: LocalOutVariable named ReturnValue@0x19f4fc8be00
+$199: EndOfScript
+
+=== BP_ShipStorageBarrel_Grog_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript

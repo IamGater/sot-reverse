@@ -1,0 +1,103 @@
+// /Game/Prototype/Tales/TestTales/MA_LostShipments/bp_spawnclueskeleton -> BP_SpawnClueSkeleton_C
+
+=== BP_SpawnClueSkeleton_C::OnDespawn (58 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_Pawn2@0x19fd11eee80
+  Expression:
+  $9: LocalVariable named Pawn@0x19fd11eec00
+$18: LetValueOnPersistentFrame dest=K2Node_Event_DeathType@0x19fd11eef00
+  Expression:
+  $27: LocalVariable named DeathType@0x19fd11eec80
+$36: VirtualFunction call "idx:285984" (
+  $49: literal int32 69
+  $54: EndFunctionParms
+)
+$55: Return expression:
+  $56: Nothing
+$57: EndOfScript
+
+=== BP_SpawnClueSkeleton_C::fn_idx_282659 (22 bytes) ===
+$0: VirtualFunction call "idx:285984" (
+  $13: literal int32 240
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_SpawnClueSkeleton_C::OnSpawn (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_Pawn@0x19fd11eed80
+  Expression:
+  $9: LocalVariable named Pawn@0x19fd11eed00
+$18: VirtualFunction call "idx:285984" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_SpawnClueSkeleton_C::fn_idx_285984 (253 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fceae12d0
+$10: Context
+  ObjectExpression:
+  $11: ObjectConst Default__AIManagerBlueprintFunctionLibrary@0x19e4da53f40
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $32: FinalFunction target=AddNameplateToAI@0x19e4d4870e0 (
+    $41: LocalVariable named K2Node_Event_Pawn@0x19fd11eed80
+    $50: literal ansi string "Captain Stu"
+    $63: EndFunctionParms
+  )
+$64: Jump to offset 0xfa
+$69: LetBool (Variable = Expression)
+  Variable:
+  $70: LocalVariable named CallFunc_EqualEqual_ByteByte_ReturnValue@0x19fd11eef80
+  Expression:
+  $79: CallMath target=EqualEqual_ByteByte@0x19e4d37a620 (
+    $88: LocalVariable named K2Node_Event_DeathType@0x19fd11eef00
+    $97: literal byte 1
+    $99: EndFunctionParms
+  )
+$100: JumpIfNot -> 0xfa, cond:
+  $105: LocalVariable named CallFunc_EqualEqual_ByteByte_ReturnValue@0x19fd11eef80
+$114: FinalFunction target=OnBattleWon@0x19e4d112e50 (
+  $123: EndFunctionParms
+)
+$124: LetObj (Variable = Expression)
+  Variable:
+  $125: LocalVariable named CallFunc_SpawnDroppedItem_ReturnValue@0x19fd11ef000
+  Expression:
+  $134: FinalFunction target=SpawnDroppedItem@0x19e4cda8440 (
+    $143: LocalVariable named K2Node_Event_Pawn2@0x19fd11eee80
+    $152: ObjectConst idx:285982@0x19fd0efa8c0
+    $161: False
+    $162: False
+    $163: literal text (not decoded)
+    $164: literal ansi string ""
+    $166: literal ansi string ""
+    $168: literal ansi string ""
+    $170: EndFunctionParms
+  )
+$171: BindDelegate 'OnPickup'
+  Delegate:
+  $184: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fd11eee00
+  Object:
+  $193: Self
+$194: AddMulticastDelegate
+$195: Context
+  ObjectExpression:
+  $196: LocalVariable named CallFunc_SpawnDroppedItem_ReturnValue@0x19fd11ef000
+  SkipBytes: 0x9
+  RValueProperty: OnItemPickedUpDelegate@0x19e4d10b7b0
+  ContextExpression:
+  $217: InstanceVariable named OnItemPickedUpDelegate@0x19e4d10b7b0
+$226: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fd11eee00
+$235: Jump to offset 0xfa
+$240: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $249: EndFunctionParms
+)
+$250: Return expression:
+  $251: Nothing
+$252: EndOfScript

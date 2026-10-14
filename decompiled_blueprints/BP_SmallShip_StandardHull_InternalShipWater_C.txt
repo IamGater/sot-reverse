@@ -1,0 +1,310 @@
+// E:\unreal-projects\Athena\Content\Blueprints\GameObjects\Hull\Damage\bp_smallship_standardhull_internalshipwater.uasset -> BP_SmallShip_StandardHull_InternalShipWater_C
+
+=== BP_SmallShip_StandardHull_InternalShipWater_C::GetLineIntersectionFromPlane (260 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_K2_GetComponentRotation_ReturnValue@0x213afa2cf00
+  Expression:
+  $18: Context
+    ObjectExpression:
+    $19: InstanceVariable named WaterMeshComponent@0x212d6a7e940
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetComponentRotation_ReturnValue@0x213afa2cf00
+    ContextExpression:
+    $40: FinalFunction target=K2_GetComponentRotation@0x212d6691430 (
+      $49: EndFunctionParms
+    )
+$50: Let (Variable = Expression)
+  Variable:
+  $59: LocalVariable named CallFunc_K2_GetComponentLocation_ReturnValue@0x213afa2f580
+  Expression:
+  $68: Context
+    ObjectExpression:
+    $69: InstanceVariable named WaterMeshComponent@0x212d6a7e940
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetComponentLocation_ReturnValue@0x213afa2f580
+    ContextExpression:
+    $90: FinalFunction target=K2_GetComponentLocation@0x212d66912f0 (
+      $99: EndFunctionParms
+    )
+$100: Let (Variable = Expression)
+  Variable:
+  $109: LocalVariable named CallFunc_GetUpVector_ReturnValue@0x213afa2e400
+  Expression:
+  $118: CallMath target=GetUpVector@0x212d69a1750 (
+    $127: LocalVariable named CallFunc_K2_GetComponentRotation_ReturnValue@0x213afa2cf00
+    $136: EndFunctionParms
+  )
+$137: LetBool (Variable = Expression)
+  Variable:
+  $138: LocalVariable named CallFunc_LinePlaneIntersection_OriginNormal_ReturnValue@0x213afa2e300
+  Expression:
+  $147: CallMath target=LinePlaneIntersection_OriginNormal@0x212d69a7980 (
+    $156: LocalVariable named LineStart@0x213afa2d100
+    $165: LocalVariable named LineEnd@0x213afa2d080
+    $174: LocalVariable named CallFunc_K2_GetComponentLocation_ReturnValue@0x213afa2f580
+    $183: LocalVariable named CallFunc_GetUpVector_ReturnValue@0x213afa2e400
+    $192: LocalVariable named CallFunc_LinePlaneIntersection_OriginNormal_T@0x213b1185c50
+    $201: LocalVariable named CallFunc_LinePlaneIntersection_OriginNormal_Intersection@0x213afa2e380
+    $210: EndFunctionParms
+  )
+$211: LetBool (Variable = Expression)
+  Variable:
+  $212: LocalOutVariable named Intersect@0x213afa2d000
+  Expression:
+  $221: LocalVariable named CallFunc_LinePlaneIntersection_OriginNormal_ReturnValue@0x213afa2e300
+$230: Let (Variable = Expression)
+  Variable:
+  $239: LocalOutVariable named IntersectionPoint@0x213afa2cf80
+  Expression:
+  $248: LocalVariable named CallFunc_LinePlaneIntersection_OriginNormal_Intersection@0x213afa2e380
+$257: Return expression:
+  $258: Nothing
+$259: EndOfScript
+
+=== BP_SmallShip_StandardHull_InternalShipWater_C::GetWaterLevel (30 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalOutVariable named WaterLevel@0x213b118b360
+  Expression:
+  $18: InstanceVariable named CurrentVisualWaterLevel@0x212d6a7ee80
+$27: Return expression:
+  $28: Nothing
+$29: EndOfScript
+
+=== BP_SmallShip_StandardHull_InternalShipWater_C::GetDistanceFromPlane (259 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_K2_GetComponentRotation_ReturnValue@0x213afa2e200
+  Expression:
+  $18: Context
+    ObjectExpression:
+    $19: InstanceVariable named WaterMeshComponent@0x212d6a7e940
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetComponentRotation_ReturnValue@0x213afa2e200
+    ContextExpression:
+    $40: FinalFunction target=K2_GetComponentRotation@0x212d6691430 (
+      $49: EndFunctionParms
+    )
+$50: Let (Variable = Expression)
+  Variable:
+  $59: LocalVariable named CallFunc_K2_GetComponentLocation_ReturnValue@0x213afa2e180
+  Expression:
+  $68: Context
+    ObjectExpression:
+    $69: InstanceVariable named WaterMeshComponent@0x212d6a7e940
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetComponentLocation_ReturnValue@0x213afa2e180
+    ContextExpression:
+    $90: FinalFunction target=K2_GetComponentLocation@0x212d66912f0 (
+      $99: EndFunctionParms
+    )
+$100: Let (Variable = Expression)
+  Variable:
+  $109: LocalVariable named CallFunc_GetUpVector_ReturnValue@0x213afa2e100
+  Expression:
+  $118: CallMath target=GetUpVector@0x212d69a1750 (
+    $127: LocalVariable named CallFunc_K2_GetComponentRotation_ReturnValue@0x213afa2e200
+    $136: EndFunctionParms
+  )
+$137: Let (Variable = Expression)
+  Variable:
+  $146: LocalVariable named CallFunc_Subtract_VectorVector_ReturnValue@0x213afa2e080
+  Expression:
+  $155: CallMath target=Subtract_VectorVector@0x212d69ba7f0 (
+    $164: LocalVariable named Location@0x213afa2e280
+    $173: LocalVariable named CallFunc_K2_GetComponentLocation_ReturnValue@0x213afa2e180
+    $182: EndFunctionParms
+  )
+$183: Let (Variable = Expression)
+  Variable:
+  $192: LocalVariable named CallFunc_Dot_VectorVector_ReturnValue@0x213b1185d30
+  Expression:
+  $201: CallMath target=Dot_VectorVector@0x212d6999ba0 (
+    $210: LocalVariable named CallFunc_Subtract_VectorVector_ReturnValue@0x213afa2e080
+    $219: LocalVariable named CallFunc_GetUpVector_ReturnValue@0x213afa2e100
+    $228: EndFunctionParms
+  )
+$229: Let (Variable = Expression)
+  Variable:
+  $238: LocalOutVariable named Distance@0x213b1189d80
+  Expression:
+  $247: LocalVariable named CallFunc_Dot_VectorVector_ReturnValue@0x213b1185d30
+$256: Return expression:
+  $257: Nothing
+$258: EndOfScript
+
+=== BP_SmallShip_StandardHull_InternalShipWater_C::UserConstructionScript (13 bytes) ===
+$0: FinalFunction target=UserConstructionScript@0x212d638c6f0 (
+  $9: EndFunctionParms
+)
+$10: Return expression:
+  $11: Nothing
+$12: EndOfScript
+
+=== BP_SmallShip_StandardHull_InternalShipWater_C::AddWater (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_Water_Amount@0x213b11860b0
+  Expression:
+  $9: LocalVariable named Water Amount@0x213b118dc80
+$18: VirtualFunction call "ExecuteUbergraph_BP_SmallShip_StandardHull_InternalShipWater" (
+  $31: literal int32 526
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_SmallShip_StandardHull_InternalShipWater_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_SmallShip_StandardHull_InternalShipWater" (
+  $13: literal int32 546
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_SmallShip_StandardHull_InternalShipWater_C::ExecuteUbergraph_BP_SmallShip_StandardHull_InternalShipWater (554 bytes) ===
+$0: FlowStack.Push(0x227)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x213b1186a50
+$15: LetObj (Variable = Expression)
+  Variable:
+  $16: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x213afa2e000
+  Expression:
+  $25: Context
+    ObjectExpression:
+    $26: ObjectConst Default__KismetMaterialLibrary@0x212d6f7ec40
+    SkipBytes: 0x14
+    RValueProperty: CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x213afa2e000
+    ContextExpression:
+    $47: FinalFunction target=CreateDynamicMaterialInstance@0x212d698e1e0 (
+      $56: Self
+      $57: ObjectConst MT_waterocclusion@0x2138945b4a0
+      $66: EndFunctionParms
+    )
+$67: Context
+  ObjectExpression:
+  $68: InstanceVariable named WaterOcclusionVolume@0x212d6a7e9c0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $89: VirtualFunction call "SetMaterial" (
+    $102: literal int32 1
+    $107: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x213afa2e000
+    $116: EndFunctionParms
+  )
+$117: PopExecutionFlow (jump to popped addr)
+$118: FinalFunction target=ReceiveBeginPlay@0x212d6389f70 (
+  $127: EndFunctionParms
+)
+$128: LetBool (Variable = Expression)
+  Variable:
+  $129: LocalVariable named CallFunc_IsDedicatedServer_ReturnValue@0x213afa2fc80
+  Expression:
+  $138: Context
+    ObjectExpression:
+    $139: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_IsDedicatedServer_ReturnValue@0x213afa2fc80
+    ContextExpression:
+    $160: FinalFunction target=IsDedicatedServer@0x212d63add00 (
+      $169: Self
+      $170: EndFunctionParms
+    )
+$171: JumpIfNot -> 0xba, cond:
+  $176: LocalVariable named CallFunc_IsDedicatedServer_ReturnValue@0x213afa2fc80
+$185: PopExecutionFlow (jump to popped addr)
+$186: FlowStack.Push(0x1fa)
+$191: FlowStack.Push(0x190)
+$196: LetObj (Variable = Expression)
+  Variable:
+  $197: LocalVariable named CallFunc_GetTexture_ReturnValue@0x213afa2eb80
+  Expression:
+  $206: Context
+    ObjectExpression:
+    $207: InstanceVariable named DynamicFlow@0x213afa20780
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetTexture_ReturnValue@0x213afa2eb80
+    ContextExpression:
+    $228: FinalFunction target=GetTexture@0x212d679b0e0 (
+      $237: EndFunctionParms
+    )
+$238: Context
+  ObjectExpression:
+  $239: InstanceVariable named WaterMeshComponent@0x212d6a7e940
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $260: FinalFunction target=SetTexture@0x212d6964c00 (
+    $269: literal int32 0
+    $274: literal name "FoamMask"
+    $287: LocalVariable named CallFunc_GetTexture_ReturnValue@0x213afa2eb80
+    $296: EndFunctionParms
+  )
+$297: LetObj (Variable = Expression)
+  Variable:
+  $298: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue2@0x213afa21600
+  Expression:
+  $307: Context
+    ObjectExpression:
+    $308: ObjectConst Default__KismetMaterialLibrary@0x212d6f7ec40
+    SkipBytes: 0x14
+    RValueProperty: CallFunc_CreateDynamicMaterialInstance_ReturnValue2@0x213afa21600
+    ContextExpression:
+    $329: FinalFunction target=CreateDynamicMaterialInstance@0x212d698e1e0 (
+      $338: Self
+      $339: ObjectConst MT_waterocclusion@0x2138945b4a0
+      $348: EndFunctionParms
+    )
+$349: Context
+  ObjectExpression:
+  $350: InstanceVariable named WaterOcclusionVolume@0x212d6a7e9c0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $371: VirtualFunction call "SetMaterial" (
+    $384: literal int32 0
+    $389: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue2@0x213afa21600
+    $398: EndFunctionParms
+  )
+$399: PopExecutionFlow (jump to popped addr)
+$400: LetObj (Variable = Expression)
+  Variable:
+  $401: LocalVariable named CallFunc_GetTexture_ReturnValue@0x213afa2eb80
+  Expression:
+  $410: Context
+    ObjectExpression:
+    $411: InstanceVariable named DynamicFlow@0x213afa20780
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetTexture_ReturnValue@0x213afa2eb80
+    ContextExpression:
+    $432: FinalFunction target=GetTexture@0x212d679b0e0 (
+      $441: EndFunctionParms
+    )
+$442: Context
+  ObjectExpression:
+  $443: InstanceVariable named WaterMeshComponent@0x212d6a7e940
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $464: FinalFunction target=SetTexture@0x212d6964c00 (
+    $473: literal int32 1
+    $478: literal name "FoamMask"
+    $491: LocalVariable named CallFunc_GetTexture_ReturnValue@0x213afa2eb80
+    $500: EndFunctionParms
+  )
+$501: Jump to offset 0xf
+$506: FinalFunction target=RegisterComponents@0x212d6a7dc20 (
+  $515: InstanceVariable named Foaminess@0x213afa26180
+  $524: EndFunctionParms
+)
+$525: PopExecutionFlow (jump to popped addr)
+$526: FinalFunction target=AddWaterAmount@0x212d6a7d140 (
+  $535: LocalVariable named K2Node_Event_Water_Amount@0x213b11860b0
+  $544: EndFunctionParms
+)
+$545: PopExecutionFlow (jump to popped addr)
+$546: Jump to offset 0x76
+$551: Return expression:
+  $552: Nothing
+$553: EndOfScript

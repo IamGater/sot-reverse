@@ -1,0 +1,185 @@
+// /Game/Blueprints/Prompts/PromptActors/EquipAndUseItem/bp_promptactor_maidenvoyage_useshipcannon -> BP_PromptActor_MaidenVoyage_UseShipCannon_C
+
+=== BP_PromptActor_MaidenVoyage_UseShipCannon_C::fn_idx_255407 (124 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named NewLocalVar@0x19fbd388480
+  Expression:
+  $10: False
+$11: LetBool (Variable = Expression)
+  Variable:
+  $12: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fbd388400
+  Expression:
+  $21: Context
+    ObjectExpression:
+    $22: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19fbd388400
+    ContextExpression:
+    $43: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $52: InstanceVariable named idx:275893@0x19fbd388a00
+      $61: EndFunctionParms
+    )
+$62: JumpIfNot -> 0x79, cond:
+  $67: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fbd388400
+$76: Context
+  ObjectExpression:
+  $77: InstanceVariable named idx:275893@0x19fbd388a00
+  SkipBytes: 0x17
+  RValueProperty: (null)
+  ContextExpression:
+  $98: VirtualFunction call "SetShouldDisplayPrompts" (
+    $111: InstanceVariable named DisplayPrompts@0x19fbd388c80
+    $120: EndFunctionParms
+  )
+$121: Return expression:
+  $122: Nothing
+$123: EndOfScript
+
+=== BP_PromptActor_MaidenVoyage_UseShipCannon_C::fn_idx_255393 (56 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue@0x19fbd388580
+  Expression:
+  $10: FinalFunction target=FlushNetDormancy@0x19e4cd61090 (
+    $19: EndFunctionParms
+  )
+$20: LetBool (Variable = Expression)
+  Variable:
+  $21: InstanceVariable named DisplayPrompts@0x19fbd388c80
+  Expression:
+  $30: LocalVariable named InDisplayPrompts@0x19fbd388500
+$39: VirtualFunction call "OnRep_DisplayPrompts" (
+  $52: EndFunctionParms
+)
+$53: Return expression:
+  $54: Nothing
+$55: EndOfScript
+
+=== BP_PromptActor_MaidenVoyage_UseShipCannon_C::fn_idx_9202 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_PromptActor_MaidenVoyage_UseShipCannon_C::fn_idx_9159 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_EndPlayReason@0x19fbd388780
+  Expression:
+  $9: LocalVariable named EndPlayReason@0x19fbd388600
+$18: VirtualFunction call "idx:275891" (
+  $31: literal int32 271
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_PromptActor_MaidenVoyage_UseShipCannon_C::fn_idx_9152 (22 bytes) ===
+$0: VirtualFunction call "idx:275891" (
+  $13: literal int32 409
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_PromptActor_MaidenVoyage_UseShipCannon_C::fn_idx_275891 (417 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fbf430a80
+$10: LetBool (Variable = Expression)
+  Variable:
+  $11: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x19fbd388680
+  Expression:
+  $20: FinalFunction target=HasAuthority@0x19e4cd64b30 (
+    $29: EndFunctionParms
+  )
+$30: JumpIfNot -> 0x31, cond:
+  $35: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x19fbd388680
+$44: Jump to offset 0x19e
+$49: LetObj (Variable = Expression)
+  Variable:
+  $50: LocalVariable named CallFunc_CreateObject_ReturnValue@0x19fbd388700
+  Expression:
+  $59: Context
+    ObjectExpression:
+    $60: ObjectConst Default__ObjectUtilities@0x19e4d79db60
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_CreateObject_ReturnValue@0x19fbd388700
+    ContextExpression:
+    $81: FinalFunction target=CreateObject@0x19e4d1f7c10 (
+      $90: ObjectConst idx:275888@0x19fbcfa60c0
+      $99: EndFunctionParms
+    )
+$100: Let (Variable = Expression)
+  Variable:
+  $109: LocalVariable named idx:275892@0x19fbd388800
+  Expression:
+  $118: DynamicCast to idx:275888@0x19fbcfa60c0 of expr:
+  $127: LocalVariable named CallFunc_CreateObject_ReturnValue@0x19fbd388700
+$136: Let (Variable = Expression)
+  Variable:
+  $145: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fbd388880
+  Expression:
+  $154: PrimitiveCast type=71
+    Argument:
+    $156: LocalVariable named idx:275892@0x19fbd388800
+$165: JumpIfNot -> 0x19e, cond:
+  $170: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fbd388880
+$179: LetObj (Variable = Expression)
+  Variable:
+  $180: InstanceVariable named idx:275893@0x19fbd388a00
+  Expression:
+  $189: LocalVariable named idx:275892@0x19fbd388800
+$198: VirtualFunction call "GetAthenaPlayerController" (
+  $211: LocalVariable named CallFunc_GetAthenaPlayerController_AthenaPlayerController@0x19fbd388980
+  $220: EndFunctionParms
+)
+$221: Context
+  ObjectExpression:
+  $222: InstanceVariable named idx:275893@0x19fbd388a00
+  SkipBytes: 0x17
+  RValueProperty: (null)
+  ContextExpression:
+  $243: VirtualFunction call "InitializeAndStart" (
+    $256: LocalVariable named CallFunc_GetAthenaPlayerController_AthenaPlayerController@0x19fbd388980
+    $265: EndFunctionParms
+  )
+$266: Jump to offset 0x19e
+$271: LetBool (Variable = Expression)
+  Variable:
+  $272: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fbd388900
+  Expression:
+  $281: Context
+    ObjectExpression:
+    $282: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19fbd388900
+    ContextExpression:
+    $303: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $312: InstanceVariable named idx:275893@0x19fbd388a00
+      $321: EndFunctionParms
+    )
+$322: JumpIfNot -> 0x19e, cond:
+  $327: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fbd388900
+$336: Context
+  ObjectExpression:
+  $337: InstanceVariable named idx:275893@0x19fbd388a00
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $358: FinalFunction target=Uninitialize@0x19e4d4b5c00 (
+    $367: EndFunctionParms
+  )
+$368: Context
+  ObjectExpression:
+  $369: InstanceVariable named idx:275893@0x19fbd388a00
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $390: VirtualFunction call "UnregisterHandles" (
+    $403: EndFunctionParms
+  )
+$404: Jump to offset 0x19e
+$409: Jump to offset 0xa
+$414: Return expression:
+  $415: Nothing
+$416: EndOfScript

@@ -1,0 +1,148 @@
+// Class: BuoyancyMaths (2 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+BuoyancyMaths::CalcBlendedProbeCurveBuoyancy @ RVA 0x2E9C960 EA 0x7FF6F68BC960
+======================================================================
+__int64 __fastcall sub_7FF6F68BC960(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v3; // rdi
+  int v6; // r9d
+  __int64 v7; // rax
+  int v8; // xmm0_4
+  int v9; // r8d
+  int v10; // edx
+  int v11; // ecx
+  __int64 result; // rax
+  int v13; // [rsp+20h] [rbp-30h]
+  char v14; // [rsp+28h] [rbp-28h]
+  __int64 v15; // [rsp+30h] [rbp-20h] BYREF
+  __int64 v16; // [rsp+38h] [rbp-18h] BYREF
+  _QWORD v17[2]; // [rsp+40h] [rbp-10h] BYREF
+  char v18; // [rsp+78h] [rbp+28h] BYREF
+  int v19; // [rsp+80h] [rbp+30h] BYREF
+  int v20; // [rsp+88h] [rbp+38h] BYREF
+
+  v3 = 0;
+  v17[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v17);
+  }
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v20 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v20);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v20);
+  }
+  v19 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  v18 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v18);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v18);
+  }
+  v7 = a2[4];
+  v8 = v19;
+  v9 = v15;
+  LOBYTE(v3) = v7 != 0;
+  v10 = v16;
+  v11 = v17[0];
+  v14 = v18;
+  v13 = v19;
+  a2[4] = v7 + v3;
+  result = sub_7FF6F689D520(v11, v10, v9, v6, v13, v14);
+  *a3 = v8;
+  return result;
+}
+
+
+======================================================================
+BuoyancyMaths::CalculateMagnitude @ RVA 0x2E9CF30 EA 0x7FF6F68BCF30
+======================================================================
+void __fastcall sub_7FF6F68BCF30(__int64 a1, _QWORD *a2, float *a3)
+{
+  bool v3; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+  int v7; // [rsp+40h] [rbp+18h] BYREF
+  int v8; // [rsp+48h] [rbp+20h] BYREF
+
+  v3 = a2[4] == 0;
+  v8 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  v3 = a2[4] == 0;
+  v7 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v3 = a2[4] == 0;
+  v6 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  *a3 = sub_7FF6F689DD10();
+}
+

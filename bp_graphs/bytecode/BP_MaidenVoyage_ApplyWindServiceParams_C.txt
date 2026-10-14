@@ -1,0 +1,100 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Onboarding/bp_maidenvoyage_applywindserviceparams -> BP_MaidenVoyage_ApplyWindServiceParams_C
+
+=== BP_MaidenVoyage_ApplyWindServiceParams_C::fn_idx_1698 (412 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_GetGameState_ReturnValue@0x19fcdd68800
+  Expression:
+  $10: FinalFunction target=GetGameState@0x19e4cda5860 (
+    $19: EndFunctionParms
+  )
+$20: Let (Variable = Expression)
+  Variable:
+  $29: LocalVariable named K2Node_DynamicCast_AsAthena_Game_State@0x19fcdd68880
+  Expression:
+  $38: DynamicCast to AthenaGameState@0x19e4c354440 of expr:
+  $47: LocalVariable named CallFunc_GetGameState_ReturnValue@0x19fcdd68800
+$56: Let (Variable = Expression)
+  Variable:
+  $65: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcdd68a00
+  Expression:
+  $74: PrimitiveCast type=71
+    Argument:
+    $76: LocalVariable named K2Node_DynamicCast_AsAthena_Game_State@0x19fcdd68880
+$85: JumpIfNot -> 0x199, cond:
+  $90: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcdd68a00
+$99: LetObj (Variable = Expression)
+  Variable:
+  $100: LocalVariable named CallFunc_GetService_ReturnValue@0x19fcdd68c00
+  Expression:
+  $109: Context
+    ObjectExpression:
+    $110: InterfaceContext:
+    $111: LocalVariable named K2Node_DynamicCast_AsAthena_Game_State@0x19fcdd68880
+    SkipBytes: 0x17
+    RValueProperty: CallFunc_GetService_ReturnValue@0x19fcdd68c00
+    ContextExpression:
+    $132: VirtualFunction call "GetService" (
+      $145: ObjectConst WindInterface@0x19e4c5d8dc0
+      $154: EndFunctionParms
+    )
+$155: Let (Variable = Expression)
+  Variable:
+  $164: LocalVariable named idx:282885@0x19fcdd68b00
+  Expression:
+  $173: DynamicCast to WindService@0x19e4c5d8340 of expr:
+  $182: LocalVariable named CallFunc_GetService_ReturnValue@0x19fcdd68c00
+$191: Let (Variable = Expression)
+  Variable:
+  $200: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fcdd68b80
+  Expression:
+  $209: PrimitiveCast type=71
+    Argument:
+    $211: LocalVariable named idx:282885@0x19fcdd68b00
+$220: JumpIfNot -> 0x199, cond:
+  $225: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fcdd68b80
+$234: Context
+  ObjectExpression:
+  $235: InterfaceContext:
+  $236: LocalVariable named idx:282885@0x19fcdd68b00
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $257: VirtualFunction call "SetParams" (
+    $270: StructMemberContext prop=idx:282887@0x19fcdd68c80
+      Expression to struct:
+      $279: LocalVariable named InParams@0x19fcdd68780
+    $288: EndFunctionParms
+  )
+$289: Context
+  ObjectExpression:
+  $290: InterfaceContext:
+  $291: LocalVariable named idx:282885@0x19fcdd68b00
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $312: VirtualFunction call "SetGlobalWindDirection" (
+    $325: StructMemberContext prop=idx:282883@0x19fcdd68e80
+      Expression to struct:
+      $334: LocalVariable named InParams@0x19fcdd68780
+    $343: EndFunctionParms
+  )
+$344: Context
+  ObjectExpression:
+  $345: InterfaceContext:
+  $346: LocalVariable named idx:282885@0x19fcdd68b00
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $367: VirtualFunction call "SetGlobalWindMagnitude" (
+    $380: StructMemberContext prop=idx:282886@0x19fcdbb9370
+      Expression to struct:
+      $389: LocalVariable named InParams@0x19fcdd68780
+    $398: EndFunctionParms
+  )
+$399: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $408: EndFunctionParms
+)
+$409: Return expression:
+  $410: Nothing
+$411: EndOfScript

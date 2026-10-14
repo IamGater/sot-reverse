@@ -1,0 +1,829 @@
+// Class: FaunaAnimationInstance (51 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+FaunaAnimationInstance::AssetArrayValidationCheck @ RVA 0xDDBDC0 EA 0x7FF6F47FBDC0
+======================================================================
+__int64 __fastcall sub_7FF6F47FBDC0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F20A70();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GenerateNewValidAnimationIndex @ RVA 0xDDDB40 EA 0x7FF6F47FDB40
+======================================================================
+__int64 __fastcall sub_7FF6F47FDB40(int a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  int v6; // r9d
+  int v7; // r8d
+  int v8; // edx
+  bool v9; // zf
+  int v11; // [rsp+30h] [rbp-18h] BYREF
+  _QWORD v12[2]; // [rsp+38h] [rbp-10h] BYREF
+  unsigned __int8 v13; // [rsp+58h] [rbp+10h] BYREF
+  unsigned __int8 v14; // [rsp+68h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v12[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v5 = a2[4];
+  v6 = v13;
+  v7 = v14;
+  v8 = v12[0];
+  LOBYTE(v2) = v5 != 0;
+  v9 = v11 == 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F3F2AEA0(a1, v8, v7, v6, !v9);
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetDeathOnLandAnimation @ RVA 0xDDE510 EA 0x7FF6F47FE510
+======================================================================
+__int64 __fastcall sub_7FF6F47FE510(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F2EC20();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetDeathOnSeaAnimation @ RVA 0xDDE540 EA 0x7FF6F47FE540
+======================================================================
+__int64 __fastcall sub_7FF6F47FE540(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F2EC40();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetDeathUnderwaterAnimation @ RVA 0xDDE570 EA 0x7FF6F47FE570
+======================================================================
+__int64 __fastcall sub_7FF6F47FE570(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F2EC60();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetDyingLoopOnLandAnimation @ RVA 0xDDE6F0 EA 0x7FF6F47FE6F0
+======================================================================
+__int64 __fastcall sub_7FF6F47FE6F0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F2ECD0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetDyingLoopOnSeaAnimation @ RVA 0xDDE720 EA 0x7FF6F47FE720
+======================================================================
+__int64 __fastcall sub_7FF6F47FE720(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F2ECF0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetDyingLoopUnderwaterAnimation @ RVA 0xDDE750 EA 0x7FF6F47FE750
+======================================================================
+__int64 __fastcall sub_7FF6F47FE750(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F2ED10();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetIdleLandAnimationA @ RVA 0xDDE800 EA 0x7FF6F47FE800
+======================================================================
+__int64 __fastcall sub_7FF6F47FE800(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F2EFE0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetIdleLandAnimationB @ RVA 0xDDE830 EA 0x7FF6F47FE830
+======================================================================
+__int64 __fastcall sub_7FF6F47FE830(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F2EFF0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetIdleSeaAnimationA @ RVA 0xDDE860 EA 0x7FF6F47FE860
+======================================================================
+__int64 __fastcall sub_7FF6F47FE860(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F2F000();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetIdleSeaAnimationB @ RVA 0xDDE890 EA 0x7FF6F47FE890
+======================================================================
+__int64 __fastcall sub_7FF6F47FE890(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F2F010();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetIdleUnderwaterAnimationA @ RVA 0xDDE8C0 EA 0x7FF6F47FE8C0
+======================================================================
+__int64 __fastcall sub_7FF6F47FE8C0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F2F020();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetIdleUnderwaterAnimationB @ RVA 0xDDE8F0 EA 0x7FF6F47FE8F0
+======================================================================
+__int64 __fastcall sub_7FF6F47FE8F0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F2F030();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetImpactOnLandAnimation @ RVA 0xDDE920 EA 0x7FF6F47FE920
+======================================================================
+__int64 __fastcall sub_7FF6F47FE920(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F2F040();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetImpactOnSeaAnimation @ RVA 0xDDE950 EA 0x7FF6F47FE950
+======================================================================
+__int64 __fastcall sub_7FF6F47FE950(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F2F060();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetImpactUnderwaterAnimation @ RVA 0xDDE980 EA 0x7FF6F47FE980
+======================================================================
+__int64 __fastcall sub_7FF6F47FE980(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F2F080();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetLocomotionLandAnimationA @ RVA 0xDDEEA0 EA 0x7FF6F47FEEA0
+======================================================================
+__int64 __fastcall sub_7FF6F47FEEA0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F31AA0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetLocomotionLandAnimationB @ RVA 0xDDEED0 EA 0x7FF6F47FEED0
+======================================================================
+__int64 __fastcall sub_7FF6F47FEED0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F31AB0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetLocomotionSeaAnimationA @ RVA 0xDDEF00 EA 0x7FF6F47FEF00
+======================================================================
+__int64 __fastcall sub_7FF6F47FEF00(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F31AC0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetLocomotionSeaAnimationB @ RVA 0xDDEF30 EA 0x7FF6F47FEF30
+======================================================================
+__int64 __fastcall sub_7FF6F47FEF30(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F31AD0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetLocomotionUnderwaterAnimationA @ RVA 0xDDEF60 EA 0x7FF6F47FEF60
+======================================================================
+__int64 __fastcall sub_7FF6F47FEF60(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F31AE0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetLocomotionUnderwaterAnimationB @ RVA 0xDDEF90 EA 0x7FF6F47FEF90
+======================================================================
+__int64 __fastcall sub_7FF6F47FEF90(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F31AF0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetPigEatingOnLandAnimation @ RVA 0xDDF220 EA 0x7FF6F47FF220
+======================================================================
+__int64 __fastcall sub_7FF6F47FF220(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F32190();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetPigEatingOnSeaAnimation @ RVA 0xDDF250 EA 0x7FF6F47FF250
+======================================================================
+__int64 __fastcall sub_7FF6F47FF250(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F321B0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetPigEatingUnderwaterAnimation @ RVA 0xDDF280 EA 0x7FF6F47FF280
+======================================================================
+__int64 __fastcall sub_7FF6F47FF280(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F321D0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetPigStarveDeathOnLandAnimation @ RVA 0xDDF2B0 EA 0x7FF6F47FF2B0
+======================================================================
+__int64 __fastcall sub_7FF6F47FF2B0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F321F0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetPigStarveInOnLandAnimation @ RVA 0xDDF2E0 EA 0x7FF6F47FF2E0
+======================================================================
+__int64 __fastcall sub_7FF6F47FF2E0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F32200();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetPigStarveLoopOnLandAnimation @ RVA 0xDDF310 EA 0x7FF6F47FF310
+======================================================================
+__int64 __fastcall sub_7FF6F47FF310(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F32210();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetPigStarveOutOnLandAnimation @ RVA 0xDDF340 EA 0x7FF6F47FF340
+======================================================================
+__int64 __fastcall sub_7FF6F47FF340(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F32220();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetPigStarveStartledHighOnLandAnimation @ RVA 0xDDF370 EA 0x7FF6F47FF370
+======================================================================
+__int64 __fastcall sub_7FF6F47FF370(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F32230();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetPigStarveStartledLowOnLandAnimation @ RVA 0xDDF3A0 EA 0x7FF6F47FF3A0
+======================================================================
+__int64 __fastcall sub_7FF6F47FF3A0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F32240();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetSnakeAttackStanceInOnLandAnimation @ RVA 0xDDF4D0 EA 0x7FF6F47FF4D0
+======================================================================
+__int64 __fastcall sub_7FF6F47FF4D0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F326E0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetSnakeAttackStanceLoopOnLandAnimation @ RVA 0xDDF500 EA 0x7FF6F47FF500
+======================================================================
+__int64 __fastcall sub_7FF6F47FF500(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F326F0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetSnakeAttackStanceOutOnLandAnimation @ RVA 0xDDF530 EA 0x7FF6F47FF530
+======================================================================
+__int64 __fastcall sub_7FF6F47FF530(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F32700();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetSnakeCharmStanceInOnLandAnimation @ RVA 0xDDF560 EA 0x7FF6F47FF560
+======================================================================
+__int64 __fastcall sub_7FF6F47FF560(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F32710();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetSnakeCharmStanceLoopOnLandAnimation @ RVA 0xDDF590 EA 0x7FF6F47FF590
+======================================================================
+__int64 __fastcall sub_7FF6F47FF590(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F32720();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetSnakeCharmStanceOutOnLandAnimation @ RVA 0xDDF5C0 EA 0x7FF6F47FF5C0
+======================================================================
+__int64 __fastcall sub_7FF6F47FF5C0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F32730();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetSnakeStrikeOnLandAnimation @ RVA 0xDDF5F0 EA 0x7FF6F47FF5F0
+======================================================================
+__int64 __fastcall sub_7FF6F47FF5F0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F32740();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetSpecialLandAnimation @ RVA 0xDDF620 EA 0x7FF6F47FF620
+======================================================================
+__int64 __fastcall sub_7FF6F47FF620(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  char *v7; // rdx
+  __int64 v8; // rax
+  __int64 result; // rax
+  char v10; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = &v10;
+  if ( a2[7] )
+    v7 = (char *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = sub_7FF6F3F32750(a1, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetSpecialSeaAnimation @ RVA 0xDDF6C0 EA 0x7FF6F47FF6C0
+======================================================================
+__int64 __fastcall sub_7FF6F47FF6C0(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  char *v7; // rdx
+  __int64 v8; // rax
+  __int64 result; // rax
+  char v10; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = &v10;
+  if ( a2[7] )
+    v7 = (char *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = sub_7FF6F3F32780(a1, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetSpecialUnderwaterAnimation @ RVA 0xDDF760 EA 0x7FF6F47FF760
+======================================================================
+__int64 __fastcall sub_7FF6F47FF760(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  char *v7; // rdx
+  __int64 v8; // rax
+  __int64 result; // rax
+  char v10; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = &v10;
+  if ( a2[7] )
+    v7 = (char *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = sub_7FF6F3F327B0(a1, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetStartledHighOnLandAnimation @ RVA 0xDDF800 EA 0x7FF6F47FF800
+======================================================================
+__int64 __fastcall sub_7FF6F47FF800(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F327E0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetStartledHighOnSeaAnimation @ RVA 0xDDF830 EA 0x7FF6F47FF830
+======================================================================
+__int64 __fastcall sub_7FF6F47FF830(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F327F0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetStartledHighUnderwaterAnimation @ RVA 0xDDF860 EA 0x7FF6F47FF860
+======================================================================
+__int64 __fastcall sub_7FF6F47FF860(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F32800();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetStartledLowOnLandAnimation @ RVA 0xDDF890 EA 0x7FF6F47FF890
+======================================================================
+__int64 __fastcall sub_7FF6F47FF890(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F32810();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetStartledLowOnSeaAnimation @ RVA 0xDDF8C0 EA 0x7FF6F47FF8C0
+======================================================================
+__int64 __fastcall sub_7FF6F47FF8C0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F32820();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetStartledLowUnderwaterAnimation @ RVA 0xDDF8F0 EA 0x7FF6F47FF8F0
+======================================================================
+__int64 __fastcall sub_7FF6F47FF8F0(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F32830();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetTurnLeftAnimation @ RVA 0xDDFA20 EA 0x7FF6F47FFA20
+======================================================================
+__int64 __fastcall sub_7FF6F47FFA20(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F32A50();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetTurnRate @ RVA 0xDDFA50 EA 0x7FF6F47FFA50
+======================================================================
+void __fastcall sub_7FF6F47FFA50(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F3F32A60();
+}
+
+
+======================================================================
+FaunaAnimationInstance::GetTurnRightAnimation @ RVA 0xDDFA80 EA 0x7FF6F47FFA80
+======================================================================
+__int64 __fastcall sub_7FF6F47FFA80(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F3F32A80();
+  *a3 = result;
+  return result;
+}
+

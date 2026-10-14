@@ -1,0 +1,109 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_9_ShoresOfGold/bp_spawngoldhoardercoin_shoresofgold -> BP_SpawnGoldHoarderCoin_ShoresOfGold_C
+
+=== BP_SpawnGoldHoarderCoin_ShoresOfGold_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fcc0ef580
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fcc0ef480
+$18: VirtualFunction call "idx:285114" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_SpawnGoldHoarderCoin_ShoresOfGold_C::fn_idx_283956 (22 bytes) ===
+$0: VirtualFunction call "idx:285114" (
+  $13: literal int32 394
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_SpawnGoldHoarderCoin_ShoresOfGold_C::fn_idx_285114 (407 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fceaefc70
+$10: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $19: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc0ef600
+  $28: EndFunctionParms
+)
+$29: Let (Variable = Expression)
+  Variable:
+  $38: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19fcc0ef680
+  Expression:
+  $47: Context
+    ObjectExpression:
+    $48: StructMemberContext prop=CoinSpawnLocation_96_21F92101460E6E44AC8F4694077AFA82@0x19fce706500
+      Expression to struct:
+      $57: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc0ef600
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetTransform_ReturnValue@0x19fcc0ef680
+    ContextExpression:
+    $78: FinalFunction target=GetTransform@0x19e4cd64700 (
+      $87: EndFunctionParms
+    )
+$88: LetObj (Variable = Expression)
+  Variable:
+  $89: LocalVariable named CallFunc_SpawnPhasedItem_ReturnValue@0x19fcc0ef700
+  Expression:
+  $98: FinalFunction target=SpawnPhasedItem@0x19e4cda9200 (
+    $107: InstanceVariable named idx:285115@0x19fcc0ef980
+    $116: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19fcc0ef680
+    $125: True
+    $126: False
+    $127: literal text (not decoded)
+    $128: literal ansi string "Gold Hoarder Key Lost"
+    $151: literal ansi string "859B2B2640F5E184B2B8C4A1C59651B0_FailureMessage7"
+    $201: literal ansi string ""
+    $203: EndFunctionParms
+  )
+$204: Let (Variable = Expression)
+  Variable:
+  $213: LocalVariable named K2Node_DynamicCast_AsItem_Proxy@0x19fcc0ef780
+  Expression:
+  $222: DynamicCast to ItemProxy@0x19e4c38b980 of expr:
+  $231: LocalVariable named CallFunc_SpawnPhasedItem_ReturnValue@0x19fcc0ef700
+$240: Let (Variable = Expression)
+  Variable:
+  $249: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcc0ef800
+  Expression:
+  $258: PrimitiveCast type=71
+    Argument:
+    $260: LocalVariable named K2Node_DynamicCast_AsItem_Proxy@0x19fcc0ef780
+$269: JumpIfNot -> 0x194, cond:
+  $274: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcc0ef800
+$283: BindDelegate 'OnItemPickedUp'
+  Delegate:
+  $296: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fcc0ef500
+  Object:
+  $305: Self
+$306: LetObj (Variable = Expression)
+  Variable:
+  $307: LocalVariable named CallFunc_GetItemInfo_ReturnValue@0x19fcc0ef900
+  Expression:
+  $316: Context
+    ObjectExpression:
+    $317: LocalVariable named K2Node_DynamicCast_AsItem_Proxy@0x19fcc0ef780
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetItemInfo_ReturnValue@0x19fcc0ef900
+    ContextExpression:
+    $338: FinalFunction target=GetItemInfo@0x19e4d108840 (
+      $347: EndFunctionParms
+    )
+$348: AddMulticastDelegate
+$349: Context
+  ObjectExpression:
+  $350: LocalVariable named CallFunc_GetItemInfo_ReturnValue@0x19fcc0ef900
+  SkipBytes: 0x9
+  RValueProperty: OnItemPickedUpDelegate@0x19e4d10b7b0
+  ContextExpression:
+  $371: InstanceVariable named OnItemPickedUpDelegate@0x19e4d10b7b0
+$380: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fcc0ef500
+$389: Jump to offset 0x194
+$394: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $403: EndFunctionParms
+)
+$404: Return expression:
+  $405: Nothing
+$406: EndOfScript

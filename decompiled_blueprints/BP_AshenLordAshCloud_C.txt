@@ -1,0 +1,250 @@
+// E:\unreal-projects\Athena\Content\Blueprints\GameObjects\NaturalDisasters\AshCloud\bp_ashenlordashcloud.uasset -> BP_AshenLordAshCloud_C
+
+=== BP_AshenLordAshCloud_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_AshenLordAshCloud_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_AshenLordAshCloud" (
+  $13: literal int32 185
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_AshenLordAshCloud_C::UpdatePostSettingsBP (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_AshenLordAshCloud" (
+  $13: literal int32 490
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_AshenLordAshCloud_C::SetDissipationDensityBP (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_CloudDensity@0x213add69370
+  Expression:
+  $9: LocalVariable named CloudDensity@0x213add695a0
+$18: VirtualFunction call "ExecuteUbergraph_BP_AshenLordAshCloud" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_AshenLordAshCloud_C::ExecuteUbergraph_BP_AshenLordAshCloud (917 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x213add69450
+$10: LetBool (Variable = Expression)
+  Variable:
+  $11: LocalVariable named CallFunc_IsDedicatedServer_ReturnValue@0x213b2d29e00
+  Expression:
+  $20: Context
+    ObjectExpression:
+    $21: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_IsDedicatedServer_ReturnValue@0x213b2d29e00
+    ContextExpression:
+    $42: FinalFunction target=IsDedicatedServer@0x212d63add00 (
+      $51: Self
+      $52: EndFunctionParms
+    )
+$53: JumpIfNot -> 0x48, cond:
+  $58: LocalVariable named CallFunc_IsDedicatedServer_ReturnValue@0x213b2d29e00
+$67: Jump to offset 0x392
+$72: Context
+  ObjectExpression:
+  $73: InstanceVariable named PostProcessDynamicMaterial@0x213b2d2a400
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $94: FinalFunction target=SetScalarParameterValue@0x212d69f4620 (
+    $103: literal name "DissipationDensity"
+    $116: LocalVariable named K2Node_Event_CloudDensity@0x213add69370
+    $125: EndFunctionParms
+  )
+$126: Context
+  ObjectExpression:
+  $127: InstanceVariable named DynamicMaterial@0x213b2d2a480
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $148: FinalFunction target=SetScalarParameterValue@0x212d69f4620 (
+    $157: literal name "DissipationDensity"
+    $170: LocalVariable named K2Node_Event_CloudDensity@0x213add69370
+    $179: EndFunctionParms
+  )
+$180: Jump to offset 0x392
+$185: LetBool (Variable = Expression)
+  Variable:
+  $186: LocalVariable named CallFunc_IsDedicatedServer_ReturnValue2@0x213b2d29f00
+  Expression:
+  $195: Context
+    ObjectExpression:
+    $196: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_IsDedicatedServer_ReturnValue2@0x213b2d29f00
+    ContextExpression:
+    $217: FinalFunction target=IsDedicatedServer@0x212d63add00 (
+      $226: Self
+      $227: EndFunctionParms
+    )
+$228: JumpIfNot -> 0xf7, cond:
+  $233: LocalVariable named CallFunc_IsDedicatedServer_ReturnValue2@0x213b2d29f00
+$242: Jump to offset 0x392
+$247: LetObj (Variable = Expression)
+  Variable:
+  $248: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue2@0x213b2d2a280
+  Expression:
+  $257: Context
+    ObjectExpression:
+    $258: InstanceVariable named CloudMesh@0x212d6af69f0
+    SkipBytes: 0x14
+    RValueProperty: CallFunc_CreateDynamicMaterialInstance_ReturnValue2@0x213b2d2a280
+    ContextExpression:
+    $279: VirtualFunction call "CreateDynamicMaterialInstance" (
+      $292: literal int32 0
+      $297: NoObject
+      $298: EndFunctionParms
+    )
+$299: LetObj (Variable = Expression)
+  Variable:
+  $300: InstanceVariable named DynamicMaterial@0x213b2d2a480
+  Expression:
+  $309: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue2@0x213b2d2a280
+$318: LetObj (Variable = Expression)
+  Variable:
+  $319: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x213b2d29e80
+  Expression:
+  $328: Context
+    ObjectExpression:
+    $329: ObjectConst Default__KismetMaterialLibrary@0x212d6f7ec40
+    SkipBytes: 0x14
+    RValueProperty: CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x213b2d29e80
+    ContextExpression:
+    $350: FinalFunction target=CreateDynamicMaterialInstance@0x212d698e1e0 (
+      $359: Self
+      $360: ObjectConst M_post_ash_cloud@0x2128ca63480
+      $369: EndFunctionParms
+    )
+$370: LetObj (Variable = Expression)
+  Variable:
+  $371: InstanceVariable named PostProcessDynamicMaterial@0x213b2d2a400
+  Expression:
+  $380: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x213b2d29e80
+$389: Let (Variable = Expression)
+  Variable:
+  $398: LocalVariable named CallFunc_AddOrUpdateBlendable_InBlendableObject_CastInput@0x213b2d2a100
+  Expression:
+  $407: ObjToInterfaceCast to BlendableInterface@0x212d5b46740
+  $416: InstanceVariable named PostProcessDynamicMaterial@0x213b2d2a400
+$425: Context
+  ObjectExpression:
+  $426: InstanceVariable named PostProcess@0x213b2d2a300
+  SkipBytes: 0x18
+  RValueProperty: (null)
+  ContextExpression:
+  $447: FinalFunction target=AddOrUpdateBlendable@0x212d67323a0 (
+    $456: LocalVariable named CallFunc_AddOrUpdateBlendable_InBlendableObject_CastInput@0x213b2d2a100
+    $465: literal float 1
+    $470: EndFunctionParms
+  )
+$471: VirtualFunction call "UpdatePostSettingsBP" (
+  $484: EndFunctionParms
+)
+$485: Jump to offset 0x392
+$490: LetBool (Variable = Expression)
+  Variable:
+  $491: LocalVariable named CallFunc_IsDedicatedServer_ReturnValue3@0x213b2d2a200
+  Expression:
+  $500: Context
+    ObjectExpression:
+    $501: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_IsDedicatedServer_ReturnValue3@0x213b2d2a200
+    ContextExpression:
+    $522: FinalFunction target=IsDedicatedServer@0x212d63add00 (
+      $531: Self
+      $532: EndFunctionParms
+    )
+$533: JumpIfNot -> 0x228, cond:
+  $538: LocalVariable named CallFunc_IsDedicatedServer_ReturnValue3@0x213b2d2a200
+$547: Jump to offset 0x392
+$552: Context
+  ObjectExpression:
+  $553: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+  SkipBytes: 0x2e
+  RValueProperty: (null)
+  ContextExpression:
+  $574: FinalFunction target=GetComponentBounds@0x212d63ac140 (
+    $583: InstanceVariable named CloudMesh@0x212d6af69f0
+    $592: LocalVariable named CallFunc_GetComponentBounds_Origin@0x213b2d29f80
+    $601: LocalVariable named CallFunc_GetComponentBounds_BoxExtent@0x213b2d2a000
+    $610: LocalVariable named CallFunc_GetComponentBounds_SphereRadius@0x213add69290
+    $619: EndFunctionParms
+  )
+$620: Let (Variable = Expression)
+  Variable:
+  $629: LocalVariable named CallFunc_K2_GetComponentLocation_ReturnValue@0x213b2d2a080
+  Expression:
+  $638: Context
+    ObjectExpression:
+    $639: InstanceVariable named CloudMesh@0x212d6af69f0
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetComponentLocation_ReturnValue@0x213b2d2a080
+    ContextExpression:
+    $660: FinalFunction target=K2_GetComponentLocation@0x212d66912f0 (
+      $669: EndFunctionParms
+    )
+$670: CallMath target=BreakVector@0x212d69930b0 (
+  $679: LocalVariable named CallFunc_K2_GetComponentLocation_ReturnValue@0x213b2d2a080
+  $688: LocalVariable named CallFunc_BreakVector_X@0x213add690d0
+  $697: LocalVariable named CallFunc_BreakVector_Y@0x213add691b0
+  $706: LocalVariable named CallFunc_BreakVector_Z@0x213add68ff0
+  $715: EndFunctionParms
+)
+$716: Let (Variable = Expression)
+  Variable:
+  $725: StructMemberContext prop=idx:6476@0x212d63789b0
+    Expression to struct:
+    $734: LocalVariable named K2Node_MakeStruct_LinearColor@0x213b2d2a180
+  Expression:
+  $743: LocalVariable named CallFunc_BreakVector_X@0x213add690d0
+$752: Let (Variable = Expression)
+  Variable:
+  $761: StructMemberContext prop=idx:6465@0x212d6378940
+    Expression to struct:
+    $770: LocalVariable named K2Node_MakeStruct_LinearColor@0x213b2d2a180
+  Expression:
+  $779: LocalVariable named CallFunc_BreakVector_Y@0x213add691b0
+$788: Let (Variable = Expression)
+  Variable:
+  $797: StructMemberContext prop=idx:6460@0x212d63788d0
+    Expression to struct:
+    $806: LocalVariable named K2Node_MakeStruct_LinearColor@0x213b2d2a180
+  Expression:
+  $815: LocalVariable named CallFunc_BreakVector_Z@0x213add68ff0
+$824: Let (Variable = Expression)
+  Variable:
+  $833: StructMemberContext prop=idx:6459@0x212d6378860
+    Expression to struct:
+    $842: LocalVariable named K2Node_MakeStruct_LinearColor@0x213b2d2a180
+  Expression:
+  $851: LocalVariable named CallFunc_GetComponentBounds_SphereRadius@0x213add69290
+$860: Context
+  ObjectExpression:
+  $861: InstanceVariable named PostProcessDynamicMaterial@0x213b2d2a400
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $882: FinalFunction target=SetVectorParameterValue@0x212d69f4970 (
+    $891: literal name "SpherePositionRadius"
+    $904: LocalVariable named K2Node_MakeStruct_LinearColor@0x213b2d2a180
+    $913: EndFunctionParms
+  )
+$914: Return expression:
+  $915: Nothing
+$916: EndOfScript

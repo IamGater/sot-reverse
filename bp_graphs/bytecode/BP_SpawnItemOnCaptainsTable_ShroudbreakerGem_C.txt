@@ -1,0 +1,101 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_6_TheArtOfTheTrickster/bp_spawnitemoncaptainstable_shroudbreakergem -> BP_SpawnItemOnCaptainsTable_ShroudbreakerGem_C
+
+=== BP_SpawnItemOnCaptainsTable_ShroudbreakerGem_C::fn_idx_1698 (486 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19fcc5a0800
+  Expression:
+  $18: FinalFunction target=GetCrewShips@0x19e4cda5420 (
+    $27: EndFunctionParms
+  )
+$28: Context
+  ObjectExpression:
+  $29: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $50: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $59: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19fcc5a0800
+    $68: literal int32 0
+    $73: LocalVariable named CallFunc_Array_Get_Item@0x19fcc5a0500
+    $82: EndFunctionParms
+  )
+$83: Let (Variable = Expression)
+  Variable:
+  $92: LocalVariable named CallFunc_GetShipLocatorPositionChecked_ReturnValue@0x19fcc5a0580
+  Expression:
+  $101: Context
+    ObjectExpression:
+    $102: LocalVariable named CallFunc_Array_Get_Item@0x19fcc5a0500
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetShipLocatorPositionChecked_ReturnValue@0x19fcc5a0580
+    ContextExpression:
+    $123: FinalFunction target=GetShipLocatorPositionChecked@0x19e4d11bdd0 (
+      $132: LocalVariable named Ship Location@0x19fcc5a0300
+      $141: EndFunctionParms
+    )
+$142: Let (Variable = Expression)
+  Variable:
+  $151: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x19fcc5a0600
+  Expression:
+  $160: CallMath target=Add_VectorVector@0x19e4d370750 (
+    $169: LocalVariable named CallFunc_GetShipLocatorPositionChecked_ReturnValue@0x19fcc5a0580
+    $178: LocalVariable named Offset@0x19fcc5a0380
+    $187: EndFunctionParms
+  )
+$188: Let (Variable = Expression)
+  Variable:
+  $197: LocalVariable named CallFunc_Conv_VectorToTransform_ReturnValue@0x19fcc5a0680
+  Expression:
+  $206: CallMath target=Conv_VectorToTransform@0x19e4d376610 (
+    $215: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x19fcc5a0600
+    $224: EndFunctionParms
+  )
+$225: LetObj (Variable = Expression)
+  Variable:
+  $226: LocalVariable named CallFunc_SpawnPhasedItem_ReturnValue@0x19fcc5a0700
+  Expression:
+  $235: FinalFunction target=SpawnPhasedItem@0x19e4cda9200 (
+    $244: InstanceVariable named ShroudbreakerGem@0x19fcc5a0880
+    $253: LocalVariable named CallFunc_Conv_VectorToTransform_ReturnValue@0x19fcc5a0680
+    $262: True
+    $263: True
+    $264: literal text (not decoded)
+    $265: literal ansi string "The Shroudbreaker Stone was lost"
+    $299: literal ansi string "B63FF1FB41E72C59F59CC2BDA57B0494_FailureMessage7"
+    $349: literal ansi string ""
+    $351: EndFunctionParms
+  )
+$352: Context
+  ObjectExpression:
+  $353: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $374: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $383: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19fcc5a0800
+    $392: literal int32 0
+    $397: LocalVariable named CallFunc_Array_Get_Item@0x19fcc5a0500
+    $406: EndFunctionParms
+  )
+$407: Context
+  ObjectExpression:
+  $408: LocalVariable named CallFunc_SpawnPhasedItem_ReturnValue@0x19fcc5a0700
+  SkipBytes: 0x23
+  RValueProperty: (null)
+  ContextExpression:
+  $429: FinalFunction target=K2_AttachRootComponentToActor@0x19e4cd66660 (
+    $438: LocalVariable named CallFunc_Array_Get_Item@0x19fcc5a0500
+    $447: literal name "None"
+    $460: literal byte 0
+    $462: False
+    $463: EndFunctionParms
+  )
+$464: LetObj (Variable = Expression)
+  Variable:
+  $465: LocalOutVariable named SpawnedItem@0x19fcc5a0480
+  Expression:
+  $474: LocalVariable named CallFunc_SpawnPhasedItem_ReturnValue@0x19fcc5a0700
+$483: Return expression:
+  $484: Nothing
+$485: EndOfScript

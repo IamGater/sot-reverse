@@ -1,0 +1,239 @@
+// Class: PoseableSkeletalMeshComponent (4 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+PoseableSkeletalMeshComponent::GetBoneTransformByName @ RVA 0x2B14A60 EA 0x7FF6F6534A60
+======================================================================
+_OWORD *__fastcall sub_7FF6F6534A60(int a1, _QWORD *a2, _OWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  int v8; // r9d
+  int v9; // r8d
+  _OWORD *result; // rax
+  char v11; // [rsp+20h] [rbp-78h]
+  _BYTE v12[4]; // [rsp+30h] [rbp-68h] BYREF
+  int v13; // [rsp+34h] [rbp-64h] BYREF
+  __int64 v14; // [rsp+38h] [rbp-60h] BYREF
+  char v15; // [rsp+40h] [rbp-58h] BYREF
+
+  v3 = 0;
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v12[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v7 = a2[4];
+  v8 = v12[0];
+  v9 = v14;
+  v11 = v13 != 0;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (_OWORD *)sub_7FF6F5D036A0(a1, (unsigned int)&v15, v9, v8, v11);
+  *a3 = *result;
+  a3[1] = result[1];
+  a3[2] = result[2];
+  return result;
+}
+
+
+======================================================================
+PoseableSkeletalMeshComponent::SetBoneTransformByIndex @ RVA 0x2B1CEB0 EA 0x7FF6F653CEB0
+======================================================================
+__int64 __fastcall sub_7FF6F653CEB0(int a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  _OWORD *v6; // rsi
+  __int64 v7; // rax
+  int v8; // r9d
+  int v9; // edx
+  bool v10; // zf
+  _BYTE v12[4]; // [rsp+30h] [rbp-68h] BYREF
+  int v13; // [rsp+34h] [rbp-64h] BYREF
+  int v14; // [rsp+38h] [rbp-60h] BYREF
+  _OWORD v15[3]; // [rsp+40h] [rbp-58h] BYREF
+
+  v2 = 0;
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v15[0] = _mm_shuffle_ps((__m128)0LL, _mm_movehl_ps((__m128)xmmword_7FF6FA5E7D10, (__m128)0LL), 196);
+  v15[1] = 0;
+  v15[2] = _mm_and_ps((__m128)xmmword_7FF6FA5E7D10, (__m128)xmmword_7FF6FA5E7D20);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v15);
+  }
+  v5 = a2[7];
+  v6 = v15;
+  v12[0] = 0;
+  if ( v5 )
+    LODWORD(v6) = v5;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v7 = a2[4];
+  v8 = v12[0];
+  v9 = v14;
+  LOBYTE(v2) = v7 != 0;
+  v10 = v13 == 0;
+  a2[4] = v7 + v2;
+  return sub_7FF6F5D12360(a1, v9, (_DWORD)v6, v8, !v10);
+}
+
+
+======================================================================
+PoseableSkeletalMeshComponent::SetBoneTransformByName @ RVA 0x2B1D1B0 EA 0x7FF6F653D1B0
+======================================================================
+__int64 __fastcall sub_7FF6F653D1B0(int a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  _OWORD *v6; // rsi
+  __int64 v7; // rax
+  int v8; // r9d
+  int v9; // edx
+  bool v10; // zf
+  _BYTE v12[4]; // [rsp+30h] [rbp-68h] BYREF
+  int v13; // [rsp+34h] [rbp-64h] BYREF
+  __int64 v14; // [rsp+38h] [rbp-60h] BYREF
+  _OWORD v15[3]; // [rsp+40h] [rbp-58h] BYREF
+
+  v2 = 0;
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v15[0] = _mm_shuffle_ps((__m128)0LL, _mm_movehl_ps((__m128)xmmword_7FF6FA5E7D10, (__m128)0LL), 196);
+  v15[1] = 0;
+  v15[2] = _mm_and_ps((__m128)xmmword_7FF6FA5E7D10, (__m128)xmmword_7FF6FA5E7D20);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v15);
+  }
+  v5 = a2[7];
+  v6 = v15;
+  v12[0] = 0;
+  if ( v5 )
+    LODWORD(v6) = v5;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v7 = a2[4];
+  v8 = v12[0];
+  v9 = v14;
+  LOBYTE(v2) = v7 != 0;
+  v10 = v13 == 0;
+  a2[4] = v7 + v2;
+  return sub_7FF6F5D12560(a1, v9, (_DWORD)v6, v8, !v10);
+}
+
+
+======================================================================
+PoseableSkeletalMeshComponent::SwitchPoseMode @ RVA 0x2B24AB0 EA 0x7FF6F6544AB0
+======================================================================
+__int64 __fastcall sub_7FF6F6544AB0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5D155B0(a1, v5);
+}
+

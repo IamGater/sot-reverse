@@ -1,0 +1,127 @@
+// Class: SwitchMechanismTrigger (5 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+SwitchMechanismTrigger::OnAnimationCompleted @ RVA 0x3956D80 EA 0x7FF6F7376D80
+======================================================================
+__int64 __fastcall sub_7FF6F7376D80(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1584LL))(a1);
+}
+
+
+======================================================================
+SwitchMechanismTrigger::OnAnimationStarted @ RVA 0x3956DA0 EA 0x7FF6F7376DA0
+======================================================================
+__int64 __fastcall sub_7FF6F7376DA0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1576LL))(a1);
+}
+
+
+======================================================================
+SwitchMechanismTrigger::OnMechanismReset @ RVA 0x39587E0 EA 0x7FF6F73787E0
+======================================================================
+__int64 __fastcall sub_7FF6F73787E0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  __int128 v7; // [rsp+20h] [rbp-28h] BYREF
+  _QWORD v8[3]; // [rsp+30h] [rbp-18h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = 0;
+  a2[4] += a2[4] != 0;
+  v8[0] = v7;
+  if ( (_QWORD)v7 )
+    v5 = *((_QWORD *)&v7 + 1);
+  v8[1] = v5;
+  return nullsub_4957(a1, v8);
+}
+
+
+======================================================================
+SwitchMechanismTrigger::OnMechanismTriggerChangedMechanismActionStates @ RVA 0x3958A40 EA 0x7FF6F7378A40
+======================================================================
+__int64 __fastcall sub_7FF6F7378A40(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  __int64 v6; // r8
+  __int128 v8; // [rsp+20h] [rbp-28h] BYREF
+  _QWORD v9[3]; // [rsp+30h] [rbp-18h] BYREF
+  unsigned __int8 v10; // [rsp+58h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v8 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  v2 = a2[4] == 0;
+  v10 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  v5 = 0;
+  v6 = v10;
+  a2[4] += a2[4] != 0;
+  v9[0] = v8;
+  if ( (_QWORD)v8 )
+    v5 = *((_QWORD *)&v8 + 1);
+  v9[1] = v5;
+  return nullsub_4958(a1, v9, v6);
+}
+
+
+======================================================================
+SwitchMechanismTrigger::OnRep_CurrentPositionIndex @ RVA 0x3958F30 EA 0x7FF6F7378F30
+======================================================================
+__int64 __fastcall sub_7FF6F7378F30(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  unsigned int v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F7326910(a1, v6);
+}
+

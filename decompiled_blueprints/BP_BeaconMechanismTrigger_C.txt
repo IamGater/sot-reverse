@@ -1,0 +1,227 @@
+// /Game/Blueprints/GameObjects/Mechanisms/Actions/Beacons/bp_beaconmechanismtrigger -> BP_BeaconMechanismTrigger_C
+
+=== BP_BeaconMechanismTrigger_C::GetClosestInteractionPoint (135 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19f86947b80
+  Expression:
+  $18: FinalFunction target=GetTransform@0x19e4cd64700 (
+    $27: EndFunctionParms
+  )
+$28: Let (Variable = Expression)
+  Variable:
+  $37: LocalVariable named CallFunc_TransformLocation_ReturnValue@0x19f86947c00
+  Expression:
+  $46: CallMath target=TransformLocation@0x19e4d39c150 (
+    $55: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19f86947b80
+    $64: InstanceVariable named InteractionPoint@0x19f86948400
+    $73: EndFunctionParms
+  )
+$74: Let (Variable = Expression)
+  Variable:
+  $83: LocalOutVariable named OutInteractionPointRadius@0x19f839e6120
+  Expression:
+  $92: literal float 0
+$97: Let (Variable = Expression)
+  Variable:
+  $106: LocalOutVariable named ReturnValue@0x19f86947b00
+  Expression:
+  $115: LocalVariable named CallFunc_TransformLocation_ReturnValue@0x19f86947c00
+$124: Return expression:
+  $125: LocalOutVariable named ReturnValue@0x19f86947b00
+$134: EndOfScript
+
+=== BP_BeaconMechanismTrigger_C::GetObjectDisplayName (88 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalOutVariable named ReturnValue@0x19f839e6190
+  Expression:
+  $18: literal text (not decoded)
+$19: literal ansi string "Chalice"
+$28: literal ansi string "D0EE0E6F4E99D520CA47A3AE3C676C27_ReturnValue1"
+$75: literal ansi string ""
+$77: Return expression:
+  $78: LocalOutVariable named ReturnValue@0x19f839e6190
+$87: EndOfScript
+
+=== BP_BeaconMechanismTrigger_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_BeaconMechanismTrigger_C::Server_OnBeaconLit (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=idx:240888@0x19f86947d80
+  Expression:
+  $9: LocalVariable named InInstigator@0x19f86947c80
+$18: VirtualFunction call "idx:240887" (
+  $31: literal int32 159
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_BeaconMechanismTrigger_C::fn_idx_240891 (22 bytes) ===
+$0: VirtualFunction call "idx:240887" (
+  $13: literal int32 326
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_BeaconMechanismTrigger_C::Client_OnBeaconLit (22 bytes) ===
+$0: VirtualFunction call "idx:240887" (
+  $13: literal int32 393
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_BeaconMechanismTrigger_C::Client_OnBeaconExtinguished (22 bytes) ===
+$0: VirtualFunction call "idx:240887" (
+  $13: literal int32 431
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_BeaconMechanismTrigger_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "idx:240887" (
+  $13: literal int32 469
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_BeaconMechanismTrigger_C::fn_idx_240887 (477 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19f839e6200
+$10: Context
+  ObjectExpression:
+  $11: InstanceVariable named idx:240885@0x19f86948180
+  SkipBytes: 0xb
+  RValueProperty: (null)
+  ContextExpression:
+  $32: FinalFunction target=DeactivateLight@0x19e4d423e60 (
+    $41: False
+    $42: EndFunctionParms
+  )
+$43: Jump to offset 0x1da
+$48: LetBool (Variable = Expression)
+  Variable:
+  $49: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x19f86947d00
+  Expression:
+  $58: FinalFunction target=HasAuthority@0x19e4cd64b30 (
+    $67: EndFunctionParms
+  )
+$68: JumpIfNot -> 0x57, cond:
+  $73: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x19f86947d00
+$82: Jump to offset 0x1da
+$87: LetBool (Variable = Expression)
+  Variable:
+  $88: LocalVariable named idx:240883@0x19f86948100
+  Expression:
+  $97: FinalFunction target=IsLit@0x19e4d1101c0 (
+    $106: EndFunctionParms
+  )
+$107: JumpIfNot -> 0xa, cond:
+  $112: LocalVariable named idx:240883@0x19f86948100
+$121: Context
+  ObjectExpression:
+  $122: InstanceVariable named idx:240885@0x19f86948180
+  SkipBytes: 0xb
+  RValueProperty: (null)
+  ContextExpression:
+  $143: FinalFunction target=ActivateLight@0x19e4d423d20 (
+    $152: False
+    $153: EndFunctionParms
+  )
+$154: Jump to offset 0x1da
+$159: LetBool (Variable = Expression)
+  Variable:
+  $160: LocalVariable named idx:240879@0x19f86947e80
+  Expression:
+  $169: Context
+    ObjectExpression:
+    $170: InterfaceContext:
+    $171: InstanceVariable named MechanismTrigger@0x19f86948300
+    SkipBytes: 0x17
+    RValueProperty: idx:240879@0x19f86947e80
+    ContextExpression:
+    $192: VirtualFunction call "ActivateTrigger" (
+      $205: LocalVariable named idx:240888@0x19f86947d80
+      $214: EndFunctionParms
+    )
+$215: JumpIfNot -> 0x1da, cond:
+  $220: InstanceVariable named idx:240876@0x19f86948380
+$229: BindDelegate 'idx:240891'
+  Delegate:
+  $242: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19f86947f00
+  Object:
+  $251: Self
+$252: Let (Variable = Expression)
+  Variable:
+  $261: LocalVariable named CallFunc_K2_SetTimerDelegate_ReturnValue@0x19f86947f80
+  Expression:
+  $270: Context
+    ObjectExpression:
+    $271: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x1d
+    RValueProperty: CallFunc_K2_SetTimerDelegate_ReturnValue@0x19f86947f80
+    ContextExpression:
+    $292: FinalFunction target=K2_SetTimerDelegate@0x19e4cd91080 (
+      $301: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19f86947f00
+      $310: InstanceVariable named idx:240889@0x19f839e6270
+      $319: False
+      $320: EndFunctionParms
+    )
+$321: Jump to offset 0x1da
+$326: LetBool (Variable = Expression)
+  Variable:
+  $327: LocalVariable named idx:240881@0x19f86948080
+  Expression:
+  $336: Context
+    ObjectExpression:
+    $337: InterfaceContext:
+    $338: InstanceVariable named MechanismTrigger@0x19f86948300
+    SkipBytes: 0xf
+    RValueProperty: idx:240881@0x19f86948080
+    ContextExpression:
+    $359: VirtualFunction call "DeactivateTrigger" (
+      $372: NoObject
+      $373: EndFunctionParms
+    )
+$374: VirtualFunction call "ExtinguishFlame" (
+  $387: EndFunctionParms
+)
+$388: Jump to offset 0x1da
+$393: Context
+  ObjectExpression:
+  $394: InstanceVariable named idx:240885@0x19f86948180
+  SkipBytes: 0xb
+  RValueProperty: (null)
+  ContextExpression:
+  $415: FinalFunction target=ActivateLight@0x19e4d423d20 (
+    $424: True
+    $425: EndFunctionParms
+  )
+$426: Jump to offset 0x1da
+$431: Context
+  ObjectExpression:
+  $432: InstanceVariable named idx:240885@0x19f86948180
+  SkipBytes: 0xb
+  RValueProperty: (null)
+  ContextExpression:
+  $453: FinalFunction target=DeactivateLight@0x19e4d423e60 (
+    $462: True
+    $463: EndFunctionParms
+  )
+$464: Jump to offset 0x1da
+$469: Jump to offset 0x30
+$474: Return expression:
+  $475: Nothing
+$476: EndOfScript

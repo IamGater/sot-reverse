@@ -1,0 +1,101 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_8_RevengeOfTheMorningstar/bp_spawnitemoncaptainstable_skull -> BP_SpawnItemOnCaptainsTable_Skull_C
+
+=== BP_SpawnItemOnCaptainsTable_Skull_C::fn_idx_1698 (483 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19fce794300
+  Expression:
+  $18: FinalFunction target=GetCrewShips@0x19e4cda5420 (
+    $27: EndFunctionParms
+  )
+$28: Context
+  ObjectExpression:
+  $29: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $50: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $59: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19fce794300
+    $68: literal int32 0
+    $73: LocalVariable named CallFunc_Array_Get_Item@0x19fce794000
+    $82: EndFunctionParms
+  )
+$83: Let (Variable = Expression)
+  Variable:
+  $92: LocalVariable named CallFunc_GetShipLocatorPositionChecked_ReturnValue@0x19fce794080
+  Expression:
+  $101: Context
+    ObjectExpression:
+    $102: LocalVariable named CallFunc_Array_Get_Item@0x19fce794000
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetShipLocatorPositionChecked_ReturnValue@0x19fce794080
+    ContextExpression:
+    $123: FinalFunction target=GetShipLocatorPositionChecked@0x19e4d11bdd0 (
+      $132: LocalVariable named ShipLocation@0x19fce793e80
+      $141: EndFunctionParms
+    )
+$142: Let (Variable = Expression)
+  Variable:
+  $151: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x19fce794100
+  Expression:
+  $160: CallMath target=Add_VectorVector@0x19e4d370750 (
+    $169: LocalVariable named CallFunc_GetShipLocatorPositionChecked_ReturnValue@0x19fce794080
+    $178: LocalVariable named Offset@0x19fce793f00
+    $187: EndFunctionParms
+  )
+$188: Let (Variable = Expression)
+  Variable:
+  $197: LocalVariable named CallFunc_Conv_VectorToTransform_ReturnValue@0x19fce794180
+  Expression:
+  $206: CallMath target=Conv_VectorToTransform@0x19e4d376610 (
+    $215: LocalVariable named CallFunc_Add_VectorVector_ReturnValue@0x19fce794100
+    $224: EndFunctionParms
+  )
+$225: LetObj (Variable = Expression)
+  Variable:
+  $226: LocalVariable named CallFunc_SpawnPhasedItem_ReturnValue@0x19fce794200
+  Expression:
+  $235: FinalFunction target=SpawnPhasedItem@0x19e4cda9200 (
+    $244: InstanceVariable named skull@0x19fce794380
+    $253: LocalVariable named CallFunc_Conv_VectorToTransform_ReturnValue@0x19fce794180
+    $262: True
+    $263: True
+    $264: literal text (not decoded)
+    $265: literal ansi string "Skull of Captain Douglas Lost"
+    $296: literal ansi string "D5B5BDC34759FBFD508EEE9B7D79D186_FailureMessage7"
+    $346: literal ansi string ""
+    $348: EndFunctionParms
+  )
+$349: Context
+  ObjectExpression:
+  $350: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $371: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $380: LocalVariable named CallFunc_GetCrewShips_ReturnValue@0x19fce794300
+    $389: literal int32 0
+    $394: LocalVariable named CallFunc_Array_Get_Item@0x19fce794000
+    $403: EndFunctionParms
+  )
+$404: Context
+  ObjectExpression:
+  $405: LocalVariable named CallFunc_SpawnPhasedItem_ReturnValue@0x19fce794200
+  SkipBytes: 0x23
+  RValueProperty: (null)
+  ContextExpression:
+  $426: FinalFunction target=K2_AttachRootComponentToActor@0x19e4cd66660 (
+    $435: LocalVariable named CallFunc_Array_Get_Item@0x19fce794000
+    $444: literal name "None"
+    $457: literal byte 0
+    $459: False
+    $460: EndFunctionParms
+  )
+$461: LetObj (Variable = Expression)
+  Variable:
+  $462: LocalOutVariable named SpawnedItem@0x19fce793f80
+  Expression:
+  $471: LocalVariable named CallFunc_SpawnPhasedItem_ReturnValue@0x19fce794200
+$480: Return expression:
+  $481: Nothing
+$482: EndOfScript

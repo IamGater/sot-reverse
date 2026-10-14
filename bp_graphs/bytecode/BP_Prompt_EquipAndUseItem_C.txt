@@ -1,0 +1,759 @@
+// /Game/Blueprints/Prompts/PromptConditionals/bp_prompt_equipanduseitem -> BP_Prompt_EquipAndUseItem_C
+
+=== BP_Prompt_EquipAndUseItem_C::fn_idx_275983 (225 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x19fbe5bed00
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__GameplayStatics@0x19e4d95eb20
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_GetObjectClass_ReturnValue@0x19fbe5bed00
+    ContextExpression:
+    $32: FinalFunction target=GetObjectClass@0x19e4d35dd20 (
+      $41: StructMemberContext prop=UsedItem@0x19e4ceb5860
+        Expression to struct:
+        $50: LocalOutVariable named EventPlayerUseItemStart@0x19fbe5bec80
+      $59: EndFunctionParms
+    )
+$60: LetBool (Variable = Expression)
+  Variable:
+  $61: LocalVariable named CallFunc_ClassIsChildOf_ReturnValue@0x19fbe5bed80
+  Expression:
+  $70: CallMath target=ClassIsChildOf@0x19e4d3741c0 (
+    $79: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x19fbe5bed00
+    $88: InstanceVariable named WieldedItemType@0x19fbd380780
+    $97: EndFunctionParms
+  )
+$98: LetBool (Variable = Expression)
+  Variable:
+  $99: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue@0x19fbe5bee00
+  Expression:
+  $108: CallMath target=EqualEqual_ClassClass@0x19e4d37a860 (
+    $117: StructMemberContext prop=InputID@0x19e4ceb58e0
+      Expression to struct:
+      $126: LocalOutVariable named EventPlayerUseItemStart@0x19fbe5bec80
+    $135: InstanceVariable named RequiredInput@0x19fbd380980
+    $144: EndFunctionParms
+  )
+$145: LetBool (Variable = Expression)
+  Variable:
+  $146: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x19fbe5bee80
+  Expression:
+  $155: CallMath target=BooleanAND@0x19e4d3710f0 (
+    $164: LocalVariable named CallFunc_EqualEqual_ClassClass_ReturnValue@0x19fbe5bee00
+    $173: LocalVariable named CallFunc_ClassIsChildOf_ReturnValue@0x19fbe5bed80
+    $182: EndFunctionParms
+  )
+$183: JumpIfNot -> 0xde, cond:
+  $188: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x19fbe5bee80
+$197: LetBool (Variable = Expression)
+  Variable:
+  $198: InstanceVariable named idx:275574@0x19fbd380a00
+  Expression:
+  $207: True
+$208: VirtualFunction call "Evaluate" (
+  $221: EndFunctionParms
+)
+$222: Return expression:
+  $223: Nothing
+$224: EndOfScript
+
+=== BP_Prompt_EquipAndUseItem_C::fn_idx_275598 (237 bytes) ===
+$0: JumpIfNot -> 0xbf, cond:
+  $5: StructMemberContext prop=IsSwitchingToLinkedRadial@0x19e4cfbd030
+    Expression to struct:
+    $14: LocalOutVariable named HideRadialInventory@0x19fbe5bef00
+$23: LetBool (Variable = Expression)
+  Variable:
+  $24: LocalVariable named Temp_bool_Variable@0x19fbe5bf000
+  Expression:
+  $33: InstanceVariable named idx:275605@0x19fbd383500
+$42: LetBool (Variable = Expression)
+  Variable:
+  $43: LocalVariable named CallFunc_EqualEqual_IntInt_ReturnValue@0x19fbe5bf080
+  Expression:
+  $52: CallMath target=EqualEqual_IntInt@0x19e4d37af00 (
+    $61: SwitchValue 2 cases, end@0x72
+      Index:
+      $68: LocalVariable named Temp_bool_Variable@0x19fbe5bf000
+      [0] CaseIndexValue:
+      $77: False
+      [0] OffsetToNext: 0x5b
+      [0] CaseResult:
+      $82: InstanceVariable named RequiredRadialID@0x19fbd8bf8f0
+      [1] CaseIndexValue:
+      $91: True
+      [1] OffsetToNext: 0x69
+      [1] CaseResult:
+      $96: InstanceVariable named idx:275588@0x19fbf4309a0
+      Default:
+      $105: LocalVariable named K2Node_Select_Default@0x19fbd8bf5e0
+    $114: StructMemberContext prop=RadialIdentifier@0x19e4ce4f220
+      Expression to struct:
+      $123: LocalOutVariable named HideRadialInventory@0x19fbe5bef00
+    $132: EndFunctionParms
+  )
+$133: JumpIfNot -> 0xba, cond:
+  $138: LocalVariable named CallFunc_EqualEqual_IntInt_ReturnValue@0x19fbe5bf080
+$147: JumpIfNot -> 0xda, cond:
+  $152: InstanceVariable named idx:275605@0x19fbd383500
+$161: LetBool (Variable = Expression)
+  Variable:
+  $162: InstanceVariable named idx:275605@0x19fbd383500
+  Expression:
+  $171: False
+$172: VirtualFunction call "Evaluate" (
+  $185: EndFunctionParms
+)
+$186: Jump to offset 0xea
+$191: LetBool (Variable = Expression)
+  Variable:
+  $192: InstanceVariable named idx:275604@0x19fbd380b80
+  Expression:
+  $201: False
+$202: LetBool (Variable = Expression)
+  Variable:
+  $203: InstanceVariable named idx:275605@0x19fbd383500
+  Expression:
+  $212: False
+$213: Jump to offset 0xac
+$218: LetBool (Variable = Expression)
+  Variable:
+  $219: InstanceVariable named idx:275604@0x19fbd380b80
+  Expression:
+  $228: False
+$229: Jump to offset 0xac
+$234: Return expression:
+  $235: Nothing
+$236: EndOfScript
+
+=== BP_Prompt_EquipAndUseItem_C::fn_idx_275600 (235 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named Temp_bool_Variable@0x19fbe5bf180
+  Expression:
+  $10: InstanceVariable named idx:275604@0x19fbd380b80
+$19: LetBool (Variable = Expression)
+  Variable:
+  $20: LocalVariable named CallFunc_EqualEqual_IntInt_ReturnValue@0x19fbe5bf280
+  Expression:
+  $29: CallMath target=EqualEqual_IntInt@0x19e4d37af00 (
+    $38: SwitchValue 2 cases, end@0x5b
+      Index:
+      $45: LocalVariable named Temp_bool_Variable@0x19fbe5bf180
+      [0] CaseIndexValue:
+      $54: False
+      [0] OffsetToNext: 0x44
+      [0] CaseResult:
+      $59: InstanceVariable named RequiredRadialID@0x19fbd8bf8f0
+      [1] CaseIndexValue:
+      $68: True
+      [1] OffsetToNext: 0x52
+      [1] CaseResult:
+      $73: InstanceVariable named idx:275588@0x19fbf4309a0
+      Default:
+      $82: LocalVariable named K2Node_Select_Default@0x19fbd8bf960
+    $91: StructMemberContext prop=RadialIdentifier@0x19e4ce4f220
+      Expression to struct:
+      $100: LocalOutVariable named ShowRadialInventory@0x19fbe5bf100
+    $109: EndFunctionParms
+  )
+$110: JumpIfNot -> 0xd3, cond:
+  $115: LocalVariable named CallFunc_EqualEqual_IntInt_ReturnValue@0x19fbe5bf280
+$124: LetBool (Variable = Expression)
+  Variable:
+  $125: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fbe5bf200
+  Expression:
+  $134: CallMath target=Greater_IntInt@0x19e4d382770 (
+    $143: InstanceVariable named idx:275588@0x19fbf4309a0
+    $152: literal int32 0
+    $157: EndFunctionParms
+  )
+$158: JumpIfNot -> 0xd8, cond:
+  $163: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fbe5bf200
+$172: JumpIfNot -> 0xd8, cond:
+  $177: InstanceVariable named idx:275604@0x19fbd380b80
+$186: LetBool (Variable = Expression)
+  Variable:
+  $187: InstanceVariable named idx:275605@0x19fbd383500
+  Expression:
+  $196: True
+$197: VirtualFunction call "Evaluate" (
+  $210: EndFunctionParms
+)
+$211: Jump to offset 0xe8
+$216: LetBool (Variable = Expression)
+  Variable:
+  $217: InstanceVariable named idx:275604@0x19fbd380b80
+  Expression:
+  $226: True
+$227: Jump to offset 0xc5
+$232: Return expression:
+  $233: Nothing
+$234: EndOfScript
+
+=== BP_Prompt_EquipAndUseItem_C::fn_idx_275602 (224 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_Conv_InterfaceToObject_ReturnValue@0x19fbe5bf380
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Conv_InterfaceToObject_ReturnValue@0x19fbe5bf380
+    ContextExpression:
+    $32: FinalFunction target=Conv_InterfaceToObject@0x19e4cd869c0 (
+      $41: StructMemberContext prop=Object@0x19e4cfc2220
+        Expression to struct:
+        $50: LocalOutVariable named EventStartStow@0x19fbe5bf300
+      $59: EndFunctionParms
+    )
+$60: LetObj (Variable = Expression)
+  Variable:
+  $61: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x19fbe5bf400
+  Expression:
+  $70: Context
+    ObjectExpression:
+    $71: ObjectConst Default__GameplayStatics@0x19e4d95eb20
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectClass_ReturnValue@0x19fbe5bf400
+    ContextExpression:
+    $92: FinalFunction target=GetObjectClass@0x19e4d35dd20 (
+      $101: LocalVariable named CallFunc_Conv_InterfaceToObject_ReturnValue@0x19fbe5bf380
+      $110: EndFunctionParms
+    )
+$111: LetBool (Variable = Expression)
+  Variable:
+  $112: LocalVariable named CallFunc_ClassIsChildOf_ReturnValue@0x19fbe5bf480
+  Expression:
+  $121: CallMath target=ClassIsChildOf@0x19e4d3741c0 (
+    $130: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x19fbe5bf400
+    $139: InstanceVariable named WieldedItemType@0x19fbd380780
+    $148: EndFunctionParms
+  )
+$149: JumpIfNot -> 0xba, cond:
+  $154: LocalVariable named CallFunc_ClassIsChildOf_ReturnValue@0x19fbe5bf480
+$163: JumpIfNot -> 0xbf, cond:
+  $168: StructMemberContext prop=FastStow@0x19e4cfc21a0
+    Expression to struct:
+    $177: LocalOutVariable named EventStartStow@0x19fbe5bf300
+$186: Jump to offset 0xdd
+$191: LetBool (Variable = Expression)
+  Variable:
+  $192: InstanceVariable named idx:275575@0x19fbd380680
+  Expression:
+  $201: False
+$202: VirtualFunction call "Evaluate" (
+  $215: EndFunctionParms
+)
+$216: Jump to offset 0xba
+$221: Return expression:
+  $222: Nothing
+$223: EndOfScript
+
+=== BP_Prompt_EquipAndUseItem_C::fn_idx_275596 (185 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_Conv_InterfaceToObject_ReturnValue@0x19fbe5bf580
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Conv_InterfaceToObject_ReturnValue@0x19fbe5bf580
+    ContextExpression:
+    $32: FinalFunction target=Conv_InterfaceToObject@0x19e4cd869c0 (
+      $41: StructMemberContext prop=Object@0x19e4cfc2500
+        Expression to struct:
+        $50: LocalOutVariable named EventObjectWielded@0x19fbe5bf500
+      $59: EndFunctionParms
+    )
+$60: LetObj (Variable = Expression)
+  Variable:
+  $61: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x19fbe5bf600
+  Expression:
+  $70: Context
+    ObjectExpression:
+    $71: ObjectConst Default__GameplayStatics@0x19e4d95eb20
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectClass_ReturnValue@0x19fbe5bf600
+    ContextExpression:
+    $92: FinalFunction target=GetObjectClass@0x19e4d35dd20 (
+      $101: LocalVariable named CallFunc_Conv_InterfaceToObject_ReturnValue@0x19fbe5bf580
+      $110: EndFunctionParms
+    )
+$111: LetBool (Variable = Expression)
+  Variable:
+  $112: LocalVariable named CallFunc_ClassIsChildOf_ReturnValue@0x19fbe5bf680
+  Expression:
+  $121: CallMath target=ClassIsChildOf@0x19e4d3741c0 (
+    $130: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x19fbe5bf600
+    $139: InstanceVariable named WieldedItemType@0x19fbd380780
+    $148: EndFunctionParms
+  )
+$149: LetBool (Variable = Expression)
+  Variable:
+  $150: InstanceVariable named idx:275575@0x19fbd380680
+  Expression:
+  $159: LocalVariable named CallFunc_ClassIsChildOf_ReturnValue@0x19fbe5bf680
+$168: VirtualFunction call "Evaluate" (
+  $181: EndFunctionParms
+)
+$182: Return expression:
+  $183: Nothing
+$184: EndOfScript
+
+=== BP_Prompt_EquipAndUseItem_C::fn_idx_14102 (631 bytes) ===
+$0: JumpIfNot -> 0x58, cond:
+  $5: InstanceVariable named idx:275574@0x19fbd380a00
+$14: VirtualFunction call "Complete" (
+  $27: EndFunctionParms
+)
+$28: Let (Variable = Expression)
+  Variable:
+  $37: LocalVariable named CallFunc_MakeCompleteCoordinator_ReturnValue@0x19fbe5bf980
+  Expression:
+  $46: FinalFunction target=MakeCompleteCoordinator@0x19e4d4b51c0 (
+    $55: EndFunctionParms
+  )
+$56: Let (Variable = Expression)
+  Variable:
+  $65: LocalOutVariable named ReturnValue@0x19fbe5bf700
+  Expression:
+  $74: LocalVariable named CallFunc_MakeCompleteCoordinator_ReturnValue@0x19fbe5bf980
+$83: Jump to offset 0x26c
+$88: JumpIfNot -> 0xab, cond:
+  $93: InstanceVariable named idx:275575@0x19fbd380680
+$102: Let (Variable = Expression)
+  Variable:
+  $111: LocalVariable named idx:275978@0x19fbe5bfa80
+  Expression:
+  $120: FinalFunction target=MakeShowPrompt@0x19e4d4b5440 (
+    $129: InstanceVariable named idx:275561@0x19fbd380a80
+    $138: EndFunctionParms
+  )
+$139: Let (Variable = Expression)
+  Variable:
+  $148: LocalOutVariable named ReturnValue@0x19fbe5bf700
+  Expression:
+  $157: LocalVariable named idx:275978@0x19fbe5bfa80
+$166: Jump to offset 0x26c
+$171: LetBool (Variable = Expression)
+  Variable:
+  $172: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fbe5bf880
+  Expression:
+  $181: CallMath target=Greater_IntInt@0x19e4d382770 (
+    $190: InstanceVariable named idx:275588@0x19fbf4309a0
+    $199: literal int32 0
+    $204: EndFunctionParms
+  )
+$205: JumpIfNot -> 0x13c, cond:
+  $210: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fbe5bf880
+$219: JumpIfNot -> 0x1d4, cond:
+  $224: InstanceVariable named idx:275604@0x19fbd380b80
+$233: JumpIfNot -> 0x22c, cond:
+  $238: InstanceVariable named idx:275605@0x19fbd383500
+$247: Let (Variable = Expression)
+  Variable:
+  $256: LocalVariable named idx:275979@0x19fbe5bfb00
+  Expression:
+  $265: FinalFunction target=MakeShowPrompt@0x19e4d4b5440 (
+    $274: InstanceVariable named idx:275559@0x19fbd380700
+    $283: EndFunctionParms
+  )
+$284: Let (Variable = Expression)
+  Variable:
+  $293: LocalOutVariable named ReturnValue@0x19fbe5bf700
+  Expression:
+  $302: LocalVariable named idx:275979@0x19fbe5bfb00
+$311: Jump to offset 0x26c
+$316: JumpIfNot -> 0x18f, cond:
+  $321: InstanceVariable named idx:275604@0x19fbd380b80
+$330: Let (Variable = Expression)
+  Variable:
+  $339: LocalVariable named idx:275975@0x19fbe5bf800
+  Expression:
+  $348: FinalFunction target=MakeShowPrompt@0x19e4d4b5440 (
+    $357: InstanceVariable named idx:275559@0x19fbd380700
+    $366: EndFunctionParms
+  )
+$367: Let (Variable = Expression)
+  Variable:
+  $376: LocalOutVariable named ReturnValue@0x19fbe5bf700
+  Expression:
+  $385: LocalVariable named idx:275975@0x19fbe5bf800
+$394: Jump to offset 0x26c
+$399: Let (Variable = Expression)
+  Variable:
+  $408: LocalVariable named idx:275977@0x19fbe5bfa00
+  Expression:
+  $417: FinalFunction target=MakeShowPrompt@0x19e4d4b5440 (
+    $426: InstanceVariable named Prompt_OpenRadial@0x19fbd380c00
+    $435: EndFunctionParms
+  )
+$436: Let (Variable = Expression)
+  Variable:
+  $445: LocalOutVariable named ReturnValue@0x19fbe5bf700
+  Expression:
+  $454: LocalVariable named idx:275977@0x19fbe5bfa00
+$463: Jump to offset 0x26c
+$468: JumpIfNot -> 0x1e7, cond:
+  $473: InstanceVariable named idx:275605@0x19fbd383500
+$482: Jump to offset 0xf7
+$487: Let (Variable = Expression)
+  Variable:
+  $496: LocalVariable named CallFunc_MakeShowPrompt_ReturnValue@0x19fbe5bf780
+  Expression:
+  $505: FinalFunction target=MakeShowPrompt@0x19e4d4b5440 (
+    $514: InstanceVariable named Prompt_OpenRadial@0x19fbd380c00
+    $523: EndFunctionParms
+  )
+$524: Let (Variable = Expression)
+  Variable:
+  $533: LocalOutVariable named ReturnValue@0x19fbe5bf700
+  Expression:
+  $542: LocalVariable named CallFunc_MakeShowPrompt_ReturnValue@0x19fbe5bf780
+$551: Jump to offset 0x26c
+$556: Let (Variable = Expression)
+  Variable:
+  $565: LocalVariable named idx:275976@0x19fbe5bf900
+  Expression:
+  $574: FinalFunction target=MakeShowPrompt@0x19e4d4b5440 (
+    $583: InstanceVariable named idx:275584@0x19fbd380d80
+    $592: EndFunctionParms
+  )
+$593: Let (Variable = Expression)
+  Variable:
+  $602: LocalOutVariable named ReturnValue@0x19fbe5bf700
+  Expression:
+  $611: LocalVariable named idx:275976@0x19fbe5bf900
+$620: Return expression:
+  $621: LocalOutVariable named ReturnValue@0x19fbe5bf700
+$630: EndOfScript
+
+=== BP_Prompt_EquipAndUseItem_C::fn_idx_217670 (22 bytes) ===
+$0: VirtualFunction call "idx:275981" (
+  $13: literal int32 570
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_EquipAndUseItem_C::fn_idx_217680 (22 bytes) ===
+$0: VirtualFunction call "idx:275981" (
+  $13: literal int32 1014
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_EquipAndUseItem_C::fn_idx_217682 (22 bytes) ===
+$0: VirtualFunction call "idx:275981" (
+  $13: literal int32 927
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_EquipAndUseItem_C::fn_idx_14104 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_CharacterDispatcher2@0x19fbd380080
+  Expression:
+  $9: LocalOutVariable named CharacterDispatcher@0x19fbe5bfb80
+$18: VirtualFunction call "idx:275981" (
+  $31: literal int32 140
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_EquipAndUseItem_C::fn_idx_14107 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_CharacterDispatcher@0x19fbd380000
+  Expression:
+  $9: LocalOutVariable named CharacterDispatcher@0x19fbe5bfc00
+$18: VirtualFunction call "idx:275981" (
+  $31: literal int32 39
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_EquipAndUseItem_C::fn_idx_275595 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event5@0x19fbd380100
+  Expression:
+  $9: LocalVariable named Event@0x19fbe5bfd00
+$18: VirtualFunction call "idx:275981" (
+  $31: literal int32 291
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_EquipAndUseItem_C::fn_idx_275601 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event4@0x19fbd380200
+  Expression:
+  $9: LocalVariable named Event@0x19fbe5bfd80
+$18: VirtualFunction call "idx:275981" (
+  $31: literal int32 546
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_EquipAndUseItem_C::fn_idx_275982 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event3@0x19fbd380300
+  Expression:
+  $9: LocalVariable named Event@0x19fbe5bfe00
+$18: VirtualFunction call "idx:275981" (
+  $31: literal int32 775
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_EquipAndUseItem_C::fn_idx_275599 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event2@0x19fbd380480
+  Expression:
+  $9: LocalVariable named Event@0x19fbe5bfe80
+$18: VirtualFunction call "idx:275981" (
+  $31: literal int32 903
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_EquipAndUseItem_C::fn_idx_275597 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event@0x19fbd380500
+  Expression:
+  $9: LocalVariable named Event@0x19fbe5bff00
+$18: VirtualFunction call "idx:275981" (
+  $31: literal int32 1009
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_EquipAndUseItem_C::fn_idx_275981 (1022 bytes) ===
+$0: FlowStack.Push(0x3fb)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x19fbd8bf810
+$15: VirtualFunction call "idx:275598" (
+  $28: LocalVariable named K2Node_CustomEvent_Event@0x19fbd380500
+  $37: EndFunctionParms
+)
+$38: PopExecutionFlow (jump to popped addr)
+$39: Context
+  ObjectExpression:
+  $40: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $61: FinalFunction target=UnregisterEventFromHandle@0x19e4d411420 (
+    $70: LocalVariable named K2Node_Event_CharacterDispatcher@0x19fbd380000
+    $79: InstanceVariable named idx:275568@0x19fbd380800
+    $88: EndFunctionParms
+  )
+$89: Context
+  ObjectExpression:
+  $90: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $111: FinalFunction target=UnregisterEventFromHandle@0x19e4d411420 (
+    $120: LocalVariable named K2Node_Event_CharacterDispatcher@0x19fbd380000
+    $129: InstanceVariable named Handle_Unwield@0x19fbd380880
+    $138: EndFunctionParms
+  )
+$139: PopExecutionFlow (jump to popped addr)
+$140: Context
+  ObjectExpression:
+  $141: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x37
+  RValueProperty: (null)
+  ContextExpression:
+  $162: FinalFunction target=RegisterEventFromHandle@0x19e4d410c00 (
+    $171: LocalVariable named K2Node_Event_CharacterDispatcher2@0x19fbd380080
+    $180: InstanceVariable named idx:275568@0x19fbd380800
+    $189: Self
+    $190: literal ansi string "On Item Wielded"
+    $207: ObjectConst EventObjectWielded@0x19e4cfc2460
+    $216: EndFunctionParms
+  )
+$217: Context
+  ObjectExpression:
+  $218: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x33
+  RValueProperty: (null)
+  ContextExpression:
+  $239: FinalFunction target=RegisterEventFromHandle@0x19e4d410c00 (
+    $248: LocalVariable named K2Node_Event_CharacterDispatcher2@0x19fbd380080
+    $257: InstanceVariable named Handle_Unwield@0x19fbd380880
+    $266: Self
+    $267: literal ansi string "OnStartStow"
+    $280: ObjectConst EventStartStow@0x19e4cfc2080
+    $289: EndFunctionParms
+  )
+$290: PopExecutionFlow (jump to popped addr)
+$291: VirtualFunction call "idx:275596" (
+  $304: LocalVariable named K2Node_CustomEvent_Event5@0x19fbd380100
+  $313: EndFunctionParms
+)
+$314: PopExecutionFlow (jump to popped addr)
+$315: FinalFunction target=UpdateVisiblePrompt@0x19e4d4b5f80 (
+  $324: EndFunctionParms
+)
+$325: PopExecutionFlow (jump to popped addr)
+$326: VirtualFunction call "GetHUDObjectMessageDispatcher" (
+  $339: LocalVariable named CallFunc_GetHUDObjectMessageDispatcher_HUD_Dispatcher@0x19fbd380180
+  $348: EndFunctionParms
+)
+$349: Context
+  ObjectExpression:
+  $350: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $371: FinalFunction target=UnregisterEventFromHandle@0x19e4d411420 (
+    $380: LocalVariable named CallFunc_GetHUDObjectMessageDispatcher_HUD_Dispatcher@0x19fbd380180
+    $389: InstanceVariable named idx:275594@0x19fbd380b00
+    $398: EndFunctionParms
+  )
+$399: VirtualFunction call "GetHUDObjectMessageDispatcher" (
+  $412: LocalVariable named CallFunc_GetHUDObjectMessageDispatcher_HUD_Dispatcher@0x19fbd380180
+  $421: EndFunctionParms
+)
+$422: Context
+  ObjectExpression:
+  $423: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $444: FinalFunction target=UnregisterEventFromHandle@0x19e4d411420 (
+    $453: LocalVariable named CallFunc_GetHUDObjectMessageDispatcher_HUD_Dispatcher@0x19fbd380180
+    $462: InstanceVariable named Handle_CloseRadial@0x19fbd380c80
+    $471: EndFunctionParms
+  )
+$472: VirtualFunction call "GetControllerObjectMessageDispatcher" (
+  $485: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher@0x19fbd380400
+  $494: EndFunctionParms
+)
+$495: Context
+  ObjectExpression:
+  $496: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $517: FinalFunction target=UnregisterEventFromHandle@0x19e4d411420 (
+    $526: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher@0x19fbd380400
+    $535: InstanceVariable named idx:275570@0x19fbd380900
+    $544: EndFunctionParms
+  )
+$545: PopExecutionFlow (jump to popped addr)
+$546: VirtualFunction call "idx:275602" (
+  $559: LocalVariable named K2Node_CustomEvent_Event4@0x19fbd380200
+  $568: EndFunctionParms
+)
+$569: PopExecutionFlow (jump to popped addr)
+$570: Jump to offset 0x13b
+$575: VirtualFunction call "GetHUDObjectMessageDispatcher" (
+  $588: LocalVariable named CallFunc_GetHUDObjectMessageDispatcher_HUD_Dispatcher2@0x19fbd380280
+  $597: EndFunctionParms
+)
+$598: Context
+  ObjectExpression:
+  $599: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $620: FinalFunction target=RegisterEventFromHandle@0x19e4d410c00 (
+    $629: LocalVariable named CallFunc_GetHUDObjectMessageDispatcher_HUD_Dispatcher2@0x19fbd380280
+    $638: InstanceVariable named Handle_CloseRadial@0x19fbd380c80
+    $647: Self
+    $648: literal ansi string "OnRadialClosed"
+    $664: ObjectConst HideRadialInventory@0x19e4cfbcf90
+    $673: EndFunctionParms
+  )
+$674: VirtualFunction call "GetControllerObjectMessageDispatcher" (
+  $687: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher2@0x19fbd380580
+  $696: EndFunctionParms
+)
+$697: Context
+  ObjectExpression:
+  $698: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x37
+  RValueProperty: (null)
+  ContextExpression:
+  $719: FinalFunction target=RegisterEventFromHandle@0x19e4d410c00 (
+    $728: LocalVariable named CallFunc_GetControllerObjectMessageDispatcher_Player_Dispatcher2@0x19fbd380580
+    $737: InstanceVariable named idx:275570@0x19fbd380900
+    $746: Self
+    $747: literal ansi string "OnPlayerUseItem"
+    $764: ObjectConst EventPlayerUseItemStart@0x19e4ceb57c0
+    $773: EndFunctionParms
+  )
+$774: PopExecutionFlow (jump to popped addr)
+$775: VirtualFunction call "idx:275983" (
+  $788: LocalVariable named K2Node_CustomEvent_Event3@0x19fbd380300
+  $797: EndFunctionParms
+)
+$798: PopExecutionFlow (jump to popped addr)
+$799: VirtualFunction call "GetHUDObjectMessageDispatcher" (
+  $812: LocalVariable named CallFunc_GetHUDObjectMessageDispatcher_HUD_Dispatcher3@0x19fbd380380
+  $821: EndFunctionParms
+)
+$822: Context
+  ObjectExpression:
+  $823: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $844: FinalFunction target=RegisterEventFromHandle@0x19e4d410c00 (
+    $853: LocalVariable named CallFunc_GetHUDObjectMessageDispatcher_HUD_Dispatcher3@0x19fbd380380
+    $862: InstanceVariable named idx:275594@0x19fbd380b00
+    $871: Self
+    $872: literal ansi string "OnRadialOpened"
+    $888: ObjectConst ShowRadialInventory@0x19e4cfbd300
+    $897: EndFunctionParms
+  )
+$898: Jump to offset 0x23f
+$903: VirtualFunction call "idx:275600" (
+  $916: LocalVariable named K2Node_CustomEvent_Event2@0x19fbd380480
+  $925: EndFunctionParms
+)
+$926: PopExecutionFlow (jump to popped addr)
+$927: Jump to offset 0x146
+$932: Context
+  ObjectExpression:
+  $933: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $954: FinalFunction target=Delay@0x19e4cd86d40 (
+    $963: Self
+    $964: literal float 0
+    $969: literal struct LatentActionInfo@0x19e4cd86e80 (size 32)
+      $982: literal CodeSkipSizeType 0xf
+      $987: literal int32 1
+      $992: literal name "idx:275981"
+      $1005: Self
+      $1006: EndStructConst
+    $1007: EndFunctionParms
+  )
+$1008: PopExecutionFlow (jump to popped addr)
+$1009: Jump to offset 0x3a4
+$1014: Jump to offset 0x31f
+$1019: Return expression:
+  $1020: Nothing
+$1021: EndOfScript

@@ -1,0 +1,402 @@
+// Class: FFTWater (18 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+FFTWater::GetComponent @ RVA 0x2909C20 EA 0x7FF6F6329C20
+======================================================================
+__int64 __fastcall sub_7FF6F6329C20(__int64 a1, __int64 a2, _QWORD *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = *(_QWORD *)(a1 + 1168);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FFTWater::HasLightFunctionMaterial @ RVA 0x290CF20 EA 0x7FF6F632CF20
+======================================================================
+__int64 __fastcall sub_7FF6F632CF20(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5DBED10();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FFTWater::SetAmbientColour @ RVA 0x2913A70 EA 0x7FF6F6333A70
+======================================================================
+__int64 __fastcall sub_7FF6F6333A70(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rax
+  __int128 v6; // [rsp+20h] [rbp-28h] BYREF
+  __int128 v7; // [rsp+30h] [rbp-18h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  v4 = a2[4];
+  v7 = v6;
+  a2[4] = v4 + (v4 != 0);
+  return sub_7FF6F5DC3960(a1, &v7);
+}
+
+
+======================================================================
+FFTWater::SetBackLitColour @ RVA 0x2913C90 EA 0x7FF6F6333C90
+======================================================================
+__int64 __fastcall sub_7FF6F6333C90(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rax
+  __int128 v6; // [rsp+20h] [rbp-28h] BYREF
+  __int128 v7; // [rsp+30h] [rbp-18h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  v4 = a2[4];
+  v7 = v6;
+  a2[4] = v4 + (v4 != 0);
+  return sub_7FF6F5DC3DB0(a1, &v7);
+}
+
+
+======================================================================
+FFTWater::SetCausticsDepth @ RVA 0x2913D10 EA 0x7FF6F6333D10
+======================================================================
+__int64 __fastcall sub_7FF6F6333D10(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5DC43D0(a1);
+}
+
+
+======================================================================
+FFTWater::SetFoamBrightness @ RVA 0x2914070 EA 0x7FF6F6334070
+======================================================================
+__int64 __fastcall sub_7FF6F6334070(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5DC44D0(a1);
+}
+
+
+======================================================================
+FFTWater::SetFoamColour @ RVA 0x29140F0 EA 0x7FF6F63340F0
+======================================================================
+__int64 __fastcall sub_7FF6F63340F0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rax
+  __int128 v6; // [rsp+20h] [rbp-28h] BYREF
+  __int128 v7; // [rsp+30h] [rbp-18h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  v4 = a2[4];
+  v7 = v6;
+  a2[4] = v4 + (v4 != 0);
+  return sub_7FF6F5DC4910(a1, &v7);
+}
+
+
+======================================================================
+FFTWater::SetFoamHighlightColour @ RVA 0x2914170 EA 0x7FF6F6334170
+======================================================================
+__int64 __fastcall sub_7FF6F6334170(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rax
+  __int128 v6; // [rsp+20h] [rbp-28h] BYREF
+  __int128 v7; // [rsp+30h] [rbp-18h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  v4 = a2[4];
+  v7 = v6;
+  a2[4] = v4 + (v4 != 0);
+  return sub_7FF6F5DC4D60(a1, &v7);
+}
+
+
+======================================================================
+FFTWater::SetFresnelPower @ RVA 0x29141F0 EA 0x7FF6F63341F0
+======================================================================
+__int64 __fastcall sub_7FF6F63341F0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5DC51B0(a1);
+}
+
+
+======================================================================
+FFTWater::SetLightFunctionMaterial @ RVA 0x2914800 EA 0x7FF6F6334800
+======================================================================
+__int64 __fastcall sub_7FF6F6334800(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F5DC55F0(a1, v6);
+}
+
+
+======================================================================
+FFTWater::SetReflectionBrightness @ RVA 0x2914AD0 EA 0x7FF6F6334AD0
+======================================================================
+__int64 __fastcall sub_7FF6F6334AD0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5DC5C50(a1);
+}
+
+
+======================================================================
+FFTWater::SetShallowWaterColour @ RVA 0x2914D00 EA 0x7FF6F6334D00
+======================================================================
+__int64 __fastcall sub_7FF6F6334D00(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rax
+  __int128 v6; // [rsp+20h] [rbp-28h] BYREF
+  __int128 v7; // [rsp+30h] [rbp-18h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  v4 = a2[4];
+  v7 = v6;
+  a2[4] = v4 + (v4 != 0);
+  return sub_7FF6F5DC61D0(a1, &v7);
+}
+
+
+======================================================================
+FFTWater::SetSpecularBrightness @ RVA 0x2914D80 EA 0x7FF6F6334D80
+======================================================================
+__int64 __fastcall sub_7FF6F6334D80(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5DC6620(a1);
+}
+
+
+======================================================================
+FFTWater::SetWaterColour @ RVA 0x2915300 EA 0x7FF6F6335300
+======================================================================
+__int64 __fastcall sub_7FF6F6335300(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rax
+  __int128 v6; // [rsp+20h] [rbp-28h] BYREF
+  __int128 v7; // [rsp+30h] [rbp-18h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  v4 = a2[4];
+  v7 = v6;
+  a2[4] = v4 + (v4 != 0);
+  return sub_7FF6F5DC6DE0(a1, &v7);
+}
+
+
+======================================================================
+FFTWater::SetWireframe @ RVA 0x2915380 EA 0x7FF6F6335380
+======================================================================
+__int64 __fastcall sub_7FF6F6335380(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F5DC73B0(a1, v5);
+}
+
+
+======================================================================
+FFTWater::ValidateIndexBuffer @ RVA 0x2915F80 EA 0x7FF6F6335F80
+======================================================================
+__int64 __fastcall sub_7FF6F6335F80(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5DC9630();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FFTWater::ValidateParticlesVelocity @ RVA 0x2915FB0 EA 0x7FF6F6335FB0
+======================================================================
+__int64 __fastcall sub_7FF6F6335FB0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5DC9660();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+FFTWater::ValidateVertexBuffer @ RVA 0x2915FE0 EA 0x7FF6F6335FE0
+======================================================================
+__int64 __fastcall sub_7FF6F6335FE0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5DC9760();
+  *a3 = result;
+  return result;
+}
+

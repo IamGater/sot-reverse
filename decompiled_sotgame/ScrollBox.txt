@@ -1,0 +1,100 @@
+// Class: ScrollBox (5 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+ScrollBox::GetScrollOffset @ RVA 0x1F2D3A0 EA 0x7FF6F594D3A0
+======================================================================
+void __fastcall sub_7FF6F594D3A0(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F588BB30();
+}
+
+
+======================================================================
+ScrollBox::ScrollToEnd @ RVA 0x1F2F510 EA 0x7FF6F594F510
+======================================================================
+void __fastcall sub_7FF6F594F510(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F58BE570LL);
+}
+
+
+======================================================================
+ScrollBox::ScrollToStart @ RVA 0x1F2F530 EA 0x7FF6F594F530
+======================================================================
+void __fastcall sub_7FF6F594F530(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F58BE590LL);
+}
+
+
+======================================================================
+ScrollBox::ScrollWidgetIntoView @ RVA 0x1F2F550 EA 0x7FF6F594F550
+======================================================================
+__int64 __fastcall sub_7FF6F594F550(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // r8
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  bool v8; // zf
+  int v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v11;
+  LOBYTE(v2) = v6 != 0;
+  v8 = v10 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v8;
+  return sub_7FF6F58BE5B0(a1, v7, v5);
+}
+
+
+======================================================================
+ScrollBox::SetScrollOffset @ RVA 0x1F33C90 EA 0x7FF6F5953C90
+======================================================================
+__int64 __fastcall sub_7FF6F5953C90(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F58C28C0(a1);
+}
+

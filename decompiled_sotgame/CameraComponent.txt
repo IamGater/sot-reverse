@@ -1,0 +1,168 @@
+// Class: CameraComponent (3 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+CameraComponent::AddOrUpdateBlendable @ RVA 0x2B0FAA0 EA 0x7FF6F652FAA0
+======================================================================
+__int64 __fastcall sub_7FF6F652FAA0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rcx
+  __int128 v7; // [rsp+20h] [rbp-28h] BYREF
+  _QWORD v8[3]; // [rsp+30h] [rbp-18h] BYREF
+  int v9; // [rsp+50h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v2 = a2[4] == 0;
+  v9 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  a2[4] += a2[4] != 0;
+  v8[0] = v7;
+  if ( (_QWORD)v7 )
+    v5 = *((_QWORD *)&v7 + 1);
+  else
+    v5 = 0;
+  v8[1] = v5;
+  return sub_7FF6F4118E90(a1 + 688, v8);
+}
+
+
+======================================================================
+CameraComponent::GetCameraView @ RVA 0x2B14C60 EA 0x7FF6F6534C60
+======================================================================
+// Hidden C++ exception states: #wind=1
+__int64 __fastcall sub_7FF6F6534C60(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rdx
+  __int128 *v6; // r8
+  __int64 v7; // rax
+  int v9; // [rsp+20h] [rbp-E0h] BYREF
+  __int64 v10; // [rsp+28h] [rbp-D8h]
+  __int128 v11; // [rsp+30h] [rbp-D0h] BYREF
+  __int64 v12; // [rsp+40h] [rbp-C0h]
+  int v13; // [rsp+54h] [rbp-ACh]
+  int v14; // [rsp+58h] [rbp-A8h]
+  int v15; // [rsp+5Ch] [rbp-A4h]
+  int v16; // [rsp+60h] [rbp-A0h]
+  int v17; // [rsp+64h] [rbp-9Ch]
+  int v18; // [rsp+68h] [rbp-98h]
+  unsigned int v19; // [rsp+6Ch] [rbp-94h]
+  char v20; // [rsp+70h] [rbp-90h]
+  int v21; // [rsp+74h] [rbp-8Ch]
+  _BYTE v22[1344]; // [rsp+80h] [rbp-80h] BYREF
+  int v23; // [rsp+5C0h] [rbp+4C0h]
+
+  v10 = -2;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v11 = 0;
+  v12 = 0;
+  v4 = 0;
+  v13 = 0;
+  v14 = 1119092736;
+  v15 = 1140850688;
+  v16 = 0;
+  v17 = 1241513984;
+  v18 = 1068149419;
+  v19 = v19 & 0xFFFFFFFC | 2;
+  v20 = 0;
+  v21 = 0;
+  sub_7FF6F3CF43E0(v22);
+  v23 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v6 = &v11;
+  if ( a2[7] )
+    v6 = (__int128 *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v4) = v7 != 0;
+  a2[4] = v7 + v4;
+  (*(void (__fastcall **)(__int64, __int64, __int128 *))(*(_QWORD *)a1 + 1296LL))(a1, v5, v6);
+  return sub_7FF6F3CFC180(v22);
+}
+
+
+======================================================================
+CameraComponent::ProjectWorldLocation @ RVA 0x2B1ACD0 EA 0x7FF6F653ACD0
+======================================================================
+__int64 __fastcall sub_7FF6F653ACD0(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v6; // rax
+  __int64 v7; // r9
+  __int64 v8; // rcx
+  __int64 v9; // rax
+  __int64 result; // rax
+  __int64 v11; // [rsp+20h] [rbp-38h] BYREF
+  int v12; // [rsp+28h] [rbp-30h]
+  __int64 v13; // [rsp+30h] [rbp-28h] BYREF
+  int v14; // [rsp+38h] [rbp-20h]
+  _BYTE v15[24]; // [rsp+40h] [rbp-18h] BYREF
+  __int64 v16; // [rsp+68h] [rbp+10h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v6 = a2[4];
+  v7 = v16;
+  v13 = v11;
+  v8 = v6 + (v6 != 0);
+  LODWORD(v6) = v12;
+  a2[4] = v8;
+  v14 = v6;
+  v9 = sub_7FF6F5C8F330(a1, v15, &v13, v7);
+  *(_QWORD *)a3 = *(_QWORD *)v9;
+  result = *(unsigned int *)(v9 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+

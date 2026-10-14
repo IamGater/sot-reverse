@@ -1,0 +1,254 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Generic/bp_additemtonpccustompurchaselist -> BP_AddItemToNPCCustomPurchaseList_C
+
+=== BP_AddItemToNPCCustomPurchaseList_C::fn_idx_1698 (1099 bytes) ===
+$0: SetArray
+  $1: LocalVariable named idx:282551@0x19fcbb4c500
+  $10: EndArray
+$11: Context
+  ObjectExpression:
+  $12: LocalVariable named TargetNpc@0x19fcbb4bf80
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $33: FinalFunction target=GetComponentInterfacesByClass@0x19e4cd62480 (
+    $42: LocalVariable named idx:282551@0x19fcbb4c500
+    $51: ObjectConst NPCCustomItemPurchaseInterface@0x19e4c3bab80
+    $60: EndFunctionParms
+  )
+$61: Context
+  ObjectExpression:
+  $62: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $83: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $92: LocalVariable named idx:282551@0x19fcbb4c500
+    $101: literal int32 0
+    $106: LocalVariable named CallFunc_Array_Get_Item@0x19fcbb4c080
+    $115: EndFunctionParms
+  )
+$116: LetBool (Variable = Expression)
+  Variable:
+  $117: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fcbb4c300
+  Expression:
+  $126: Context
+    ObjectExpression:
+    $127: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19fcbb4c300
+    ContextExpression:
+    $148: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $157: LocalVariable named CallFunc_Array_Get_Item@0x19fcbb4c080
+      $166: EndFunctionParms
+    )
+$167: Let (Variable = Expression)
+  Variable:
+  $176: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fcdbbbb40
+  Expression:
+  $185: Context
+    ObjectExpression:
+    $186: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x19fcdbbbb40
+    ContextExpression:
+    $207: FinalFunction target=Array_Length@0x19e4d367df0 (
+      $216: LocalVariable named idx:282551@0x19fcbb4c500
+      $225: EndFunctionParms
+    )
+$226: LetBool (Variable = Expression)
+  Variable:
+  $227: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fcbb4c380
+  Expression:
+  $236: CallMath target=Greater_IntInt@0x19e4d382770 (
+    $245: LocalVariable named CallFunc_Array_Length_ReturnValue@0x19fcdbbbb40
+    $254: literal int32 0
+    $259: EndFunctionParms
+  )
+$260: LetBool (Variable = Expression)
+  Variable:
+  $261: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x19fcbb4c400
+  Expression:
+  $270: CallMath target=BooleanAND@0x19e4d3710f0 (
+    $279: LocalVariable named CallFunc_Greater_IntInt_ReturnValue@0x19fcbb4c380
+    $288: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fcbb4c300
+    $297: EndFunctionParms
+  )
+$298: JumpIfNot -> 0x242, cond:
+  $303: LocalVariable named CallFunc_BooleanAND_ReturnValue@0x19fcbb4c400
+$312: SetArray
+  $313: LocalVariable named idx:282551@0x19fcbb4c500
+  $322: EndArray
+$323: Context
+  ObjectExpression:
+  $324: LocalVariable named TargetNpc@0x19fcbb4bf80
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $345: FinalFunction target=GetComponentInterfacesByClass@0x19e4cd62480 (
+    $354: LocalVariable named idx:282551@0x19fcbb4c500
+    $363: ObjectConst NPCCustomItemPurchaseInterface@0x19e4c3bab80
+    $372: EndFunctionParms
+  )
+$373: Context
+  ObjectExpression:
+  $374: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $395: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $404: LocalVariable named idx:282551@0x19fcbb4c500
+    $413: literal int32 0
+    $418: LocalVariable named CallFunc_Array_Get_Item@0x19fcbb4c080
+    $427: EndFunctionParms
+  )
+$428: Let (Variable = Expression)
+  Variable:
+  $437: LocalVariable named idx:281873@0x19fcbb4c180
+  Expression:
+  $446: ObjToInterfaceCast to NPCCustomItemPurchaseInterface@0x19e4c3bab80
+  $455: LocalVariable named CallFunc_Array_Get_Item@0x19fcbb4c080
+$464: Let (Variable = Expression)
+  Variable:
+  $473: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x19fcbb4c200
+  Expression:
+  $482: PrimitiveCast type=73
+    Argument:
+    $484: LocalVariable named idx:281873@0x19fcbb4c180
+$493: JumpIfNot -> 0x438, cond:
+  $498: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x19fcbb4c200
+$507: LetBool (Variable = Expression)
+  Variable:
+  $508: LocalVariable named idx:281869@0x19fcbb4c280
+  Expression:
+  $517: Context
+    ObjectExpression:
+    $518: InterfaceContext:
+    $519: LocalVariable named idx:281873@0x19fcbb4c180
+    SkipBytes: 0x17
+    RValueProperty: idx:281869@0x19fcbb4c280
+    ContextExpression:
+    $540: VirtualFunction call "AddItemToPurchaseList" (
+      $553: LocalVariable named ItemDesc@0x19fcbb4c000
+      $562: EndFunctionParms
+    )
+$563: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $572: EndFunctionParms
+)
+$573: Jump to offset 0x448
+$578: Let (Variable = Expression)
+  Variable:
+  $587: LocalVariable named CallFunc_GetDisplayName_ReturnValue@0x19fcdbba6b0
+  Expression:
+  $596: Context
+    ObjectExpression:
+    $597: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetDisplayName_ReturnValue@0x19fcdbba6b0
+    ContextExpression:
+    $618: FinalFunction target=GetDisplayName@0x19e4cd8c3f0 (
+      $627: LocalVariable named TargetNpc@0x19fcbb4bf80
+      $636: EndFunctionParms
+    )
+$637: LetObj (Variable = Expression)
+  Variable:
+  $638: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x19fcbb4c100
+  Expression:
+  $647: Context
+    ObjectExpression:
+    $648: ObjectConst Default__GameplayStatics@0x19e4d95eb20
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetObjectClass_ReturnValue@0x19fcbb4c100
+    ContextExpression:
+    $669: FinalFunction target=GetObjectClass@0x19e4d35dd20 (
+      $678: Self
+      $679: EndFunctionParms
+    )
+$680: Let (Variable = Expression)
+  Variable:
+  $689: LocalVariable named CallFunc_GetClassDisplayName_ReturnValue@0x19fcdbba720
+  Expression:
+  $698: Context
+    ObjectExpression:
+    $699: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetClassDisplayName_ReturnValue@0x19fcdbba720
+    ContextExpression:
+    $720: FinalFunction target=GetClassDisplayName@0x19e4cd8bf90 (
+      $729: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x19fcbb4c100
+      $738: EndFunctionParms
+    )
+$739: Let (Variable = Expression)
+  Variable:
+  $748: LocalVariable named CallFunc_Concat_StrStr_ReturnValue@0x19fcdbbb440
+  Expression:
+  $757: Context
+    ObjectExpression:
+    $758: ObjectConst Default__KismetStringLibrary@0x19e4d95ecd0
+    SkipBytes: 0x1b
+    RValueProperty: CallFunc_Concat_StrStr_ReturnValue@0x19fcdbbb440
+    ContextExpression:
+    $779: FinalFunction target=Concat_StrStr@0x19e4d3a1520 (
+      $788: literal ansi string ", in: "
+      $796: LocalVariable named CallFunc_GetClassDisplayName_ReturnValue@0x19fcdbba720
+      $805: EndFunctionParms
+    )
+$806: Let (Variable = Expression)
+  Variable:
+  $815: LocalVariable named CallFunc_Concat_StrStr_ReturnValue2@0x19fcdbba870
+  Expression:
+  $824: Context
+    ObjectExpression:
+    $825: ObjectConst Default__KismetStringLibrary@0x19e4d95ecd0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Concat_StrStr_ReturnValue2@0x19fcdbba870
+    ContextExpression:
+    $846: FinalFunction target=Concat_StrStr@0x19e4d3a1520 (
+      $855: LocalVariable named CallFunc_GetDisplayName_ReturnValue@0x19fcdbba6b0
+      $864: LocalVariable named CallFunc_Concat_StrStr_ReturnValue@0x19fcdbbb440
+      $873: EndFunctionParms
+    )
+$874: Let (Variable = Expression)
+  Variable:
+  $883: LocalVariable named CallFunc_Concat_StrStr_ReturnValue3@0x19fcdbba790
+  Expression:
+  $892: Context
+    ObjectExpression:
+    $893: ObjectConst Default__KismetStringLibrary@0x19e4d95ecd0
+    SkipBytes: 0x4e
+    RValueProperty: CallFunc_Concat_StrStr_ReturnValue3@0x19fcdbba790
+    ContextExpression:
+    $914: FinalFunction target=Concat_StrStr@0x19e4d3a1520 (
+      $923: literal ansi string "Could not obtain a CustomNPCPurchaseList Interface from: "
+      $982: LocalVariable named CallFunc_Concat_StrStr_ReturnValue2@0x19fcdbba870
+      $991: EndFunctionParms
+    )
+$992: Context
+  ObjectExpression:
+  $993: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x3d
+  RValueProperty: (null)
+  ContextExpression:
+  $1014: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $1023: NoObject
+    $1024: LocalVariable named CallFunc_Concat_StrStr_ReturnValue3@0x19fcdbba790
+    $1033: False
+    $1034: True
+    $1035: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $1048: literal float 1
+      $1053: literal float 0
+      $1058: literal float 0.017681999132037163
+      $1063: literal float 1
+      $1068: EndStructConst
+    $1069: literal float 100
+    $1074: EndFunctionParms
+  )
+$1075: Jump to offset 0x448
+$1080: LetBool (Variable = Expression)
+  Variable:
+  $1081: LocalVariable named idx:281869@0x19fcbb4c280
+  Expression:
+  $1090: False
+$1091: Jump to offset 0x233
+$1096: Return expression:
+  $1097: Nothing
+$1098: EndOfScript

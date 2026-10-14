@@ -1,0 +1,260 @@
+// E:\unreal-projects\Athena\Content\Blueprints\GameObjects\Items\TreasureArtifacts\Wieldable\bp_memento_musicbox_wieldable.uasset -> BP_Memento_MusicBox_Wieldable_C
+
+=== BP_Memento_MusicBox_Wieldable_C::ResetRotationTimer (60 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: InstanceVariable named IsPlaying@0x213b32bbe00
+  Expression:
+  $10: False
+$11: Let (Variable = Expression)
+  Variable:
+  $20: InstanceVariable named RotationTimer@0x213b0ac58d0
+  Expression:
+  $29: literal float 0
+$34: Let (Variable = Expression)
+  Variable:
+  $43: InstanceVariable named RotationTime@0x213b0ac57f0
+  Expression:
+  $52: literal float 0
+$57: Return expression:
+  $58: Nothing
+$59: EndOfScript
+
+=== BP_Memento_MusicBox_Wieldable_C::RotateParts (201 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_MakeRotator_ReturnValue2@0x213b32bb900
+  Expression:
+  $18: CallMath target=MakeRotator@0x212d69a8d90 (
+    $27: literal float 0
+    $32: literal float 0
+    $37: LocalVariable named InRotation@0x213b0ac2610
+    $46: EndFunctionParms
+  )
+$47: Context
+  ObjectExpression:
+  $48: InstanceVariable named DancerStaticMesh@0x213b32bbd80
+  SkipBytes: 0x1e
+  RValueProperty: (null)
+  ContextExpression:
+  $69: FinalFunction target=K2_AddRelativeRotation@0x212d6690540 (
+    $78: LocalVariable named CallFunc_MakeRotator_ReturnValue2@0x213b32bb900
+    $87: False
+    $88: LocalVariable named CallFunc_K2_AddRelativeRotation_SweepHitResult@0x213b32bba00
+    $97: False
+    $98: EndFunctionParms
+  )
+$99: Let (Variable = Expression)
+  Variable:
+  $108: LocalVariable named CallFunc_MakeRotator_ReturnValue@0x213b32bb880
+  Expression:
+  $117: CallMath target=MakeRotator@0x212d69a8d90 (
+    $126: literal float 0
+    $131: LocalVariable named InRotation@0x213b0ac2610
+    $140: literal float 0
+    $145: EndFunctionParms
+  )
+$146: Context
+  ObjectExpression:
+  $147: InstanceVariable named KeyStaticMesh@0x213b32bbe80
+  SkipBytes: 0x1e
+  RValueProperty: (null)
+  ContextExpression:
+  $168: FinalFunction target=K2_AddLocalRotation@0x212d668fd00 (
+    $177: LocalVariable named CallFunc_MakeRotator_ReturnValue@0x213b32bb880
+    $186: False
+    $187: LocalVariable named CallFunc_K2_AddLocalRotation_SweepHitResult@0x213b32bb980
+    $196: False
+    $197: EndFunctionParms
+  )
+$198: Return expression:
+  $199: Nothing
+$200: EndOfScript
+
+=== BP_Memento_MusicBox_Wieldable_C::UserConstructionScript (13 bytes) ===
+$0: FinalFunction target=UserConstructionScript@0x212d638c6f0 (
+  $9: EndFunctionParms
+)
+$10: Return expression:
+  $11: Nothing
+$12: EndOfScript
+
+=== BP_Memento_MusicBox_Wieldable_C::ReceiveTick (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_DeltaSeconds@0x213b0ac6190
+  Expression:
+  $9: LocalVariable named DeltaSeconds@0x213b0ac2680
+$18: VirtualFunction call "ExecuteUbergraph_BP_Memento_MusicBox_Wieldable" (
+  $31: literal int32 579
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Memento_MusicBox_Wieldable_C::ReceivePrimaryItemUse (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Memento_MusicBox_Wieldable" (
+  $13: literal int32 560
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Memento_MusicBox_Wieldable_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Memento_MusicBox_Wieldable" (
+  $13: literal int32 584
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Memento_MusicBox_Wieldable_C::ExecuteUbergraph_BP_Memento_MusicBox_Wieldable (630 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x213b0ac26f0
+$10: Let (Variable = Expression)
+  Variable:
+  $19: InstanceVariable named RotationTimer@0x213b0ac58d0
+  Expression:
+  $28: literal float 0
+$33: LetBool (Variable = Expression)
+  Variable:
+  $34: InstanceVariable named IsPlaying@0x213b32bbe00
+  Expression:
+  $43: True
+$44: Let (Variable = Expression)
+  Variable:
+  $53: LocalVariable named CallFunc_K2_SetTimer_ReturnValue@0x213b32bbb00
+  Expression:
+  $62: Context
+    ObjectExpression:
+    $63: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x29
+    RValueProperty: CallFunc_K2_SetTimer_ReturnValue@0x213b32bbb00
+    ContextExpression:
+    $84: FinalFunction target=K2_SetTimer@0x212d63b0d60 (
+      $93: Self
+      $94: literal ansi string "ResetRotationTimer"
+      $114: InstanceVariable named RotationTime@0x213b0ac57f0
+      $123: False
+      $124: EndFunctionParms
+    )
+$125: Jump to offset 0x273
+$130: Context
+  ObjectExpression:
+  $131: InstanceVariable named KeyStaticMesh@0x213b32bbe80
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $152: VirtualFunction call "SetVisibility" (
+    $165: True
+    $166: False
+    $167: EndFunctionParms
+  )
+$168: Jump to offset 0x273
+$173: JumpIfNot -> 0x273, cond:
+  $178: InstanceVariable named IsPlaying@0x213b32bbe00
+$187: Let (Variable = Expression)
+  Variable:
+  $196: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x213b0ac60b0
+  Expression:
+  $205: CallMath target=Add_FloatFloat@0x212d698f820 (
+    $214: InstanceVariable named RotationTimer@0x213b0ac58d0
+    $223: LocalVariable named K2Node_Event_DeltaSeconds@0x213b0ac6190
+    $232: EndFunctionParms
+  )
+$233: Let (Variable = Expression)
+  Variable:
+  $242: InstanceVariable named RotationTimer@0x213b0ac58d0
+  Expression:
+  $251: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x213b0ac60b0
+$260: Let (Variable = Expression)
+  Variable:
+  $269: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue@0x213b0ac5e80
+  Expression:
+  $278: CallMath target=Divide_FloatFloat@0x212d6998eb0 (
+    $287: InstanceVariable named RotationTimer@0x213b0ac58d0
+    $296: InstanceVariable named RotationTime@0x213b0ac57f0
+    $305: EndFunctionParms
+  )
+$306: Let (Variable = Expression)
+  Variable:
+  $315: LocalVariable named CallFunc_Lerp_ReturnValue@0x213b0acf0a0
+  Expression:
+  $324: CallMath target=Lerp@0x212d69a55b0 (
+    $333: InstanceVariable named RotationSpeed@0x213b0ac5cc0
+    $342: literal float 0
+    $347: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue@0x213b0ac5e80
+    $356: EndFunctionParms
+  )
+$357: VirtualFunction call "RotateParts" (
+  $370: LocalVariable named CallFunc_Lerp_ReturnValue@0x213b0acf0a0
+  $379: EndFunctionParms
+)
+$380: Jump to offset 0x273
+$385: LetBool (Variable = Expression)
+  Variable:
+  $386: LocalVariable named CallFunc_IsValid_ReturnValue@0x213b32bba80
+  Expression:
+  $395: Context
+    ObjectExpression:
+    $396: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x21
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x213b32bba80
+    ContextExpression:
+    $417: FinalFunction target=IsValid@0x212d63ae380 (
+      $426: Context
+        ObjectExpression:
+        $427: Self
+        SkipBytes: 0x9
+        RValueProperty: InteractionSfx@0x212d6a9b300
+        ContextExpression:
+        $440: InstanceVariable named InteractionSfx@0x212d6a9b300
+      $449: EndFunctionParms
+    )
+$450: JumpIfNot -> 0x273, cond:
+  $455: LocalVariable named CallFunc_IsValid_ReturnValue@0x213b32bba80
+$464: Let (Variable = Expression)
+  Variable:
+  $473: LocalVariable named CallFunc_GetDurationMin_ReturnValue@0x213b0ac6270
+  Expression:
+  $482: Context
+    ObjectExpression:
+    $483: Context
+      ObjectExpression:
+      $484: Self
+      SkipBytes: 0x9
+      RValueProperty: InteractionSfx@0x212d6a9b300
+      ContextExpression:
+      $497: InstanceVariable named InteractionSfx@0x212d6a9b300
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetDurationMin_ReturnValue@0x213b0ac6270
+    ContextExpression:
+    $518: FinalFunction target=GetDurationMin@0x212d6a1af60 (
+      $527: EndFunctionParms
+    )
+$528: Let (Variable = Expression)
+  Variable:
+  $537: InstanceVariable named RotationTime@0x213b0ac57f0
+  Expression:
+  $546: LocalVariable named CallFunc_GetDurationMin_ReturnValue@0x213b0ac6270
+$555: Jump to offset 0xa
+$560: JumpIfNot -> 0x181, cond:
+  $565: InstanceVariable named IsPlaying@0x213b32bbe00
+$574: Jump to offset 0x273
+$579: Jump to offset 0xad
+$584: Context
+  ObjectExpression:
+  $585: InstanceVariable named DancerStaticMesh@0x213b32bbd80
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $606: VirtualFunction call "SetVisibility" (
+    $619: True
+    $620: False
+    $621: EndFunctionParms
+  )
+$622: Jump to offset 0x82
+$627: Return expression:
+  $628: Nothing
+$629: EndOfScript

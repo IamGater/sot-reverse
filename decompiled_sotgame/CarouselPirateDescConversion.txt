@@ -1,0 +1,117 @@
+// Class: CarouselPirateDescConversion (2 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+CarouselPirateDescConversion::ToOutfit @ RVA 0xC11690 EA 0x7FF6F4631690
+======================================================================
+// Hidden C++ exception states: #wind=4
+__int64 __fastcall sub_7FF6F4631690(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  int *v5; // rdx
+  __int64 result; // rax
+  __int64 v7; // rdi
+  __int64 v8; // [rsp+28h] [rbp-50h] BYREF
+  int v9; // [rsp+38h] [rbp-40h] BYREF
+  __int16 v10; // [rsp+3Ch] [rbp-3Ch]
+  __int128 v11; // [rsp+40h] [rbp-38h]
+  int v12; // [rsp+50h] [rbp-28h]
+  __int64 v13; // [rsp+58h] [rbp-20h]
+  __int64 v14; // [rsp+60h] [rbp-18h]
+
+  v9 = 0;
+  v10 = 258;
+  v11 = 0;
+  v12 = 0;
+  v13 = 0;
+  v14 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v5 = &v9;
+  if ( a2[7] )
+    v5 = (int *)a2[7];
+  a2[4] += a2[4] != 0;
+  result = sub_7FF6F435AD50(&v8, v5);
+  v7 = result;
+  if ( a3 != result )
+  {
+    if ( *(_QWORD *)a3 )
+    {
+      sub_7FF6F4DED1F0(*(_QWORD *)a3);
+      if ( *(_QWORD *)a3 )
+        *(_QWORD *)a3 = 0;
+    }
+    *(_QWORD *)a3 = *(_QWORD *)v7;
+    *(_QWORD *)v7 = 0;
+    *(_DWORD *)(a3 + 8) = *(_DWORD *)(v7 + 8);
+    result = *(unsigned int *)(v7 + 12);
+    *(_DWORD *)(a3 + 12) = result;
+    *(_QWORD *)(v7 + 8) = 0;
+  }
+  if ( v8 )
+    result = sub_7FF6F4DED1F0(v8);
+  if ( v13 )
+    return sub_7FF6F4DED1F0(v13);
+  return result;
+}
+
+
+======================================================================
+CarouselPirateDescConversion::ToPirateDescriptor @ RVA 0xC117A0 EA 0x7FF6F46317A0
+======================================================================
+// Hidden C++ exception states: #wind=3
+__int64 __fastcall sub_7FF6F46317A0(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  int *v6; // rdx
+  __int64 v7; // rax
+  __int64 v8; // rax
+  __int64 result; // rax
+  int v10; // [rsp+20h] [rbp-C8h] BYREF
+  __int16 v11; // [rsp+24h] [rbp-C4h]
+  __int128 v12; // [rsp+28h] [rbp-C0h]
+  int v13; // [rsp+38h] [rbp-B0h]
+  __int64 v14; // [rsp+40h] [rbp-A8h]
+  __int64 v15; // [rsp+48h] [rbp-A0h]
+  __int64 v16; // [rsp+50h] [rbp-98h]
+  _QWORD v17[17]; // [rsp+58h] [rbp-90h] BYREF
+
+  v16 = -2;
+  v5 = 0;
+  v10 = 0;
+  v11 = 258;
+  v12 = 0;
+  v13 = 0;
+  v14 = 0;
+  v15 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = &v10;
+  if ( a2[7] )
+    v6 = (int *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  v8 = sub_7FF6F435AD70(v17, v6);
+  sub_7FF6F3FCFAF0(a3, v8);
+  result = sub_7FF6F3D4BE50(v17);
+  if ( v14 )
+    return sub_7FF6F4DED1F0(v14);
+  return result;
+}
+

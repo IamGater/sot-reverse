@@ -1,0 +1,235 @@
+// /Game/Blueprints/TallTales/Actors/MaidenVoyage/bp_promptcoordinator_returntoisland -> BP_PromptCoordinator_Base_C
+
+=== BP_PromptCoordinator_Base_C::fn_idx_217677 (220 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_K2_GetPawn_ReturnValue@0x19f4940e680
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: InstanceVariable named PlayerController@0x19e4d4b6140
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetPawn_ReturnValue@0x19f4940e680
+    ContextExpression:
+    $32: FinalFunction target=K2_GetPawn@0x19e4d0ef6a0 (
+      $41: EndFunctionParms
+    )
+$42: Let (Variable = Expression)
+  Variable:
+  $51: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x19f4940e700
+  Expression:
+  $60: Context
+    ObjectExpression:
+    $61: LocalVariable named CallFunc_K2_GetPawn_ReturnValue@0x19f4940e680
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetActorLocation_ReturnValue@0x19f4940e700
+    ContextExpression:
+    $82: FinalFunction target=K2_GetActorLocation@0x19e4cd66b10 (
+      $91: EndFunctionParms
+    )
+$92: Let (Variable = Expression)
+  Variable:
+  $101: LocalVariable named CallFunc_Distance_ReturnValue@0x19f494ca1e0
+  Expression:
+  $110: Context
+    ObjectExpression:
+    $111: ObjectConst Default__VectorMaths@0x19e4d9e38d0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Distance_ReturnValue@0x19f494ca1e0
+    ContextExpression:
+    $132: FinalFunction target=Distance@0x19e4d40e7e0 (
+      $141: LocalVariable named CallFunc_K2_GetActorLocation_ReturnValue@0x19f4940e700
+      $150: LocalVariable named Center@0x19f4940e580
+      $159: EndFunctionParms
+    )
+$160: LetBool (Variable = Expression)
+  Variable:
+  $161: LocalVariable named CallFunc_LessEqual_FloatFloat_ReturnValue@0x19f4940e780
+  Expression:
+  $170: CallMath target=LessEqual_FloatFloat@0x19e4d3867b0 (
+    $179: LocalVariable named CallFunc_Distance_ReturnValue@0x19f494ca1e0
+    $188: LocalVariable named Radius@0x19f494ca3a0
+    $197: EndFunctionParms
+  )
+$198: LetBool (Variable = Expression)
+  Variable:
+  $199: LocalOutVariable named Result@0x19f4940e600
+  Expression:
+  $208: LocalVariable named CallFunc_LessEqual_FloatFloat_ReturnValue@0x19f4940e780
+$217: Return expression:
+  $218: Nothing
+$219: EndOfScript
+
+=== BP_PromptCoordinator_Base_C::fn_idx_217681 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_PromptCoordinator_Base_C::fn_idx_217674 (131 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_GetHUD_ReturnValue@0x19f4940e880
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: InstanceVariable named PlayerController@0x19e4d4b6140
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetHUD_ReturnValue@0x19f4940e880
+    ContextExpression:
+    $32: FinalFunction target=GetHUD@0x19e4d0f7fe0 (
+      $41: EndFunctionParms
+    )
+$42: Let (Variable = Expression)
+  Variable:
+  $51: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19f4940e900
+  Expression:
+  $60: Context
+    ObjectExpression:
+    $61: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19f4940e900
+    ContextExpression:
+    $82: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x19e4d410390 (
+      $91: LocalVariable named CallFunc_GetHUD_ReturnValue@0x19f4940e880
+      $100: EndFunctionParms
+    )
+$101: Let (Variable = Expression)
+  Variable:
+  $110: LocalOutVariable named HUD Dispatcher@0x19f4940e800
+  Expression:
+  $119: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19f4940e900
+$128: Return expression:
+  $129: Nothing
+$130: EndOfScript
+
+=== BP_PromptCoordinator_Base_C::fn_idx_19315 (33 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: InstanceVariable named IsCompleted@0x19f4940ec80
+  Expression:
+  $10: True
+$11: CallMulticastDelegate target=OnComplete__DelegateSignature@0x19f41c36d80 delegate:
+  $20: InstanceVariable named OnComplete@0x19f4940ed00
+  Params:
+  $29: EndFunctionParms
+$30: Return expression:
+  $31: Nothing
+$32: EndOfScript
+
+=== BP_PromptCoordinator_Base_C::fn_idx_217682 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_PromptCoordinator_Base_C::fn_idx_217680 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_PromptCoordinator_Base_C::fn_idx_217676 (37 bytes) ===
+$0: FinalFunction target=Initialize@0x19e4d4b5000 (
+  $9: LocalVariable named PlayerController@0x19f4940e980
+  $18: NoObject
+  $19: EndFunctionParms
+)
+$20: VirtualFunction call "Start" (
+  $33: EndFunctionParms
+)
+$34: Return expression:
+  $35: Nothing
+$36: EndOfScript
+
+=== BP_PromptCoordinator_Base_C::fn_idx_217672 (131 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_K2_GetPawn_ReturnValue@0x19f4940ea80
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: InstanceVariable named PlayerController@0x19e4d4b6140
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetPawn_ReturnValue@0x19f4940ea80
+    ContextExpression:
+    $32: FinalFunction target=K2_GetPawn@0x19e4d0ef6a0 (
+      $41: EndFunctionParms
+    )
+$42: Let (Variable = Expression)
+  Variable:
+  $51: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19f4940eb00
+  Expression:
+  $60: Context
+    ObjectExpression:
+    $61: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19f4940eb00
+    ContextExpression:
+    $82: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x19e4d410390 (
+      $91: LocalVariable named CallFunc_K2_GetPawn_ReturnValue@0x19f4940ea80
+      $100: EndFunctionParms
+    )
+$101: Let (Variable = Expression)
+  Variable:
+  $110: LocalOutVariable named Player Dispatcher@0x19f4940ea00
+  Expression:
+  $119: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19f4940eb00
+$128: Return expression:
+  $129: Nothing
+$130: EndOfScript
+
+=== BP_PromptCoordinator_Base_C::fn_idx_217670 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_PromptCoordinator_Base_C::fn_idx_217673 (89 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19f4940ec00
+  Expression:
+  $18: Context
+    ObjectExpression:
+    $19: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19f4940ec00
+    ContextExpression:
+    $40: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x19e4d410390 (
+      $49: InstanceVariable named PlayerController@0x19e4d4b6140
+      $58: EndFunctionParms
+    )
+$59: Let (Variable = Expression)
+  Variable:
+  $68: LocalOutVariable named Player Dispatcher@0x19f4940eb80
+  Expression:
+  $77: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19f4940ec00
+$86: Return expression:
+  $87: Nothing
+$88: EndOfScript
+
+=== BP_PromptCoordinator_Base_C::fn_idx_2002 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_PromptCoordinator_Base" (
+  $13: literal int32 43
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_PromptCoordinator_Base_C::fn_idx_217671 (51 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19f494ca170
+$10: VirtualFunction call "PostInitialize" (
+  $23: EndFunctionParms
+)
+$24: VirtualFunction call "Evaluate" (
+  $37: EndFunctionParms
+)
+$38: Jump to offset 0x30
+$43: Jump to offset 0xa
+$48: Return expression:
+  $49: Nothing
+$50: EndOfScript
+
+=== BP_PromptCoordinator_Base_C::fn_idx_217678 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript

@@ -1,0 +1,109 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/AshenAge/Tale_1_TheAshenDragon/bp_theashendragon_destroyinitialpendragon -> BP_TheAshenDragon_DestroyInitialPendragon_C
+
+=== BP_TheAshenDragon_DestroyInitialPendragon_C::fn_idx_1828 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=idx:281466@0x19fcd6fd500
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fcd6fd480
+$18: VirtualFunction call "idx:281655" (
+  $31: literal int32 125
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_TheAshenDragon_DestroyInitialPendragon_C::fn_idx_281655 (394 bytes) ===
+$0: FlowStack.Push(0x187)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x19fd1851810
+$15: FinalFunction target=Delay@0x19e4cda4f80 (
+  $24: literal float 3.5
+  $29: literal struct LatentActionInfo@0x19e4cd86e80 (size 32)
+    $42: literal CodeSkipSizeType 0x45
+    $47: literal int32 1
+    $52: literal name "idx:281655"
+    $65: Self
+    $66: EndStructConst
+  $67: EndFunctionParms
+)
+$68: PopExecutionFlow (jump to popped addr)
+$69: Context
+  ObjectExpression:
+  $70: StructMemberContext prop=idx:281580@0x19fcd6ff080
+    Expression to struct:
+    $79: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcd6fd680
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $100: VirtualFunction call "K2_DestroyActor" (
+    $113: EndFunctionParms
+  )
+$114: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $123: EndFunctionParms
+)
+$124: PopExecutionFlow (jump to popped addr)
+$125: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $134: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcd6fd680
+  $143: EndFunctionParms
+)
+$144: LetBool (Variable = Expression)
+  Variable:
+  $145: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fcd6fd700
+  Expression:
+  $154: Context
+    ObjectExpression:
+    $155: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19fcd6fd700
+    ContextExpression:
+    $176: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $185: StructMemberContext prop=idx:281580@0x19fcd6ff080
+        Expression to struct:
+        $194: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcd6fd680
+      $203: EndFunctionParms
+    )
+$204: JumpIfNot -> 0x72, cond:
+  $209: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fcd6fd700
+$218: Let (Variable = Expression)
+  Variable:
+  $227: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fcd6fd800
+  Expression:
+  $236: Context
+    ObjectExpression:
+    $237: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fcd6fd800
+    ContextExpression:
+    $258: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x19e4d410390 (
+      $267: StructMemberContext prop=idx:281580@0x19fcd6ff080
+        Expression to struct:
+        $276: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcd6fd680
+      $285: EndFunctionParms
+    )
+$286: LetObj (Variable = Expression)
+  Variable:
+  $287: StructMemberContext prop=CalledOnActor_2_0B4819044DED9AF905D21D94D7DA3D93@0x19fa940de00
+    Expression to struct:
+    $296: LocalVariable named idx:281656@0x19fcd6fd880
+  Expression:
+  $305: StructMemberContext prop=idx:281580@0x19fcd6ff080
+    Expression to struct:
+    $314: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcd6fd680
+$323: Context
+  ObjectExpression:
+  $324: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x29
+  RValueProperty: (null)
+  ContextExpression:
+  $345: FinalFunction target=FireEventWithDataFromHandle@0x19e4d40feb0 (
+    $354: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fcd6fd800
+    $363: ObjectConst PendragonDisappearEvent@0x19fbae48a00
+    $372: literal ansi string ""
+    $374: literal ansi string ""
+    $376: LocalVariable named idx:281656@0x19fcd6fd880
+    $385: EndFunctionParms
+  )
+$386: Jump to offset 0xf
+$391: Return expression:
+  $392: Nothing
+$393: EndOfScript

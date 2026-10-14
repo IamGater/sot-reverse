@@ -1,0 +1,2832 @@
+// Class: PrimitiveComponent (74 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+PrimitiveComponent::AddAngularImpulse @ RVA 0x2A06BB0 EA 0x7FF6F6426BB0
+======================================================================
+__int64 __fastcall sub_7FF6F6426BB0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // r9
+  __int64 v6; // rax
+  __int64 v7; // r8
+  __int64 v8; // rdi
+  bool v9; // zf
+  __int64 v11; // [rsp+20h] [rbp-28h] BYREF
+  int v12; // [rsp+28h] [rbp-20h]
+  __int64 v13; // [rsp+30h] [rbp-18h] BYREF
+  int v14; // [rsp+38h] [rbp-10h]
+  int v15; // [rsp+50h] [rbp+8h] BYREF
+  __int64 v16; // [rsp+58h] [rbp+10h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v4 = 0;
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v6 = a2[4];
+  v7 = v16;
+  LOBYTE(v4) = v6 != 0;
+  v13 = v11;
+  v8 = v6 + v4;
+  LODWORD(v6) = v12;
+  v9 = v15 == 0;
+  a2[4] = v8;
+  v14 = v6;
+  LOBYTE(v5) = !v9;
+  return (*(__int64 (__fastcall **)(__int64, __int64 *, __int64, __int64))(*(_QWORD *)a1 + 1392LL))(a1, &v13, v7, v5);
+}
+
+
+======================================================================
+PrimitiveComponent::AddForce @ RVA 0x2A073B0 EA 0x7FF6F64273B0
+======================================================================
+__int64 __fastcall sub_7FF6F64273B0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // r9
+  __int64 v6; // rax
+  __int64 v7; // r8
+  __int64 v8; // rdi
+  bool v9; // zf
+  __int64 v11; // [rsp+20h] [rbp-28h] BYREF
+  int v12; // [rsp+28h] [rbp-20h]
+  __int64 v13; // [rsp+30h] [rbp-18h] BYREF
+  int v14; // [rsp+38h] [rbp-10h]
+  int v15; // [rsp+50h] [rbp+8h] BYREF
+  __int64 v16; // [rsp+58h] [rbp+10h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v4 = 0;
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v6 = a2[4];
+  v7 = v16;
+  LOBYTE(v4) = v6 != 0;
+  v13 = v11;
+  v8 = v6 + v4;
+  LODWORD(v6) = v12;
+  v9 = v15 == 0;
+  a2[4] = v8;
+  v14 = v6;
+  LOBYTE(v5) = !v9;
+  return (*(__int64 (__fastcall **)(__int64, __int64 *, __int64, __int64))(*(_QWORD *)a1 + 1416LL))(a1, &v13, v7, v5);
+}
+
+
+======================================================================
+PrimitiveComponent::AddForceAtLocation @ RVA 0x2A074D0 EA 0x7FF6F64274D0
+======================================================================
+__int64 __fastcall sub_7FF6F64274D0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rax
+  __int64 v6; // r9
+  __int64 v8; // [rsp+20h] [rbp-48h] BYREF
+  int v9; // [rsp+28h] [rbp-40h]
+  __int64 v10; // [rsp+30h] [rbp-38h] BYREF
+  int v11; // [rsp+38h] [rbp-30h]
+  __int64 v12; // [rsp+40h] [rbp-28h] BYREF
+  int v13; // [rsp+48h] [rbp-20h]
+  __int64 v14; // [rsp+50h] [rbp-18h] BYREF
+  int v15; // [rsp+58h] [rbp-10h]
+  __int64 v16; // [rsp+70h] [rbp+8h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v4 = 0;
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v5 = a2[4];
+  v6 = v16;
+  v12 = v8;
+  LOBYTE(v4) = v5 != 0;
+  v14 = v10;
+  v13 = v9;
+  v15 = v11;
+  a2[4] = v5 + v4;
+  return (*(__int64 (__fastcall **)(__int64, __int64 *, __int64 *, __int64))(*(_QWORD *)a1 + 1424LL))(
+           a1,
+           &v14,
+           &v12,
+           v6);
+}
+
+
+======================================================================
+PrimitiveComponent::AddImpulse @ RVA 0x2A07790 EA 0x7FF6F6427790
+======================================================================
+__int64 __fastcall sub_7FF6F6427790(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // r9
+  __int64 v6; // rax
+  __int64 v7; // r8
+  __int64 v8; // rdi
+  bool v9; // zf
+  __int64 v11; // [rsp+20h] [rbp-28h] BYREF
+  int v12; // [rsp+28h] [rbp-20h]
+  __int64 v13; // [rsp+30h] [rbp-18h] BYREF
+  int v14; // [rsp+38h] [rbp-10h]
+  int v15; // [rsp+50h] [rbp+8h] BYREF
+  __int64 v16; // [rsp+58h] [rbp+10h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v4 = 0;
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v6 = a2[4];
+  v7 = v16;
+  LOBYTE(v4) = v6 != 0;
+  v13 = v11;
+  v8 = v6 + v4;
+  LODWORD(v6) = v12;
+  v9 = v15 == 0;
+  a2[4] = v8;
+  v14 = v6;
+  LOBYTE(v5) = !v9;
+  return (*(__int64 (__fastcall **)(__int64, __int64 *, __int64, __int64))(*(_QWORD *)a1 + 1384LL))(a1, &v13, v7, v5);
+}
+
+
+======================================================================
+PrimitiveComponent::AddImpulseAtLocation @ RVA 0x2A078B0 EA 0x7FF6F64278B0
+======================================================================
+__int64 __fastcall sub_7FF6F64278B0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rax
+  __int64 v6; // r9
+  __int64 v8; // [rsp+20h] [rbp-48h] BYREF
+  int v9; // [rsp+28h] [rbp-40h]
+  __int64 v10; // [rsp+30h] [rbp-38h] BYREF
+  int v11; // [rsp+38h] [rbp-30h]
+  __int64 v12; // [rsp+40h] [rbp-28h] BYREF
+  int v13; // [rsp+48h] [rbp-20h]
+  __int64 v14; // [rsp+50h] [rbp-18h] BYREF
+  int v15; // [rsp+58h] [rbp-10h]
+  __int64 v16; // [rsp+70h] [rbp+8h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v4 = 0;
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v5 = a2[4];
+  v6 = v16;
+  v12 = v8;
+  LOBYTE(v4) = v5 != 0;
+  v14 = v10;
+  v13 = v9;
+  v15 = v11;
+  a2[4] = v5 + v4;
+  return (*(__int64 (__fastcall **)(__int64, __int64 *, __int64 *, __int64))(*(_QWORD *)a1 + 1400LL))(
+           a1,
+           &v14,
+           &v12,
+           v6);
+}
+
+
+======================================================================
+PrimitiveComponent::AddRadialForce @ RVA 0x2A07C80 EA 0x7FF6F6427C80
+======================================================================
+__int64 __fastcall sub_7FF6F6427C80(__int64 *a1, _QWORD *a2)
+{
+  bool v4; // zf
+  __int64 v5; // rdi
+  __int64 v6; // rax
+  __int64 v7; // xmm0_8
+  __int64 v8; // r8
+  int v10; // [rsp+30h] [rbp-48h] BYREF
+  __int64 v11; // [rsp+38h] [rbp-40h] BYREF
+  int v12; // [rsp+40h] [rbp-38h]
+  __int64 v13; // [rsp+50h] [rbp-28h] BYREF
+  int v14; // [rsp+58h] [rbp-20h]
+  char v15; // [rsp+80h] [rbp+8h] BYREF
+  int v16; // [rsp+88h] [rbp+10h] BYREF
+  int v17; // [rsp+98h] [rbp+20h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v4 = a2[4] == 0;
+  v10 = 0;
+  if ( v4 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  v4 = a2[4] == 0;
+  v17 = 0;
+  if ( v4 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  v4 = a2[4] == 0;
+  v15 = 0;
+  if ( v4 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  v5 = 0;
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v6 = a2[4];
+  v7 = v11;
+  LOBYTE(v5) = v6 != 0;
+  v14 = v12;
+  a2[4] = v6 + v5;
+  v8 = *a1;
+  v13 = v7;
+  return (*(__int64 (__fastcall **)(__int64 *, __int64 *))(v8 + 1432))(a1, &v13);
+}
+
+
+======================================================================
+PrimitiveComponent::AddRadialImpulse @ RVA 0x2A07E40 EA 0x7FF6F6427E40
+======================================================================
+__int64 __fastcall sub_7FF6F6427E40(__int64 *a1, _QWORD *a2)
+{
+  bool v4; // zf
+  __int64 v5; // rdi
+  __int64 v6; // rax
+  __int64 v7; // xmm0_8
+  __int64 v8; // r8
+  int v10; // [rsp+30h] [rbp-48h] BYREF
+  __int64 v11; // [rsp+38h] [rbp-40h] BYREF
+  int v12; // [rsp+40h] [rbp-38h]
+  __int64 v13; // [rsp+50h] [rbp-28h] BYREF
+  int v14; // [rsp+58h] [rbp-20h]
+  char v15; // [rsp+80h] [rbp+8h] BYREF
+  int v16; // [rsp+88h] [rbp+10h] BYREF
+  int v17; // [rsp+98h] [rbp+20h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v4 = a2[4] == 0;
+  v10 = 0;
+  if ( v4 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  v4 = a2[4] == 0;
+  v17 = 0;
+  if ( v4 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  v4 = a2[4] == 0;
+  v15 = 0;
+  if ( v4 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  v5 = 0;
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v6 = a2[4];
+  v7 = v11;
+  LOBYTE(v5) = v6 != 0;
+  v14 = v12;
+  a2[4] = v6 + v5;
+  v8 = *a1;
+  v13 = v7;
+  return (*(__int64 (__fastcall **)(__int64 *, __int64 *))(v8 + 1408))(a1, &v13);
+}
+
+
+======================================================================
+PrimitiveComponent::AddTorque @ RVA 0x2A08200 EA 0x7FF6F6428200
+======================================================================
+__int64 __fastcall sub_7FF6F6428200(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // r9
+  __int64 v6; // rax
+  __int64 v7; // r8
+  __int64 v8; // rdi
+  bool v9; // zf
+  __int64 v11; // [rsp+20h] [rbp-28h] BYREF
+  int v12; // [rsp+28h] [rbp-20h]
+  __int64 v13; // [rsp+30h] [rbp-18h] BYREF
+  int v14; // [rsp+38h] [rbp-10h]
+  int v15; // [rsp+58h] [rbp+10h] BYREF
+  __int64 v16; // [rsp+68h] [rbp+20h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v4 = 0;
+  v16 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v16);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v16);
+  }
+  v15 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v6 = a2[4];
+  v7 = v16;
+  LOBYTE(v4) = v6 != 0;
+  v13 = v11;
+  v8 = v6 + v4;
+  LODWORD(v6) = v12;
+  v9 = v15 == 0;
+  a2[4] = v8;
+  LOBYTE(v5) = !v9;
+  v14 = v6;
+  return sub_7FF6F605AED0(a1, &v13, v7, v5);
+}
+
+
+======================================================================
+PrimitiveComponent::CanCharacterStepUp @ RVA 0x2A08570 EA 0x7FF6F6428570
+======================================================================
+__int64 __fastcall sub_7FF6F6428570(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 result; // rax
+  __int64 v10; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1968LL))(a1, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PrimitiveComponent::ClearMoveIgnoreActors @ RVA 0x2A08950 EA 0x7FF6F6428950
+======================================================================
+__int64 __fastcall sub_7FF6F6428950(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F5CFDD10();
+}
+
+
+======================================================================
+PrimitiveComponent::CopyArrayOfMoveIgnoreActors @ RVA 0x2A08D10 EA 0x7FF6F6428D10
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6428D10(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 result; // rax
+  __int64 v5; // rdi
+  __int64 v6[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5CFF1C0(a1, v6);
+  v5 = result;
+  if ( a3 != result )
+  {
+    if ( *(_QWORD *)a3 )
+    {
+      sub_7FF6F4DED1F0(*(_QWORD *)a3);
+      if ( *(_QWORD *)a3 )
+        *(_QWORD *)a3 = 0;
+    }
+    *(_QWORD *)a3 = *(_QWORD *)v5;
+    *(_QWORD *)v5 = 0;
+    *(_DWORD *)(a3 + 8) = *(_DWORD *)(v5 + 8);
+    result = *(unsigned int *)(v5 + 12);
+    *(_DWORD *)(a3 + 12) = result;
+    *(_QWORD *)(v5 + 8) = 0;
+  }
+  if ( v6[0] )
+    return sub_7FF6F4DED1F0(v6[0]);
+  return result;
+}
+
+
+======================================================================
+PrimitiveComponent::CreateAndSetMaterialInstanceDynamic @ RVA 0x2A08DB0 EA 0x7FF6F6428DB0
+======================================================================
+__int64 __fastcall sub_7FF6F6428DB0(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 result; // rax
+  unsigned int v10; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1328LL))(a1, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PrimitiveComponent::CreateAndSetMaterialInstanceDynamicFromMaterial @ RVA 0x2A08E50 EA 0x7FF6F6428E50
+======================================================================
+__int64 __fastcall sub_7FF6F6428E50(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rdx
+  __int64 result; // rax
+  unsigned int v11; // [rsp+40h] [rbp+8h] BYREF
+  __int64 v12; // [rsp+48h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v7 = a2[4];
+  v8 = v12;
+  v9 = v11;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, __int64, __int64))(*(_QWORD *)a1 + 1336LL))(a1, v9, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PrimitiveComponent::CreateDynamicMaterialInstance @ RVA 0x2A08F50 EA 0x7FF6F6428F50
+======================================================================
+__int64 __fastcall sub_7FF6F6428F50(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rdx
+  __int64 result; // rax
+  unsigned int v11; // [rsp+40h] [rbp+8h] BYREF
+  __int64 v12; // [rsp+48h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v7 = a2[4];
+  v8 = v12;
+  v9 = v11;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, __int64, __int64))(*(_QWORD *)a1 + 1344LL))(a1, v9, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PrimitiveComponent::GetAngularDamping @ RVA 0x2A0B1F0 EA 0x7FF6F642B1F0
+======================================================================
+void __fastcall sub_7FF6F642B1F0(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)a1 + 1816LL))(a1);
+}
+
+
+======================================================================
+PrimitiveComponent::GetCenterOfMass @ RVA 0x2A0B490 EA 0x7FF6F642B490
+======================================================================
+__int64 __fastcall sub_7FF6F642B490(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rax
+  __int64 result; // rax
+  _BYTE v11[24]; // [rsp+20h] [rbp-18h] BYREF
+  __int64 v12; // [rsp+48h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v7 = a2[4];
+  v8 = v12;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  v9 = sub_7FF6F60698C0(a1, v11, v8);
+  *(_QWORD *)a3 = *(_QWORD *)v9;
+  result = *(unsigned int *)(v9 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+PrimitiveComponent::GetClosestPointOnCollision @ RVA 0x2A0B530 EA 0x7FF6F642B530
+======================================================================
+void __fastcall sub_7FF6F642B530(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  _BYTE *v7; // rax
+  _BYTE *v8; // rbp
+  _BYTE *v9; // rax
+  _BYTE *v10; // rsi
+  __int64 v11; // rax
+  __int64 v12; // r9
+  _BYTE v13[16]; // [rsp+20h] [rbp-38h] BYREF
+  _BYTE v14[40]; // [rsp+30h] [rbp-28h] BYREF
+  __int64 v15; // [rsp+68h] [rbp+10h] BYREF
+
+  v3 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v13);
+  }
+  v7 = (_BYTE *)a2[7];
+  v8 = v13;
+  a2[7] = 0;
+  if ( v7 )
+    v8 = v7;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v14);
+  }
+  v9 = (_BYTE *)a2[7];
+  v10 = v14;
+  v15 = 0;
+  if ( v9 )
+    v10 = v9;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v11 = a2[4];
+  v12 = v15;
+  LOBYTE(v3) = v11 != 0;
+  a2[4] = v11 + v3;
+  *a3 = sub_7FF6F6069920(a1, v8, v10, v12);
+}
+
+
+======================================================================
+PrimitiveComponent::GetCollisionObjectType @ RVA 0x2A0B6A0 EA 0x7FF6F642B6A0
+======================================================================
+__int64 __fastcall sub_7FF6F642B6A0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1232LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PrimitiveComponent::GetCollisionProfileName @ RVA 0x2A0B6D0 EA 0x7FF6F642B6D0
+======================================================================
+_QWORD *__fastcall sub_7FF6F642B6D0(__int64 a1, __int64 a2, _QWORD *a3)
+{
+  _QWORD *result; // rax
+  char v5; // [rsp+38h] [rbp+10h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (_QWORD *)sub_7FF6F60699B0(a1, &v5);
+  *a3 = *result;
+  return result;
+}
+
+
+======================================================================
+PrimitiveComponent::GetCollisionResponseToChannel @ RVA 0x2A0B710 EA 0x7FF6F642B710
+======================================================================
+__int64 __fastcall sub_7FF6F642B710(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  bool v3; // zf
+  __int64 v7; // rdx
+  __int64 result; // rax
+  unsigned __int8 v9; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = a2[4] == 0;
+  v9 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  v7 = v9;
+  a2[4] += a2[4] != 0;
+  result = (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1224LL))(a1, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PrimitiveComponent::GetInertiaTensor @ RVA 0x2A0BF60 EA 0x7FF6F642BF60
+======================================================================
+__int64 __fastcall sub_7FF6F642BF60(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rax
+  __int64 result; // rax
+  _BYTE v11[24]; // [rsp+20h] [rbp-18h] BYREF
+  __int64 v12; // [rsp+40h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v7 = a2[4];
+  v8 = v12;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  v9 = (*(__int64 (__fastcall **)(__int64, _BYTE *, __int64))(*(_QWORD *)a1 + 1864LL))(a1, v11, v8);
+  *(_QWORD *)a3 = *(_QWORD *)v9;
+  result = *(unsigned int *)(v9 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+PrimitiveComponent::GetLinearDamping @ RVA 0x2A0C1A0 EA 0x7FF6F642C1A0
+======================================================================
+void __fastcall sub_7FF6F642C1A0(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)a1 + 1800LL))(a1);
+}
+
+
+======================================================================
+PrimitiveComponent::GetMass @ RVA 0x2A0C770 EA 0x7FF6F642C770
+======================================================================
+void __fastcall sub_7FF6F642C770(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)a1 + 1856LL))(a1);
+}
+
+
+======================================================================
+PrimitiveComponent::GetMassScale @ RVA 0x2A0C7B0 EA 0x7FF6F642C7B0
+======================================================================
+void __fastcall sub_7FF6F642C7B0(__int64 a1, _QWORD *a2, float *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 v9; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v7 = a2[4];
+  v8 = v9;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  *a3 = (*(float (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1832LL))(a1, v8);
+}
+
+
+======================================================================
+PrimitiveComponent::GetMaterial @ RVA 0x2A0C870 EA 0x7FF6F642C870
+======================================================================
+__int64 __fastcall sub_7FF6F642C870(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 result; // rax
+  unsigned int v10; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1312LL))(a1, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PrimitiveComponent::GetNumMaterials @ RVA 0x2A0CD40 EA 0x7FF6F642CD40
+======================================================================
+__int64 __fastcall sub_7FF6F642CD40(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1592LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PrimitiveComponent::GetOverlapInfos @ RVA 0x2A0CE00 EA 0x7FF6F642CE00
+======================================================================
+__int64 __fastcall sub_7FF6F642CE00(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 result; // rax
+  __int64 *v5; // rcx
+  __int64 v6; // rbx
+  __int64 v7; // rsi
+  _BYTE *v8; // r9
+  int v9; // r10d
+  _BYTE *v10; // rdx
+  __int64 v11; // r8
+  int v12; // eax
+
+  result = *(_QWORD *)(a2 + 32);
+  v5 = (__int64 *)(a1 + 1152);
+  *(_QWORD *)(a2 + 32) = result + (result != 0);
+  if ( (__int64 *)a3 != v5 )
+  {
+    v6 = *((int *)v5 + 2);
+    v7 = *v5;
+    if ( (_DWORD)v6 != *(_DWORD *)(a3 + 12) && (*(_QWORD *)a3 || (_DWORD)v6) )
+    {
+      result = sub_7FF6F4DFAA90(*(_QWORD *)a3, 132 * v6, 0);
+      *(_QWORD *)a3 = result;
+    }
+    v8 = *(_BYTE **)a3;
+    v9 = v6;
+    if ( (_DWORD)v6 )
+    {
+      v10 = v8 + 108;
+      v11 = v7 + 108;
+      do
+      {
+        v10 += 132;
+        *v8 = *(_BYTE *)(v11 - 108);
+        v8 += 132;
+        v12 = *(_DWORD *)(v11 - 104) ^ *((_DWORD *)v10 - 59);
+        v11 += 132;
+        *((_DWORD *)v10 - 59) ^= v12 & 1;
+        *((_DWORD *)v10 - 59) ^= (*(_DWORD *)(v11 - 236) ^ *((_DWORD *)v10 - 59)) & 2;
+        *((_DWORD *)v10 - 58) = *(_DWORD *)(v11 - 232);
+        *((_DWORD *)v10 - 57) = *(_DWORD *)(v11 - 228);
+        *((_QWORD *)v10 - 28) = *(_QWORD *)(v11 - 224);
+        *((_DWORD *)v10 - 54) = *(_DWORD *)(v11 - 216);
+        *(_QWORD *)(v10 - 212) = *(_QWORD *)(v11 - 212);
+        *((_DWORD *)v10 - 51) = *(_DWORD *)(v11 - 204);
+        *((_QWORD *)v10 - 25) = *(_QWORD *)(v11 - 200);
+        *((_DWORD *)v10 - 48) = *(_DWORD *)(v11 - 192);
+        *(_QWORD *)(v10 - 188) = *(_QWORD *)(v11 - 188);
+        *((_DWORD *)v10 - 45) = *(_DWORD *)(v11 - 180);
+        *((_QWORD *)v10 - 22) = *(_QWORD *)(v11 - 176);
+        *((_DWORD *)v10 - 42) = *(_DWORD *)(v11 - 168);
+        *(_QWORD *)(v10 - 164) = *(_QWORD *)(v11 - 164);
+        *((_DWORD *)v10 - 39) = *(_DWORD *)(v11 - 156);
+        *((_DWORD *)v10 - 38) = *(_DWORD *)(v11 - 152);
+        *((_DWORD *)v10 - 37) = *(_DWORD *)(v11 - 148);
+        *((_DWORD *)v10 - 36) = *(_DWORD *)(v11 - 144);
+        *((_DWORD *)v10 - 35) = *(_DWORD *)(v11 - 140);
+        *((_DWORD *)v10 - 34) = *(_DWORD *)(v11 - 136);
+        *((_DWORD *)v10 - 33) = *(_DWORD *)(v11 - 132);
+        *((_DWORD *)v10 - 32) = *(_DWORD *)(v11 - 128);
+        *((_DWORD *)v10 - 31) = *(_DWORD *)(v11 - 124);
+        *((_QWORD *)v10 - 15) = *(_QWORD *)(v11 - 120);
+        result = *(unsigned int *)(v11 - 112);
+        *((_DWORD *)v10 - 28) = result;
+        --v9;
+      }
+      while ( v9 );
+    }
+    *(_DWORD *)(a3 + 8) = v6;
+    *(_DWORD *)(a3 + 12) = v6;
+  }
+  return result;
+}
+
+
+======================================================================
+PrimitiveComponent::GetOverlappingActors @ RVA 0x2A0D020 EA 0x7FF6F642D020
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F642D020(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 *v5; // rsi
+  __int64 v6; // rax
+  __int64 result; // rax
+  __int64 v8[4]; // [rsp+28h] [rbp-20h] BYREF
+  __int64 v9; // [rsp+58h] [rbp+10h] BYREF
+
+  v4 = 0;
+  v8[0] = 0;
+  v8[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v5 = v8;
+  if ( a2[7] )
+    v5 = (__int64 *)a2[7];
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v4) = v6 != 0;
+  a2[4] = v6 + v4;
+  result = sub_7FF6F5D05180(a1, v5, v9);
+  if ( v8[0] )
+    return sub_7FF6F4DED1F0(v8[0]);
+  return result;
+}
+
+
+======================================================================
+PrimitiveComponent::GetOverlappingComponents @ RVA 0x2A0D120 EA 0x7FF6F642D120
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F642D120(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 *v5; // rdx
+  __int64 v6; // rax
+  __int64 result; // rax
+  __int64 v8[4]; // [rsp+28h] [rbp-20h] BYREF
+
+  v4 = 0;
+  v8[0] = 0;
+  v8[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v5 = v8;
+  if ( a2[7] )
+    v5 = (__int64 *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v4) = v6 != 0;
+  a2[4] = v6 + v4;
+  result = sub_7FF6F5D052F0(a1, v5);
+  if ( v8[0] )
+    return sub_7FF6F4DED1F0(v8[0]);
+  return result;
+}
+
+
+======================================================================
+PrimitiveComponent::GetPhysicsAngularVelocity @ RVA 0x2A0D7E0 EA 0x7FF6F642D7E0
+======================================================================
+__int64 __fastcall sub_7FF6F642D7E0(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rax
+  __int64 result; // rax
+  _BYTE v11[24]; // [rsp+20h] [rbp-18h] BYREF
+  __int64 v12; // [rsp+48h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v7 = a2[4];
+  v8 = v12;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  v9 = sub_7FF6F606AEF0(a1, v11, v8);
+  *(_QWORD *)a3 = *(_QWORD *)v9;
+  result = *(unsigned int *)(v9 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+PrimitiveComponent::GetPhysicsLinearVelocity @ RVA 0x2A0D880 EA 0x7FF6F642D880
+======================================================================
+__int64 __fastcall sub_7FF6F642D880(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r8
+  __int64 v9; // rax
+  __int64 result; // rax
+  _BYTE v11[24]; // [rsp+20h] [rbp-18h] BYREF
+  __int64 v12; // [rsp+48h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v7 = a2[4];
+  v8 = v12;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  v9 = sub_7FF6F606AF40(a1, v11, v8);
+  *(_QWORD *)a3 = *(_QWORD *)v9;
+  result = *(unsigned int *)(v9 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+PrimitiveComponent::GetPhysicsLinearVelocityAtPoint @ RVA 0x2A0D920 EA 0x7FF6F642D920
+======================================================================
+__int64 __fastcall sub_7FF6F642D920(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v6; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r9
+  __int64 v9; // rdi
+  __int64 v10; // rax
+  __int64 result; // rax
+  __int64 v12; // [rsp+20h] [rbp-38h] BYREF
+  int v13; // [rsp+28h] [rbp-30h]
+  __int64 v14; // [rsp+30h] [rbp-28h] BYREF
+  int v15; // [rsp+38h] [rbp-20h]
+  _BYTE v16[24]; // [rsp+40h] [rbp-18h] BYREF
+  __int64 v17; // [rsp+68h] [rbp+10h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v6 = 0;
+  v17 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v7 = a2[4];
+  v8 = v17;
+  v14 = v12;
+  LOBYTE(v6) = v7 != 0;
+  v9 = v7 + v6;
+  LODWORD(v7) = v13;
+  a2[4] = v9;
+  v15 = v7;
+  v10 = sub_7FF6F606AF90(a1, v16, &v14, v8);
+  *(_QWORD *)a3 = *(_QWORD *)v10;
+  result = *(unsigned int *)(v10 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+PrimitiveComponent::GetWalkableSlopeOverride @ RVA 0x2A0FC30 EA 0x7FF6F642FC30
+======================================================================
+__int64 __fastcall sub_7FF6F642FC30(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rax
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = sub_7FF6F606B450();
+  *(_BYTE *)a3 = *(_BYTE *)v4;
+  result = *(unsigned int *)(v4 + 4);
+  *(_DWORD *)(a3 + 4) = result;
+  return result;
+}
+
+
+======================================================================
+PrimitiveComponent::IgnoreActorWhenMoving @ RVA 0x2A10400 EA 0x7FF6F6430400
+======================================================================
+__int64 __fastcall sub_7FF6F6430400(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // r8
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  bool v8; // zf
+  int v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v11;
+  LOBYTE(v2) = v6 != 0;
+  v8 = v10 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v8;
+  return sub_7FF6F5D07EC0(a1, v7, v5);
+}
+
+
+======================================================================
+PrimitiveComponent::IsGravityEnabled @ RVA 0x2A10850 EA 0x7FF6F6430850
+======================================================================
+__int64 __fastcall sub_7FF6F6430850(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1784LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PrimitiveComponent::IsOverlappingActor @ RVA 0x2A10A20 EA 0x7FF6F6430A20
+======================================================================
+__int64 __fastcall sub_7FF6F6430A20(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = sub_7FF6F5D09A00(a1, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PrimitiveComponent::IsOverlappingComponent @ RVA 0x2A10AB0 EA 0x7FF6F6430AB0
+======================================================================
+__int64 __fastcall sub_7FF6F6430AB0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = sub_7FF6F5D09A90(a1, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PrimitiveComponent::K2_LineTraceComponent @ RVA 0x2A10EA0 EA 0x7FF6F6430EA0
+======================================================================
+__int64 __fastcall sub_7FF6F6430EA0(int a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v5; // rdi
+  bool v6; // r12
+  bool v7; // zf
+  char v8; // r15
+  _BYTE *v9; // rax
+  _BYTE *v10; // r14
+  _BYTE *v11; // rax
+  _BYTE *v12; // rsi
+  __int64 *v13; // rax
+  __int64 *v14; // rcx
+  __int64 v15; // rax
+  __int64 result; // rax
+  __int64 v17; // [rsp+40h] [rbp-49h] BYREF
+  int v18; // [rsp+48h] [rbp-41h]
+  __int64 v19; // [rsp+50h] [rbp-39h] BYREF
+  int v20; // [rsp+58h] [rbp-31h]
+  _BYTE v21[16]; // [rsp+60h] [rbp-29h] BYREF
+  _BYTE v22[16]; // [rsp+70h] [rbp-19h] BYREF
+  __int64 v23; // [rsp+80h] [rbp-9h] BYREF
+  int v24; // [rsp+88h] [rbp-1h]
+  __int64 v25; // [rsp+90h] [rbp+7h] BYREF
+  int v26; // [rsp+98h] [rbp+Fh]
+  int v28; // [rsp+F8h] [rbp+6Fh] BYREF
+  int v29; // [rsp+100h] [rbp+77h] BYREF
+  __int64 v30; // [rsp+108h] [rbp+7Fh] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v19);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v19);
+  }
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v5 = 0;
+  v28 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v28);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v28);
+  }
+  v29 = 0;
+  v6 = v28 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v29);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v29);
+  }
+  v7 = v29 == 0;
+  a2[7] = 0;
+  v8 = !v7;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v21);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v21);
+  }
+  v9 = (_BYTE *)a2[7];
+  v10 = v21;
+  a2[7] = 0;
+  if ( v9 )
+    v10 = v9;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v22);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v22);
+  }
+  v11 = (_BYTE *)a2[7];
+  v12 = v22;
+  v30 = 0;
+  a2[7] = 0;
+  if ( v11 )
+    v12 = v11;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v30);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v30);
+  }
+  v13 = (__int64 *)a2[7];
+  v14 = &v30;
+  v23 = v17;
+  if ( v13 )
+    v14 = v13;
+  v25 = v19;
+  v15 = a2[4];
+  LOBYTE(v5) = v15 != 0;
+  v24 = v18;
+  v26 = v20;
+  a2[4] = v15 + v5;
+  result = sub_7FF6F606C8C0(
+             a1,
+             (unsigned int)&v25,
+             (unsigned int)&v23,
+             v6,
+             v8,
+             (__int64)v10,
+             (__int64)v12,
+             (__int64)v14);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+PrimitiveComponent::PutRigidBodyToSleep @ RVA 0x2A12A10 EA 0x7FF6F6432A10
+======================================================================
+__int64 __fastcall sub_7FF6F6432A10(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F606EAF0(a1, v6);
+}
+
+
+======================================================================
+PrimitiveComponent::ScaleByMomentOfInertia @ RVA 0x2A13040 EA 0x7FF6F6433040
+======================================================================
+__int64 __fastcall sub_7FF6F6433040(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 v6; // rdi
+  __int64 v7; // rax
+  __int64 v8; // r9
+  __int64 v9; // rdi
+  __int64 v10; // rax
+  __int64 result; // rax
+  __int64 v12; // [rsp+20h] [rbp-38h] BYREF
+  int v13; // [rsp+28h] [rbp-30h]
+  __int64 v14; // [rsp+30h] [rbp-28h] BYREF
+  int v15; // [rsp+38h] [rbp-20h]
+  _BYTE v16[24]; // [rsp+40h] [rbp-18h] BYREF
+  __int64 v17; // [rsp+60h] [rbp+8h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v6 = 0;
+  v17 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v17);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v17);
+  }
+  v7 = a2[4];
+  v8 = v17;
+  v14 = v12;
+  LOBYTE(v6) = v7 != 0;
+  v9 = v7 + v6;
+  LODWORD(v7) = v13;
+  a2[4] = v9;
+  v15 = v7;
+  v10 = (*(__int64 (__fastcall **)(__int64, _BYTE *, __int64 *, __int64))(*(_QWORD *)a1 + 1872LL))(a1, v16, &v14, v8);
+  *(_QWORD *)a3 = *(_QWORD *)v10;
+  result = *(unsigned int *)(v10 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  return result;
+}
+
+
+======================================================================
+PrimitiveComponent::SetAllMassScale @ RVA 0x2A137C0 EA 0x7FF6F64337C0
+======================================================================
+__int64 __fastcall sub_7FF6F64337C0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1840LL))(a1);
+}
+
+
+======================================================================
+PrimitiveComponent::SetAllPhysicsLinearVelocity @ RVA 0x2A13BE0 EA 0x7FF6F6433BE0
+======================================================================
+__int64 __fastcall sub_7FF6F6433BE0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // r8
+  __int64 v6; // rax
+  __int64 v7; // rdi
+  bool v8; // zf
+  __int64 v10; // [rsp+20h] [rbp-28h] BYREF
+  int v11; // [rsp+28h] [rbp-20h]
+  __int64 v12; // [rsp+30h] [rbp-18h] BYREF
+  int v13; // [rsp+38h] [rbp-10h]
+  int v14; // [rsp+50h] [rbp+8h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v4 = 0;
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v6 = a2[4];
+  v12 = v10;
+  LOBYTE(v4) = v6 != 0;
+  v7 = v6 + v4;
+  LODWORD(v6) = v11;
+  v8 = v14 == 0;
+  a2[4] = v7;
+  v13 = v6;
+  LOBYTE(v5) = !v8;
+  return (*(__int64 (__fastcall **)(__int64, __int64 *, __int64))(*(_QWORD *)a1 + 1440LL))(a1, &v12, v5);
+}
+
+
+======================================================================
+PrimitiveComponent::SetAngularDamping @ RVA 0x2A13CC0 EA 0x7FF6F6433CC0
+======================================================================
+__int64 __fastcall sub_7FF6F6433CC0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1808LL))(a1);
+}
+
+
+======================================================================
+PrimitiveComponent::SetCastShadow @ RVA 0x2A14EE0 EA 0x7FF6F6434EE0
+======================================================================
+__int64 __fastcall sub_7FF6F6434EE0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F5D12760(a1, v5);
+}
+
+
+======================================================================
+PrimitiveComponent::SetCenterOfMass @ RVA 0x2A15090 EA 0x7FF6F6435090
+======================================================================
+__int64 __fastcall sub_7FF6F6435090(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  __int64 v5; // rax
+  __int64 v6; // r8
+  __int64 v7; // rdi
+  __int64 v9; // [rsp+20h] [rbp-28h] BYREF
+  int v10; // [rsp+28h] [rbp-20h]
+  __int64 v11; // [rsp+30h] [rbp-18h] BYREF
+  int v12; // [rsp+38h] [rbp-10h]
+  __int64 v13; // [rsp+58h] [rbp+10h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v4 = 0;
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v5 = a2[4];
+  v6 = v13;
+  LOBYTE(v4) = v5 != 0;
+  v11 = v9;
+  v7 = v5 + v4;
+  LODWORD(v5) = v10;
+  a2[4] = v7;
+  v12 = v5;
+  return sub_7FF6F6073EE0(a1, &v11, v6);
+}
+
+
+======================================================================
+PrimitiveComponent::SetCollisionEnabled @ RVA 0x2A15430 EA 0x7FF6F6435430
+======================================================================
+__int64 __fastcall sub_7FF6F6435430(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1464LL))(a1, v5);
+}
+
+
+======================================================================
+PrimitiveComponent::SetCollisionObjectType @ RVA 0x2A154B0 EA 0x7FF6F64354B0
+======================================================================
+__int64 __fastcall sub_7FF6F64354B0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F60740F0(a1, v5);
+}
+
+
+======================================================================
+PrimitiveComponent::SetCollisionProfileName @ RVA 0x2A15530 EA 0x7FF6F6435530
+======================================================================
+__int64 __fastcall sub_7FF6F6435530(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1472LL))(a1, v6);
+}
+
+
+======================================================================
+PrimitiveComponent::SetCollisionResponseToAllChannels @ RVA 0x2A155C0 EA 0x7FF6F64355C0
+======================================================================
+__int64 __fastcall sub_7FF6F64355C0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F6074180(a1, v5);
+}
+
+
+======================================================================
+PrimitiveComponent::SetCollisionResponseToChannel @ RVA 0x2A15640 EA 0x7FF6F6435640
+======================================================================
+__int64 __fastcall sub_7FF6F6435640(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // r8
+  __int64 v6; // rdx
+  unsigned __int8 v8; // [rsp+38h] [rbp+10h] BYREF
+  unsigned __int8 v9; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v9 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  v2 = a2[4] == 0;
+  v8 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  v5 = v8;
+  v6 = v9;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F60741B0(a1, v6, v5);
+}
+
+
+======================================================================
+PrimitiveComponent::SetConstraintMode @ RVA 0x2A159F0 EA 0x7FF6F64359F0
+======================================================================
+__int64 __fastcall sub_7FF6F64359F0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1376LL))(a1, v5);
+}
+
+
+======================================================================
+PrimitiveComponent::SetCullDistance @ RVA 0x2A15D80 EA 0x7FF6F6435D80
+======================================================================
+__int64 __fastcall sub_7FF6F6435D80(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F5D127A0(a1);
+}
+
+
+======================================================================
+PrimitiveComponent::SetCustomDepthStencilValue @ RVA 0x2A15E80 EA 0x7FF6F6435E80
+======================================================================
+__int64 __fastcall sub_7FF6F6435E80(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  unsigned int v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F5D127E0(a1, v6);
+}
+
+
+======================================================================
+PrimitiveComponent::SetEnableGravity @ RVA 0x2A163B0 EA 0x7FF6F64363B0
+======================================================================
+__int64 __fastcall sub_7FF6F64363B0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1776LL))(a1, v5);
+}
+
+
+======================================================================
+PrimitiveComponent::SetGenerateOverlapEvents @ RVA 0x2A16790 EA 0x7FF6F6436790
+======================================================================
+__int64 __fastcall sub_7FF6F6436790(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F5D12830(a1, v5);
+}
+
+
+======================================================================
+PrimitiveComponent::SetLinearDamping @ RVA 0x2A17010 EA 0x7FF6F6437010
+======================================================================
+__int64 __fastcall sub_7FF6F6437010(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1792LL))(a1);
+}
+
+
+======================================================================
+PrimitiveComponent::SetLockedAxis @ RVA 0x2A17850 EA 0x7FF6F6437850
+======================================================================
+__int64 __fastcall sub_7FF6F6437850(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1368LL))(a1, v5);
+}
+
+
+======================================================================
+PrimitiveComponent::SetMassOverrideInKg @ RVA 0x2A17960 EA 0x7FF6F6437960
+======================================================================
+__int64 __fastcall sub_7FF6F6437960(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // r8
+  __int64 v6; // r9
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  bool v9; // zf
+  int v11; // [rsp+40h] [rbp+8h] BYREF
+  int v12; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v13; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v13 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v7 = a2[4];
+  v8 = v13;
+  LOBYTE(v2) = v7 != 0;
+  v9 = v11 == 0;
+  a2[4] = v7 + v2;
+  LOBYTE(v6) = !v9;
+  return (*(__int64 (__fastcall **)(__int64, __int64, __int64, __int64))(*(_QWORD *)a1 + 1848LL))(a1, v8, v5, v6);
+}
+
+
+======================================================================
+PrimitiveComponent::SetMassScale @ RVA 0x2A17A60 EA 0x7FF6F6437A60
+======================================================================
+__int64 __fastcall sub_7FF6F6437A60(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  int v8; // [rsp+30h] [rbp+8h] BYREF
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v9;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1824LL))(a1, v6);
+}
+
+
+======================================================================
+PrimitiveComponent::SetMaterial @ RVA 0x2A17BB0 EA 0x7FF6F6437BB0
+======================================================================
+__int64 __fastcall sub_7FF6F6437BB0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // r8
+  __int64 v7; // rdx
+  unsigned int v9; // [rsp+30h] [rbp+8h] BYREF
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v5 = a2[4];
+  v6 = v10;
+  v7 = v9;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64, __int64))(*(_QWORD *)a1 + 1320LL))(a1, v7, v6);
+}
+
+
+======================================================================
+PrimitiveComponent::SetNotifyRigidBodyCollision @ RVA 0x2A17F90 EA 0x7FF6F6437F90
+======================================================================
+__int64 __fastcall sub_7FF6F6437F90(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1456LL))(a1, v5);
+}
+
+
+======================================================================
+PrimitiveComponent::SetOnlyOwnerSee @ RVA 0x2A18020 EA 0x7FF6F6438020
+======================================================================
+__int64 __fastcall sub_7FF6F6438020(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F5D12F20(a1, v5);
+}
+
+
+======================================================================
+PrimitiveComponent::SetOwnerNoSee @ RVA 0x2A18130 EA 0x7FF6F6438130
+======================================================================
+__int64 __fastcall sub_7FF6F6438130(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F5D12F60(a1, v5);
+}
+
+
+======================================================================
+PrimitiveComponent::SetPhysicsAngularVelocity @ RVA 0x2A18250 EA 0x7FF6F6438250
+======================================================================
+__int64 __fastcall sub_7FF6F6438250(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  bool v5; // si
+  __int64 v6; // rax
+  __int64 v7; // r9
+  __int64 v8; // rdi
+  __int64 v10; // [rsp+20h] [rbp-38h] BYREF
+  int v11; // [rsp+28h] [rbp-30h]
+  __int64 v12; // [rsp+30h] [rbp-28h] BYREF
+  int v13; // [rsp+38h] [rbp-20h]
+  int v14; // [rsp+68h] [rbp+10h] BYREF
+  __int64 v15; // [rsp+78h] [rbp+20h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v4 = 0;
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v15 = 0;
+  v5 = v14 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v6 = a2[4];
+  v7 = v15;
+  LOBYTE(v4) = v6 != 0;
+  v12 = v10;
+  v8 = v6 + v4;
+  LODWORD(v6) = v11;
+  a2[4] = v8;
+  v13 = v6;
+  return sub_7FF6F6074F50(a1, &v12, v5, v7);
+}
+
+
+======================================================================
+PrimitiveComponent::SetPhysicsLinearVelocity @ RVA 0x2A184B0 EA 0x7FF6F64384B0
+======================================================================
+__int64 __fastcall sub_7FF6F64384B0(__int64 a1, _QWORD *a2)
+{
+  __int64 v4; // rdi
+  bool v5; // si
+  __int64 v6; // rax
+  __int64 v7; // r9
+  __int64 v8; // rdi
+  __int64 v10; // [rsp+20h] [rbp-38h] BYREF
+  int v11; // [rsp+28h] [rbp-30h]
+  __int64 v12; // [rsp+30h] [rbp-28h] BYREF
+  int v13; // [rsp+38h] [rbp-20h]
+  int v14; // [rsp+68h] [rbp+10h] BYREF
+  __int64 v15; // [rsp+78h] [rbp+20h] BYREF
+
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v4 = 0;
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  v15 = 0;
+  v5 = v14 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  v6 = a2[4];
+  v7 = v15;
+  LOBYTE(v4) = v6 != 0;
+  v12 = v10;
+  v8 = v6 + v4;
+  LODWORD(v6) = v11;
+  a2[4] = v8;
+  v13 = v6;
+  return sub_7FF6F6074F90(a1, &v12, v5, v7);
+}
+
+
+======================================================================
+PrimitiveComponent::SetPhysicsMaxAngularVelocity @ RVA 0x2A185C0 EA 0x7FF6F64385C0
+======================================================================
+__int64 __fastcall sub_7FF6F64385C0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  bool v6; // si
+  __int64 v7; // rdx
+  __int64 v8; // rax
+  __int64 v9; // r9
+  _QWORD v11[5]; // [rsp+20h] [rbp-28h] BYREF
+  int v12; // [rsp+58h] [rbp+10h] BYREF
+  int v13; // [rsp+68h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v13 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  v5 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11[0] = 0;
+  v6 = v12 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v8 = a2[4];
+  v9 = v11[0];
+  LOBYTE(v5) = v8 != 0;
+  a2[4] = v8 + v5;
+  return sub_7FF6F6074FD0(a1, v7, v6, v9);
+}
+
+
+======================================================================
+PrimitiveComponent::SetPhysMaterialOverride @ RVA 0x2A181C0 EA 0x7FF6F64381C0
+======================================================================
+__int64 __fastcall sub_7FF6F64381C0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1912LL))(a1, v6);
+}
+
+
+======================================================================
+PrimitiveComponent::SetRenderCustomDepth @ RVA 0x2A18C80 EA 0x7FF6F6438C80
+======================================================================
+__int64 __fastcall sub_7FF6F6438C80(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F5D13760(a1, v5);
+}
+
+
+======================================================================
+PrimitiveComponent::SetRenderInMainPass @ RVA 0x2A18D10 EA 0x7FF6F6438D10
+======================================================================
+__int64 __fastcall sub_7FF6F6438D10(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F5D137A0(a1, v5);
+}
+
+
+======================================================================
+PrimitiveComponent::SetSimulatePhysics @ RVA 0x2A18EC0 EA 0x7FF6F6438EC0
+======================================================================
+__int64 __fastcall sub_7FF6F6438EC0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1352LL))(a1, v5);
+}
+
+
+======================================================================
+PrimitiveComponent::SetTranslucentSortPriority @ RVA 0x2A197A0 EA 0x7FF6F64397A0
+======================================================================
+__int64 __fastcall sub_7FF6F64397A0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  unsigned int v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F5D13F00(a1, v6);
+}
+
+
+======================================================================
+PrimitiveComponent::SetWalkableSlopeOverride @ RVA 0x2A19AE0 EA 0x7FF6F6439AE0
+======================================================================
+__int64 __fastcall sub_7FF6F6439AE0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  char *v5; // rdx
+  __int64 v6; // rax
+  char v8; // [rsp+38h] [rbp+10h] BYREF
+  int v9; // [rsp+3Ch] [rbp+14h]
+
+  v2 = 0;
+  v8 = 0;
+  v9 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = &v8;
+  if ( a2[7] )
+    v5 = (char *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  return sub_7FF6F6075300(a1, v5);
+}
+
+
+======================================================================
+PrimitiveComponent::WakeAllRigidBodies @ RVA 0x2A1AC10 EA 0x7FF6F643AC10
+======================================================================
+__int64 __fastcall sub_7FF6F643AC10(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1768LL))(a1);
+}
+
+
+======================================================================
+PrimitiveComponent::WakeRigidBody @ RVA 0x2A1AC30 EA 0x7FF6F643AC30
+======================================================================
+__int64 __fastcall sub_7FF6F643AC30(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1448LL))(a1, v6);
+}
+

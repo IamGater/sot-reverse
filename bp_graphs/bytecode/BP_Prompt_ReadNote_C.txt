@@ -1,0 +1,150 @@
+// /Game/Blueprints/Prompts/PromptConditionals/bp_prompt_readnote -> BP_Prompt_ReadNote_C
+
+=== BP_Prompt_ReadNote_C::fn_idx_275998 (204 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named idx:275996@0x19fbe5bb900
+  Expression:
+  $18: DynamicCast to ItemProxy@0x19e4c38b980 of expr:
+  $27: StructMemberContext prop=Interactee@0x19e4ceb6c00
+    Expression to struct:
+    $36: LocalOutVariable named PlayerFinishedInteractingWithNPCDialog@0x19fbe5bb880
+$45: Let (Variable = Expression)
+  Variable:
+  $54: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fbe5bb980
+  Expression:
+  $63: PrimitiveCast type=71
+    Argument:
+    $65: LocalVariable named idx:275996@0x19fbe5bb900
+$74: JumpIfNot -> 0xbb, cond:
+  $79: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fbe5bb980
+$88: LetObj (Variable = Expression)
+  Variable:
+  $89: LocalVariable named idx:275991@0x19fbe5bba00
+  Expression:
+  $98: Context
+    ObjectExpression:
+    $99: LocalVariable named idx:275996@0x19fbe5bb900
+    SkipBytes: 0xa
+    RValueProperty: idx:275991@0x19fbe5bba00
+    ContextExpression:
+    $120: FinalFunction target=GetItemInfo@0x19e4d108840 (
+      $129: EndFunctionParms
+    )
+$130: LetBool (Variable = Expression)
+  Variable:
+  $131: LocalVariable named CallFunc_EqualEqual_ObjectObject_ReturnValue@0x19fbe5bba80
+  Expression:
+  $140: CallMath target=EqualEqual_ObjectObject@0x19e4d37b340 (
+    $149: LocalVariable named idx:275991@0x19fbe5bba00
+    $158: InstanceVariable named Interactor@0x19fbe5bc100
+    $167: EndFunctionParms
+  )
+$168: LetBool (Variable = Expression)
+  Variable:
+  $169: InstanceVariable named idx:275993@0x19fbe5bbe80
+  Expression:
+  $178: LocalVariable named CallFunc_EqualEqual_ObjectObject_ReturnValue@0x19fbe5bba80
+$187: VirtualFunction call "Evaluate" (
+  $200: EndFunctionParms
+)
+$201: Return expression:
+  $202: Nothing
+$203: EndOfScript
+
+=== BP_Prompt_ReadNote_C::fn_idx_217670 (22 bytes) ===
+$0: VirtualFunction call "idx:275994" (
+  $13: literal int32 65
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_ReadNote_C::fn_idx_275997 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event@0x19fbe5bbf00
+  Expression:
+  $9: LocalVariable named Event@0x19fbe5bbb00
+$18: VirtualFunction call "idx:275994" (
+  $31: literal int32 132
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_ReadNote_C::fn_idx_14104 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_CharacterDispatcher2@0x19fbe5bbe00
+  Expression:
+  $9: LocalOutVariable named CharacterDispatcher@0x19fbe5bbb80
+$18: VirtualFunction call "idx:275994" (
+  $31: literal int32 160
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_ReadNote_C::fn_idx_14107 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_CharacterDispatcher@0x19fbe5bbd80
+  Expression:
+  $9: LocalOutVariable named CharacterDispatcher@0x19fbe5bbd00
+$18: VirtualFunction call "idx:275994" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_ReadNote_C::fn_idx_275994 (265 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fbd8bf110
+$10: Context
+  ObjectExpression:
+  $11: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $32: FinalFunction target=UnregisterEventFromHandle@0x19e4d411420 (
+    $41: LocalVariable named K2Node_Event_CharacterDispatcher@0x19fbe5bbd80
+    $50: InstanceVariable named idx:275995@0x19fbe5bc080
+    $59: EndFunctionParms
+  )
+$60: Jump to offset 0x106
+$65: JumpIfNot -> 0x6c, cond:
+  $70: InstanceVariable named idx:275993@0x19fbe5bbe80
+$79: FinalFunction target=DismissAllPrompts@0x19e4d4b4cc0 (
+  $88: EndFunctionParms
+)
+$89: VirtualFunction call "Complete" (
+  $102: EndFunctionParms
+)
+$103: Jump to offset 0x106
+$108: FinalFunction target=SetPromptAs@0x19e4d4b5a00 (
+  $117: InstanceVariable named idx:275999@0x19fbe5bbc00
+  $126: EndFunctionParms
+)
+$127: Jump to offset 0x106
+$132: VirtualFunction call "idx:275998" (
+  $145: LocalVariable named K2Node_CustomEvent_Event@0x19fbe5bbf00
+  $154: EndFunctionParms
+)
+$155: Jump to offset 0x106
+$160: Context
+  ObjectExpression:
+  $161: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x50
+  RValueProperty: (null)
+  ContextExpression:
+  $182: FinalFunction target=RegisterEventFromHandle@0x19e4d410c00 (
+    $191: LocalVariable named K2Node_Event_CharacterDispatcher2@0x19fbe5bbe00
+    $200: InstanceVariable named idx:275995@0x19fbe5bc080
+    $209: Self
+    $210: literal ansi string "OnPlayerFinishedInteractingWithNPCDialog"
+    $252: ObjectConst PlayerFinishedInteractingWithNPCDialog@0x19e4ceb6b60
+    $261: EndFunctionParms
+  )
+$262: Return expression:
+  $263: Nothing
+$264: EndOfScript

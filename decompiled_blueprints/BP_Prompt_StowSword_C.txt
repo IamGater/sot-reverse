@@ -1,0 +1,166 @@
+// /Game/Blueprints/Prompts/PromptConditionals/bp_prompt_stowsword -> BP_Prompt_StowSword_C
+
+=== BP_Prompt_StowSword_C::Handle_PlayerDeath (224 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_Conv_InterfaceToObject_ReturnValue@0x19fbd387700
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Conv_InterfaceToObject_ReturnValue@0x19fbd387700
+    ContextExpression:
+    $32: FinalFunction target=Conv_InterfaceToObject@0x19e4cd869c0 (
+      $41: StructMemberContext prop=Object@0x19e4cfc2220
+        Expression to struct:
+        $50: LocalOutVariable named EventStartStow@0x19fbd387680
+      $59: EndFunctionParms
+    )
+$60: LetObj (Variable = Expression)
+  Variable:
+  $61: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x19fbd387780
+  Expression:
+  $70: Context
+    ObjectExpression:
+    $71: ObjectConst Default__GameplayStatics@0x19e4d95eb20
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectClass_ReturnValue@0x19fbd387780
+    ContextExpression:
+    $92: FinalFunction target=GetObjectClass@0x19e4d35dd20 (
+      $101: LocalVariable named CallFunc_Conv_InterfaceToObject_ReturnValue@0x19fbd387700
+      $110: EndFunctionParms
+    )
+$111: LetBool (Variable = Expression)
+  Variable:
+  $112: LocalVariable named CallFunc_ClassIsChildOf_ReturnValue@0x19fbd387800
+  Expression:
+  $121: CallMath target=ClassIsChildOf@0x19e4d3741c0 (
+    $130: LocalVariable named CallFunc_GetObjectClass_ReturnValue@0x19fbd387780
+    $139: InstanceVariable named WieldedItemType@0x19fbd387d80
+    $148: EndFunctionParms
+  )
+$149: JumpIfNot -> 0xba, cond:
+  $154: LocalVariable named CallFunc_ClassIsChildOf_ReturnValue@0x19fbd387800
+$163: JumpIfNot -> 0xbf, cond:
+  $168: StructMemberContext prop=FastStow@0x19e4cfc21a0
+    Expression to struct:
+    $177: LocalOutVariable named EventStartStow@0x19fbd387680
+$186: Jump to offset 0xdd
+$191: LetBool (Variable = Expression)
+  Variable:
+  $192: InstanceVariable named idx:275913@0x19fbd388180
+  Expression:
+  $201: True
+$202: VirtualFunction call "Evaluate" (
+  $215: EndFunctionParms
+)
+$216: Jump to offset 0xba
+$221: Return expression:
+  $222: Nothing
+$223: EndOfScript
+
+=== BP_Prompt_StowSword_C::WorldMarkerManager (22 bytes) ===
+$0: VirtualFunction call "idx:275912" (
+  $13: literal int32 270
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Prompt_StowSword_C::RegisterCharacterEvents_Implementable (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_CharacterDispatcher2@0x19fbd387a80
+  Expression:
+  $9: LocalOutVariable named CharacterDispatcher@0x19fbd387880
+$18: VirtualFunction call "idx:275912" (
+  $31: literal int32 112
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_StowSword_C::UnregisterCharacterEvents_Implementable (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_CharacterDispatcher@0x19fbd387b00
+  Expression:
+  $9: LocalOutVariable named CharacterDispatcher@0x19fbd387900
+$18: VirtualFunction call "idx:275912" (
+  $31: literal int32 237
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_StowSword_C::Handle_FishEscaped (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Event@0x19fbd387b80
+  Expression:
+  $9: LocalVariable named Event@0x19fbd387980
+$18: VirtualFunction call "idx:275912" (
+  $31: literal int32 242
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Prompt_StowSword_C::fn_idx_275912 (278 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fbf431a40
+$10: VirtualFunction call "GetCharacterObjectMessageDispatcher" (
+  $23: LocalVariable named CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher@0x19fbd387a00
+  $32: EndFunctionParms
+)
+$33: Context
+  ObjectExpression:
+  $34: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $55: FinalFunction target=UnregisterEventFromHandle@0x19e4d411420 (
+    $64: LocalVariable named CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher@0x19fbd387a00
+    $73: InstanceVariable named Handle_Unwield@0x19fbd387e80
+    $82: EndFunctionParms
+  )
+$83: Jump to offset 0x113
+$88: FinalFunction target=SetPromptAs@0x19e4d4b5a00 (
+  $97: InstanceVariable named idx:275908@0x19fbd388080
+  $106: EndFunctionParms
+)
+$107: Jump to offset 0x113
+$112: VirtualFunction call "GetCharacterObjectMessageDispatcher" (
+  $125: LocalVariable named CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher2@0x19fbd387c00
+  $134: EndFunctionParms
+)
+$135: Context
+  ObjectExpression:
+  $136: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x2e
+  RValueProperty: (null)
+  ContextExpression:
+  $157: FinalFunction target=RegisterEventFromHandle@0x19e4d410c00 (
+    $166: LocalVariable named CallFunc_GetCharacterObjectMessageDispatcher_Player_Dispatcher2@0x19fbd387c00
+    $175: InstanceVariable named Handle_Unwield@0x19fbd387e80
+    $184: Self
+    $185: literal ansi string "OnStow"
+    $193: ObjectConst EventStartStow@0x19e4cfc2080
+    $202: EndFunctionParms
+  )
+$203: Jump to offset 0x113
+$208: JumpIfNot -> 0x58, cond:
+  $213: InstanceVariable named idx:275913@0x19fbd388180
+$222: FinalFunction target=DismissAllPrompts@0x19e4d4b4cc0 (
+  $231: EndFunctionParms
+)
+$232: Jump to offset 0x113
+$237: Jump to offset 0xa
+$242: VirtualFunction call "OnStowFunc" (
+  $255: LocalVariable named K2Node_CustomEvent_Event@0x19fbd387b80
+  $264: EndFunctionParms
+)
+$265: Jump to offset 0x113
+$270: Jump to offset 0xd0
+$275: Return expression:
+  $276: Nothing
+$277: EndOfScript

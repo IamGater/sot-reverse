@@ -1,0 +1,82 @@
+// /Game/Blueprints/GameObjects/TallTales/NPC/bp_shroudbreaker_mysteriousstranger_phased -> BP_Shroudbreaker_MysteriousStranger_Phased_C
+
+=== BP_Shroudbreaker_MysteriousStranger_Phased_C::fn_idx_9202 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_Shroudbreaker_MysteriousStranger_Phased_C::fn_idx_9152 (22 bytes) ===
+$0: VirtualFunction call "idx:275197" (
+  $13: literal int32 10
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Shroudbreaker_MysteriousStranger_Phased_C::fn_idx_275197 (245 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fbd572a00
+$10: LetBool (Variable = Expression)
+  Variable:
+  $11: LocalVariable named CallFunc_IsServer_ReturnValue@0x19fbe40e380
+  Expression:
+  $20: Context
+    ObjectExpression:
+    $21: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_IsServer_ReturnValue@0x19fbe40e380
+    ContextExpression:
+    $42: FinalFunction target=IsServer@0x19e4cd8e1c0 (
+      $51: Self
+      $52: EndFunctionParms
+    )
+$53: JumpIfNot -> 0x48, cond:
+  $58: LocalVariable named CallFunc_IsServer_ReturnValue@0x19fbe40e380
+$67: Jump to offset 0xf2
+$72: LetObj (Variable = Expression)
+  Variable:
+  $73: LocalVariable named CallFunc_GetPlayerController_ReturnValue@0x19fbe40e400
+  Expression:
+  $82: Context
+    ObjectExpression:
+    $83: ObjectConst Default__GameplayStatics@0x19e4d95eb20
+    SkipBytes: 0x10
+    RValueProperty: CallFunc_GetPlayerController_ReturnValue@0x19fbe40e400
+    ContextExpression:
+    $104: FinalFunction target=GetPlayerController@0x19e4d35e470 (
+      $113: Self
+      $114: literal int32 0
+      $119: EndFunctionParms
+    )
+$120: Let (Variable = Expression)
+  Variable:
+  $129: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fbe40e480
+  Expression:
+  $138: Context
+    ObjectExpression:
+    $139: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fbe40e480
+    ContextExpression:
+    $160: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x19e4d410390 (
+      $169: LocalVariable named CallFunc_GetPlayerController_ReturnValue@0x19fbe40e400
+      $178: EndFunctionParms
+    )
+$179: Context
+  ObjectExpression:
+  $180: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x29
+  RValueProperty: (null)
+  ContextExpression:
+  $201: FinalFunction target=FireEventWithDataFromHandle@0x19e4d40feb0 (
+    $210: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x19fbe40e480
+    $219: ObjectConst TutorialResetMysteriousStrangersEvent@0x19e4ce6cb80
+    $228: literal ansi string ""
+    $230: literal ansi string ""
+    $232: LocalVariable named idx:275198@0x19fbe40e300
+    $241: EndFunctionParms
+  )
+$242: Return expression:
+  $243: Nothing
+$244: EndOfScript

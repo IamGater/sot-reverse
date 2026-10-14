@@ -1,0 +1,171 @@
+// /Game/Blueprints/Prompts/PromptActors/EquipAndUseItem/bp_promptactor_equipflintlock -> BP_PromptActor_EquipFlintlock_C
+
+=== BP_PromptActor_EquipFlintlock_C::fn_idx_9202 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_PromptActor_EquipFlintlock_C::fn_idx_9159 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_EndPlayReason@0x19fbd84d200
+  Expression:
+  $9: LocalVariable named EndPlayReason@0x19fbd84d100
+$18: VirtualFunction call "idx:275557" (
+  $31: literal int32 451
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_PromptActor_EquipFlintlock_C::fn_idx_9152 (22 bytes) ===
+$0: VirtualFunction call "idx:275557" (
+  $13: literal int32 10
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_PromptActor_EquipFlintlock_C::fn_idx_275557 (587 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fbf433f00
+$10: LetBool (Variable = Expression)
+  Variable:
+  $11: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x19fbd84d480
+  Expression:
+  $20: FinalFunction target=HasAuthority@0x19e4cd64b30 (
+    $29: EndFunctionParms
+  )
+$30: JumpIfNot -> 0x31, cond:
+  $35: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x19fbd84d480
+$44: Jump to offset 0x248
+$49: LetObj (Variable = Expression)
+  Variable:
+  $50: LocalVariable named CallFunc_CreateObject_ReturnValue@0x19fbd84d300
+  Expression:
+  $59: Context
+    ObjectExpression:
+    $60: ObjectConst Default__ObjectUtilities@0x19e4d79db60
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_CreateObject_ReturnValue@0x19fbd84d300
+    ContextExpression:
+    $81: FinalFunction target=CreateObject@0x19e4d1f7c10 (
+      $90: ObjectConst idx:275554@0x19fb6f9c840
+      $99: EndFunctionParms
+    )
+$100: Let (Variable = Expression)
+  Variable:
+  $109: LocalVariable named idx:275558@0x19fbd84d380
+  Expression:
+  $118: DynamicCast to idx:275554@0x19fb6f9c840 of expr:
+  $127: LocalVariable named CallFunc_CreateObject_ReturnValue@0x19fbd84d300
+$136: Let (Variable = Expression)
+  Variable:
+  $145: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fbd84d400
+  Expression:
+  $154: PrimitiveCast type=71
+    Argument:
+    $156: LocalVariable named idx:275558@0x19fbd84d380
+$165: JumpIfNot -> 0x248, cond:
+  $170: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fbd84d400
+$179: LetObj (Variable = Expression)
+  Variable:
+  $180: InstanceVariable named idx:275562@0x19fbd84d500
+  Expression:
+  $189: LocalVariable named idx:275558@0x19fbd84d380
+$198: LetObj (Variable = Expression)
+  Variable:
+  $199: Context
+    ObjectExpression:
+    $200: InstanceVariable named idx:275562@0x19fbd84d500
+    SkipBytes: 0x9
+    RValueProperty: WieldedItemType@0x19fbd84e800
+    ContextExpression:
+    $221: InstanceVariable named WieldedItemType@0x19fbd84e800
+  Expression:
+  $230: InstanceVariable named WieldedItemType@0x19fbd84d580
+$239: LetObj (Variable = Expression)
+  Variable:
+  $240: Context
+    ObjectExpression:
+    $241: InstanceVariable named idx:275562@0x19fbd84d500
+    SkipBytes: 0x9
+    RValueProperty: RequiredInput@0x19fbd84ea00
+    ContextExpression:
+    $262: InstanceVariable named RequiredInput@0x19fbd84ea00
+  Expression:
+  $271: InstanceVariable named RequiredInput@0x19fbd84d600
+$280: Let (Variable = Expression)
+  Variable:
+  $289: Context
+    ObjectExpression:
+    $290: InstanceVariable named idx:275562@0x19fbd84d500
+    SkipBytes: 0x9
+    RValueProperty: idx:275559@0x19fbd84e780
+    ContextExpression:
+    $311: InstanceVariable named idx:275559@0x19fbd84e780
+  Expression:
+  $320: InstanceVariable named idx:275559@0x19fbd84d680
+$329: Let (Variable = Expression)
+  Variable:
+  $338: Context
+    ObjectExpression:
+    $339: InstanceVariable named idx:275562@0x19fbd84d500
+    SkipBytes: 0x9
+    RValueProperty: idx:275560@0x19fbd84eb00
+    ContextExpression:
+    $360: InstanceVariable named idx:275560@0x19fbd84eb00
+  Expression:
+  $369: InstanceVariable named idx:275561@0x19fbd84d700
+$378: VirtualFunction call "GetAthenaPlayerController" (
+  $391: LocalVariable named CallFunc_GetAthenaPlayerController_AthenaPlayerController@0x19fbd84d180
+  $400: EndFunctionParms
+)
+$401: Context
+  ObjectExpression:
+  $402: InstanceVariable named idx:275562@0x19fbd84d500
+  SkipBytes: 0x17
+  RValueProperty: (null)
+  ContextExpression:
+  $423: VirtualFunction call "InitializeAndStart" (
+    $436: LocalVariable named CallFunc_GetAthenaPlayerController_AthenaPlayerController@0x19fbd84d180
+    $445: EndFunctionParms
+  )
+$446: Jump to offset 0x248
+$451: LetBool (Variable = Expression)
+  Variable:
+  $452: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fbd84d280
+  Expression:
+  $461: Context
+    ObjectExpression:
+    $462: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x19fbd84d280
+    ContextExpression:
+    $483: FinalFunction target=IsValid@0x19e4cd8e380 (
+      $492: InstanceVariable named idx:275562@0x19fbd84d500
+      $501: EndFunctionParms
+    )
+$502: JumpIfNot -> 0x248, cond:
+  $507: LocalVariable named CallFunc_IsValid_ReturnValue@0x19fbd84d280
+$516: Context
+  ObjectExpression:
+  $517: InstanceVariable named idx:275562@0x19fbd84d500
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $538: FinalFunction target=Uninitialize@0x19e4d4b5c00 (
+    $547: EndFunctionParms
+  )
+$548: Context
+  ObjectExpression:
+  $549: InstanceVariable named idx:275562@0x19fbd84d500
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $570: VirtualFunction call "UnregisterHandles" (
+    $583: EndFunctionParms
+  )
+$584: Return expression:
+  $585: Nothing
+$586: EndOfScript

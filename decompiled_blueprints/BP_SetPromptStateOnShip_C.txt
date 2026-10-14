@@ -1,0 +1,55 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Onboarding/bp_setpromptstateonship -> BP_SetPromptStateOnShip_C
+
+=== BP_SetPromptStateOnShip_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fce708200
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fce708180
+$18: VirtualFunction call "idx:283168" (
+  $31: literal int32 25
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_SetPromptStateOnShip_C::fn_idx_283168 (176 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fcdbb6200
+$10: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $19: EndFunctionParms
+)
+$20: Jump to offset 0xad
+$25: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $34: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce708280
+  $43: EndFunctionParms
+)
+$44: Let (Variable = Expression)
+  Variable:
+  $53: LocalVariable named idx:282836@0x19fce708300
+  Expression:
+  $62: DynamicCast to BP_PromptActor_MaidenVoyage_ShipChapter_C@0x19fbcfa7080 of expr:
+  $71: StructMemberContext prop=idx:282837@0x19fcdd6b200
+    Expression to struct:
+    $80: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce708280
+$89: Let (Variable = Expression)
+  Variable:
+  $98: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fce708380
+  Expression:
+  $107: PrimitiveCast type=71
+    Argument:
+    $109: LocalVariable named idx:282836@0x19fce708300
+$118: JumpIfNot -> 0xad, cond:
+  $123: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fce708380
+$132: Context
+  ObjectExpression:
+  $133: LocalVariable named idx:282836@0x19fce708300
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $154: VirtualFunction call "SetStateNotOnShip" (
+    $167: EndFunctionParms
+  )
+$168: Jump to offset 0xa
+$173: Return expression:
+  $174: Nothing
+$175: EndOfScript

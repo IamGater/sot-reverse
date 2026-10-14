@@ -1,0 +1,25 @@
+// Class: TestBeaconClient (2 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+TestBeaconClient::ClientPing @ RVA 0x2154560 EA 0x7FF6F5B74560
+======================================================================
+__int64 __fastcall sub_7FF6F5B74560(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1624LL))(a1);
+}
+
+
+======================================================================
+TestBeaconClient::ServerPong @ RVA 0x21566A0 EA 0x7FF6F5B766A0
+======================================================================
+__int64 __fastcall sub_7FF6F5B766A0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1608LL))(a1) )
+    return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1616LL))(a1);
+  else
+    return sub_7FF6F4F0F6D0(L"ServerPong_Validate");
+}
+

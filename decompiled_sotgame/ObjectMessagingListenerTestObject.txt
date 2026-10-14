@@ -1,0 +1,137 @@
+// Class: ObjectMessagingListenerTestObject (5 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+ObjectMessagingListenerTestObject::InvalidEventFunctionWithIncorrectArgument @ RVA 0x36B4A50 EA 0x7FF6F70D4A50
+======================================================================
+__int64 __fastcall sub_7FF6F70D4A50(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  unsigned int v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return nullsub_4679(a1, v6);
+}
+
+
+======================================================================
+ObjectMessagingListenerTestObject::InvalidEventFunctionWithNoArguments @ RVA 0x36B4AD0 EA 0x7FF6F70D4AD0
+======================================================================
+void __fastcall sub_7FF6F70D4AD0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F70D2520LL);
+}
+
+
+======================================================================
+ObjectMessagingListenerTestObject::InvalidEventFunctionWithReturn @ RVA 0x36B4AF0 EA 0x7FF6F70D4AF0
+======================================================================
+__int64 __fastcall sub_7FF6F70D4AF0(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v3; // rdi
+  int *v7; // rdx
+  __int64 v8; // rax
+  __int64 result; // rax
+  int v10; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v10 = -1;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = &v10;
+  if ( a2[7] )
+    v7 = (int *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = sub_7FF6F70D2530(a1, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ObjectMessagingListenerTestObject::TestFunction @ RVA 0x36B4BA0 EA 0x7FF6F70D4BA0
+======================================================================
+__int64 __fastcall sub_7FF6F70D4BA0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  unsigned int v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F70D2540(a1, v6);
+}
+
+
+======================================================================
+ObjectMessagingListenerTestObject::TestFunctionWithEventData @ RVA 0x36B4C20 EA 0x7FF6F70D4C20
+======================================================================
+__int64 __fastcall sub_7FF6F70D4C20(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  int *v5; // rdx
+  __int64 v6; // rax
+  int v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = -1;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = &v8;
+  if ( a2[7] )
+    v5 = (int *)a2[7];
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  return sub_7FF6F70D2550(a1, v5);
+}
+

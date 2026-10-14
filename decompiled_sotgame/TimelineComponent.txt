@@ -1,0 +1,310 @@
+// Class: TimelineComponent (18 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+TimelineComponent::GetPlaybackPosition @ RVA 0x2B16C40 EA 0x7FF6F6536C40
+======================================================================
+void __fastcall sub_7FF6F6536C40(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F61C66D0();
+}
+
+
+======================================================================
+TimelineComponent::GetPlayRate @ RVA 0x2B16C10 EA 0x7FF6F6536C10
+======================================================================
+void __fastcall sub_7FF6F6536C10(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F61C66C0();
+}
+
+
+======================================================================
+TimelineComponent::GetTimelineLength @ RVA 0x2B17DB0 EA 0x7FF6F6537DB0
+======================================================================
+void __fastcall sub_7FF6F6537DB0(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F61C6EE0();
+}
+
+
+======================================================================
+TimelineComponent::IsLooping @ RVA 0x2B186F0 EA 0x7FF6F65386F0
+======================================================================
+__int64 __fastcall sub_7FF6F65386F0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F61CFDA0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+TimelineComponent::IsPlaying @ RVA 0x2B18750 EA 0x7FF6F6538750
+======================================================================
+__int64 __fastcall sub_7FF6F6538750(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F61CFDB0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+TimelineComponent::IsReversing @ RVA 0x2B18840 EA 0x7FF6F6538840
+======================================================================
+__int64 __fastcall sub_7FF6F6538840(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F61CFDD0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+TimelineComponent::OnRep_Timeline @ RVA 0x2B19810 EA 0x7FF6F6539810
+======================================================================
+__int64 __fastcall sub_7FF6F6539810(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return nullsub_5388();
+}
+
+
+======================================================================
+TimelineComponent::Play @ RVA 0x2B19C70 EA 0x7FF6F6539C70
+======================================================================
+__int64 __fastcall sub_7FF6F6539C70(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F61D5880();
+}
+
+
+======================================================================
+TimelineComponent::PlayFromStart @ RVA 0x2B1A260 EA 0x7FF6F653A260
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+TimelineComponent::Reverse @ RVA 0x2B1B3C0 EA 0x7FF6F653B3C0
+======================================================================
+__int64 __fastcall sub_7FF6F653B3C0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F61DB960();
+}
+
+
+======================================================================
+TimelineComponent::ReverseFromEnd @ RVA 0x2B1B3E0 EA 0x7FF6F653B3E0
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+TimelineComponent::SetLooping @ RVA 0x2B201F0 EA 0x7FF6F65401F0
+======================================================================
+__int64 __fastcall sub_7FF6F65401F0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F61DD8D0(a1, v5);
+}
+
+
+======================================================================
+TimelineComponent::SetNewTime @ RVA 0x2B20700 EA 0x7FF6F6540700
+======================================================================
+__int64 __fastcall sub_7FF6F6540700(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F61DD9F0(a1);
+}
+
+
+======================================================================
+TimelineComponent::SetPlaybackPosition @ RVA 0x2B20B10 EA 0x7FF6F6540B10
+======================================================================
+__int64 __fastcall sub_7FF6F6540B10(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  bool v6; // si
+  __int64 v7; // rdx
+  __int64 v8; // r9
+  __int64 v9; // rax
+  _DWORD v11[10]; // [rsp+20h] [rbp-28h] BYREF
+  int v12; // [rsp+58h] [rbp+10h] BYREF
+  int v13; // [rsp+68h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v11[0] = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  v5 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v13 = 0;
+  v6 = v12 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  v9 = a2[4];
+  LOBYTE(v5) = v9 != 0;
+  v2 = v13 == 0;
+  a2[4] = v9 + v5;
+  LOBYTE(v8) = !v2;
+  return sub_7FF6F61DE190(a1, v7, v6, v8);
+}
+
+
+======================================================================
+TimelineComponent::SetPlayRate @ RVA 0x2B20A90 EA 0x7FF6F6540A90
+======================================================================
+__int64 __fastcall sub_7FF6F6540A90(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F61DDA30(a1);
+}
+
+
+======================================================================
+TimelineComponent::SetTimelineLength @ RVA 0x2B22600 EA 0x7FF6F6542600
+======================================================================
+__int64 __fastcall sub_7FF6F6542600(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F61DE380(a1);
+}
+
+
+======================================================================
+TimelineComponent::SetTimelineLengthMode @ RVA 0x2B22680 EA 0x7FF6F6542680
+======================================================================
+__int64 __fastcall sub_7FF6F6542680(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F61DE3D0(a1, v5);
+}
+
+
+======================================================================
+TimelineComponent::Stop @ RVA 0x2B248B0 EA 0x7FF6F65448B0
+======================================================================
+void __fastcall sub_7FF6F65448B0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F61DF580LL);
+}
+

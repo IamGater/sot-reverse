@@ -1,0 +1,104 @@
+// /Game/Blueprints/VFX/bp_riddle_trigger -> BP_riddle_trigger_C
+
+=== BP_riddle_trigger_C::fn_idx_240317 (17 bytes) ===
+$0: VirtualFunction call "K2_DestroyActor" (
+  $13: EndFunctionParms
+)
+$14: Return expression:
+  $15: Nothing
+$16: EndOfScript
+
+=== BP_riddle_trigger_C::fn_idx_9202 (385 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f840e7100
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: InstanceVariable named Shockwave@0x19f840e7580
+    SkipBytes: 0x14
+    RValueProperty: CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f840e7100
+    ContextExpression:
+    $32: VirtualFunction call "CreateDynamicMaterialInstance" (
+      $45: literal int32 0
+      $50: NoObject
+      $51: EndFunctionParms
+    )
+$52: LetObj (Variable = Expression)
+  Variable:
+  $53: InstanceVariable named DynamicMaterial@0x19f840e7800
+  Expression:
+  $62: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x19f840e7100
+$71: Let (Variable = Expression)
+  Variable:
+  $80: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x19f83f7dd60
+  Expression:
+  $89: Context
+    ObjectExpression:
+    $90: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue@0x19f83f7dd60
+    ContextExpression:
+    $111: FinalFunction target=GetGameTimeInSeconds@0x19e4cd8c800 (
+      $120: Self
+      $121: EndFunctionParms
+    )
+$122: Let (Variable = Expression)
+  Variable:
+  $131: StructMemberContext prop=idx:6476@0x19e4cd589b0
+    Expression to struct:
+    $140: LocalVariable named K2Node_MakeStruct_LinearColor@0x19f840e7080
+  Expression:
+  $149: literal float 0
+$154: Let (Variable = Expression)
+  Variable:
+  $163: StructMemberContext prop=idx:6465@0x19e4cd58940
+    Expression to struct:
+    $172: LocalVariable named K2Node_MakeStruct_LinearColor@0x19f840e7080
+  Expression:
+  $181: literal float 1
+$186: Let (Variable = Expression)
+  Variable:
+  $195: StructMemberContext prop=idx:6460@0x19e4cd588d0
+    Expression to struct:
+    $204: LocalVariable named K2Node_MakeStruct_LinearColor@0x19f840e7080
+  Expression:
+  $213: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x19f83f7dd60
+$222: Let (Variable = Expression)
+  Variable:
+  $231: StructMemberContext prop=idx:6459@0x19e4cd58860
+    Expression to struct:
+    $240: LocalVariable named K2Node_MakeStruct_LinearColor@0x19f840e7080
+  Expression:
+  $249: InstanceVariable named Duration@0x19f83f7ddd0
+$258: Context
+  ObjectExpression:
+  $259: InstanceVariable named DynamicMaterial@0x19f840e7800
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $280: FinalFunction target=SetVectorParameterValue@0x19e4d3d4970 (
+    $289: literal name "Timed Blend Values"
+    $302: LocalVariable named K2Node_MakeStruct_LinearColor@0x19f840e7080
+    $311: EndFunctionParms
+  )
+$312: Let (Variable = Expression)
+  Variable:
+  $321: LocalVariable named CallFunc_K2_SetTimer_ReturnValue@0x19f840e7000
+  Expression:
+  $330: Context
+    ObjectExpression:
+    $331: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0x1e
+    RValueProperty: CallFunc_K2_SetTimer_ReturnValue@0x19f840e7000
+    ContextExpression:
+    $352: FinalFunction target=K2_SetTimer@0x19e4cd90d60 (
+      $361: Self
+      $362: literal ansi string "Destroy"
+      $371: InstanceVariable named Duration@0x19f83f7ddd0
+      $380: False
+      $381: EndFunctionParms
+    )
+$382: Return expression:
+  $383: Nothing
+$384: EndOfScript

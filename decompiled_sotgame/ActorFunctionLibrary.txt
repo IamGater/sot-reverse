@@ -1,0 +1,689 @@
+// Class: ActorFunctionLibrary (14 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+ActorFunctionLibrary::ClosestActorToPoint @ RVA 0x2F47580 EA 0x7FF6F6967580
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6967580(__int64 a1, _QWORD *a2, _QWORD *a3)
+{
+  __int64 v5; // rdi
+  __int64 *v6; // rsi
+  float *v7; // rbp
+  float v8; // xmm6_4
+  __int64 v9; // rbx
+  __int64 result; // rax
+  __int64 i; // rsi
+  __m128 *v12; // rcx
+  unsigned __int64 *v13; // rax
+  __m128 v14; // xmm1
+  __m128 v15; // xmm1
+  float v16; // xmm0_4
+  _DWORD v17[3]; // [rsp+28h] [rbp-60h] BYREF
+  __int64 v18; // [rsp+34h] [rbp-54h] BYREF
+  int v19; // [rsp+3Ch] [rbp-4Ch]
+  _BYTE v20[24]; // [rsp+40h] [rbp-48h] BYREF
+  int v21; // [rsp+58h] [rbp-30h]
+  __int64 v22[2]; // [rsp+60h] [rbp-28h] BYREF
+
+  v5 = 0;
+  v22[0] = 0;
+  v22[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v22);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v22);
+  }
+  v6 = v22;
+  if ( a2[7] )
+    v6 = (__int64 *)a2[7];
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v20);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v20);
+  }
+  v7 = (float *)v20;
+  if ( a2[7] )
+    v7 = (float *)a2[7];
+  a2[4] += a2[4] != 0;
+  v8 = 3.4028235e38;
+  v9 = *v6;
+  result = *((int *)v6 + 2);
+  for ( i = *v6 + 8 * result; v9 != i; v9 += 8 )
+  {
+    v12 = *(__m128 **)(*(_QWORD *)v9 + 368LL);
+    if ( v12 )
+    {
+      if ( (v12[14].m128_i8[8] & 1) != 0 )
+      {
+        (*(void (__fastcall **)(__m128 *, _DWORD *))(v12->m128_u64[0] + 1128))(v12, v17);
+      }
+      else
+      {
+        v14 = v12[21];
+        v17[0] = v14.m128_i32[0];
+        v17[1] = _mm_shuffle_ps(v14, v14, 85).m128_u32[0];
+        v17[2] = _mm_shuffle_ps(v14, v14, 170).m128_u32[0];
+      }
+      v13 = (unsigned __int64 *)v17;
+    }
+    else
+    {
+      v18 = 0;
+      v19 = 0;
+      v13 = (unsigned __int64 *)&v18;
+    }
+    v15 = (__m128)*v13;
+    result = *((unsigned int *)v13 + 2);
+    v21 = result;
+    v16 = _mm_shuffle_ps(v15, v15, 85).m128_f32[0];
+    if ( (float)((float)((float)((float)(*v7 - v15.m128_f32[0]) * (float)(*v7 - v15.m128_f32[0]))
+                       + (float)((float)(v7[1] - v16) * (float)(v7[1] - v16)))
+               + (float)((float)(v7[2] - *(float *)&result) * (float)(v7[2] - *(float *)&result))) < v8 )
+    {
+      v8 = (float)((float)((float)(*v7 - v15.m128_f32[0]) * (float)(*v7 - v15.m128_f32[0]))
+                 + (float)((float)(v7[1] - v16) * (float)(v7[1] - v16)))
+         + (float)((float)(v7[2] - *(float *)&result) * (float)(v7[2] - *(float *)&result));
+      v5 = *(_QWORD *)v9;
+    }
+  }
+  *a3 = v5;
+  if ( v22[0] )
+    return sub_7FF6F4DED1F0(v22[0]);
+  return result;
+}
+
+
+======================================================================
+ActorFunctionLibrary::FilterActorArrayByInterface @ RVA 0x2F47780 EA 0x7FF6F6967780
+======================================================================
+// Hidden C++ exception states: #wind=4
+__int64 __fastcall sub_7FF6F6967780(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 *v5; // rsi
+  __int64 result; // rax
+  __int64 v7; // rbx
+  __int64 v8[2]; // [rsp+28h] [rbp-30h] BYREF
+  __int64 v9[4]; // [rsp+38h] [rbp-20h] BYREF
+  __int64 v10; // [rsp+68h] [rbp+10h] BYREF
+
+  v8[0] = 0;
+  v8[1] = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v5 = v8;
+  if ( a2[7] )
+    v5 = (__int64 *)a2[7];
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  a2[4] += a2[4] != 0;
+  result = sub_7FF6F69611B0(v9, v5, v10);
+  v7 = result;
+  if ( a3 != result )
+  {
+    if ( *(_QWORD *)a3 )
+    {
+      sub_7FF6F4DED1F0(*(_QWORD *)a3);
+      if ( *(_QWORD *)a3 )
+        *(_QWORD *)a3 = 0;
+    }
+    *(_QWORD *)a3 = *(_QWORD *)v7;
+    *(_QWORD *)v7 = 0;
+    *(_DWORD *)(a3 + 8) = *(_DWORD *)(v7 + 8);
+    result = *(unsigned int *)(v7 + 12);
+    *(_DWORD *)(a3 + 12) = result;
+    *(_QWORD *)(v7 + 8) = 0;
+  }
+  if ( v9[0] )
+    result = sub_7FF6F4DED1F0(v9[0]);
+  if ( v8[0] )
+    return sub_7FF6F4DED1F0(v8[0]);
+  return result;
+}
+
+
+======================================================================
+ActorFunctionLibrary::FindActorByClass @ RVA 0x2F478D0 EA 0x7FF6F69678D0
+======================================================================
+__int64 __fastcall sub_7FF6F69678D0(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  v8 = v11;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F6961270(v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ActorFunctionLibrary::FindActorByName @ RVA 0x2F47990 EA 0x7FF6F6967990
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6967990(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v5; // rdi
+  __int64 v6; // rax
+  __int64 result; // rax
+  __int64 v8[2]; // [rsp+28h] [rbp-30h] BYREF
+  _BYTE v9[32]; // [rsp+38h] [rbp-20h] BYREF
+  __int64 v10; // [rsp+68h] [rbp+10h] BYREF
+
+  v5 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v8[0] = 0;
+  v8[1] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v8);
+  }
+  v6 = a2[4];
+  LOBYTE(v5) = v6 != 0;
+  a2[4] = v6 + v5;
+  sub_7FF6F3C34DB0((__int64)v9, (__int64)v8);
+  result = sub_7FF6F69614C0(v10, v9);
+  *a3 = result;
+  if ( v8[0] )
+    return sub_7FF6F4DED1F0(v8[0]);
+  return result;
+}
+
+
+======================================================================
+ActorFunctionLibrary::FindActorByNetGuidValue @ RVA 0x2F47A80 EA 0x7FF6F6967A80
+======================================================================
+__int64 __fastcall sub_7FF6F6967A80(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 result; // rax
+  unsigned int v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  v8 = v11;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F6961880(v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ActorFunctionLibrary::FindChildActorsByClass @ RVA 0x2F47B40 EA 0x7FF6F6967B40
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6967B40(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 result; // rax
+  __int64 v6; // rbx
+  __int64 v7[4]; // [rsp+28h] [rbp-20h] BYREF
+  __int64 v8; // [rsp+58h] [rbp+10h] BYREF
+  __int64 v9; // [rsp+60h] [rbp+18h] BYREF
+
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  a2[4] += a2[4] != 0;
+  result = sub_7FF6F6961890(v7, v9, v8);
+  v6 = result;
+  if ( a3 != result )
+  {
+    if ( *(_QWORD *)a3 )
+    {
+      sub_7FF6F4DED1F0(*(_QWORD *)a3);
+      if ( *(_QWORD *)a3 )
+        *(_QWORD *)a3 = 0;
+    }
+    *(_QWORD *)a3 = *(_QWORD *)v6;
+    *(_QWORD *)v6 = 0;
+    *(_DWORD *)(a3 + 8) = *(_DWORD *)(v6 + 8);
+    result = *(unsigned int *)(v6 + 12);
+    *(_DWORD *)(a3 + 12) = result;
+    *(_QWORD *)(v6 + 8) = 0;
+  }
+  if ( v7[0] )
+    return sub_7FF6F4DED1F0(v7[0]);
+  return result;
+}
+
+
+======================================================================
+ActorFunctionLibrary::FindTypedChildActorsByClass @ RVA 0x2F47C60 EA 0x7FF6F6967C60
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6967C60(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 result; // rax
+  __int64 v6; // rbx
+  __int64 v7[4]; // [rsp+28h] [rbp-20h] BYREF
+  __int64 v8; // [rsp+58h] [rbp+10h] BYREF
+  __int64 v9; // [rsp+60h] [rbp+18h] BYREF
+
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  a2[4] += a2[4] != 0;
+  result = sub_7FF6F6961930(v7, v9, v8);
+  v6 = result;
+  if ( a3 != result )
+  {
+    if ( *(_QWORD *)a3 )
+    {
+      sub_7FF6F4DED1F0(*(_QWORD *)a3);
+      if ( *(_QWORD *)a3 )
+        *(_QWORD *)a3 = 0;
+    }
+    *(_QWORD *)a3 = *(_QWORD *)v6;
+    *(_QWORD *)v6 = 0;
+    *(_DWORD *)(a3 + 8) = *(_DWORD *)(v6 + 8);
+    result = *(unsigned int *)(v6 + 12);
+    *(_DWORD *)(a3 + 12) = result;
+    *(_QWORD *)(v6 + 8) = 0;
+  }
+  if ( v7[0] )
+    return sub_7FF6F4DED1F0(v7[0]);
+  return result;
+}
+
+
+======================================================================
+ActorFunctionLibrary::GetActorNetGuidValue @ RVA 0x2F47D80 EA 0x7FF6F6967D80
+======================================================================
+__int64 __fastcall sub_7FF6F6967D80(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rcx
+  __int64 result; // rax
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  v7 = v9;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F6961A20(v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ActorFunctionLibrary::GetTransformOfActorRelativeToAnother @ RVA 0x2F47E00 EA 0x7FF6F6967E00
+======================================================================
+_OWORD *__fastcall sub_7FF6F6967E00(__int64 a1, _QWORD *a2, _OWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // r8
+  __int64 v8; // rdx
+  _OWORD *result; // rax
+  __int64 v10; // [rsp+20h] [rbp-58h] BYREF
+  __int64 v11; // [rsp+28h] [rbp-50h] BYREF
+  _BYTE v12[48]; // [rsp+30h] [rbp-48h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  v8 = v11;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = (_OWORD *)sub_7FF6F6961C80(v12, v8, v7);
+  *a3 = *result;
+  a3[1] = result[1];
+  a3[2] = result[2];
+  return result;
+}
+
+
+======================================================================
+ActorFunctionLibrary::IsActorTickFunctionRegistered @ RVA 0x2F47F00 EA 0x7FF6F6967F00
+======================================================================
+__int64 __fastcall sub_7FF6F6967F00(__int64 a1, _QWORD *a2, bool *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdi
+  __int64 result; // rax
+  __int64 v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v3) = v6 != 0;
+  v7 = v6 + v3;
+  result = v9;
+  a2[4] = v7;
+  *a3 = (*(_BYTE *)(result + 90) & 0x40) != 0;
+  return result;
+}
+
+
+======================================================================
+ActorFunctionLibrary::IsDependentActorSpawnAckedOnClient @ RVA 0x2F47F90 EA 0x7FF6F6967F90
+======================================================================
+__int64 __fastcall sub_7FF6F6967F90(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  v8 = v11;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F6961D30(v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ActorFunctionLibrary::IsParentActorInChildActorComponentHierarchy @ RVA 0x2F48050 EA 0x7FF6F6968050
+======================================================================
+__int64 __fastcall sub_7FF6F6968050(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v6; // rax
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  v8 = v11;
+  LOBYTE(v3) = v6 != 0;
+  a2[4] = v6 + v3;
+  result = sub_7FF6F6961DC0(v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+ActorFunctionLibrary::TestSetActorRoleAutonomousProxy @ RVA 0x2F48110 EA 0x7FF6F6968110
+======================================================================
+__int64 __fastcall sub_7FF6F6968110(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  __int64 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v7 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v5 = v7;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return nullsub_3293(v5);
+}
+
+
+======================================================================
+ActorFunctionLibrary::TestSetNetCullDistance @ RVA 0x2F48180 EA 0x7FF6F6968180
+======================================================================
+__int64 __fastcall sub_7FF6F6968180(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v4; // rax
+  __int64 v5; // rcx
+  int v7; // [rsp+38h] [rbp+10h] BYREF
+  __int64 v8; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v7 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  v4 = a2[4];
+  v5 = v8;
+  LOBYTE(v2) = v4 != 0;
+  a2[4] = v4 + v2;
+  return nullsub_3294(v5);
+}
+

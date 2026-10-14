@@ -1,0 +1,3464 @@
+// E:\unreal-projects\Athena\Content\Blueprints\GameObjects\TallTales\Props\bp_shroudbreaker_onship.uasset -> BP_Shroudbreaker_OnShip_C
+
+=== BP_Shroudbreaker_OnShip_C::GetShroudBreakerObjectEmitterComponent (30 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalOutVariable named ReturnValue@0x2139c135280
+  Expression:
+  $10: InstanceVariable named WwiseEmitter@0x2139c138980
+$19: Return expression:
+  $20: LocalOutVariable named ReturnValue@0x2139c135280
+$29: EndOfScript
+
+=== BP_Shroudbreaker_OnShip_C::GetShipHullAudio (456 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_IsValid_ReturnValue@0x2139c135380
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x2139c135380
+    ContextExpression:
+    $32: FinalFunction target=IsValid@0x212d63ae380 (
+      $41: InstanceVariable named ShipHullAudio@0x2139c139400
+      $50: EndFunctionParms
+    )
+$51: JumpIfNot -> 0x59, cond:
+  $56: LocalVariable named CallFunc_IsValid_ReturnValue@0x2139c135380
+$65: LetObj (Variable = Expression)
+  Variable:
+  $66: LocalOutVariable named ShipHullAudioRef@0x2139c135300
+  Expression:
+  $75: LocalVariable named ShipHullAudioReturn@0x2139c135600
+$84: Jump to offset 0x1c5
+$89: LetObj (Variable = Expression)
+  Variable:
+  $90: LocalVariable named CallFunc_GetParentActor_ReturnValue@0x2139c135400
+  Expression:
+  $99: FinalFunction target=GetParentActor@0x212d6384340 (
+    $108: EndFunctionParms
+  )
+$109: Let (Variable = Expression)
+  Variable:
+  $118: LocalVariable named CallFunc_FindChildActorsByClass_ReturnValue@0x2139c135700
+  Expression:
+  $127: Context
+    ObjectExpression:
+    $128: ObjectConst Default__ActorFunctionLibrary@0x212d7010130
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_FindChildActorsByClass_ReturnValue@0x2139c135700
+    ContextExpression:
+    $149: FinalFunction target=FindChildActorsByClass@0x212d6a464e0 (
+      $158: LocalVariable named CallFunc_GetParentActor_ReturnValue@0x2139c135400
+      $167: ObjectConst ShipHullAudio@0x212d5a9af00
+      $176: EndFunctionParms
+    )
+$177: Context
+  ObjectExpression:
+  $178: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $199: FinalFunction target=Array_Get@0x212d69876b0 (
+    $208: LocalVariable named CallFunc_FindChildActorsByClass_ReturnValue@0x2139c135700
+    $217: literal int32 0
+    $222: LocalVariable named CallFunc_Array_Get_Item@0x2139c135480
+    $231: EndFunctionParms
+  )
+$232: Let (Variable = Expression)
+  Variable:
+  $241: LocalVariable named K2Node_DynamicCast_AsShip_Hull_Audio@0x2139c135500
+  Expression:
+  $250: DynamicCast to ShipHullAudio@0x212d5a9af00 of expr:
+  $259: LocalVariable named CallFunc_Array_Get_Item@0x2139c135480
+$268: Let (Variable = Expression)
+  Variable:
+  $277: LocalVariable named K2Node_DynamicCast_bSuccess@0x2139c135580
+  Expression:
+  $286: PrimitiveCast type=71
+    Argument:
+    $288: LocalVariable named K2Node_DynamicCast_AsShip_Hull_Audio@0x2139c135500
+$297: JumpIfNot -> 0x14f, cond:
+  $302: LocalVariable named K2Node_DynamicCast_bSuccess@0x2139c135580
+$311: LetObj (Variable = Expression)
+  Variable:
+  $312: LocalVariable named ShipHullAudioReturn@0x2139c135600
+  Expression:
+  $321: LocalVariable named K2Node_DynamicCast_AsShip_Hull_Audio@0x2139c135500
+$330: Jump to offset 0x41
+$335: Context
+  ObjectExpression:
+  $336: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+  SkipBytes: 0x5b
+  RValueProperty: (null)
+  ContextExpression:
+  $357: FinalFunction target=PrintString@0x212d63b6df0 (
+    $366: Self
+    $367: literal ansi string "Error: Could not find ship Hull Audio"
+    $406: False
+    $407: True
+    $408: literal struct LinearColor@0x212d63787c0 (size 16)
+      $421: literal float 0
+      $426: literal float 0.6600000262260437
+      $431: literal float 1
+      $436: literal float 1
+      $441: EndStructConst
+    $442: literal float 2
+    $447: EndFunctionParms
+  )
+$448: Jump to offset 0x41
+$453: Return expression:
+  $454: Nothing
+$455: EndOfScript
+
+=== BP_Shroudbreaker_OnShip_C::OnRep_ShroudBreakerDeactivate (17 bytes) ===
+$0: VirtualFunction call "OnRepFunctionDeactivateShroudBreaker" (
+  $13: EndFunctionParms
+)
+$14: Return expression:
+  $15: Nothing
+$16: EndOfScript
+
+=== BP_Shroudbreaker_OnShip_C::OnRep_ShroudBreakerEffectsActive (1015 bytes) ===
+$0: JumpIfNot -> 0x1d, cond:
+  $5: InstanceVariable named ShroudBreakerEffectsActive@0x2139c139080
+$14: FinalFunction target=ActivateShroudBreakerCalculationsOnShip@0x212d6860800 (
+  $23: EndFunctionParms
+)
+$24: Jump to offset 0x3f4
+$29: FinalFunction target=DeactivateShroudBreakerCalculationsOnShip@0x212d68608c0 (
+  $38: EndFunctionParms
+)
+$39: Let (Variable = Expression)
+  Variable:
+  $48: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x2139c208f10
+  Expression:
+  $57: Context
+    ObjectExpression:
+    $58: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue@0x2139c208f10
+    ContextExpression:
+    $79: FinalFunction target=GetGameTimeInSeconds@0x212d63ac800 (
+      $88: Self
+      $89: EndFunctionParms
+    )
+$90: Let (Variable = Expression)
+  Variable:
+  $99: StructMemberContext prop=idx:6476@0x212d63789b0
+    Expression to struct:
+    $108: LocalVariable named UniqueObjectNameForCooking_LinearColor@0x2139c135780
+  Expression:
+  $117: literal float 1
+$122: Let (Variable = Expression)
+  Variable:
+  $131: StructMemberContext prop=idx:6465@0x212d6378940
+    Expression to struct:
+    $140: LocalVariable named UniqueObjectNameForCooking_LinearColor@0x2139c135780
+  Expression:
+  $149: literal float 0
+$154: Let (Variable = Expression)
+  Variable:
+  $163: StructMemberContext prop=idx:6460@0x212d63788d0
+    Expression to struct:
+    $172: LocalVariable named UniqueObjectNameForCooking_LinearColor@0x2139c135780
+  Expression:
+  $181: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x2139c208f10
+$190: Let (Variable = Expression)
+  Variable:
+  $199: StructMemberContext prop=idx:6459@0x212d6378860
+    Expression to struct:
+    $208: LocalVariable named UniqueObjectNameForCooking_LinearColor@0x2139c135780
+  Expression:
+  $217: literal float 4.5
+$222: Context
+  ObjectExpression:
+  $223: InstanceVariable named ShieldMaterial@0x2139c139280
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $244: FinalFunction target=SetVectorParameterValue@0x212d69f4970 (
+    $253: literal name "Timed Blend Values"
+    $266: LocalVariable named UniqueObjectNameForCooking_LinearColor@0x2139c135780
+    $275: EndFunctionParms
+  )
+$276: Context
+  ObjectExpression:
+  $277: InstanceVariable named ShieldMesh@0x2139c138900
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $298: VirtualFunction call "SetVisibility" (
+    $311: False
+    $312: False
+    $313: EndFunctionParms
+  )
+$314: Context
+  ObjectExpression:
+  $315: InstanceVariable named vfx_shroudbreaker_shipTip@0x2139c138880
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $336: VirtualFunction call "Deactivate" (
+    $349: EndFunctionParms
+  )
+$350: Context
+  ObjectExpression:
+  $351: InstanceVariable named vfx_shroudbreaker_ember@0x2139c138800
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $372: VirtualFunction call "Deactivate" (
+    $385: EndFunctionParms
+  )
+$386: Context
+  ObjectExpression:
+  $387: InstanceVariable named vfx_ShroudBreaker_OnShip_stage1@0x2139c138a80
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $408: VirtualFunction call "Deactivate" (
+    $421: EndFunctionParms
+  )
+$422: Let (Variable = Expression)
+  Variable:
+  $431: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue2@0x2139c208f80
+  Expression:
+  $440: Context
+    ObjectExpression:
+    $441: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue2@0x2139c208f80
+    ContextExpression:
+    $462: FinalFunction target=GetGameTimeInSeconds@0x212d63ac800 (
+      $471: Self
+      $472: EndFunctionParms
+    )
+$473: Let (Variable = Expression)
+  Variable:
+  $482: StructMemberContext prop=idx:6476@0x212d63789b0
+    Expression to struct:
+    $491: LocalVariable named UniqueObjectNameForCooking_LinearColor3@0x2139c135880
+  Expression:
+  $500: InstanceVariable named GemEmissiveOn@0x2139c209ae0
+$509: Let (Variable = Expression)
+  Variable:
+  $518: StructMemberContext prop=idx:6465@0x212d6378940
+    Expression to struct:
+    $527: LocalVariable named UniqueObjectNameForCooking_LinearColor3@0x2139c135880
+  Expression:
+  $536: InstanceVariable named GemEmissiveOff@0x2139c209bc0
+$545: Let (Variable = Expression)
+  Variable:
+  $554: StructMemberContext prop=idx:6460@0x212d63788d0
+    Expression to struct:
+    $563: LocalVariable named UniqueObjectNameForCooking_LinearColor3@0x2139c135880
+  Expression:
+  $572: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue2@0x2139c208f80
+$581: Let (Variable = Expression)
+  Variable:
+  $590: StructMemberContext prop=idx:6459@0x212d6378860
+    Expression to struct:
+    $599: LocalVariable named UniqueObjectNameForCooking_LinearColor3@0x2139c135880
+  Expression:
+  $608: literal float 4
+$613: Context
+  ObjectExpression:
+  $614: InstanceVariable named Shroudbreaker Material@0x2139c139000
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $635: FinalFunction target=SetVectorParameterValue@0x212d69f4970 (
+    $644: literal name "Shroud Breaker Emissive Blend"
+    $657: LocalVariable named UniqueObjectNameForCooking_LinearColor3@0x2139c135880
+    $666: EndFunctionParms
+  )
+$667: Let (Variable = Expression)
+  Variable:
+  $676: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue2@0x2139c208f80
+  Expression:
+  $685: Context
+    ObjectExpression:
+    $686: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue2@0x2139c208f80
+    ContextExpression:
+    $707: FinalFunction target=GetGameTimeInSeconds@0x212d63ac800 (
+      $716: Self
+      $717: EndFunctionParms
+    )
+$718: Let (Variable = Expression)
+  Variable:
+  $727: StructMemberContext prop=idx:6476@0x212d63789b0
+    Expression to struct:
+    $736: LocalVariable named UniqueObjectNameForCooking_LinearColor2@0x2139c135800
+  Expression:
+  $745: literal float 1
+$750: Let (Variable = Expression)
+  Variable:
+  $759: StructMemberContext prop=idx:6465@0x212d6378940
+    Expression to struct:
+    $768: LocalVariable named UniqueObjectNameForCooking_LinearColor2@0x2139c135800
+  Expression:
+  $777: literal float 0
+$782: Let (Variable = Expression)
+  Variable:
+  $791: StructMemberContext prop=idx:6460@0x212d63788d0
+    Expression to struct:
+    $800: LocalVariable named UniqueObjectNameForCooking_LinearColor2@0x2139c135800
+  Expression:
+  $809: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue2@0x2139c208f80
+$818: Let (Variable = Expression)
+  Variable:
+  $827: StructMemberContext prop=idx:6459@0x212d6378860
+    Expression to struct:
+    $836: LocalVariable named UniqueObjectNameForCooking_LinearColor2@0x2139c135800
+  Expression:
+  $845: literal float 4
+$850: Context
+  ObjectExpression:
+  $851: InstanceVariable named Shroudbreaker Material@0x2139c139000
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $872: FinalFunction target=SetVectorParameterValue@0x212d69f4970 (
+    $881: literal name "Shroud Breaker Pulse Blend"
+    $894: LocalVariable named UniqueObjectNameForCooking_LinearColor2@0x2139c135800
+    $903: EndFunctionParms
+  )
+$904: Context
+  ObjectExpression:
+  $905: InstanceVariable named vfx_ShroudBreaker_OnShip_stage1@0x2139c138a80
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $926: VirtualFunction call "Deactivate" (
+    $939: EndFunctionParms
+  )
+$940: Context
+  ObjectExpression:
+  $941: InstanceVariable named vfx_shroudbreaker_ember@0x2139c138800
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $962: VirtualFunction call "Deactivate" (
+    $975: EndFunctionParms
+  )
+$976: Context
+  ObjectExpression:
+  $977: InstanceVariable named vfx_ShroudBreaker_disappear_smoke_cloud@0x2139c138a00
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $998: VirtualFunction call "Deactivate" (
+    $1011: EndFunctionParms
+  )
+$1012: Return expression:
+  $1013: Nothing
+$1014: EndOfScript
+
+=== BP_Shroudbreaker_OnShip_C::OnRep_MusicZoneActive (86 bytes) ===
+$0: JumpIfNot -> 0x33, cond:
+  $5: InstanceVariable named MusicZoneActive@0x2139c138f80
+$14: Context
+  ObjectExpression:
+  $15: InstanceVariable named MusicZone@0x2139c138b00
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $36: FinalFunction target=ActivateZone@0x212d6ace620 (
+    $45: EndFunctionParms
+  )
+$46: Jump to offset 0x53
+$51: Context
+  ObjectExpression:
+  $52: InstanceVariable named MusicZone@0x2139c138b00
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $73: FinalFunction target=DisableZone@0x212d6ace8d0 (
+    $82: EndFunctionParms
+  )
+$83: Return expression:
+  $84: Nothing
+$85: EndOfScript
+
+=== BP_Shroudbreaker_OnShip_C::UnregisterShipEvent (118 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue@0x2139c135a80
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsHandleRegistered_ReturnValue@0x2139c135a80
+    ContextExpression:
+    $32: FinalFunction target=IsHandleRegistered@0x212d6a30550 (
+      $41: LocalOutVariable named Handle@0x2139c135a00
+      $50: EndFunctionParms
+    )
+$51: JumpIfNot -> 0x73, cond:
+  $56: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue@0x2139c135a80
+$65: Context
+  ObjectExpression:
+  $66: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $87: FinalFunction target=UnregisterEventFromHandle@0x212d6a31420 (
+    $96: LocalOutVariable named Dispatcher@0x2139c135980
+    $105: LocalOutVariable named Handle@0x2139c135a00
+    $114: EndFunctionParms
+  )
+$115: Return expression:
+  $116: Nothing
+$117: EndOfScript
+
+=== BP_Shroudbreaker_OnShip_C::GetObjMsgDispatcher (401 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named CallFunc_IsValid_ReturnValue@0x2139c135c80
+  Expression:
+  $10: Context
+    ObjectExpression:
+    $11: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x2139c135c80
+    ContextExpression:
+    $32: FinalFunction target=IsValid@0x212d63ae380 (
+      $41: InstanceVariable named ParentShipActor@0x2139c138f00
+      $50: EndFunctionParms
+    )
+$51: JumpIfNot -> 0xe2, cond:
+  $56: LocalVariable named CallFunc_IsValid_ReturnValue@0x2139c135c80
+$65: Let (Variable = Expression)
+  Variable:
+  $74: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x2139c135c00
+  Expression:
+  $83: Context
+    ObjectExpression:
+    $84: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x2139c135c00
+    ContextExpression:
+    $105: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x212d6a30390 (
+      $114: InstanceVariable named ParentShipActor@0x2139c138f00
+      $123: EndFunctionParms
+    )
+$124: LetBool (Variable = Expression)
+  Variable:
+  $125: LocalVariable named CallFunc_IsObjectMessagingDispatcherValid_ReturnValue@0x2139c135d00
+  Expression:
+  $134: Context
+    ObjectExpression:
+    $135: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsObjectMessagingDispatcherValid_ReturnValue@0x2139c135d00
+    ContextExpression:
+    $156: FinalFunction target=IsObjectMessagingDispatcherValid@0x212d6a30710 (
+      $165: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x2139c135c00
+      $174: EndFunctionParms
+    )
+$175: Let (Variable = Expression)
+  Variable:
+  $184: LocalOutVariable named Dispatcher@0x2139c135b00
+  Expression:
+  $193: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x2139c135c00
+$202: LetBool (Variable = Expression)
+  Variable:
+  $203: LocalOutVariable named Success@0x2139c135b80
+  Expression:
+  $212: LocalVariable named CallFunc_IsObjectMessagingDispatcherValid_ReturnValue@0x2139c135d00
+$221: Jump to offset 0x18e
+$226: LetObj (Variable = Expression)
+  Variable:
+  $227: LocalVariable named CallFunc_GetParentActor_ReturnValue@0x2139c135d80
+  Expression:
+  $236: FinalFunction target=GetParentActor@0x212d6384340 (
+    $245: EndFunctionParms
+  )
+$246: LetBool (Variable = Expression)
+  Variable:
+  $247: LocalVariable named CallFunc_IsValid_ReturnValue2@0x2139c135e00
+  Expression:
+  $256: Context
+    ObjectExpression:
+    $257: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue2@0x2139c135e00
+    ContextExpression:
+    $278: FinalFunction target=IsValid@0x212d63ae380 (
+      $287: LocalVariable named CallFunc_GetParentActor_ReturnValue@0x2139c135d80
+      $296: EndFunctionParms
+    )
+$297: JumpIfNot -> 0x163, cond:
+  $302: LocalVariable named CallFunc_IsValid_ReturnValue2@0x2139c135e00
+$311: LetObj (Variable = Expression)
+  Variable:
+  $312: LocalVariable named CallFunc_GetParentActor_ReturnValue@0x2139c135d80
+  Expression:
+  $321: FinalFunction target=GetParentActor@0x212d6384340 (
+    $330: EndFunctionParms
+  )
+$331: LetObj (Variable = Expression)
+  Variable:
+  $332: InstanceVariable named ParentShipActor@0x2139c138f00
+  Expression:
+  $341: LocalVariable named CallFunc_GetParentActor_ReturnValue@0x2139c135d80
+$350: Jump to offset 0x41
+$355: Let (Variable = Expression)
+  Variable:
+  $364: LocalOutVariable named Dispatcher@0x2139c135b00
+  Expression:
+  $373: literal struct ObjectMessagingDispatcherHandle@0x212d65ab180 (size 8)
+    $386: EndStructConst
+$387: LetBool (Variable = Expression)
+  Variable:
+  $388: LocalOutVariable named Success@0x2139c135b80
+  Expression:
+  $397: False
+$398: Return expression:
+  $399: Nothing
+$400: EndOfScript
+
+=== BP_Shroudbreaker_OnShip_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_Shroudbreaker_OnShip_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Shroudbreaker_OnShip" (
+  $13: literal int32 4457
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Shroudbreaker_OnShip_C::ReceiveEndPlay (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_EndPlayReason@0x2139c136800
+  Expression:
+  $9: LocalVariable named EndPlayReason@0x2139c135e80
+$18: VirtualFunction call "ExecuteUbergraph_BP_Shroudbreaker_OnShip" (
+  $31: literal int32 4452
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Shroudbreaker_OnShip_C::OnShroudbreakerActivated (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Ev7@0x2139c136500
+  Expression:
+  $9: LocalVariable named Ev@0x2139c135f00
+$18: VirtualFunction call "ExecuteUbergraph_BP_Shroudbreaker_OnShip" (
+  $31: literal int32 2984
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Shroudbreaker_OnShip_C::OnShroudbreakerDeactivated (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Ev6@0x2139c136680
+  Expression:
+  $9: LocalVariable named Ev@0x2139c135f80
+$18: VirtualFunction call "ExecuteUbergraph_BP_Shroudbreaker_OnShip" (
+  $31: literal int32 3546
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Shroudbreaker_OnShip_C::OnShipDestroyed (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Ev5@0x2139c136880
+  Expression:
+  $9: LocalVariable named Ev@0x2139c136000
+$18: VirtualFunction call "ExecuteUbergraph_BP_Shroudbreaker_OnShip" (
+  $31: literal int32 4911
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Shroudbreaker_OnShip_C::OnActivateEffects (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Ev4@0x2139c136900
+  Expression:
+  $9: LocalVariable named Ev@0x2139c138e80
+$18: VirtualFunction call "ExecuteUbergraph_BP_Shroudbreaker_OnShip" (
+  $31: literal int32 4916
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Shroudbreaker_OnShip_C::OnDeactivateEffects (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Ev3@0x2139c136980
+  Expression:
+  $9: LocalVariable named Ev@0x2139c136080
+$18: VirtualFunction call "ExecuteUbergraph_BP_Shroudbreaker_OnShip" (
+  $31: literal int32 4921
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Shroudbreaker_OnShip_C::PlayerEnteredTP (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Ev2@0x2139c136c80
+  Expression:
+  $9: LocalVariable named Ev@0x2139c136100
+$18: VirtualFunction call "ExecuteUbergraph_BP_Shroudbreaker_OnShip" (
+  $31: literal int32 4926
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Shroudbreaker_OnShip_C::PlayerLeftTP (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_Ev@0x2139c136e00
+  Expression:
+  $9: LocalVariable named Ev@0x2139c136180
+$18: VirtualFunction call "ExecuteUbergraph_BP_Shroudbreaker_OnShip" (
+  $31: literal int32 5943
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Shroudbreaker_OnShip_C::OnRepFunctionDeactivateShroudBreaker (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Shroudbreaker_OnShip" (
+  $13: literal int32 6167
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Shroudbreaker_OnShip_C::OnShroudBreakerActivationStateChange (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Shroudbreaker_OnShip" (
+  $13: literal int32 8370
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Shroudbreaker_OnShip_C::Stage 4 Activation (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Shroudbreaker_OnShip" (
+  $13: literal int32 10598
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Shroudbreaker_OnShip_C::Stage 3 Activation (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Shroudbreaker_OnShip" (
+  $13: literal int32 10785
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Shroudbreaker_OnShip_C::Stage 2 Activation (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Shroudbreaker_OnShip" (
+  $13: literal int32 10790
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Shroudbreaker_OnShip_C::Stage1Activation (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Shroudbreaker_OnShip" (
+  $13: literal int32 10795
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Shroudbreaker_OnShip_C::Deactivate All VFX and SFX (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Shroudbreaker_OnShip" (
+  $13: literal int32 11264
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Shroudbreaker_OnShip_C::Deactivation Stage 4 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Shroudbreaker_OnShip" (
+  $13: literal int32 11831
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Shroudbreaker_OnShip_C::Deactivation Stage 3 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Shroudbreaker_OnShip" (
+  $13: literal int32 11836
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Shroudbreaker_OnShip_C::Deactivation Stage 2 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Shroudbreaker_OnShip" (
+  $13: literal int32 11841
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Shroudbreaker_OnShip_C::Deactivation Stage 1 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_Shroudbreaker_OnShip" (
+  $13: literal int32 11846
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_Shroudbreaker_OnShip_C::ExecuteUbergraph_BP_Shroudbreaker_OnShip (11854 bytes) ===
+$0: FlowStack.Push(0x2e4b)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x2139c208ff0
+$15: VirtualFunction call "OnRep_MusicZoneActive" (
+  $28: EndFunctionParms
+)
+$29: LetBool (Variable = Expression)
+  Variable:
+  $30: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue3@0x2139c136300
+  Expression:
+  $39: FinalFunction target=FlushNetDormancy@0x212d6381090 (
+    $48: EndFunctionParms
+  )
+$49: LetBool (Variable = Expression)
+  Variable:
+  $50: InstanceVariable named ShroudBreakerEffectsActive@0x2139c139080
+  Expression:
+  $59: True
+$60: VirtualFunction call "OnRep_ShroudBreakerEffectsActive" (
+  $73: EndFunctionParms
+)
+$74: PopExecutionFlow (jump to popped addr)
+$75: LetBool (Variable = Expression)
+  Variable:
+  $76: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue@0x2139c136200
+  Expression:
+  $85: FinalFunction target=FlushNetDormancy@0x212d6381090 (
+    $94: EndFunctionParms
+  )
+$95: LetBool (Variable = Expression)
+  Variable:
+  $96: InstanceVariable named MusicZoneActive@0x2139c138f80
+  Expression:
+  $105: True
+$106: Jump to offset 0xf
+$111: VirtualFunction call "OnRep_MusicZoneActive" (
+  $124: EndFunctionParms
+)
+$125: LetBool (Variable = Expression)
+  Variable:
+  $126: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue4@0x2139c136380
+  Expression:
+  $135: FinalFunction target=FlushNetDormancy@0x212d6381090 (
+    $144: EndFunctionParms
+  )
+$145: LetBool (Variable = Expression)
+  Variable:
+  $146: InstanceVariable named ShroudBreakerEffectsActive@0x2139c139080
+  Expression:
+  $155: False
+$156: VirtualFunction call "OnRep_ShroudBreakerEffectsActive" (
+  $169: EndFunctionParms
+)
+$170: PopExecutionFlow (jump to popped addr)
+$171: LetBool (Variable = Expression)
+  Variable:
+  $172: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue2@0x2139c136280
+  Expression:
+  $181: FinalFunction target=FlushNetDormancy@0x212d6381090 (
+    $190: EndFunctionParms
+  )
+$191: LetBool (Variable = Expression)
+  Variable:
+  $192: InstanceVariable named MusicZoneActive@0x2139c138f80
+  Expression:
+  $201: False
+$202: Jump to offset 0x6f
+$207: VirtualFunction call "OnRep_ShroudBreakerDeactivate" (
+  $220: EndFunctionParms
+)
+$221: PopExecutionFlow (jump to popped addr)
+$222: LetBool (Variable = Expression)
+  Variable:
+  $223: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue5@0x2139c136400
+  Expression:
+  $232: FinalFunction target=FlushNetDormancy@0x212d6381090 (
+    $241: EndFunctionParms
+  )
+$242: LetBool (Variable = Expression)
+  Variable:
+  $243: InstanceVariable named ShroudBreakerDeactivate@0x2139c139100
+  Expression:
+  $252: True
+$253: Jump to offset 0xcf
+$258: Let (Variable = Expression)
+  Variable:
+  $267: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x2139c20c5c0
+  Expression:
+  $276: Context
+    ObjectExpression:
+    $277: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue@0x2139c20c5c0
+    ContextExpression:
+    $298: FinalFunction target=GetGameTimeInSeconds@0x212d63ac800 (
+      $307: Self
+      $308: EndFunctionParms
+    )
+$309: Let (Variable = Expression)
+  Variable:
+  $318: StructMemberContext prop=idx:6476@0x212d63789b0
+    Expression to struct:
+    $327: LocalVariable named UniqueObjectNameForCooking_LinearColor@0x2139c138000
+  Expression:
+  $336: InstanceVariable named GemEmissiveOff@0x2139c209bc0
+$345: Let (Variable = Expression)
+  Variable:
+  $354: StructMemberContext prop=idx:6465@0x212d6378940
+    Expression to struct:
+    $363: LocalVariable named UniqueObjectNameForCooking_LinearColor@0x2139c138000
+  Expression:
+  $372: literal float 12
+$377: Let (Variable = Expression)
+  Variable:
+  $386: StructMemberContext prop=idx:6460@0x212d63788d0
+    Expression to struct:
+    $395: LocalVariable named UniqueObjectNameForCooking_LinearColor@0x2139c138000
+  Expression:
+  $404: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x2139c20c5c0
+$413: Let (Variable = Expression)
+  Variable:
+  $422: StructMemberContext prop=idx:6459@0x212d6378860
+    Expression to struct:
+    $431: LocalVariable named UniqueObjectNameForCooking_LinearColor@0x2139c138000
+  Expression:
+  $440: literal float 4
+$445: Context
+  ObjectExpression:
+  $446: InstanceVariable named Shroudbreaker Material@0x2139c139000
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $467: FinalFunction target=SetVectorParameterValue@0x212d69f4970 (
+    $476: literal name "Shroud Breaker Emissive Blend"
+    $489: LocalVariable named UniqueObjectNameForCooking_LinearColor@0x2139c138000
+    $498: EndFunctionParms
+  )
+$499: Context
+  ObjectExpression:
+  $500: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $521: FinalFunction target=Delay@0x212d63a6d40 (
+    $530: Self
+    $531: literal float 6
+    $536: literal struct LatentActionInfo@0x212d63a6e80 (size 32)
+      $549: literal CodeSkipSizeType 0x240
+      $554: literal int32 2
+      $559: literal name "ExecuteUbergraph_BP_Shroudbreaker_OnShip"
+      $572: Self
+      $573: EndStructConst
+    $574: EndFunctionParms
+  )
+$575: PopExecutionFlow (jump to popped addr)
+$576: Let (Variable = Expression)
+  Variable:
+  $585: LocalVariable named CallFunc_WwiseEmitterComponentPostEvent_ReturnValue@0x2139c209220
+  Expression:
+  $594: Context
+    ObjectExpression:
+    $595: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x212d7001550
+    SkipBytes: 0x38
+    RValueProperty: CallFunc_WwiseEmitterComponentPostEvent_ReturnValue@0x2139c209220
+    ContextExpression:
+    $616: FinalFunction target=WwiseEmitterComponentPostEvent@0x212d6a1dca0 (
+      $625: InstanceVariable named WwiseEmitter@0x2139c138980
+      $634: ObjectConst Play_sfx_interact_shroudbreaker_destroyed@0x21396cae100
+      $643: literal byte 2
+      $645: literal name "None"
+      $658: literal name "None"
+      $671: EndFunctionParms
+    )
+$672: Context
+  ObjectExpression:
+  $673: InstanceVariable named vfx_ShroudBreaker_disappear_smoke_cloud@0x2139c138a00
+  SkipBytes: 0xf
+  RValueProperty: (null)
+  ContextExpression:
+  $694: VirtualFunction call "Activate" (
+    $707: False
+    $708: EndFunctionParms
+  )
+$709: Context
+  ObjectExpression:
+  $710: InstanceVariable named StaticMesh@0x2139c138b80
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $731: VirtualFunction call "SetVisibility" (
+    $744: False
+    $745: False
+    $746: EndFunctionParms
+  )
+$747: Context
+  ObjectExpression:
+  $748: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $769: FinalFunction target=Delay@0x212d63a6d40 (
+    $778: Self
+    $779: literal float 5
+    $784: literal struct LatentActionInfo@0x212d63a6e80 (size 32)
+      $797: literal CodeSkipSizeType 0x338
+      $802: literal int32 3
+      $807: literal name "ExecuteUbergraph_BP_Shroudbreaker_OnShip"
+      $820: Self
+      $821: EndStructConst
+    $822: EndFunctionParms
+  )
+$823: PopExecutionFlow (jump to popped addr)
+$824: VirtualFunction call "SetActorHiddenInGame" (
+  $837: True
+  $838: EndFunctionParms
+)
+$839: VirtualFunction call "GetShipHullAudio" (
+  $852: LocalVariable named CallFunc_GetShipHullAudio_ShipHullAudioRef@0x2139c137c80
+  $861: EndFunctionParms
+)
+$862: LetBool (Variable = Expression)
+  Variable:
+  $863: LocalVariable named CallFunc_IsValid_ReturnValue2@0x2139c137d80
+  Expression:
+  $872: Context
+    ObjectExpression:
+    $873: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue2@0x2139c137d80
+    ContextExpression:
+    $894: FinalFunction target=IsValid@0x212d63ae380 (
+      $903: LocalVariable named CallFunc_GetShipHullAudio_ShipHullAudioRef@0x2139c137c80
+      $912: EndFunctionParms
+    )
+$913: PopExecutionFlowIfNot, cond:
+$914: LocalVariable named CallFunc_IsValid_ReturnValue2@0x2139c137d80
+$923: Context
+  ObjectExpression:
+  $924: LocalVariable named CallFunc_GetShipHullAudio_ShipHullAudioRef@0x2139c137c80
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $945: FinalFunction target=StopShroudBreakerShieldSound@0x212d6852fb0 (
+    $954: EndFunctionParms
+  )
+$955: PopExecutionFlow (jump to popped addr)
+$956: VirtualFunction call "OnRep_ShroudBreakerDeactivate" (
+  $969: EndFunctionParms
+)
+$970: PopExecutionFlow (jump to popped addr)
+$971: LetBool (Variable = Expression)
+  Variable:
+  $972: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue6@0x2139c136480
+  Expression:
+  $981: FinalFunction target=FlushNetDormancy@0x212d6381090 (
+    $990: EndFunctionParms
+  )
+$991: LetBool (Variable = Expression)
+  Variable:
+  $992: InstanceVariable named ShroudBreakerDeactivate@0x2139c139100
+  Expression:
+  $1001: False
+$1002: Jump to offset 0x3bc
+$1007: Context
+  ObjectExpression:
+  $1008: InstanceVariable named vfx_shroudbreaker_shipTip@0x2139c138880
+  SkipBytes: 0xf
+  RValueProperty: (null)
+  ContextExpression:
+  $1029: VirtualFunction call "Activate" (
+    $1042: True
+    $1043: EndFunctionParms
+  )
+$1044: Context
+  ObjectExpression:
+  $1045: InstanceVariable named vfx_shroudbreaker_ember@0x2139c138800
+  SkipBytes: 0xf
+  RValueProperty: (null)
+  ContextExpression:
+  $1066: VirtualFunction call "Activate" (
+    $1079: True
+    $1080: EndFunctionParms
+  )
+$1081: Context
+  ObjectExpression:
+  $1082: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $1103: FinalFunction target=Delay@0x212d63a6d40 (
+    $1112: Self
+    $1113: literal float 1
+    $1118: literal struct LatentActionInfo@0x212d63a6e80 (size 32)
+      $1131: literal CodeSkipSizeType 0x486
+      $1136: literal int32 6
+      $1141: literal name "ExecuteUbergraph_BP_Shroudbreaker_OnShip"
+      $1154: Self
+      $1155: EndStructConst
+    $1156: EndFunctionParms
+  )
+$1157: PopExecutionFlow (jump to popped addr)
+$1158: Context
+  ObjectExpression:
+  $1159: InstanceVariable named ShieldMesh@0x2139c138900
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $1180: VirtualFunction call "SetVisibility" (
+    $1193: True
+    $1194: False
+    $1195: EndFunctionParms
+  )
+$1196: Let (Variable = Expression)
+  Variable:
+  $1205: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue6@0x2139c209990
+  Expression:
+  $1214: Context
+    ObjectExpression:
+    $1215: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue6@0x2139c209990
+    ContextExpression:
+    $1236: FinalFunction target=GetGameTimeInSeconds@0x212d63ac800 (
+      $1245: Self
+      $1246: EndFunctionParms
+    )
+$1247: Let (Variable = Expression)
+  Variable:
+  $1256: StructMemberContext prop=idx:6476@0x212d63789b0
+    Expression to struct:
+    $1265: LocalVariable named UniqueObjectNameForCooking_LinearColor10@0x2139c138080
+  Expression:
+  $1274: literal float 0
+$1279: Let (Variable = Expression)
+  Variable:
+  $1288: StructMemberContext prop=idx:6465@0x212d6378940
+    Expression to struct:
+    $1297: LocalVariable named UniqueObjectNameForCooking_LinearColor10@0x2139c138080
+  Expression:
+  $1306: literal float 1
+$1311: Let (Variable = Expression)
+  Variable:
+  $1320: StructMemberContext prop=idx:6460@0x212d63788d0
+    Expression to struct:
+    $1329: LocalVariable named UniqueObjectNameForCooking_LinearColor10@0x2139c138080
+  Expression:
+  $1338: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue6@0x2139c209990
+$1347: Let (Variable = Expression)
+  Variable:
+  $1356: StructMemberContext prop=idx:6459@0x212d6378860
+    Expression to struct:
+    $1365: LocalVariable named UniqueObjectNameForCooking_LinearColor10@0x2139c138080
+  Expression:
+  $1374: literal float 6
+$1379: Context
+  ObjectExpression:
+  $1380: InstanceVariable named ShieldMaterial@0x2139c139280
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $1401: FinalFunction target=SetVectorParameterValue@0x212d69f4970 (
+    $1410: literal name "Timed Blend Values"
+    $1423: LocalVariable named UniqueObjectNameForCooking_LinearColor10@0x2139c138080
+    $1432: EndFunctionParms
+  )
+$1433: Let (Variable = Expression)
+  Variable:
+  $1442: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue4@0x2139c209840
+  Expression:
+  $1451: Context
+    ObjectExpression:
+    $1452: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue4@0x2139c209840
+    ContextExpression:
+    $1473: FinalFunction target=GetGameTimeInSeconds@0x212d63ac800 (
+      $1482: Self
+      $1483: EndFunctionParms
+    )
+$1484: Context
+  ObjectExpression:
+  $1485: InstanceVariable named ShieldPulseMaterial@0x2139c139300
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $1506: FinalFunction target=SetScalarParameterValue@0x212d69f4620 (
+    $1515: literal name "FadeStartTime"
+    $1528: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue4@0x2139c209840
+    $1537: EndFunctionParms
+  )
+$1538: VirtualFunction call "GetShipHullAudio" (
+  $1551: LocalVariable named CallFunc_GetShipHullAudio_ShipHullAudioRef2@0x2139c137f00
+  $1560: EndFunctionParms
+)
+$1561: LetBool (Variable = Expression)
+  Variable:
+  $1562: LocalVariable named CallFunc_IsValid_ReturnValue3@0x2139c137f80
+  Expression:
+  $1571: Context
+    ObjectExpression:
+    $1572: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue3@0x2139c137f80
+    ContextExpression:
+    $1593: FinalFunction target=IsValid@0x212d63ae380 (
+      $1602: LocalVariable named CallFunc_GetShipHullAudio_ShipHullAudioRef2@0x2139c137f00
+      $1611: EndFunctionParms
+    )
+$1612: PopExecutionFlowIfNot, cond:
+$1613: LocalVariable named CallFunc_IsValid_ReturnValue3@0x2139c137f80
+$1622: Context
+  ObjectExpression:
+  $1623: LocalVariable named CallFunc_GetShipHullAudio_ShipHullAudioRef2@0x2139c137f00
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $1644: FinalFunction target=PlayShroudBreakerShieldSound@0x212d6852ef0 (
+    $1653: EndFunctionParms
+  )
+$1654: Context
+  ObjectExpression:
+  $1655: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $1676: FinalFunction target=Delay@0x212d63a6d40 (
+    $1685: Self
+    $1686: literal float 6
+    $1691: literal struct LatentActionInfo@0x212d63a6e80 (size 32)
+      $1704: literal CodeSkipSizeType 0x6c3
+      $1709: literal int32 5
+      $1714: literal name "ExecuteUbergraph_BP_Shroudbreaker_OnShip"
+      $1727: Self
+      $1728: EndStructConst
+    $1729: EndFunctionParms
+  )
+$1730: PopExecutionFlow (jump to popped addr)
+$1731: Context
+  ObjectExpression:
+  $1732: InstanceVariable named ShieldPulseMesh@0x2139c138700
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $1753: VirtualFunction call "SetVisibility" (
+    $1766: False
+    $1767: False
+    $1768: EndFunctionParms
+  )
+$1769: Let (Variable = Expression)
+  Variable:
+  $1778: LocalVariable named CallFunc_WwiseEmitterPostEvent_ReturnValue5@0x2139c209680
+  Expression:
+  $1787: Context
+    ObjectExpression:
+    $1788: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x212d7001550
+    SkipBytes: 0x4e
+    RValueProperty: CallFunc_WwiseEmitterPostEvent_ReturnValue5@0x2139c209680
+    ContextExpression:
+    $1809: FinalFunction target=WwiseEmitterPostEvent@0x212d6a1f260 (
+      $1818: Context
+        ObjectExpression:
+        $1819: InstanceVariable named WwiseEmitter@0x2139c138980
+        SkipBytes: 0x9
+        RValueProperty: Emitter@0x212d66b31d0
+        ContextExpression:
+        $1840: InstanceVariable named Emitter@0x212d66b31d0
+      $1849: ObjectConst Play_sfx_shroudbreaker_illuminate_level4@0x2139c0d1450
+      $1858: literal byte 2
+      $1860: literal name "None"
+      $1873: literal name "None"
+      $1886: EndFunctionParms
+    )
+$1887: Let (Variable = Expression)
+  Variable:
+  $1896: LocalVariable named CallFunc_WwiseEmitterPostEvent_ReturnValue@0x2139c2094c0
+  Expression:
+  $1905: Context
+    ObjectExpression:
+    $1906: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x212d7001550
+    SkipBytes: 0x4e
+    RValueProperty: CallFunc_WwiseEmitterPostEvent_ReturnValue@0x2139c2094c0
+    ContextExpression:
+    $1927: FinalFunction target=WwiseEmitterPostEvent@0x212d6a1f260 (
+      $1936: Context
+        ObjectExpression:
+        $1937: InstanceVariable named WwiseEmitter@0x2139c138980
+        SkipBytes: 0x9
+        RValueProperty: Emitter@0x212d66b31d0
+        ContextExpression:
+        $1958: InstanceVariable named Emitter@0x212d66b31d0
+      $1967: ObjectConst Play_mus_tt_v01_t09_break_shroud_jewel_04@0x21396ca6db0
+      $1976: literal byte 2
+      $1978: literal name "None"
+      $1991: literal name "None"
+      $2004: EndFunctionParms
+    )
+$2005: PopExecutionFlow (jump to popped addr)
+$2006: Context
+  ObjectExpression:
+  $2007: InstanceVariable named vfx_ShroudBreaker_OnShip_stage1@0x2139c138a80
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $2028: VirtualFunction call "Deactivate" (
+    $2041: EndFunctionParms
+  )
+$2042: Let (Variable = Expression)
+  Variable:
+  $2051: LocalVariable named CallFunc_WwiseEmitterPostEvent_ReturnValue6@0x2139c2096f0
+  Expression:
+  $2060: Context
+    ObjectExpression:
+    $2061: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x212d7001550
+    SkipBytes: 0x4e
+    RValueProperty: CallFunc_WwiseEmitterPostEvent_ReturnValue6@0x2139c2096f0
+    ContextExpression:
+    $2082: FinalFunction target=WwiseEmitterPostEvent@0x212d6a1f260 (
+      $2091: Context
+        ObjectExpression:
+        $2092: InstanceVariable named WwiseEmitter@0x2139c138980
+        SkipBytes: 0x9
+        RValueProperty: Emitter@0x212d66b31d0
+        ContextExpression:
+        $2113: InstanceVariable named Emitter@0x212d66b31d0
+      $2122: ObjectConst Play_sfx_shroudbreaker_illuminate_level3@0x2139c0d14a0
+      $2131: literal byte 2
+      $2133: literal name "None"
+      $2146: literal name "None"
+      $2159: EndFunctionParms
+    )
+$2160: Let (Variable = Expression)
+  Variable:
+  $2169: LocalVariable named CallFunc_WwiseEmitterPostEvent_ReturnValue2@0x2139c209530
+  Expression:
+  $2178: Context
+    ObjectExpression:
+    $2179: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x212d7001550
+    SkipBytes: 0x4e
+    RValueProperty: CallFunc_WwiseEmitterPostEvent_ReturnValue2@0x2139c209530
+    ContextExpression:
+    $2200: FinalFunction target=WwiseEmitterPostEvent@0x212d6a1f260 (
+      $2209: Context
+        ObjectExpression:
+        $2210: InstanceVariable named WwiseEmitter@0x2139c138980
+        SkipBytes: 0x9
+        RValueProperty: Emitter@0x212d66b31d0
+        ContextExpression:
+        $2231: InstanceVariable named Emitter@0x212d66b31d0
+      $2240: ObjectConst Play_mus_tt_v01_t09_break_shroud_jewel_03@0x21396ca8c50
+      $2249: literal byte 2
+      $2251: literal name "None"
+      $2264: literal name "None"
+      $2277: EndFunctionParms
+    )
+$2278: PopExecutionFlow (jump to popped addr)
+$2279: Context
+  ObjectExpression:
+  $2280: InstanceVariable named vfx_shroudbreaker_ember@0x2139c138800
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $2301: VirtualFunction call "Deactivate" (
+    $2314: EndFunctionParms
+  )
+$2315: VirtualFunction call "GetShipHullAudio" (
+  $2328: LocalVariable named CallFunc_GetShipHullAudio_ShipHullAudioRef3@0x2139c138400
+  $2337: EndFunctionParms
+)
+$2338: LetBool (Variable = Expression)
+  Variable:
+  $2339: LocalVariable named CallFunc_IsValid_ReturnValue4@0x2139c138480
+  Expression:
+  $2348: Context
+    ObjectExpression:
+    $2349: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue4@0x2139c138480
+    ContextExpression:
+    $2370: FinalFunction target=IsValid@0x212d63ae380 (
+      $2379: LocalVariable named CallFunc_GetShipHullAudio_ShipHullAudioRef3@0x2139c138400
+      $2388: EndFunctionParms
+    )
+$2389: PopExecutionFlowIfNot, cond:
+$2390: LocalVariable named CallFunc_IsValid_ReturnValue4@0x2139c138480
+$2399: Context
+  ObjectExpression:
+  $2400: LocalVariable named CallFunc_GetShipHullAudio_ShipHullAudioRef3@0x2139c138400
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $2421: FinalFunction target=StopShroudBreakerShieldSound@0x212d6852fb0 (
+    $2430: EndFunctionParms
+  )
+$2431: Let (Variable = Expression)
+  Variable:
+  $2440: StructMemberContext prop=idx:6476@0x212d63789b0
+    Expression to struct:
+    $2449: LocalVariable named UniqueObjectNameForCooking_LinearColor4@0x2139c137a80
+  Expression:
+  $2458: literal float 1
+$2463: Let (Variable = Expression)
+  Variable:
+  $2472: StructMemberContext prop=idx:6465@0x212d6378940
+    Expression to struct:
+    $2481: LocalVariable named UniqueObjectNameForCooking_LinearColor4@0x2139c137a80
+  Expression:
+  $2490: literal float 1
+$2495: Let (Variable = Expression)
+  Variable:
+  $2504: StructMemberContext prop=idx:6460@0x212d63788d0
+    Expression to struct:
+    $2513: LocalVariable named UniqueObjectNameForCooking_LinearColor4@0x2139c137a80
+  Expression:
+  $2522: literal float 0
+$2527: Let (Variable = Expression)
+  Variable:
+  $2536: StructMemberContext prop=idx:6459@0x212d6378860
+    Expression to struct:
+    $2545: LocalVariable named UniqueObjectNameForCooking_LinearColor4@0x2139c137a80
+  Expression:
+  $2554: literal float 0
+$2559: Context
+  ObjectExpression:
+  $2560: InstanceVariable named Shroudbreaker Material@0x2139c139000
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $2581: FinalFunction target=SetVectorParameterValue@0x212d69f4970 (
+    $2590: literal name "Shroud Breaker Gem Activation"
+    $2603: LocalVariable named UniqueObjectNameForCooking_LinearColor4@0x2139c137a80
+    $2612: EndFunctionParms
+  )
+$2613: PopExecutionFlow (jump to popped addr)
+$2614: Context
+  ObjectExpression:
+  $2615: InstanceVariable named vfx_ShroudBreaker_OnShip_stage4@0x2139c138680
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $2636: VirtualFunction call "Deactivate" (
+    $2649: EndFunctionParms
+  )
+$2650: Let (Variable = Expression)
+  Variable:
+  $2659: StructMemberContext prop=idx:6476@0x212d63789b0
+    Expression to struct:
+    $2668: LocalVariable named UniqueObjectNameForCooking_LinearColor5@0x2139c137b00
+  Expression:
+  $2677: literal float 1
+$2682: Let (Variable = Expression)
+  Variable:
+  $2691: StructMemberContext prop=idx:6465@0x212d6378940
+    Expression to struct:
+    $2700: LocalVariable named UniqueObjectNameForCooking_LinearColor5@0x2139c137b00
+  Expression:
+  $2709: literal float 0
+$2714: Let (Variable = Expression)
+  Variable:
+  $2723: StructMemberContext prop=idx:6460@0x212d63788d0
+    Expression to struct:
+    $2732: LocalVariable named UniqueObjectNameForCooking_LinearColor5@0x2139c137b00
+  Expression:
+  $2741: literal float 0
+$2746: Let (Variable = Expression)
+  Variable:
+  $2755: StructMemberContext prop=idx:6459@0x212d6378860
+    Expression to struct:
+    $2764: LocalVariable named UniqueObjectNameForCooking_LinearColor5@0x2139c137b00
+  Expression:
+  $2773: literal float 0
+$2778: Context
+  ObjectExpression:
+  $2779: InstanceVariable named Shroudbreaker Material@0x2139c139000
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $2800: FinalFunction target=SetVectorParameterValue@0x212d69f4970 (
+    $2809: literal name "Shroud Breaker Gem Activation"
+    $2822: LocalVariable named UniqueObjectNameForCooking_LinearColor5@0x2139c137b00
+    $2831: EndFunctionParms
+  )
+$2832: PopExecutionFlow (jump to popped addr)
+$2833: Context
+  ObjectExpression:
+  $2834: InstanceVariable named ShieldMesh@0x2139c138900
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $2855: VirtualFunction call "SetVisibility" (
+    $2868: False
+    $2869: False
+    $2870: EndFunctionParms
+  )
+$2871: Context
+  ObjectExpression:
+  $2872: InstanceVariable named vfx_shroudbreaker_shipTip@0x2139c138880
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $2893: VirtualFunction call "Deactivate" (
+    $2906: EndFunctionParms
+  )
+$2907: Context
+  ObjectExpression:
+  $2908: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $2929: FinalFunction target=Delay@0x212d63a6d40 (
+    $2938: Self
+    $2939: literal float 2
+    $2944: literal struct LatentActionInfo@0x212d63a6e80 (size 32)
+      $2957: literal CodeSkipSizeType 0x8e7
+      $2962: literal int32 8
+      $2967: literal name "ExecuteUbergraph_BP_Shroudbreaker_OnShip"
+      $2980: Self
+      $2981: EndStructConst
+    $2982: EndFunctionParms
+  )
+$2983: PopExecutionFlow (jump to popped addr)
+$2984: Jump to offset 0x3cb
+$2989: VirtualFunction call "GetObjMsgDispatcher" (
+  $3002: LocalVariable named CallFunc_GetObjMsgDispatcher_Dispatcher@0x2139c136580
+  $3011: LocalVariable named CallFunc_GetObjMsgDispatcher_Success@0x2139c136600
+  $3020: EndFunctionParms
+)
+$3021: PopExecutionFlowIfNot, cond:
+$3022: LocalVariable named CallFunc_GetObjMsgDispatcher_Success@0x2139c136600
+$3031: VirtualFunction call "UnregisterShipEvent" (
+  $3044: LocalVariable named CallFunc_GetObjMsgDispatcher_Dispatcher@0x2139c136580
+  $3053: InstanceVariable named ActivateShroudbreakerHandle@0x2139c138c00
+  $3062: EndFunctionParms
+)
+$3063: VirtualFunction call "UnregisterShipEvent" (
+  $3076: LocalVariable named CallFunc_GetObjMsgDispatcher_Dispatcher@0x2139c136580
+  $3085: InstanceVariable named DeactivateShroudbreakerHandle@0x2139c138c80
+  $3094: EndFunctionParms
+)
+$3095: VirtualFunction call "UnregisterShipEvent" (
+  $3108: LocalVariable named CallFunc_GetObjMsgDispatcher_Dispatcher@0x2139c136580
+  $3117: InstanceVariable named ShipDestroyedHandle@0x2139c138e00
+  $3126: EndFunctionParms
+)
+$3127: VirtualFunction call "UnregisterShipEvent" (
+  $3140: LocalVariable named CallFunc_GetObjMsgDispatcher_Dispatcher@0x2139c136580
+  $3149: InstanceVariable named ActivateEffectsHandle@0x2139c138d00
+  $3158: EndFunctionParms
+)
+$3159: VirtualFunction call "UnregisterShipEvent" (
+  $3172: LocalVariable named CallFunc_GetObjMsgDispatcher_Dispatcher@0x2139c136580
+  $3181: InstanceVariable named DeactivateEffectsHandle@0x2139c138d80
+  $3190: EndFunctionParms
+)
+$3191: LetBool (Variable = Expression)
+  Variable:
+  $3192: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x2139c136a00
+  Expression:
+  $3201: FinalFunction target=HasAuthority@0x212d6384b30 (
+    $3210: EndFunctionParms
+  )
+$3211: PopExecutionFlowIfNot, cond:
+$3212: LocalVariable named CallFunc_HasAuthority_ReturnValue@0x2139c136a00
+$3221: LetObj (Variable = Expression)
+  Variable:
+  $3222: LocalVariable named CallFunc_GetGameState_ReturnValue4@0x2139c137100
+  Expression:
+  $3231: Context
+    ObjectExpression:
+    $3232: ObjectConst Default__GameplayStatics@0x212d6f7eb20
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameState_ReturnValue4@0x2139c137100
+    ContextExpression:
+    $3253: FinalFunction target=GetGameState@0x212d697d520 (
+      $3262: Self
+      $3263: EndFunctionParms
+    )
+$3264: Let (Variable = Expression)
+  Variable:
+  $3273: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x2139c137180
+  Expression:
+  $3282: Context
+    ObjectExpression:
+    $3283: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x2139c137180
+    ContextExpression:
+    $3304: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x212d6a30390 (
+      $3313: LocalVariable named CallFunc_GetGameState_ReturnValue4@0x2139c137100
+      $3322: EndFunctionParms
+    )
+$3323: LetBool (Variable = Expression)
+  Variable:
+  $3324: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue2@0x2139c137200
+  Expression:
+  $3333: Context
+    ObjectExpression:
+    $3334: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsHandleRegistered_ReturnValue2@0x2139c137200
+    ContextExpression:
+    $3355: FinalFunction target=IsHandleRegistered@0x212d6a30550 (
+      $3364: InstanceVariable named PlayerEnteredIslandVincityEventHandle@0x2139c139180
+      $3373: EndFunctionParms
+    )
+$3374: PopExecutionFlowIfNot, cond:
+$3375: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue2@0x2139c137200
+$3384: Context
+  ObjectExpression:
+  $3385: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $3406: FinalFunction target=UnregisterEventFromHandle@0x212d6a31420 (
+    $3415: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x2139c137180
+    $3424: InstanceVariable named PlayerEnteredIslandVincityEventHandle@0x2139c139180
+    $3433: EndFunctionParms
+  )
+$3434: LetBool (Variable = Expression)
+  Variable:
+  $3435: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue3@0x2139c137280
+  Expression:
+  $3444: Context
+    ObjectExpression:
+    $3445: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsHandleRegistered_ReturnValue3@0x2139c137280
+    ContextExpression:
+    $3466: FinalFunction target=IsHandleRegistered@0x212d6a30550 (
+      $3475: InstanceVariable named PlayerLeftIslandVincityEventHandle@0x2139c139200
+      $3484: EndFunctionParms
+    )
+$3485: PopExecutionFlowIfNot, cond:
+$3486: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue3@0x2139c137280
+$3495: Context
+  ObjectExpression:
+  $3496: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $3517: FinalFunction target=UnregisterEventFromHandle@0x212d6a31420 (
+    $3526: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue2@0x2139c137180
+    $3535: InstanceVariable named PlayerLeftIslandVincityEventHandle@0x2139c139200
+    $3544: EndFunctionParms
+  )
+$3545: PopExecutionFlow (jump to popped addr)
+$3546: Jump to offset 0xde
+$3551: VirtualFunction call "GetObjMsgDispatcher" (
+  $3564: LocalVariable named CallFunc_GetObjMsgDispatcher_Dispatcher2@0x2139c136700
+  $3573: LocalVariable named CallFunc_GetObjMsgDispatcher_Success2@0x2139c136780
+  $3582: EndFunctionParms
+)
+$3583: PopExecutionFlowIfNot, cond:
+$3584: LocalVariable named CallFunc_GetObjMsgDispatcher_Success2@0x2139c136780
+$3593: Context
+  ObjectExpression:
+  $3594: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x40
+  RValueProperty: (null)
+  ContextExpression:
+  $3615: FinalFunction target=RegisterEventFromHandle@0x212d6a30c00 (
+    $3624: LocalVariable named CallFunc_GetObjMsgDispatcher_Dispatcher2@0x2139c136700
+    $3633: InstanceVariable named ActivateShroudbreakerHandle@0x2139c138c00
+    $3642: Self
+    $3643: literal ansi string "OnShroudbreakerActivated"
+    $3669: ObjectConst ShroudBreakerActivatedEvent@0x212d6631b60
+    $3678: EndFunctionParms
+  )
+$3679: Context
+  ObjectExpression:
+  $3680: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x42
+  RValueProperty: (null)
+  ContextExpression:
+  $3701: FinalFunction target=RegisterEventFromHandle@0x212d6a30c00 (
+    $3710: LocalVariable named CallFunc_GetObjMsgDispatcher_Dispatcher2@0x2139c136700
+    $3719: InstanceVariable named DeactivateShroudbreakerHandle@0x2139c138c80
+    $3728: Self
+    $3729: literal ansi string "OnShroudbreakerDeactivated"
+    $3757: ObjectConst ShroudBreakerDeactivatedEvent@0x212d6631a40
+    $3766: EndFunctionParms
+  )
+$3767: Context
+  ObjectExpression:
+  $3768: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x37
+  RValueProperty: (null)
+  ContextExpression:
+  $3789: FinalFunction target=RegisterEventFromHandle@0x212d6a30c00 (
+    $3798: LocalVariable named CallFunc_GetObjMsgDispatcher_Dispatcher2@0x2139c136700
+    $3807: InstanceVariable named ShipDestroyedHandle@0x2139c138e00
+    $3816: Self
+    $3817: literal ansi string "OnShipDestroyed"
+    $3834: ObjectConst EventShipDestroyed@0x212d65c9b10
+    $3843: EndFunctionParms
+  )
+$3844: Context
+  ObjectExpression:
+  $3845: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x39
+  RValueProperty: (null)
+  ContextExpression:
+  $3866: FinalFunction target=RegisterEventFromHandle@0x212d6a30c00 (
+    $3875: LocalVariable named CallFunc_GetObjMsgDispatcher_Dispatcher2@0x2139c136700
+    $3884: InstanceVariable named ActivateEffectsHandle@0x2139c138d00
+    $3893: Self
+    $3894: literal ansi string "OnActivateEffects"
+    $3913: ObjectConst ShroudBreakerActivateEffectsEvent@0x212d6631920
+    $3922: EndFunctionParms
+  )
+$3923: Context
+  ObjectExpression:
+  $3924: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x3b
+  RValueProperty: (null)
+  ContextExpression:
+  $3945: FinalFunction target=RegisterEventFromHandle@0x212d6a30c00 (
+    $3954: LocalVariable named CallFunc_GetObjMsgDispatcher_Dispatcher2@0x2139c136700
+    $3963: InstanceVariable named DeactivateEffectsHandle@0x2139c138d80
+    $3972: Self
+    $3973: literal ansi string "OnDeactivateEffects"
+    $3994: ObjectConst ShroudBreakerDeactivateEffectsEvent@0x212d6631800
+    $4003: EndFunctionParms
+  )
+$4004: Context
+  ObjectExpression:
+  $4005: InstanceVariable named MusicZone@0x2139c138b00
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $4026: FinalFunction target=DisableZone@0x212d6ace8d0 (
+    $4035: EndFunctionParms
+  )
+$4036: LetBool (Variable = Expression)
+  Variable:
+  $4037: LocalVariable named CallFunc_HasAuthority_ReturnValue2@0x2139c136d00
+  Expression:
+  $4046: FinalFunction target=HasAuthority@0x212d6384b30 (
+    $4055: EndFunctionParms
+  )
+$4056: PopExecutionFlowIfNot, cond:
+$4057: LocalVariable named CallFunc_HasAuthority_ReturnValue2@0x2139c136d00
+$4066: LetObj (Variable = Expression)
+  Variable:
+  $4067: LocalVariable named CallFunc_GetGameState_ReturnValue@0x2139c136b00
+  Expression:
+  $4076: Context
+    ObjectExpression:
+    $4077: ObjectConst Default__GameplayStatics@0x212d6f7eb20
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameState_ReturnValue@0x2139c136b00
+    ContextExpression:
+    $4098: FinalFunction target=GetGameState@0x212d697d520 (
+      $4107: Self
+      $4108: EndFunctionParms
+    )
+$4109: Let (Variable = Expression)
+  Variable:
+  $4118: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x2139c136b80
+  Expression:
+  $4127: Context
+    ObjectExpression:
+    $4128: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x2139c136b80
+    ContextExpression:
+    $4149: FinalFunction target=GetObjectMessagingDispatcherFromActor@0x212d6a30390 (
+      $4158: LocalVariable named CallFunc_GetGameState_ReturnValue@0x2139c136b00
+      $4167: EndFunctionParms
+    )
+$4168: LetBool (Variable = Expression)
+  Variable:
+  $4169: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue@0x2139c136c00
+  Expression:
+  $4178: Context
+    ObjectExpression:
+    $4179: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsHandleRegistered_ReturnValue@0x2139c136c00
+    ContextExpression:
+    $4200: FinalFunction target=IsHandleRegistered@0x212d6a30550 (
+      $4209: InstanceVariable named PlayerEnteredIslandVincityEventHandle@0x2139c139180
+      $4218: EndFunctionParms
+    )
+$4219: JumpIfNot -> 0x108a, cond:
+  $4224: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue@0x2139c136c00
+$4233: PopExecutionFlow (jump to popped addr)
+$4234: Context
+  ObjectExpression:
+  $4235: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x37
+  RValueProperty: (null)
+  ContextExpression:
+  $4256: FinalFunction target=RegisterEventFromHandle@0x212d6a30c00 (
+    $4265: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x2139c136b80
+    $4274: InstanceVariable named PlayerEnteredIslandVincityEventHandle@0x2139c139180
+    $4283: Self
+    $4284: literal ansi string "PlayerEnteredTP"
+    $4301: ObjectConst EventPlayerEnteredIslandVicinity@0x212d662d5a0
+    $4310: EndFunctionParms
+  )
+$4311: LetBool (Variable = Expression)
+  Variable:
+  $4312: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue4@0x2139c137400
+  Expression:
+  $4321: Context
+    ObjectExpression:
+    $4322: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsHandleRegistered_ReturnValue4@0x2139c137400
+    ContextExpression:
+    $4343: FinalFunction target=IsHandleRegistered@0x212d6a30550 (
+      $4352: InstanceVariable named PlayerLeftIslandVincityEventHandle@0x2139c139200
+      $4361: EndFunctionParms
+    )
+$4362: JumpIfNot -> 0x1119, cond:
+  $4367: LocalVariable named CallFunc_IsHandleRegistered_ReturnValue4@0x2139c137400
+$4376: PopExecutionFlow (jump to popped addr)
+$4377: Context
+  ObjectExpression:
+  $4378: ObjectConst Default__ObjectMessagingFunctions@0x212d7003ad0
+  SkipBytes: 0x34
+  RValueProperty: (null)
+  ContextExpression:
+  $4399: FinalFunction target=RegisterEventFromHandle@0x212d6a30c00 (
+    $4408: LocalVariable named CallFunc_GetObjectMessagingDispatcherFromActor_ReturnValue@0x2139c136b80
+    $4417: InstanceVariable named PlayerLeftIslandVincityEventHandle@0x2139c139200
+    $4426: Self
+    $4427: literal ansi string "PlayerLeftTP"
+    $4441: ObjectConst EventPlayerLeftIslandVicinity@0x212d662d410
+    $4450: EndFunctionParms
+  )
+$4451: PopExecutionFlow (jump to popped addr)
+$4452: Jump to offset 0xbad
+$4457: FlowStack.Push(0xddf)
+$4462: FlowStack.Push(0x1251)
+$4467: LetObj (Variable = Expression)
+  Variable:
+  $4468: LocalVariable named CallFunc_GetParentActor_ReturnValue@0x2139c137780
+  Expression:
+  $4477: FinalFunction target=GetParentActor@0x212d6384340 (
+    $4486: EndFunctionParms
+  )
+$4487: Let (Variable = Expression)
+  Variable:
+  $4496: LocalVariable named CallFunc_GetTransformOfActorRelativeToAnother_ReturnValue@0x2139c137900
+  Expression:
+  $4505: Context
+    ObjectExpression:
+    $4506: ObjectConst Default__ActorFunctionLibrary@0x212d7010130
+    SkipBytes: 0x14
+    RValueProperty: CallFunc_GetTransformOfActorRelativeToAnother_ReturnValue@0x2139c137900
+    ContextExpression:
+    $4527: FinalFunction target=GetTransformOfActorRelativeToAnother@0x212d6a46c10 (
+      $4536: Self
+      $4537: LocalVariable named CallFunc_GetParentActor_ReturnValue@0x2139c137780
+      $4546: EndFunctionParms
+    )
+$4547: Let (Variable = Expression)
+  Variable:
+  $4556: LocalVariable named CallFunc_InvertTransform_ReturnValue@0x2139c139780
+  Expression:
+  $4565: CallMath target=InvertTransform@0x212d69a4c80 (
+    $4574: LocalVariable named CallFunc_GetTransformOfActorRelativeToAnother_ReturnValue@0x2139c137900
+    $4583: EndFunctionParms
+  )
+$4584: Context
+  ObjectExpression:
+  $4585: InstanceVariable named ShieldPulseMesh@0x2139c138700
+  SkipBytes: 0x1e
+  RValueProperty: (null)
+  ContextExpression:
+  $4606: FinalFunction target=K2_SetRelativeTransform@0x212d66920b0 (
+    $4615: LocalVariable named CallFunc_InvertTransform_ReturnValue@0x2139c139780
+    $4624: False
+    $4625: LocalVariable named CallFunc_K2_SetRelativeTransform_SweepHitResult@0x2139c137800
+    $4634: False
+    $4635: EndFunctionParms
+  )
+$4636: Context
+  ObjectExpression:
+  $4637: InstanceVariable named ShieldMesh@0x2139c138900
+  SkipBytes: 0x1e
+  RValueProperty: (null)
+  ContextExpression:
+  $4658: FinalFunction target=K2_SetRelativeTransform@0x212d66920b0 (
+    $4667: LocalVariable named CallFunc_InvertTransform_ReturnValue@0x2139c139780
+    $4676: False
+    $4677: LocalVariable named CallFunc_K2_SetRelativeTransform_SweepHitResult@0x2139c137800
+    $4686: False
+    $4687: EndFunctionParms
+  )
+$4688: PopExecutionFlow (jump to popped addr)
+$4689: LetObj (Variable = Expression)
+  Variable:
+  $4690: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue3@0x2139c137680
+  Expression:
+  $4699: Context
+    ObjectExpression:
+    $4700: InstanceVariable named ShieldPulseMesh@0x2139c138700
+    SkipBytes: 0x14
+    RValueProperty: CallFunc_CreateDynamicMaterialInstance_ReturnValue3@0x2139c137680
+    ContextExpression:
+    $4721: VirtualFunction call "CreateDynamicMaterialInstance" (
+      $4734: literal int32 0
+      $4739: NoObject
+      $4740: EndFunctionParms
+    )
+$4741: LetObj (Variable = Expression)
+  Variable:
+  $4742: InstanceVariable named ShieldPulseMaterial@0x2139c139300
+  Expression:
+  $4751: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue3@0x2139c137680
+$4760: LetObj (Variable = Expression)
+  Variable:
+  $4761: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue2@0x2139c137600
+  Expression:
+  $4770: Context
+    ObjectExpression:
+    $4771: InstanceVariable named ShieldMesh@0x2139c138900
+    SkipBytes: 0x14
+    RValueProperty: CallFunc_CreateDynamicMaterialInstance_ReturnValue2@0x2139c137600
+    ContextExpression:
+    $4792: VirtualFunction call "CreateDynamicMaterialInstance" (
+      $4805: literal int32 0
+      $4810: NoObject
+      $4811: EndFunctionParms
+    )
+$4812: LetObj (Variable = Expression)
+  Variable:
+  $4813: InstanceVariable named ShieldMaterial@0x2139c139280
+  Expression:
+  $4822: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue2@0x2139c137600
+$4831: LetObj (Variable = Expression)
+  Variable:
+  $4832: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x2139c136a80
+  Expression:
+  $4841: Context
+    ObjectExpression:
+    $4842: InstanceVariable named StaticMesh@0x2139c138b80
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x2139c136a80
+    ContextExpression:
+    $4863: VirtualFunction call "CreateDynamicMaterialInstance" (
+      $4876: literal int32 1
+      $4881: ObjectConst gmp_tal_shroudbreaker_statue_01_a@0x21282466740
+      $4890: EndFunctionParms
+    )
+$4891: LetObj (Variable = Expression)
+  Variable:
+  $4892: InstanceVariable named Shroudbreaker Material@0x2139c139000
+  Expression:
+  $4901: LocalVariable named CallFunc_CreateDynamicMaterialInstance_ReturnValue@0x2139c136a80
+$4910: PopExecutionFlow (jump to popped addr)
+$4911: Jump to offset 0xbad
+$4916: Jump to offset 0x4b
+$4921: Jump to offset 0xab
+$4926: LetBool (Variable = Expression)
+  Variable:
+  $4927: LocalVariable named CallFunc_EqualEqual_NameName_ReturnValue@0x2139c136d80
+  Expression:
+  $4936: CallMath target=EqualEqual_NameName@0x212d699b120 (
+    $4945: StructMemberContext prop=IslandName@0x212d662d640
+      Expression to struct:
+      $4954: LocalVariable named K2Node_CustomEvent_Ev2@0x2139c136c80
+    $4963: literal name "wld_feature_tribute_peak"
+    $4976: EndFunctionParms
+  )
+$4977: PopExecutionFlowIfNot, cond:
+$4978: LocalVariable named CallFunc_EqualEqual_NameName_ReturnValue@0x2139c136d80
+$4987: Context
+  ObjectExpression:
+  $4988: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $5009: FinalFunction target=Array_Clear@0x212d6986fd0 (
+    $5018: InstanceVariable named ShipProgressSpawnLocationsReference@0x2139c139580
+    $5027: EndFunctionParms
+  )
+$5028: Let (Variable = Expression)
+  Variable:
+  $5037: LocalVariable named Temp_int_Loop_Counter_Variable@0x2139c209300
+  Expression:
+  $5046: literal int32 0
+$5051: Let (Variable = Expression)
+  Variable:
+  $5060: LocalVariable named Temp_int_Array_Index_Variable@0x2139c2090d0
+  Expression:
+  $5069: literal int32 0
+$5074: Let (Variable = Expression)
+  Variable:
+  $5083: LocalVariable named CallFunc_Array_Length_ReturnValue@0x2139c209060
+  Expression:
+  $5092: Context
+    ObjectExpression:
+    $5093: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x2139c209060
+    ContextExpression:
+    $5114: FinalFunction target=Array_Length@0x212d6987df0 (
+      $5123: InstanceVariable named ShipProgressSpawnLoactionsAssetID@0x2139c13a380
+      $5132: EndFunctionParms
+    )
+$5133: LetBool (Variable = Expression)
+  Variable:
+  $5134: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x2139c137980
+  Expression:
+  $5143: CallMath target=Less_IntInt@0x212d69a5ed0 (
+    $5152: LocalVariable named Temp_int_Loop_Counter_Variable@0x2139c209300
+    $5161: LocalVariable named CallFunc_Array_Length_ReturnValue@0x2139c209060
+    $5170: EndFunctionParms
+  )
+$5171: JumpIfNot -> 0x1641, cond:
+  $5176: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x2139c137980
+$5185: Let (Variable = Expression)
+  Variable:
+  $5194: LocalVariable named Temp_int_Array_Index_Variable@0x2139c2090d0
+  Expression:
+  $5203: LocalVariable named Temp_int_Loop_Counter_Variable@0x2139c209300
+$5212: FlowStack.Push(0x16ed)
+$5217: Context
+  ObjectExpression:
+  $5218: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $5239: FinalFunction target=Array_Get@0x212d69876b0 (
+    $5248: InstanceVariable named ShipProgressSpawnLoactionsAssetID@0x2139c13a380
+    $5257: LocalVariable named Temp_int_Array_Index_Variable@0x2139c2090d0
+    $5266: LocalVariable named CallFunc_Array_Get_Item@0x2139c137300
+    $5275: EndFunctionParms
+  )
+$5276: LetObj (Variable = Expression)
+  Variable:
+  $5277: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue@0x2139c137380
+  Expression:
+  $5286: Context
+    ObjectExpression:
+    $5287: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Conv_AssetToObject_ReturnValue@0x2139c137380
+    ContextExpression:
+    $5308: FinalFunction target=Conv_AssetToObject@0x212d63a6800 (
+      $5317: LocalVariable named CallFunc_Array_Get_Item@0x2139c137300
+      $5326: EndFunctionParms
+    )
+$5327: Let (Variable = Expression)
+  Variable:
+  $5336: LocalVariable named UniqueObjectNameForCooking_AsProgress_Ship_Spawn_Location@0x2139c137480
+  Expression:
+  $5345: DynamicCast to ProgressShipSpawnLocation@0x212d5a59d80 of expr:
+  $5354: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue@0x2139c137380
+$5363: Let (Variable = Expression)
+  Variable:
+  $5372: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x2139c137500
+  Expression:
+  $5381: PrimitiveCast type=71
+    Argument:
+    $5383: LocalVariable named UniqueObjectNameForCooking_AsProgress_Ship_Spawn_Location@0x2139c137480
+$5392: LetBool (Variable = Expression)
+  Variable:
+  $5393: LocalVariable named CallFunc_IsValid_ReturnValue@0x2139c137580
+  Expression:
+  $5402: Context
+    ObjectExpression:
+    $5403: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x2139c137580
+    ContextExpression:
+    $5424: FinalFunction target=IsValid@0x212d63ae380 (
+      $5433: LocalVariable named UniqueObjectNameForCooking_AsProgress_Ship_Spawn_Location@0x2139c137480
+      $5442: EndFunctionParms
+    )
+$5443: PopExecutionFlowIfNot, cond:
+$5444: LocalVariable named CallFunc_IsValid_ReturnValue@0x2139c137580
+$5453: Context
+  ObjectExpression:
+  $5454: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $5475: FinalFunction target=Array_Get@0x212d69876b0 (
+    $5484: InstanceVariable named ShipProgressSpawnLoactionsAssetID@0x2139c13a380
+    $5493: LocalVariable named Temp_int_Array_Index_Variable@0x2139c2090d0
+    $5502: LocalVariable named CallFunc_Array_Get_Item@0x2139c137300
+    $5511: EndFunctionParms
+  )
+$5512: LetObj (Variable = Expression)
+  Variable:
+  $5513: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue@0x2139c137380
+  Expression:
+  $5522: Context
+    ObjectExpression:
+    $5523: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Conv_AssetToObject_ReturnValue@0x2139c137380
+    ContextExpression:
+    $5544: FinalFunction target=Conv_AssetToObject@0x212d63a6800 (
+      $5553: LocalVariable named CallFunc_Array_Get_Item@0x2139c137300
+      $5562: EndFunctionParms
+    )
+$5563: Let (Variable = Expression)
+  Variable:
+  $5572: LocalVariable named UniqueObjectNameForCooking_AsProgress_Ship_Spawn_Location@0x2139c137480
+  Expression:
+  $5581: DynamicCast to ProgressShipSpawnLocation@0x212d5a59d80 of expr:
+  $5590: LocalVariable named CallFunc_Conv_AssetToObject_ReturnValue@0x2139c137380
+$5599: Let (Variable = Expression)
+  Variable:
+  $5608: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x2139c137500
+  Expression:
+  $5617: PrimitiveCast type=71
+    Argument:
+    $5619: LocalVariable named UniqueObjectNameForCooking_AsProgress_Ship_Spawn_Location@0x2139c137480
+$5628: Let (Variable = Expression)
+  Variable:
+  $5637: LocalVariable named CallFunc_Array_AddUnique_ReturnValue@0x2139c209140
+  Expression:
+  $5646: Context
+    ObjectExpression:
+    $5647: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_AddUnique_ReturnValue@0x2139c209140
+    ContextExpression:
+    $5668: FinalFunction target=Array_AddUnique@0x212d6986aa0 (
+      $5677: InstanceVariable named ShipProgressSpawnLocationsReference@0x2139c139580
+      $5686: LocalVariable named UniqueObjectNameForCooking_AsProgress_Ship_Spawn_Location@0x2139c137480
+      $5695: EndFunctionParms
+    )
+$5696: PopExecutionFlow (jump to popped addr)
+$5697: LetObj (Variable = Expression)
+  Variable:
+  $5698: LocalVariable named CallFunc_GetGameState_ReturnValue2@0x2139c136f00
+  Expression:
+  $5707: Context
+    ObjectExpression:
+    $5708: ObjectConst Default__GameplayStatics@0x212d6f7eb20
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameState_ReturnValue2@0x2139c136f00
+    ContextExpression:
+    $5729: FinalFunction target=GetGameState@0x212d697d520 (
+      $5738: Self
+      $5739: EndFunctionParms
+    )
+$5740: Let (Variable = Expression)
+  Variable:
+  $5749: LocalVariable named CallFunc_GetCrewIdFromActor_ReturnValue@0x2139c137000
+  Expression:
+  $5758: Context
+    ObjectExpression:
+    $5759: ObjectConst Default__CrewFunctions@0x212d6d2efd0
+    SkipBytes: 0x25
+    RValueProperty: CallFunc_GetCrewIdFromActor_ReturnValue@0x2139c137000
+    ContextExpression:
+    $5780: FinalFunction target=GetCrewIdFromActor@0x212d67844a0 (
+      $5789: LocalVariable named CallFunc_GetGameState_ReturnValue2@0x2139c136f00
+      $5798: StructMemberContext prop=Player@0x212d662d6b0
+        Expression to struct:
+        $5807: LocalVariable named K2Node_CustomEvent_Ev2@0x2139c136c80
+      $5816: EndFunctionParms
+    )
+$5817: Context
+  ObjectExpression:
+  $5818: ObjectConst Default__CrewFunctions@0x212d6d2efd0
+  SkipBytes: 0x1d
+  RValueProperty: (null)
+  ContextExpression:
+  $5839: FinalFunction target=SetCrewShipProgressionSpawnLocations@0x212d6785b20 (
+    $5848: Self
+    $5849: LocalVariable named CallFunc_GetCrewIdFromActor_ReturnValue@0x2139c137000
+    $5858: InstanceVariable named ShipProgressSpawnLocationsReference@0x2139c139580
+    $5867: EndFunctionParms
+  )
+$5868: PopExecutionFlow (jump to popped addr)
+$5869: Let (Variable = Expression)
+  Variable:
+  $5878: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x2139c209370
+  Expression:
+  $5887: CallMath target=Add_IntInt@0x212d698fa30 (
+    $5896: LocalVariable named Temp_int_Loop_Counter_Variable@0x2139c209300
+    $5905: literal int32 1
+    $5910: EndFunctionParms
+  )
+$5911: Let (Variable = Expression)
+  Variable:
+  $5920: LocalVariable named Temp_int_Loop_Counter_Variable@0x2139c209300
+  Expression:
+  $5929: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x2139c209370
+$5938: Jump to offset 0x13d2
+$5943: LetBool (Variable = Expression)
+  Variable:
+  $5944: LocalVariable named CallFunc_EqualEqual_NameName_ReturnValue2@0x2139c136e80
+  Expression:
+  $5953: CallMath target=EqualEqual_NameName@0x212d699b120 (
+    $5962: StructMemberContext prop=IslandName@0x212d662d4b0
+      Expression to struct:
+      $5971: LocalVariable named K2Node_CustomEvent_Ev@0x2139c136e00
+    $5980: literal name "wld_feature_tribute_peak"
+    $5993: EndFunctionParms
+  )
+$5994: PopExecutionFlowIfNot, cond:
+$5995: LocalVariable named CallFunc_EqualEqual_NameName_ReturnValue2@0x2139c136e80
+$6004: LetObj (Variable = Expression)
+  Variable:
+  $6005: LocalVariable named CallFunc_GetGameState_ReturnValue3@0x2139c136f80
+  Expression:
+  $6014: Context
+    ObjectExpression:
+    $6015: ObjectConst Default__GameplayStatics@0x212d6f7eb20
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameState_ReturnValue3@0x2139c136f80
+    ContextExpression:
+    $6036: FinalFunction target=GetGameState@0x212d697d520 (
+      $6045: Self
+      $6046: EndFunctionParms
+    )
+$6047: Let (Variable = Expression)
+  Variable:
+  $6056: LocalVariable named CallFunc_GetCrewIdFromActor_ReturnValue2@0x2139c137080
+  Expression:
+  $6065: Context
+    ObjectExpression:
+    $6066: ObjectConst Default__CrewFunctions@0x212d6d2efd0
+    SkipBytes: 0x25
+    RValueProperty: CallFunc_GetCrewIdFromActor_ReturnValue2@0x2139c137080
+    ContextExpression:
+    $6087: FinalFunction target=GetCrewIdFromActor@0x212d67844a0 (
+      $6096: LocalVariable named CallFunc_GetGameState_ReturnValue3@0x2139c136f80
+      $6105: StructMemberContext prop=Player@0x212d662d520
+        Expression to struct:
+        $6114: LocalVariable named K2Node_CustomEvent_Ev@0x2139c136e00
+      $6123: EndFunctionParms
+    )
+$6124: Context
+  ObjectExpression:
+  $6125: ObjectConst Default__CrewFunctions@0x212d6d2efd0
+  SkipBytes: 0x14
+  RValueProperty: (null)
+  ContextExpression:
+  $6146: FinalFunction target=ClearCrewShipProgressionSpawnLocations@0x212d6783e60 (
+    $6155: Self
+    $6156: LocalVariable named CallFunc_GetCrewIdFromActor_ReturnValue2@0x2139c137080
+    $6165: EndFunctionParms
+  )
+$6166: PopExecutionFlow (jump to popped addr)
+$6167: JumpIfNot -> 0x1932, cond:
+  $6172: InstanceVariable named ShroudBreakerDeactivate@0x2139c139100
+$6181: Let (Variable = Expression)
+  Variable:
+  $6190: StructMemberContext prop=idx:6476@0x212d63789b0
+    Expression to struct:
+    $6199: LocalVariable named UniqueObjectNameForCooking_LinearColor14@0x2139c138280
+  Expression:
+  $6208: literal float 1
+$6213: Let (Variable = Expression)
+  Variable:
+  $6222: StructMemberContext prop=idx:6465@0x212d6378940
+    Expression to struct:
+    $6231: LocalVariable named UniqueObjectNameForCooking_LinearColor14@0x2139c138280
+  Expression:
+  $6240: literal float 1
+$6245: Let (Variable = Expression)
+  Variable:
+  $6254: StructMemberContext prop=idx:6460@0x212d63788d0
+    Expression to struct:
+    $6263: LocalVariable named UniqueObjectNameForCooking_LinearColor14@0x2139c138280
+  Expression:
+  $6272: literal float 1
+$6277: Let (Variable = Expression)
+  Variable:
+  $6286: StructMemberContext prop=idx:6459@0x212d6378860
+    Expression to struct:
+    $6295: LocalVariable named UniqueObjectNameForCooking_LinearColor14@0x2139c138280
+  Expression:
+  $6304: literal float 1
+$6309: Context
+  ObjectExpression:
+  $6310: InstanceVariable named Shroudbreaker Material@0x2139c139000
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $6331: FinalFunction target=SetVectorParameterValue@0x212d69f4970 (
+    $6340: literal name "Shroud Breaker Gem Activation"
+    $6353: LocalVariable named UniqueObjectNameForCooking_LinearColor14@0x2139c138280
+    $6362: EndFunctionParms
+  )
+$6363: FinalFunction target=DeactivateShroudBreakerCalculationsOnShip@0x212d68608c0 (
+  $6372: EndFunctionParms
+)
+$6373: Context
+  ObjectExpression:
+  $6374: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $6395: FinalFunction target=Delay@0x212d63a6d40 (
+    $6404: Self
+    $6405: literal float 3
+    $6410: literal struct LatentActionInfo@0x212d63a6e80 (size 32)
+      $6423: literal CodeSkipSizeType 0x102
+      $6428: literal int32 1
+      $6433: literal name "ExecuteUbergraph_BP_Shroudbreaker_OnShip"
+      $6446: Self
+      $6447: EndStructConst
+    $6448: EndFunctionParms
+  )
+$6449: PopExecutionFlow (jump to popped addr)
+$6450: FinalFunction target=ActivateShroudBreakerCalculationsOnShip@0x212d6860800 (
+  $6459: EndFunctionParms
+)
+$6460: VirtualFunction call "SetActorHiddenInGame" (
+  $6473: False
+  $6474: EndFunctionParms
+)
+$6475: Context
+  ObjectExpression:
+  $6476: InstanceVariable named StaticMesh@0x2139c138b80
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $6497: VirtualFunction call "SetVisibility" (
+    $6510: True
+    $6511: False
+    $6512: EndFunctionParms
+  )
+$6513: Let (Variable = Expression)
+  Variable:
+  $6522: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue2@0x2139c2091b0
+  Expression:
+  $6531: Context
+    ObjectExpression:
+    $6532: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue2@0x2139c2091b0
+    ContextExpression:
+    $6553: FinalFunction target=GetGameTimeInSeconds@0x212d63ac800 (
+      $6562: Self
+      $6563: EndFunctionParms
+    )
+$6564: Let (Variable = Expression)
+  Variable:
+  $6573: StructMemberContext prop=idx:6476@0x212d63789b0
+    Expression to struct:
+    $6582: LocalVariable named UniqueObjectNameForCooking_LinearColor2@0x2139c137700
+  Expression:
+  $6591: InstanceVariable named GemEmissiveOn@0x2139c209ae0
+$6600: Let (Variable = Expression)
+  Variable:
+  $6609: StructMemberContext prop=idx:6465@0x212d6378940
+    Expression to struct:
+    $6618: LocalVariable named UniqueObjectNameForCooking_LinearColor2@0x2139c137700
+  Expression:
+  $6627: InstanceVariable named GemEmissiveOff@0x2139c209bc0
+$6636: Let (Variable = Expression)
+  Variable:
+  $6645: StructMemberContext prop=idx:6460@0x212d63788d0
+    Expression to struct:
+    $6654: LocalVariable named UniqueObjectNameForCooking_LinearColor2@0x2139c137700
+  Expression:
+  $6663: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue2@0x2139c2091b0
+$6672: Let (Variable = Expression)
+  Variable:
+  $6681: StructMemberContext prop=idx:6459@0x212d6378860
+    Expression to struct:
+    $6690: LocalVariable named UniqueObjectNameForCooking_LinearColor2@0x2139c137700
+  Expression:
+  $6699: literal float 0.5
+$6704: Context
+  ObjectExpression:
+  $6705: InstanceVariable named Shroudbreaker Material@0x2139c139000
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $6726: FinalFunction target=SetVectorParameterValue@0x212d69f4970 (
+    $6735: literal name "Shroud Breaker Emissive Blend"
+    $6748: LocalVariable named UniqueObjectNameForCooking_LinearColor2@0x2139c137700
+    $6757: EndFunctionParms
+  )
+$6758: Let (Variable = Expression)
+  Variable:
+  $6767: StructMemberContext prop=idx:6476@0x212d63789b0
+    Expression to struct:
+    $6776: LocalVariable named UniqueObjectNameForCooking_LinearColor17@0x2139c138580
+  Expression:
+  $6785: literal float 1
+$6790: Let (Variable = Expression)
+  Variable:
+  $6799: StructMemberContext prop=idx:6465@0x212d6378940
+    Expression to struct:
+    $6808: LocalVariable named UniqueObjectNameForCooking_LinearColor17@0x2139c138580
+  Expression:
+  $6817: literal float 0
+$6822: Let (Variable = Expression)
+  Variable:
+  $6831: StructMemberContext prop=idx:6460@0x212d63788d0
+    Expression to struct:
+    $6840: LocalVariable named UniqueObjectNameForCooking_LinearColor17@0x2139c138580
+  Expression:
+  $6849: literal float 0
+$6854: Let (Variable = Expression)
+  Variable:
+  $6863: StructMemberContext prop=idx:6459@0x212d6378860
+    Expression to struct:
+    $6872: LocalVariable named UniqueObjectNameForCooking_LinearColor17@0x2139c138580
+  Expression:
+  $6881: literal float 0.5
+$6886: Context
+  ObjectExpression:
+  $6887: InstanceVariable named Shroudbreaker Material@0x2139c139000
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $6908: FinalFunction target=SetVectorParameterValue@0x212d69f4970 (
+    $6917: literal name "Shroud Breaker Pulse Blend"
+    $6930: LocalVariable named UniqueObjectNameForCooking_LinearColor17@0x2139c138580
+    $6939: EndFunctionParms
+  )
+$6940: Let (Variable = Expression)
+  Variable:
+  $6949: StructMemberContext prop=idx:6476@0x212d63789b0
+    Expression to struct:
+    $6958: LocalVariable named UniqueObjectNameForCooking_LinearColor16@0x2139c138380
+  Expression:
+  $6967: literal float 0
+$6972: Let (Variable = Expression)
+  Variable:
+  $6981: StructMemberContext prop=idx:6465@0x212d6378940
+    Expression to struct:
+    $6990: LocalVariable named UniqueObjectNameForCooking_LinearColor16@0x2139c138380
+  Expression:
+  $6999: literal float 0
+$7004: Let (Variable = Expression)
+  Variable:
+  $7013: StructMemberContext prop=idx:6460@0x212d63788d0
+    Expression to struct:
+    $7022: LocalVariable named UniqueObjectNameForCooking_LinearColor16@0x2139c138380
+  Expression:
+  $7031: literal float 0
+$7036: Let (Variable = Expression)
+  Variable:
+  $7045: StructMemberContext prop=idx:6459@0x212d6378860
+    Expression to struct:
+    $7054: LocalVariable named UniqueObjectNameForCooking_LinearColor16@0x2139c138380
+  Expression:
+  $7063: literal float 0
+$7068: Context
+  ObjectExpression:
+  $7069: InstanceVariable named Shroudbreaker Material@0x2139c139000
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $7090: FinalFunction target=SetVectorParameterValue@0x212d69f4970 (
+    $7099: literal name "Shroud Breaker Pulse Blend"
+    $7112: LocalVariable named UniqueObjectNameForCooking_LinearColor16@0x2139c138380
+    $7121: EndFunctionParms
+  )
+$7122: Let (Variable = Expression)
+  Variable:
+  $7131: StructMemberContext prop=idx:6476@0x212d63789b0
+    Expression to struct:
+    $7140: LocalVariable named UniqueObjectNameForCooking_LinearColor15@0x2139c138300
+  Expression:
+  $7149: literal float 0
+$7154: Let (Variable = Expression)
+  Variable:
+  $7163: StructMemberContext prop=idx:6465@0x212d6378940
+    Expression to struct:
+    $7172: LocalVariable named UniqueObjectNameForCooking_LinearColor15@0x2139c138300
+  Expression:
+  $7181: literal float 0
+$7186: Let (Variable = Expression)
+  Variable:
+  $7195: StructMemberContext prop=idx:6460@0x212d63788d0
+    Expression to struct:
+    $7204: LocalVariable named UniqueObjectNameForCooking_LinearColor15@0x2139c138300
+  Expression:
+  $7213: literal float 0
+$7218: Let (Variable = Expression)
+  Variable:
+  $7227: StructMemberContext prop=idx:6459@0x212d6378860
+    Expression to struct:
+    $7236: LocalVariable named UniqueObjectNameForCooking_LinearColor15@0x2139c138300
+  Expression:
+  $7245: literal float 0
+$7250: Context
+  ObjectExpression:
+  $7251: InstanceVariable named Shroudbreaker Material@0x2139c139000
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $7272: FinalFunction target=SetVectorParameterValue@0x212d69f4970 (
+    $7281: literal name "Shroud Breaker Gem Activation"
+    $7294: LocalVariable named UniqueObjectNameForCooking_LinearColor15@0x2139c138300
+    $7303: EndFunctionParms
+  )
+$7304: Let (Variable = Expression)
+  Variable:
+  $7313: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue3@0x2139c209290
+  Expression:
+  $7322: Context
+    ObjectExpression:
+    $7323: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue3@0x2139c209290
+    ContextExpression:
+    $7344: FinalFunction target=GetGameTimeInSeconds@0x212d63ac800 (
+      $7353: Self
+      $7354: EndFunctionParms
+    )
+$7355: Context
+  ObjectExpression:
+  $7356: InstanceVariable named ShieldPulseMaterial@0x2139c139300
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $7377: FinalFunction target=SetScalarParameterValue@0x212d69f4620 (
+    $7386: literal name "FadeStartTime"
+    $7399: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue3@0x2139c209290
+    $7408: EndFunctionParms
+  )
+$7409: PopExecutionFlow (jump to popped addr)
+$7410: LetBool (Variable = Expression)
+  Variable:
+  $7411: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x2139c139680
+  Expression:
+  $7420: CallMath target=NotEqual_ByteByte@0x212d69b0710 (
+    $7429: InstanceVariable named ShroudBreakerActivationState@0x212d6860dc0
+    $7438: literal byte 0
+    $7440: EndFunctionParms
+  )
+$7441: PopExecutionFlowIfNot, cond:
+$7442: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x2139c139680
+$7451: LetBool (Variable = Expression)
+  Variable:
+  $7452: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x2139c139680
+  Expression:
+  $7461: CallMath target=NotEqual_ByteByte@0x212d69b0710 (
+    $7470: InstanceVariable named ShroudBreakerActivationState@0x212d6860dc0
+    $7479: literal byte 1
+    $7481: EndFunctionParms
+  )
+$7482: JumpIfNot -> 0x1ddf, cond:
+  $7487: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x2139c139680
+$7496: LetBool (Variable = Expression)
+  Variable:
+  $7497: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x2139c139680
+  Expression:
+  $7506: CallMath target=NotEqual_ByteByte@0x212d69b0710 (
+    $7515: InstanceVariable named ShroudBreakerActivationState@0x212d6860dc0
+    $7524: literal byte 2
+    $7526: EndFunctionParms
+  )
+$7527: JumpIfNot -> 0x1dd0, cond:
+  $7532: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x2139c139680
+$7541: LetBool (Variable = Expression)
+  Variable:
+  $7542: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x2139c139680
+  Expression:
+  $7551: CallMath target=NotEqual_ByteByte@0x212d69b0710 (
+    $7560: InstanceVariable named ShroudBreakerActivationState@0x212d6860dc0
+    $7569: literal byte 3
+    $7571: EndFunctionParms
+  )
+$7572: JumpIfNot -> 0x1e18, cond:
+  $7577: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x2139c139680
+$7586: LetBool (Variable = Expression)
+  Variable:
+  $7587: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x2139c139680
+  Expression:
+  $7596: CallMath target=NotEqual_ByteByte@0x212d69b0710 (
+    $7605: InstanceVariable named ShroudBreakerActivationState@0x212d6860dc0
+    $7614: literal byte 4
+    $7616: EndFunctionParms
+  )
+$7617: JumpIfNot -> 0x1e27, cond:
+  $7622: LocalVariable named K2Node_SwitchEnum_CmpSuccess@0x2139c139680
+$7631: PopExecutionFlow (jump to popped addr)
+$7632: VirtualFunction call "Deactivation Stage 2" (
+  $7645: EndFunctionParms
+)
+$7646: PopExecutionFlow (jump to popped addr)
+$7647: VirtualFunction call "Stage1Activation" (
+  $7660: EndFunctionParms
+)
+$7661: VirtualFunction call "Stage 2 Activation" (
+  $7674: EndFunctionParms
+)
+$7675: VirtualFunction call "Stage 3 Activation" (
+  $7688: EndFunctionParms
+)
+$7689: VirtualFunction call "Deactivation Stage 1" (
+  $7702: EndFunctionParms
+)
+$7703: PopExecutionFlow (jump to popped addr)
+$7704: VirtualFunction call "Deactivation Stage 3" (
+  $7717: EndFunctionParms
+)
+$7718: PopExecutionFlow (jump to popped addr)
+$7719: VirtualFunction call "Deactivation Stage 4" (
+  $7732: EndFunctionParms
+)
+$7733: PopExecutionFlow (jump to popped addr)
+$7734: LetBool (Variable = Expression)
+  Variable:
+  $7735: LocalVariable named K2Node_SwitchEnum2_CmpSuccess@0x2139c13a580
+  Expression:
+  $7744: CallMath target=NotEqual_ByteByte@0x212d69b0710 (
+    $7753: InstanceVariable named ShroudBreakerActivationState@0x212d6860dc0
+    $7762: literal byte 0
+    $7764: EndFunctionParms
+  )
+$7765: PopExecutionFlowIfNot, cond:
+$7766: LocalVariable named K2Node_SwitchEnum2_CmpSuccess@0x2139c13a580
+$7775: LetBool (Variable = Expression)
+  Variable:
+  $7776: LocalVariable named K2Node_SwitchEnum2_CmpSuccess@0x2139c13a580
+  Expression:
+  $7785: CallMath target=NotEqual_ByteByte@0x212d69b0710 (
+    $7794: InstanceVariable named ShroudBreakerActivationState@0x212d6860dc0
+    $7803: literal byte 1
+    $7805: EndFunctionParms
+  )
+$7806: JumpIfNot -> 0x1f41, cond:
+  $7811: LocalVariable named K2Node_SwitchEnum2_CmpSuccess@0x2139c13a580
+$7820: LetBool (Variable = Expression)
+  Variable:
+  $7821: LocalVariable named K2Node_SwitchEnum2_CmpSuccess@0x2139c13a580
+  Expression:
+  $7830: CallMath target=NotEqual_ByteByte@0x212d69b0710 (
+    $7839: InstanceVariable named ShroudBreakerActivationState@0x212d6860dc0
+    $7848: literal byte 2
+    $7850: EndFunctionParms
+  )
+$7851: JumpIfNot -> 0x1f32, cond:
+  $7856: LocalVariable named K2Node_SwitchEnum2_CmpSuccess@0x2139c13a580
+$7865: LetBool (Variable = Expression)
+  Variable:
+  $7866: LocalVariable named K2Node_SwitchEnum2_CmpSuccess@0x2139c13a580
+  Expression:
+  $7875: CallMath target=NotEqual_ByteByte@0x212d69b0710 (
+    $7884: InstanceVariable named ShroudBreakerActivationState@0x212d6860dc0
+    $7893: literal byte 3
+    $7895: EndFunctionParms
+  )
+$7896: JumpIfNot -> 0x1f23, cond:
+  $7901: LocalVariable named K2Node_SwitchEnum2_CmpSuccess@0x2139c13a580
+$7910: LetBool (Variable = Expression)
+  Variable:
+  $7911: LocalVariable named K2Node_SwitchEnum2_CmpSuccess@0x2139c13a580
+  Expression:
+  $7920: CallMath target=NotEqual_ByteByte@0x212d69b0710 (
+    $7929: InstanceVariable named ShroudBreakerActivationState@0x212d6860dc0
+    $7938: literal byte 4
+    $7940: EndFunctionParms
+  )
+$7941: JumpIfNot -> 0x1f14, cond:
+  $7946: LocalVariable named K2Node_SwitchEnum2_CmpSuccess@0x2139c13a580
+$7955: PopExecutionFlow (jump to popped addr)
+$7956: VirtualFunction call "Stage 4 Activation" (
+  $7969: EndFunctionParms
+)
+$7970: PopExecutionFlow (jump to popped addr)
+$7971: VirtualFunction call "Stage 3 Activation" (
+  $7984: EndFunctionParms
+)
+$7985: PopExecutionFlow (jump to popped addr)
+$7986: VirtualFunction call "Stage 2 Activation" (
+  $7999: EndFunctionParms
+)
+$8000: PopExecutionFlow (jump to popped addr)
+$8001: VirtualFunction call "Stage1Activation" (
+  $8014: EndFunctionParms
+)
+$8015: PopExecutionFlow (jump to popped addr)
+$8016: LetBool (Variable = Expression)
+  Variable:
+  $8017: LocalVariable named K2Node_SwitchEnum3_CmpSuccess@0x2139c137880
+  Expression:
+  $8026: CallMath target=NotEqual_ByteByte@0x212d69b0710 (
+    $8035: InstanceVariable named TargetSafeZone@0x212d6860cc0
+    $8044: literal byte 0
+    $8046: EndFunctionParms
+  )
+$8047: PopExecutionFlowIfNot, cond:
+$8048: LocalVariable named K2Node_SwitchEnum3_CmpSuccess@0x2139c137880
+$8057: LetBool (Variable = Expression)
+  Variable:
+  $8058: LocalVariable named K2Node_SwitchEnum3_CmpSuccess@0x2139c137880
+  Expression:
+  $8067: CallMath target=NotEqual_ByteByte@0x212d69b0710 (
+    $8076: InstanceVariable named TargetSafeZone@0x212d6860cc0
+    $8085: literal byte 1
+    $8087: EndFunctionParms
+  )
+$8088: JumpIfNot -> 0x2044, cond:
+  $8093: LocalVariable named K2Node_SwitchEnum3_CmpSuccess@0x2139c137880
+$8102: LetBool (Variable = Expression)
+  Variable:
+  $8103: LocalVariable named K2Node_SwitchEnum3_CmpSuccess@0x2139c137880
+  Expression:
+  $8112: CallMath target=NotEqual_ByteByte@0x212d69b0710 (
+    $8121: InstanceVariable named TargetSafeZone@0x212d6860cc0
+    $8130: literal byte 2
+    $8132: EndFunctionParms
+  )
+$8133: JumpIfNot -> 0x1fd4, cond:
+  $8138: LocalVariable named K2Node_SwitchEnum3_CmpSuccess@0x2139c137880
+$8147: PopExecutionFlow (jump to popped addr)
+$8148: Context
+  ObjectExpression:
+  $8149: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+  SkipBytes: 0x55
+  RValueProperty: (null)
+  ContextExpression:
+  $8170: FinalFunction target=PrintString@0x212d63b6df0 (
+    $8179: Self
+    $8180: literal ansi string "Going To Tribute Peak Safe Zone"
+    $8213: True
+    $8214: True
+    $8215: literal struct LinearColor@0x212d63787c0 (size 16)
+      $8228: literal float 1
+      $8233: literal float 0.3515399992465973
+      $8238: literal float 0.6386460065841675
+      $8243: literal float 1
+      $8248: EndStructConst
+    $8249: literal float 10
+    $8254: EndFunctionParms
+  )
+$8255: Jump to offset 0x1e36
+$8260: Context
+  ObjectExpression:
+  $8261: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+  SkipBytes: 0x53
+  RValueProperty: (null)
+  ContextExpression:
+  $8282: FinalFunction target=PrintString@0x212d63b6df0 (
+    $8291: Self
+    $8292: literal ansi string "Going to Main World Safe Zone"
+    $8323: True
+    $8324: True
+    $8325: literal struct LinearColor@0x212d63787c0 (size 16)
+      $8338: literal float 1
+      $8343: literal float 0.3515399992465973
+      $8348: literal float 0.6386460065841675
+      $8353: literal float 1
+      $8358: EndStructConst
+    $8359: literal float 10
+    $8364: EndFunctionParms
+  )
+$8365: Jump to offset 0x1cf2
+$8370: PopExecutionFlowIfNot, cond:
+$8371: InstanceVariable named ShroudBreakerEffectsActive@0x2139c139080
+$8380: Jump to offset 0x1f50
+$8385: Let (Variable = Expression)
+  Variable:
+  $8394: LocalVariable named CallFunc_WwiseEmitterComponentPostEvent_ReturnValue2@0x2139c209450
+  Expression:
+  $8403: Context
+    ObjectExpression:
+    $8404: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x212d7001550
+    SkipBytes: 0x38
+    RValueProperty: CallFunc_WwiseEmitterComponentPostEvent_ReturnValue2@0x2139c209450
+    ContextExpression:
+    $8425: FinalFunction target=WwiseEmitterComponentPostEvent@0x212d6a1dca0 (
+      $8434: InstanceVariable named WwiseEmitter@0x2139c138980
+      $8443: InstanceVariable named ShroudBreakerAmbientLoopingWwiseEvent@0x2139c139480
+      $8452: literal byte 2
+      $8454: literal name "None"
+      $8467: literal name "None"
+      $8480: EndFunctionParms
+    )
+$8481: Let (Variable = Expression)
+  Variable:
+  $8490: StructMemberContext prop=idx:6476@0x212d63789b0
+    Expression to struct:
+    $8499: LocalVariable named UniqueObjectNameForCooking_LinearColor7@0x2139c137d00
+  Expression:
+  $8508: literal float 1
+$8513: Let (Variable = Expression)
+  Variable:
+  $8522: StructMemberContext prop=idx:6465@0x212d6378940
+    Expression to struct:
+    $8531: LocalVariable named UniqueObjectNameForCooking_LinearColor7@0x2139c137d00
+  Expression:
+  $8540: literal float 0
+$8545: Let (Variable = Expression)
+  Variable:
+  $8554: StructMemberContext prop=idx:6460@0x212d63788d0
+    Expression to struct:
+    $8563: LocalVariable named UniqueObjectNameForCooking_LinearColor7@0x2139c137d00
+  Expression:
+  $8572: literal float 0
+$8577: Let (Variable = Expression)
+  Variable:
+  $8586: StructMemberContext prop=idx:6459@0x212d6378860
+    Expression to struct:
+    $8595: LocalVariable named UniqueObjectNameForCooking_LinearColor7@0x2139c137d00
+  Expression:
+  $8604: literal float 0
+$8609: Context
+  ObjectExpression:
+  $8610: InstanceVariable named Shroudbreaker Material@0x2139c139000
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $8631: FinalFunction target=SetVectorParameterValue@0x212d69f4970 (
+    $8640: literal name "Shroud Breaker Gem Activation"
+    $8653: LocalVariable named UniqueObjectNameForCooking_LinearColor7@0x2139c137d00
+    $8662: EndFunctionParms
+  )
+$8663: Let (Variable = Expression)
+  Variable:
+  $8672: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue7@0x2139c209a00
+  Expression:
+  $8681: Context
+    ObjectExpression:
+    $8682: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue7@0x2139c209a00
+    ContextExpression:
+    $8703: FinalFunction target=GetGameTimeInSeconds@0x212d63ac800 (
+      $8712: Self
+      $8713: EndFunctionParms
+    )
+$8714: Let (Variable = Expression)
+  Variable:
+  $8723: StructMemberContext prop=idx:6476@0x212d63789b0
+    Expression to struct:
+    $8732: LocalVariable named UniqueObjectNameForCooking_LinearColor12@0x2139c138180
+  Expression:
+  $8741: InstanceVariable named GemEmissiveOff@0x2139c209bc0
+$8750: Let (Variable = Expression)
+  Variable:
+  $8759: StructMemberContext prop=idx:6465@0x212d6378940
+    Expression to struct:
+    $8768: LocalVariable named UniqueObjectNameForCooking_LinearColor12@0x2139c138180
+  Expression:
+  $8777: InstanceVariable named GemEmissiveOn@0x2139c209ae0
+$8786: Let (Variable = Expression)
+  Variable:
+  $8795: StructMemberContext prop=idx:6460@0x212d63788d0
+    Expression to struct:
+    $8804: LocalVariable named UniqueObjectNameForCooking_LinearColor12@0x2139c138180
+  Expression:
+  $8813: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue7@0x2139c209a00
+$8822: Let (Variable = Expression)
+  Variable:
+  $8831: StructMemberContext prop=idx:6459@0x212d6378860
+    Expression to struct:
+    $8840: LocalVariable named UniqueObjectNameForCooking_LinearColor12@0x2139c138180
+  Expression:
+  $8849: literal float 0.5
+$8854: Context
+  ObjectExpression:
+  $8855: InstanceVariable named Shroudbreaker Material@0x2139c139000
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $8876: FinalFunction target=SetVectorParameterValue@0x212d69f4970 (
+    $8885: literal name "Shroud Breaker Emissive Blend"
+    $8898: LocalVariable named UniqueObjectNameForCooking_LinearColor12@0x2139c138180
+    $8907: EndFunctionParms
+  )
+$8908: Let (Variable = Expression)
+  Variable:
+  $8917: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue7@0x2139c209a00
+  Expression:
+  $8926: Context
+    ObjectExpression:
+    $8927: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue7@0x2139c209a00
+    ContextExpression:
+    $8948: FinalFunction target=GetGameTimeInSeconds@0x212d63ac800 (
+      $8957: Self
+      $8958: EndFunctionParms
+    )
+$8959: Let (Variable = Expression)
+  Variable:
+  $8968: StructMemberContext prop=idx:6476@0x212d63789b0
+    Expression to struct:
+    $8977: LocalVariable named UniqueObjectNameForCooking_LinearColor11@0x2139c138100
+  Expression:
+  $8986: literal float 1
+$8991: Let (Variable = Expression)
+  Variable:
+  $9000: StructMemberContext prop=idx:6465@0x212d6378940
+    Expression to struct:
+    $9009: LocalVariable named UniqueObjectNameForCooking_LinearColor11@0x2139c138100
+  Expression:
+  $9018: literal float 0
+$9023: Let (Variable = Expression)
+  Variable:
+  $9032: StructMemberContext prop=idx:6460@0x212d63788d0
+    Expression to struct:
+    $9041: LocalVariable named UniqueObjectNameForCooking_LinearColor11@0x2139c138100
+  Expression:
+  $9050: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue7@0x2139c209a00
+$9059: Let (Variable = Expression)
+  Variable:
+  $9068: StructMemberContext prop=idx:6459@0x212d6378860
+    Expression to struct:
+    $9077: LocalVariable named UniqueObjectNameForCooking_LinearColor11@0x2139c138100
+  Expression:
+  $9086: literal float 0.5
+$9091: Context
+  ObjectExpression:
+  $9092: InstanceVariable named Shroudbreaker Material@0x2139c139000
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $9113: FinalFunction target=SetVectorParameterValue@0x212d69f4970 (
+    $9122: literal name "Shroud Breaker Pulse Blend"
+    $9135: LocalVariable named UniqueObjectNameForCooking_LinearColor11@0x2139c138100
+    $9144: EndFunctionParms
+  )
+$9145: Let (Variable = Expression)
+  Variable:
+  $9154: LocalVariable named CallFunc_WwiseEmitterPostEvent_ReturnValue8@0x2139c2097d0
+  Expression:
+  $9163: Context
+    ObjectExpression:
+    $9164: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x212d7001550
+    SkipBytes: 0x4e
+    RValueProperty: CallFunc_WwiseEmitterPostEvent_ReturnValue8@0x2139c2097d0
+    ContextExpression:
+    $9185: FinalFunction target=WwiseEmitterPostEvent@0x212d6a1f260 (
+      $9194: Context
+        ObjectExpression:
+        $9195: InstanceVariable named WwiseEmitter@0x2139c138980
+        SkipBytes: 0x9
+        RValueProperty: Emitter@0x212d66b31d0
+        ContextExpression:
+        $9216: InstanceVariable named Emitter@0x212d66b31d0
+      $9225: ObjectConst Play_sfx_shroudbreaker_illuminate_level1@0x2139c0daff0
+      $9234: literal byte 2
+      $9236: literal name "None"
+      $9249: literal name "None"
+      $9262: EndFunctionParms
+    )
+$9263: Let (Variable = Expression)
+  Variable:
+  $9272: LocalVariable named CallFunc_WwiseEmitterPostEvent_ReturnValue4@0x2139c209610
+  Expression:
+  $9281: Context
+    ObjectExpression:
+    $9282: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x212d7001550
+    SkipBytes: 0x4e
+    RValueProperty: CallFunc_WwiseEmitterPostEvent_ReturnValue4@0x2139c209610
+    ContextExpression:
+    $9303: FinalFunction target=WwiseEmitterPostEvent@0x212d6a1f260 (
+      $9312: Context
+        ObjectExpression:
+        $9313: InstanceVariable named WwiseEmitter@0x2139c138980
+        SkipBytes: 0x9
+        RValueProperty: Emitter@0x212d66b31d0
+        ContextExpression:
+        $9334: InstanceVariable named Emitter@0x212d66b31d0
+      $9343: ObjectConst Play_mus_tt_v01_t09_break_shroud_jewel_01@0x21396cae010
+      $9352: literal byte 2
+      $9354: literal name "None"
+      $9367: literal name "None"
+      $9380: EndFunctionParms
+    )
+$9381: PopExecutionFlow (jump to popped addr)
+$9382: Let (Variable = Expression)
+  Variable:
+  $9391: LocalVariable named CallFunc_WwiseEmitterPostEvent_ReturnValue3@0x2139c2095a0
+  Expression:
+  $9400: Context
+    ObjectExpression:
+    $9401: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x212d7001550
+    SkipBytes: 0x4e
+    RValueProperty: CallFunc_WwiseEmitterPostEvent_ReturnValue3@0x2139c2095a0
+    ContextExpression:
+    $9422: FinalFunction target=WwiseEmitterPostEvent@0x212d6a1f260 (
+      $9431: Context
+        ObjectExpression:
+        $9432: InstanceVariable named WwiseEmitter@0x2139c138980
+        SkipBytes: 0x9
+        RValueProperty: Emitter@0x212d66b31d0
+        ContextExpression:
+        $9453: InstanceVariable named Emitter@0x212d66b31d0
+      $9462: ObjectConst Play_mus_tt_v01_t09_break_shroud_jewel_02@0x21396cae150
+      $9471: literal byte 2
+      $9473: literal name "None"
+      $9486: literal name "None"
+      $9499: EndFunctionParms
+    )
+$9500: PopExecutionFlow (jump to popped addr)
+$9501: Let (Variable = Expression)
+  Variable:
+  $9510: LocalVariable named CallFunc_WwiseEmitterPostEvent_ReturnValue7@0x2139c209760
+  Expression:
+  $9519: Context
+    ObjectExpression:
+    $9520: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x212d7001550
+    SkipBytes: 0x4e
+    RValueProperty: CallFunc_WwiseEmitterPostEvent_ReturnValue7@0x2139c209760
+    ContextExpression:
+    $9541: FinalFunction target=WwiseEmitterPostEvent@0x212d6a1f260 (
+      $9550: Context
+        ObjectExpression:
+        $9551: InstanceVariable named WwiseEmitter@0x2139c138980
+        SkipBytes: 0x9
+        RValueProperty: Emitter@0x212d66b31d0
+        ContextExpression:
+        $9572: InstanceVariable named Emitter@0x212d66b31d0
+      $9581: ObjectConst Play_sfx_shroudbreaker_illuminate_level2@0x2139c0d14f0
+      $9590: literal byte 2
+      $9592: literal name "None"
+      $9605: literal name "None"
+      $9618: EndFunctionParms
+    )
+$9619: Jump to offset 0x24a6
+$9624: Context
+  ObjectExpression:
+  $9625: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+  SkipBytes: 0x3a
+  RValueProperty: (null)
+  ContextExpression:
+  $9646: FinalFunction target=Delay@0x212d63a6d40 (
+    $9655: Self
+    $9656: InstanceVariable named FinalStageActivationDelay@0x2139c209b50
+    $9665: literal struct LatentActionInfo@0x212d63a6e80 (size 32)
+      $9678: literal CodeSkipSizeType 0x3ef
+      $9683: literal int32 4
+      $9688: literal name "ExecuteUbergraph_BP_Shroudbreaker_OnShip"
+      $9701: Self
+      $9702: EndStructConst
+    $9703: EndFunctionParms
+  )
+$9704: PopExecutionFlow (jump to popped addr)
+$9705: Context
+  ObjectExpression:
+  $9706: InstanceVariable named vfx_ShroudBreaker_OnShip_stage4@0x2139c138680
+  SkipBytes: 0xf
+  RValueProperty: (null)
+  ContextExpression:
+  $9727: VirtualFunction call "Activate" (
+    $9740: True
+    $9741: EndFunctionParms
+  )
+$9742: Context
+  ObjectExpression:
+  $9743: InstanceVariable named vfx_ShroudBreaker_OnShip_stage3@0x2139c138780
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $9764: VirtualFunction call "Deactivate" (
+    $9777: EndFunctionParms
+  )
+$9778: Context
+  ObjectExpression:
+  $9779: InstanceVariable named ShieldPulseMesh@0x2139c138700
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $9800: VirtualFunction call "SetVisibility" (
+    $9813: True
+    $9814: False
+    $9815: EndFunctionParms
+  )
+$9816: Let (Variable = Expression)
+  Variable:
+  $9825: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue5@0x2139c2098b0
+  Expression:
+  $9834: Context
+    ObjectExpression:
+    $9835: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue5@0x2139c2098b0
+    ContextExpression:
+    $9856: FinalFunction target=GetGameTimeInSeconds@0x212d63ac800 (
+      $9865: Self
+      $9866: EndFunctionParms
+    )
+$9867: Context
+  ObjectExpression:
+  $9868: InstanceVariable named ShieldPulseMaterial@0x2139c139300
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $9889: FinalFunction target=SetScalarParameterValue@0x212d69f4620 (
+    $9898: literal name "PulseStartTime"
+    $9911: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue5@0x2139c2098b0
+    $9920: EndFunctionParms
+  )
+$9921: Let (Variable = Expression)
+  Variable:
+  $9930: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue5@0x2139c2098b0
+  Expression:
+  $9939: Context
+    ObjectExpression:
+    $9940: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue5@0x2139c2098b0
+    ContextExpression:
+    $9961: FinalFunction target=GetGameTimeInSeconds@0x212d63ac800 (
+      $9970: Self
+      $9971: EndFunctionParms
+    )
+$9972: Let (Variable = Expression)
+  Variable:
+  $9981: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x2139c209920
+  Expression:
+  $9990: CallMath target=Add_FloatFloat@0x212d698f820 (
+    $9999: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue5@0x2139c2098b0
+    $10008: literal float 10000000
+    $10013: EndFunctionParms
+  )
+$10014: Context
+  ObjectExpression:
+  $10015: InstanceVariable named ShieldPulseMaterial@0x2139c139300
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $10036: FinalFunction target=SetScalarParameterValue@0x212d69f4620 (
+    $10045: literal name "FadeStartTime"
+    $10058: LocalVariable named CallFunc_Add_FloatFloat_ReturnValue@0x2139c209920
+    $10067: EndFunctionParms
+  )
+$10068: Jump to offset 0x2598
+$10073: Let (Variable = Expression)
+  Variable:
+  $10082: StructMemberContext prop=idx:6476@0x212d63789b0
+    Expression to struct:
+    $10091: LocalVariable named UniqueObjectNameForCooking_LinearColor9@0x2139c137e80
+  Expression:
+  $10100: literal float 1
+$10105: Let (Variable = Expression)
+  Variable:
+  $10114: StructMemberContext prop=idx:6465@0x212d6378940
+    Expression to struct:
+    $10123: LocalVariable named UniqueObjectNameForCooking_LinearColor9@0x2139c137e80
+  Expression:
+  $10132: literal float 1
+$10137: Let (Variable = Expression)
+  Variable:
+  $10146: StructMemberContext prop=idx:6460@0x212d63788d0
+    Expression to struct:
+    $10155: LocalVariable named UniqueObjectNameForCooking_LinearColor9@0x2139c137e80
+  Expression:
+  $10164: literal float 1
+$10169: Let (Variable = Expression)
+  Variable:
+  $10178: StructMemberContext prop=idx:6459@0x212d6378860
+    Expression to struct:
+    $10187: LocalVariable named UniqueObjectNameForCooking_LinearColor9@0x2139c137e80
+  Expression:
+  $10196: literal float 0
+$10201: Context
+  ObjectExpression:
+  $10202: InstanceVariable named Shroudbreaker Material@0x2139c139000
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $10223: FinalFunction target=SetVectorParameterValue@0x212d69f4970 (
+    $10232: literal name "Shroud Breaker Gem Activation"
+    $10245: LocalVariable named UniqueObjectNameForCooking_LinearColor9@0x2139c137e80
+    $10254: EndFunctionParms
+  )
+$10255: Context
+  ObjectExpression:
+  $10256: InstanceVariable named vfx_ShroudBreaker_OnShip_stage3@0x2139c138780
+  SkipBytes: 0xf
+  RValueProperty: (null)
+  ContextExpression:
+  $10277: VirtualFunction call "Activate" (
+    $10290: True
+    $10291: EndFunctionParms
+  )
+$10292: Context
+  ObjectExpression:
+  $10293: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $10314: FinalFunction target=Delay@0x212d63a6d40 (
+    $10323: Self
+    $10324: literal float 0.5
+    $10329: literal struct LatentActionInfo@0x212d63a6e80 (size 32)
+      $10342: literal CodeSkipSizeType 0x7d6
+      $10347: literal int32 7
+      $10352: literal name "ExecuteUbergraph_BP_Shroudbreaker_OnShip"
+      $10365: Self
+      $10366: EndStructConst
+    $10367: EndFunctionParms
+  )
+$10368: PopExecutionFlow (jump to popped addr)
+$10369: Let (Variable = Expression)
+  Variable:
+  $10378: StructMemberContext prop=idx:6476@0x212d63789b0
+    Expression to struct:
+    $10387: LocalVariable named UniqueObjectNameForCooking_LinearColor8@0x2139c137e00
+  Expression:
+  $10396: literal float 1
+$10401: Let (Variable = Expression)
+  Variable:
+  $10410: StructMemberContext prop=idx:6465@0x212d6378940
+    Expression to struct:
+    $10419: LocalVariable named UniqueObjectNameForCooking_LinearColor8@0x2139c137e00
+  Expression:
+  $10428: literal float 1
+$10433: Let (Variable = Expression)
+  Variable:
+  $10442: StructMemberContext prop=idx:6460@0x212d63788d0
+    Expression to struct:
+    $10451: LocalVariable named UniqueObjectNameForCooking_LinearColor8@0x2139c137e00
+  Expression:
+  $10460: literal float 0
+$10465: Let (Variable = Expression)
+  Variable:
+  $10474: StructMemberContext prop=idx:6459@0x212d6378860
+    Expression to struct:
+    $10483: LocalVariable named UniqueObjectNameForCooking_LinearColor8@0x2139c137e00
+  Expression:
+  $10492: literal float 0
+$10497: Context
+  ObjectExpression:
+  $10498: InstanceVariable named Shroudbreaker Material@0x2139c139000
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $10519: FinalFunction target=SetVectorParameterValue@0x212d69f4970 (
+    $10528: literal name "Shroud Breaker Gem Activation"
+    $10541: LocalVariable named UniqueObjectNameForCooking_LinearColor8@0x2139c137e00
+    $10550: EndFunctionParms
+  )
+$10551: Jump to offset 0x251d
+$10556: Context
+  ObjectExpression:
+  $10557: InstanceVariable named vfx_ShroudBreaker_OnShip_stage1@0x2139c138a80
+  SkipBytes: 0xf
+  RValueProperty: (null)
+  ContextExpression:
+  $10578: VirtualFunction call "Activate" (
+    $10591: True
+    $10592: EndFunctionParms
+  )
+$10593: Jump to offset 0x2881
+$10598: Let (Variable = Expression)
+  Variable:
+  $10607: StructMemberContext prop=idx:6476@0x212d63789b0
+    Expression to struct:
+    $10616: LocalVariable named UniqueObjectNameForCooking_LinearColor13@0x2139c138200
+  Expression:
+  $10625: literal float 1
+$10630: Let (Variable = Expression)
+  Variable:
+  $10639: StructMemberContext prop=idx:6465@0x212d6378940
+    Expression to struct:
+    $10648: LocalVariable named UniqueObjectNameForCooking_LinearColor13@0x2139c138200
+  Expression:
+  $10657: literal float 1
+$10662: Let (Variable = Expression)
+  Variable:
+  $10671: StructMemberContext prop=idx:6460@0x212d63788d0
+    Expression to struct:
+    $10680: LocalVariable named UniqueObjectNameForCooking_LinearColor13@0x2139c138200
+  Expression:
+  $10689: literal float 1
+$10694: Let (Variable = Expression)
+  Variable:
+  $10703: StructMemberContext prop=idx:6459@0x212d6378860
+    Expression to struct:
+    $10712: LocalVariable named UniqueObjectNameForCooking_LinearColor13@0x2139c138200
+  Expression:
+  $10721: literal float 1
+$10726: Context
+  ObjectExpression:
+  $10727: InstanceVariable named Shroudbreaker Material@0x2139c139000
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $10748: FinalFunction target=SetVectorParameterValue@0x212d69f4970 (
+    $10757: literal name "Shroud Breaker Gem Activation"
+    $10770: LocalVariable named UniqueObjectNameForCooking_LinearColor13@0x2139c138200
+    $10779: EndFunctionParms
+  )
+$10780: Jump to offset 0x25e9
+$10785: Jump to offset 0x2759
+$10790: Jump to offset 0x293c
+$10795: Jump to offset 0x20c1
+$10800: Context
+  ObjectExpression:
+  $10801: InstanceVariable named vfx_ShroudBreaker_OnShip_stage4@0x2139c138680
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $10822: VirtualFunction call "Deactivate" (
+    $10835: EndFunctionParms
+  )
+$10836: PopExecutionFlow (jump to popped addr)
+$10837: Let (Variable = Expression)
+  Variable:
+  $10846: StructMemberContext prop=idx:6476@0x212d63789b0
+    Expression to struct:
+    $10855: LocalVariable named UniqueObjectNameForCooking_LinearColor6@0x2139c137c00
+  Expression:
+  $10864: literal float 0
+$10869: Let (Variable = Expression)
+  Variable:
+  $10878: StructMemberContext prop=idx:6465@0x212d6378940
+    Expression to struct:
+    $10887: LocalVariable named UniqueObjectNameForCooking_LinearColor6@0x2139c137c00
+  Expression:
+  $10896: literal float 0
+$10901: Let (Variable = Expression)
+  Variable:
+  $10910: StructMemberContext prop=idx:6460@0x212d63788d0
+    Expression to struct:
+    $10919: LocalVariable named UniqueObjectNameForCooking_LinearColor6@0x2139c137c00
+  Expression:
+  $10928: literal float 0
+$10933: Let (Variable = Expression)
+  Variable:
+  $10942: StructMemberContext prop=idx:6459@0x212d6378860
+    Expression to struct:
+    $10951: LocalVariable named UniqueObjectNameForCooking_LinearColor6@0x2139c137c00
+  Expression:
+  $10960: literal float 0
+$10965: Context
+  ObjectExpression:
+  $10966: InstanceVariable named Shroudbreaker Material@0x2139c139000
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $10987: FinalFunction target=SetVectorParameterValue@0x212d69f4970 (
+    $10996: literal name "Shroud Breaker Gem Activation"
+    $11009: LocalVariable named UniqueObjectNameForCooking_LinearColor6@0x2139c137c00
+    $11018: EndFunctionParms
+  )
+$11019: Jump to offset 0x2a30
+$11024: Let (Variable = Expression)
+  Variable:
+  $11033: StructMemberContext prop=idx:6476@0x212d63789b0
+    Expression to struct:
+    $11042: LocalVariable named UniqueObjectNameForCooking_LinearColor3@0x2139c137a00
+  Expression:
+  $11051: literal float 1
+$11056: Let (Variable = Expression)
+  Variable:
+  $11065: StructMemberContext prop=idx:6465@0x212d6378940
+    Expression to struct:
+    $11074: LocalVariable named UniqueObjectNameForCooking_LinearColor3@0x2139c137a00
+  Expression:
+  $11083: literal float 1
+$11088: Let (Variable = Expression)
+  Variable:
+  $11097: StructMemberContext prop=idx:6460@0x212d63788d0
+    Expression to struct:
+    $11106: LocalVariable named UniqueObjectNameForCooking_LinearColor3@0x2139c137a00
+  Expression:
+  $11115: literal float 1
+$11120: Let (Variable = Expression)
+  Variable:
+  $11129: StructMemberContext prop=idx:6459@0x212d6378860
+    Expression to struct:
+    $11138: LocalVariable named UniqueObjectNameForCooking_LinearColor3@0x2139c137a00
+  Expression:
+  $11147: literal float 0
+$11152: Context
+  ObjectExpression:
+  $11153: InstanceVariable named Shroudbreaker Material@0x2139c139000
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $11174: FinalFunction target=SetVectorParameterValue@0x212d69f4970 (
+    $11183: literal name "Shroud Breaker Gem Activation"
+    $11196: LocalVariable named UniqueObjectNameForCooking_LinearColor3@0x2139c137a00
+    $11205: EndFunctionParms
+  )
+$11206: PopExecutionFlow (jump to popped addr)
+$11207: VirtualFunction call "Deactivation Stage 4" (
+  $11220: EndFunctionParms
+)
+$11221: VirtualFunction call "Deactivation Stage 3" (
+  $11234: EndFunctionParms
+)
+$11235: VirtualFunction call "Deactivation Stage 2" (
+  $11248: EndFunctionParms
+)
+$11249: VirtualFunction call "Deactivation Stage 1" (
+  $11262: EndFunctionParms
+)
+$11263: PopExecutionFlow (jump to popped addr)
+$11264: Jump to offset 0x2bc7
+$11269: FlowStack.Push(0x2c62)
+$11274: LetBool (Variable = Expression)
+  Variable:
+  $11275: LocalVariable named CallFunc_WwiseEmitterStop_ReturnValue@0x2139c138500
+  Expression:
+  $11284: Context
+    ObjectExpression:
+    $11285: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x212d7001550
+    SkipBytes: 0x33
+    RValueProperty: CallFunc_WwiseEmitterStop_ReturnValue@0x2139c138500
+    ContextExpression:
+    $11306: FinalFunction target=WwiseEmitterStop@0x212d6a20760 (
+      $11315: Context
+        ObjectExpression:
+        $11316: InstanceVariable named WwiseEmitter@0x2139c138980
+        SkipBytes: 0x9
+        RValueProperty: Emitter@0x212d66b31d0
+        ContextExpression:
+        $11337: InstanceVariable named Emitter@0x212d66b31d0
+      $11346: literal int32 0
+      $11351: literal float 0
+      $11356: EndFunctionParms
+    )
+$11357: Jump to offset 0x2b10
+$11362: Let (Variable = Expression)
+  Variable:
+  $11371: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue8@0x2139c209a70
+  Expression:
+  $11380: Context
+    ObjectExpression:
+    $11381: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue8@0x2139c209a70
+    ContextExpression:
+    $11402: FinalFunction target=GetGameTimeInSeconds@0x212d63ac800 (
+      $11411: Self
+      $11412: EndFunctionParms
+    )
+$11413: Let (Variable = Expression)
+  Variable:
+  $11422: StructMemberContext prop=idx:6476@0x212d63789b0
+    Expression to struct:
+    $11431: LocalVariable named UniqueObjectNameForCooking_LinearColor18@0x2139c138600
+  Expression:
+  $11440: literal float 1
+$11445: Let (Variable = Expression)
+  Variable:
+  $11454: StructMemberContext prop=idx:6465@0x212d6378940
+    Expression to struct:
+    $11463: LocalVariable named UniqueObjectNameForCooking_LinearColor18@0x2139c138600
+  Expression:
+  $11472: literal float 0
+$11477: Let (Variable = Expression)
+  Variable:
+  $11486: StructMemberContext prop=idx:6460@0x212d63788d0
+    Expression to struct:
+    $11495: LocalVariable named UniqueObjectNameForCooking_LinearColor18@0x2139c138600
+  Expression:
+  $11504: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue8@0x2139c209a70
+$11513: Let (Variable = Expression)
+  Variable:
+  $11522: StructMemberContext prop=idx:6459@0x212d6378860
+    Expression to struct:
+    $11531: LocalVariable named UniqueObjectNameForCooking_LinearColor18@0x2139c138600
+  Expression:
+  $11540: literal float 4.5
+$11545: Context
+  ObjectExpression:
+  $11546: InstanceVariable named ShieldMaterial@0x2139c139280
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $11567: FinalFunction target=SetVectorParameterValue@0x212d69f4970 (
+    $11576: literal name "Timed Blend Values"
+    $11589: LocalVariable named UniqueObjectNameForCooking_LinearColor18@0x2139c138600
+    $11598: EndFunctionParms
+  )
+$11599: Context
+  ObjectExpression:
+  $11600: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $11621: FinalFunction target=Delay@0x212d63a6d40 (
+    $11630: Self
+    $11631: literal float 2
+    $11636: literal struct LatentActionInfo@0x212d63a6e80 (size 32)
+      $11649: literal CodeSkipSizeType 0xb11
+      $11654: literal int32 10
+      $11659: literal name "ExecuteUbergraph_BP_Shroudbreaker_OnShip"
+      $11672: Self
+      $11673: EndStructConst
+    $11674: EndFunctionParms
+  )
+$11675: PopExecutionFlow (jump to popped addr)
+$11676: Context
+  ObjectExpression:
+  $11677: InstanceVariable named vfx_ShroudBreaker_OnShip_stage1@0x2139c138a80
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $11698: VirtualFunction call "Deactivate" (
+    $11711: EndFunctionParms
+  )
+$11712: Jump to offset 0x2a55
+$11717: Context
+  ObjectExpression:
+  $11718: InstanceVariable named vfx_ShroudBreaker_OnShip_stage1@0x2139c138a80
+  SkipBytes: 0xf
+  RValueProperty: (null)
+  ContextExpression:
+  $11739: VirtualFunction call "Activate" (
+    $11752: True
+    $11753: EndFunctionParms
+  )
+$11754: Context
+  ObjectExpression:
+  $11755: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $11776: FinalFunction target=Delay@0x212d63a6d40 (
+    $11785: Self
+    $11786: literal float 1
+    $11791: literal struct LatentActionInfo@0x212d63a6e80 (size 32)
+      $11804: literal CodeSkipSizeType 0xa36
+      $11809: literal int32 9
+      $11814: literal name "ExecuteUbergraph_BP_Shroudbreaker_OnShip"
+      $11827: Self
+      $11828: EndStructConst
+    $11829: EndFunctionParms
+  )
+$11830: PopExecutionFlow (jump to popped addr)
+$11831: Jump to offset 0x2d9c
+$11836: Jump to offset 0x2dc5
+$11841: Jump to offset 0x2c05
+$11846: Jump to offset 0x2c0a
+$11851: Return expression:
+  $11852: Nothing
+$11853: EndOfScript

@@ -1,0 +1,73 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_3_LegendaryStoryteller/AdditionalPuzzles/bp_grantplank_additionalpuzzles -> BP_GrantPlank_AdditionalPuzzles_C
+
+=== BP_GrantPlank_AdditionalPuzzles_C::fn_idx_1828 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fce7f6e80
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fce7f6e00
+$18: VirtualFunction call "idx:283873" (
+  $31: literal int32 25
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_GrantPlank_AdditionalPuzzles_C::fn_idx_283873 (242 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19e586bebd0
+$10: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $19: EndFunctionParms
+)
+$20: Jump to offset 0xef
+$25: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $34: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce7f6f80
+  $43: EndFunctionParms
+)
+$44: LetObj (Variable = Expression)
+  Variable:
+  $45: LocalVariable named CallFunc_GetService_ReturnValue@0x19fce7f6f00
+  Expression:
+  $54: FinalFunction target=GetService@0x19e4cda5b60 (
+    $63: ObjectConst TaleQuestPlankService@0x19e4c483b80
+    $72: EndFunctionParms
+  )
+$73: Let (Variable = Expression)
+  Variable:
+  $82: LocalVariable named idx:283874@0x19fce7f7000
+  Expression:
+  $91: DynamicCast to TaleQuestPlankService@0x19e4c483b80 of expr:
+  $100: LocalVariable named CallFunc_GetService_ReturnValue@0x19fce7f6f00
+$109: Let (Variable = Expression)
+  Variable:
+  $118: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fce7f7080
+  Expression:
+  $127: PrimitiveCast type=71
+    Argument:
+    $129: LocalVariable named idx:283874@0x19fce7f7000
+$138: JumpIfNot -> 0xa, cond:
+  $143: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fce7f7080
+$152: Context
+  ObjectExpression:
+  $153: LocalVariable named idx:283874@0x19fce7f7000
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $174: FinalFunction target=SetWoodenPlankDesc@0x19e4d25ca10 (
+    $183: StructMemberContext prop=idx:283824@0x19fce7faf00
+      Expression to struct:
+      $192: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fce7f6f80
+    $201: EndFunctionParms
+  )
+$202: Context
+  ObjectExpression:
+  $203: LocalVariable named idx:283874@0x19fce7f7000
+  SkipBytes: 0xa
+  RValueProperty: (null)
+  ContextExpression:
+  $224: FinalFunction target=GiveToolsToAllParticipants@0x19e4d113830 (
+    $233: EndFunctionParms
+  )
+$234: Jump to offset 0xa
+$239: Return expression:
+  $240: Nothing
+$241: EndOfScript

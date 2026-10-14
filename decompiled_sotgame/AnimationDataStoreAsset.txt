@@ -1,0 +1,70 @@
+// Class: AnimationDataStoreAsset (2 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+AnimationDataStoreAsset::GetAnimationDataClass @ RVA 0x2EE5A70 EA 0x7FF6F6905A70
+======================================================================
+_QWORD *__fastcall sub_7FF6F6905A70(__int64 a1, _QWORD *a2, _QWORD *a3)
+{
+  __int64 v5; // rdi
+  _BYTE *v6; // rdx
+  __int64 v7; // rax
+  _QWORD *result; // rax
+  _BYTE v9[40]; // [rsp+20h] [rbp-28h] BYREF
+  char v10; // [rsp+58h] [rbp+10h] BYREF
+
+  sub_7FF6F68CE340(v9);
+  v5 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_BYTE *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v5) = v7 != 0;
+  a2[4] = v7 + v5;
+  result = (_QWORD *)sub_7FF6F68D4CF0(&v10, v6);
+  *a3 = *result;
+  return result;
+}
+
+
+======================================================================
+AnimationDataStoreAsset::LookupAnimationData @ RVA 0x2EE6460 EA 0x7FF6F6906460
+======================================================================
+__int64 __fastcall sub_7FF6F6906460(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 result; // rax
+  __int64 v10; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = sub_7FF6F68D8160(a1, v8);
+  *a3 = result;
+  return result;
+}
+

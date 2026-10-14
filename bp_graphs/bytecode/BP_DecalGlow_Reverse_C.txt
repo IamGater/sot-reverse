@@ -1,0 +1,283 @@
+// /Game/Blueprints/LandmarkReactions/bp_decalglow_reverse -> BP_DecalGlow_Reverse_C
+
+=== BP_DecalGlow_Reverse_C::fn_idx_275504 (761 bytes) ===
+$0: VirtualFunction call "idx:275499" (
+  $13: EndFunctionParms
+)
+$14: LetBool (Variable = Expression)
+  Variable:
+  $15: LocalVariable named CallFunc_Greater_FloatFloat_ReturnValue@0x19fc03b0f80
+  Expression:
+  $24: CallMath target=Greater_FloatFloat@0x19e4d382550 (
+    $33: Context
+      ObjectExpression:
+      $34: InstanceVariable named idx:275529@0x19fc03b1400
+      SkipBytes: 0x9
+      RValueProperty: StartTime@0x19fbf436580
+      ContextExpression:
+      $55: InstanceVariable named StartTime@0x19fbf436580
+    $64: literal float 0
+    $69: EndFunctionParms
+  )
+$70: JumpIfNot -> 0x2f6, cond:
+  $75: LocalVariable named CallFunc_Greater_FloatFloat_ReturnValue@0x19fc03b0f80
+$84: LetObj (Variable = Expression)
+  Variable:
+  $85: LocalVariable named CallFunc_GetDecalDynamicMaterialInstance_ReturnValue@0x19fc03b0f00
+  Expression:
+  $94: Context
+    ObjectExpression:
+    $95: Context
+      ObjectExpression:
+      $96: InstanceVariable named idx:275505@0x19fc03b1300
+      SkipBytes: 0x9
+      RValueProperty: Decal@0x19e13a63700
+      ContextExpression:
+      $117: InstanceVariable named Decal@0x19e13a63700
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetDecalDynamicMaterialInstance_ReturnValue@0x19fc03b0f00
+    ContextExpression:
+    $138: FinalFunction target=GetDecalDynamicMaterialInstance@0x19e4d335cb0 (
+      $147: EndFunctionParms
+    )
+$148: Let (Variable = Expression)
+  Variable:
+  $157: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x19fbf433bf0
+  Expression:
+  $166: Context
+    ObjectExpression:
+    $167: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_GetGameTimeInSeconds_ReturnValue@0x19fbf433bf0
+    ContextExpression:
+    $188: FinalFunction target=GetGameTimeInSeconds@0x19e4cd8c800 (
+      $197: Self
+      $198: EndFunctionParms
+    )
+$199: Let (Variable = Expression)
+  Variable:
+  $208: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue@0x19fbf433c60
+  Expression:
+  $217: CallMath target=Subtract_FloatFloat@0x19e4d3998c0 (
+    $226: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x19fbf433bf0
+    $235: Context
+      ObjectExpression:
+      $236: InstanceVariable named idx:275529@0x19fc03b1400
+      SkipBytes: 0x9
+      RValueProperty: StartTime@0x19fbf436580
+      ContextExpression:
+      $257: InstanceVariable named StartTime@0x19fbf436580
+    $266: EndFunctionParms
+  )
+$267: Let (Variable = Expression)
+  Variable:
+  $276: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue2@0x19fbf433cd0
+  Expression:
+  $285: CallMath target=Subtract_FloatFloat@0x19e4d3998c0 (
+    $294: InstanceVariable named idx:275503@0x19fbf434c20
+    $303: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue@0x19fbf433c60
+    $312: EndFunctionParms
+  )
+$313: Let (Variable = Expression)
+  Variable:
+  $322: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue@0x19fbf433d40
+  Expression:
+  $331: CallMath target=Divide_FloatFloat@0x19e4d378eb0 (
+    $340: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue@0x19fbf433c60
+    $349: InstanceVariable named idx:275503@0x19fbf434c20
+    $358: EndFunctionParms
+  )
+$359: Let (Variable = Expression)
+  Variable:
+  $368: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue2@0x19fbf433db0
+  Expression:
+  $377: CallMath target=Divide_FloatFloat@0x19e4d378eb0 (
+    $386: LocalVariable named CallFunc_Subtract_FloatFloat_ReturnValue2@0x19fbf433cd0
+    $395: literal float 4
+    $400: EndFunctionParms
+  )
+$401: Let (Variable = Expression)
+  Variable:
+  $410: StructMemberContext prop=idx:6476@0x19e4cd589b0
+    Expression to struct:
+    $419: LocalVariable named K2Node_MakeStruct_LinearColor@0x19fc03b1000
+  Expression:
+  $428: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue@0x19fbf433d40
+$437: Let (Variable = Expression)
+  Variable:
+  $446: StructMemberContext prop=idx:6465@0x19e4cd58940
+    Expression to struct:
+    $455: LocalVariable named K2Node_MakeStruct_LinearColor@0x19fc03b1000
+  Expression:
+  $464: literal float 0
+$469: Let (Variable = Expression)
+  Variable:
+  $478: StructMemberContext prop=idx:6460@0x19e4cd588d0
+    Expression to struct:
+    $487: LocalVariable named K2Node_MakeStruct_LinearColor@0x19fc03b1000
+  Expression:
+  $496: LocalVariable named CallFunc_GetGameTimeInSeconds_ReturnValue@0x19fbf433bf0
+$505: Let (Variable = Expression)
+  Variable:
+  $514: StructMemberContext prop=idx:6459@0x19e4cd58860
+    Expression to struct:
+    $523: LocalVariable named K2Node_MakeStruct_LinearColor@0x19fc03b1000
+  Expression:
+  $532: LocalVariable named CallFunc_Divide_FloatFloat_ReturnValue2@0x19fbf433db0
+$541: Context
+  ObjectExpression:
+  $542: LocalVariable named CallFunc_GetDecalDynamicMaterialInstance_ReturnValue@0x19fc03b0f00
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $563: FinalFunction target=SetVectorParameterValue@0x19e4d3d4970 (
+    $572: literal name "Timed Blend Values"
+    $585: LocalVariable named K2Node_MakeStruct_LinearColor@0x19fc03b1000
+    $594: EndFunctionParms
+  )
+$595: Let (Variable = Expression)
+  Variable:
+  $604: Context
+    ObjectExpression:
+    $605: InstanceVariable named idx:275529@0x19fc03b1400
+    SkipBytes: 0x9
+    RValueProperty: StartTime@0x19fbf436580
+    ContextExpression:
+    $626: InstanceVariable named StartTime@0x19fbf436580
+  Expression:
+  $635: literal float 0
+$640: Let (Variable = Expression)
+  Variable:
+  $649: LocalVariable named CallFunc_WwiseEmitterComponentPostEvent_ReturnValue@0x19fbf433b80
+  Expression:
+  $658: Context
+    ObjectExpression:
+    $659: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x19e4d9e1550
+    SkipBytes: 0x4e
+    RValueProperty: CallFunc_WwiseEmitterComponentPostEvent_ReturnValue@0x19fbf433b80
+    ContextExpression:
+    $680: FinalFunction target=WwiseEmitterComponentPostEvent@0x19e4d3fdca0 (
+      $689: Context
+        ObjectExpression:
+        $690: InstanceVariable named idx:275529@0x19fc03b1400
+        SkipBytes: 0x9
+        RValueProperty: WwiseEmitter@0x19fc03b1b80
+        ContextExpression:
+        $711: InstanceVariable named WwiseEmitter@0x19fc03b1b80
+      $720: ObjectConst idx:275530@0x19fbce9e470
+      $729: literal byte 2
+      $731: literal name "None"
+      $744: literal name "None"
+      $757: EndFunctionParms
+    )
+$758: Return expression:
+  $759: Nothing
+$760: EndOfScript
+
+=== BP_DecalGlow_Reverse_C::fn_idx_2004 (36 bytes) ===
+$0: VirtualFunction call "idx:275504" (
+  $13: EndFunctionParms
+)
+$14: LetBool (Variable = Expression)
+  Variable:
+  $15: LocalOutVariable named ReturnValue@0x19fc03b1080
+  Expression:
+  $24: True
+$25: Return expression:
+  $26: LocalOutVariable named ReturnValue@0x19fc03b1080
+$35: EndOfScript
+
+=== BP_DecalGlow_Reverse_C::fn_idx_2005 (50 bytes) ===
+$0: LetBool (Variable = Expression)
+  Variable:
+  $1: LocalVariable named idx:275498@0x19fc03b1180
+  Expression:
+  $10: FinalFunction target=StopReaction@0x19e4d1b8880 (
+    $19: EndFunctionParms
+  )
+$20: LetBool (Variable = Expression)
+  Variable:
+  $21: LocalOutVariable named ReturnValue@0x19fc03b1100
+  Expression:
+  $30: LocalVariable named idx:275498@0x19fc03b1180
+$39: Return expression:
+  $40: LocalOutVariable named ReturnValue@0x19fc03b1100
+$49: EndOfScript
+
+=== BP_DecalGlow_Reverse_C::fn_idx_275499 (206 bytes) ===
+$0: JumpIfNot -> 0x13, cond:
+  $5: InstanceVariable named idx:275526@0x19fc03b1480
+$14: Jump to offset 0xcb
+$19: Context
+  ObjectExpression:
+  $20: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $41: FinalFunction target=Array_Clear@0x19e4d366fd0 (
+    $50: InstanceVariable named idx:275500@0x19fc03b1580
+    $59: EndFunctionParms
+  )
+$60: LetObj (Variable = Expression)
+  Variable:
+  $61: LocalVariable named CallFunc_GetDecalDynamicMaterialInstance_ReturnValue@0x19fc03b1200
+  Expression:
+  $70: Context
+    ObjectExpression:
+    $71: Context
+      ObjectExpression:
+      $72: InstanceVariable named idx:275505@0x19fc03b1300
+      SkipBytes: 0x9
+      RValueProperty: Decal@0x19e13a63700
+      ContextExpression:
+      $93: InstanceVariable named Decal@0x19e13a63700
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetDecalDynamicMaterialInstance_ReturnValue@0x19fc03b1200
+    ContextExpression:
+    $114: FinalFunction target=GetDecalDynamicMaterialInstance@0x19e4d335cb0 (
+      $123: EndFunctionParms
+    )
+$124: Let (Variable = Expression)
+  Variable:
+  $133: LocalVariable named CallFunc_Array_Add_ReturnValue@0x19fbf433e20
+  Expression:
+  $142: Context
+    ObjectExpression:
+    $143: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Add_ReturnValue@0x19fbf433e20
+    ContextExpression:
+    $164: FinalFunction target=Array_Add@0x19e4d366810 (
+      $173: InstanceVariable named idx:275500@0x19fc03b1580
+      $182: LocalVariable named CallFunc_GetDecalDynamicMaterialInstance_ReturnValue@0x19fc03b1200
+      $191: EndFunctionParms
+    )
+$192: LetBool (Variable = Expression)
+  Variable:
+  $193: InstanceVariable named idx:275526@0x19fc03b1480
+  Expression:
+  $202: True
+$203: Return expression:
+  $204: Nothing
+$205: EndOfScript
+
+=== BP_DecalGlow_Reverse_C::fn_idx_9202 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_DecalGlow_Reverse_C::fn_idx_9152 (22 bytes) ===
+$0: VirtualFunction call "idx:275528" (
+  $13: literal int32 10
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_DecalGlow_Reverse_C::fn_idx_275528 (13 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fbf433e90
+$10: Return expression:
+  $11: Nothing
+$12: EndOfScript

@@ -1,0 +1,233 @@
+// Class: MovieSceneSequencePlayer (16 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+MovieSceneSequencePlayer::ChangePlaybackDirection @ RVA 0x1D78410 EA 0x7FF6F5798410
+======================================================================
+void __fastcall sub_7FF6F5798410(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F5766850LL);
+}
+
+
+======================================================================
+MovieSceneSequencePlayer::GetLength @ RVA 0x1D78430 EA 0x7FF6F5798430
+======================================================================
+void __fastcall sub_7FF6F5798430(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F57722C0();
+}
+
+
+======================================================================
+MovieSceneSequencePlayer::GetPlaybackEnd @ RVA 0x1D78490 EA 0x7FF6F5798490
+======================================================================
+__int64 __fastcall sub_7FF6F5798490(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = *(unsigned int *)(a1 + 976);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+MovieSceneSequencePlayer::GetPlaybackPosition @ RVA 0x1D784B0 EA 0x7FF6F57984B0
+======================================================================
+void __fastcall sub_7FF6F57984B0(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F57723A0();
+}
+
+
+======================================================================
+MovieSceneSequencePlayer::GetPlaybackStart @ RVA 0x1D784E0 EA 0x7FF6F57984E0
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+MovieSceneSequencePlayer::GetPlayRate @ RVA 0x1D78460 EA 0x7FF6F5798460
+======================================================================
+void __fastcall sub_7FF6F5798460(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F5772380();
+}
+
+
+======================================================================
+MovieSceneSequencePlayer::IsPlaying @ RVA 0x1D78500 EA 0x7FF6F5798500
+======================================================================
+__int64 __fastcall sub_7FF6F5798500(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F5773F40();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+MovieSceneSequencePlayer::Pause @ RVA 0x1D78530 EA 0x7FF6F5798530
+======================================================================
+__int64 __fastcall sub_7FF6F5798530(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F5774A00();
+}
+
+
+======================================================================
+MovieSceneSequencePlayer::Play @ RVA 0x1D78550 EA 0x7FF6F5798550
+======================================================================
+__int64 __fastcall sub_7FF6F5798550(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F5774CA0();
+}
+
+
+======================================================================
+MovieSceneSequencePlayer::PlayLooping @ RVA 0x1D78570 EA 0x7FF6F5798570
+======================================================================
+__int64 __fastcall sub_7FF6F5798570(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  unsigned int v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F5774EA0(a1, v6);
+}
+
+
+======================================================================
+MovieSceneSequencePlayer::PlayReverse @ RVA 0x1D785F0 EA 0x7FF6F57985F0
+======================================================================
+void __fastcall sub_7FF6F57985F0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  JUMPOUT(0x7FF6F5774EB0LL);
+}
+
+
+======================================================================
+MovieSceneSequencePlayer::SetPlaybackPosition @ RVA 0x1D78690 EA 0x7FF6F5798690
+======================================================================
+__int64 __fastcall sub_7FF6F5798690(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F577A5C0(a1);
+}
+
+
+======================================================================
+MovieSceneSequencePlayer::SetPlaybackRange @ RVA 0x1D78710 EA 0x7FF6F5798710
+======================================================================
+__int64 __fastcall sub_7FF6F5798710(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+  int v7; // [rsp+48h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F577A5D0(a1);
+}
+
+
+======================================================================
+MovieSceneSequencePlayer::SetPlayRate @ RVA 0x1D78610 EA 0x7FF6F5798610
+======================================================================
+__int64 __fastcall sub_7FF6F5798610(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F577A5B0(a1);
+}
+
+
+======================================================================
+MovieSceneSequencePlayer::StartPlayingNextTick @ RVA 0x1D787D0 EA 0x7FF6F57987D0
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+MovieSceneSequencePlayer::Stop @ RVA 0x1D787F0 EA 0x7FF6F57987F0
+======================================================================
+__int64 __fastcall sub_7FF6F57987F0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F577AB20();
+}
+

@@ -1,0 +1,110 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Onboarding/bp_grantbanana -> BP_GrantBanana_C
+
+=== BP_GrantBanana_C::OnBeginCustom (408 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named K2Node_DynamicCast_AsItem_Info@0x19fcdd6a980
+  Expression:
+  $18: DynamicCast to ItemInfo@0x19e4c38a640 of expr:
+  $27: LocalVariable named Banana@0x19fcdd6a900
+$36: Let (Variable = Expression)
+  Variable:
+  $45: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcdd6aa00
+  Expression:
+  $54: PrimitiveCast type=71
+    Argument:
+    $56: LocalVariable named K2Node_DynamicCast_AsItem_Info@0x19fcdd6a980
+$65: JumpIfNot -> 0x130, cond:
+  $70: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcdd6aa00
+$79: SetArray
+  $80: LocalVariable named CallFunc_GetParticipants_Participants@0x19fcdd6ac80
+  $89: EndArray
+$90: FinalFunction target=GetParticipants@0x19e4cda59a0 (
+  $99: LocalVariable named CallFunc_GetParticipants_Participants@0x19fcdd6ac80
+  $108: EndFunctionParms
+)
+$109: Context
+  ObjectExpression:
+  $110: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $131: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $140: LocalVariable named CallFunc_GetParticipants_Participants@0x19fcdd6ac80
+    $149: literal int32 0
+    $154: LocalVariable named CallFunc_Array_Get_Item@0x19fcdd6aa80
+    $163: EndFunctionParms
+  )
+$164: Let (Variable = Expression)
+  Variable:
+  $173: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fcdd6ab00
+  Expression:
+  $182: DynamicCast to AthenaPlayerCharacter@0x19e4be85b00 of expr:
+  $191: LocalVariable named CallFunc_Array_Get_Item@0x19fcdd6aa80
+$200: Let (Variable = Expression)
+  Variable:
+  $209: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fcdd6ab80
+  Expression:
+  $218: PrimitiveCast type=71
+    Argument:
+    $220: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fcdd6ab00
+$229: JumpIfNot -> 0x195, cond:
+  $234: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fcdd6ab80
+$243: Context
+  ObjectExpression:
+  $244: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fcdd6ab00
+  SkipBytes: 0x18
+  RValueProperty: (null)
+  ContextExpression:
+  $265: VirtualFunction call "PickUpItem" (
+    $278: LocalVariable named K2Node_DynamicCast_AsItem_Info@0x19fcdd6a980
+    $287: False
+    $288: EndFunctionParms
+  )
+$289: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $298: EndFunctionParms
+)
+$299: Jump to offset 0x195
+$304: Context
+  ObjectExpression:
+  $305: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+  SkipBytes: 0x4a
+  RValueProperty: (null)
+  ContextExpression:
+  $326: FinalFunction target=PrintString@0x19e4cd96df0 (
+    $335: NoObject
+    $336: literal ansi string "Banana Actor Invalid"
+    $358: True
+    $359: True
+    $360: literal struct LinearColor@0x19e4cd587c0 (size 16)
+      $373: literal float 0
+      $378: literal float 0.6600000262260437
+      $383: literal float 1
+      $388: literal float 1
+      $393: EndStructConst
+    $394: literal float 15
+    $399: EndFunctionParms
+  )
+$400: Jump to offset 0x121
+$405: Return expression:
+  $406: Nothing
+$407: EndOfScript
+
+=== BP_GrantBanana_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fcdd6ad80
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fcdd6ad00
+$18: VirtualFunction call "idx:282849" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_GrantBanana_C::fn_idx_282849 (13 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fcdbb6f90
+$10: Return expression:
+  $11: Nothing
+$12: EndOfScript

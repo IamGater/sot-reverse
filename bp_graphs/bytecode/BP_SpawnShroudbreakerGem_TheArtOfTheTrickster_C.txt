@@ -1,0 +1,143 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Tale_6_TheArtOfTheTrickster/bp_spawnshroudbreakergem_theartofthetrickster -> BP_SpawnShroudbreakerGem_TheArtOfTheTrickster_C
+
+=== BP_SpawnShroudbreakerGem_TheArtOfTheTrickster_C::fn_idx_1828 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fcc9cf700
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fcc9cf580
+$18: VirtualFunction call "idx:284425" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_SpawnShroudbreakerGem_TheArtOfTheTrickster_C::fn_idx_283956 (22 bytes) ===
+$0: VirtualFunction call "idx:284425" (
+  $13: literal int32 597
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_SpawnShroudbreakerGem_TheArtOfTheTrickster_C::fn_idx_284425 (610 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19e586bcd30
+$10: FinalFunction target=GetVariables@0x19e4cda5d20 (
+  $19: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc9cf780
+  $28: EndFunctionParms
+)
+$29: Let (Variable = Expression)
+  Variable:
+  $38: LocalVariable named K2Node_DynamicCast_AsPuzzle_Vault@0x19fcc9cf800
+  Expression:
+  $47: DynamicCast to PuzzleVault@0x19e4c4378c0 of expr:
+  $56: StructMemberContext prop=idx:284375@0x19fcc5a2b00
+    Expression to struct:
+    $65: LocalVariable named CallFunc_GetVariables_OutStruct@0x19fcc9cf780
+$74: Let (Variable = Expression)
+  Variable:
+  $83: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcc9cf880
+  Expression:
+  $92: PrimitiveCast type=71
+    Argument:
+    $94: LocalVariable named K2Node_DynamicCast_AsPuzzle_Vault@0x19fcc9cf800
+$103: JumpIfNot -> 0x25f, cond:
+  $108: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcc9cf880
+$117: Let (Variable = Expression)
+  Variable:
+  $126: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x19fcc9cf600
+  Expression:
+  $135: CallMath target=MakeTransform@0x19e4d38a650 (
+    $144: literal vector (-140.143310546875,1337.110107421875,-457.733154296875)
+    $157: literal rotation (-28.623565673828125,75.49321746826172,-129.96441650390625)
+    $170: literal vector (1,1,1)
+    $183: EndFunctionParms
+  )
+$184: Let (Variable = Expression)
+  Variable:
+  $193: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19fcc9cf900
+  Expression:
+  $202: Context
+    ObjectExpression:
+    $203: LocalVariable named K2Node_DynamicCast_AsPuzzle_Vault@0x19fcc9cf800
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetTransform_ReturnValue@0x19fcc9cf900
+    ContextExpression:
+    $224: FinalFunction target=GetTransform@0x19e4cd64700 (
+      $233: EndFunctionParms
+    )
+$234: Let (Variable = Expression)
+  Variable:
+  $243: LocalVariable named CallFunc_ComposeTransforms_ReturnValue@0x19fcc9cf980
+  Expression:
+  $252: CallMath target=ComposeTransforms@0x19e4d374640 (
+    $261: LocalVariable named CallFunc_MakeTransform_ReturnValue@0x19fcc9cf600
+    $270: LocalVariable named CallFunc_GetTransform_ReturnValue@0x19fcc9cf900
+    $279: EndFunctionParms
+  )
+$280: LetObj (Variable = Expression)
+  Variable:
+  $281: LocalVariable named CallFunc_SpawnItem_ReturnValue@0x19fcc9cfa00
+  Expression:
+  $290: FinalFunction target=SpawnItem@0x19e4cda87f0 (
+    $299: InstanceVariable named ShroudbreakerGem@0x19fcc9cfc00
+    $308: LocalVariable named CallFunc_ComposeTransforms_ReturnValue@0x19fcc9cf980
+    $317: True
+    $318: True
+    $319: literal text (not decoded)
+    $320: literal ansi string "The Shroudbreaker Stone was lost"
+    $354: literal ansi string "0EB801F342D95349054204969DFB1D3A_FailureMessage7"
+    $404: literal ansi string ""
+    $406: EndFunctionParms
+  )
+$407: Let (Variable = Expression)
+  Variable:
+  $416: LocalVariable named K2Node_DynamicCast_AsItem_Proxy@0x19fcc9cfa80
+  Expression:
+  $425: DynamicCast to ItemProxy@0x19e4c38b980 of expr:
+  $434: LocalVariable named CallFunc_SpawnItem_ReturnValue@0x19fcc9cfa00
+$443: Let (Variable = Expression)
+  Variable:
+  $452: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fcc9cfb00
+  Expression:
+  $461: PrimitiveCast type=71
+    Argument:
+    $463: LocalVariable named K2Node_DynamicCast_AsItem_Proxy@0x19fcc9cfa80
+$472: JumpIfNot -> 0x25f, cond:
+  $477: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fcc9cfb00
+$486: BindDelegate 'OnItemPickedUp'
+  Delegate:
+  $499: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fcc9cf680
+  Object:
+  $508: Self
+$509: LetObj (Variable = Expression)
+  Variable:
+  $510: LocalVariable named CallFunc_GetItemInfo_ReturnValue@0x19fcc9cfc80
+  Expression:
+  $519: Context
+    ObjectExpression:
+    $520: LocalVariable named K2Node_DynamicCast_AsItem_Proxy@0x19fcc9cfa80
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetItemInfo_ReturnValue@0x19fcc9cfc80
+    ContextExpression:
+    $541: FinalFunction target=GetItemInfo@0x19e4d108840 (
+      $550: EndFunctionParms
+    )
+$551: AddMulticastDelegate
+$552: Context
+  ObjectExpression:
+  $553: LocalVariable named CallFunc_GetItemInfo_ReturnValue@0x19fcc9cfc80
+  SkipBytes: 0x9
+  RValueProperty: OnItemPickedUpDelegate@0x19e4d10b7b0
+  ContextExpression:
+  $574: InstanceVariable named OnItemPickedUpDelegate@0x19e4d10b7b0
+$583: LocalVariable named UniqueObjectNameForCooking_OutputDelegate@0x19fcc9cf680
+$592: Jump to offset 0x25f
+$597: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $606: EndFunctionParms
+)
+$607: Return expression:
+  $608: Nothing
+$609: EndOfScript

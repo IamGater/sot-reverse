@@ -1,0 +1,57 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Onboarding/bp_dismissshipcannonprompts -> BP_DismissShipCannonPrompts_C
+
+=== BP_DismissShipCannonPrompts_C::fn_idx_1698 (203 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named idx:282829@0x19fcdd6b880
+  Expression:
+  $18: DynamicCast to BP_PromptActor_MaidenVoyage_UseShipCannon_C@0x19fbcfa7500 of expr:
+  $27: LocalVariable named Actor@0x19fcdd6b980
+$36: Let (Variable = Expression)
+  Variable:
+  $45: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcdd6bc00
+  Expression:
+  $54: PrimitiveCast type=71
+    Argument:
+    $56: LocalVariable named idx:282829@0x19fcdd6b880
+$65: JumpIfNot -> 0xc8, cond:
+  $70: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcdd6bc00
+$79: LetBool (Variable = Expression)
+  Variable:
+  $80: LocalVariable named CallFunc_FlushNetDormancy_ReturnValue@0x19fcdd6b680
+  Expression:
+  $89: Context
+    ObjectExpression:
+    $90: LocalVariable named idx:282829@0x19fcdd6b880
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_FlushNetDormancy_ReturnValue@0x19fcdd6b680
+    ContextExpression:
+    $111: FinalFunction target=FlushNetDormancy@0x19e4cd61090 (
+      $120: EndFunctionParms
+    )
+$121: LetBool (Variable = Expression)
+  Variable:
+  $122: Context
+    ObjectExpression:
+    $123: LocalVariable named idx:282829@0x19fcdd6b880
+    SkipBytes: 0x9
+    RValueProperty: DisplayPrompts@0x19fbd388c80
+    ContextExpression:
+    $144: InstanceVariable named DisplayPrompts@0x19fbd388c80
+  Expression:
+  $153: False
+$154: Context
+  ObjectExpression:
+  $155: LocalVariable named idx:282829@0x19fcdd6b880
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $176: VirtualFunction call "OnRep_DisplayPrompts" (
+    $189: EndFunctionParms
+  )
+$190: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $199: EndFunctionParms
+)
+$200: Return expression:
+  $201: Nothing
+$202: EndOfScript

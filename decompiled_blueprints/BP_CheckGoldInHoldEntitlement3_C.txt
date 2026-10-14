@@ -1,0 +1,135 @@
+// /Game/Blueprints/TallTales/BlueprintSteps/Onboarding/bp_checkgoldinholdentitlement3 -> BP_CheckGoldInHoldEntitlement3_C
+
+=== BP_CheckGoldInHoldEntitlement3_C::OnBegin (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InBeginMode@0x19fcdd6c380
+  Expression:
+  $9: LocalVariable named InBeginMode@0x19fcdd6c280
+$18: VirtualFunction call "idx:282811" (
+  $31: literal int32 25
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_CheckGoldInHoldEntitlement3_C::fn_idx_282811 (532 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19fcdbb88f0
+$10: FinalFunction target=SignalComplete@0x19e4cda7e00 (
+  $19: EndFunctionParms
+)
+$20: Jump to offset 0x211
+$25: SetArray
+  $26: LocalVariable named CallFunc_GetParticipants_Participants@0x19fcdd6c900
+  $35: EndArray
+$36: FinalFunction target=GetParticipants@0x19e4cda59a0 (
+  $45: LocalVariable named CallFunc_GetParticipants_Participants@0x19fcdd6c900
+  $54: EndFunctionParms
+)
+$55: Context
+  ObjectExpression:
+  $56: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $77: FinalFunction target=Array_Get@0x19e4d3676b0 (
+    $86: LocalVariable named CallFunc_GetParticipants_Participants@0x19fcdd6c900
+    $95: literal int32 0
+    $100: LocalVariable named CallFunc_Array_Get_Item@0x19f9f072180
+    $109: EndFunctionParms
+  )
+$110: Let (Variable = Expression)
+  Variable:
+  $119: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fcdd6c400
+  Expression:
+  $128: DynamicCast to AthenaPlayerCharacter@0x19e4be85b00 of expr:
+  $137: LocalVariable named CallFunc_Array_Get_Item@0x19f9f072180
+$146: Let (Variable = Expression)
+  Variable:
+  $155: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcdd6c480
+  Expression:
+  $164: PrimitiveCast type=71
+    Argument:
+    $166: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fcdd6c400
+$175: JumpIfNot -> 0x211, cond:
+  $180: LocalVariable named K2Node_DynamicCast_bSuccess@0x19fcdd6c480
+$189: LetObj (Variable = Expression)
+  Variable:
+  $190: LocalVariable named CallFunc_GetController_ReturnValue@0x19fcdd6c500
+  Expression:
+  $199: Context
+    ObjectExpression:
+    $200: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Character@0x19fcdd6c400
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetController_ReturnValue@0x19fcdd6c500
+    ContextExpression:
+    $221: FinalFunction target=GetController@0x19e4d077d70 (
+      $230: EndFunctionParms
+    )
+$231: Let (Variable = Expression)
+  Variable:
+  $240: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Controller@0x19fcdd6c580
+  Expression:
+  $249: DynamicCast to AthenaPlayerController@0x19e4c38f6c0 of expr:
+  $258: LocalVariable named CallFunc_GetController_ReturnValue@0x19fcdd6c500
+$267: Let (Variable = Expression)
+  Variable:
+  $276: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fcdd6c600
+  Expression:
+  $285: PrimitiveCast type=71
+    Argument:
+    $287: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Controller@0x19fcdd6c580
+$296: JumpIfNot -> 0x211, cond:
+  $301: LocalVariable named K2Node_DynamicCast_bSuccess2@0x19fcdd6c600
+$310: LetObj (Variable = Expression)
+  Variable:
+  $311: LocalVariable named idx:282799@0x19fcdd6c300
+  Expression:
+  $320: ObjectConst BP_MaidenVoyage_GoldInHold_Entitlement3_C@0x19f321de7c0
+$329: Let (Variable = Expression)
+  Variable:
+  $338: LocalVariable named idx:282795@0x19fcdd6c680
+  Expression:
+  $347: ObjToInterfaceCast to PlayerEntitlementViewInterface@0x19e4c5b9f40
+  $356: Context
+    ObjectExpression:
+    $357: LocalVariable named K2Node_DynamicCast_AsAthena_Player_Controller@0x19fcdd6c580
+    SkipBytes: 0x9
+    RValueProperty: PlayerEntitlementComponent@0x19e4d100eb0
+    ContextExpression:
+    $378: InstanceVariable named PlayerEntitlementComponent@0x19e4d100eb0
+$387: Let (Variable = Expression)
+  Variable:
+  $396: LocalVariable named idx:282796@0x19fcdd6c800
+  Expression:
+  $405: Context
+    ObjectExpression:
+    $406: ObjectConst Default__PlayerEntitlementBlueprintFunctionLibrary@0x19e4d7a5aa0
+    SkipBytes: 0x1c
+    RValueProperty: idx:282796@0x19fcdd6c800
+    ContextExpression:
+    $427: FinalFunction target=GetEntitlements@0x19e4d203800 (
+      $436: LocalVariable named idx:282795@0x19fcdd6c680
+      $445: ObjectConst TaleRankDesc@0x19e4c481880
+      $454: EndFunctionParms
+    )
+$455: LetBool (Variable = Expression)
+  Variable:
+  $456: LocalVariable named CallFunc_Array_Contains_ReturnValue@0x19fcdd6c700
+  Expression:
+  $465: Context
+    ObjectExpression:
+    $466: ObjectConst Default__KismetArrayLibrary@0x19e4d95ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Contains_ReturnValue@0x19fcdd6c700
+    ContextExpression:
+    $487: FinalFunction target=Array_Contains@0x19e4d367180 (
+      $496: LocalVariable named idx:282796@0x19fcdd6c800
+      $505: LocalVariable named idx:282799@0x19fcdd6c300
+      $514: EndFunctionParms
+    )
+$515: JumpIfNot -> 0xa, cond:
+  $520: LocalVariable named CallFunc_Array_Contains_ReturnValue@0x19fcdd6c700
+$529: Return expression:
+  $530: Nothing
+$531: EndOfScript

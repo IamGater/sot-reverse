@@ -1,0 +1,377 @@
+// E:\unreal-projects\Athena\Content\Blueprints\GameObjects\Wheel\bp_wheel.uasset -> BP_Wheel_C
+
+=== BP_Wheel_C::GetDockableInfo (135 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: StructMemberContext prop=SocketName@0x212d65ac8f0
+    Expression to struct:
+    $18: LocalVariable named K2Node_MakeStruct_DockableInfo@0x2139c4ace80
+  Expression:
+  $27: literal name "AttachPosition"
+$40: LetObj (Variable = Expression)
+  Variable:
+  $41: StructMemberContext prop=SceneComponent@0x212d65ac870
+    Expression to struct:
+    $50: LocalVariable named K2Node_MakeStruct_DockableInfo@0x2139c4ace80
+  Expression:
+  $59: InstanceVariable named Wheel@0x2139c4ae380
+$68: Let (Variable = Expression)
+  Variable:
+  $77: StructMemberContext prop=ShouldOverlapsUpdateOnParentUpdate@0x212d65ac7f0
+    Expression to struct:
+    $86: LocalVariable named K2Node_MakeStruct_DockableInfo@0x2139c4ace80
+  Expression:
+  $95: literal byte 0
+$97: Let (Variable = Expression)
+  Variable:
+  $106: LocalOutVariable named ReturnValue@0x2139c4ace00
+  Expression:
+  $115: LocalVariable named K2Node_MakeStruct_DockableInfo@0x2139c4ace80
+$124: Return expression:
+  $125: LocalOutVariable named ReturnValue@0x2139c4ace00
+$134: EndOfScript
+
+=== BP_Wheel_C::GetClosestInteractionPoint (111 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_GetBoxWorldOrigin_ReturnValue@0x2139c4acf80
+  Expression:
+  $18: Context
+    ObjectExpression:
+    $19: InstanceVariable named Interactable@0x2139c4ae480
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetBoxWorldOrigin_ReturnValue@0x2139c4acf80
+    ContextExpression:
+    $40: FinalFunction target=GetBoxWorldOrigin@0x212d674e300 (
+      $49: EndFunctionParms
+    )
+$50: Let (Variable = Expression)
+  Variable:
+  $59: LocalOutVariable named OutInteractionPointRadius@0x2139c208ea0
+  Expression:
+  $68: literal float 0
+$73: Let (Variable = Expression)
+  Variable:
+  $82: LocalOutVariable named ReturnValue@0x2139c130000
+  Expression:
+  $91: LocalVariable named CallFunc_GetBoxWorldOrigin_ReturnValue@0x2139c4acf80
+$100: Return expression:
+  $101: LocalOutVariable named ReturnValue@0x2139c130000
+$110: EndOfScript
+
+=== BP_Wheel_C::GetWheelMesh (30 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: LocalOutVariable named ReturnValue@0x2139c4ad000
+  Expression:
+  $10: InstanceVariable named Wheel@0x2139c4ae380
+$19: Return expression:
+  $20: LocalOutVariable named ReturnValue@0x2139c4ad000
+$29: EndOfScript
+
+=== BP_Wheel_C::UserConstructionScript (126 bytes) ===
+$0: LetObj (Variable = Expression)
+  Variable:
+  $1: Context
+    ObjectExpression:
+    $2: InstanceVariable named RepairableComponentWest@0x212d68a0ce0
+    SkipBytes: 0x9
+    RValueProperty: RepairMountParent@0x212d674f5b0
+    ContextExpression:
+    $23: InstanceVariable named RepairMountParent@0x212d674f5b0
+  Expression:
+  $32: InstanceVariable named Wheel@0x2139c4ae380
+$41: LetObj (Variable = Expression)
+  Variable:
+  $42: Context
+    ObjectExpression:
+    $43: InstanceVariable named RepairableComponentEast@0x212d68a0c60
+    SkipBytes: 0x9
+    RValueProperty: RepairMountParent@0x212d674f5b0
+    ContextExpression:
+    $64: InstanceVariable named RepairMountParent@0x212d674f5b0
+  Expression:
+  $73: InstanceVariable named Wheel@0x2139c4ae380
+$82: LetObj (Variable = Expression)
+  Variable:
+  $83: Context
+    ObjectExpression:
+    $84: InstanceVariable named RepairableComponentSouth@0x212d68a0be0
+    SkipBytes: 0x9
+    RValueProperty: RepairMountParent@0x212d674f5b0
+    ContextExpression:
+    $105: InstanceVariable named RepairMountParent@0x212d674f5b0
+  Expression:
+  $114: InstanceVariable named Wheel@0x2139c4ae380
+$123: Return expression:
+  $124: Nothing
+$125: EndOfScript
+
+=== BP_Wheel_C::Receive Animation State (112 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_WheelRotation@0x2139c4ad980
+  Expression:
+  $9: LocalVariable named WheelRotation@0x2139c4ad100
+$18: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_WheelAnimationTime@0x2139c205940
+  Expression:
+  $27: LocalVariable named WheelAnimationTime@0x2139c2052b0
+$36: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_EWheel@0x2139c4ada00
+  Expression:
+  $45: LocalVariable named EWheel@0x2139c4ad180
+$54: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_Direction@0x2139c2059b0
+  Expression:
+  $63: LocalVariable named Direction@0x2139c205320
+$72: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_WheelRate@0x2139c205a20
+  Expression:
+  $81: LocalVariable named WheelRate@0x2139c205390
+$90: VirtualFunction call "ExecuteUbergraph_BP_Wheel" (
+  $103: literal int32 10
+  $108: EndFunctionParms
+)
+$109: Return expression:
+  $110: Nothing
+$111: EndOfScript
+
+=== BP_Wheel_C::StickInput (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_StickInputX@0x2139c205a90
+  Expression:
+  $9: LocalVariable named StickInputX@0x2139c205470
+$18: VirtualFunction call "ExecuteUbergraph_BP_Wheel" (
+  $31: literal int32 15
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Wheel_C::Update Athena Character (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_AthenaCharacter@0x2139c4ada80
+  Expression:
+  $9: LocalVariable named AthenaCharacter@0x2139c4ad200
+$18: VirtualFunction call "ExecuteUbergraph_BP_Wheel" (
+  $31: literal int32 20
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Wheel_C::CapstanRotationSpeed (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_RotationSpeed@0x2139c205b00
+  Expression:
+  $9: LocalVariable named RotationSpeed@0x2139c205400
+$18: VirtualFunction call "ExecuteUbergraph_BP_Wheel" (
+  $31: literal int32 25
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Wheel_C::DockingInterface (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_Docking@0x2139c4adb00
+  Expression:
+  $9: LocalVariable named Docking@0x2139c4ad280
+$18: VirtualFunction call "ExecuteUbergraph_BP_Wheel" (
+  $31: literal int32 30
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Wheel_C::CapstanForce (94 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_IndividualForce@0x2139c205b70
+  Expression:
+  $9: LocalVariable named IndividualForce@0x2139c2054e0
+$18: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_LH_IK@0x2139c4adb80
+  Expression:
+  $27: LocalVariable named LH_IK@0x2139c4ad380
+$36: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_RH_IK@0x2139c4adc00
+  Expression:
+  $45: LocalVariable named RH_IK@0x2139c4ad400
+$54: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_Actor@0x2139c4add00
+  Expression:
+  $63: LocalVariable named Actor@0x2139c4ad480
+$72: VirtualFunction call "ExecuteUbergraph_BP_Wheel" (
+  $85: literal int32 35
+  $90: EndFunctionParms
+)
+$91: Return expression:
+  $92: Nothing
+$93: EndOfScript
+
+=== BP_Wheel_C::IK Limb Update Transform (58 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_LimbId4@0x2139c4add80
+  Expression:
+  $9: LocalVariable named LimbId@0x2139c4ad500
+$18: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_TransformUpdate@0x2139c4ade00
+  Expression:
+  $27: LocalVariable named TransformUpdate@0x2139c4ad580
+$36: VirtualFunction call "ExecuteUbergraph_BP_Wheel" (
+  $49: literal int32 40
+  $54: EndFunctionParms
+)
+$55: Return expression:
+  $56: Nothing
+$57: EndOfScript
+
+=== BP_Wheel_C::IK Limb Blend Timing (76 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_LimbId3@0x2139c4ade80
+  Expression:
+  $9: LocalVariable named LimbId@0x2139c4ad600
+$18: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_BlendIn@0x2139c205be0
+  Expression:
+  $27: LocalVariable named BlendIn@0x2139c205550
+$36: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_BlendOut@0x2138e4419d0
+  Expression:
+  $45: LocalVariable named BlendOut@0x2139c2055c0
+$54: VirtualFunction call "ExecuteUbergraph_BP_Wheel" (
+  $67: literal int32 45
+  $72: EndFunctionParms
+)
+$73: Return expression:
+  $74: Nothing
+$75: EndOfScript
+
+=== BP_Wheel_C::IK Limb Update Strength (76 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_LimbId2@0x2139c4adf00
+  Expression:
+  $9: LocalVariable named LimbId@0x2139c4ad680
+$18: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_LocationStrength@0x2139d105160
+  Expression:
+  $27: LocalVariable named LocationStrength@0x2139c205630
+$36: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_RotationStrength@0x2139cbd75b0
+  Expression:
+  $45: LocalVariable named RotationStrength@0x2139c2056a0
+$54: VirtualFunction call "ExecuteUbergraph_BP_Wheel" (
+  $67: literal int32 50
+  $72: EndFunctionParms
+)
+$73: Return expression:
+  $74: Nothing
+$75: EndOfScript
+
+=== BP_Wheel_C::IK Limb Active (76 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_LimbId@0x2139c4adf80
+  Expression:
+  $9: LocalVariable named LimbId@0x2139c4ad700
+$18: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_Active@0x2139c4ae000
+  Expression:
+  $27: LocalVariable named Active@0x2139c4ad780
+$36: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_CoordinateSpace@0x2139c4ae080
+  Expression:
+  $45: LocalVariable named CoordinateSpace@0x2139c4ad800
+$54: VirtualFunction call "ExecuteUbergraph_BP_Wheel" (
+  $67: literal int32 55
+  $72: EndFunctionParms
+)
+$73: Return expression:
+  $74: Nothing
+$75: EndOfScript
+
+=== BP_Wheel_C::IK Limb Stretch (76 bytes) ===
+$0: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_ArmStretch@0x2139c205da0
+  Expression:
+  $9: LocalVariable named ArmStretch@0x2139c205710
+$18: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_SpineStretch@0x2139c205e80
+  Expression:
+  $27: LocalVariable named SpineStretch@0x2139c205780
+$36: LetValueOnPersistentFrame dest=UniqueObjectNameForCooking_LegStretch@0x2139c205e10
+  Expression:
+  $45: LocalVariable named LegStretch@0x2139c2057f0
+$54: VirtualFunction call "ExecuteUbergraph_BP_Wheel" (
+  $67: literal int32 60
+  $72: EndFunctionParms
+)
+$73: Return expression:
+  $74: Nothing
+$75: EndOfScript
+
+=== BP_Wheel_C::RequestStateChange (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_Controller@0x2139c4ae100
+  Expression:
+  $9: LocalVariable named Controller@0x2139c4ad880
+$18: VirtualFunction call "ExecuteUbergraph_BP_Wheel" (
+  $31: literal int32 65
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Wheel_C::OnWheelDescLoaded (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_WheelDesc@0x2139c4ae180
+  Expression:
+  $9: LocalVariable named WheelDesc@0x2139c4ad900
+$18: VirtualFunction call "ExecuteUbergraph_BP_Wheel" (
+  $31: literal int32 114
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_Wheel_C::ExecuteUbergraph_BP_Wheel (258 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x2139c2058d0
+$10: Jump to offset 0xff
+$15: Jump to offset 0xff
+$20: Jump to offset 0xff
+$25: Jump to offset 0xff
+$30: Jump to offset 0xff
+$35: Jump to offset 0xff
+$40: Jump to offset 0xff
+$45: Jump to offset 0xff
+$50: Jump to offset 0xff
+$55: Jump to offset 0xff
+$60: Jump to offset 0xff
+$65: Context
+  ObjectExpression:
+  $66: ObjectConst Default__ControlWheelActionStateId@0x212d6d2eda0
+  SkipBytes: 0x16
+  RValueProperty: (null)
+  ContextExpression:
+  $87: FinalFunction target=PushCharacterIntoControlWheelActionState@0x212d6782f40 (
+    $96: literal byte 0
+    $98: Self
+    $99: LocalVariable named K2Node_Event_Controller@0x2139c4ae100
+    $108: EndFunctionParms
+  )
+$109: Jump to offset 0xff
+$114: LetBool (Variable = Expression)
+  Variable:
+  $115: LocalVariable named CallFunc_IsValid_ReturnValue@0x2139c4ae200
+  Expression:
+  $124: Context
+    ObjectExpression:
+    $125: ObjectConst Default__KismetSystemLibrary@0x212d6f7ed00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_IsValid_ReturnValue@0x2139c4ae200
+    ContextExpression:
+    $146: FinalFunction target=IsValid@0x212d63ae380 (
+      $155: LocalVariable named K2Node_Event_WheelDesc@0x2139c4ae180
+      $164: EndFunctionParms
+    )
+$165: JumpIfNot -> 0xff, cond:
+  $170: LocalVariable named CallFunc_IsValid_ReturnValue@0x2139c4ae200
+$179: Context
+  ObjectExpression:
+  $180: InstanceVariable named Wheel@0x2139c4ae380
+  SkipBytes: 0x36
+  RValueProperty: (null)
+  ContextExpression:
+  $201: VirtualFunction call "SetSkeletalMesh" (
+    $214: StructMemberContext prop=WheelMesh@0x212d64b24a0
+      Expression to struct:
+      $223: Context
+        ObjectExpression:
+        $224: LocalVariable named K2Node_Event_WheelDesc@0x2139c4ae180
+        SkipBytes: 0x9
+        RValueProperty: WheelDesc@0x212d689e780
+        ContextExpression:
+        $245: InstanceVariable named WheelDesc@0x212d689e780
+    $254: EndFunctionParms
+  )
+$255: Return expression:
+  $256: Nothing
+$257: EndOfScript

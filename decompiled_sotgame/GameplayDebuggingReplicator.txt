@@ -1,0 +1,210 @@
+// Class: GameplayDebuggingReplicator (6 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+GameplayDebuggingReplicator::ClientAutoActivate @ RVA 0x3C275E0 EA 0x7FF6F76475E0
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+GameplayDebuggingReplicator::ClientEnableTargetSelection @ RVA 0x3C27600 EA 0x7FF6F7647600
+======================================================================
+__int64 __fastcall sub_7FF6F7647600(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  bool v5; // bp
+  __int64 v6; // rax
+  __int64 v7; // r8
+  int v9; // [rsp+40h] [rbp+8h] BYREF
+  __int64 v10; // [rsp+48h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v10 = 0;
+  v5 = v9 != 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v6 = a2[4];
+  v7 = v10;
+  LOBYTE(v2) = v6 != 0;
+  a2[4] = v6 + v2;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64, bool, __int64))(*(_QWORD *)a1 + 1560LL))(a1, v5, v7) )
+    return (*(__int64 (__fastcall **)(__int64, bool, __int64))(*(_QWORD *)a1 + 1568LL))(a1, v5, v10);
+  else
+    return sub_7FF6F4F0F6D0(L"ClientEnableTargetSelection_Validate");
+}
+
+
+======================================================================
+GameplayDebuggingReplicator::ClientReplicateMessage @ RVA 0x3C277C0 EA 0x7FF6F76477C0
+======================================================================
+__int64 __fastcall sub_7FF6F76477C0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // r9
+  __int64 v7; // r8
+  __int64 v8; // rdx
+  unsigned int v10; // [rsp+40h] [rbp+8h] BYREF
+  unsigned int v11; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v12; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v5 = a2[4];
+  v6 = v10;
+  v7 = v11;
+  v8 = v12;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64, __int64, __int64, __int64))(*(_QWORD *)a1 + 1584LL))(a1, v8, v7, v6) )
+    return (*(__int64 (__fastcall **)(__int64, __int64, _QWORD, _QWORD))(*(_QWORD *)a1 + 1592LL))(a1, v12, v11, v10);
+  else
+    return sub_7FF6F4F0F6D0(L"ClientReplicateMessage_Validate");
+}
+
+
+======================================================================
+GameplayDebuggingReplicator::OnRep_AutoActivate @ RVA 0x3C27910 EA 0x7FF6F7647910
+======================================================================
+__int64 __fastcall sub_7FF6F7647910(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1616LL))(a1);
+}
+
+
+======================================================================
+GameplayDebuggingReplicator::ServerReplicateMessage @ RVA 0x3C27B90 EA 0x7FF6F7647B90
+======================================================================
+__int64 __fastcall sub_7FF6F7647B90(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // r9
+  __int64 v7; // r8
+  __int64 v8; // rdx
+  unsigned int v10; // [rsp+40h] [rbp+8h] BYREF
+  unsigned int v11; // [rsp+48h] [rbp+10h] BYREF
+  __int64 v12; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = 0;
+  v12 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v5 = a2[4];
+  v6 = v10;
+  v7 = v11;
+  v8 = v12;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64, __int64, __int64, __int64))(*(_QWORD *)a1 + 1600LL))(a1, v8, v7, v6) )
+    return (*(__int64 (__fastcall **)(__int64, __int64, _QWORD, _QWORD))(*(_QWORD *)a1 + 1608LL))(a1, v12, v11, v10);
+  else
+    return sub_7FF6F4F0F6D0(L"ServerReplicateMessage_Validate");
+}
+
+
+======================================================================
+GameplayDebuggingReplicator::ServerSetActorToDebug @ RVA 0x3C27CC0 EA 0x7FF6F7647CC0
+======================================================================
+__int64 __fastcall sub_7FF6F7647CC0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rsi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1544LL))(a1, v6) )
+    return (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 1552LL))(a1, v8);
+  else
+    return sub_7FF6F4F0F6D0(L"ServerSetActorToDebug_Validate");
+}
+

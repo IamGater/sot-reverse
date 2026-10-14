@@ -1,0 +1,209 @@
+// Class: MechanismTriggerInterface (10 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+MechanismTriggerInterface::ActivateTrigger @ RVA 0x3955F50 EA 0x7FF6F7375F50
+======================================================================
+__int64 __fastcall sub_7FF6F7375F50(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 result; // rax
+  __int64 v10; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 32LL))(a1, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+MechanismTriggerInterface::DeactivateTrigger @ RVA 0x3956740 EA 0x7FF6F7376740
+======================================================================
+__int64 __fastcall sub_7FF6F7376740(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 result; // rax
+  __int64 v10; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 40LL))(a1, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+MechanismTriggerInterface::DisableTrigger @ RVA 0x39567E0 EA 0x7FF6F73767E0
+======================================================================
+__int64 __fastcall sub_7FF6F73767E0(__int64 a1, _QWORD *a2, _BYTE *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 result; // rax
+  __int64 v10; // [rsp+30h] [rbp+8h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = (*(__int64 (__fastcall **)(__int64, __int64))(*(_QWORD *)a1 + 48LL))(a1, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+MechanismTriggerInterface::GetTriggerName @ RVA 0x3956A40 EA 0x7FF6F7376A40
+======================================================================
+_QWORD *__fastcall sub_7FF6F7376A40(__int64 a1, __int64 a2, _QWORD *a3)
+{
+  _QWORD *result; // rax
+  char v5; // [rsp+30h] [rbp+8h] BYREF
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (_QWORD *)(*(__int64 (__fastcall **)(__int64, char *))(*(_QWORD *)a1 + 56LL))(a1, &v5);
+  *a3 = *result;
+  return result;
+}
+
+
+======================================================================
+MechanismTriggerInterface::GetTriggerProgress @ RVA 0x3956A80 EA 0x7FF6F7376A80
+======================================================================
+void __fastcall sub_7FF6F7376A80(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)a1 + 80LL))(a1);
+}
+
+
+======================================================================
+MechanismTriggerInterface::GetTriggerProgressRateOfChange @ RVA 0x3956AB0 EA 0x7FF6F7376AB0
+======================================================================
+void __fastcall sub_7FF6F7376AB0(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = (*(float (__fastcall **)(__int64))(*(_QWORD *)a1 + 88LL))(a1);
+}
+
+
+======================================================================
+MechanismTriggerInterface::GetTriggerState @ RVA 0x3956AE0 EA 0x7FF6F7376AE0
+======================================================================
+__int64 __fastcall sub_7FF6F7376AE0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 72LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+MechanismTriggerInterface::GetTriggerType @ RVA 0x3956B10 EA 0x7FF6F7376B10
+======================================================================
+__int64 __fastcall sub_7FF6F7376B10(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 64LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+MechanismTriggerInterface::SetTriggerProgress @ RVA 0x395A080 EA 0x7FF6F737A080
+======================================================================
+__int64 __fastcall sub_7FF6F737A080(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 96LL))(a1);
+}
+
+
+======================================================================
+MechanismTriggerInterface::SetTriggerProgressRateOfChange @ RVA 0x395A100 EA 0x7FF6F737A100
+======================================================================
+__int64 __fastcall sub_7FF6F737A100(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 104LL))(a1);
+}
+

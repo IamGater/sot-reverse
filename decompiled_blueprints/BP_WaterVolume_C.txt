@@ -1,0 +1,373 @@
+// E:\unreal-projects\Athena\Content\Blueprints\Environment\Common\WaterVolume\bp_watervolume.uasset -> BP_WaterVolume_C
+
+=== BP_WaterVolume_C::CollectRippleGenerators (921 bytes) ===
+$0: FlowStack.Push(0x396)
+$5: Context
+  ObjectExpression:
+  $6: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $27: FinalFunction target=Array_Clear@0x212d6986fd0 (
+    $36: InstanceVariable named RippleGenerators@0x212d689cd60
+    $45: EndFunctionParms
+  )
+$46: Let (Variable = Expression)
+  Variable:
+  $55: LocalVariable named Temp_int_Loop_Counter_Variable@0x21376c604d0
+  Expression:
+  $64: literal int32 0
+$69: Let (Variable = Expression)
+  Variable:
+  $78: LocalVariable named Temp_int_Array_Index_Variable@0x21376c62530
+  Expression:
+  $87: literal int32 0
+$92: Let (Variable = Expression)
+  Variable:
+  $101: LocalVariable named CallFunc_GetComponentsByTag_ReturnValue@0x213b313e800
+  Expression:
+  $110: FinalFunction target=GetComponentsByTag@0x212d6382900 (
+    $119: ObjectConst SceneComponent@0x212d54d8c00
+    $128: InstanceVariable named RippleGeneratorTag@0x21376c61c70
+    $137: EndFunctionParms
+  )
+$138: Let (Variable = Expression)
+  Variable:
+  $147: LocalVariable named CallFunc_Array_Length_ReturnValue@0x21376c60b60
+  Expression:
+  $156: Context
+    ObjectExpression:
+    $157: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_Array_Length_ReturnValue@0x21376c60b60
+    ContextExpression:
+    $178: FinalFunction target=Array_Length@0x212d6987df0 (
+      $187: LocalVariable named CallFunc_GetComponentsByTag_ReturnValue@0x213b313e800
+      $196: EndFunctionParms
+    )
+$197: LetBool (Variable = Expression)
+  Variable:
+  $198: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x213b313e980
+  Expression:
+  $207: CallMath target=Less_IntInt@0x212d69a5ed0 (
+    $216: LocalVariable named Temp_int_Loop_Counter_Variable@0x21376c604d0
+    $225: LocalVariable named CallFunc_Array_Length_ReturnValue@0x21376c60b60
+    $234: EndFunctionParms
+  )
+$235: PopExecutionFlowIfNot, cond:
+$236: LocalVariable named CallFunc_Less_IntInt_ReturnValue@0x213b313e980
+$245: Let (Variable = Expression)
+  Variable:
+  $254: LocalVariable named Temp_int_Array_Index_Variable@0x21376c62530
+  Expression:
+  $263: LocalVariable named Temp_int_Loop_Counter_Variable@0x21376c604d0
+$272: FlowStack.Push(0x34c)
+$277: Let (Variable = Expression)
+  Variable:
+  $286: LocalVariable named CallFunc_GetComponentsByTag_ReturnValue@0x213b313e800
+  Expression:
+  $295: FinalFunction target=GetComponentsByTag@0x212d6382900 (
+    $304: ObjectConst SceneComponent@0x212d54d8c00
+    $313: InstanceVariable named RippleGeneratorTag@0x21376c61c70
+    $322: EndFunctionParms
+  )
+$323: Context
+  ObjectExpression:
+  $324: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $345: FinalFunction target=Array_Get@0x212d69876b0 (
+    $354: LocalVariable named CallFunc_GetComponentsByTag_ReturnValue@0x213b313e800
+    $363: LocalVariable named Temp_int_Array_Index_Variable@0x21376c62530
+    $372: LocalVariable named CallFunc_Array_Get_Item@0x213b313eb80
+    $381: EndFunctionParms
+  )
+$382: Let (Variable = Expression)
+  Variable:
+  $391: LocalVariable named CallFunc_K2_GetComponentLocation_ReturnValue@0x213b313ea80
+  Expression:
+  $400: Context
+    ObjectExpression:
+    $401: LocalVariable named CallFunc_Array_Get_Item@0x213b313eb80
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetComponentLocation_ReturnValue@0x213b313ea80
+    ContextExpression:
+    $422: FinalFunction target=K2_GetComponentLocation@0x212d66912f0 (
+      $431: EndFunctionParms
+    )
+$432: Let (Variable = Expression)
+  Variable:
+  $441: LocalVariable named CallFunc_ConvertToWaterSpace_ReturnValue@0x213b313ea00
+  Expression:
+  $450: Context
+    ObjectExpression:
+    $451: InstanceVariable named FlatWaterPlane@0x213b313e100
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_ConvertToWaterSpace_ReturnValue@0x213b313ea00
+    ContextExpression:
+    $472: FinalFunction target=ConvertToWaterSpace@0x212d6a564c0 (
+      $481: LocalVariable named CallFunc_K2_GetComponentLocation_ReturnValue@0x213b313ea80
+      $490: EndFunctionParms
+    )
+$491: Let (Variable = Expression)
+  Variable:
+  $500: LocalVariable named CallFunc_GetComponentsByTag_ReturnValue@0x213b313e800
+  Expression:
+  $509: FinalFunction target=GetComponentsByTag@0x212d6382900 (
+    $518: ObjectConst SceneComponent@0x212d54d8c00
+    $527: InstanceVariable named RippleGeneratorTag@0x21376c61c70
+    $536: EndFunctionParms
+  )
+$537: Context
+  ObjectExpression:
+  $538: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x25
+  RValueProperty: (null)
+  ContextExpression:
+  $559: FinalFunction target=Array_Get@0x212d69876b0 (
+    $568: LocalVariable named CallFunc_GetComponentsByTag_ReturnValue@0x213b313e800
+    $577: LocalVariable named Temp_int_Array_Index_Variable@0x21376c62530
+    $586: LocalVariable named CallFunc_Array_Get_Item@0x213b313eb80
+    $595: EndFunctionParms
+  )
+$596: Let (Variable = Expression)
+  Variable:
+  $605: LocalVariable named CallFunc_K2_GetComponentScale_ReturnValue@0x213b313eb00
+  Expression:
+  $614: Context
+    ObjectExpression:
+    $615: LocalVariable named CallFunc_Array_Get_Item@0x213b313eb80
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_K2_GetComponentScale_ReturnValue@0x213b313eb00
+    ContextExpression:
+    $636: FinalFunction target=K2_GetComponentScale@0x212d6691570 (
+      $645: EndFunctionParms
+    )
+$646: Let (Variable = Expression)
+  Variable:
+  $655: LocalVariable named CallFunc_GetMaxElement_ReturnValue@0x21376c65710
+  Expression:
+  $664: CallMath target=GetMaxElement@0x212d699fb00 (
+    $673: LocalVariable named CallFunc_K2_GetComponentScale_ReturnValue@0x213b313eb00
+    $682: EndFunctionParms
+  )
+$683: CallMath target=BreakVector2D@0x212d6993340 (
+  $692: LocalVariable named CallFunc_ConvertToWaterSpace_ReturnValue@0x213b313ea00
+  $701: LocalVariable named CallFunc_BreakVector2D_X@0x21376c621b0
+  $710: LocalVariable named CallFunc_BreakVector2D_Y@0x21376c67a80
+  $719: EndFunctionParms
+)
+$720: Let (Variable = Expression)
+  Variable:
+  $729: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213b313e900
+  Expression:
+  $738: CallMath target=MakeVector@0x212d69aa910 (
+    $747: LocalVariable named CallFunc_BreakVector2D_X@0x21376c621b0
+    $756: LocalVariable named CallFunc_BreakVector2D_Y@0x21376c67a80
+    $765: LocalVariable named CallFunc_GetMaxElement_ReturnValue@0x21376c65710
+    $774: EndFunctionParms
+  )
+$775: Let (Variable = Expression)
+  Variable:
+  $784: LocalVariable named CallFunc_Array_Add_ReturnValue@0x21376c624c0
+  Expression:
+  $793: Context
+    ObjectExpression:
+    $794: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_Add_ReturnValue@0x21376c624c0
+    ContextExpression:
+    $815: FinalFunction target=Array_Add@0x212d6986810 (
+      $824: InstanceVariable named RippleGenerators@0x212d689cd60
+      $833: LocalVariable named CallFunc_MakeVector_ReturnValue@0x213b313e900
+      $842: EndFunctionParms
+    )
+$843: PopExecutionFlow (jump to popped addr)
+$844: Let (Variable = Expression)
+  Variable:
+  $853: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x21376c62bc0
+  Expression:
+  $862: CallMath target=Add_IntInt@0x212d698fa30 (
+    $871: LocalVariable named Temp_int_Loop_Counter_Variable@0x21376c604d0
+    $880: literal int32 1
+    $885: EndFunctionParms
+  )
+$886: Let (Variable = Expression)
+  Variable:
+  $895: LocalVariable named Temp_int_Loop_Counter_Variable@0x21376c604d0
+  Expression:
+  $904: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x21376c62bc0
+$913: Jump to offset 0x5c
+$918: Return expression:
+  $919: Nothing
+$920: EndOfScript
+
+=== BP_WaterVolume_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_WaterVolume_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_WaterVolume" (
+  $13: literal int32 230
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_WaterVolume_C::ReceiveActorBeginOverlap (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_OtherActor2@0x213b313e680
+  Expression:
+  $9: LocalVariable named OtherActor@0x213b313e780
+$18: VirtualFunction call "ExecuteUbergraph_BP_WaterVolume" (
+  $31: literal int32 10
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_WaterVolume_C::ReceiveActorEndOverlap (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_OtherActor@0x213b313e600
+  Expression:
+  $9: LocalVariable named OtherActor@0x213b313e700
+$18: VirtualFunction call "ExecuteUbergraph_BP_WaterVolume" (
+  $31: literal int32 124
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_WaterVolume_C::ExecuteUbergraph_BP_WaterVolume (559 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x21376c626f0
+$10: Context
+  ObjectExpression:
+  $11: InstanceVariable named FlatWaterPlane@0x213b313e100
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $32: FinalFunction target=OnActorEnterWaterPlane@0x212d6a56680 (
+    $41: LocalVariable named K2Node_Event_OtherActor2@0x213b313e680
+    $50: EndFunctionParms
+  )
+$51: Let (Variable = Expression)
+  Variable:
+  $60: LocalVariable named CallFunc_Array_AddUnique_ReturnValue@0x21376c62920
+  Expression:
+  $69: Context
+    ObjectExpression:
+    $70: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_AddUnique_ReturnValue@0x21376c62920
+    ContextExpression:
+    $91: FinalFunction target=Array_AddUnique@0x212d6986aa0 (
+      $100: InstanceVariable named OverlappingActors@0x212d689cc60
+      $109: LocalVariable named K2Node_Event_OtherActor2@0x213b313e680
+      $118: EndFunctionParms
+    )
+$119: Jump to offset 0x22c
+$124: Context
+  ObjectExpression:
+  $125: InstanceVariable named FlatWaterPlane@0x213b313e100
+  SkipBytes: 0x13
+  RValueProperty: (null)
+  ContextExpression:
+  $146: FinalFunction target=OnActorLeaveWaterPlane@0x212d6a567c0 (
+    $155: LocalVariable named K2Node_Event_OtherActor@0x213b313e600
+    $164: EndFunctionParms
+  )
+$165: LetBool (Variable = Expression)
+  Variable:
+  $166: LocalVariable named CallFunc_Array_RemoveItem_ReturnValue@0x213b313e380
+  Expression:
+  $175: Context
+    ObjectExpression:
+    $176: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+    SkipBytes: 0x1c
+    RValueProperty: CallFunc_Array_RemoveItem_ReturnValue@0x213b313e380
+    ContextExpression:
+    $197: FinalFunction target=Array_RemoveItem@0x212d6988230 (
+      $206: InstanceVariable named OverlappingActors@0x212d689cc60
+      $215: LocalVariable named K2Node_Event_OtherActor@0x213b313e600
+      $224: EndFunctionParms
+    )
+$225: Jump to offset 0x22c
+$230: FinalFunction target=RegisterComponents@0x212d689c8e0 (
+  $239: InstanceVariable named FlatWaterMesh@0x213b313e080
+  $248: InstanceVariable named FlatWaterPlane@0x213b313e100
+  $257: EndFunctionParms
+)
+$258: Let (Variable = Expression)
+  Variable:
+  $267: LocalVariable named CallFunc_GetMaterials_ReturnValue@0x213b313e280
+  Expression:
+  $276: Context
+    ObjectExpression:
+    $277: InstanceVariable named FlatWaterMesh@0x213b313e080
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetMaterials_ReturnValue@0x213b313e280
+    ContextExpression:
+    $298: VirtualFunction call "GetMaterials" (
+      $311: EndFunctionParms
+    )
+$312: Context
+  ObjectExpression:
+  $313: ObjectConst Default__KismetArrayLibrary@0x212d6f7ebb0
+  SkipBytes: 0x21
+  RValueProperty: (null)
+  ContextExpression:
+  $334: FinalFunction target=Array_Get@0x212d69876b0 (
+    $343: LocalVariable named CallFunc_GetMaterials_ReturnValue@0x213b313e280
+    $352: literal int32 0
+    $357: LocalVariable named CallFunc_Array_Get_Item@0x213b313e500
+    $366: EndFunctionParms
+  )
+$367: Let (Variable = Expression)
+  Variable:
+  $376: LocalVariable named K2Node_DynamicCast_AsMaterial_Instance_Dynamic@0x213b313e480
+  Expression:
+  $385: DynamicCast to MaterialInstanceDynamic@0x212d5bbbec0 of expr:
+  $394: LocalVariable named CallFunc_Array_Get_Item@0x213b313e500
+$403: Let (Variable = Expression)
+  Variable:
+  $412: LocalVariable named K2Node_DynamicCast_bSuccess@0x213b313e400
+  Expression:
+  $421: PrimitiveCast type=71
+    Argument:
+    $423: LocalVariable named K2Node_DynamicCast_AsMaterial_Instance_Dynamic@0x213b313e480
+$432: JumpIfNot -> 0x22c, cond:
+  $437: LocalVariable named K2Node_DynamicCast_bSuccess@0x213b313e400
+$446: LetObj (Variable = Expression)
+  Variable:
+  $447: LocalVariable named CallFunc_GetTexture_ReturnValue@0x213b313e580
+  Expression:
+  $456: Context
+    ObjectExpression:
+    $457: InstanceVariable named DynamicFlow@0x213b313e180
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetTexture_ReturnValue@0x213b313e580
+    ContextExpression:
+    $478: FinalFunction target=GetTexture@0x212d679b0e0 (
+      $487: EndFunctionParms
+    )
+$488: Context
+  ObjectExpression:
+  $489: LocalVariable named K2Node_DynamicCast_AsMaterial_Instance_Dynamic@0x213b313e480
+  SkipBytes: 0x20
+  RValueProperty: (null)
+  ContextExpression:
+  $510: FinalFunction target=SetTextureParameterValue@0x212d69f47c0 (
+    $519: literal name "FoamMask"
+    $532: LocalVariable named CallFunc_GetTexture_ReturnValue@0x213b313e580
+    $541: EndFunctionParms
+  )
+$542: VirtualFunction call "CollectRippleGenerators" (
+  $555: EndFunctionParms
+)
+$556: Return expression:
+  $557: Nothing
+$558: EndOfScript

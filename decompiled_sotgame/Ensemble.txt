@@ -1,0 +1,85 @@
+// Class: Ensemble (5 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+Ensemble::GetInstrumentDataPlaybackPosition @ RVA 0xCF70D0 EA 0x7FF6F47170D0
+======================================================================
+__int64 __fastcall sub_7FF6F47170D0(__int64 a1, _QWORD *a2, _DWORD *a3)
+{
+  __int64 v3; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 result; // rax
+  unsigned int v10; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = a2[4];
+  v8 = v10;
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  result = sub_7FF6F41B60B0(a1, v8);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+Ensemble::GetInstruments @ RVA 0xCF7160 EA 0x7FF6F4717160
+======================================================================
+__int64 __fastcall sub_7FF6F4717160(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v4; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  v4 = sub_7FF6F41B60E0();
+  return sub_7FF6F40C3D40(a3, v4);
+}
+
+
+======================================================================
+Ensemble::GetNumInstrumentData @ RVA 0xCF7280 EA 0x7FF6F4717280
+======================================================================
+__int64 __fastcall sub_7FF6F4717280(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F41B76A0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+Ensemble::GetNumInstruments @ RVA 0xCF72B0 EA 0x7FF6F47172B0
+======================================================================
+__int64 __fastcall sub_7FF6F47172B0(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F41B76B0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+Ensemble::OnRep_Instruments @ RVA 0xCF9D00 EA 0x7FF6F4719D00
+======================================================================
+__int64 __fastcall sub_7FF6F4719D00(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F41BDA30();
+}
+

@@ -1,0 +1,301 @@
+// Class: CoherentUIGTInputActor (11 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+CoherentUIGTInputActor::AllowJoystickInputWhileUIGTIsFocused_DEPRECATED @ RVA 0x456B2D0 EA 0x7FF6F7F8B2D0
+======================================================================
+__int64 __fastcall sub_7FF6F7F8B2D0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F7F3D650(a1, v5);
+}
+
+
+======================================================================
+CoherentUIGTInputActor::AlwaysAcceptMouseInput @ RVA 0x456B360 EA 0x7FF6F7F8B360
+======================================================================
+__int64 __fastcall sub_7FF6F7F8B360(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F7F3D660(a1, v5);
+}
+
+
+======================================================================
+CoherentUIGTInputActor::GetInputPropagationBehaviour @ RVA 0x456BB80 EA 0x7FF6F7F8BB80
+======================================================================
+__int64 __fastcall sub_7FF6F7F8BB80(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F7F52970();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+CoherentUIGTInputActor::Initialize @ RVA 0x456BE80 EA 0x7FF6F7F8BE80
+======================================================================
+__int64 __fastcall sub_7FF6F7F8BE80(int a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  __int64 v6; // rax
+  int v7; // r9d
+  int v8; // r8d
+  int v9; // edx
+  __int64 v10; // rdi
+  _BYTE v12[4]; // [rsp+30h] [rbp-18h] BYREF
+  _DWORD v13[5]; // [rsp+34h] [rbp-14h] BYREF
+  unsigned __int8 v14; // [rsp+58h] [rbp+10h] BYREF
+  unsigned __int8 v15; // [rsp+68h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v12[0] = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v12);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v12);
+  }
+  v2 = a2[4] == 0;
+  v15 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v15);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v15);
+  }
+  v2 = a2[4] == 0;
+  v14 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  v5 = 0;
+  v13[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v13);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v13);
+  }
+  v6 = a2[4];
+  v7 = v14;
+  v8 = v15;
+  v9 = v12[0];
+  LOBYTE(v5) = v6 != 0;
+  v10 = v6 + v5;
+  LODWORD(v6) = v13[0];
+  a2[4] = v10;
+  return sub_7FF6F7F561B0(a1, v9, v8, v7, v6);
+}
+
+
+======================================================================
+CoherentUIGTInputActor::IsCoherentUIGTFocused @ RVA 0x456BFD0 EA 0x7FF6F7F8BFD0
+======================================================================
+__int64 __fastcall sub_7FF6F7F8BFD0(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F7F57450();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+CoherentUIGTInputActor::IsJoystickInputWhileUIGTIsFocusedAllowed_DEPRECATED @ RVA 0x456C060 EA 0x7FF6F7F8C060
+======================================================================
+__int64 __fastcall sub_7FF6F7F8C060(__int64 a1, __int64 a2, _BYTE *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F7F575C0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+CoherentUIGTInputActor::SetCoherentUIGTInputFocus @ RVA 0x456C780 EA 0x7FF6F7F8C780
+======================================================================
+__int64 __fastcall sub_7FF6F7F8C780(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rdx
+  __int64 v6; // rax
+  bool v7; // zf
+  int v9; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  v6 = a2[4];
+  LOBYTE(v2) = v6 != 0;
+  v7 = v9 == 0;
+  a2[4] = v6 + v2;
+  LOBYTE(v5) = !v7;
+  return sub_7FF6F7F65A20(a1, v5);
+}
+
+
+======================================================================
+CoherentUIGTInputActor::SetCoherentUIGTViewFocus @ RVA 0x456C810 EA 0x7FF6F7F8C810
+======================================================================
+__int64 __fastcall sub_7FF6F7F8C810(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F7F66310(a1, v6);
+}
+
+
+======================================================================
+CoherentUIGTInputActor::SetInputPropagationBehaviour @ RVA 0x456C890 EA 0x7FF6F7F8C890
+======================================================================
+__int64 __fastcall sub_7FF6F7F8C890(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F7F66790(a1, v5);
+}
+
+
+======================================================================
+CoherentUIGTInputActor::SetLineTraceMode @ RVA 0x456C910 EA 0x7FF6F7F8C910
+======================================================================
+__int64 __fastcall sub_7FF6F7F8C910(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdx
+  unsigned __int8 v7; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v7 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v7);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v7);
+  }
+  v5 = v7;
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F7F667C0(a1, v5);
+}
+
+
+======================================================================
+CoherentUIGTInputActor::ToggleCoherentUIGTInputFocus @ RVA 0x456CDA0 EA 0x7FF6F7F8CDA0
+======================================================================
+__int64 __fastcall sub_7FF6F7F8CDA0(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F7F6A620();
+}
+

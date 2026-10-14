@@ -1,0 +1,381 @@
+// E:\unreal-projects\Athena\Content\Blueprints\GameObjects\AmmoChest\bp_ammochest.uasset -> BP_AmmoChest_C
+
+=== BP_AmmoChest_C::GetObjectDisplayName (91 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalOutVariable named ReturnValue@0x2139cbdd3c0
+  Expression:
+  $18: literal text (not decoded)
+$19: literal ansi string "Ammo Chest"
+$31: literal ansi string "7A0C4DA1401072246F2A928567F4B1E4_ReturnValue1"
+$78: literal ansi string ""
+$80: Return expression:
+  $81: LocalOutVariable named ReturnValue@0x2139cbdd3c0
+$90: EndOfScript
+
+=== BP_AmmoChest_C::GetClosestInteractionPoint (111 bytes) ===
+$0: Let (Variable = Expression)
+  Variable:
+  $9: LocalVariable named CallFunc_GetBoxWorldOrigin_ReturnValue@0x2139ccbcd00
+  Expression:
+  $18: Context
+    ObjectExpression:
+    $19: InstanceVariable named Interactable@0x2139ccbda00
+    SkipBytes: 0xa
+    RValueProperty: CallFunc_GetBoxWorldOrigin_ReturnValue@0x2139ccbcd00
+    ContextExpression:
+    $40: FinalFunction target=GetBoxWorldOrigin@0x212d674e300 (
+      $49: EndFunctionParms
+    )
+$50: Let (Variable = Expression)
+  Variable:
+  $59: LocalOutVariable named OutInteractionPointRadius@0x2139cbdd4a0
+  Expression:
+  $68: literal float 0
+$73: Let (Variable = Expression)
+  Variable:
+  $82: LocalOutVariable named ReturnValue@0x2139ccbcc80
+  Expression:
+  $91: LocalVariable named CallFunc_GetBoxWorldOrigin_ReturnValue@0x2139ccbcd00
+$100: Return expression:
+  $101: LocalOutVariable named ReturnValue@0x2139ccbcc80
+$110: EndOfScript
+
+=== BP_AmmoChest_C::UserConstructionScript (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_AmmoChest_C::ReceiveBeginPlay (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_AmmoChest" (
+  $13: literal int32 1090
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_AmmoChest_C::Blueprint_OnInteract_Client (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InInteractor2@0x2139ccbd100
+  Expression:
+  $9: LocalVariable named InInteractor@0x2139ccbcd80
+$18: VirtualFunction call "ExecuteUbergraph_BP_AmmoChest" (
+  $31: literal int32 1205
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_AmmoChest_C::Blueprint_OnInteract_Server (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_InInteractor@0x2139ccbd300
+  Expression:
+  $9: LocalVariable named InInteractor@0x2139ccbce00
+$18: VirtualFunction call "ExecuteUbergraph_BP_AmmoChest" (
+  $31: literal int32 1302
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_AmmoChest_C::ExecuteUbergraph_BP_AmmoChest (1310 bytes) ===
+$0: FlowStack.Push(0x51b)
+$5: Computed Jump, offset by expr:
+  $6: LocalVariable named EntryPoint@0x2139cbddc10
+$15: FlowStack.Push(0x240)
+$20: LetObj (Variable = Expression)
+  Variable:
+  $21: LocalVariable named CallFunc_GetComponentInterfaceByClass_ReturnValue2@0x2139ccbd480
+  Expression:
+  $30: Context
+    ObjectExpression:
+    $31: LocalVariable named K2Node_Event_InInteractor@0x2139ccbd300
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetComponentInterfaceByClass_ReturnValue2@0x2139ccbd480
+    ContextExpression:
+    $52: FinalFunction target=GetComponentInterfaceByClass@0x212d63822c0 (
+      $61: ObjectConst WieldableItemSetInterface@0x212d5c38a40
+      $70: EndFunctionParms
+    )
+$71: Let (Variable = Expression)
+  Variable:
+  $80: LocalVariable named UniqueObjectNameForCooking_AsWieldable_Item_Set_Interface@0x2139ccbd580
+  Expression:
+  $89: ObjToInterfaceCast to WieldableItemSetInterface@0x212d5c38a40
+  $98: LocalVariable named CallFunc_GetComponentInterfaceByClass_ReturnValue2@0x2139ccbd480
+$107: Let (Variable = Expression)
+  Variable:
+  $116: LocalVariable named UniqueObjectNameForCooking_bSuccess3@0x2139ccbd600
+  Expression:
+  $125: PrimitiveCast type=73
+    Argument:
+    $127: LocalVariable named UniqueObjectNameForCooking_AsWieldable_Item_Set_Interface@0x2139ccbd580
+$136: JumpIfNot -> 0x3cc, cond:
+  $141: LocalVariable named UniqueObjectNameForCooking_bSuccess3@0x2139ccbd600
+$150: Let (Variable = Expression)
+  Variable:
+  $159: LocalVariable named CallFunc_GetNumItems_ReturnValue@0x2139cbdd5f0
+  Expression:
+  $168: Context
+    ObjectExpression:
+    $169: InterfaceContext:
+    $170: LocalVariable named UniqueObjectNameForCooking_AsWieldable_Item_Set_Interface@0x2139ccbd580
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetNumItems_ReturnValue@0x2139cbdd5f0
+    ContextExpression:
+    $191: VirtualFunction call "GetNumItems" (
+      $204: EndFunctionParms
+    )
+$205: Let (Variable = Expression)
+  Variable:
+  $214: LocalVariable named Temp_int_Variable2@0x2139cbddcf0
+  Expression:
+  $223: LocalVariable named CallFunc_GetNumItems_ReturnValue@0x2139cbdd5f0
+$232: Let (Variable = Expression)
+  Variable:
+  $241: LocalVariable named Temp_int_Variable@0x2139cbdd510
+  Expression:
+  $250: literal int32 0
+$255: LetBool (Variable = Expression)
+  Variable:
+  $256: LocalVariable named CallFunc_LessEqual_IntInt_ReturnValue@0x2139ccbd800
+  Expression:
+  $265: CallMath target=LessEqual_IntInt@0x212d69a69d0 (
+    $274: LocalVariable named Temp_int_Variable@0x2139cbdd510
+    $283: LocalVariable named Temp_int_Variable2@0x2139cbddcf0
+    $292: EndFunctionParms
+  )
+$293: PopExecutionFlowIfNot, cond:
+$294: LocalVariable named CallFunc_LessEqual_IntInt_ReturnValue@0x2139ccbd800
+$303: FlowStack.Push(0x3e8)
+$308: Let (Variable = Expression)
+  Variable:
+  $317: LocalVariable named UniqueObjectNameForCooking_AsWieldable_Item_Set_Interface2@0x2139ccbd680
+  Expression:
+  $326: ObjToInterfaceCast to WieldableItemSetInterface@0x212d5c38a40
+  $335: LocalVariable named CallFunc_GetComponentInterfaceByClass_ReturnValue2@0x2139ccbd480
+$344: Let (Variable = Expression)
+  Variable:
+  $353: LocalVariable named UniqueObjectNameForCooking_bSuccess4@0x2139ccbd700
+  Expression:
+  $362: PrimitiveCast type=73
+    Argument:
+    $364: LocalVariable named UniqueObjectNameForCooking_AsWieldable_Item_Set_Interface2@0x2139ccbd680
+$373: JumpIfNot -> 0x432, cond:
+  $378: LocalVariable named UniqueObjectNameForCooking_bSuccess4@0x2139ccbd700
+$387: LetObj (Variable = Expression)
+  Variable:
+  $388: LocalVariable named CallFunc_GetItem_ReturnValue@0x2139ccbd780
+  Expression:
+  $397: Context
+    ObjectExpression:
+    $398: InterfaceContext:
+    $399: LocalVariable named UniqueObjectNameForCooking_AsWieldable_Item_Set_Interface2@0x2139ccbd680
+    SkipBytes: 0x17
+    RValueProperty: CallFunc_GetItem_ReturnValue@0x2139ccbd780
+    ContextExpression:
+    $420: VirtualFunction call "GetItem" (
+      $433: LocalVariable named Temp_int_Variable@0x2139cbdd510
+      $442: EndFunctionParms
+    )
+$443: LetObj (Variable = Expression)
+  Variable:
+  $444: LocalVariable named Temp_object_Variable@0x2139ccbd880
+  Expression:
+  $453: LocalVariable named CallFunc_GetItem_ReturnValue@0x2139ccbd780
+$462: Let (Variable = Expression)
+  Variable:
+  $471: LocalVariable named K2Node_DynamicCast_AsProjectile_Weapon@0x2139ccbd900
+  Expression:
+  $480: DynamicCast to ProjectileWeapon@0x212d5a594c0 of expr:
+  $489: LocalVariable named Temp_object_Variable@0x2139ccbd880
+$498: Let (Variable = Expression)
+  Variable:
+  $507: LocalVariable named K2Node_DynamicCast_bSuccess@0x2139ccbd980
+  Expression:
+  $516: PrimitiveCast type=71
+    Argument:
+    $518: LocalVariable named K2Node_DynamicCast_AsProjectile_Weapon@0x2139ccbd900
+$527: PopExecutionFlowIfNot, cond:
+$528: LocalVariable named K2Node_DynamicCast_bSuccess@0x2139ccbd980
+$537: Context
+  ObjectExpression:
+  $538: LocalVariable named K2Node_DynamicCast_AsProjectile_Weapon@0x2139ccbd900
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $559: FinalFunction target=AddBulletsToClip@0x212d6833170 (
+    $568: literal int32 100000
+    $573: True
+    $574: EndFunctionParms
+  )
+$575: PopExecutionFlow (jump to popped addr)
+$576: Let (Variable = Expression)
+  Variable:
+  $585: LocalVariable named UniqueObjectNameForCooking_AsWielded_Item_Interface@0x2139ccbd380
+  Expression:
+  $594: ObjToInterfaceCast to WieldedItemInterface@0x212d5c38340
+  $603: LocalVariable named K2Node_Event_InInteractor@0x2139ccbd300
+$612: Let (Variable = Expression)
+  Variable:
+  $621: LocalVariable named UniqueObjectNameForCooking_bSuccess2@0x2139ccbd400
+  Expression:
+  $630: PrimitiveCast type=73
+    Argument:
+    $632: LocalVariable named UniqueObjectNameForCooking_AsWielded_Item_Interface@0x2139ccbd380
+$641: JumpIfNot -> 0x3b4, cond:
+  $646: LocalVariable named UniqueObjectNameForCooking_bSuccess2@0x2139ccbd400
+$655: Let (Variable = Expression)
+  Variable:
+  $664: LocalVariable named CallFunc_GetWieldedItemIfNotStashed_ReturnValue@0x2139ccbd500
+  Expression:
+  $673: Context
+    ObjectExpression:
+    $674: InterfaceContext:
+    $675: LocalVariable named UniqueObjectNameForCooking_AsWielded_Item_Interface@0x2139ccbd380
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetWieldedItemIfNotStashed_ReturnValue@0x2139ccbd500
+    ContextExpression:
+    $696: VirtualFunction call "GetWieldedItemIfNotStashed" (
+      $709: EndFunctionParms
+    )
+$710: Let (Variable = Expression)
+  Variable:
+  $719: LocalVariable named Temp_interface_Variable@0x2139ccbce80
+  Expression:
+  $728: LocalVariable named CallFunc_GetWieldedItemIfNotStashed_ReturnValue@0x2139ccbd500
+$737: LetObj (Variable = Expression)
+  Variable:
+  $738: LocalVariable named CallFunc_GetActor_ReturnValue@0x2139ccbcf00
+  Expression:
+  $747: Context
+    ObjectExpression:
+    $748: InterfaceContext:
+    $749: LocalVariable named Temp_interface_Variable@0x2139ccbce80
+    SkipBytes: 0xe
+    RValueProperty: CallFunc_GetActor_ReturnValue@0x2139ccbcf00
+    ContextExpression:
+    $770: VirtualFunction call "GetActor" (
+      $783: EndFunctionParms
+    )
+$784: LetObj (Variable = Expression)
+  Variable:
+  $785: LocalVariable named CallFunc_GetComponentInterfaceByClass_ReturnValue@0x2139ccbcf80
+  Expression:
+  $794: Context
+    ObjectExpression:
+    $795: LocalVariable named CallFunc_GetActor_ReturnValue@0x2139ccbcf00
+    SkipBytes: 0x13
+    RValueProperty: CallFunc_GetComponentInterfaceByClass_ReturnValue@0x2139ccbcf80
+    ContextExpression:
+    $816: FinalFunction target=GetComponentInterfaceByClass@0x212d63822c0 (
+      $825: ObjectConst AmmoStoreInterface@0x212d54d3480
+      $834: EndFunctionParms
+    )
+$835: Let (Variable = Expression)
+  Variable:
+  $844: LocalVariable named UniqueObjectNameForCooking_AsAmmo_Store_Interface@0x2139ccbd000
+  Expression:
+  $853: ObjToInterfaceCast to AmmoStoreInterface@0x212d54d3480
+  $862: LocalVariable named CallFunc_GetComponentInterfaceByClass_ReturnValue@0x2139ccbcf80
+$871: Let (Variable = Expression)
+  Variable:
+  $880: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x2139ccbd080
+  Expression:
+  $889: PrimitiveCast type=73
+    Argument:
+    $891: LocalVariable named UniqueObjectNameForCooking_AsAmmo_Store_Interface@0x2139ccbd000
+$900: PopExecutionFlowIfNot, cond:
+$901: LocalVariable named UniqueObjectNameForCooking_bSuccess@0x2139ccbd080
+$910: Context
+  ObjectExpression:
+  $911: InterfaceContext:
+  $912: LocalVariable named UniqueObjectNameForCooking_AsAmmo_Store_Interface@0x2139ccbd000
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $933: VirtualFunction call "RestockAmmo" (
+    $946: EndFunctionParms
+  )
+$947: PopExecutionFlow (jump to popped addr)
+$948: Let (Variable = Expression)
+  Variable:
+  $957: LocalVariable named Temp_interface_Variable@0x2139ccbce80
+  Expression:
+  $966: NoInterface
+$967: Jump to offset 0x2e1
+$972: Let (Variable = Expression)
+  Variable:
+  $981: LocalVariable named Temp_int_Variable2@0x2139cbddcf0
+  Expression:
+  $990: literal int32 0
+$995: Jump to offset 0xe8
+$1000: Let (Variable = Expression)
+  Variable:
+  $1009: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x2139cbdd580
+  Expression:
+  $1018: CallMath target=Add_IntInt@0x212d698fa30 (
+    $1027: LocalVariable named Temp_int_Variable@0x2139cbdd510
+    $1036: literal int32 1
+    $1041: EndFunctionParms
+  )
+$1042: Let (Variable = Expression)
+  Variable:
+  $1051: LocalVariable named Temp_int_Variable@0x2139cbdd510
+  Expression:
+  $1060: LocalVariable named CallFunc_Add_IntInt_ReturnValue@0x2139cbdd580
+$1069: Jump to offset 0xff
+$1074: LetObj (Variable = Expression)
+  Variable:
+  $1075: LocalVariable named Temp_object_Variable@0x2139ccbd880
+  Expression:
+  $1084: NoObject
+$1085: Jump to offset 0x1ce
+$1090: LetBool (Variable = Expression)
+  Variable:
+  $1091: LocalVariable named CallFunc_WwiseCreateEmitter_ReturnValue@0x2139ccbd280
+  Expression:
+  $1100: Context
+    ObjectExpression:
+    $1101: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x212d7001550
+    SkipBytes: 0x37
+    RValueProperty: CallFunc_WwiseCreateEmitter_ReturnValue@0x2139ccbd280
+    ContextExpression:
+    $1122: FinalFunction target=WwiseCreateEmitter@0x212d6a1d8f0 (
+      $1131: LocalVariable named CallFunc_WwiseCreateEmitter_Emitter@0x2139ccbd200
+      $1140: literal name "None"
+      $1153: Self
+      $1154: ObjectConst pool_ammo_chest@0x2139ccbdb80
+      $1163: literal vector (0,0,0)
+      $1176: EndFunctionParms
+    )
+$1177: Let (Variable = Expression)
+  Variable:
+  $1186: InstanceVariable named Emitter@0x2139ccbe180
+  Expression:
+  $1195: LocalVariable named CallFunc_WwiseCreateEmitter_Emitter@0x2139ccbd200
+$1204: PopExecutionFlow (jump to popped addr)
+$1205: Let (Variable = Expression)
+  Variable:
+  $1214: LocalVariable named CallFunc_WwiseEmitterPostEvent_ReturnValue@0x2139cbddc80
+  Expression:
+  $1223: Context
+    ObjectExpression:
+    $1224: ObjectConst Default__WwiseEmitterBlueprintLibrary@0x212d7001550
+    SkipBytes: 0x38
+    RValueProperty: CallFunc_WwiseEmitterPostEvent_ReturnValue@0x2139cbddc80
+    ContextExpression:
+    $1245: FinalFunction target=WwiseEmitterPostEvent@0x212d6a1f260 (
+      $1254: InstanceVariable named Emitter@0x2139ccbe180
+      $1263: ObjectConst Play_sfx_chest_ammo_pickup@0x212a5b70b40
+      $1272: literal byte 2
+      $1274: literal name "None"
+      $1287: literal name "None"
+      $1300: EndFunctionParms
+    )
+$1301: PopExecutionFlow (jump to popped addr)
+$1302: Jump to offset 0xf
+$1307: Return expression:
+  $1308: Nothing
+$1309: EndOfScript

@@ -1,0 +1,250 @@
+// /Game/Blueprints/GameObjects/Items/Spyglasses/bp_enchantedspyglass -> BP_EnchantedSpyglass_C
+
+=== BP_EnchantedSpyglass_C::fn_idx_9202 (3 bytes) ===
+$0: Return expression:
+  $1: Nothing
+$2: EndOfScript
+
+=== BP_EnchantedSpyglass_C::fn_idx_9152 (22 bytes) ===
+$0: VirtualFunction call "ExecuteUbergraph_BP_EnchantedSpyglass" (
+  $13: literal int32 10
+  $18: EndFunctionParms
+)
+$19: Return expression:
+  $20: Nothing
+$21: EndOfScript
+
+=== BP_EnchantedSpyglass_C::fn_idx_239236 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_CustomEvent_WieldedEvent@0x19f55c40200
+  Expression:
+  $9: LocalVariable named WieldedEvent@0x19f55c40000
+$18: VirtualFunction call "ExecuteUbergraph_BP_EnchantedSpyglass" (
+  $31: literal int32 302
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_EnchantedSpyglass_C::fn_idx_2001 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_IsRaised@0x19f55c40300
+  Expression:
+  $9: LocalVariable named IsRaised@0x19f55c40080
+$18: VirtualFunction call "ExecuteUbergraph_BP_EnchantedSpyglass" (
+  $31: literal int32 637
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_EnchantedSpyglass_C::fn_idx_9159 (40 bytes) ===
+$0: LetValueOnPersistentFrame dest=K2Node_Event_EndPlayReason@0x19f55c40400
+  Expression:
+  $9: LocalVariable named EndPlayReason@0x19f55c40100
+$18: VirtualFunction call "ExecuteUbergraph_BP_EnchantedSpyglass" (
+  $31: literal int32 661
+  $36: EndFunctionParms
+)
+$37: Return expression:
+  $38: Nothing
+$39: EndOfScript
+
+=== BP_EnchantedSpyglass_C::fn_idx_239434 (795 bytes) ===
+$0: Computed Jump, offset by expr:
+  $1: LocalVariable named EntryPoint@0x19f799fc6a0
+$10: FinalFunction target=ReceiveBeginPlay@0x19e4cd69f70 (
+  $19: EndFunctionParms
+)
+$20: LetBool (Variable = Expression)
+  Variable:
+  $21: LocalVariable named CallFunc_IsServer_ReturnValue3@0x19f55c40500
+  Expression:
+  $30: Context
+    ObjectExpression:
+    $31: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_IsServer_ReturnValue3@0x19f55c40500
+    ContextExpression:
+    $52: FinalFunction target=IsServer@0x19e4cd8e1c0 (
+      $61: Self
+      $62: EndFunctionParms
+    )
+$63: JumpIfNot -> 0x52, cond:
+  $68: LocalVariable named CallFunc_IsServer_ReturnValue3@0x19f55c40500
+$77: Jump to offset 0x318
+$82: Context
+  ObjectExpression:
+  $83: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x33
+  RValueProperty: (null)
+  ContextExpression:
+  $104: FinalFunction target=RegisterEvent@0x19e4d4108d0 (
+    $113: InstanceVariable named MessagingDispatcher@0x19e4d10ec80
+    $122: InstanceVariable named OnWieldedHandle@0x19f55c40680
+    $131: Self
+    $132: literal ansi string "OnIsWielded"
+    $145: ObjectConst EventWieldableItemSetIsWielded@0x19e4cfbf9f0
+    $154: EndFunctionParms
+  )
+$155: Jump to offset 0x318
+$160: LetBool (Variable = Expression)
+  Variable:
+  $161: LocalVariable named CallFunc_IsServer_ReturnValue@0x19f55c40180
+  Expression:
+  $170: Context
+    ObjectExpression:
+    $171: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_IsServer_ReturnValue@0x19f55c40180
+    ContextExpression:
+    $192: FinalFunction target=IsServer@0x19e4cd8e1c0 (
+      $201: Self
+      $202: EndFunctionParms
+    )
+$203: JumpIfNot -> 0xde, cond:
+  $208: LocalVariable named CallFunc_IsServer_ReturnValue@0x19f55c40180
+$217: Jump to offset 0x318
+$222: LetBool (Variable = Expression)
+  Variable:
+  $223: LocalVariable named CallFunc_Not_PreBool_ReturnValue@0x19f55c40380
+  Expression:
+  $232: CallMath target=Not_PreBool@0x19e4d390310 (
+    $241: LocalVariable named K2Node_Event_IsRaised@0x19f55c40300
+    $250: EndFunctionParms
+  )
+$251: Context
+  ObjectExpression:
+  $252: InstanceVariable named ParticleSystemAmbient@0x19f55c41a80
+  SkipBytes: 0x18
+  RValueProperty: (null)
+  ContextExpression:
+  $273: VirtualFunction call "SetVisibility" (
+    $286: LocalVariable named CallFunc_Not_PreBool_ReturnValue@0x19f55c40380
+    $295: False
+    $296: EndFunctionParms
+  )
+$297: Jump to offset 0x318
+$302: JumpIfNot -> 0x1f0, cond:
+  $307: StructMemberContext prop=bIsWielded@0x19e4cfbfb90
+    Expression to struct:
+    $316: LocalVariable named K2Node_CustomEvent_WieldedEvent@0x19f55c40200
+$325: Context
+  ObjectExpression:
+  $326: InstanceVariable named ParticleSystemAmbient@0x19f55c41a80
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $347: VirtualFunction call "SetVisibility" (
+    $360: True
+    $361: False
+    $362: EndFunctionParms
+  )
+$363: Context
+  ObjectExpression:
+  $364: InstanceVariable named ParticleSystemAmbient@0x19f55c41a80
+  SkipBytes: 0xf
+  RValueProperty: (null)
+  ContextExpression:
+  $385: VirtualFunction call "Activate" (
+    $398: False
+    $399: EndFunctionParms
+  )
+$400: LetBool (Variable = Expression)
+  Variable:
+  $401: LocalVariable named CallFunc_GetIsFirstPerson_ReturnValue@0x19f55c40280
+  Expression:
+  $410: FinalFunction target=GetIsFirstPerson@0x19e4d10cfe0 (
+    $419: EndFunctionParms
+  )
+$420: JumpIfNot -> 0x23f, cond:
+  $425: LocalVariable named CallFunc_GetIsFirstPerson_ReturnValue@0x19f55c40280
+$434: Context
+  ObjectExpression:
+  $435: InstanceVariable named ParticleSystemAmbient@0x19f55c41a80
+  SkipBytes: 0x23
+  RValueProperty: (null)
+  ContextExpression:
+  $456: FinalFunction target=K2_AttachTo@0x19e4d071040 (
+    $465: InstanceVariable named FirstPersonMesh@0x19e4d10ee80
+    $474: literal name "None"
+    $487: literal byte 0
+    $489: False
+    $490: EndFunctionParms
+  )
+$491: Jump to offset 0x318
+$496: Context
+  ObjectExpression:
+  $497: InstanceVariable named ParticleSystemAmbient@0x19f55c41a80
+  SkipBytes: 0x10
+  RValueProperty: (null)
+  ContextExpression:
+  $518: VirtualFunction call "SetVisibility" (
+    $531: False
+    $532: False
+    $533: EndFunctionParms
+  )
+$534: Context
+  ObjectExpression:
+  $535: InstanceVariable named ParticleSystemAmbient@0x19f55c41a80
+  SkipBytes: 0xe
+  RValueProperty: (null)
+  ContextExpression:
+  $556: VirtualFunction call "Deactivate" (
+    $569: EndFunctionParms
+  )
+$570: Jump to offset 0x318
+$575: Context
+  ObjectExpression:
+  $576: InstanceVariable named ParticleSystemAmbient@0x19f55c41a80
+  SkipBytes: 0x23
+  RValueProperty: (null)
+  ContextExpression:
+  $597: FinalFunction target=K2_AttachTo@0x19e4d071040 (
+    $606: InstanceVariable named ThirdPersonMesh@0x19e4d10ee00
+    $615: literal name "None"
+    $628: literal byte 0
+    $630: False
+    $631: EndFunctionParms
+  )
+$632: Jump to offset 0x318
+$637: FinalFunction target=SpyGlassRaisedFirstPerson@0x19e4d250480 (
+  $646: LocalVariable named K2Node_Event_IsRaised@0x19f55c40300
+  $655: EndFunctionParms
+)
+$656: Jump to offset 0xa0
+$661: FinalFunction target=ReceiveEndPlay@0x19e4cd6a0f0 (
+  $670: LocalVariable named K2Node_Event_EndPlayReason@0x19f55c40400
+  $679: EndFunctionParms
+)
+$680: LetBool (Variable = Expression)
+  Variable:
+  $681: LocalVariable named CallFunc_IsServer_ReturnValue2@0x19f55c40480
+  Expression:
+  $690: Context
+    ObjectExpression:
+    $691: ObjectConst Default__KismetSystemLibrary@0x19e4d95ed00
+    SkipBytes: 0xb
+    RValueProperty: CallFunc_IsServer_ReturnValue2@0x19f55c40480
+    ContextExpression:
+    $712: FinalFunction target=IsServer@0x19e4cd8e1c0 (
+      $721: Self
+      $722: EndFunctionParms
+    )
+$723: JumpIfNot -> 0x2e6, cond:
+  $728: LocalVariable named CallFunc_IsServer_ReturnValue2@0x19f55c40480
+$737: Jump to offset 0x318
+$742: Context
+  ObjectExpression:
+  $743: ObjectConst Default__ObjectMessagingFunctions@0x19e4d9e3ad0
+  SkipBytes: 0x1c
+  RValueProperty: (null)
+  ContextExpression:
+  $764: FinalFunction target=UnregisterEvent@0x19e4d411260 (
+    $773: InstanceVariable named MessagingDispatcher@0x19e4d10ec80
+    $782: InstanceVariable named OnWieldedHandle@0x19f55c40680
+    $791: EndFunctionParms
+  )
+$792: Return expression:
+  $793: Nothing
+$794: EndOfScript

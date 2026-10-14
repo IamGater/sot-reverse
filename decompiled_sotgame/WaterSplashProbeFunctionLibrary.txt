@@ -1,0 +1,295 @@
+// Class: WaterSplashProbeFunctionLibrary (4 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+WaterSplashProbeFunctionLibrary::GetRelativeWaterHeightChangeSpd @ RVA 0x30411F0 EA 0x7FF6F6A611F0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6A611F0(__int64 a1, _QWORD *a2, __int64 a3)
+{
+  __int64 *v5; // rdi
+  __int64 v6; // rax
+  __int64 result; // rax
+  int v8; // edi
+  __int64 *v9; // rbx
+  __int64 v10; // rcx
+  _BYTE v11[16]; // [rsp+28h] [rbp-30h] BYREF
+  __int64 v12; // [rsp+38h] [rbp-20h] BYREF
+  __int64 v13; // [rsp+40h] [rbp-18h]
+  unsigned int v14; // [rsp+68h] [rbp+10h] BYREF
+
+  v12 = 0;
+  v13 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  v5 = &v12;
+  if ( a2[7] )
+    v5 = (__int64 *)a2[7];
+  v14 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v14);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v14);
+  }
+  a2[4] += a2[4] != 0;
+  v6 = sub_7FF6F6A46C20(v11, v5, v14);
+  *(_QWORD *)a3 = *(_QWORD *)v6;
+  result = *(unsigned int *)(v6 + 8);
+  *(_DWORD *)(a3 + 8) = result;
+  v8 = v13;
+  if ( (_DWORD)v13 )
+  {
+    v9 = (__int64 *)(v12 + 8);
+    do
+    {
+      v10 = v9[10];
+      if ( v10 )
+      {
+        result = sub_7FF6F4DED1F0(v10);
+        if ( v9[10] )
+          v9[10] = 0;
+      }
+      if ( *v9 )
+      {
+        result = sub_7FF6F4DED1F0(*v9);
+        if ( *v9 )
+          *v9 = 0;
+      }
+      v9 += 27;
+      --v8;
+    }
+    while ( v8 );
+  }
+  if ( v12 )
+    return sub_7FF6F4DED1F0(v12);
+  return result;
+}
+
+
+======================================================================
+WaterSplashProbeFunctionLibrary::SetSamplingTime @ RVA 0x30429B0 EA 0x7FF6F6A629B0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6A629B0(__int64 a1, _QWORD *a2)
+{
+  __int64 *v3; // rdi
+  __int64 result; // rax
+  int v5; // edi
+  __int64 *v6; // rbx
+  __int64 v7; // rcx
+  __int64 v8; // [rsp+28h] [rbp-20h] BYREF
+  __int64 v9; // [rsp+30h] [rbp-18h]
+  int v10; // [rsp+58h] [rbp+10h] BYREF
+
+  v8 = 0;
+  v9 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v3 = &v8;
+  if ( a2[7] )
+    v3 = (__int64 *)a2[7];
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  a2[4] += a2[4] != 0;
+  result = sub_7FF6F6A46C80(v3);
+  v5 = v9;
+  if ( (_DWORD)v9 )
+  {
+    v6 = (__int64 *)(v8 + 8);
+    do
+    {
+      v7 = v6[10];
+      if ( v7 )
+      {
+        result = sub_7FF6F4DED1F0(v7);
+        if ( v6[10] )
+          v6[10] = 0;
+      }
+      if ( *v6 )
+      {
+        result = sub_7FF6F4DED1F0(*v6);
+        if ( *v6 )
+          *v6 = 0;
+      }
+      v6 += 27;
+      --v5;
+    }
+    while ( v5 );
+  }
+  if ( v8 )
+    return sub_7FF6F4DED1F0(v8);
+  return result;
+}
+
+
+======================================================================
+WaterSplashProbeFunctionLibrary::TickProbe @ RVA 0x30436A0 EA 0x7FF6F6A636A0
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6A636A0(__int64 a1, _QWORD *a2)
+{
+  _BYTE *v3; // rdi
+  __int64 result; // rax
+  _BYTE v5[8]; // [rsp+30h] [rbp-E8h] BYREF
+  __int64 v6; // [rsp+38h] [rbp-E0h]
+  __int64 v7; // [rsp+88h] [rbp-90h]
+  int v8; // [rsp+128h] [rbp+10h] BYREF
+  __int64 v9; // [rsp+138h] [rbp+20h] BYREF
+
+  v9 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v9);
+  }
+  sub_7FF6F6A46500(v5);
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v5);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v5);
+  }
+  v3 = v5;
+  if ( a2[7] )
+    v3 = (_BYTE *)a2[7];
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  a2[4] += a2[4] != 0;
+  result = sub_7FF6F6A46CE0(v9, v3);
+  if ( v7 )
+  {
+    result = sub_7FF6F4DED1F0(v7);
+    v7 = 0;
+  }
+  if ( v6 )
+    return sub_7FF6F4DED1F0(v6);
+  return result;
+}
+
+
+======================================================================
+WaterSplashProbeFunctionLibrary::TickProbes @ RVA 0x3043810 EA 0x7FF6F6A63810
+======================================================================
+// Hidden C++ exception states: #wind=2
+__int64 __fastcall sub_7FF6F6A63810(__int64 a1, _QWORD *a2)
+{
+  __int64 *v3; // rdi
+  __int64 result; // rax
+  int v5; // edi
+  __int64 *v6; // rbx
+  __int64 v7; // rcx
+  __int64 v8; // [rsp+28h] [rbp-20h] BYREF
+  __int64 v9; // [rsp+30h] [rbp-18h]
+  int v10; // [rsp+58h] [rbp+10h] BYREF
+  __int64 v11; // [rsp+68h] [rbp+20h] BYREF
+
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v8 = 0;
+  v9 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v3 = &v8;
+  if ( a2[7] )
+    v3 = (__int64 *)a2[7];
+  v10 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  a2[4] += a2[4] != 0;
+  result = sub_7FF6F6A46DD0(v11, v3);
+  v5 = v9;
+  if ( (_DWORD)v9 )
+  {
+    v6 = (__int64 *)(v8 + 8);
+    do
+    {
+      v7 = v6[10];
+      if ( v7 )
+      {
+        result = sub_7FF6F4DED1F0(v7);
+        if ( v6[10] )
+          v6[10] = 0;
+      }
+      if ( *v6 )
+      {
+        result = sub_7FF6F4DED1F0(*v6);
+        if ( *v6 )
+          *v6 = 0;
+      }
+      v6 += 27;
+      --v5;
+    }
+    while ( v5 );
+  }
+  if ( v8 )
+    return sub_7FF6F4DED1F0(v8);
+  return result;
+}
+

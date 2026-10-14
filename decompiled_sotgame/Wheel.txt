@@ -1,0 +1,633 @@
+// Class: Wheel (22 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+Wheel::ApplyDamage @ RVA 0x109B720 EA 0x7FF6F4ABB720
+======================================================================
+__int64 __fastcall sub_7FF6F4ABB720(__int64 a1, _QWORD *a2)
+{
+  __int64 v3; // rdi
+  __int64 v5; // rax
+  _QWORD *v6; // rdx
+  __int64 v7; // rax
+  _QWORD v9[6]; // [rsp+20h] [rbp-68h] BYREF
+  int v10; // [rsp+50h] [rbp-38h]
+  __int64 v11; // [rsp+54h] [rbp-34h]
+  int v12; // [rsp+5Ch] [rbp-2Ch]
+  __int64 v13; // [rsp+60h] [rbp-28h]
+  int v14; // [rsp+68h] [rbp-20h]
+  int v15; // [rsp+6Ch] [rbp-1Ch]
+  int v16; // [rsp+70h] [rbp-18h]
+  __int16 v17; // [rsp+74h] [rbp-14h]
+
+  v3 = 0;
+  v9[0] = 0;
+  v9[1] = 0;
+  v5 = sub_7FF6F6A9BDB0(L"/Script/Athena");
+  v9[5] = *((_QWORD *)&xmmword_7FF6FA4F60F8 + 1);
+  v11 = *((_QWORD *)&xmmword_7FF6FA4F60F8 + 1);
+  v13 = *((_QWORD *)&xmmword_7FF6FA4F60F8 + 1);
+  v9[2] = v5;
+  v15 = 0;
+  v9[3] = 0;
+  v9[4] = 0;
+  v10 = qword_7FF6FA4F6108;
+  v12 = qword_7FF6FA4F6108;
+  v14 = qword_7FF6FA4F6108;
+  v16 = 1;
+  v17 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  return sub_7FF6F40974C0(a1, v6);
+}
+
+
+======================================================================
+Wheel::ApplyWheelInput @ RVA 0x109B8A0 EA 0x7FF6F4ABB8A0
+======================================================================
+__int64 __fastcall sub_7FF6F4ABB8A0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return sub_7FF6F40979A0(a1);
+}
+
+
+======================================================================
+Wheel::BindToDamageComponent @ RVA 0x109DC50 EA 0x7FF6F4ABDC50
+======================================================================
+__int64 __fastcall sub_7FF6F4ABDC50(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F409A7F0();
+}
+
+
+======================================================================
+Wheel::BindToRepairableComponents @ RVA 0x109DC70 EA 0x7FF6F4ABDC70
+======================================================================
+__int64 __fastcall sub_7FF6F4ABDC70(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F409B460();
+}
+
+
+======================================================================
+Wheel::ForceSetWheelAngle @ RVA 0x109EAA0 EA 0x7FF6F4ABEAA0
+======================================================================
+__int64 __fastcall sub_7FF6F4ABEAA0(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return nullsub_192(a1);
+}
+
+
+======================================================================
+Wheel::GetLevelOfDamage @ RVA 0x109F4D0 EA 0x7FF6F4ABF4D0
+======================================================================
+__int64 __fastcall sub_7FF6F4ABF4D0(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F40A79B0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+Wheel::GetMaxLevelOfDamage @ RVA 0x109F760 EA 0x7FF6F4ABF760
+======================================================================
+__int64 __fastcall sub_7FF6F4ABF760(__int64 a1, __int64 a2, _DWORD *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = sub_7FF6F40A9AE0();
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+Wheel::GetMaxWheelAngle @ RVA 0x109F810 EA 0x7FF6F4ABF810
+======================================================================
+void __fastcall sub_7FF6F4ABF810(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F40A9B00();
+}
+
+
+======================================================================
+Wheel::GetMinWheelAngle @ RVA 0x109F840 EA 0x7FF6F4ABF840
+======================================================================
+void __fastcall sub_7FF6F4ABF840(__int64 a1, __int64 a2, float *a3)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  *a3 = sub_7FF6F40A9B10();
+}
+
+
+======================================================================
+Wheel::GetRepairableComponentByLabel @ RVA 0x109FB50 EA 0x7FF6F4ABFB50
+======================================================================
+__int64 __fastcall sub_7FF6F4ABFB50(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  __int64 v3; // rdi
+  char *v7; // rdx
+  __int64 v8; // rax
+  __int64 result; // rax
+  char v10; // [rsp+38h] [rbp+10h] BYREF
+
+  v3 = 0;
+  v10 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v10);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v10);
+  }
+  v7 = &v10;
+  if ( a2[7] )
+    v7 = (char *)a2[7];
+  v8 = a2[4];
+  LOBYTE(v3) = v8 != 0;
+  a2[4] = v8 + v3;
+  result = sub_7FF6F40AAEC0(a1, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+Wheel::GetWheelMesh @ RVA 0x10A0920 EA 0x7FF6F4AC0920
+======================================================================
+__int64 __fastcall sub_7FF6F4AC0920(__int64 a1, __int64 a2, __int64 *a3)
+{
+  __int64 result; // rax
+
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  result = (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1600LL))(a1);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+Wheel::Multicast_ForceSetWheelAngle @ RVA 0x10A1150 EA 0x7FF6F4AC1150
+======================================================================
+__int64 __fastcall sub_7FF6F4AC1150(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1624LL))(a1);
+}
+
+
+======================================================================
+Wheel::OnRep_ServerWheelAngle @ RVA 0x10A2830 EA 0x7FF6F4AC2830
+======================================================================
+__int64 __fastcall sub_7FF6F4AC2830(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F40AFA60();
+}
+
+
+======================================================================
+Wheel::OnWheelDescLoaded @ RVA 0x10A2CB0 EA 0x7FF6F4AC2CB0
+======================================================================
+__int64 __fastcall sub_7FF6F4AC2CB0(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return nullsub_194(a1, v6);
+}
+
+
+======================================================================
+Wheel::ReactToDamage @ RVA 0x10A3D20 EA 0x7FF6F4AC3D20
+======================================================================
+__int64 __fastcall sub_7FF6F4AC3D20(__int64 a1, _QWORD *a2)
+{
+  __int64 v3; // rdi
+  __int64 v5; // rax
+  _QWORD *v6; // rdx
+  __int64 v7; // rax
+  _QWORD v9[6]; // [rsp+20h] [rbp-68h] BYREF
+  int v10; // [rsp+50h] [rbp-38h]
+  __int64 v11; // [rsp+54h] [rbp-34h]
+  int v12; // [rsp+5Ch] [rbp-2Ch]
+  __int64 v13; // [rsp+60h] [rbp-28h]
+  int v14; // [rsp+68h] [rbp-20h]
+  int v15; // [rsp+6Ch] [rbp-1Ch]
+  int v16; // [rsp+70h] [rbp-18h]
+  __int16 v17; // [rsp+74h] [rbp-14h]
+
+  v3 = 0;
+  v9[0] = 0;
+  v9[1] = 0;
+  v5 = sub_7FF6F6A9BDB0(L"/Script/Athena");
+  v9[5] = *((_QWORD *)&xmmword_7FF6FA4F60F8 + 1);
+  v11 = *((_QWORD *)&xmmword_7FF6FA4F60F8 + 1);
+  v13 = *((_QWORD *)&xmmword_7FF6FA4F60F8 + 1);
+  v9[2] = v5;
+  v15 = 0;
+  v9[3] = 0;
+  v9[4] = 0;
+  v10 = qword_7FF6FA4F6108;
+  v12 = qword_7FF6FA4F6108;
+  v14 = qword_7FF6FA4F6108;
+  v16 = 1;
+  v17 = 0;
+  a2[7] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v9);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v9);
+  }
+  v6 = v9;
+  if ( a2[7] )
+    v6 = (_QWORD *)a2[7];
+  v7 = a2[4];
+  LOBYTE(v3) = v7 != 0;
+  a2[4] = v7 + v3;
+  return sub_7FF6F40B1640(a1, v6);
+}
+
+
+======================================================================
+Wheel::ReactToRepairableStateChangedEast @ RVA 0x10A3E20 EA 0x7FF6F4AC3E20
+======================================================================
+__int64 __fastcall sub_7FF6F4AC3E20(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  __int64 v6; // rax
+  __int64 v7; // r9
+  __int64 v8; // r8
+  __int64 v9; // rdx
+  _QWORD v11[3]; // [rsp+20h] [rbp-18h] BYREF
+  unsigned __int8 v12; // [rsp+48h] [rbp+10h] BYREF
+  unsigned __int8 v13; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v13 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  v2 = a2[4] == 0;
+  v12 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  v5 = 0;
+  v11[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v6 = a2[4];
+  v7 = v11[0];
+  v8 = v12;
+  v9 = v13;
+  LOBYTE(v5) = v6 != 0;
+  a2[4] = v6 + v5;
+  return sub_7FF6F40B1650(a1, v9, v8, v7);
+}
+
+
+======================================================================
+Wheel::ReactToRepairableStateChangedSouth @ RVA 0x10A3F30 EA 0x7FF6F4AC3F30
+======================================================================
+__int64 __fastcall sub_7FF6F4AC3F30(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  __int64 v6; // rax
+  __int64 v7; // r9
+  __int64 v8; // r8
+  __int64 v9; // rdx
+  _QWORD v11[3]; // [rsp+20h] [rbp-18h] BYREF
+  unsigned __int8 v12; // [rsp+48h] [rbp+10h] BYREF
+  unsigned __int8 v13; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v13 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  v2 = a2[4] == 0;
+  v12 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  v5 = 0;
+  v11[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v6 = a2[4];
+  v7 = v11[0];
+  v8 = v12;
+  v9 = v13;
+  LOBYTE(v5) = v6 != 0;
+  a2[4] = v6 + v5;
+  return sub_7FF6F40B1660(a1, v9, v8, v7);
+}
+
+
+======================================================================
+Wheel::ReactToRepairableStateChangedWest @ RVA 0x10A4040 EA 0x7FF6F4AC4040
+======================================================================
+__int64 __fastcall sub_7FF6F4AC4040(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  __int64 v6; // rax
+  __int64 v7; // r9
+  __int64 v8; // r8
+  __int64 v9; // rdx
+  _QWORD v11[3]; // [rsp+20h] [rbp-18h] BYREF
+  unsigned __int8 v12; // [rsp+48h] [rbp+10h] BYREF
+  unsigned __int8 v13; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v13 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  v2 = a2[4] == 0;
+  v12 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  v5 = 0;
+  v11[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v6 = a2[4];
+  v7 = v11[0];
+  v8 = v12;
+  v9 = v13;
+  LOBYTE(v5) = v6 != 0;
+  a2[4] = v6 + v5;
+  return sub_7FF6F40B1670(a1, v9, v8, v7);
+}
+
+
+======================================================================
+Wheel::Server_SetWheelAngle @ RVA 0x10A4640 EA 0x7FF6F4AC4640
+======================================================================
+__int64 __fastcall sub_7FF6F4AC4640(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  int v6; // [rsp+30h] [rbp+8h] BYREF
+
+  v2 = a2[4] == 0;
+  v6 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v6);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v6);
+  }
+  a2[4] += a2[4] != 0;
+  if ( (*(unsigned __int8 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1616LL))(a1) )
+    return (*(__int64 (__fastcall **)(__int64))(*(_QWORD *)a1 + 1608LL))(a1);
+  else
+    return sub_7FF6F4F0F6D0(L"Server_SetWheelAngle_Validate");
+}
+
+
+======================================================================
+Wheel::SetFullyDamaged @ RVA 0x10A4900 EA 0x7FF6F4AC4900
+======================================================================
+  *** no function recognized at this EA ***
+
+======================================================================
+Wheel::SetFullyRepaired @ RVA 0x10A4920 EA 0x7FF6F4AC4920
+======================================================================
+__int64 __fastcall sub_7FF6F4AC4920(__int64 a1, _QWORD *a2)
+{
+  __int64 v2; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdx
+  __int64 v8; // [rsp+38h] [rbp+10h] BYREF
+
+  v2 = 0;
+  v8 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v8);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v8);
+  }
+  v5 = a2[4];
+  v6 = v8;
+  LOBYTE(v2) = v5 != 0;
+  a2[4] = v5 + v2;
+  return sub_7FF6F40B3960(a1, v6);
+}
+
+
+======================================================================
+Wheel::UpdateWheelDamageState @ RVA 0x10A5F90 EA 0x7FF6F4AC5F90
+======================================================================
+__int64 __fastcall sub_7FF6F4AC5F90(__int64 a1, _QWORD *a2)
+{
+  bool v2; // zf
+  __int64 v5; // rdi
+  __int64 v6; // rax
+  __int64 v7; // r9
+  __int64 v8; // r8
+  __int64 v9; // rdx
+  _QWORD v11[3]; // [rsp+20h] [rbp-18h] BYREF
+  unsigned __int8 v12; // [rsp+48h] [rbp+10h] BYREF
+  unsigned __int8 v13; // [rsp+58h] [rbp+20h] BYREF
+
+  v2 = a2[4] == 0;
+  v13 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v13);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v13);
+  }
+  v2 = a2[4] == 0;
+  v12 = 0;
+  if ( v2 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  v5 = 0;
+  v11[0] = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, v11);
+  }
+  v6 = a2[4];
+  v7 = v11[0];
+  v8 = v12;
+  v9 = v13;
+  LOBYTE(v5) = v6 != 0;
+  a2[4] = v6 + v5;
+  return sub_7FF6F40BA480(a1, v9, v8, v7);
+}
+

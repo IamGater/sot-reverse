@@ -1,0 +1,63 @@
+// Class: StallDetector (3 functions)
+// Decompiled from SoTGame_fixed.i64 - real names via live UE4 reflection
+
+======================================================================
+StallDetector::Activate @ RVA 0x2DEF300 EA 0x7FF6F680F300
+======================================================================
+__int64 __fastcall sub_7FF6F680F300(__int64 a1, __int64 a2)
+{
+  *(_QWORD *)(a2 + 32) += *(_QWORD *)(a2 + 32) != 0;
+  return sub_7FF6F6801730();
+}
+
+
+======================================================================
+StallDetector::CreateStallDetector @ RVA 0x2DEF320 EA 0x7FF6F680F320
+======================================================================
+__int64 __fastcall sub_7FF6F680F320(__int64 a1, _QWORD *a2, __int64 *a3)
+{
+  bool v3; // zf
+  __int64 v6; // rdi
+  __int64 v7; // rdx
+  __int64 v8; // rcx
+  __int64 v9; // rax
+  __int64 result; // rax
+  int v11; // [rsp+38h] [rbp+10h] BYREF
+  int v12; // [rsp+40h] [rbp+18h] BYREF
+
+  v3 = a2[4] == 0;
+  v12 = 0;
+  if ( v3 )
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v12);
+  }
+  else
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v12);
+  }
+  v6 = 0;
+  v11 = 0;
+  if ( a2[4] )
+  {
+    sub_7FF6F4F4C960(a2, a2[3], &v11);
+  }
+  else
+  {
+    a2[16] = *(_QWORD *)(a2[16] + 40LL);
+    sub_7FF6F4F4C990(a2, &v11);
+  }
+  v9 = a2[4];
+  LOBYTE(v7) = v11 != 0;
+  LOBYTE(v6) = v9 != 0;
+  a2[4] = v9 + v6;
+  result = sub_7FF6F6802700(v8, v7);
+  *a3 = result;
+  return result;
+}
+
+
+======================================================================
+StallDetector::Deactivate @ RVA 0x2DEF3F0 EA 0x7FF6F680F3F0
+======================================================================
+  *** no function recognized at this EA ***
